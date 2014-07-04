@@ -44,6 +44,8 @@ if ( $products->have_posts() ) : ?>
 				   if ( has_post_thumbnail())
 	           echo get_the_post_thumbnail( $post_id,array(70,70), $attr );
 	           the_title();
+	           
+	           //for testing
 	         ?>
            
 			<?php endwhile; // end of the loop. ?>
