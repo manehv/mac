@@ -7,6 +7,7 @@
  * @version     1.6.4
  */
 
+  echo '11111';exit;
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 global $product, $woocommerce_loop;
