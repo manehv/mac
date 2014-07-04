@@ -1,8 +1,12 @@
 /* Have fun adding your style here :) - PS: At all times this file should contain a comment or a rule, otherwise opera might act buggy :( */
 
 /* General Custom CSS */
-
-
+.clsTitleCon{background-color:#000000; height:110px; }
+.clsTitleCon img{margin-top:15px; }
+.row{padding:0 15px; }
+.clsTitleCon .col-lg-6{padding:0; }
+.clsTitle{margin-top:10px; font-size:15px; color:#ffffff; padding-right:15px; }
+.clsTopTitle{font-size:18px; color:#999B9F; margin-bottom:30px; }
 
 
 /*

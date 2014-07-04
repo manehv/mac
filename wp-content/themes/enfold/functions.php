@@ -275,7 +275,7 @@ if(!function_exists('avia_register_frontend_scripts'))
 		//register styles
 		wp_register_style( 'avia-style' ,  $child_theme_url."/style.css", array(), '1', 'all' ); //register default style.css file. only include in childthemes. has no purpose in main theme
 		wp_register_style( 'avia-custom',  $template_url."/css/custom.css", array(), '1', 'all' );
-		
+		wp_enqueue_style( 'bootstrap',  $template_url."/css/bootstrap.css" );
 		wp_enqueue_style( 'avia-grid' ,   $template_url."/css/grid.css", array(), '1', 'all' );
 		wp_enqueue_style( 'avia-base' ,   $template_url."/css/base.css", array(), '1', 'all' );
 		wp_enqueue_style( 'avia-layout',  $template_url."/css/layout.css", array(), '1', 'all' );
