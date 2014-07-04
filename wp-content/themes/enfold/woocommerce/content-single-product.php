@@ -26,17 +26,26 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 	 	return;
 	 }
 ?>
+<div class="clsTopTitle">
+  Comprar <?php the_title(); ?>
+</div>
+<div class="row">
+    <div class="col-lg-3 clsTitleCon">
+	<div class="row">
+	    <div class="col-lg-6">
+		<?php 
+		      if ( has_post_thumbnail())
+			echo get_the_post_thumbnail( $post_id, 'thumbnail');
+		?>
+	    </div>
+	    <div class="col-lg-6 clsTitle">
+		<?php the_title(); ?>
+	    </div>
+	</div>
+    </div>
+   <?php woocommerce_output_related_products();//for related products ?>
+</div>
 
-<?php 
-    global $product;
-  
-		woocommerce_template_single_title();
-		if ( has_post_thumbnail())
-	 echo get_the_post_thumbnail( $post_id, $size, $attr );
-  woocommerce_output_related_products();//for related products
-  
-			
-?>
 <div itemscope itemtype="<?php echo woocommerce_get_product_schema(); ?>" id="product-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 	<?php
