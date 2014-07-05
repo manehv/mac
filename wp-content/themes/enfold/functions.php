@@ -467,6 +467,7 @@ add_theme_support('force-post-thumbnails-in-widget');
  *  register custom functions that are not related to the framework but necessary for the theme to run
  */
 
+
 require_once( 'functions-enfold.php');
 
 /*
@@ -501,4 +502,7 @@ function woocommerce_variable_add_to_cart() {
 */
 
 
+
+
+require_once( 'functions-enfold.php');
 

@@ -26,10 +26,10 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 	 	return;
 	 }
 ?>
-<div class="clsTopTitle">
+<h1 class="clsTopTitle">
   Comprar <?php the_title(); ?>
-</div>
-<div class="row">
+</h1>
+<div class="row clsSinProd">
     <div class="col-lg-3 clsTitleCon">
 	<div class="row">
 	    <div class="col-lg-6">
@@ -44,7 +44,18 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 	</div>
     </div>
     <div class="col-lg-9">
-	<?php woocommerce_output_related_products();//for related products ?> 
+	<?php woocommerce_upsell_display(4,4); ?>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-9 clsContent">
+	<h2 class="clsBotTitle">
+	  Selecciona un <?php the_title(); ?>
+	</h2>
+    </div>
+    <div class="col-lg-3">
+	<!-- for sidebar -->
     </div>
 </div>
 
