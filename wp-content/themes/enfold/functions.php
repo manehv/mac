@@ -470,7 +470,7 @@ add_theme_support('force-post-thumbnails-in-widget');
 
 require_once( 'functions-enfold.php');
 
-/*
+
 function woocommerce_variable_add_to_cart() {
 	global $product, $post;
 		$variations = $product->get_available_variations();
@@ -499,10 +499,5 @@ function woocommerce_variable_add_to_cart() {
 		<?php
 		}
 }
-*/
 
-
-
-
-require_once( 'functions-enfold.php');
 
