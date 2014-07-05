@@ -73,7 +73,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 		 * @hooked woocommerce_show_product_images - 20
 		 */
 
-		do_action( 'woocommerce_before_single_product_summary' );
+		//do_action( 'woocommerce_before_single_product_summary' );
 
 	?>
 
@@ -91,8 +91,8 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 			 * @hooked woocommerce_template_single_meta - 40
 			 * @hooked woocommerce_template_single_sharing - 50
 			 */
-			do_action( 'woocommerce_single_product_summary' );
-	//	do_action('woocommerce_variable_add_to_cart');
+	//		do_action( 'woocommerce_single_product_summary' );
+		do_action('woocommerce_variable_add_to_cart');
 		?>
 
 	</div><!-- .summary -->
