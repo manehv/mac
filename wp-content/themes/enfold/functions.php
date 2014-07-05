@@ -477,9 +477,9 @@ function woocommerce_variable_add_to_cart() {
 	
 		foreach ($variations as $key => $value) {
 		?>
-		<form action="<?php echo esc_url( $product->add_to_cart_url() ); ?>" method="post"  enctype='multipart/form-data'>
-			<input type="hidden" name="variation_id" value="<?php echo $value['variation_id']?>" />
-			<input type="hidden" name="product_id" value="<?php echo esc_attr( $post->ID ); ?>" />
+		<form  method="post"  enctype='multipart/form-data'>
+			<input type="hidden" value="<?php echo $value['variation_id']?>" name="add-to-cart"/>
+			<input type="hidden"  value="<?php echo esc_attr( $post->ID ); ?>" />
 			<ul>
 			<?php
 			if(!empty($value['attributes'])){
@@ -493,11 +493,10 @@ function woocommerce_variable_add_to_cart() {
 					<li><b><?php echo implode('/', $value['attributes']);?></b></li>
 				   	<img src="<?php echo $value['image_src']?>"/> 
 				   	<button type="submit" class="single_add_to_cart_button button alt"><?php echo apply_filters('single_add_to_cart_text', __( 'Add to cart', 'woocommerce' ), $product->product_type); ?></button>
-				
+		
 					</ul>
 		</form>
 		<?php
 		}
 }
-
 
