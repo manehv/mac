@@ -20,6 +20,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 	 */
 	
 	 do_action( 'woocommerce_before_single_product' );
+	 
 
 	 if ( post_password_required() ) {
 	 	echo get_the_password_form();
@@ -56,10 +57,38 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 	<?php do_action('woocommerce_variable_add_to_cart' ); ?>
 	<?php the_content(); ?> 
     </div>
-      <div class="col-lg-3">
-	<!-- for sidebar -->
+    <div class="col-lg-3">
+    <?php 
+	          global $product, $post;
+            $variations = $product->get_available_variations();
+            
+            foreach ($variations as $key => $value) 
+	            {
+	           
+	            ?>
+                <div class="clshide <?php echo $value['variation_id']?>">  
+                  <div class="row">
+											<img class="v-image" src="<?php echo $value['image_src']?>"/> 
+									 </div>
+									 <div class="row">
+									     <?php echo implode('/', $value['attributes']); ?>
+									  </div>
+									   <div class="row">
+									     <?php echo $value['price_html']; ?>
+									  </div>
+									  <div class="row">
+											<form  method="post"  enctype='multipart/form-data'>
+												<input type="hidden" id="addtocart" value="<?php echo $value['variation_id'] ?>" name="add-to-cart"/>
+												<button type="submit" class="single_add_to_cart_button button alt"><?php echo apply_filters('single_add_to_cart_text', __( 'Add to cart', 'woocommerce' ), $product->product_type); ?></button>
+											</form>
+  									 </div>
+                </div> 
+		        
+		         
+		      <?php
+		      }
+		      ?>
+    </span>
+  
     </div>
 </div>
-
-
-
