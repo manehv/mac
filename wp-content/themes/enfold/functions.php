@@ -472,34 +472,34 @@ require_once( 'functions-enfold.php');
 
 
 function woocommerce_variable_add_to_cart() {
- global $product, $post;
+  global $product, $post;
   $variations = $product->get_available_variations();
 ?>
  <div class="row">
    <span class="col-lg-4">
       <ul>
-      <?php
-        $cnt=1;
-	       foreach ($variations as $key => $value) 
-	        {
-	          $active='';
-	          if($cnt)
-	          {
-	           $src=$value['image_src'];
-	           $active='active';
-	          } 
-	          $cnt=0;
-	     ?>
-		     		 <li class="variation <?php echo $active?>" variation-image="<?php echo $value['image_src']?>"><b><?php echo implode('/', $value['attributes']);?></b></li>
+	<?php
+	  $cnt=1;
+	  foreach ($variations as $key => $value) 
+	  {
+	    $active='';
+	    if($cnt)
+	    {
+	      $src=$value['image_src'];
+	      $active='active';
+	    } 
+	    $cnt=0;
+	    ?>
+	    <li class="variation <?php echo $active?>" variation-image="<?php echo $value['image_src']?>"><b><?php echo implode('/', $value['attributes']);?></b></li>
 										
-		  <?php
-		       }
-		    ?>
-		    </ul>
+	    <?php
+	  }
+	    ?>
+      </ul>
     </span>
     <span class="col-lg-5">
-            <img id="v-image" src="<?php echo $src?>"/> 
-     </span>       
+          <img id="v-image" src="<?php echo $src?>"/> 
+    </span>       
  <?php
  /*      
 	       foreach ($variations as $key => $value) {
@@ -515,9 +515,9 @@ function woocommerce_variable_add_to_cart() {
 					</form>
 			<?php
 		}*/
-		?>
-		
-		</div>
+?>
+  </div>
 <?php		
 }
+?>
 
