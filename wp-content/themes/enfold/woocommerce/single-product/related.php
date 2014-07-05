@@ -28,32 +28,31 @@ $args = apply_filters( 'woocommerce_related_products_args', array(
 
 $products = new WP_Query( $args );
 
-$woocommerce_loop['columns'] = $columns; 
+$woocommerce_loop['columns'] = $columns;
 
 if ( $products->have_posts() ) : ?>
 
 	<div class="related products">
 
-		<?php while ( $products->have_posts() ) : $products->the_post(); ?>
-		    <div class="col-lg-3">
-		      <a href="<?php the_permalink(); ?>">
-			<div class="col-lg-6">
-			  <?php  // wc_get_template_part( 'content', 'product' );
-			    if ( has_post_thumbnail())
-			    echo get_the_post_thumbnail( $post_id,'thumbnail', $attr );
-			  ?>
-			 </div>
-			 <div class="col-lg-6 clsRelTitle">
-			    Comprar
-			    <?php
-			      the_title();
-			    ?>
-			 </div>
-		      </a>
-		    </div>
-		<?php endwhile; // end of the loop. ?>
+		<h2><?php _e( 'Related Products', 'woocommerce' ); ?></h2>
+
+		<?php woocommerce_product_loop_start(); ?>
+
+			<?php while ( $products->have_posts() ) : $products->the_post(); ?>
+            
+				<?php  // wc_get_template_part( 'content', 'product' ); 
+				   if ( has_post_thumbnail())
+	           echo get_the_post_thumbnail( $post_id,array(70,70), $attr );
+	           the_title();
+	           
+	         ?>
+           
+			<?php endwhile; // end of the loop. ?>
+
+		<?php woocommerce_product_loop_end(); ?>
 
 	</div>
 
 <?php endif;
+
 wp_reset_postdata();

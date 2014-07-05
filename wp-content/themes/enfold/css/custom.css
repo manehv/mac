@@ -7,12 +7,17 @@
 .clsTitleCon .col-lg-6{padding:0; }
 .clsTitle{margin-top:10px; font-size:15px; color:#ffffff; padding-right:15px; }
 h1.clsTopTitle{font-size:18px; color:#6B6869; margin-bottom:30px; }
-.clsSinProd .related{margin-top:15px; }
 .clsRelTitle{padding:0; color:#368CCA; font-size:12px; font-weight:bold; }
 .clsSinProd .col-lg-3{padding-right:0; }
-.clsSinProd .related{margin-top:25px; }
+.clsSinProd .upsells{margin-top:25px; }
 .clsContent{padding-left:0; }
 h2.clsBotTitle{color:#6B6869; font-size:22px; margin-top:30px; padding-bottom:10px; border-bottom:3px solid #6B6869; }
+.content, .sidebar{padding-bottom: 50px;  padding-top: 50px; }
+.clsContent .clsCenTitle{font-size:18px; color:#6B6869; font-weight:bold; margin-bottom:30px; }
+.clsContent ul{margin-left:0; }
+.clsContent li.variation{text-transform:capitalize; color:#6B6869; font-size:14px; font-weight:bold; cursor:pointer; }
+.clsContent .variation.active{color:#368CCA; }
+.clsContent #v-image{height:200px; }
 
 /*
 Desktop Styles

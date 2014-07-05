@@ -264,7 +264,7 @@ if(!function_exists('avia_register_frontend_scripts'))
 		wp_enqueue_script( 'avia-shortcodes', $template_url.'/js/shortcodes.js', array('jquery'), 1, true );
 		wp_enqueue_script( 'avia-prettyPhoto',  $template_url.'/js/prettyPhoto/js/jquery.prettyPhoto.js', 'jquery', "3.1.5", true);
 		// wp_register_script( 'wp-mediaelement',  $template_url.'/js/mediaelement/mediaelement-and-player.min.js', 'jquery', "1", true);
-
+    wp_enqueue_script( 'custom_variation',  $template_url.'/js/custom_variation.js',true); 
 		wp_enqueue_script( 'jquery' );
 		wp_enqueue_script( 'wp-mediaelement' );
 
@@ -467,25 +467,157 @@ add_theme_support('force-post-thumbnails-in-widget');
  *  register custom functions that are not related to the framework but necessary for the theme to run
  */
 
+
 require_once( 'functions-enfold.php');
 
-if ( ! function_exists( 'woocommerce_output_related_products' ) ) {
 
-	/**
-	 * Output the related products.
-	 *
-	 * @access public
-	 * @subpackage	Product
-	 * @return void
-	 */
-	function woocommerce_output_related_products() {
-
-		$args = array(
-			'posts_per_page' => 4,
-			'columns' => 2,
-			'orderby' => 'rand'
-		);
-
-		woocommerce_related_products( apply_filters( 'woocommerce_output_related_products_args', $args ) );
-	}
+function woocommerce_variable_add_to_cart() {
+  global $product, $post;
+  $variations = $product->get_available_variations();
+ 
+?>
+ <div class="row">
+   <span class="col-lg-4">
+      <ul>
+	<?php
+	  $cnt=1;
+	  foreach ($variations as $key => $value) 
+	  {
+	    $active='';
+	    if($cnt==1)
+	    {
+	     $active='active';
+	     $cnt=0;
+	     }
+	     
+	    ?>
+	    <li variation_id="<?php echo $value['variation_id']?>" class="variation <?php echo $active ?>"><b><?php echo implode('/', $value['attributes']);?></b></li>
+										
+	    <?php
+	  }
+	    ?>
+      </ul>
+    </span>
+   <span class="col-lg-5">
+    <?php 
+    foreach ($variations as $key => $value) 
+	  {
+	    ?>
+	      <div class="clshide <?php echo $value['variation_id']?>">
+        <img class="v-image" src="<?php echo $value['image_src']?>"/> 
+        </div>
+    <?php
+    }
+    ?>
+    </span>
+     
+  </div>
+<?php		
 }
+
+//code for adding custom fields in variation box
+	//Display Fields
+	add_action( 'woocommerce_product_after_variable_attributes', 'variable_fields', 10, 2 );
+	//JS to add fields for new variations
+	add_action( 'woocommerce_product_after_variable_attributes_js', 'variable_fields_js' );
+	//Save variation fields
+	add_action( 'woocommerce_process_product_meta_variable', 'save_variable_fields', 10, 1 );
+ 
+	/**
+	* Create new fields for variations
+	*
+	*/
+	function variable_fields( $loop, $variation_data ) {
+	?>
+	 <tr>
+			<td>
+				<?php
+						// Textarea
+						woocommerce_wp_textarea_input(
+								array(
+												'id' => '_textarea['.$loop.']',
+												'name'=>'shipping notes',
+												'label' => __( 'Shipping Notes', 'woocommerce' ),
+												'placeholder' => '',
+												'description' => __( 'Enter the custom value here.', 'woocommerce' ),
+												'value' => $variation_data['_textarea'][0],
+												)
+												);
+				?>
+		 </td>
+	</tr>
+<?php
+		}
+			
+	/**
+	* Create new fields for new variations
+	*
+	*/
+	function variable_fields_js() {
+	?>
+		<tr>
+			<td>
+				<?php
+							
+        // Textarea
+          woocommerce_wp_textarea_input(
+				array(
+								'id' => '_textarea[ + loop + ]',
+								'label' => __( 'Shipping Notes', 'woocommerce' ),
+								'placeholder' => '',
+								'description' => __( 'Enter the custom value here.', 'woocommerce' ),
+								'value' => $variation_data['_textarea'][0],
+								'name'=>'shipping notes',
+							)
+							);
+					?>
+				</td>
+			</tr>
+<?php
+}
+ 
+/**
+* Save new fields for variations
+*
+*/
+	function save_variable_fields( $post_id ) {
+		if (isset( $_POST['variable_sku'] ) ) :
+             $variable_sku = $_POST['variable_sku'];
+             $variable_post_id = $_POST['variable_post_id'];
+				// Textarea
+					$_textarea = $_POST['_textarea'];
+					for ( $i = 0; $i < sizeof( $variable_sku ); $i++ ) :
+					$variation_id = (int) $variable_post_id[$i];
+					if ( isset( $_textarea[$i] ) ) {
+					update_post_meta( $variation_id, '_textarea', stripslashes( $_textarea[$i] ) );
+					}
+		endfor;
+endif;
+}
+
+
+
+
+
+
+function Row( $atts, $content = null ) {
+   return '<div class="row">' . do_shortcode($content) . '</div>';
+}
+add_shortcode('row', 'Row');
+
+function Meta( $atts, $content = null ) {
+   return '<div class="col-lg-2">' . do_shortcode($content) . '</div>';
+}
+add_shortcode('meta', 'Meta');
+
+function Content_Full( $atts, $content = null ) {
+   return '<div class="col-lg-10">' . do_shortcode($content) . '</div>';
+}
+add_shortcode('content_full_column', 'Content_Full');
+
+function Content_Half( $atts, $content = null ) {
+   return '<div class="col-lg-5">' . do_shortcode($content) . '</div>';
+}
+add_shortcode('content_half_column', 'Content_Half');
+
+?>
