@@ -13,6 +13,11 @@ h1.clsTopTitle{font-size:18px; color:#6B6869; margin-bottom:30px; }
 .clsContent{padding-left:0; }
 h2.clsBotTitle{color:#6B6869; font-size:22px; margin-top:30px; padding-bottom:10px; border-bottom:3px solid #6B6869; }
 .content, .sidebar{padding-bottom: 50px;  padding-top: 50px; }
+.clsContent .clsCenTitle{font-size:18px; color:#6B6869; font-weight:bold; margin-bottom:30px; }
+.clsContent ul{margin-left:0; }
+.clsContent li.variation{text-transform:capitalize; color:#6B6869; font-size:14px; font-weight:bold; cursor:pointer; }
+.clsContent .variation.active{color:#368CCA; }
+.clsContent #v-image{height:200px; }
 
 /*
 Desktop Styles

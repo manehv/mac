@@ -54,8 +54,10 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 	  Selecciona un <?php the_title(); ?>
 	</h2>
 	<?php do_action('woocommerce_variable_add_to_cart' ); ?>
+	<?php the_content(); ?> 
     </div>
-    <div class="col-lg-3">
+      <div class="col-lg-3">
 	<!-- for sidebar -->
     </div>
 </div>
+

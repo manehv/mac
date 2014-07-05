@@ -476,7 +476,10 @@ function woocommerce_variable_add_to_cart() {
   $variations = $product->get_available_variations();
 ?>
  <div class="row">
-   <span class="col-lg-4">
+   <div class="col-lg-8">
+      <div class="clsCenTitle">
+	Elige un acabado
+      </div>
       <ul>
 	<?php
 	  $cnt=1;
@@ -490,16 +493,16 @@ function woocommerce_variable_add_to_cart() {
 	    } 
 	    $cnt=0;
 	    ?>
-	    <li class="variation <?php echo $active?>" variation-image="<?php echo $value['image_src']?>"><b><?php echo implode('/', $value['attributes']);?></b></li>
+	    <li class="variation <?php echo $active?>" variation-image="<?php echo $value['image_src']?>"><?php echo implode('/', $value['attributes']);?></li>
 										
 	    <?php
 	  }
 	    ?>
       </ul>
-    </span>
-    <span class="col-lg-5">
-          <img id="v-image" src="<?php echo $src?>"/> 
-    </span>       
+    </div>
+    <div class="col-lg-4">
+          <img id="v-image" src="<?php echo $src?>" height=200 width=200 /> 
+    </div>       
  <?php
  /*      
 	       foreach ($variations as $key => $value) {
@@ -519,5 +522,25 @@ function woocommerce_variable_add_to_cart() {
   </div>
 <?php		
 }
-?>
 
+
+
+function Row( $atts, $content = null ) {
+   return '<div class="row">' . do_shortcode($content) . '</div>';
+}
+add_shortcode('row', 'Row');
+
+function Meta( $atts, $content = null ) {
+   return '<div class="col-lg-2">' . do_shortcode($content) . '</div>';
+}
+add_shortcode('meta', 'Meta');
+
+function Content_Full( $atts, $content = null ) {
+   return '<div class="col-lg-10">' . do_shortcode($content) . '</div>';
+}
+add_shortcode('content_full_column', 'Content_Full');
+
+function Content_Half( $atts, $content = null ) {
+   return '<div class="col-lg-5">' . do_shortcode($content) . '</div>';
+}
+add_shortcode('content_half_column', 'Content_Half');
