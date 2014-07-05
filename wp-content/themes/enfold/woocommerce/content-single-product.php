@@ -53,11 +53,13 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 	<h2 class="clsBotTitle">
 	  Selecciona un <?php the_title(); ?>
 	</h2>
+	<?php do_action('woocommerce_variable_add_to_cart' ); ?>
     </div>
     <div class="col-lg-3">
 	<!-- for sidebar -->
     </div>
 </div>
+<<<<<<< HEAD
 
 
 
@@ -113,3 +115,4 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 </div><!-- #product-<?php the_ID(); ?> -->
 
 <?php do_action( 'woocommerce_after_single_product' ); ?>
+

@@ -13,6 +13,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }
 
+
 $has_row    = false;
 $alt        = 1;
 $attributes = $product->get_attributes();
