@@ -48,9 +48,13 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
     </div>
 </div>
 
+
+
 <div itemscope itemtype="<?php echo woocommerce_get_product_schema(); ?>" id="product-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 	<?php
+	
+
 		/**
 		 * woocommerce_before_single_product_summary hook
 		 *
@@ -77,6 +81,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 			 * @hooked woocommerce_template_single_sharing - 50
 			 */
 			do_action( 'woocommerce_single_product_summary' );
+	//	do_action('woocommerce_variable_add_to_cart');
 		?>
 
 	</div><!-- .summary -->
