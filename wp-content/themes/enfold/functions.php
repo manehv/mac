@@ -264,7 +264,7 @@ if(!function_exists('avia_register_frontend_scripts'))
 		wp_enqueue_script( 'avia-shortcodes', $template_url.'/js/shortcodes.js', array('jquery'), 1, true );
 		wp_enqueue_script( 'avia-prettyPhoto',  $template_url.'/js/prettyPhoto/js/jquery.prettyPhoto.js', 'jquery', "3.1.5", true);
 		// wp_register_script( 'wp-mediaelement',  $template_url.'/js/mediaelement/mediaelement-and-player.min.js', 'jquery', "1", true);
-
+    wp_enqueue_script( 'custom_variation',  $template_url.'/js/custom_variation.js',true); 
 		wp_enqueue_script( 'jquery' );
 		wp_enqueue_script( 'wp-mediaelement' );
 
@@ -472,36 +472,54 @@ require_once( 'functions-enfold.php');
 
 
 function woocommerce_variable_add_to_cart() {
-	global $product, $post;
-		$variations = $product->get_available_variations();
-	
-		foreach ($variations as $key => $value) {
-		?>
-		<form  method="post"  enctype='multipart/form-data'>
-			<input type="hidden" value="<?php echo $value['variation_id']?>" name="add-to-cart"/>
-			<input type="hidden"  value="<?php echo esc_attr( $post->ID ); ?>" />
-			<ul>
-			<?php
-			if(!empty($value['attributes'])){
-				foreach ($value['attributes'] as $attr_key => $attr_value) {
-				?>
-				<input type="hidden" name="<?php echo $attr_key?>" value="<?php echo $attr_value?>">
-				<?php
-				}
-			}
-			?>
-					<li><b><?php echo implode('/', $value['attributes']);?></b></li>
-				   	<img src="<?php echo $value['image_src']?>"/> 
-				   	<button type="submit" class="single_add_to_cart_button button alt"><?php echo apply_filters('single_add_to_cart_text', __( 'Add to cart', 'woocommerce' ), $product->product_type); ?></button>
+ global $product, $post;
+  $variations = $product->get_available_variations();
+?>
+ <div class="row">
+   <span class="col-lg-4">
+      <ul>
+      <?php
+        $cnt=1;
+	       foreach ($variations as $key => $value) 
+	        {
+	          $active='';
+	          if($cnt)
+	          {
+	           $src=$value['image_src'];
+	           $active='active';
+	          } 
+	          $cnt=0;
+	     ?>
+		     		 <li class="variation <?php echo $active?>" variation-image="<?php echo $value['image_src']?>"><b><?php echo implode('/', $value['attributes']);?></b></li>
+										
+		  <?php
+		       }
+		    ?>
+		    </ul>
+    </span>
+    <span class="col-lg-5">
+            <img id="v-image" src="<?php echo $src?>"/> 
+     </span>       
+ <?php
+ /*      
+	       foreach ($variations as $key => $value) {
+		     ?>	
+					<form  method="post"  enctype='multipart/form-data'>
+								<input type="hidden" value="<?php echo $value['variation_id']?>" name="add-to-cart"/>
+								<ul>
+										
+											<img src="<?php echo $value['image_src']?>"/> 
+											<button type="submit" class="single_add_to_cart_button button alt"><?php echo apply_filters('single_add_to_cart_text', __( 'Add to cart', 'woocommerce' ), $product->product_type); ?></button>
 		
-					</ul>
-		</form>
-		<?php
-		}
+								</ul>
+					</form>
+			<?php
+		}*/
+		?>
+		
+		</div>
+<?php		
 }
 
 
-
-
-require_once( 'functions-enfold.php');
 
