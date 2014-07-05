@@ -477,10 +477,7 @@ function woocommerce_variable_add_to_cart() {
  
 ?>
  <div class="row">
-   <div class="col-lg-8">
-      <div class="clsCenTitle">
-	Elige un acabado
-      </div>
+   <span class="col-lg-4">
       <ul>
 	<?php
 	  $cnt=1;
@@ -494,37 +491,12 @@ function woocommerce_variable_add_to_cart() {
 	     }
 	     
 	    ?>
-
 	    <li variation_id="<?php echo $value['variation_id']?>" class="variation <?php echo $active ?>"><b><?php echo implode('/', $value['attributes']);?></b></li>
-
 										
 	    <?php
 	  }
 	    ?>
       </ul>
-    </div>
-    <div class="col-lg-4">
-          <img id="v-image" src="<?php echo $src?>" height=200 width=200 /> 
-    </div>       
- <?php
- /*      
-	       foreach ($variations as $key => $value) {
-		     ?>	
-					<form  method="post"  enctype='multipart/form-data'>
-								<input type="hidden" value="<?php echo $value['variation_id']?>" name="add-to-cart"/>
-								<ul>
-										
-											<img src="<?php echo $value['image_src']?>"/> 
-											<button type="submit" class="single_add_to_cart_button button alt"><?php echo apply_filters('single_add_to_cart_text', __( 'Add to cart', 'woocommerce' ), $product->product_type); ?></button>
-		
-								</ul>
-					</form>
-			<?php
-		}*/
-?>
-  </div>
-<?php		
-}
     </span>
    <span class="col-lg-5">
     <?php 
@@ -623,7 +595,8 @@ function woocommerce_variable_add_to_cart() {
 endif;
 }
 
-?>
+
+
 
 
 
@@ -646,3 +619,5 @@ function Content_Half( $atts, $content = null ) {
    return '<div class="col-lg-5">' . do_shortcode($content) . '</div>';
 }
 add_shortcode('content_half_column', 'Content_Half');
+
+?>
