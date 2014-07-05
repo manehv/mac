@@ -521,5 +521,3 @@ function woocommerce_variable_add_to_cart() {
 <?php		
 }
 
-
-
