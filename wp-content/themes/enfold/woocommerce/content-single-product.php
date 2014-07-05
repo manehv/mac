@@ -44,7 +44,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 	</div>
     </div>
     <div class="col-lg-9">
-	<?php woocommerce_output_related_products();//for related products ?> 
+	<?php woocommerce_upsell_display(4,4); ?>
     </div>
 </div>
 

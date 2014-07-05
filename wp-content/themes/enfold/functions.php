@@ -468,24 +468,3 @@ add_theme_support('force-post-thumbnails-in-widget');
  */
 
 require_once( 'functions-enfold.php');
-
-if ( ! function_exists( 'woocommerce_output_related_products' ) ) {
-
-	/**
-	 * Output the related products.
-	 *
-	 * @access public
-	 * @subpackage	Product
-	 * @return void
-	 */
-	function woocommerce_output_related_products() {
-
-		$args = array(
-			'posts_per_page' => 4,
-			'columns' => 2,
-			'orderby' => 'rand'
-		);
-
-		woocommerce_related_products( apply_filters( 'woocommerce_output_related_products_args', $args ) );
-	}
-}
