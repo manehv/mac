@@ -10,6 +10,9 @@
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
+
+global $post, $woocommerce, $product;
+
 ?>
 
 <?php
@@ -58,37 +61,51 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 	<?php the_content(); ?> 
     </div>
     <div class="col-lg-3">
-    <?php 
-	          global $product, $post;
-            $variations = $product->get_available_variations();
-            
-            foreach ($variations as $key => $value) 
-	            {
-	           
-	            ?>
-                <div class="clshide <?php echo $value['variation_id']?>">  
-                  <div class="row">
-											<img class="v-image" src="<?php echo $value['image_src']?>"/> 
-									 </div>
-									 <div class="row">
-									     <?php echo implode('/', $value['attributes']); ?>
-									  </div>
-									   <div class="row">
-									     <?php echo $value['price_html']; ?>
-									  </div>
-									  <div class="row">
-											<form  method="post"  enctype='multipart/form-data'>
-												<input type="hidden" id="addtocart" value="<?php echo $value['variation_id'] ?>" name="add-to-cart"/>
-												<button type="submit" class="single_add_to_cart_button button alt"><?php echo apply_filters('single_add_to_cart_text', __( 'Add to cart', 'woocommerce' ), $product->product_type); ?></button>
-											</form>
-  									 </div>
-                </div> 
-		        
-		         
-		      <?php
-		      }
-		      ?>
-    </span>
+			<div class="clsSidebar">
+			<h3>Resumen</h3>
+			<?php 
+			global $product, $post;
+			$variations = $product->get_available_variations();
+			foreach ($variations as $key => $value) 
+			{ ?>
+			<div class="row clshide <?php echo $value['variation_id']?>">  
+				<div class="clsDetails">
+					<img class="v-image" src="<?php echo $value['image_src']?>"/> 
+				</div>
+				<div class="clsDetails">
+						<?php 
+							the_title();
+							echo (' de ');
+							echo $value['attributes']['attribute_model'];
+							echo '<div>'.$value['attributes']['attribute_color'].'</div>';
+						?>
+				</div>
+				<div class="clsDetails">
+						<?php echo $value['price_html']; ?>
+				</div>
+				<div class="clsDetails">
+					<form  method="post"  enctype='multipart/form-data'>
+						<input type="hidden" id="addtocart" value="<?php echo $value['variation_id'] ?>" name="add-to-cart"/>
+						<button type="submit" class="single_add_to_cart_button button alt"><?php echo apply_filters('single_add_to_cart_text', __( 'Add to cart', 'woocommerce' ), $product->product_type); ?></button>
+					</form>
+				</div>
+			</div>         
+				<?php
+			}
+			?>
+			</div> <!-- clsSidebar -->
+			
+			<div class="clsSidebar">
+				<p class="clsBotDetails clsBotTitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit <?php the_title(); ?></p>
+				<p class="clsBotDetails"><a href="#">Description general</a></p>
+				<p class="clsBotDetails"><a href="#">Description boxes</a></p>
+				<p class="clsBotDetails"><a href="#">Gallery Images</a>
+								<?php woocommerce_show_product_images(); ?>
+				</p>
+				<?php echo do_shortcode( "[av_sidebar widget_area='Single Product Contact']" ) ?>
+			</div> <!-- clsSidebar -->
+			
+		</div> <!-- col-lg-3 -->
   
     </div>
 </div>
