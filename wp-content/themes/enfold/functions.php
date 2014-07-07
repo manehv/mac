@@ -681,8 +681,3 @@ case 'COP': $currency_symbol = '$'; break;
 }
 return $currency_symbol;
 }
-
-
-?>
-
-
