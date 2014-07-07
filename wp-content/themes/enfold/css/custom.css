@@ -10,7 +10,7 @@ h1.clsTopTitle{font-size:18px; color:#6B6869; margin-bottom:30px; }
 .clsRelTitle{padding:0; color:#368CCA; font-size:12px; font-weight:bold; }
 .clsSinProd .col-lg-3{padding-right:0; }
 .clsSinProd .upsells{margin-top:25px; }
-.clsContent{padding-left:0; }
+.clsContent{padding-left:0; padding-right:50px; }
 h2.clsBotTitle{color:#6B6869; font-size:22px; margin-top:30px; padding-bottom:10px; border-bottom:3px solid #6B6869; }
 .content, .sidebar{padding-bottom: 50px;  padding-top: 50px; }
 .clsContent .clsCenTitle{font-size:18px; color:#6B6869; font-weight:bold; margin-bottom:30px; }
@@ -18,6 +18,21 @@ h2.clsBotTitle{color:#6B6869; font-size:22px; margin-top:30px; padding-bottom:10
 .clsContent li.variation{text-transform:capitalize; color:#6B6869; font-size:14px; font-weight:bold; cursor:pointer; }
 .clsContent .variation.active{color:#368CCA; }
 .clsContent #v-image{height:200px; }
+.clsContent .clsModel{border-radius:10px; border:1px solid #6B6869; text-align:center; }
+.container .clsSidebar{margin-top:15px; border:2px solid #6B6869; padding:0; }
+.clsSidebar h3{color:#6B6869; font-size: 18px; padding:14px; border-bottom:3px solid #6B6869; }
+.clsDetails{margin:10px 15px; font-size:16px; color:#6B6869; font-weight:bold; }
+.clsDetails img{height:200px; }
+.clsDetails .amount{color:#6B6869; margin-left:-5px; }
+#top .clsDetails form{margin-bottom:0; }
+.clsDetails button.single_add_to_cart_button{background-color:#00A14F; border-color:#00A14F; transition:all 0.3s ease-out 0s; }
+.clsDetails button.single_add_to_cart_button:hover{background-color:#368cca; border-color:#368cca; transition:all 0.3s ease-out 0s; }
+.clsSidebar .clsBotDetails{padding: 10px 15px; border-bottom:2px solid #6B6869; font-size:16px; margin:0; }
+/*.clsSidebar:last-child{border-bottom:0 none; } */
+.clsSidebar .clsBotTitle{font-weight:bold; padding:25px 15px; }
+.clsSidebar .clsBotDetails a{color:#368cca; font-weight:bold; text:decoration:none; }
+.clsSidebar .widget{padding:10px 15px; font-size:15px; }
+.clsSidebar .thumbnails{display:none; }
 
 /*
 Desktop Styles

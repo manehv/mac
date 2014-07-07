@@ -471,49 +471,6 @@ add_theme_support('force-post-thumbnails-in-widget');
 require_once( 'functions-enfold.php');
 
 
-function woocommerce_variable_add_to_cart() {
-  global $product, $post;
-  $variations = $product->get_available_variations();
- 
-?>
- <div class="row">
-   <span class="col-lg-4">
-      <ul>
-	<?php
-	  $cnt=1;
-	  foreach ($variations as $key => $value) 
-	  {
-	    $active='';
-	    if($cnt==1)
-	    {
-	     $active='active';
-	     $cnt=0;
-	     }
-	     
-	    ?>
-	    <li variation_id="<?php echo $value['variation_id']?>" class="variation <?php echo $active ?>"><b><?php echo implode('/', $value['attributes']);?></b></li>
-										
-	    <?php
-	  }
-	    ?>
-      </ul>
-    </span>
-   <span class="col-lg-5">
-    <?php 
-    foreach ($variations as $key => $value) 
-	  {
-	    ?>
-	      <div class="clshide <?php echo $value['variation_id']?>">
-        <img class="v-image" src="<?php echo $value['image_src']?>"/> 
-        </div>
-    <?php
-    }
-    ?>
-    </span>
-     
-  </div>
-<?php		
-}
 
 //code for adding custom fields in variation box
 	//Display Fields
@@ -530,51 +487,71 @@ function woocommerce_variable_add_to_cart() {
 	function variable_fields( $loop, $variation_data ) {
 	?>
 	 <tr>
-			<td>
-				<?php
-						// Textarea
-						woocommerce_wp_textarea_input(
-								array(
-												'id' => '_textarea['.$loop.']',
-												'name'=>'shipping notes',
-												'label' => __( 'Shipping Notes', 'woocommerce' ),
-												'placeholder' => '',
-												'description' => __( 'Enter the custom value here.', 'woocommerce' ),
-												'value' => $variation_data['_textarea'][0],
-												)
-												);
-				?>
-		 </td>
+	    <td>
+		<?php
+		  // Textarea
+		  woocommerce_wp_textarea_input(
+		  array(
+		    'id' => '_textarea['.$loop.']',
+		    'name'=>'shipping notes',
+		    'label' => __( 'Shipping Notes', 'woocommerce' ),
+		    'placeholder' => '',
+		    'description' => __( 'Enter the custom value here.', 'woocommerce' ),
+		    'value' => $variation_data['_textarea'][0],
+		    )		
+		    );
+		  // Textarea
+		  woocommerce_wp_textarea_input(
+		  array(
+		    'id' => '_description['.$loop.']',
+		    'name'=>'Description',
+		    'label' => __( 'Model Description', 'woocommerce' ),
+		    'placeholder' => '',
+		    'description' => __( 'Enter the description here.', 'woocommerce' ),
+		    'value' => $variation_data['_description'][0],
+		    )		
+		    );
+		    
+		?>
+	    </td>
 	</tr>
-<?php
-		}
-			
-	/**
-	* Create new fields for new variations
-	*
-	*/
-	function variable_fields_js() {
-	?>
-		<tr>
-			<td>
-				<?php
-							
-        // Textarea
-          woocommerce_wp_textarea_input(
-				array(
-								'id' => '_textarea[ + loop + ]',
-								'label' => __( 'Shipping Notes', 'woocommerce' ),
-								'placeholder' => '',
-								'description' => __( 'Enter the custom value here.', 'woocommerce' ),
-								'value' => $variation_data['_textarea'][0],
-								'name'=>'shipping notes',
-							)
-							);
-					?>
-				</td>
-			</tr>
+	<?php
+	}
+
+
+/* function variable_fields_js() {
+?>
+<tr>
+  <td>
+    <?php  
+    // Textarea
+    woocommerce_wp_textarea_input(
+    array(
+	    'id' => '_textarea[ + loop + ]',
+	    'label' => __( 'Shipping Notes', 'woocommerce' ),
+	    'placeholder' => '',
+	    'description' => __( 'Enter the custom value here.', 'woocommerce' ),
+	    'value' => $variation_data['_textarea'][0],
+	    'name'=>'shipping notes',
+	    )
+	);
+    woocommerce_wp_textarea_input(
+    array(
+	    'id' => '_description[ + loop + ]',
+	    'label' => __( 'Description', 'woocommerce' ),
+	    'placeholder' => '',
+	    'description' => __( 'Enter the description here.', 'woocommerce' ),
+	    'value' => $variation_data['_description'][0],
+	    'name'=>'Description',
+	    )
+	);
+	
+    ?>
+  </td>
+</tr>
 <?php
 }
+*/ 
  
 /**
 * Save new fields for variations
@@ -586,16 +563,91 @@ function woocommerce_variable_add_to_cart() {
              $variable_post_id = $_POST['variable_post_id'];
 				// Textarea
 					$_textarea = $_POST['_textarea'];
+					$_description = $_POST['_description'];
 					for ( $i = 0; $i < sizeof( $variable_sku ); $i++ ) :
-					$variation_id = (int) $variable_post_id[$i];
-					if ( isset( $_textarea[$i] ) ) {
-					update_post_meta( $variation_id, '_textarea', stripslashes( $_textarea[$i] ) );
-					}
-		endfor;
+							$variation_id = (int) $variable_post_id[$i];
+						if ( isset( $_textarea[$i] ) ) {
+						update_post_meta( $variation_id, '_textarea', stripslashes( $_textarea[$i] ) );
+						}
+						if ( isset( $_textarea[$i] ) ) {
+						update_post_meta( $variation_id, '_description', stripslashes( $_description[$i] ) );
+						}
+						
+					endfor;
 endif;
+
 }
 
 
+
+function woocommerce_variable_add_to_cart() {
+  global $product, $post;
+  $variations = $product->get_available_variations();
+?>
+ <div class="row">
+   <div class="col-lg-6">
+      <ul>
+	<?php
+	  $cnt=1;
+	  $possibleColors = $possibleModels = array();
+	  foreach ($variations as $key => $value) 
+	  {
+	    $active='';
+	    if($cnt==1)
+	    {
+	     $active='active';
+	     $cnt=0;
+	     }
+	     if(!in_array($value['attributes']['attribute_model'], $possibleModels))
+	     $possibleModels[] = $value['attributes']['attribute_model'];
+	     if(!in_array($value['attributes']['attribute_color'],$possibleColors )){
+	    ?>
+	    <li variation_id="<?php echo $value['variation_id']?>" class="variation <?php echo $active ?>"><?php echo $value['attributes']['attribute_color'];?></li>
+	    <?php
+	      $possibleColors[] = $value['attributes']['attribute_color'];
+	     }
+	  }
+	    ?>
+      </ul>
+    </div> <!-- col-lg-6 -->
+    <div class="col-lg-6">
+      <?php 
+      foreach ($variations as $key => $value) 
+      {
+      ?>
+	<div class="clshide <?php echo $value['variation_id']?>">
+	  <img class="v-image" src="<?php echo $value['image_src']?>"/> 
+	</div>
+      <?php
+      }
+      ?>
+    </div> <!-- col-lg-6 -->
+ </div> <!-- row -->
+ 
+ <div class="row">
+    <?php 
+      $cnt=1;
+      foreach ($possibleModels as $key => $value) 
+			{
+					$active='';
+					if($cnt==1)
+					{
+						$active='active';
+						$cnt=0;
+					}
+					if($value != ''){
+					?>
+						<div class="col-lg-4">
+							<div class="variation <?php echo $active ?> clsModel"><?php echo $value; ?></div>
+						</div> <!-- col-lg-4 -->
+					<?php
+					}
+			}
+	  
+      ?>
+ </div>
+<?php		
+}
 
 
 
