@@ -23,7 +23,7 @@ h2.clsBotTitle{color:#6B6869; font-size:22px; margin-top:30px; padding-bottom:10
 .clsSidebar h3{color:#6B6869; font-size: 18px; padding:14px; border-bottom:3px solid #6B6869; }
 .clsDetails{margin:10px 15px; font-size:16px; color:#6B6869; font-weight:bold; }
 .clsDetails img{height:200px; }
-.clsDetails .amount{color:#6B6869; margin-left:-5px; }
+.clsDetails .amount{color:#6B6869; }
 #top .clsDetails form{margin-bottom:0; }
 .clsDetails button.single_add_to_cart_button{background-color:#00A14F; border-color:#00A14F; transition:all 0.3s ease-out 0s; }
 .clsDetails button.single_add_to_cart_button:hover{background-color:#368cca; border-color:#368cca; transition:all 0.3s ease-out 0s; }

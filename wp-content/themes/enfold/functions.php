@@ -672,4 +672,17 @@ function Content_Half( $atts, $content = null ) {
 }
 add_shortcode('content_half_column', 'Content_Half');
 
+/* add symbol for colombiam peso */
+add_filter('woocommerce_currency_symbol', 'change_existing_currency_symbol', 10, 2);
+
+function change_existing_currency_symbol( $currency_symbol, $currency ) {
+switch( $currency ) {
+case 'COP': $currency_symbol = '$'; break;
+}
+return $currency_symbol;
+}
+
+
 ?>
+
+
