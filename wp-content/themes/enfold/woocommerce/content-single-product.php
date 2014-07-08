@@ -92,8 +92,8 @@ global $post, $woocommerce, $product;
 						<button type="submit" class="single_add_to_cart_button button alt"><?php echo apply_filters('single_add_to_cart_text', __( 'Add to cart', 'woocommerce' ), $product->product_type); ?></button>
 					</form>
 				</div>
-			</div>         
-				<?php
+			</div>    			
+			<?php
 			}
 			?>
 			</div> <!-- clsSidebar -->
