@@ -11,7 +11,7 @@ h1.clsTopTitle{font-size:18px; color:#6B6869; margin-bottom:30px; }
 .clsSinProd .col-lg-3{padding-right:0; }
 .clsSinProd .upsells{margin-top:25px; }
 .clsContent{padding-left:0; padding-right:50px; }
-h2.clsBotTitle{color:#6B6869; font-size:22px; margin-top:30px; padding-bottom:10px; border-bottom:3px solid #6B6869; }
+h2.clsBotTitle{color:#6B6869; font-size:22px; margin-top:30px; padding-bottom:10px; border-bottom:2px solid #6B6869; }
 .content, .sidebar{padding-bottom: 50px;  padding-top: 50px; }
 .clsContent .clsCenTitle{font-size:18px; color:#6B6869; font-weight:bold; margin-bottom:30px; }
 .clsContent ul{margin-left:0; }
@@ -20,7 +20,7 @@ h2.clsBotTitle{color:#6B6869; font-size:22px; margin-top:30px; padding-bottom:10
 .clsContent #v-image{height:200px; }
 .clsContent .clsModel{border-radius:10px; border:1px solid #6B6869; text-align:center; }
 .container .clsSidebar{margin-top:15px; border:2px solid #6B6869; padding:0; }
-.clsSidebar h3{color:#6B6869; font-size: 18px; padding:14px; border-bottom:3px solid #6B6869; }
+.clsSidebar h3{color:#6B6869; font-size: 18px; padding:14px; border-bottom:2px solid #6B6869; }
 .clsDetails{margin:10px 15px; font-size:16px; color:#6B6869; font-weight:bold; }
 .clsDetails img{height:200px; }
 .clsDetails .amount{color:#6B6869; }
@@ -33,12 +33,12 @@ h2.clsBotTitle{color:#6B6869; font-size:22px; margin-top:30px; padding-bottom:10
 .clsSidebar .clsBotDetails a{color:#368cca; font-weight:bold; text:decoration:none; }
 .clsSidebar .widget{padding:10px 15px; font-size:15px; }
 .clsSidebar .thumbnails{display:none; }
-.clsContent .clsSpec{border-top:3px solid #6b6869; margin:10px 0; padding:30px 0 0; }
+.clsContent .clsSpec{border-top:2px solid #6b6869; margin:10px 0; padding:30px 0 0; }
 .clsContent .clsSpec img{display:block; }
 .clsContent .clsSpec p{font-size:16px; font-weight:bold; }
 .clsContent .clsDesc{font-size:14px; }
 .clsExc{margin:30px 0 40px; }
-.clsContent .clsVariation{border-bottom:3px solid #6B6869; margin:10px 0 15px; }
+.clsContent .clsVariation{border-bottom:2px solid #6B6869; margin:10px 0 15px; }
 .clsContent .clsModelSel{color:#6B6869; font-size:22px; margin-bottom:30px; }
 
 /*
