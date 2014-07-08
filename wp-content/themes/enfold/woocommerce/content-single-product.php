@@ -100,8 +100,8 @@ global $post, $woocommerce, $product;
 			
 			<div class="clsSidebar">
 				<p class="clsBotDetails clsBotTitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit <?php the_title(); ?></p>
-				<p class="clsBotDetails" id="top"><a href="#">Description general</a></p>
-				<p class="clsBotDetails" id="spec"><a href="#">Specifications Information</a></p>
+				<p class="clsBotDetails" id="scroll-top"><a href="#">Description general</a></p>
+				<p class="clsBotDetails" id="des-top"><a href="#">Specifications Information</a></p>
 				<p class="clsBotDetails"><a href="#">Gallery Images</a>
 								<?php woocommerce_show_product_images(); ?>
 				</p>

@@ -655,7 +655,7 @@ function woocommerce_variable_add_to_cart() {
       ?>
  </div>
  <?php if($post->post_excerpt) ?>
-		<div class="clsExc"><?php the_excerpt(); ?></div>
+		<div class="clsExc" id="lipsum"><?php the_excerpt(); ?></div>
 <?php
 }
 
