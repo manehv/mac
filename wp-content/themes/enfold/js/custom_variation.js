@@ -17,5 +17,16 @@ jQuery(function()
 		
 	});
 	
+	 jQuery('#scroll-top').click(function(){
+      	jQuery('html,body').animate({ scrollTop: 0 },1000, function () {
+		   });
+	});
+	
+	jQuery('#des-top').click(function(){
+		     jQuery('html,body').animate({  scrollTop: jQuery('#lipsum').offset().top },1000, function () {
+        
+	   });
+     
+	});
 
 });

@@ -92,16 +92,16 @@ global $post, $woocommerce, $product;
 						<button type="submit" class="single_add_to_cart_button button alt"><?php echo apply_filters('single_add_to_cart_text', __( 'Add to cart', 'woocommerce' ), $product->product_type); ?></button>
 					</form>
 				</div>
-			</div>         
-				<?php
+			</div>    			
+			<?php
 			}
 			?>
 			</div> <!-- clsSidebar -->
 			
 			<div class="clsSidebar">
 				<p class="clsBotDetails clsBotTitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit <?php the_title(); ?></p>
-				<p class="clsBotDetails" id="top"><a href="#">Description general</a></p>
-				<p class="clsBotDetails" id="spec"><a href="#">Specifications Information</a></p>
+				<p class="clsBotDetails" id="scroll-top"><a href="#">Description general</a></p>
+				<p class="clsBotDetails" id="des-top"><a href="#">Specifications Information</a></p>
 				<p class="clsBotDetails"><a href="#">Gallery Images</a>
 								<?php woocommerce_show_product_images(); ?>
 				</p>
