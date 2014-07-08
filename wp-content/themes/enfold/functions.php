@@ -584,7 +584,7 @@ function woocommerce_variable_add_to_cart() {
   global $product, $post;
   $variations = $product->get_available_variations();
 ?>
- <div class="row">
+ <div class="row clsVariation">
    <div class="col-lg-6">
       <ul>
 	<?php
@@ -625,6 +625,7 @@ function woocommerce_variable_add_to_cart() {
  </div> <!-- row -->
  
  <div class="row">
+ <h2 class="clsModelSel">Selecciona un modelo</h2>
     <?php 
       $cnt=1;
       foreach ($possibleModels as $key => $value) 
@@ -646,29 +647,30 @@ function woocommerce_variable_add_to_cart() {
 	  
       ?>
  </div>
-<?php		
+ <div class="clsExc"><?php the_excerpt(); ?></div>
+<?php
 }
 
 
 
 
 function Row( $atts, $content = null ) {
-   return '<div class="row">' . do_shortcode($content) . '</div>';
+   return '<div class="row clsSpec">' . do_shortcode($content) . '</div>';
 }
 add_shortcode('row', 'Row');
 
 function Meta( $atts, $content = null ) {
-   return '<div class="col-lg-2">' . do_shortcode($content) . '</div>';
+   return '<div class="col-lg-4">' . do_shortcode($content) . '</div>';
 }
 add_shortcode('meta', 'Meta');
 
 function Content_Full( $atts, $content = null ) {
-   return '<div class="col-lg-10">' . do_shortcode($content) . '</div>';
+   return '<div class="col-lg-8 clsDesc">' . do_shortcode($content) . '</div>';
 }
 add_shortcode('content_full_column', 'Content_Full');
 
 function Content_Half( $atts, $content = null ) {
-   return '<div class="col-lg-5">' . do_shortcode($content) . '</div>';
+   return '<div class="col-lg-4 clsDesc">' . do_shortcode($content) . '</div>';
 }
 add_shortcode('content_half_column', 'Content_Half');
 
