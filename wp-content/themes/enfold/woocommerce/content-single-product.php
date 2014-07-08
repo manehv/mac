@@ -84,6 +84,9 @@ global $post, $woocommerce, $product;
 						<?php echo $value['price_html']; ?>
 				</div>
 				<div class="clsDetails">
+				  <?php  echo get_post_meta($value['variation_id'], '_textarea', true );?>
+				</div>
+				<div class="clsDetails">
 					<form  method="post"  enctype='multipart/form-data'>
 						<input type="hidden" id="addtocart" value="<?php echo $value['variation_id'] ?>" name="add-to-cart"/>
 						<button type="submit" class="single_add_to_cart_button button alt"><?php echo apply_filters('single_add_to_cart_text', __( 'Add to cart', 'woocommerce' ), $product->product_type); ?></button>

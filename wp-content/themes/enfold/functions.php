@@ -599,7 +599,7 @@ function woocommerce_variable_add_to_cart() {
 	     $cnt=0;
 	     }
 	     if(!in_array($value['attributes']['attribute_model'], $possibleModels))
-	     $possibleModels[] = $value['attributes']['attribute_model'];
+	     $possibleModels[] = $value['attributes']['attribute_model'].':'.$value['variation_id'].':'.$value['price_html'];
 	     if(!in_array($value['attributes']['attribute_color'],$possibleColors )){
 	    ?>
 	    <li variation_id="<?php echo $value['variation_id']?>" class="variation <?php echo $active ?>"><?php echo $value['attributes']['attribute_color'];?></li>
@@ -624,10 +624,12 @@ function woocommerce_variable_add_to_cart() {
     </div> <!-- col-lg-6 -->
  </div> <!-- row -->
  
- <div class="row">
+ <div class="row model">
  <h2 class="clsModelSel">Selecciona un modelo</h2>
     <?php 
       $cnt=1;
+    
+    
       foreach ($possibleModels as $key => $value) 
 			{
 					$active='';
@@ -637,9 +639,14 @@ function woocommerce_variable_add_to_cart() {
 						$cnt=0;
 					}
 					if($value != ''){
+					  $temp=array();
+					  $temp=explode(':',$value)
 					?>
-						<div class="col-lg-4">
-							<div class="variation <?php echo $active ?> clsModel"><?php echo $value; ?></div>
+						<div class="col-lg-4 <?php echo $temp[1]; ?>">
+							<div class="variation <?php echo $active ?> clsModel" variation_id="<?php echo $temp[1]; ?>" ><?php echo $temp[0]; ?>
+							  <div><?php echo $temp[2];?></div>
+							 <div><?php echo get_post_meta($temp[1], '_description', true );?></div>
+							 </div>
 						</div> <!-- col-lg-4 -->
 					<?php
 					}
