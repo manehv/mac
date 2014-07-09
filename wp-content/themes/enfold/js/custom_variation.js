@@ -6,6 +6,9 @@ jQuery(function()
 	 var variation_id=jQuery('.active').attr('variation_id');
 	 jQuery('.'+variation_id).show();
 		
+	 
+	 
+		//functionalty for click on colour 
   jQuery('.colour_click').click(function(){
 		
 		jQuery('.variation').removeClass('active');
@@ -42,7 +45,7 @@ jQuery(function()
 		
 	});
 	
-	
+	//functionalty for click on model
 	 jQuery('.clsModel').click(function()
 	 {
 		
@@ -64,7 +67,7 @@ jQuery(function()
 	 });
 	
 	
-	//default
+	//default model selected
 	jQuery('.clsModel').hide();
 	
 		var active_attr=[];
