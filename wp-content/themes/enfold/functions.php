@@ -264,7 +264,17 @@ if(!function_exists('avia_register_frontend_scripts'))
 		wp_enqueue_script( 'avia-shortcodes', $template_url.'/js/shortcodes.js', array('jquery'), 1, true );
 		wp_enqueue_script( 'avia-prettyPhoto',  $template_url.'/js/prettyPhoto/js/jquery.prettyPhoto.js', 'jquery', "3.1.5", true);
 		// wp_register_script( 'wp-mediaelement',  $template_url.'/js/mediaelement/mediaelement-and-player.min.js', 'jquery', "1", true);
-    wp_enqueue_script( 'custom_variation',  $template_url.'/js/custom_variation.js',true); 
+//    wp_enqueue_script( 'custom_variation',  $template_url.'/js/custom_variation.js',true); 
+ 
+   wp_deregister_script('wc-add-to-cart-variation'); 
+   
+  wp_dequeue_script('wc-add-to-cart-variation'); 
+  
+  wp_register_script( 'wc-add-to-cart-variation',$template_url.'/js/custom_variation.js',true); 
+   
+  wp_enqueue_script('wc-add-to-cart-variation'); 
+  
+  
 		wp_enqueue_script( 'jquery' );
 		wp_enqueue_script( 'wp-mediaelement' );
 
@@ -581,28 +591,41 @@ endif;
 
 
 function woocommerce_variable_add_to_cart() {
+
   global $product, $post;
+  
   $variations = $product->get_available_variations();
-?>
+ 
+  ?>
+  
+  <script type="text/javascript">
+            var product_variation = <?php echo json_encode($variations) ?>;
+   </script>
+ 
  <div class="row clsVariation">
    <div class="col-lg-6">
       <ul>
 	<?php
 	  $cnt=1;
 	  $possibleColors = $possibleModels = array();
+
 	  foreach ($variations as $key => $value) 
 	  {
+     
 	    $active='';
 	    if($cnt==1)
 	    {
 	     $active='active';
 	     $cnt=0;
 	     }
+	     
+	    
+	      
 	     if(!in_array($value['attributes']['attribute_model'], $possibleModels))
 	     $possibleModels[] = $value['attributes']['attribute_model'].':'.$value['variation_id'].':'.$value['price_html'];
-	     if(!in_array($value['attributes']['attribute_color'],$possibleColors )){
+	     if(!in_array($value['attributes']['attribute_color'],$possibleColors )){	
 	    ?>
-	    <li variation_id="<?php echo $value['variation_id']?>" class="variation <?php echo $active ?>"><?php echo $value['attributes']['attribute_color'];?></li>
+	    <li attr-value="<?php echo $value['attributes']['attribute_color'];?>" variation_id="<?php echo $value['variation_id']?>" class="variation colour_click <?php echo $active ?>"><?php echo $value['attributes']['attribute_color'];?></li>
 	    <?php
 	      $possibleColors[] = $value['attributes']['attribute_color'];
 	     }
@@ -643,7 +666,7 @@ function woocommerce_variable_add_to_cart() {
 					  $temp=explode(':',$value)
 					?>
 						<div class="col-lg-4 <?php echo $temp[1]; ?>">
-							<div class="variation <?php echo $active ?> clsModel" variation_id="<?php echo $temp[1]; ?>" ><?php echo $temp[0]; ?>
+							<div attr-value="<?php echo $temp[0]; ?>" class="variation <?php echo $active ?> clsModel" variation_id="<?php echo $temp[1]; ?>" ><?php echo $temp[0]; ?>
 							  <div><?php echo $temp[2];?></div>
 							 <div><?php echo get_post_meta($temp[1], '_description', true );?></div>
 							 </div>
