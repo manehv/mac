@@ -22,8 +22,18 @@ global $post, $woocommerce, $product;
 	 * @hooked wc_print_notices - 10
 	 */
 	
-	 do_action( 'woocommerce_before_single_product' );
+	// do_action( 'woocommerce_before_single_product' );
 	 
+	 
+	 /**
+		 * woocommerce_before_single_product_summary hook
+		 *
+	 * @hooked woocommerce_show_product_sale_flash - 10
+	 * @hooked woocommerce_show_product_images - 20
+		 */
+//		do_action( 'woocommerce_before_single_product_summary' );
+
+
 
 	 if ( post_password_required() ) {
 	 	echo get_the_password_form();
@@ -65,7 +75,8 @@ global $post, $woocommerce, $product;
 			<h3>Resumen</h3>
 			<?php 
 			global $product, $post;
-			$variations = $product->get_available_variations();
+		
+  $variations = $product->get_available_variations();
 			foreach ($variations as $key => $value) 
 			{ ?>
 			<div class="row clshide <?php echo $value['variation_id']?>">  
@@ -102,6 +113,7 @@ global $post, $woocommerce, $product;
 				<p class="clsBotDetails clsBotTitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit <?php the_title(); ?></p>
 				<p class="clsBotDetails" id="scroll-top"><a href="#">Description general</a></p>
 				<p class="clsBotDetails" id="des-top"><a href="#">Specifications Information</a></p>
+
 				<p class="clsBotDetails"><a href="#">Gallery Images</a>
 								<?php woocommerce_show_product_images(); ?>
 				</p>
