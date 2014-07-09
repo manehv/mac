@@ -68,6 +68,10 @@ jQuery(function()
 	
 	
 	//default model selected
+	 
+	 
+	 if (typeof product_variation != 'undefined')
+	 { 
 	jQuery('.clsModel').hide();
 	
 		var active_attr=[];
@@ -90,7 +94,8 @@ jQuery(function()
 			 
 		}
 		
-	
+	 }
+	 
 	jQuery('#scroll-top').click(function(){
       	jQuery('html,body').animate({ scrollTop: 0 },1000, function () {
 		   });
