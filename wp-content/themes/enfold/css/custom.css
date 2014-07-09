@@ -40,6 +40,9 @@ h2.clsBotTitle{color:#6B6869; font-size:22px; margin-top:30px; padding-bottom:10
 .clsExc{margin:30px 0 40px; }
 .clsContent .clsVariation{border-bottom:2px solid #6B6869; margin:10px 0 15px; }
 .clsContent .clsModelSel{color:#6B6869; font-size:22px; margin-bottom:30px; }
+.products .thumbnail_container{height:250px; display:table; }
+.products .thumbnail_container img{display:table-cell; vertical-align:middle; }
+
 
 /*
 Desktop Styles
