@@ -94,6 +94,7 @@ jQuery(function()
 				return false;
 	});
 	
+
 	jQuery('#des-top').click(function(){
 		     jQuery('html,body').animate({  scrollTop: jQuery('#lipsum').offset().top },1000, function () {
         		   
@@ -102,5 +103,4 @@ jQuery(function()
 	});
 	
 	
-
 });
