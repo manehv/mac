@@ -1,0 +1,35 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: english-to-spanish\n"
+"POT-Creation-Date: 2014-07-10 14:46+0530\n"
+"PO-Revision-Date: 2014-07-10 14:48+0530\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: Spanish\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;_e;__\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: /Projects/mac/wp-content/themes/enfold/woocommerce\n"
+
+#: /Projects/mac/wp-content/themes/enfold/woocommerce/content-single-product.php:103
+msgid "Add to cart"
+msgstr ""
+
+#: /Projects/mac/wp-content/themes/enfold/woocommerce/content-single-product.php:114
+msgid "Description general"
+msgstr ""
+
+#: /Projects/mac/wp-content/themes/enfold/woocommerce/content-single-product.php:115
+msgid "Specifications Information"
+msgstr ""
+
+#: /Projects/mac/wp-content/themes/enfold/woocommerce/content-single-product.php:116
+msgid "Gallery Images"
+msgstr ""
+
+#: /Projects/mac/wp-content/themes/enfold/woocommerce/single-product/related.php:37
+msgid "Related Products"
+msgstr ""
