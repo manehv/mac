@@ -22,7 +22,7 @@ global $post, $woocommerce, $product;
 	 * @hooked wc_print_notices - 10
 	 */
 	
-	// do_action( 'woocommerce_before_single_product' );
+	 do_action( 'woocommerce_before_single_product' );
 	 
 	 
 	 /**
@@ -111,10 +111,9 @@ global $post, $woocommerce, $product;
 			
 			<div class="clsSidebar">
 				<p class="clsBotDetails clsBotTitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit <?php the_title(); ?></p>
-				<p class="clsBotDetails" id="scroll-top"><a href="#">Description general</a></p>
-				<p class="clsBotDetails" id="des-top"><a href="#">Specifications Information</a></p>
-
-				<p class="clsBotDetails"><a href="#">Gallery Images</a>
+				<p class="clsBotDetails" id="scroll-top"><a href="#"><?php _e('Description general','woocommerce'); ?></a></p>
+				<p class="clsBotDetails" id="des-top"><a href="#"><?php _e('Specifications Information','woocommerce'); ?></a></p>
+				<p class="clsBotDetails"><a href="#"><?php _e('Gallery Images','woocommerce'); ?></a>
 								<?php woocommerce_show_product_images(); ?>
 				</p>
 				<?php echo do_shortcode( "[av_sidebar widget_area='Single Product Contact']" ) ?>
