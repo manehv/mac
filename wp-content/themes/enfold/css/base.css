@@ -120,8 +120,12 @@ margin-bottom: 30px;
 
 /* #Links
 ================================================== */
-	a { text-decoration: none; outline: 0; max-width:100%; max-width:none\9; }
-	a:hover, a:focus, a:visited { outline: 0; text-decoration: underline}
+	a { text-decoration: none;
+        outline: 0; 
+        max-width:100%; 
+        max-width:none\9; 
+    }
+	a:hover, a:focus, a:visited { outline: 0; text-decoration: underline; background-color:inherit!important}
 	p a, p a:visited { line-height: inherit; }
 	a.avianolink, .avianolink a{cursor: default;}
 

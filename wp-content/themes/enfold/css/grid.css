@@ -563,8 +563,9 @@ div .av_one_fourth {
   width: 20.5%;
 }
 div .av_one_third {
-  margin-left: 6%;
-  width: 29.333333333333332%;
+  margin-left: 2.0%;
+/*  width: 32.3%;*/
+    width: 32.0%;
 }
 div .av_two_fifth {
   margin-left: 6%;
