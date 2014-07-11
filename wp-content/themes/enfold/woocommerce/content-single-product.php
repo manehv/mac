@@ -117,8 +117,10 @@ global $post, $woocommerce, $product;
 			<div class="clsSidebar">
 				<p class="clsBotDetails clsBotTitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit <?php the_title(); ?></p>
 				<p class="clsBotDetails" id="scroll-top"><a href="#"><?php _e('Description general','woocommerce'); ?></a></p>
-				<p class="clsBotDetails" id="des-top"><a href="#"><?php _e('Specifications Information','woocommerce'); ?></a></p>
-				<p class="clsBotDetails"><a href="#"><?php _e('Gallery Images','woocommerce'); ?></a>
+				<p class="clsBotDetails" id="des-top"><a href="#" ><?php _e('Specifications Information','woocommerce'); ?></a></p>
+				<p class="clsBotDetails">
+			
+				<a href="#" Id="showImage"><?php _e('Gallery Images','woocommerce'); ?></a>
 								<?php woocommerce_show_product_images(); ?>
 				</p>
 				<?php echo do_shortcode( "[av_sidebar widget_area='Single Product Contact']" ) ?>

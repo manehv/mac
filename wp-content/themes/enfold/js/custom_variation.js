@@ -7,6 +7,12 @@ jQuery(function()
 	 jQuery('.'+variation_id).show();
 		
 	 
+	//for showing galary
+	 jQuery('#showImage').click(function(){
+		 jQuery('.woocommerce-main-image').click();
+		 return false;
+	 });
+	 //onclick="javascript: document.getElementsByClassName('woocommerce-main-image').item(0).click();return false;"
 	 
 		//functionalty for click on colour 
   jQuery('.colour_click').click(function(){
@@ -63,7 +69,7 @@ jQuery(function()
 			jQuery('.clsVariation	').find('[attr-value='+product_variation[i].attributes.attribute_color+']').addClass('active');	
 		}
 		
-		 
+	
 	 });
 	
 	
@@ -87,7 +93,7 @@ jQuery(function()
 				{
 					 if(product_variation[i].attributes.attribute_color==active_attr[j])
 					 {
-						 console.log(product_variation[i].variation_id);
+						// console.log(product_variation[i].variation_id);
 						 jQuery('.model	').find('[variation_id='+product_variation[i].variation_id+']').show();
 					 } 
 				}
