@@ -505,7 +505,7 @@ HR
 clear: both;
 display:block;
 width:100%;
-height:15px;
+height:25px;
 line-height:25px;
 position: relative;
 margin:3px 0;
@@ -543,7 +543,7 @@ border-top-style:solid;
 .hr-short.hr-right .hr-inner-style{  left:auto; right:0; }
 
 body .container_wrap .hr.avia-builder-el-last, body .container_wrap .hr.avia-builder-el-first {
-margin:30px 0;
+margin:0px 0;
 }
 
 
@@ -577,7 +577,7 @@ text-align: center;
 max-width: 100%;
 }
 
-.avia-button:hover{opacity: 0.5; text-shadow:rgba(0,0,0,0.9) 0 0 2px;}
+.avia-button:hover{opacity: 0.5}
 .avia-button:active{border-bottom-width: 0px; border-top-width: 1px; border-top-style: solid;}
 .avia-button.avia-color-theme-color-subtle{background-image: none;}
 .avia-button.avia-color-theme-color-subtle:hover{}
@@ -2480,7 +2480,7 @@ background-image: linear-gradient(-45deg, #D7D7D7 25%, #F9F9F9 25%, #F9F9F9 50%,
 Image
 ====================================================================================================================================================== */
 .avia_image, .avia_image img{border-radius: 3px; display:block; position: relative;}
-.avia_image.avia-align-center{display:block; margin: 0 auto 20px auto;  text-align: center;}
+.avia_image.avia-align-center{display:block; margin: 10px auto 20px auto;  text-align: center;}
 .avia_image.avia-align-center img{margin:0 auto; display:inline-block;}
 .avia_image.avia-align-left{display:block; float:left; margin-right: 15px; margin-top: 5px;}
 .avia_image.avia-align-right{display:block; float:right; margin-left: 15px; margin-top: 5px;}
@@ -2649,7 +2649,7 @@ text-indent: 0px;
 }
 
 .avia-slideshow-dots{position: relative; z-index: 200; width:100%; bottom:0; text-align: center; left: 0; height:0px;}
-.avia-slideshow-dots a{display: inline-block; height:13.5px; width:13.5px; border-radius: 14px; background: #000; opacity: 0.6; filter:alpha(opacity=60); text-indent: 100px; overflow: hidden; margin:0 1px; padding: 7px;position: relative; bottom: 33px;}
+.avia-slideshow-dots a{display: inline-block; height:13.5px; width:13.5px; border-radius: 14px; background: #000; opacity: 0.6; filter:alpha(opacity=60); text-indent: 100px; overflow: hidden; margin:0 10px; padding: 7px;position: relative; bottom: 33px;}
 .avia-slideshow-dots a.active, .avia-slideshow-dots a:hover{opacity: 0.8; filter:alpha(opacity=80); background: #fff;}
 
 .avia-caption{position: absolute; z-index: 10; bottom:17px; left:17px; padding:10px 20px; color:#fff; border-radius: 3px; }
