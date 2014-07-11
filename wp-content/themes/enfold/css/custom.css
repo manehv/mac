@@ -12,7 +12,8 @@ h1.clsTopTitle{font-size:18px; color:#6B6869; margin-bottom:30px; }
 .clsSinProd .upsells{margin-top:25px; }
 .clsContent{padding-left:0; padding-right:50px; }
 h2.clsBotTitle{color:#6B6869; font-size:22px; margin-top:30px; padding-bottom:10px; border-bottom:2px solid #6B6869; }
-.container .content, .container .sidebar{padding-bottom: 50px;  padding-top: 50px; }
+/*Please do not change the following line */
+.content, .sidebar{padding-bottom: 50px;  padding-top: 50px; }
 .clsContent .clsCenTitle{font-size:18px; color:#6B6869; font-weight:bold; margin-bottom:30px; }
 .clsContent ul{margin-left:0; }
 .clsContent li.variation{text-transform:capitalize; color:#6B6869; font-size:14px; font-weight:bold; cursor:pointer; }
