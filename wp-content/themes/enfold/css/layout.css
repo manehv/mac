@@ -217,6 +217,7 @@ height: auto\9; /*hack: fixes ie8 squished logo*/
 -webkit-transition: opacity 0.4s ease-in-out;
 -moz-transition: 	opacity 0.4s ease-in-out;
 transition: 		opacity 0.4s ease-in-out;
+    background-color: black;
 }
 
 .logo img.alternate{
@@ -250,15 +251,9 @@ text-decoration: none;
 padding:0 20px;
 font-weight: normal;
 font-size:12px;
-color:#f2f2f2!important;
+/*color:#f2f2f2!important;*/
 /*text-shadow: 0px -1px 0px #293036, 0px 1px 0px #000;    */
 font-family: "Open Sans";
-    
-    
-    
-    
-font-weight: 600;
-
 -webkit-transition: color 0.4s ease-in-out;
 -moz-transition: 	color 0.4s ease-in-out;
 transition: 		color 0.4s ease-in-out;
@@ -276,6 +271,7 @@ min-height: 23px;
 max-width: none;
 text-decoration: none;
 color:#ffffff;
+    z-index: 999;
 }
 
 #top .av-main-nav ul ul {
@@ -291,7 +287,17 @@ padding-top: 0px
 #top .av-main-nav li:hover > ul { display:block; }
 
 
-.avia-menu-fx{position: absolute; bottom:0px; background-color: rgba(229,229,229,0.35)!important; height:76px; z-index: 1; width:100%; left:0; opacity: 0; visibility: hidden; }
+.avia-menu-fx{position: absolute; bottom:0px; 
+/*
+    background-color: rgba(229,229,229,0.35)!important; 
+    height:76px; 
+*/
+    z-index: 1; 
+    width:100%; 
+    left:0; 
+    opacity: 1; 
+    visibility: hidden; 
+}
 .av-main-nav li:hover .avia-menu-fx, .current-menu-item > a > .avia-menu-fx, .av-main-nav li:hover .current_page_item > a > .avia-menu-fx{opacity: 1; visibility: visible;}
 
 .avia-menu-fx .avia-arrow-wrap{
@@ -309,7 +315,7 @@ display:none;
 .avia-menu-fx .avia-arrow-wrap .avia-arrow{ top: 10px; }
 
 
-.html_main_nav_header #top .main_menu .menu>li:last-child>a, .html_bottom_nav_header #top #menu-item-search>a{ padding-right:0; }
+.html_main_nav_header #top .main_menu .menu>li:last-child>a, .html_bottom_nav_header #top #menu-item-search>a{ padding-right:0; background-color: #000000; }
 .html_bottom_nav_header.html_logo_center #top #menu-item-search>a{ padding-right:13px; border-right-style: solid; border-right-width: 1px; }
 
 /*mega menu styles*/
@@ -324,21 +330,25 @@ font-size: 10px;
 text-shadow:rgba (0,0,0,0.8) 0 0 2px;
 text-align: center;
 line-height: 0.9em;
-padding-top:10px;
-    padding-bottom: 21px !important;
+padding-top:11px;
+    padding-bottom: 20px !important;
 /*    padding-bottom: 15px;*/
 margin-top: 0px;
     height: 26px;
 /*margin:0;*/
 background-color: transparent!important;
 border:none;
-text-shadow: rgba(0,0,0,0.8) 0 0 1px;
-
+/*text-shadow: rgba(0,0,0,0.8) 0 0 1px;*/
+    
+/*AQUI LE DOY ANCHO AL ELEMENTO DEL SUBMENU*/
+width: 150px !important;
+    color:#ccc !important;
 }
 
 #top #header .mega_menu_title a:hover{
 text-decoration:none;
-text-shadow: rgba(0,0,0,0.9) 0 1px 3px;
+color:#fff !important;
+/*text-shadow: rgba(0,0,0,0.9) 0 1px 3px;*/
 /*background: url("../images/btnHover-01.png") no-repeat scroll center center;*/
 background-color:rgb(80,80,80)!important;
 padding-bottom: 10px;
@@ -355,6 +365,7 @@ z-index: 2;
 padding: 0px 0;
 box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1);
 overflow: hidden;
+background-color: #6d6e71;
     
 
 
@@ -387,22 +398,24 @@ height:auto;
 
 #top #header .avia_mega_div .sub-menu{
 overflow: hidden;
-width:100%;
-box-shadow: 		none;
+width:150px;
+float:left !important;
+box-shadow: none;
 border-style:none;
 border-width:0px;
 position: relative;
 top:0;
 display:block;
-left:0;
+/*left:0;*/
 background-color: transparent !important;
 }
 
 /*wrapper arround all columns*/
 #top #header .avia_mega_div > .sub-menu{
 display: table;
-padding:0px 200px 0px;
+padding:0px 0px;
 background-color:#6D6E71 !important;
+float: right !important;
 
 /*
 border-top-style:solid;
@@ -603,6 +616,7 @@ margin-right:133px;
 border-radius: 0;
 min-width: 40px;
 border-radius: 20px;
+    background-color: #777777;
 }
 
 .avia_mobile #top #searchsubmit, .avia_mobile .ajax_load{
@@ -1052,8 +1066,8 @@ border-width:1px;
 ====================================================================================================================================================== */
 
 .content, .sidebar{
-padding-top:50px;
-padding-bottom:50px;
+padding-top:15px;
+padding-bottom:0px;
 -webkit-box-sizing: content-box; /* Safari/Chrome, other WebKit */
 -moz-box-sizing: content-box;    /* Firefox, other Gecko */
 box-sizing: content-box;
@@ -2322,16 +2336,17 @@ padding:15px 0;
 #scroll-top-link{
 position:fixed;
 border-radius:2px;
-height:50px;
-width:50px;
-line-height: 50px;
+height:38px;
+width:38px;
+line-height: 34px;
 text-decoration: none;
 text-align: center;
 opacity: 0;
 right:50px;
-bottom:50px;
+bottom:30px;
 z-index: 10000;
 visibility: hidden;
+    border-radius: 30px;
 }
 
 #scroll-top-link.avia_pop_class{

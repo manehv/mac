@@ -12,6 +12,7 @@ h1.clsTopTitle{font-size:18px; color:#6B6869; margin-bottom:30px; }
 .clsSinProd .upsells{margin-top:25px; }
 .clsContent{padding-left:0; padding-right:50px; }
 h2.clsBotTitle{color:#6B6869; font-size:22px; margin-top:30px; padding-bottom:10px; border-bottom:2px solid #6B6869; }
+/*Please do not change the following line */
 .content, .sidebar{padding-bottom: 50px;  padding-top: 50px; }
 .clsContent .clsCenTitle{font-size:18px; color:#6B6869; font-weight:bold; margin-bottom:30px; }
 .clsContent ul{margin-left:0; }
@@ -42,7 +43,7 @@ h2.clsBotTitle{color:#6B6869; font-size:22px; margin-top:30px; padding-bottom:10
 .clsContent .clsModelSel{color:#6B6869; font-size:22px; margin-bottom:30px; }
 .products .thumbnail_container{height:250px; display:table; }
 .products .thumbnail_container img{display:table-cell; vertical-align:middle; }
-
+/*.entry-content{margin-top:60px; margin-bottom:30px; }*/
 
 /*
 Desktop Styles

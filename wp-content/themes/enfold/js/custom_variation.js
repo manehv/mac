@@ -110,7 +110,7 @@ jQuery(function()
 	
 
 	jQuery('#des-top').click(function(){
-		     jQuery('html,body').animate({  scrollTop: jQuery('#lipsum').offset().top },1000, function () {
+		     jQuery('html,body').animate({  scrollTop: jQuery('#desc').offset().top },1000, function () {
         		   
 	   });
      	return false;
