@@ -7,6 +7,15 @@ jQuery(function()
 	 jQuery('.'+variation_id).show();
 		
 	 
+	 
+	 //updating qty
+	 jQuery('.single_add_to_cart_button').click(function(){
+	 jQuery('.set-aqy').val(jQuery('.quantity.buttons_added').find('.qty').val());
+		 
+	});
+	
+	 
+	 
 	//for showing galary
 	 jQuery('#showImage').click(function(){
 		 jQuery('.woocommerce-main-image').click();
