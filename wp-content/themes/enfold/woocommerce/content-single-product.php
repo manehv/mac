@@ -77,8 +77,10 @@ global $post, $woocommerce, $product;
 			global $product, $post;
 		
   $variations = $product->get_available_variations();
-			foreach ($variations as $key => $value) 
-			{ ?>
+  
+  foreach ($variations as $key => $value) 
+			{ 
+			  ?>
 			<div class="row clshide <?php echo $value['variation_id']?>">  
 				<div class="clsDetails">
 					<img class="v-image" src="<?php echo $value['image_src']?>"/> 
@@ -90,6 +92,9 @@ global $post, $woocommerce, $product;
 							echo $value['attributes']['attribute_model'];
 							echo '<div>'.$value['attributes']['attribute_color'].'</div>';
 						?>
+				</div>
+				<div class="clsDetails">
+						<?php echo $value['sku']; ?>
 				</div>
 				<div class="clsDetails">
 						<?php echo $value['price_html']; ?>
