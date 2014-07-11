@@ -593,7 +593,7 @@ endif;
 function woocommerce_variable_add_to_cart() {
 
   global $product, $post;
-  
+ 
   $variations = $product->get_available_variations();
  
   ?>
@@ -714,3 +714,6 @@ case 'COP': $currency_symbol = '$'; break;
 }
 return $currency_symbol;
 }
+
+
+
