@@ -69,6 +69,7 @@ global $post, $woocommerce, $product;
 					<?php _e('Choose a ','woocommerce').the_title(); ?>
 			</h2>
 			<?php do_action('woocommerce_variable_add_to_cart' ); ?>
+			<div id="desc"></div>
 			<?php the_content(); ?> 
     </div>
     <div class="col-lg-3">
@@ -127,6 +128,7 @@ global $post, $woocommerce, $product;
 					<?php echo get_the_post_thumbnail( $post_id, 'medium', $attr ); ?>
 				</div>
 			</div> <!-- row -->
+			<div id="desc"></div>
 			<?php the_content(); ?> 
     </div>
     <div class="col-lg-3">
@@ -149,7 +151,7 @@ global $post, $woocommerce, $product;
 				</div>
 				<div class="clsDetails">
 					<form  method="post"  enctype='multipart/form-data'>
-						<input type="hidden" id="addtocart" value="<?php  ?>" name="add-to-cart"/>
+						<input type="hidden" id="addtocart" value="<?php echo $post->ID;  ?>" name="add-to-cart"/>
 						<button type="submit" class="single_add_to_cart_button button alt"><?php echo apply_filters('single_add_to_cart_text', __( 'Add to cart', 'woocommerce' ), $product->product_type); ?></button>
 					</form>
 				</div>
