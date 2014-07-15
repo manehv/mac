@@ -1,5 +1,7 @@
 /* Have fun adding your style here :) - PS: At all times this file should contain a comment or a rule, otherwise opera might act buggy :( */
 
+@import url('fonts/open-sans-fontfacekit/web-fonts/opensans_light/stylesheet.css');
+
 /* General Custom CSS */
 .clsTitleCon{background-color:#000000; height:110px; }
 .clsTitleCon img{margin-top:15px; }
@@ -19,7 +21,7 @@ h2.clsBotTitle{color:#6B6869; font-size:22px; margin-top:30px; padding-bottom:10
 .clsContent li.variation{text-transform:capitalize; color:#6B6869; font-size:14px; font-weight:bold; cursor:pointer; }
 .clsContent .variation.active{color:#368CCA; }
 .clsContent #v-image{height:200px; }
-.clsContent .clsModel{border-radius:10px; border:1px solid #6B6869; text-align:center; }
+.clsContent .clsModel{border-radius:2px; border:1px solid #6B6869; text-align:center; box-shadow:0px 0px 2px rgba(0, 0, 0, 0.3); }
 .container .clsSidebar{margin-top:15px; border:2px solid #6B6869; padding:0; }
 .clsSidebar h3{color:#6B6869; font-size: 18px; padding:14px; border-bottom:2px solid #6B6869; }
 .clsDetails{margin:10px 15px; font-size:16px; color:#6B6869; font-weight:bold; }
@@ -37,12 +39,15 @@ h2.clsBotTitle{color:#6B6869; font-size:22px; margin-top:30px; padding-bottom:10
 .clsContent .clsSpec{border-top:2px solid #6b6869; margin:10px 0; padding:30px 0 0; }
 .clsContent .clsSpec img{display:block; }
 .clsContent .clsSpec p{font-size:16px; font-weight:bold; }
-.clsContent .clsDesc{font-size:14px; }
+.clsContent .clsDesc{font-size:14px; font-family:'open_sanslight'; }
 .clsExc{margin:30px 0 40px; }
 .clsContent .clsVariation{border-bottom:2px solid #6B6869; margin:10px 0 15px; }
 .clsContent .clsModelSel{color:#6B6869; font-size:22px; margin-bottom:30px; }
 .products .thumbnail_container{height:250px; display:table; }
 .products .thumbnail_container img{display:table-cell; vertical-align:middle; }
+#top div .quantity input.qty, .quantity input.qty{border:1px solid #e1e1e1; margin:0 10px; }
+table div.quantity{width:150px; }
+.woocommerce-page .button{margin-top:15px; }
 /*.entry-content{margin-top:60px; margin-bottom:30px; }*/
 
 /*

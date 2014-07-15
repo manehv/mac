@@ -157,8 +157,8 @@ global $post, $woocommerce, $product;
 					<form  method="post"  enctype='multipart/form-data'>
 						<input type="hidden" id="addtocart" value="<?php echo $post->ID;  ?>" name="add-to-cart"/>
 						<input id="set-aqy" class="qty" type="hidden" name="quantity" value="1" />
+						<div><?php woocommerce_quantity_input(); ?>	</div>
 						<button type="submit" class="single_add_to_cart_button button alt"><?php echo apply_filters('single_add_to_cart_text', __( 'Add to cart', 'woocommerce' ), $product->product_type); ?></button>
-			     <div><?php woocommerce_quantity_input(); ?>	</div>
 					</form>
 					
 				</div>
