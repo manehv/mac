@@ -40,34 +40,52 @@ global $post, $woocommerce, $product;
 	 	return;
 	 }
 ?>
-<h1 class="clsTopTitle" id="TopTitle">
-  <?php _e('Buy ','woocommerce').the_title(); ?>
+<!-- <h1 class="clsTopTitle" id="TopTitle">
+  <?php //_e('Buy ','woocommerce').the_title(); ?>
 </h1>
 <div class="row clsSinProd">
     <div class="col-lg-3 clsTitleCon">
 	<div class="row">
 	    <div class="col-lg-6">
-				<?php 
+				<?php /*
 					if ( has_post_thumbnail())
-						echo get_the_post_thumbnail( $post_id, 'thumbnail');
+						echo get_the_post_thumbnail( $post_id, 'thumbnail'); */
 				?>
 	    </div>
 	    <div class="col-lg-6 clsTitle">
-		<?php the_title(); ?>
+		<?php //the_title(); ?>
 	    </div>
 	</div>
     </div>
     <div class="col-lg-9">
-	<?php woocommerce_upsell_display(4,4); ?>
+	<?php //woocommerce_upsell_display(4,4); ?>
     </div>
+</div> -->
+
+<div class="row clsSinProd">
+	<ul class="clsTopList">
+		<li>
+			<?php 
+				if ( has_post_thumbnail())
+					echo get_the_post_thumbnail( $post_id, 'thumbnail');
+			?>
+			<span class="clsRelTitle">
+				<?php
+					the_title(); 
+				?>
+			</span>
+		</li>
+		<?php woocommerce_upsell_display(4,4); ?>
+	</ul>
 </div>
+
 
 <div class="row">
 		<?php if( $product->has_child() ): ?>
     <div class="col-lg-9 clsContent">
-			<h2 class="clsBotTitle">
+			<h1 class="clsBotTitle">
 					<?php _e('Choose a ','woocommerce').the_title(); ?>
-			</h2>
+			</h1>
 			<?php do_action('woocommerce_variable_add_to_cart' ); ?>
 			<div id="desc"></div>
 			<?php the_content(); ?> 
@@ -91,9 +109,12 @@ global $post, $woocommerce, $product;
 				<div class="clsDetails">
 						<?php 
 							the_title();
-							echo (' de ');
+							_e(' of ','woocommerce');
 							echo $value['attributes']['attribute_model'];
 							echo '<div>'.$value['attributes']['attribute_color'].'</div>';
+							echo '<div>';
+							_e('Unlocked','woocommerce');
+							echo '</div>';
 						?>
 				</div>
 				<div class="clsDetails">
@@ -168,12 +189,12 @@ global $post, $woocommerce, $product;
 			<?php endif; ?>
 			
 			<div class="clsSidebar">
-				<p class="clsBotDetails clsBotTitle"><?php _e('Lorem ipsum dolor sit amet, consectetur adipiscing elit ','woocommerce').the_title(); ?></p>
-				<p class="clsBotDetails" id="scroll-top"><a href="#"><?php _e('Description general','woocommerce'); ?></a></p>
-				<p class="clsBotDetails" id="des-top"><a href="#" ><?php _e('Specifications Information','woocommerce'); ?></a></p>
+				<p class="clsBotDetails clsBotTitle"><?php _e('More information on how to buy your ','woocommerce').the_title(); ?></p>
+				<p class="clsBotDetails" id="scroll-top"><a href="#"><?php _e('General description','woocommerce'); ?></a></p>
+				<p class="clsBotDetails" id="des-top"><a href="#" ><?php _e('Technical specifications','woocommerce'); ?></a></p>
 				<p class="clsBotDetails">
 			
-				<a href="#" Id="showImage"><?php _e('Gallery Images','woocommerce'); ?></a>
+				<a href="#" Id="showImage"><?php _e('View Gallery','woocommerce'); ?></a>
 								<?php woocommerce_show_product_images(); ?>
 				</p>
 				<?php echo do_shortcode( "[av_sidebar widget_area='Single Product Contact']" ) ?>

@@ -34,30 +34,27 @@ $woocommerce_loop['columns'] = $columns;
 
 if ( $products->have_posts() ) : ?>
 
-	<div class="upsells products">
+	<!-- <div class="upsells products"> -->
 
 			<?php while ( $products->have_posts() ) : $products->the_post(); ?>
 
-			    <div class="col-lg-3">
+			    <li>
 			      <a href="<?php the_permalink(); ?>">
-				<div class="col-lg-6">
-				  <?php  // wc_get_template_part( 'content', 'product' );
-				    if ( has_post_thumbnail())
-				    echo get_the_post_thumbnail( $post_id,'thumbnail', $attr );
-				  ?>
-				</div>
-				<div class="col-lg-6 clsRelTitle">
-				    Comprar
-				    <?php
-				      the_title();
-				    ?>
-				</div>
+							<?php  // wc_get_template_part( 'content', 'product' );
+								if ( has_post_thumbnail())
+								echo get_the_post_thumbnail( $post_id,'thumbnail', $attr );
+							?>
+							<span class="clsRelTitle">
+									<?php
+										the_title();
+									?>
+							</span>
 			      </a>
-			    </div>
+			    </li>
 
 			<?php endwhile; // end of the loop. ?>
 
-	</div>
+	<!-- </div> -->
 
 <?php endif;
 

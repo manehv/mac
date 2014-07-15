@@ -1,6 +1,9 @@
 /* Have fun adding your style here :) - PS: At all times this file should contain a comment or a rule, otherwise opera might act buggy :( */
 
 @import url('fonts/open-sans-fontfacekit/web-fonts/opensans_light/stylesheet.css');
+@import url('fonts/open-sans-fontfacekit/web-fonts/opensans_bold/stylesheet.css');
+@import url('fonts/open-sans-fontfacekit/web-fonts/opensans_semibold/stylesheet.css');
+@import url('fonts/open-sans-fontfacekit/web-fonts/opensans_regular/stylesheet.css');
 
 /* General Custom CSS */
 .clsTitleCon{background-color:#000000; height:110px; }
@@ -8,41 +11,53 @@
 .row{padding:0 15px; }
 .clsTitleCon .col-lg-6{padding:0; }
 .clsTitle{margin-top:10px; font-size:15px; color:#ffffff; padding-right:15px; }
-h1.clsTopTitle{font-size:18px; color:#6B6869; margin-bottom:30px; }
-.clsRelTitle{padding:0; color:#368CCA; font-size:12px; font-weight:bold; }
+.clsTopList{margin-left:0; }
+.clsTopList li{display:inline-block; width:200px; border-radius:2px; border:1px solid #E5E6E7; padding:10px; box-shadow:1px 0 4px #eff0f1; }
+.clsTopList li a{}
+.clsTopList li a:hover{text-decoration:none; }
+.clsTopList li img{disply:inline-block; width:80px; }
+.clsRelTitle{padding:0; color:#368CCA; font-size:12px; font-weight:bold; display:inline-block; width:80px; margin-left:10px; vertical-align:top; margin-top:25px; }
 .clsSinProd .col-lg-3{padding-right:0; }
 .clsSinProd .upsells{margin-top:25px; }
 .clsContent{padding-left:0; padding-right:50px; }
-h2.clsBotTitle{color:#6B6869; font-size:22px; margin-top:30px; padding-bottom:10px; border-bottom:2px solid #6B6869; }
+h1.clsBotTitle{color:#292325; font-size:28px; margin-top:30px; padding-bottom:10px; border-bottom:1px solid #AAAAAA; font-family:'open_sansregular'; font-weight:normal; letter-spacing:-1px; }
+h2.clsFinish{color:#292325; font-size:22px; font-family:'open_sansregular'; font-weight:normal; margin:20px 0 10px; }
 /*Please do not change the following line */
 .content, .sidebar{padding-bottom: 50px;  padding-top: 50px; }
 .clsContent .clsCenTitle{font-size:18px; color:#6B6869; font-weight:bold; margin-bottom:30px; }
-.clsContent ul{margin-left:0; }
-.clsContent li.variation{text-transform:capitalize; color:#6B6869; font-size:14px; font-weight:bold; cursor:pointer; }
-.clsContent .variation.active{color:#368CCA; }
+.clsContent ul{margin-left:0; margin-top:25px;  }
+.clsContent li.variation{text-transform:capitalize; color:#292325; font-size:16px; cursor:pointer; font-family:'open_sanslight'; }
+.clsContent .active.clsModel{border-color:#368CCA; }
+#top .main_color .variation .price, #top .variation .price span{font-size:18px; color:#292325; font-family:'open_sansregular'; font-weight:normal; line-height:normal; }
+#top .main_color .variation .price{margin:10px auto; display:inline-block; }
 .clsContent #v-image{height:200px; }
-.clsContent .clsModel{border-radius:2px; border:1px solid #6B6869; text-align:center; box-shadow:0px 0px 2px rgba(0, 0, 0, 0.3); }
-.container .clsSidebar{margin-top:15px; border:2px solid #6B6869; padding:0; }
-.clsSidebar h3{color:#6B6869; font-size: 18px; padding:14px; border-bottom:2px solid #6B6869; }
-.clsDetails{margin:10px 15px; font-size:16px; color:#6B6869; font-weight:bold; }
+.clsContent .clsModel{border-radius:10px; border:1px solid #AAAAAA; text-align:center; padding:15px; }
+.clsModelName{border: 2px solid #777777 !important; border-radius: 7px; display: inline-block; padding: 4px 15px; text-transform:uppercase; font-size:18px; color:#292325; font-family:'open_sansregular'; }
+.clsContent .active.clsModel .clsModelName{border-color:#368CCA !important; }
+.container .clsSidebar{margin-top:15px; border:1px solid #AAAAAA; padding:0; }
+.clsSidebar h3{padding:14px; border-bottom:1px solid #AAAAAA; color:#292325; font-size:22px; font-family:'open_sanslight'; font-weight:normal;}
+.clsDetails, #top .clsDetails .price span.amount{color:#292325; font-size:20px; font-family:'open_sanslight'; font-weight:normal; line-height:normal; }
+.clsDetails{margin:10px 15px; }
 .clsDetails img{height:200px; }
-.clsDetails .amount{color:#6B6869; }
 #top .clsDetails form{margin-bottom:0; }
-.clsDetails button.single_add_to_cart_button{background-color:#00A14F; border-color:#00A14F; transition:all 0.3s ease-out 0s; }
+.clsDetails button.single_add_to_cart_button{background-color:#00A14F; border-color:#00A14F; transition:all 0.3s ease-out 0s; border-radius:5px; font-family:'open_sanssemibold'; }
 .clsDetails button.single_add_to_cart_button:hover{background-color:#368cca; border-color:#368cca; transition:all 0.3s ease-out 0s; }
-.clsSidebar .clsBotDetails{padding: 10px 15px; border-bottom:2px solid #6B6869; font-size:16px; margin:0; }
+.clsSidebar{border-radius: 2px; box-shadow: 0 0 2px rgba(0, 0, 0, 0.3); }
+.clsSidebar .clsBotDetails{padding: 10px 15px; border-bottom:1px solid #AAAAAA; color:#292325; font-size:20px; font-family:'open_sanslight'; margin:0; }
 /*.clsSidebar:last-child{border-bottom:0 none; } */
-.clsSidebar .clsBotTitle{font-weight:bold; padding:25px 15px; }
-.clsSidebar .clsBotDetails a{color:#368cca; font-weight:bold; text:decoration:none; }
-.clsSidebar .widget{padding:10px 15px; font-size:15px; }
+.clsSidebar .clsBotTitle{padding:25px 15px; line-height:normal; }
+.clsSidebar .clsBotDetails a{color:#368cca; text-decoration:none; }
+.clsSidebar .widget{padding:10px 15px; color:#292325; font-size:20px; font-family:'open_sanslight'; line-height:normal; }
 .clsSidebar .thumbnails{display:none; }
-.clsContent .clsSpec{border-top:2px solid #6b6869; margin:10px 0; padding:30px 0 0; }
+.clsContent .clsSpec{border-top:1px solid #AAAAAA; margin:10px 0; padding:30px 0 0; }
 .clsContent .clsSpec img{display:block; }
-.clsContent .clsSpec p{font-size:16px; font-weight:bold; }
-.clsContent .clsDesc{font-size:14px; font-family:'open_sanslight'; }
-.clsExc{margin:30px 0 40px; }
-.clsContent .clsVariation{border-bottom:2px solid #6B6869; margin:10px 0 15px; }
-.clsContent .clsModelSel{color:#6B6869; font-size:22px; margin-bottom:30px; }
+.clsContent .clsSpec p{font-size:20px; font-family:'open_sansregular'; color:#292325; }
+.clsContent .clsDesc{font-size:14px; font-family:'open_sanslight'; color:#292325; font-size:16px; }
+.clsExc{margin:30px 0 40px; color:#292325; font-family:'open_sanslight'; font-size:14px; }
+.clsVariation .variation.active{color:#368CCA; }
+.clsModelDesc{color:#292325; font-size:18px; font-family:'open_sanslight'; }
+.clsContent .clsVariation{border-bottom:1px solid #AAAAAA; margin:10px 0 15px; }
+.clsContent .clsModelSel{color:#292325; font-size:22px; font-family:'open_sanslight'; font-weight:normal; margin:20px 0 30px; }
 .products .thumbnail_container{height:250px; display:table; }
 .products .thumbnail_container img{display:table-cell; vertical-align:middle; }
 #top div .quantity input.qty, .quantity input.qty{border:1px solid #e1e1e1; margin:0 10px; }

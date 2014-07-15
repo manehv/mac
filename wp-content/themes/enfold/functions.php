@@ -601,7 +601,7 @@ function woocommerce_variable_add_to_cart() {
   <script type="text/javascript">
             var product_variation = <?php echo json_encode($variations) ?>;
    </script>
- 
+ <h2 class="clsFinish">Elige un acabado:</h2>
  <div class="row clsVariation">
    <div class="col-lg-6">
       <ul>
@@ -666,9 +666,10 @@ function woocommerce_variable_add_to_cart() {
 					  $temp=explode(':',$value)
 					?>
 						<div class="col-lg-4 <?php echo $temp[1]; ?>">
-							<div attr-value="<?php echo $temp[0]; ?>" class="variation <?php echo $active ?> clsModel" variation_id="<?php echo $temp[1]; ?>" ><?php echo $temp[0]; ?>
+							<div attr-value="<?php echo $temp[0]; ?>" class="variation <?php echo $active ?> clsModel" variation_id="<?php echo $temp[1]; ?>" >
+								<span class="clsModelName"><?php echo $temp[0]; ?></span>
 							  <div><?php echo $temp[2];?></div>
-							 <div><?php echo get_post_meta($temp[1], '_description', true );?></div>
+								<div class="clsModelDesc"><?php echo get_post_meta($temp[1], '_description', true );?></div>
 							 </div>
 						</div> <!-- col-lg-4 -->
 					<?php
