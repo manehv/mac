@@ -686,13 +686,13 @@ function woocommerce_variable_add_to_cart() {
 
 
 
-function Row( $atts, $content = null ) {
+/*function Row( $atts, $content = null ) {
    return '<div class="row clsSpec">' . do_shortcode($content) . '</div>';
 }
 add_shortcode('row', 'Row');
 
 function Meta( $atts, $content = null ) {
-   return '<div class="col-lg-4">' . do_shortcode($content) . '</div>';
+   return '<div class="col-lg-4 clsMetaImg">' . do_shortcode($content) . '</div>';
 }
 add_shortcode('meta', 'Meta');
 
@@ -704,7 +704,7 @@ add_shortcode('content_full_column', 'Content_Full');
 function Content_Half( $atts, $content = null ) {
    return '<div class="col-lg-4 clsDesc">' . do_shortcode($content) . '</div>';
 }
-add_shortcode('content_half_column', 'Content_Half');
+add_shortcode('content_half_column', 'Content_Half'); */
 
 /* add symbol for colombiam peso */
 add_filter('woocommerce_currency_symbol', 'change_existing_currency_symbol', 10, 2);
@@ -716,5 +716,19 @@ case 'COP': $currency_symbol = '$'; break;
 return $currency_symbol;
 }
 
+//svg image support
+function cc_mime_types( $mimes ){
+	$mimes['svg'] = 'image/svg+xml';
+	return $mimes;
+}
+add_filter( 'upload_mimes', 'cc_mime_types' );
 
+//display svg images on admin side
+function custom_admin_head() {
+  $css = '';
 
+  $css = 'td.media-icon img[src$=".svg"] { width: 100% !important; height: auto !important; }';
+
+  echo '<style type="text/css">'.$css.'</style>';
+}
+add_action('admin_head', 'custom_admin_head');
