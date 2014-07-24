@@ -67,7 +67,29 @@ table div.quantity{width:150px; }
 .clsContent .av-special-heading{margin-top:0; }
 .clsContent .av-special-heading-tag{font-size:20px; font-family:'open_sansregular'; color:#292325;}
 .clsContent .flex_column p{font-size:14px; font-family:'open_sanslight'; color:#292325; font-size:16px; }
-
+#top .av_font_icon a{padding-top:0; }
+.main_color div{border:medium none; }
+.main_color tr.clsBlank{background:#ffffff; border-top: 1px solid #ffffff; border-right: 3px solid #ffffff; border-left: 3px solid #ffffff; border-bottom: 1px solid #ffffff; }
+.main_color tr.clsBlank td{border-left: 1px solid #fff; border-right: 1px solid #fff; border-top: 1px solid #fff; }
+.cart-collaterals .cart_totals{width:100%; }
+.shop_table td, .shop_table th{background-color:#ffffff; }
+.clsCartTotals td.clsCartTotTD{padding-right:0; padding-left:0; border-right:3px solid #ffffff; border-left:3px solid #ffffff; }
+.shop_table .clsMainTable th{border-width:3px 3px 0px; border-color: #231f20; border-style: solid; color:#231F20; }
+.shop_table .clsMainTable tr{border-color: #231f20; border-style: solid; border-width: 2px 3px 3px; }
+.shop_table tr.cart_item{border:3px solid #E6E7E8; }
+.shop_table tr.cart_item td{border:3px solid #E6E7E8; }
+.clsActions{border:3px solid #E6E7E8; }
+.shop_table .actions .coupon .input-text{border:3px solid #e1e1e1 !important; border-radius:7px !important; }
+#top table.shop_table .actions .button{border:3px solid #231F20; padding:13px 0; border-radius:7px; background:transparent; color:#231F20; }
+#top table.shop_table .actions .button.clsLastButton{background:#231F20; color:#ffffff; }
+#top .main_color table.shop_table .quantity input.plus, #top .main_color table.shop_table .quantity input.minus{border:3px solid #231F20; background:#ffffff; width:30px; height:30px; line-height:24px; border-radius:50%; color:#231F20; }
+#top table.shop_table .quantity input.qty{border:3px solid #231F20; border-radius:4px; color:#231F20; }
+.clsTopImg{margin:40px 0; }
+.clsTopImg img{display:block; margin-top:5px; }
+.clsTopImg span{display: inline-block; margin-right: 90px; width: 65px; color:#231F20; }
+.product-remove .remove{border:1px solid #ED1D24; }
+#top .main_color .shop_table .product-remove a.remove, #top .main_color .shop_table .product-remove a.remove:hover{color:#ED1D24; background-color:#ED1D24; }
+.shop_table .product-name a, .shop_table .product-price .amount, .shop_table .product-subtotal .amount{color:#231F20; }
 /*.entry-content{margin-top:60px; margin-bottom:30px; }*/
 
 /*
