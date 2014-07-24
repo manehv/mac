@@ -732,3 +732,129 @@ function custom_admin_head() {
   echo '<style type="text/css">'.$css.'</style>';
 }
 add_action('admin_head', 'custom_admin_head');
+
+unset($fields['billing']['billing_address_2']);
+
+// Hook in
+add_filter( 'woocommerce_checkout_fields' , 'custom_override_checkout_fields' );
+
+// Our hooked in function - $fields is passed via the filter!
+function custom_override_checkout_fields( $fields ) {
+     $fields['billing']['billing_first_name'] = array(
+        'label'     => __('Name', 'woocommerce'),
+        'placeholder'   => (''),
+				'required'  => true,
+				'class'     => array('form-row-quarter')
+     );
+     
+     $fields['billing']['billing_last_name'] = array(
+        'label'     => __('Last Name', 'woocommerce'),
+        'placeholder'   => (''),
+				'required'  => true,
+				'class'     => array('form-row-quarter')
+     );
+     
+     $fields['billing']['billing_email'] = array(
+        'label'     => __('Email', 'woocommerce'),
+        'placeholder'   => (''),
+				'required'  => true,
+				'class'     => array('form-row-quarter')
+     );
+     
+     $fields['billing']['billing_phone'] = array(
+        'label'     => __('Telephone', 'woocommerce'),
+        'placeholder'   => (''),
+				'required'  => true,
+				'class'     => array('form-row-quarter', 'form-row-quarter-last ')
+     );
+     
+     $fields['billing']['billing_mobile_phone'] = array(
+        'label'     => __('Mobile', 'woocommerce'),
+        'placeholder'   => (''),
+				'required'  => true,
+				'class'     => array('form-row-quarter')
+     );
+     
+     $fields['billing']['billing_nit'] = array(
+        'label'     => __('N.I.T', 'woocommerce'),
+        'placeholder'   => (''),
+				'required'  => false,
+				'class'     => array('form-row-quarter')
+     );
+     
+     $fields['billing']['billing_company'] = array(
+        'label'     => __('Company Name', 'woocommerce'),
+        'placeholder'   => (''),
+				'required'  => false,
+				'class'     => array('form-row-half', 'form-row-half-last')
+     );
+     
+     $fields['billing']['billing_country'] = array(
+				'type'     => 'country',
+        'label'     => __('Country', 'woocommerce'),
+        'placeholder'   => (''),
+				'required'  => true,
+				'class'     => array('form-row-half', 'address-field', 'update_totals_on_change')
+     );
+     
+     $fields['billing']['billing_state'] = array(
+				'type'     => 'state',
+        'label'     => __('State', 'woocommerce'),
+        'placeholder'   => (''),
+				'required'  => true,
+				'class'     => array('form-row-quarter', 'address-field'),
+				'validate'    => array( 'state' ),
+				'clear'    => false
+     );
+     
+     $fields['billing']['billing_city'] = array(
+        'label'     => __('City', 'woocommerce'),
+        'placeholder'   => (''),
+				'required'  => true,
+				'class'     => array('form-row-quarter', 'address-field'),
+				'clear'    => false
+     );
+     
+     $fields['billing']['billing_address_1'] = array(
+        'label'     => __('Address', 'woocommerce'),
+        'placeholder'   => (''),
+				'required'  => true,
+				'class'     => array('form-row-half', 'address-field')
+     );
+     
+     $fields['billing']['billing_postcode'] = array(
+        'label'     => __('Zip Code', 'woocommerce'),
+        'placeholder'   => (''),
+				'required'  => true,
+				'class'     => array('form-row-quarter', 'address-field'),
+				'validate'    => array( 'postcode' ),
+				'clear'    => false
+     );
+    
+     return $fields;
+}
+
+//Reordering of woocommerce billing fields
+
+add_filter('woocommerce_checkout_fields','reorder_woocommerce_fields');
+
+function reorder_woocommerce_fields($fields) {
+        
+        $fields2['billing']['billing_first_name'] = $fields['billing']['billing_first_name'];
+        $fields2['billing']['billing_last_name'] = $fields['billing']['billing_last_name'];
+        $fields2['billing']['billing_email'] = $fields['billing']['billing_email'];
+        $fields2['billing']['billing_phone'] = $fields['billing']['billing_phone'];
+        $fields2['billing']['billing_mobile_phone'] = $fields['billing']['billing_mobile_phone'];
+        $fields2['billing']['billing_nit'] = $fields['billing']['billing_nit'];
+        $fields2['billing']['billing_company'] = $fields['billing']['billing_company'];
+        $fields2['billing']['billing_address_1'] = $fields['billing']['billing_address_1'];
+        $fields2['billing']['billing_country'] = $fields['billing']['billing_country'];
+        $fields2['billing']['billing_state'] = $fields['billing']['billing_state'];
+        $fields2['billing']['billing_city'] = $fields['billing']['billing_city'];
+        $fields2['billing']['billing_postcode'] = $fields['billing']['billing_postcode'];
+        $fields2['shipping'] = $fields['shipping'];
+        $fields2['account'] = $fields['account'];
+        $fields2['order'] = $fields['order'];
+ 
+        return $fields2;
+}

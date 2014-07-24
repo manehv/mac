@@ -41,7 +41,7 @@ h2.clsFinish{color:#292325; font-size:22px; font-family:'open_sansregular'; font
 #top .clsDetails form{margin-bottom:0; }
 .clsDetails button.single_add_to_cart_button{background-color:#00A14F; border-color:#00A14F; transition:all 0.3s ease-out 0s; border-radius:5px; font-family:'open_sanssemibold'; }
 .clsDetails button.single_add_to_cart_button:hover{background-color:#368cca; border-color:#368cca; transition:all 0.3s ease-out 0s; }
-.clsSidebar{border-radius: 2px; box-shadow: 0 0 2px rgba(0, 0, 0, 0.3); margin-top:15px; border:1px solid #e5e6e7; padding:0; }
+.clsSidebar{border-radius: 2px; box-shadow: 0 0 2px rgba(0, 0, 0, 0.3); margin-top:15px; border:1px solid #e5e6e7; padding:1px; }
 .clsSidebar .clsBotDetails{padding: 10px 15px; border-bottom:1px solid #AAAAAA; color:#292325; font-size:18px; font-family:'open_sanslight'; margin:0; }
 /*.clsSidebar:last-child{border-bottom:0 none; } */
 .clsSidebar .clsBotTitle{padding:25px 15px; line-height:normal; }
@@ -72,24 +72,28 @@ table div.quantity{width:150px; }
 .main_color tr.clsBlank{background:#ffffff; border-top: 1px solid #ffffff; border-right: 3px solid #ffffff; border-left: 3px solid #ffffff; border-bottom: 1px solid #ffffff; }
 .main_color tr.clsBlank td{border-left: 1px solid #fff; border-right: 1px solid #fff; border-top: 1px solid #fff; }
 .cart-collaterals .cart_totals{width:100%; }
-.shop_table td, .shop_table th{background-color:#ffffff; }
+.custom_table.shop_table td, .custom_table.shop_table th{background-color:#ffffff; }
 .clsCartTotals td.clsCartTotTD{padding-right:0; padding-left:0; border-right:3px solid #ffffff; border-left:3px solid #ffffff; }
-.shop_table .clsMainTable th{border-width:3px 3px 0px; border-color: #231f20; border-style: solid; color:#231F20; }
-.shop_table .clsMainTable tr{border-color: #231f20; border-style: solid; border-width: 2px 3px 3px; }
-.shop_table tr.cart_item{border:3px solid #E6E7E8; }
-.shop_table tr.cart_item td{border:3px solid #E6E7E8; }
+.custom_table.shop_table .clsMainTable th{border-width:3px 3px 0px; border-color: #231f20; border-style: solid; color:#231F20; }
+.custom_table.shop_table .clsMainTable tr{border-color: #231f20; border-style: solid; border-width: 2px 3px 3px; }
+.custom_table.shop_table tr.cart_item{border:3px solid #E6E7E8; }
+.custom_table.shop_table tr.cart_item td{border:3px solid #E6E7E8; }
 .clsActions{border:3px solid #E6E7E8; }
-.shop_table .actions .coupon .input-text{border:3px solid #e1e1e1 !important; border-radius:7px !important; }
-#top table.shop_table .actions .button{border:3px solid #231F20; padding:13px 0; border-radius:7px; background:transparent; color:#231F20; }
-#top table.shop_table .actions .button.clsLastButton{background:#231F20; color:#ffffff; }
-#top .main_color table.shop_table .quantity input.plus, #top .main_color table.shop_table .quantity input.minus{border:3px solid #231F20; background:#ffffff; width:30px; height:30px; line-height:24px; border-radius:50%; color:#231F20; }
-#top table.shop_table .quantity input.qty{border:3px solid #231F20; border-radius:4px; color:#231F20; }
+.custom_table.shop_table .actions .coupon .input-text{border:3px solid #e1e1e1 !important; border-radius:7px !important; }
+#top table.custom_table.shop_table .actions .button{border:3px solid #231F20; padding:13px 0; border-radius:7px; background:transparent; color:#231F20; }
+#top table.custom_table.shop_table .actions .button:hover{background:#231f20; color:#ffffff; }
+#top .main_color table.custom_table.shop_table .quantity input.plus, #top .main_color table.custom_table.shop_table .quantity input.minus{border:3px solid #231F20; background:#ffffff; width:30px; height:30px; line-height:24px; border-radius:50%; color:#231F20; }
+#top table.custom_table.shop_table .quantity input.qty{border:3px solid #231F20; border-radius:4px; color:#231F20; }
 .clsTopImg{margin:40px 0; }
 .clsTopImg img{display:block; margin-top:5px; }
 .clsTopImg span{display: inline-block; margin-right: 90px; width: 65px; color:#231F20; }
 .product-remove .remove{border:1px solid #ED1D24; }
-#top .main_color .shop_table .product-remove a.remove, #top .main_color .shop_table .product-remove a.remove:hover{color:#ED1D24; background-color:#ED1D24; }
-.shop_table .product-name a, .shop_table .product-price .amount, .shop_table .product-subtotal .amount{color:#231F20; }
+#top .main_color .custom_table.shop_table .product-remove a.remove, #top .main_color .custom_table.shop_table .product-remove a.remove:hover{color:#ED1D24; background-color:#ED1D24; }
+.custom_table.shop_table .product-name a, .custom_table.shop_table .product-price .amount, .custom_table.shop_table .product-subtotal .amount{color:#231F20; }
+.form-row-quarter{width:24%; float:left; }
+.form-row-half{width:49%; float:left; }
+#top .form-row.form-row-quarter, #top .form-row.form-row-half{margin-right:1%; }
+#top .form-row.form-row-quarter.form-row-quarter-last, #top .form-row.form-row-half.form-row-half-last{margin-right:0; }
 /*.entry-content{margin-top:60px; margin-bottom:30px; }*/
 
 /*

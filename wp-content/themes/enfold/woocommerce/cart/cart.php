@@ -18,7 +18,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 <div class="clsTopImg">
 	<span>Purchase Summary</span>
 	<span>Check Out</span>
-	<span>Buy Receipt</span>
+	<span>Buying Receipt</span>
 	<img src="<?php echo get_template_directory_uri(); ?>/images/cart-line1.png" />
 </div>
 
@@ -26,7 +26,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 
 <?php do_action( 'woocommerce_before_cart_table' ); ?>
 
-<table class="shop_table cart" cellspacing="0">
+<table class="custom_table shop_table cart" cellspacing="0">
 	<thead class="clsMainTable">
 		<tr>
 			<th class="product-remove">&nbsp;</th>
@@ -153,7 +153,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 					</div>
 				<?php } ?>
 
-				<input type="submit" class="button clsLastButton" name="update_cart" value="<?php _e( 'Update Cart', 'woocommerce' ); ?>" /> <input type="submit" class="checkout-button button alt wc-forward" name="proceed" value="<?php _e( 'Proceed to Checkout', 'woocommerce' ); ?>" />
+				<input type="submit" class="button" name="update_cart" value="<?php _e( 'Update Cart', 'woocommerce' ); ?>" /> <input type="submit" class="checkout-button button alt wc-forward" name="proceed" value="<?php _e( 'Proceed to Checkout', 'woocommerce' ); ?>" />
 
 				<?php do_action( 'woocommerce_proceed_to_checkout' ); ?>
 
