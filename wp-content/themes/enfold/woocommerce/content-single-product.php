@@ -145,9 +145,9 @@ global $post, $woocommerce, $product;
 			<?php else: ?>
 			
 		  <div class="col-lg-9 clsContent">
-			<h2 class="clsBotTitle">
+			<h1 class="clsBotTitle">
 					<?php _e('Choose a ','woocommerce').the_title(); ?>
-			</h2>
+			</h1>
 			<div class="row">
 				<div class="col-lg-6">
 					<?php echo get_the_post_thumbnail( $post_id, 'medium', $attr ); ?>
