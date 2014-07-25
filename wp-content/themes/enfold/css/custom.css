@@ -63,7 +63,7 @@ h2.clsFinish{color:#292325; font-size:22px; font-family:'open_sansregular'; font
 table div.quantity{width:150px; }
 .woocommerce-page .button{margin-top:15px; }
 #top .avia-post-nav {background: none rgba(0, 0, 0, 0.1) !important; }
-.clsContent .avia-image-container{width:64px; display:block; }
+.clsContent .avia-image-container{width:64px; display:inline-block; margin-right:25px; }
 .clsContent .av-special-heading{margin-top:0; }
 .clsContent .av-special-heading-tag{font-size:20px; font-family:'open_sansregular'; color:#292325;}
 .clsContent .flex_column p{font-size:14px; font-family:'open_sanslight'; color:#292325; font-size:16px; margin-top:0; }
@@ -86,7 +86,7 @@ table div.quantity{width:150px; }
 #top table.custom_table.shop_table .quantity input.qty{border:3px solid #231F20; border-radius:4px; color:#231F20; }
 .clsTopImg{margin:40px 0; }
 .clsTopImg img{display:block; margin-top:5px; }
-.clsTopImg span{display: inline-block; margin-right: 90px; width: 65px; color:#231F20; }
+.clsTopImg span{display: inline-block; margin-right: 83px; width: 65px; color:#231F20; }
 .product-remove .remove{border:1px solid #ED1D24; }
 #top .main_color .custom_table.shop_table .product-remove a.remove, #top .main_color .custom_table.shop_table .product-remove a.remove:hover{color:#ED1D24; background-color:#ED1D24; }
 .custom_table.shop_table .product-name a, .custom_table.shop_table .product-price .amount, .custom_table.shop_table .product-subtotal .amount{color:#231F20; }
@@ -96,7 +96,11 @@ table div.quantity{width:150px; }
 #top .form-row.form-row-quarter.form-row-quarter-last, #top .form-row.form-row-half.form-row-half-last{margin-right:0; }
 div .av_two_third{margin-left:2%; }
 body .column-top-margin{margin-top:10px; }
-/*.entry-content{margin-top:60px; margin-bottom:30px; }*/
+#top .checkout .input-text, #top .checkout .chosen-single{border:2px solid #929497 !important; background:#ffffff !important; border-radius:5px; }
+#top #payment{border-width:2px; width:50%; }
+#place_order.button{background-color:transparent; border:3px solid #231F20; color:#231F20; border-radius:4px; }
+#place_order.button:hover{background-color:#231F20; color:#ffffff;}
+#top #main ul.order_details{border-width:3px; border-color:#939598; border-radius:8px; }
 
 /*
 Desktop Styles

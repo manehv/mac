@@ -734,6 +734,7 @@ function custom_admin_head() {
 add_action('admin_head', 'custom_admin_head');
 
 unset($fields['billing']['billing_address_2']);
+unset($fields['billing']['billing_address_2']);
 
 // Hook in
 add_filter( 'woocommerce_checkout_fields' , 'custom_override_checkout_fields' );
@@ -848,9 +849,9 @@ function reorder_woocommerce_fields($fields) {
         $fields2['billing']['billing_nit'] = $fields['billing']['billing_nit'];
         $fields2['billing']['billing_company'] = $fields['billing']['billing_company'];
         $fields2['billing']['billing_address_1'] = $fields['billing']['billing_address_1'];
-        $fields2['billing']['billing_country'] = $fields['billing']['billing_country'];
-        $fields2['billing']['billing_state'] = $fields['billing']['billing_state'];
         $fields2['billing']['billing_city'] = $fields['billing']['billing_city'];
+        $fields2['billing']['billing_state'] = $fields['billing']['billing_state'];
+        $fields2['billing']['billing_country'] = $fields['billing']['billing_country'];
         $fields2['billing']['billing_postcode'] = $fields['billing']['billing_postcode'];
         $fields2['shipping'] = $fields['shipping'];
         $fields2['account'] = $fields['account'];

@@ -160,7 +160,7 @@ global $post, $woocommerce, $product;
 			<div class="clsSidebar">
 			<h3><?php _e('Abstract','woocommerce'); ?></h3>
 			<div class="row">  
-				<div>
+				<div class="clsDetails">
 					<?php echo get_the_post_thumbnail( $post_id, 'medium', $attr ); ?>
 				</div>
 				<div class="clsDetails">

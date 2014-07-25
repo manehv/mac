@@ -23,6 +23,7 @@ if ( ! $checkout->enable_signup && ! $checkout->enable_guest_checkout && ! is_us
 
 // filter hook for include new pages inside the payment method
 $get_checkout_url = apply_filters( 'woocommerce_get_checkout_url', WC()->cart->get_checkout_url() ); ?>
+
 <div class="clsTopImg">
 	<span>Purchase Summary</span>
 	<span>Check Out</span>
