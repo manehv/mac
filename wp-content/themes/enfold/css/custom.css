@@ -66,7 +66,7 @@ table div.quantity{width:150px; }
 .clsContent .avia-image-container{width:64px; display:block; }
 .clsContent .av-special-heading{margin-top:0; }
 .clsContent .av-special-heading-tag{font-size:20px; font-family:'open_sansregular'; color:#292325;}
-.clsContent .flex_column p{font-size:14px; font-family:'open_sanslight'; color:#292325; font-size:16px; }
+.clsContent .flex_column p{font-size:14px; font-family:'open_sanslight'; color:#292325; font-size:16px; margin-top:0; }
 #top .av_font_icon a{padding-top:0; }
 .main_color div{border:medium none; }
 .main_color tr.clsBlank{background:#ffffff; border-top: 1px solid #ffffff; border-right: 3px solid #ffffff; border-left: 3px solid #ffffff; border-bottom: 1px solid #ffffff; }
@@ -94,6 +94,8 @@ table div.quantity{width:150px; }
 .form-row-half{width:49%; float:left; }
 #top .form-row.form-row-quarter, #top .form-row.form-row-half{margin-right:1%; }
 #top .form-row.form-row-quarter.form-row-quarter-last, #top .form-row.form-row-half.form-row-half-last{margin-right:0; }
+div .av_two_third{margin-left:2%; }
+body .column-top-margin{margin-top:10px; }
 /*.entry-content{margin-top:60px; margin-bottom:30px; }*/
 
 /*
