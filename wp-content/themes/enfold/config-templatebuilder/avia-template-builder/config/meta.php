@@ -2,8 +2,8 @@
 global $builder;
 
 $boxes = array(
-	array( 'title' =>__('Avia Layout Builder','avia_framework' ), 'id'=>'avia_builder', 'page'=>array('portfolio','page','product'), 'context'=>'normal', 'priority'=>'high', 'expandable'=>true ),
-	array( 'title' =>__('Layout','avia_framework' ), 'id'=>'layout', 'page'=>array('portfolio', 'page' , 'post','product'), 'context'=>'side', 'priority'=>'low'),
+	array( 'title' =>__('Avia Layout Builder','avia_framework' ), 'id'=>'avia_builder', 'page'=>array('portfolio','page'), 'context'=>'normal', 'priority'=>'high', 'expandable'=>true ),
+	array( 'title' =>__('Layout','avia_framework' ), 'id'=>'layout', 'page'=>array('portfolio', 'page' , 'post'), 'context'=>'side', 'priority'=>'low'),
 	array( 'title' =>__('Additional Portfolio Settings','avia_framework' ), 'id'=>'preview', 'page'=>array('portfolio'), 'context'=>'normal', 'priority'=>'high' ),
 );
 
