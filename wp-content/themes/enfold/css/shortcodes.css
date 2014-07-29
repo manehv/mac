@@ -3079,9 +3079,9 @@ background-position: center center;
 .avia-fullscreen-slider:hover .avia-slideshow-dots a{opacity: 0.8; filter: alpha(opacity=80);}
 
 
-#top .avia-slideshow-button{border-radius: 3px; text-transform: None; padding:12px 16px; display: inline-block; margin-top:20px; text-decoration: none; font-weight: bold;}
-#top .avia-slideshow-button.avia-color-light{ padding:9px 16px; color:#fff; border:3px solid #fff; background-color: rgba(0,0,0,0.2); }
-#top .avia-slideshow-button.avia-color-dark{  padding:9px 16px; color:#000; border:3px solid #000; color:rgba(0,0,0,0.6);  border-color: rgba(0,0,0,0.6);  background-color: rgba(255,255,255,0.1);}
+#top .avia-slideshow-button{border-radius: 3px; text-transform: None; padding:12px 16px; display: inline-block; margin-left:45%; margin-bottom:50px; text-decoration: none; font-weight: bold;}
+#top .avia-slideshow-button.avia-color-light{ padding:6px 26px; color:rgba(255,255,255,0.7); border:1px solid rgba(255,255,255,0.5); background-color: rgba(0,0,0,0.2); }
+#top .avia-slideshow-button.avia-color-dark{  padding:6px 26px; color:#000; border:1px solid rgba(0,0,0,0.5); color:rgba(0,0,0,0.6);  border-color: rgba(0,0,0,0.6);  background-color: rgba(255,255,255,0.1);}
 
 .avia-slideshow-button.avia-color-light:hover{opacity: 0.7; color:#fff; }
 .avia-slideshow-button.avia-color-dark:hover{ opacity: 0.7; color:#000; color:rgba(0,0,0,0.6);}
@@ -3307,7 +3307,7 @@ Partner/Logo Slider + Content Slider
 /*shared styles*/
 #top .avia-smallarrow-slider  {position: relative; overflow: visible;}
 #top .avia-smallarrow-slider  .avia-slideshow-arrows {position: relative; width:51px; top:-3px; left:0; height: 24px;}
-#top .avia-smallarrow-slider  .avia-slideshow-arrows a{opacity: 1; margin:0; width:24px; height:24px; line-height: 25px; font-size: 10px; top:0;}
+#top .avia-smallarrow-slider  .avia-slideshow-arrows a{opacity: 1; margin:0; width:24px; height:24px; line-height: 25px; font-size: 10px; top:40px;}
 #top .avia-smallarrow-slider  .avia-slideshow-arrows a:hover{opacity: 0.5;}
 #top .avia-smallarrow-slider  .avia-slideshow-arrows a:before{line-height: 25px; border-radius: 1px;}
 #top .avia-smallarrow-slider  .slide-image, #top .avia-logo-element-container img{margin:0 auto; display: block; width:auto; width: 100%\9;}
