@@ -132,6 +132,10 @@ body .column-top-margin{margin-top:10px; }
 	margin: 10px auto 0px auto;
 }
 
+.single-product .clsContent .av-special-heading-tag {
+	font-family: 'open_sanslight';
+}
+
 .clsSidebar {
 	font-size: 11px;
 }
