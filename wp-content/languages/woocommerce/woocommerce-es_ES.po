@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: English-Spanish\n"
 "POT-Creation-Date: 2014-07-29 18:36+0530\n"
-"PO-Revision-Date: 2014-07-29 18:37+0530\n"
-"Last-Translator: \n"
+"PO-Revision-Date: 2014-07-29 11:17-0500\n"
+"Last-Translator: 8manos i18n team <i18n@8manos.com>\n"
 "Language-Team: Language\n"
-"Language: Spanish\n"
+"Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.5.4\n"
+"X-Generator: Poedit 1.6.5\n"
 "X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_e\n"
 "X-Poedit-Basepath: .\n"
 "X-Poedit-SearchPath-0: /Projects/mac/wp-content/themes/enfold/woocommerce\n"
@@ -17,161 +17,165 @@ msgstr ""
 #: /Projects/mac/wp-content/themes/enfold/woocommerce/content-single-product.php:66
 #: /Projects/mac/wp-content/themes/enfold/woocommerce/content-single-product.php:140
 msgid "Choose a "
-msgstr ""
+msgstr "Escoger"
 
 #: /Projects/mac/wp-content/themes/enfold/woocommerce/content-single-product.php:75
 #: /Projects/mac/wp-content/themes/enfold/woocommerce/content-single-product.php:153
 msgid "Abstract"
-msgstr ""
+msgstr "Resumen"
 
 #: /Projects/mac/wp-content/themes/enfold/woocommerce/content-single-product.php:92
 msgid " of "
-msgstr ""
+msgstr "de"
 
 #: /Projects/mac/wp-content/themes/enfold/woocommerce/content-single-product.php:96
 msgid "Unlocked"
-msgstr ""
+msgstr "Desbloqueado"
 
 #: /Projects/mac/wp-content/themes/enfold/woocommerce/content-single-product.php:114
 #: /Projects/mac/wp-content/themes/enfold/woocommerce/content-single-product.php:174
 msgid "Add to cart"
-msgstr ""
+msgstr "Agregar al carrito"
 
 #: /Projects/mac/wp-content/themes/enfold/woocommerce/content-single-product.php:125
 #: /Projects/mac/wp-content/themes/enfold/woocommerce/content-single-product.php:181
 msgid "More information on how to buy your "
-msgstr ""
+msgstr "Más sobre como comprar"
 
 #: /Projects/mac/wp-content/themes/enfold/woocommerce/content-single-product.php:126
 #: /Projects/mac/wp-content/themes/enfold/woocommerce/content-single-product.php:182
 msgid "General description"
-msgstr ""
+msgstr "Descripción General"
 
 #: /Projects/mac/wp-content/themes/enfold/woocommerce/content-single-product.php:127
 #: /Projects/mac/wp-content/themes/enfold/woocommerce/content-single-product.php:183
 msgid "Technical specifications"
-msgstr ""
+msgstr "Especificaciones técnicas"
 
 #: /Projects/mac/wp-content/themes/enfold/woocommerce/content-single-product.php:130
 #: /Projects/mac/wp-content/themes/enfold/woocommerce/content-single-product.php:186
 msgid "View Gallery"
-msgstr ""
+msgstr "Ver galería"
 
 #: /Projects/mac/wp-content/themes/enfold/woocommerce/single-product/related.php:37
 msgid "Related Products"
-msgstr ""
+msgstr "Productos relacionados"
 
 #: /Projects/mac/wp-content/themes/enfold/woocommerce/cart/cart.php:34
 msgid "Product"
-msgstr ""
+msgstr "Producto"
 
 #: /Projects/mac/wp-content/themes/enfold/woocommerce/cart/cart.php:35
 msgid "Price"
-msgstr ""
+msgstr "Precio"
 
 #: /Projects/mac/wp-content/themes/enfold/woocommerce/cart/cart.php:36
 msgid "Quantity"
-msgstr ""
+msgstr "Cantidad"
 
 #: /Projects/mac/wp-content/themes/enfold/woocommerce/cart/cart.php:37
 msgid "Total"
-msgstr ""
+msgstr "Total"
 
 #: /Projects/mac/wp-content/themes/enfold/woocommerce/cart/cart.php:62
 msgid "Remove this item"
-msgstr ""
+msgstr "Eliminar este item"
 
 #: /Projects/mac/wp-content/themes/enfold/woocommerce/cart/cart.php:89
 msgid "Available on backorder"
-msgstr ""
+msgstr "Disponible preventa"
 
 #: /Projects/mac/wp-content/themes/enfold/woocommerce/cart/cart.php:149
 msgid "Coupon"
-msgstr ""
+msgstr "Cupón"
 
 #: /Projects/mac/wp-content/themes/enfold/woocommerce/cart/cart.php:149
 #: /Projects/mac/wp-content/themes/enfold/woocommerce/checkout/form-coupon.php:26
 msgid "Coupon code"
-msgstr ""
+msgstr "Código de cupón"
 
 #: /Projects/mac/wp-content/themes/enfold/woocommerce/cart/cart.php:149
 #: /Projects/mac/wp-content/themes/enfold/woocommerce/checkout/form-coupon.php:30
 msgid "Apply Coupon"
-msgstr ""
+msgstr "Aplicar cupón"
 
 #: /Projects/mac/wp-content/themes/enfold/woocommerce/cart/cart.php:156
 msgid "Update Cart"
-msgstr ""
+msgstr "Actualizar carrito"
 
 #: /Projects/mac/wp-content/themes/enfold/woocommerce/cart/cart.php:156
 msgid "Proceed to Checkout"
-msgstr ""
+msgstr "Realizar pago"
 
 #: /Projects/mac/wp-content/themes/enfold/woocommerce/checkout/form-checkout.php:20
 msgid "You must be logged in to checkout."
-msgstr ""
+msgstr "Debes haber ingresado para comprar"
 
 #: /Projects/mac/wp-content/themes/enfold/woocommerce/checkout/form-checkout.php:57
 msgid "Your order"
-msgstr ""
+msgstr "Tu pedido"
 
 #: /Projects/mac/wp-content/themes/enfold/woocommerce/checkout/form-billing.php:16
 msgid "Billing &amp; Shipping"
-msgstr ""
+msgstr "Cobro &amp; envío"
 
 #: /Projects/mac/wp-content/themes/enfold/woocommerce/checkout/form-billing.php:20
 msgid "Billing Details"
-msgstr ""
+msgstr "Detalles de facturación"
 
 #: /Projects/mac/wp-content/themes/enfold/woocommerce/checkout/form-billing.php:39
 msgid "Create an account?"
-msgstr ""
+msgstr "Crear nueva cuenta?"
 
 #: /Projects/mac/wp-content/themes/enfold/woocommerce/checkout/form-billing.php:50
 msgid ""
 "Create an account by entering the information below. If you are a returning "
 "customer please login at the top of the page."
 msgstr ""
+"Crea una cuenta ingresando la información a continuación. Si ud ya es "
+"cliente porfavor haga login."
 
 #: /Projects/mac/wp-content/themes/enfold/woocommerce/checkout/thankyou.php:25
 msgid ""
 "Unfortunately your order cannot be processed as the originating bank/"
 "merchant has declined your transaction."
 msgstr ""
+"Desafortunadamente su orden no puede ser procesada pues el banco o pasarela "
+"de pago ha rechazado la transacción."
 
 #: /Projects/mac/wp-content/themes/enfold/woocommerce/checkout/thankyou.php:29
 msgid "Please attempt your purchase again or go to your account page."
-msgstr ""
+msgstr "Por favor intenta comprar nuevamente o visita tu cuenta."
 
 #: /Projects/mac/wp-content/themes/enfold/woocommerce/checkout/thankyou.php:31
 msgid "Please attempt your purchase again."
-msgstr ""
+msgstr "Por favor intenta comprar nuevamente."
 
 #: /Projects/mac/wp-content/themes/enfold/woocommerce/checkout/thankyou.php:35
 msgid "Pay"
-msgstr ""
+msgstr "Pagar"
 
 #: /Projects/mac/wp-content/themes/enfold/woocommerce/checkout/thankyou.php:37
 msgid "My Account"
-msgstr ""
+msgstr "Mi cuenta"
 
 #: /Projects/mac/wp-content/themes/enfold/woocommerce/checkout/thankyou.php:43
 #: /Projects/mac/wp-content/themes/enfold/woocommerce/checkout/thankyou.php:74
 msgid "Thank you. Your order has been received."
-msgstr ""
+msgstr "Gracias! Hemos procesado tu pedido."
 
 #: /Projects/mac/wp-content/themes/enfold/woocommerce/checkout/thankyou.php:47
 msgid "Order:"
-msgstr ""
+msgstr "Pedido:"
 
 #: /Projects/mac/wp-content/themes/enfold/woocommerce/checkout/thankyou.php:51
 msgid "Date:"
-msgstr ""
+msgstr "Fecha:"
 
 #: /Projects/mac/wp-content/themes/enfold/woocommerce/checkout/thankyou.php:55
 msgid "Total:"
-msgstr ""
+msgstr "Total:"
 
 #: /Projects/mac/wp-content/themes/enfold/woocommerce/checkout/thankyou.php:60
 msgid "Payment method:"
-msgstr ""
+msgstr "Método de pago:"
