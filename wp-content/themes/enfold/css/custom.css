@@ -113,6 +113,21 @@ body .column-top-margin{margin-top:10px; }
 #top .clsSidebar div .quantity input.qty{height:30px; width:30px; }
 .clsDetailsImg{text-align:center; }
 #idSticky{width:228px; }
+
+.single-product .clsContent .flex_column p {
+	font-size: 12px
+}
+
+.single-product .flex_column.av_one_third.first img {
+	width: 25px;
+	max-width: 25px;
+	height: auto;
+}
+
+.single-product .flex_column.av_one_third.first .avia_image.avia-align-center {
+	margin: 10px auto 0px auto;
+}
+
 /*
 Desktop Styles
 ================================================== */
