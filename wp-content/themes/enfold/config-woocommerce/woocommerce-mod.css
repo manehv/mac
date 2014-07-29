@@ -1573,6 +1573,10 @@ width: 20%;
 min-width: 90px;
 }
 
+#top div div.woocommerce-message a.button.wc-forward {
+	background-color: #00A14F !important;
+}
+
 .quantity input{
 border-width:1px;
 border-style:1px;
