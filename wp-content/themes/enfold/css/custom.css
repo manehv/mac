@@ -42,7 +42,7 @@ h2.clsFinish{color:#292325; font-size:22px; font-family:'open_sansregular'; font
 .clsDetails button.single_add_to_cart_button{background-color:#00A14F; border-color:#00A14F; transition:all 0.3s ease-out 0s; border-radius:5px; font-family:'open_sanssemibold'; padding:10px; }
 .clsDetails button.single_add_to_cart_button:hover{background-color:#368cca; border-color:#368cca; transition:all 0.3s ease-out 0s; }
 .clsSidebar{border-radius: 2px; box-shadow: 0 0 2px rgba(0, 0, 0, 0.3); margin-top:15px; border:1px solid #e5e6e7; padding:1px; }
-.clsSidebar .clsBotDetails{padding:5px 15px; border-bottom:1px solid #AAAAAA; color:#292325; font-size:12px; font-family:'open_sanslight'; margin:0; }
+.clsSidebar .clsBotDetails{padding:5px 15px; border-bottom:1px solid #e1e1e1; color:#292325; font-size:11px; font-family:'open_sanslight'; margin:0; }
 /*.clsSidebar:last-child{border-bottom:0 none; } */
 .clsSidebar .clsBotTitle{padding:5px 15px; line-height:normal; font-weight:bold; }
 .clsSidebar .clsBotDetails a{color:#368cca; text-decoration:none; }
