@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: English-Spanish\n"
 "POT-Creation-Date: 2014-07-29 18:36+0530\n"
-"PO-Revision-Date: 2014-07-29 11:17-0500\n"
+"PO-Revision-Date: 2014-07-29 13:48-0500\n"
 "Last-Translator: 8manos i18n team <i18n@8manos.com>\n"
 "Language-Team: Language\n"
 "Language: es\n"
@@ -17,7 +17,7 @@ msgstr ""
 #: /Projects/mac/wp-content/themes/enfold/woocommerce/content-single-product.php:66
 #: /Projects/mac/wp-content/themes/enfold/woocommerce/content-single-product.php:140
 msgid "Choose a "
-msgstr "Escoger"
+msgstr "Escoger "
 
 #: /Projects/mac/wp-content/themes/enfold/woocommerce/content-single-product.php:75
 #: /Projects/mac/wp-content/themes/enfold/woocommerce/content-single-product.php:153
