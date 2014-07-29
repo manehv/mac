@@ -16,9 +16,9 @@ wc_print_notices();
 do_action( 'woocommerce_before_cart' ); ?>
 
 <div class="clsTopImg">
-	<span>Purchase Summary</span>
-	<span>Check Out</span>
-	<span>Buying Receipt</span>
+	<span>Resumen de orden</span>
+	<span>Comprar</span>
+	<span>Recibo</span>
 	<img src="<?php echo get_template_directory_uri(); ?>/images/cart-line1.png" />
 </div>
 
