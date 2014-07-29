@@ -13,6 +13,10 @@ global $avia_config;
  * This is only recommended for advanced users
  */
 
+
+wp_enqueue_script( 'sticky_js', get_template_directory_uri() . '/js/jquery.sticky.js', array(), '1.0.0', true );
+wp_enqueue_script( 'custom_js', get_template_directory_uri() . '/js/custom.js', array(), '1.0.0', true );
+ 
 if(isset($avia_config['use_child_theme_functions_only'])) return;
 
 /*
@@ -263,16 +267,14 @@ if(!function_exists('avia_register_frontend_scripts'))
 		wp_enqueue_script( 'avia-default', $template_url.'/js/avia.js', array('jquery'), 1, true );
 		wp_enqueue_script( 'avia-shortcodes', $template_url.'/js/shortcodes.js', array('jquery'), 1, true );
 		wp_enqueue_script( 'avia-prettyPhoto',  $template_url.'/js/prettyPhoto/js/jquery.prettyPhoto.js', 'jquery', "3.1.5", true);
-		// wp_register_script( 'wp-mediaelement',  $template_url.'/js/mediaelement/mediaelement-and-player.min.js', 'jquery', "1", true);
-//    wp_enqueue_script( 'custom_variation',  $template_url.'/js/custom_variation.js',true); 
- 
+
    wp_deregister_script('wc-add-to-cart-variation'); 
    
-  wp_dequeue_script('wc-add-to-cart-variation'); 
+	 wp_dequeue_script('wc-add-to-cart-variation'); 
   
-  wp_register_script( 'wc-add-to-cart-variation',$template_url.'/js/custom_variation.js',true); 
+   wp_register_script( 'wc-add-to-cart-variation',$template_url.'/js/custom_variation.js',true); 
    
-  wp_enqueue_script('wc-add-to-cart-variation'); 
+	 wp_enqueue_script('wc-add-to-cart-variation'); 
   
   
 		wp_enqueue_script( 'jquery' );

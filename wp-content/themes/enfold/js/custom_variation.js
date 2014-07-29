@@ -1,6 +1,5 @@
 jQuery(function() 
 {
-	
 		
 	 jQuery('.clshide').hide();
 	 var variation_id=jQuery('.active').attr('variation_id');
