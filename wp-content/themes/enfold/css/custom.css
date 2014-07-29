@@ -12,7 +12,7 @@
 .clsTitleCon .col-lg-6{padding:0; }
 .clsTitle{margin-top:10px; font-size:15px; color:#ffffff; padding-right:15px; }
 .clsTopList{margin-left:0; }
-.clsTopList li{display:inline-block; width:200px; border-radius:2px; border:1px solid #E5E6E7; padding:10px; box-shadow:1px 0 4px #eff0f1; }
+.clsTopList li{display:inline-block; width:200px; border-radius:2px; border:1px solid #E5E6E7; padding:10px; box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.3); }
 .clsTopList li a{}
 .clsTopList li a:hover{text-decoration:none; }
 .clsTopList li img{disply:inline-block; width:80px; }
