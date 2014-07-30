@@ -1,4 +1,4 @@
 jQuery(document).ready(function($)
 {
-	$("#idSticky").sticky({topSpacing:130});
+	$.lockfixed("#idSticky",{offset: {top: 130, bottom: 70}});
 });

@@ -19,7 +19,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 	<span>Resumen de orden</span>
 	<span>Comprar</span>
 	<span>Recibo</span>
-	<img src="<?php echo get_template_directory_uri(); ?>/images/cart-line1.png" />
+	<img src="<?php echo get_template_directory_uri(); ?>/images/cart-line1.svg" />
 </div>
 
 <form action="<?php echo esc_url( WC()->cart->get_cart_url() ); ?>" method="post">
@@ -59,7 +59,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 
 					<td class="product-remove">
 						<?php
-							echo apply_filters( 'woocommerce_cart_item_remove_link', sprintf( '<a href="%s" class="remove" title="%s">&times;</a>', esc_url( WC()->cart->get_remove_url( $cart_item_key ) ), __( 'Remove this item', 'woocommerce' ) ), $cart_item_key );
+							echo apply_filters( 'woocommerce_cart_item_remove_link', sprintf( '<a href="%s" class="remove-custom" title="%s"><img src="'.get_template_directory_uri().'/images/cerrar-01.png" /></a>', esc_url( WC()->cart->get_remove_url( $cart_item_key ) ), __( 'Remove this item', 'woocommerce' ) ), $cart_item_key );
 						?>
 					</td>
 

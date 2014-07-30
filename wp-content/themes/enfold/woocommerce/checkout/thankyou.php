@@ -17,7 +17,7 @@ if ( $order ) : ?>
 		<span>Resumen de orden</span>
 		<span>Comprar</span>
 		<span>Recibo</span>
-		<img src="<?php echo get_template_directory_uri(); ?>/images/cart-line3.png" />
+		<img src="<?php echo get_template_directory_uri(); ?>/images/cart-line3.svg" />
 	</div>
 
 	<?php if ( in_array( $order->status, array( 'failed' ) ) ) : ?>

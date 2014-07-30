@@ -28,7 +28,7 @@ $get_checkout_url = apply_filters( 'woocommerce_get_checkout_url', WC()->cart->g
 	<span>Resumen de orden</span>
 	<span>Comprar</span>
 	<span>Recibo</span>
-	<img src="<?php echo get_template_directory_uri(); ?>/images/cart-line2.png" />
+	<img src="<?php echo get_template_directory_uri(); ?>/images/cart-line2.svg" />
 </div>
 <form name="checkout" method="post" class="checkout" action="<?php echo esc_url( $get_checkout_url ); ?>">
 
