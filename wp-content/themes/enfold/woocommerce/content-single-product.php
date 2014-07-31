@@ -79,7 +79,7 @@ global $post, $woocommerce, $product;
 				
 				$variations = $product->get_available_variations();
 				
-				foreach ($variations as $key => $value) 
+				foreach ($variations as $key => $value)
 				{ 
 					?>
 				<div class="row clshide <?php echo $value['variation_id']?>">  
