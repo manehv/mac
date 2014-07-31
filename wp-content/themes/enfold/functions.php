@@ -18,6 +18,12 @@ wp_enqueue_script( 'lock_fixed', get_template_directory_uri() . '/js/jquery.lock
 wp_enqueue_script( 'custom_js', get_template_directory_uri() . '/js/custom.js', array(), '1.0.0', true );
  
 if(isset($avia_config['use_child_theme_functions_only'])) return;
+//set builder mode to debug
+add_action('avia_builder_mode', "builder_set_debug");
+function builder_set_debug()
+{
+	return "debug";
+}
 
 /*
  * create a global var which stores the ids of all posts which are displayed on the current page. It will help us to filter duplicate posts
@@ -861,3 +867,4 @@ function reorder_woocommerce_fields($fields) {
  
         return $fields2;
 }
+
