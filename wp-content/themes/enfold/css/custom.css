@@ -46,9 +46,9 @@ margin: 20px 0 10px; }
 .clsDetails{margin:5px 15px; font-size:12px; }
 .clsDetails img{height:150px; }
 #top .clsDetails form{margin-bottom:0; }
-.clsDetails button.single_add_to_cart_button, #top div div.woocommerce-message a.button.wc-forward{background-color:#e4e4e4 !important; border:1px solid #777777; transition:all 0.3s ease-out 0s; border-radius:2px; font-family:'open_sansregular'; padding:10px; color:#777777; font-size:11px; }
-#top div div.woocommerce-message a.button.wc-forward{width:14%; }
-.clsDetails button.single_add_to_cart_button:hover, #top div div.woocommerce-message a.button.wc-forward:hover{background-color:rgba(0,0,0,0.1); border:1px solid #777777; color:#0088cc; transition:all 0.3s ease-out 0s; }
+.clsDetails button.single_add_to_cart_button{background-color: #00a14f !important; transition:all 0.3s ease-out 0s; border-radius:2px; font-family:'open_sansregular'; padding:10px; font-size:11px; }
+#top div div.woocommerce-message a.button.wc-forward{width:14%; padding:10px; }
+.clsDetails button.single_add_to_cart_button:hover, #top div div.woocommerce-message a.button.wc-forward:hover{background-color:#0088cc !important; border-color: #0066aa !important; transition:all 0.3s ease-out 0s; }
 .clsSidebar{border-radius: 2px; box-shadow: 0 0 2px rgba(0, 0, 0, 0.3); margin-top:15px; border:1px solid #e5e6e7; padding:1px; }
 .clsSidebar .clsBotDetails{padding:5px 15px; border-bottom:1px solid #e1e1e1; color:#292325; font-size:11px; font-family:'open_sanslight'; margin:0; }
 /*.clsSidebar:last-child{border-bottom:0 none; } */
@@ -89,8 +89,8 @@ table div.quantity{width:150px; }
 .clsActions{border:1px solid #E6E7E8; }
 #top .custom_table.shop_table .actions .coupon .input-text{border:1px solid #e1e1e1; line-height:normal; font-size:11px; background-color: #f8f8f8; border-color: #e1e1e1; color: #919191;}
 #top .custom_table.shop_table .actions .coupon .input-text:focus{box-shadow:0 0 2px 0 rgba(0, 0, 0, 0.2); }
-#top table.custom_table.shop_table .actions .button{border:1px solid #777777; padding:13px 0; border-radius:2px; background:#e4e4e4; color:#777777; font-size:11px; }
-#top table.custom_table.shop_table .actions .button:hover{color:#0088cc; }
+#top table.custom_table.shop_table .actions .button, #place_order.button{padding:13px 0; border-radius:2px; font-size:11px; background-color:#00a14f; border:1px solid #00a14f; transition:all 0.3s ease-out 0s; }
+#top table.custom_table.shop_table .actions .button:hover, #place_order.button:hover{background-color:#0088cc; border-color: #0066aa; transition:all 0.3s ease-out 0s; }
 #top .main_color table.custom_table.shop_table .quantity input.plus, #top .main_color table.custom_table.shop_table .quantity input.minus{border:1px solid #e4e4e4; background:#ffffff; width:30px; height:30px; line-height:24px; border-radius:50%; color:#231F20; }
 #top table.custom_table.shop_table .quantity input.qty{border:1px solid #e4e4e4; border-radius:4px; color:#231F20; }
 .clsTopImg{margin:40px 0; }
@@ -108,8 +108,8 @@ body .column-top-margin{margin-top:10px; }
 #top .main_color .checkout .input-text, #top .main_color .checkout .chosen-single{border-radius:2px; font-size:11px; padding:13px; line-height:normal; height:auto; }
 #top input[type="text"]:focus, #top input[type="password"]:focus, #top input[type="email"]:focus, #top input[type="number"]:focus, #top input[type="url"]:focus, #top input[type="tel"]:focus, #top input[type="search"]:focus, #top textarea:focus{box-shadow:0 0 2px 0 rgba(0, 0, 0, 0.2) !important; }
 #top #payment{border-width:2px; width:50%; }
-#place_order.button{background-color:#e4e4e4; border:1px solid #777777; color:#777777; border-radius:2px; font-size:11px; padding:12px; }
-#place_order.button:hover{color:#0088cc;}
+/*{background-color:#e4e4e4; border:1px solid #777777; color:#777777; border-radius:2px; font-size:11px; padding:12px; }
+{color:#0088cc;}*/
 #top #main ul.order_details{border-width:3px; border-color:#939598; border-radius:8px; }
 .hr-short .hr-inner{width:100%; }
 .clshide,{ display:none; }
@@ -152,6 +152,17 @@ table.cart .remove-custom img{width:12px; }
     height: 20px;
     text-align: center;
     width: 20px;
+}
+/* Following is for making all button colours same */
+.main_color .primary-background, .main_color .primary-background a, div .main_color .button, .main_color #submit, .main_color input[type="submit"], .main_color .small-preview:hover, .main_color .avia-menu-fx, .main_color .avia-menu-fx .avia-arrow, .main_color.iconbox_top .iconbox_icon, .main_color .iconbox_top a.iconbox_icon:hover, .main_color .avia-data-table th.avia-highlight-col, .main_color .avia-color-theme-color, .main_color .avia-color-theme-color:hover, .main_color .image-overlay .image-overlay-inside:before, .main_color .comment-count, .main_color .av_dropcap2{
+	background-color: #777777;
+	border-color: #555555;
+	color: #ffffff;
+}
+.main_color .button:hover, .main_color .ajax_controlls a:hover, .main_color #submit:hover, .main_color .big_button:hover, .main_color .contentSlideControlls a:hover, .main_color #submit:hover, .main_color input[type="submit"]:hover{
+	background-color: #0088cc;
+	border-color: #0066aa;
+	color: #ffffff;
 }
 
 /*

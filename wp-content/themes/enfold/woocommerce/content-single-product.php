@@ -76,7 +76,6 @@ global $post, $woocommerce, $product;
 				<?php 
 				global $product, $post;
 				
-				
 				$variations = $product->get_available_variations();
 				
 				foreach ($variations as $key => $value)
@@ -84,7 +83,7 @@ global $post, $woocommerce, $product;
 					?>
 				<div class="row clshide <?php echo $value['variation_id']?>">  
 					<div class="clsDetails clsDetailsImg">
-						<img class="v-image" src="<?php echo $value['image_src']?>"/> 
+						<img class="v-image" src="<?php echo $value['image_src']?>"/>
 					</div>
 					<div class="clsDetails">
 							<?php 
