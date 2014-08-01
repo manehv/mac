@@ -111,7 +111,7 @@ jQuery(function()
 	 }
 	 
 	jQuery('#scroll-top').click(function(){
-      	jQuery('html,body').animate({ scrollTop: 0 },1000, function () {
+      	jQuery('html,body').animate({ scrollTop: jQuery('.clsContent').offset().top - 90 },1000, function () {
 		   });
 				return false;
 	});

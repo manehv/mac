@@ -61,7 +61,7 @@ global $post, $woocommerce, $product;
 
 <div class="row">
 		<?php if( $product->has_child() ): ?>
-    <div class="col-lg-9 clsContent">
+    <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12 clsContent">
 			<h1 class="clsBotTitle">
 					<?php _e('Choose a ','woocommerce').the_title(); ?>
 			</h1>
@@ -69,7 +69,7 @@ global $post, $woocommerce, $product;
 			<div id="desc"></div>
 			<?php the_content(); ?> 
     </div>
-    <div class="col-lg-3">
+    <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
 			<div id="idSticky" class="clsSticky">
 				<div class="clsSidebar">
 				<h3><?php _e('Abstract','woocommerce'); ?></h3>
@@ -134,19 +134,19 @@ global $post, $woocommerce, $product;
 			</div> <!-- clsSticky -->
 			<?php else: ?>
 			
-			<div class="col-lg-9 clsContent">
+			<div class="col-lg-9 col-sm-8 col-md-9 col-xs-12 clsContent">
 			<h1 class="clsBotTitle">
 					<?php _e('Choose a ','woocommerce').the_title(); ?>
 			</h1>
 			<div class="row">
-				<div class="col-lg-6">
+				<div class="col-lg-6 col-sm-6 col-sm-6">
 					<?php echo get_the_post_thumbnail( $post_id, 'medium', $attr ); ?>
 				</div>
 			</div> <!-- row -->
 			<div id="desc"></div>
 			<?php the_content(); ?> 
 		</div>
-			<div class="col-lg-3">
+			<div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
 				<div id="idSticky" class="clsSticky">
 					<div class="clsSidebar">
 					<h3><?php _e('Abstract','woocommerce'); ?></h3>

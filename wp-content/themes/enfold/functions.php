@@ -611,7 +611,7 @@ function woocommerce_variable_add_to_cart() {
    </script>
  <h2 class="clsFinish">Elige un acabado:</h2>
  <div class="row clsVariation">
-   <div class="col-lg-6">
+   <div class="col-lg-6 col-md-6 col-sm-6">
       <ul>
 	<?php
 	  $cnt=1;
@@ -641,7 +641,7 @@ function woocommerce_variable_add_to_cart() {
 	    ?>
       </ul>
     </div> <!-- col-lg-6 -->
-    <div class="col-lg-6">
+    <div class="col-lg-6 col-md-6 col-sm-6">
       <?php 
       foreach ($variations as $key => $value) 
       {
@@ -673,7 +673,7 @@ function woocommerce_variable_add_to_cart() {
 					  $temp=array();
 					  $temp=explode(':',$value)
 					?>
-						<div class="col-lg-4 <?php echo $temp[1]; ?>">
+						<div class="col-lg-4 col-md-4 col-sm-6 <?php echo $temp[1]; ?>">
 							<div attr-value="<?php echo $temp[0]; ?>" class="variation <?php echo $active ?> clsModel" variation_id="<?php echo $temp[1]; ?>" >
 								<span class="clsModelName"><?php echo $temp[0]; ?></span>
 							  <div><?php echo $temp[2];?></div>

@@ -88,9 +88,10 @@ table div.quantity{width:150px; }
 .custom_table.shop_table tr.cart_item td{border:1px solid #E6E7E8; }
 .clsActions{border:1px solid #E6E7E8; }
 #top .custom_table.shop_table .actions .coupon .input-text{border:1px solid #e1e1e1; line-height:normal; font-size:11px; background-color: #f8f8f8; border-color: #e1e1e1; color: #919191;}
+#top table.shop_table .actions .button{padding:13px 0; }
 #top .custom_table.shop_table .actions .coupon .input-text:focus{box-shadow:0 0 2px 0 rgba(0, 0, 0, 0.2); }
-#top table.custom_table.shop_table .actions .button, #place_order.button{padding:13px 0; border-radius:2px; font-size:11px; background-color:#00a14f; border:1px solid #00a14f; transition:all 0.3s ease-out 0s; }
-#top table.custom_table.shop_table .actions .button:hover, #place_order.button:hover{background-color:#0088cc; border-color: #0066aa; transition:all 0.3s ease-out 0s; }
+#top table.custom_table.shop_table .actions .checkout-button, #top #payment #place_order{padding:13px 0; border-radius:2px; font-size:11px; background-color:#00a14f; border:1px solid #00a14f; transition:all 0.3s ease-out 0s; }
+#top table.custom_table.shop_table .actions .checkout-button:hover, #top #payment #place_order:hover{background-color:#0088cc; border-color: #0066aa; transition:all 0.3s ease-out 0s; }
 #top .main_color table.custom_table.shop_table .quantity input.plus, #top .main_color table.custom_table.shop_table .quantity input.minus{border:1px solid #e4e4e4; background:#ffffff; width:30px; height:30px; line-height:24px; border-radius:50%; color:#231F20; }
 #top table.custom_table.shop_table .quantity input.qty{border:1px solid #e4e4e4; border-radius:4px; color:#231F20; }
 .clsTopImg{margin:40px 0; }
@@ -110,7 +111,7 @@ body .column-top-margin{margin-top:10px; }
 #top #payment{border-width:2px; width:50%; }
 /*{background-color:#e4e4e4; border:1px solid #777777; color:#777777; border-radius:2px; font-size:11px; padding:12px; }
 {color:#0088cc;}*/
-#top #main ul.order_details{border-width:3px; border-color:#939598; border-radius:8px; }
+#top #main ul.order_details{border-width:1px; border-color:#939598; border-radius:8px; }
 .hr-short .hr-inner{width:100%; }
 .clshide,{ display:none; }
 .custom_table.shop_table table td, .custom_table.shop_table table th{background-color:inherit; }
@@ -153,6 +154,7 @@ table.cart .remove-custom img{width:12px; }
     text-align: center;
     width: 20px;
 }
+.clsBotDetails a:hover, .clsBotDetails a:focus{background-color:transparent; }
 /* Following is for making all button colours same */
 .main_color .primary-background, .main_color .primary-background a, div .main_color .button, .main_color #submit, .main_color input[type="submit"], .main_color .small-preview:hover, .main_color .avia-menu-fx, .main_color .avia-menu-fx .avia-arrow, .main_color.iconbox_top .iconbox_icon, .main_color .iconbox_top a.iconbox_icon:hover, .main_color .avia-data-table th.avia-highlight-col, .main_color .avia-color-theme-color, .main_color .avia-color-theme-color:hover, .main_color .image-overlay .image-overlay-inside:before, .main_color .comment-count, .main_color .av_dropcap2{
 	background-color: #777777;
@@ -165,16 +167,86 @@ table.cart .remove-custom img{width:12px; }
 	color: #ffffff;
 }
 
+
+/* Media Queries */
+@media only screen and (min-width:320px) and (max-width:480px){
+	.responsive .logo a, .responsive .logo img{height:70px !important; }
+	#mobile-advanced{background-color:transparent; border:0 none; }
+	#mobile-advanced li{background-color:#ffffff; }
+	#mobile-advanced .sub-menu a:hover{background-color:transparent; color:#0088cc; }
+	.clsTopList li{width:100% !important; margin-bottom:20px; }
+	.clsTopList li a{background-color:transparent; }
+	.clsContent{padding-right:0; }
+	.model .clsModel{margin-bottom:20px; }
+	.clsExc{margin:10px 0; }
+	.clsContent .avia-image-container{width:auto; }
+	.clsBotDetails a:hover, .clsBotDetails a:focus{background-color:transparent; }
+	.clsSidebar{margin-bottom:15px; }
+	.clsTopImg img{width:88%; }
+	.clsTopImg span{margin-right:24px; width:70px; }
+	.clsTopImg span:nth-child(3){margin-right:0; }
+	.form-row-half, .form-row-quarter, .form-row-first, .form-row-last{width:100%; }
+	#top #payment{width:100%; }
+	.responsive table.shop_table tr.clsBlank{display:none; }
+	.responsive #top table .product-name{font-weight:bold; }
+	table div.quantity{margin:0; }
+	.custom_table.shop_table.cart{border:1px solid #e1e1e1; padding:0 10px; background-color:#ffffff; }
+	.cart_totals table{border:1px solid #e1e1e1; }
+	.cart_totals td{text-align:left; }
+}
+
+@media only screen and (min-width:640px) and (max-width:767px) {
+	#mobile-advanced{background-color:transparent; border:0 none; }
+	#mobile-advanced li{background-color:#ffffff; }
+	#mobile-advanced .sub-menu a:hover{background-color:transparent; color:#0088cc; }
+	.clsTopList li{width:75% !important; margin-bottom:20px; }
+	.clsTopList li a{background-color:transparent; }
+	.clsContent{padding-right:0; }
+	.model .clsModel{margin-bottom:20px; width:70%; }
+	.clsExc{margin:10px 0; }
+	.clsContent .avia-image-container{width:auto; }
+	.clsBotDetails a:hover, .clsBotDetails a:focus{background-color:transparent; }
+	.clsSidebar{margin-bottom:15px; width:60%; }
+	#socket .sub_menu_socket li {display: inline-block; float:none; width: 115px; }
+	#socket .menu {margin-top:0; }
+	.custom_table.shop_table .clsMainTable tr{border-color:#e6e7e8; }
+	.clsActions .actions{border-bottom:1px solid #e6e7e8; }
+	td.actions .coupon{width:49%; }
+	#top .custom_table.shop_table .actions .coupon .input-text{margin-right:7px; }
+	#top div td.actions .coupon .input-text, #top table.shop_table .actions .coupon .button{width:48%; min-width:0; }
+	.responsive table.shop_table .product-remove, .responsive table.shop_table .product-thumbnail{display:table-cell; }
+	#top table.shop_table .actions .button, #top .actions .checkout-button.button.alt{min-width:0; width:24%; float:left; }
+	#top #payment{width:100%; }
+}
+
+
 /*
 Desktop Styles
 ================================================== */
 /* Note: Add new css to the media query below that you want to only effect the desktop view of your site */
 
-@media only screen and (min-width: 768px) {
-  /* Add your Desktop Styles here */
-
+@media only screen and (min-width:768px) and (max-width:1023px){
+	#top #header .mega_menu_title a{width:145px !important; }
+	.logo img{width:80% !important; }
+	#socket .sub_menu_socket li{display: inline-block; float: none; padding: 0; width: 130px; }
+	div .products .product a:hover{background-color:transparent !important; }
+	.products .thumbnail_container{height:auto; }
+	.clsTopList li{width:50%; margin-bottom:20px; }
+	.clsTopList li a:hover{background-color:transparent; }
+	.model .clsModel{margin-bottom:20px; }
+	.clsExc{margin:10px 0; }
+	td.actions .coupon{width:49%; }
+	#top .custom_table.shop_table .actions .coupon .input-text{margin-right:7px; }
+	#top div td.actions .coupon .input-text, #top table.shop_table .actions .coupon .button{width:48%; min-width:0; }
+	table.shop_table .product-remove, table.shop_table .product-thumbnail{display:table-cell; }
+	#top table.shop_table .actions .button, #top .actions .checkout-button.button.alt{min-width:0; width:24%; float:left; }
+	a:hover, a:focus{background-color:transparent; }
 }
 
+@media only screen and (min-width:1024px) {
+	a:hover, a:focus{background-color:transparent; }
+	.clsRelTitle{width:105px; }
+}
 
 
 /*
