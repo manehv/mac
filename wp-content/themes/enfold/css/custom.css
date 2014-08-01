@@ -228,7 +228,7 @@ Desktop Styles
 @media only screen and (min-width:768px) and (max-width:1023px){
 	#top #header .mega_menu_title a{width:145px !important; }
 	.logo img{width:80% !important; }
-	#socket .sub_menu_socket li{display: inline-block; float: none; padding: 0; width: 130px; }
+	#socket .sub_menu_socket li{display: inline-block; float: none; padding: 0; width: 130px; border-left:medium none; }
 	div .products .product a:hover{background-color:transparent !important; }
 	.products .thumbnail_container{height:auto; }
 	.clsTopList li{width:50%; margin-bottom:20px; }
@@ -241,6 +241,7 @@ Desktop Styles
 	table.shop_table .product-remove, table.shop_table .product-thumbnail{display:table-cell; }
 	#top table.shop_table .actions .button, #top .actions .checkout-button.button.alt{min-width:0; width:24%; float:left; }
 	a:hover, a:focus{background-color:transparent; }
+	#socket .menu{margin-top:0; }
 }
 
 @media only screen and (min-width:1024px) {
