@@ -41,23 +41,25 @@ global $post, $woocommerce, $product;
 	 }
 ?>
 
-<div class="row clsSinProd">
+<!-- <div class="row clsSinProd">
 	<ul class="clsTopList">
 		<li>
-			<?php 
+			<?php /*
 				if ( has_post_thumbnail())
-					echo get_the_post_thumbnail( $post_id, 'thumbnail');
+					echo get_the_post_thumbnail( $post_id, 'thumbnail'); */
 			?>
 			<span class="clsRelTitle">
 				<?php
-					the_title(); 
+					// the_title(); 
 				?>
 			</span>
 		</li>
-		<?php woocommerce_upsell_display(4,4); ?>
+		<?php // woocommerce_upsell_display(4,4); ?>
 	</ul>
-</div>
+</div> -->
 
+<?php $mymeta = get_post_meta( get_the_ID(), 'carousel' );
+echo do_shortcode($mymeta[0]); ?>
 
 <div class="row">
 		<?php if( $product->has_child() ): ?>
