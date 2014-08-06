@@ -2,7 +2,7 @@ jQuery(document).ready(function($)
 {
 	
 	
-	$.lockfixed("#idSticky",{offset: {top: 150, bottom: 114}});
+	$.lockfixed("#idSticky",{offset: {top: 120, bottom: 70}});
 		 
 /*		if (!!$('#idSticky').offset()) 
 		{
