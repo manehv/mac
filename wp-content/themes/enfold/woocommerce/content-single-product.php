@@ -134,6 +134,7 @@ echo do_shortcode($mymeta[0]); ?>
 					<?php echo do_shortcode( "[av_sidebar widget_area='Single Product Contact']" ) ?>
 				</div> <!-- clsSidebar -->
 			</div> <!-- clsSticky -->
+			
 			<?php else: ?>
 			
 			<div class="col-lg-9 col-sm-8 col-md-9 col-xs-12 clsContent">
@@ -141,8 +142,8 @@ echo do_shortcode($mymeta[0]); ?>
 					<?php _e('Choose a ','woocommerce').the_title(); ?>
 			</h1>
 			<div class="row">
-				<div class="col-lg-6 col-sm-6 col-sm-6">
-					<?php echo get_the_post_thumbnail( $post_id, 'medium', $attr ); ?>
+				<div class="col-lg-6 col-sm-6 col-sm-6 col-xs-8">
+					<?php echo get_the_post_thumbnail( $post_id, 'full', $attr ); ?>
 				</div>
 			</div> <!-- row -->
 			<div id="desc"></div>
@@ -151,32 +152,31 @@ echo do_shortcode($mymeta[0]); ?>
 			<div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
 				<div id="idSticky" class="clsSticky">
 					<div class="clsSidebar">
-					<h3><?php _e('Abstract','woocommerce'); ?></h3>
-					<div class="row">  
-						<div class="clsDetails clsDetailsImg">
-							<?php echo get_the_post_thumbnail( $post_id, 'medium', $attr ); ?>
+						<h3><?php _e('Abstract','woocommerce'); ?></h3>
+						<div class="row">  
+							<div class="clsDetails clsDetailsImg">
+								<?php echo get_the_post_thumbnail( $post_id, 'medium', $attr ); ?>
+							</div>
+							<div class="clsDetails">
+									<?php 
+										the_title();
+									?>
+							</div>
+							<div class="clsDetails">
+									<?php echo $product->get_sku(); ?>
+							</div>
+							<div class="clsDetails">
+									<?php echo $product->get_price_html(); ?>
+							</div>
+							<div class="clsDetails">
+								<form  method="post"  enctype='multipart/form-data'>
+									<input type="hidden" id="addtocart" value="<?php echo $post->ID;  ?>" name="add-to-cart"/>
+									<input id="set-aqy" class="qty" type="hidden" name="quantity" value="1" />
+									<div><?php woocommerce_quantity_input(); ?>	</div>
+									<button type="submit" class="single_add_to_cart_button button alt"><?php echo apply_filters('single_add_to_cart_text', __( 'Add to cart', 'woocommerce' ), $product->product_type); ?></button>
+								</form>
+							</div>
 						</div>
-						<div class="clsDetails">
-								<?php 
-									the_title();
-								?>
-						</div>
-						<div class="clsDetails">
-								<?php echo $product->get_sku(); ?>
-						</div>
-						<div class="clsDetails">
-								<?php echo $product->get_price_html(); ?>
-						</div>
-						<div class="clsDetails">
-							<form  method="post"  enctype='multipart/form-data'>
-								<input type="hidden" id="addtocart" value="<?php echo $post->ID;  ?>" name="add-to-cart"/>
-								<input id="set-aqy" class="qty" type="hidden" name="quantity" value="1" />
-								<div><?php woocommerce_quantity_input(); ?>	</div>
-								<button type="submit" class="single_add_to_cart_button button alt"><?php echo apply_filters('single_add_to_cart_text', __( 'Add to cart', 'woocommerce' ), $product->product_type); ?></button>
-							</form>
-							
-						</div>
-					</div>
 					</div> <!-- clsSidebar -->
 					<div class="clsSidebar">
 						<p class="clsBotDetails clsBotTitle"><?php _e('More information on how to buy your ','woocommerce').the_title(); ?></p>
