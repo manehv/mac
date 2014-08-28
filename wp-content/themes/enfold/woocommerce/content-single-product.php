@@ -142,7 +142,7 @@ echo do_shortcode($mymeta[0]); ?>
 					<?php _e('Choose a ','woocommerce').the_title(); ?>
 			</h1>
 			<div class="row">
-				<div class="col-lg-6 col-sm-6 col-sm-6 col-xs-8">
+				<div class="col-lg-10 col-md-10 col-sm-10 col-xs-8">
 					<?php echo get_the_post_thumbnail( $post_id, 'full', $attr ); ?>
 				</div>
 			</div> <!-- row -->
