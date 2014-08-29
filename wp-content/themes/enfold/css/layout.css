@@ -142,11 +142,11 @@ min-height: 30px;
 #header_meta .container{min-height: 30px;}
 
 #header_main{
-border-bottom-width: 30px;
-border-bottom-style: solid;
+border-bottom-width: 1px;
+border-bottom-style: dotted;
 z-index: 1;
 background-position: fixed !important;
-border-color:#6D6E71 !important;
+border-color:#eee !important;
 }
 
 
@@ -217,7 +217,7 @@ height: auto\9; /*hack: fixes ie8 squished logo*/
 -webkit-transition: opacity 0.4s ease-in-out;
 -moz-transition: 	opacity 0.4s ease-in-out;
 transition: 		opacity 0.4s ease-in-out;
-    background-color: black;
+    background-color: #fff;
 }
 
 .logo img.alternate{
@@ -315,7 +315,7 @@ display:none;
 .avia-menu-fx .avia-arrow-wrap .avia-arrow{ top: 10px; }
 
 
-.html_main_nav_header #top .main_menu .menu>li:last-child>a, .html_bottom_nav_header #top #menu-item-search>a{ padding-right:0; background-color: #000000; }
+.html_main_nav_header #top .main_menu .menu>li:last-child>a, .html_bottom_nav_header #top #menu-item-search>a{ padding-right:0; background-color: #fff; }
 .html_bottom_nav_header.html_logo_center #top #menu-item-search>a{ padding-right:13px; border-right-style: solid; border-right-width: 1px; }
 
 /*mega menu styles*/
@@ -350,7 +350,7 @@ text-decoration:none;
 color:#fff !important;
 /*text-shadow: rgba(0,0,0,0.9) 0 1px 3px;*/
 /*background: url("../images/btnHover-01.png") no-repeat scroll center center;*/
-background-color:rgb(80,80,80)!important;
+background-color:#56656D!important;
 padding-bottom: 10px;
 }
 
@@ -365,7 +365,7 @@ z-index: 2;
 padding: 0px 0;
 box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1);
 overflow: hidden;
-background-color: #6d6e71;
+background-color: #fff;
     
 
 
