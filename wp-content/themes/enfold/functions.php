@@ -484,7 +484,22 @@ add_theme_support('force-post-thumbnails-in-widget');
 
 /*
  *  register custom functions that are not related to the framework but necessary for the theme to run
- */
+ *
+/
+
+
+//code for adding custom fields in variation box
++	//Display Fields
++	add_action( 'woocommerce_product_after_variable_attributes', 'variable_fields', 10, 2 );
++	//JS to add fields for new variations
++	add_action( 'woocommerce_product_after_variable_attributes_js', 'variable_fields_js' );
++	//Save variation fields
++	add_action( 'woocommerce_process_product_meta_variable', 'save_variable_fields', 10, 1 );
++ 
++	/**
++	* Create new fields for variations
++	*
++	*/
 
 
 require_once( 'functions-enfold.php');
