@@ -14,6 +14,7 @@ global $avia_config;
  */
 
 
+
 wp_enqueue_script( 'lock_fixed', get_template_directory_uri() . '/js/jquery.lockfixed.js', array(), '1.0.0', true );
 wp_enqueue_script( 'custom_js', get_template_directory_uri() . '/js/custom.js', array(), '1.0.0', true );
  
@@ -274,9 +275,9 @@ if(!function_exists('avia_register_frontend_scripts'))
 		wp_enqueue_script( 'avia-shortcodes', $template_url.'/js/shortcodes.js', array('jquery'), 1, true );
 		wp_enqueue_script( 'avia-prettyPhoto',  $template_url.'/js/prettyPhoto/js/jquery.prettyPhoto.js', 'jquery', "3.1.5", true);
 
-   wp_deregister_script('wc-add-to-cart-variation'); 
+ //  wp_deregister_script('wc-add-to-cart-variation'); 
    
-	 wp_dequeue_script('wc-add-to-cart-variation'); 
+	// wp_dequeue_script('wc-add-to-cart-variation'); 
   
    wp_register_script( 'wc-add-to-cart-variation',$template_url.'/js/custom_variation.js',true); 
    
@@ -483,7 +484,22 @@ add_theme_support('force-post-thumbnails-in-widget');
 
 /*
  *  register custom functions that are not related to the framework but necessary for the theme to run
- */
+ *
+/
+
+
+//code for adding custom fields in variation box
++	//Display Fields
++	add_action( 'woocommerce_product_after_variable_attributes', 'variable_fields', 10, 2 );
++	//JS to add fields for new variations
++	add_action( 'woocommerce_product_after_variable_attributes_js', 'variable_fields_js' );
++	//Save variation fields
++	add_action( 'woocommerce_process_product_meta_variable', 'save_variable_fields', 10, 1 );
++ 
++	/**
++	* Create new fields for variations
++	*
++	*/
 
 
 require_once( 'functions-enfold.php');
@@ -596,7 +612,7 @@ endif;
 
 }
 
-
+/*
 
 function woocommerce_variable_add_to_cart() {
 
@@ -691,7 +707,7 @@ function woocommerce_variable_add_to_cart() {
 <?php
 }
 
-
+*/
 
 
 /*function Row( $atts, $content = null ) {
