@@ -14,7 +14,7 @@ global $woocommerce, $product, $post;
 </script>
 <?php $mymeta = get_post_meta( get_the_ID(), 'carousel' );
 echo do_shortcode($mymeta[0]); ?>
-<?php do_action('woocommerce_before_add_to_cart_form'); ?>
+<?php //do_action('woocommerce_before_add_to_cart_form'); ?>
 <div class="row">
   <div class="col-md-9">
 			<form action="<?php echo esc_url( $product->add_to_cart_url() ); ?>" class="variations_form cart" method="post" enctype='multipart/form-data' data-product_id="<?php echo $post->ID; ?>">
