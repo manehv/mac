@@ -612,7 +612,7 @@ endif;
 
 }
 
-
+/*
 
 function woocommerce_variable_add_to_cart() {
 
@@ -707,7 +707,7 @@ function woocommerce_variable_add_to_cart() {
 <?php
 }
 
-
+*/
 
 
 /*function Row( $atts, $content = null ) {
