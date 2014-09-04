@@ -275,9 +275,9 @@ if(!function_exists('avia_register_frontend_scripts'))
 		wp_enqueue_script( 'avia-shortcodes', $template_url.'/js/shortcodes.js', array('jquery'), 1, true );
 		wp_enqueue_script( 'avia-prettyPhoto',  $template_url.'/js/prettyPhoto/js/jquery.prettyPhoto.js', 'jquery', "3.1.5", true);
 
-   wp_deregister_script('wc-add-to-cart-variation'); 
+ //  wp_deregister_script('wc-add-to-cart-variation'); 
    
-	 wp_dequeue_script('wc-add-to-cart-variation'); 
+	// wp_dequeue_script('wc-add-to-cart-variation'); 
   
    wp_register_script( 'wc-add-to-cart-variation',$template_url.'/js/custom_variation.js',true); 
    
