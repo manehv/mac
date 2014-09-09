@@ -17,7 +17,7 @@ echo do_shortcode($mymeta[0]); ?>
 <?php //do_action('woocommerce_before_add_to_cart_form'); ?>
 <div class="row">
   <div class="col-md-9">
-			<form action="<?php echo esc_url( $product->add_to_cart_url() ); ?>" class="variations_form cart" method="post" enctype='multipart/form-data' data-product_id="<?php echo $post->ID; ?>">
+			<form class="variations_form cart" method="post" enctype='multipart/form-data' data-product_id="<?php echo $post->ID; ?>" data-product_variations="<?php echo esc_attr( json_encode( $available_variations ) ) ?>">
 				<table class="variations" cellspacing="0">
 					<tbody>
 						<?php $show_image=1; $loop = 0; foreach ( $attributes as $name => $options ) : $loop++; ?>
