@@ -122,7 +122,12 @@ body .column-top-margin{margin-top:10px; }
 #top .clsSidebar div .quantity input.plus, #top  .clsSidebar div .quantity input.minus{border:1px solid #e4e4e4; background:#ffffff; width:22px; height:22px; line-height:20px; border-radius:50%; color:#231F20; }
 #top .clsSidebar div .quantity input.qty{border:1px solid #e4e4e4; border-radius:4px; color:#231F20; }
 #top .clsSidebar div .quantity input.qty{height:30px; width:30px; line-height: 30px;}
-.clsDetailsImg{text-align:center; }
+.clsDetailsImg{text-align:center; 
+}
+.bigimg{
+height:400px;
+overflow:hidden;
+}	
 
 .single-product .clsContent .flex_column p {
 	font-size: 12px
@@ -168,7 +173,24 @@ table.cart .remove-custom img{width:12px; }
 	border-color: #0066aa;
 	color: #ffffff;
 }
+ #top .clsvari .variations_form{
+	border:0 none;
+	background-color: white;
+}
 
+.clsvari .chosen-drop {
+    background-color: white;
+}
+.main_color .clsvari .variations_form{
+    background-color: white;
+}
+.main_color .clsvari tr:nth-child(2n+1){
+    background-color: white;
+}
+#top #wrap_all ins:before {
+    content:"";
+		padding: 0 0px 0 0px;
+}		
 
 /* Media Queries */
 @media only screen and (min-width:320px) and (max-width:480px){
@@ -222,6 +244,7 @@ table.cart .remove-custom img{width:12px; }
 }
 
 
+
 /*
 Desktop Styles
 ================================================== */
@@ -261,3 +284,4 @@ Mobile Styles
   /* Add your Mobile Styles here */
 
 }
+
