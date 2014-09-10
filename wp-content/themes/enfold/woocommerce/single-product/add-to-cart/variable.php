@@ -16,15 +16,22 @@ global $woocommerce, $product, $post;
 echo do_shortcode($mymeta[0]); ?>
 <?php //do_action('woocommerce_before_add_to_cart_form'); ?>
 <div class="row">
-  <div class="col-md-9">
-			<form action="<?php echo esc_url( $product->add_to_cart_url() ); ?>" class="variations_form cart" method="post" enctype='multipart/form-data' data-product_id="<?php echo $post->ID; ?>">
+	<div class="col-md-9 clsvari">
+	<h1 class="clsBotTitle">
+					<?php _e('Choose a ','woocommerce').the_title(); ?>
+			</h1>
+			<form class="variations_form cart" method="post" enctype='multipart/form-data' data-product_id="<?php echo $post->ID; ?>" data-         product_variations="<?php echo esc_attr( json_encode( $available_variations ) ) ?>">
 				<table class="variations" cellspacing="0">
 					<tbody>
 						<?php $show_image=1; $loop = 0; foreach ( $attributes as $name => $options ) : $loop++; ?>
 							<tr>
-								<td class="label"><label for="<?php echo sanitize_title($name); ?>"><?php echo $woocommerce->attribute_label($name); ?></label></td>
-								<td class="value"><fieldset>
-									<strong>Choose An Option for...</strong><br />
+								<td class="label"><label for="<?php echo sanitize_title($name); ?>"></label></td>
+								<td class="value">
+								<h2 class="clsFinish">
+				          	<?php _e('Options for '.ucfirst(sanitize_title($name)),'woocommerce'); ?>
+			           </h2>
+								<fieldset>
+
 									<?php
 										if ( is_array( $options ) ) {
 
@@ -56,13 +63,13 @@ echo do_shortcode($mymeta[0]); ?>
 											//	do_action( 'woocommerce_before_single_product_summary' ); 
 											?>
 											
-											<td><img class="variation_image" src=""></td>
+											<td><div class="bigimg"><img class="variation_image" src=""></div></td>
 												
 												<?php
 												$show_image=0;
 										}
 									if ( sizeof($attributes) == $loop )
-										echo '<a class="reset_variations" href="#reset">'.__('Clear selection', 'woocommerce').'</a>';
+										echo '<a id="clear" class="reset_variations" href="#reset">'.__('Clear selection', 'woocommerce').'</a>';
 								?></td>
 							</tr>
 								<?php endforeach;?>
@@ -90,10 +97,12 @@ echo do_shortcode($mymeta[0]); ?>
 						<img class="variation_image v-image" src=""/>
 					</div>
 					 <div class="clsDetails">
-							<div class="clsDetails" id="prodtitle" title="<?php the_title(); ?>"><?php the_title(); ?></div>	
+							<div id="prodtitle" title="<?php the_title(); ?>"><?php the_title(); ?></div>	
 					 </div>
-					 <div class="clsDetails" id="sku"></div>
-					 <div class="clsDetails">
+					  <div>
+					   <div class="clsDetails" id="sku"></div>
+					  </div> 
+					 <div>
 							<div class="clsDetails" id="price"></div>	
 					 </div>
 			
