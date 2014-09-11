@@ -325,25 +325,19 @@ display:none;
 /****ESTE ES EL ELEMENTO DEL SUBMENU***/
 /****ESTE ES EL ELEMENTO DEL SUBMENU***/
 /****ESTE ES EL ELEMENTO DEL SUBMENU***/
-#top #header .mega_menu_title a{
-font-size: 10px;
-border-top: 2px solid #000;
-text-shadow:rgba (0,0,0,0.8) 0 0 2px;
-text-align: center;
-line-height: 0.9em;
-padding-top:11px;
+#top #header .mega_menu_title a {
+    font-size: 10px;
+    text-align: center;
+    line-height: 0.9em;
+    padding-top: 11px;
     padding-bottom: 20px !important;
-/*    padding-bottom: 15px;*/
-margin-top: 0px;
+    margin-top: 0px;
     height: 26px;
-/*margin:0;*/
-background-color: transparent!important;
-border:none;
-/*text-shadow: rgba(0,0,0,0.8) 0 0 1px;*/
-    
-/*AQUI LE DOY ANCHO AL ELEMENTO DEL SUBMENU*/
-width: 150px !important;
-    color:#ccc !important;
+    background-color: #fff !important;
+    border: medium none;
+    width: 150px !important;
+    color: #56656D !important;
+    border-bottom: 2px solid #000;
 }
 
 #top #header .mega_menu_title a:hover{
