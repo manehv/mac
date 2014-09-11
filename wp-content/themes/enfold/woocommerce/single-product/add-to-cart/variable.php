@@ -10,17 +10,33 @@
 global $woocommerce, $product, $post;
 ?>
 <script type="text/javascript">
-    var product_variations_<?php echo $post->ID; ?> = <?php echo json_encode( $available_variations ) ?>;
+    var product_variations_<?php echo $post->ID; ?> = <?php echo json_encode( $available_variations )?>;
 </script>
 <?php $mymeta = get_post_meta( get_the_ID(), 'carousel' );
-echo do_shortcode($mymeta[0]); ?>
+echo do_shortcode($mymeta[0]);
+
+$variations = $product->get_available_variations();
+$custom_meta=array();
+ foreach ($variations as $key => $value) 
+ {
+  $temp=array();
+  $shipping=get_post_meta($value['variation_id'],'_textarea');
+  $dis=get_post_meta($value['variation_id'],'_description');
+  $temp['variation_id']=$value['variation_id'];
+  $temp['shipping']=$shipping[0];
+  $temp['discription']=$dis[0];
+  $temp['attributes']=get_post_meta($value['variation_id']);
+  $custom_meta[]=$temp;
+ }
+
+?>
 <?php //do_action('woocommerce_before_add_to_cart_form'); ?>
 <div class="row">
 	<div class="col-md-9 clsvari">
 	<h1 class="clsBotTitle">
 					<?php _e('Choose a ','woocommerce').the_title(); ?>
 			</h1>
-			<form class="variations_form cart" method="post" enctype='multipart/form-data' data-product_id="<?php echo $post->ID; ?>" data-         product_variations="<?php echo esc_attr( json_encode( $available_variations ) ) ?>">
+			<form  custom_data="<?php echo esc_attr(json_encode($custom_meta));?>"  class="variations_form cart" method="post" enctype='multipart/form-data' data-product_id="<?php echo $post->ID; ?>" data-product_variations="<?php echo esc_attr( json_encode( $available_variations ) ) ?>">
 				<table class="variations" cellspacing="0">
 					<tbody>
 						<?php $show_image=1; $loop = 0; foreach ( $attributes as $name => $options ) : $loop++; ?>
@@ -47,11 +63,11 @@ echo do_shortcode($mymeta[0]); ?>
 
 												foreach ( $terms as $term ) {
 													if ( ! in_array( $term->slug, $options ) ) continue;
-													echo '<input type="radio"  value="' . strtoupper($term->slug) . '" ' . checked( $selected_value, $term->slug, false ) . ' id="'. esc_attr( sanitize_title($name) ) .'" name="attribute_'. sanitize_title($name).'">' . apply_filters( 'woocommerce_variation_option_name', $term->name ).'<br />';
+													echo '<div><input type="radio"  value="' . strtoupper($term->slug) . '" ' . checked( $selected_value, $term->slug, false ) . ' id="'. esc_attr( sanitize_title($name) ) .'" name="attribute_'. sanitize_title($name).'">' . apply_filters( 'woocommerce_variation_option_name', $term->name ).'<div class="info"></div><div class="modelprice"></div></div><br />';
 												}
 											} else {
 												foreach ( $options as $option )
-													echo '<input type="radio"  value="' . strtoupper($option) . '" ' . checked( $selected_value, $option, false ) . ' id="'. esc_attr( sanitize_title($name) ) .'" name="attribute_'. sanitize_title($name).'">' . apply_filters( 'woocommerce_variation_option_name', $option ) . '<br />';
+													echo '<div><input type="radio"  value="' . strtoupper($option) . '" ' . checked( $selected_value, $option, false ) . ' id="'. esc_attr( sanitize_title($name) ) .'" name="attribute_'. sanitize_title($name).'">' . apply_filters( 'woocommerce_variation_option_name', $option ) . '<div class="info"></div><div class="modelprice"></div></div><br />';
 											}
 										}
 									?>
@@ -102,6 +118,9 @@ echo do_shortcode($mymeta[0]); ?>
 					  <div>
 					   <div class="clsDetails" id="sku"></div>
 					  </div> 
+					   <div>
+					   <div class="clsDetails" id="shipping"></div>
+					   </div> 
 					 <div>
 							<div class="clsDetails" id="price"></div>	
 					 </div>
