@@ -142,10 +142,10 @@ min-height: 30px;
 #header_meta .container{min-height: 30px;}
 
 #header_main {
-    border-bottom-width: 1px;
-    border-bottom-style: dotted;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
     z-index: 1;
-    border-color: #CCC !important;
+    border-color: #56656D !important;
     overflow-y: visible;
     height: 110px !important;
 }
