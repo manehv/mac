@@ -142,8 +142,8 @@ min-height: 30px;
 #header_meta .container{min-height: 30px;}
 
 #header_main{
-border-bottom-width: 2px;
-border-bottom-style: solid;
+border-bottom-width: 1px;
+border-bottom-style: dotted;
 z-index: 1;
 background-position: fixed !important;
 border-color:#ccc !important;
