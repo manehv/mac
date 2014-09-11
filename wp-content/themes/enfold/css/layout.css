@@ -141,14 +141,14 @@ min-height: 30px;
 
 #header_meta .container{min-height: 30px;}
 
-#header_main{
-border-bottom-width: 1px;
-border-bottom-style: dotted;
-z-index: 1;
-background-position: fixed !important;
-border-color:#ccc !important;
+#header_main {
+    border-bottom-width: 1px;
+    border-bottom-style: dotted;
+    z-index: 1;
+    border-color: #CCC !important;
+    overflow-y: visible;
+    height: 110px !important;
 }
-
 
 #header.shadow{box-shadow:0px 0px 3px rgba(0, 0, 0, 0.0);}
 
