@@ -200,6 +200,10 @@ table.cart .remove-custom img{width:12px; }
 	margin-left:102px;
 }
 
+.reset_variations {
+    left:0;
+}
+
 /* Media Queries */
 @media only screen and (min-width:320px) and (max-width:480px){
 	.responsive .logo a, .responsive .logo img{height:70px !important; }
