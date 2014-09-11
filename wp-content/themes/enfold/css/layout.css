@@ -142,15 +142,15 @@ min-height: 30px;
 #header_meta .container{min-height: 30px;}
 
 #header_main{
-border-bottom-width: 1px;
-border-bottom-style: dotted;
+border-bottom-width: 2px;
+border-bottom-style: solid;
 z-index: 1;
 background-position: fixed !important;
-border-color:#eee !important;
+border-color:#ccc !important;
 }
 
 
-#header.shadow{box-shadow:0px 0px 3px rgba(0, 0, 0, 0.2);}
+#header.shadow{box-shadow:0px 0px 3px rgba(0, 0, 0, 0.0);}
 
 .header_bg{
 position: absolute;
