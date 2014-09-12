@@ -81,9 +81,10 @@ $custom_meta=array();
 										 if($show_image==1)
 										{
 											//	do_action( 'woocommerce_before_single_product_summary' ); 
+											//bigimg
 											?>
 											
-											<td><div class="bigimg"><img class="variation_image" src=""></div></td>
+											<td><div><img class="variation_image img-responsive" src=""></div></td>
 												
 												<?php
 												$show_image=0;
