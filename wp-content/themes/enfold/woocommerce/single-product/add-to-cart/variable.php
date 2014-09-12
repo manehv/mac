@@ -67,11 +67,11 @@ $custom_meta=array();
 
 												foreach ( $terms as $term ) {
 													if ( ! in_array( $term->slug, $options ) ) continue;
-													echo '<div><input type="radio"  value="' . strtoupper($term->slug) . '" ' . checked( $selected_value, $term->slug, false ) . ' id="'. esc_attr( sanitize_title($name) ) .'" name="attribute_'. sanitize_title($name).'">' . apply_filters( 'woocommerce_variation_option_name', $term->name ).'<div class="modelprice"></div><div class="info"></div></div><br />';
+													echo '<div><input type="radio"  value="' . strtoupper($term->slug) . '" ' . checked( $selected_value, $term->slug, false ) . ' id="'. esc_attr( sanitize_title($name) ) .'" name="attribute_'. sanitize_title($name).'">' . apply_filters( 'woocommerce_variation_option_name', $term->name ).'<div class="modelprice"></div><div class="info"></div></div>';
 												}
 											} else {
 												foreach ( $options as $option )
-													echo '<div><input type="radio"  value="' . strtoupper($option) . '" ' . checked( $selected_value, $option, false ) . ' id="'. esc_attr( sanitize_title($name) ) .'" name="attribute_'. sanitize_title($name).'">' . apply_filters( 'woocommerce_variation_option_name', $option ) . '<div class="modelprice"></div><div class="info"></div></div><br />';
+													echo '<div><input type="radio"  value="' . strtoupper($option) . '" ' . checked( $selected_value, $option, false ) . ' id="'. esc_attr( sanitize_title($name) ) .'" name="attribute_'. sanitize_title($name).'">' . apply_filters( 'woocommerce_variation_option_name', $option ) . '<div class="modelprice"></div><div class="info"></div></div>';
 											}
 										}
 									?>
