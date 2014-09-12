@@ -54,8 +54,6 @@ global $post, $woocommerce, $product;
 			remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_price', 10 );
 			remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_excerpt', 20 );
 			do_action('woocommerce_single_product_summary');
-		
-						
 		?>
 
 	</div><!-- .summary -->
