@@ -36,7 +36,7 @@ $custom_meta=array();
 ?>
 <?php //do_action('woocommerce_before_add_to_cart_form'); ?>
 <div class="row">
-	<div class="col-md-9 clsvari">
+	<div class="col-md-9 clsvari clsContent">
 	<h1 class="clsBotTitle">
 					<?php _e('Choose a ','woocommerce').the_title(); ?>
 			</h1>
@@ -45,7 +45,7 @@ $custom_meta=array();
 					<tbody>
 						<?php $show_image=1; $loop = 0; foreach ( $attributes as $name => $options ) : $loop++; ?>
 							<tr>
-								<td class="label"><label for="<?php echo sanitize_title($name); ?>"></label></td>
+								<!-- <td class="label"><label for="<?php //echo sanitize_title($name); ?>"></label></td> -->
 								<td class="value">
 								<h2 class="clsFinish">
 				          	<?php _e('Options for '.ucfirst(sanitize_title($name)),'woocommerce'); ?>
@@ -67,11 +67,11 @@ $custom_meta=array();
 
 												foreach ( $terms as $term ) {
 													if ( ! in_array( $term->slug, $options ) ) continue;
-													echo '<div><input type="radio"  value="' . strtoupper($term->slug) . '" ' . checked( $selected_value, $term->slug, false ) . ' id="'. esc_attr( sanitize_title($name) ) .'" name="attribute_'. sanitize_title($name).'">' . apply_filters( 'woocommerce_variation_option_name', $term->name ).'<div class="modelprice"></div><div class="info"></div></div>';
+													echo '<div><span><input type="radio"  value="' . strtoupper($term->slug) . '" ' . checked( $selected_value, $term->slug, false ) . ' id="'. esc_attr( sanitize_title($name) ) .'" name="attribute_'. sanitize_title($name).'">' . apply_filters( 'woocommerce_variation_option_name', $term->name ).'</span><div class="modelprice"></div><div class="info"></div></div>';
 												}
 											} else {
 												foreach ( $options as $option )
-													echo '<div><input type="radio"  value="' . strtoupper($option) . '" ' . checked( $selected_value, $option, false ) . ' id="'. esc_attr( sanitize_title($name) ) .'" name="attribute_'. sanitize_title($name).'">' . apply_filters( 'woocommerce_variation_option_name', $option ) . '<div class="modelprice"></div><div class="info"></div></div>';
+													echo '<div><span><input type="radio"  value="' . strtoupper($option) . '" ' . checked( $selected_value, $option, false ) . ' id="'. esc_attr( sanitize_title($name) ) .'" name="attribute_'. sanitize_title($name).'">' . apply_filters( 'woocommerce_variation_option_name', $option ) . '</span><div class="modelprice"></div><div class="info"></div></div>';
 											}
 										}
 									?>
