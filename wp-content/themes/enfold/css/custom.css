@@ -195,14 +195,23 @@ table.cart .remove-custom img{width:12px; }
     padding: 0px 0px;
     vertical-align: none;
 }
-.info,.modelprice
+.info
 {
+	font-size:12px;
 	margin-left:102px;
+}
+.modelprice
+{
+	font-size:15px;
+	font-weight:bold;
+	margin-left:102px;
+	
 }
 
 .reset_variations {
     left:0;
 }
+
 
 /* Media Queries */
 @media only screen and (min-width:320px) and (max-width:480px){

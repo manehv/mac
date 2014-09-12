@@ -141,16 +141,16 @@ min-height: 30px;
 
 #header_meta .container{min-height: 30px;}
 
-#header_main{
-border-bottom-width: 1px;
-border-bottom-style: dotted;
-z-index: 1;
-background-position: fixed !important;
-border-color:#eee !important;
+#header_main {
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+    z-index: 1;
+    border-color: #56656D !important;
+    overflow-y: visible;
+    height: 110px !important;
 }
 
-
-#header.shadow{box-shadow:0px 0px 3px rgba(0, 0, 0, 0.2);}
+#header.shadow{box-shadow:0px 0px 3px rgba(0, 0, 0, 0.0);}
 
 .header_bg{
 position: absolute;
@@ -236,7 +236,7 @@ left:0;
 
 .av-main-nav ul { display: none; margin-left:0; left:0; position: absolute; top: 100%; width: 208px; z-index: 2; padding:0; box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); margin-top:-1px; }
 .av-main-nav ul li { margin:0; padding:0; width:100%; }
-.av-main-nav ul li a { border-right-style: solid; border-right-width:1px; border-left-style: solid; border-left-width:1px; }
+/*.av-main-nav ul li a { border-right-style: solid; border-right-width:1px; border-left-style: solid; border-left-width:1px; }*/
 .av-main-nav ul li:last-child > a { border-bottom-style: solid; border-bottom-width: 1px; }
 .av-main-nav li{ float:left; position:relative; z-index:20; }
 .av-main-nav li:hover{ z-index: 100 }
@@ -325,24 +325,19 @@ display:none;
 /****ESTE ES EL ELEMENTO DEL SUBMENU***/
 /****ESTE ES EL ELEMENTO DEL SUBMENU***/
 /****ESTE ES EL ELEMENTO DEL SUBMENU***/
-#top #header .mega_menu_title a{
-font-size: 10px;
-text-shadow:rgba (0,0,0,0.8) 0 0 2px;
-text-align: center;
-line-height: 0.9em;
-padding-top:11px;
+#top #header .mega_menu_title a {
+    font-size: 10px;
+    text-align: center;
+    line-height: 0.9em;
+    padding-top: 11px;
     padding-bottom: 20px !important;
-/*    padding-bottom: 15px;*/
-margin-top: 0px;
+   /* margin-top: 0px;*/
     height: 26px;
-/*margin:0;*/
-background-color: transparent!important;
-border:none;
-/*text-shadow: rgba(0,0,0,0.8) 0 0 1px;*/
-    
-/*AQUI LE DOY ANCHO AL ELEMENTO DEL SUBMENU*/
-width: 150px !important;
-    color:#ccc !important;
+   /* background-color: #fff !important;*/
+    border: medium none;
+    width: 150px !important;
+    color: #56656D !important;
+   /* border-bottom: 2px solid #000;*/
 }
 
 #top #header .mega_menu_title a:hover{
