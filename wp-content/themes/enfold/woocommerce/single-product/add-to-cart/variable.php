@@ -48,7 +48,7 @@ $custom_meta=array();
 								<!-- <td class="label"><label for="<?php //echo sanitize_title($name); ?>"></label></td> -->
 								<td class="value">
 								<h2 class="clsFinish">
-				          	<?php _e('Options for '.ucfirst(sanitize_title($name)),'woocommerce'); ?>
+				          	<?php _e('Options for '.ucfirst(sanitize_title($name)).':','woocommerce'); ?>
 			           </h2>
 								<fieldset>
 
@@ -84,7 +84,7 @@ $custom_meta=array();
 											//bigimg
 											?>
 											
-											<td><div><img class="variation_image img-responsive" src=""></div></td>
+											<td rowspan="3"><div><img class="variation_image img-responsive" src=""></div></td>
 												
 												<?php
 												$show_image=0;
@@ -107,6 +107,11 @@ $custom_meta=array();
 				<?php do_action('woocommerce_after_add_to_cart_button'); ?>
                 
 			</form>
+			<?php if( $post->post_excerpt ): ?>
+				<div class="clsExc">
+					<?php the_excerpt(); ?>
+				</div>
+			<?php endif; ?>
  			<?php the_content(); ?>
   </div>
   <div class="col-md-3">

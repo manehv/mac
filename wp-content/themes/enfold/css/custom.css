@@ -24,11 +24,7 @@
 .clsSinProd .upsells{margin-top:25px; }
 .clsContent{padding-left:0; padding-right:50px; }
 h1.clsBotTitle{color:#292325; font-size:28px; margin-top:10px; padding-bottom:10px; border-bottom:1px solid #AAAAAA; font-family:'open_sansregular'; font-weight:normal; letter-spacing:-1px; }
-h2.clsFinish{color: #292325;
-font-size: 18px;
-font-family: 'open_sanslight';
-font-weight: normal;
-margin: 20px 0 10px; }
+h2.clsFinish{color: #000000; font-size: 18px; font-family: 'open_sanslight'; font-weight: normal; margin: 20px 0 10px; }
 /*Please do not change the following line */
 .content, .sidebar{padding-bottom: 50px;  padding-top: 50px; }
 .clsContent .clsCenTitle{font-size:18px; color:#6B6869; font-weight:bold; margin-bottom:30px; }
@@ -229,6 +225,9 @@ div .clsvari form.cart table {
 }
 .clsvari fieldset div span.radio-active{
 	font-weight:bold;
+}
+.main_color .clsContent .variations_form table {
+	color:#000;
 }
 
 /* Media Queries */
