@@ -8,11 +8,18 @@
  */
 
 global $woocommerce, $product, $post;
+
+
 ?>
 <script type="text/javascript">
     var product_variations_<?php echo $post->ID; ?> = <?php echo json_encode( $available_variations )?>;
 </script>
-<?php $mymeta = get_post_meta( get_the_ID(), 'carousel' );
+<?php 
+
+$replace_string = array("."," ");
+
+
+$mymeta = get_post_meta( get_the_ID(), 'carousel' );
 echo do_shortcode($mymeta[0]);
 
 $variations = $product->get_available_variations();
@@ -68,11 +75,11 @@ $custom_meta=array();
 
 												foreach ( $terms as $term ) {
 													if ( ! in_array( $term->slug, $options ) ) continue;
-													echo '<div class="spacer"><span><input type="radio"  value="'.trim(strtoupper($term->slug)).'" ' . checked( $selected_value, $term->slug, false ) . ' id="'. esc_attr( sanitize_title($name) ) .'" name="attribute_'. sanitize_title($name).'">' . apply_filters( 'woocommerce_variation_option_name', $term->name ).'</span><div class="modelprice"></div><div class="info"></div></div>';
+													echo '<div class="spacer"><span><input type="radio"  value="'.trim(strtoupper(str_replace($replace_string,"-",$term->slug))).'" ' . checked( $selected_value, $term->slug, false ) . ' id="'. esc_attr( sanitize_title($name) ) .'" name="attribute_'. sanitize_title($name).'">' . apply_filters( 'woocommerce_variation_option_name', $term->name ).'</span><div class="modelprice"></div><div class="info"></div></div>';
 												}
 											} else {
 												foreach ( $options as $option )
-													echo '<div class="spacer"><span><input type="radio"  value="'.trim(strtoupper($option)).'" ' . checked( $selected_value, $option, false ) . ' id="'. esc_attr( sanitize_title($name) ) .'" name="attribute_'. sanitize_title($name).'">' . apply_filters( 'woocommerce_variation_option_name', $option ) . '</span><div class="modelprice"></div><div class="info"></div></div>';
+													echo '<div class="spacer"><span><input type="radio"  value="'.trim(strtoupper(str_replace($replace_string,"-",$option))).'" ' . checked( $selected_value, $option, false ) . ' id="'. esc_attr( sanitize_title($name) ) .'" name="attribute_'. sanitize_title($name).'">' . apply_filters( 'woocommerce_variation_option_name', $option ) . '</span><div class="modelprice"></div><div class="info"></div></div>';
 											}
 										}
 									?>
