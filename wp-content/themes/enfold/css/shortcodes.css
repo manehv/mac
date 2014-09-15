@@ -3158,7 +3158,7 @@ line-height: 1.1em;
 #top .avia-layerslider .ls-nav-prev, #top .avia-layerslider .ls-nav-next {
 display: block;
 text-decoration: none;
-color: #fff;
+color: #e3e3e3;
 position: absolute;
 width:60px;
 text-align: center;
@@ -3198,8 +3198,8 @@ visibility: visible;
 display: block;
 position: absolute;
 z-index: 100;
-background: #000;
-background: rgba(0,0,0,0.3);
+
+/*background: rgba(0,0,0,0.3);*/
 top:0;
 left:0;
 right:0;
