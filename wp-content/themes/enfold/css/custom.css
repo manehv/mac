@@ -218,7 +218,7 @@ div .clsvari form.cart table {
 	margin-right:5px;
 }
 .clsvari .value {
-	white-space:nowrap;
+	/*white-space:nowrap;*/
 	width:50%;
 }
 .clsvari fieldset div{
