@@ -9,7 +9,6 @@
 
 global $woocommerce, $product, $post;
 
-
 ?>
 <script type="text/javascript">
     var product_variations_<?php echo $post->ID; ?> = <?php echo json_encode( $available_variations )?>;
@@ -21,6 +20,7 @@ echo do_shortcode($mymeta[0]);
 
 $thumb_id = get_post_thumbnail_id();
 $thumb_url = wp_get_attachment_image_src($thumb_id,'thumbnail-size', true);
+
 ?>
 <?php //do_action('woocommerce_before_add_to_cart_form'); ?>
 <div class="row">
@@ -39,7 +39,7 @@ $thumb_url = wp_get_attachment_image_src($thumb_id,'thumbnail-size', true);
  			<?php the_content(); ?>
   </div>
   <div class="col-md-3">
-      	<div id="idSticky" class="clsSticky">
+    <div id="idSticky" class="clsSticky">
 				<div class="clsSidebar">
 				<h3><?php _e('Abstract','woocommerce'); ?></h3>
 				 <div class="row clshide">  
@@ -62,11 +62,10 @@ $thumb_url = wp_get_attachment_image_src($thumb_id,'thumbnail-size', true);
 						  <div><?php woocommerce_quantity_input(); ?>
  						   <button type="submit" class="single_add_to_cart_button button alt"><?php echo apply_filters('single_add_to_cart_text', __( 'Add to cart', 'woocommerce' ), $product->product_type); ?></button>
 					   </form>
-					</div>
-					</div>
+					 </div>
+				 </div>
 				</div>    			
 				<?php
-				
 				?>
 				<div class="clsSidebar">
 					<p class="clsBotDetails clsBotTitle"><?php _e('More information on how to buy your ','woocommerce').the_title(); ?></p>

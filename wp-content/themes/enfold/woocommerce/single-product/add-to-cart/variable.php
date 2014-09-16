@@ -35,6 +35,9 @@ $custom_meta=array();
   $temp['shipping']=$shipping[0];
   $temp['discription']=$dis[0];
   $temp['attributes']=get_post_meta($value['variation_id']);
+  if($price[1]=='')
+  $temp['price']=$price[0];
+  else
   $temp['price']=$price[1];
   $custom_meta[]=$temp;
   
@@ -142,8 +145,6 @@ $custom_meta=array();
 					 <div>
 							<div class="clsDetails" id="price"></div>	
 					 </div>
-			
-					
 					<div class="clsDetails hideform">
 						<form  method="post"  enctype='multipart/form-data'>
  						  <input type="hidden" id="addtocart" value="" name="add-to-cart"/>
@@ -151,9 +152,7 @@ $custom_meta=array();
 						  <div><?php woocommerce_quantity_input(); ?>
  						   <button type="submit" class="single_add_to_cart_button button alt"><?php echo apply_filters('single_add_to_cart_text', __( 'Add to cart', 'woocommerce' ), $product->product_type); ?></button>
 					   </form>
-
-							</div>
-						
+					 </div>
 					</div>
 				</div>    			
 				<?php
