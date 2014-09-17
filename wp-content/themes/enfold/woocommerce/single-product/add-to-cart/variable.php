@@ -58,7 +58,7 @@ $custom_meta=array();
 								<!-- <td class="label"><label for="<?php //echo sanitize_title($name); ?>"></label></td> -->
 								<td class="value">
 								<h2 class="clsFinish">
-				          	<?php _e('Options for '.ucfirst(sanitize_title($name)).':','woocommerce'); ?>
+				          	<?php _e('Procesador '.ucfirst(sanitize_title($name)).':','woocommerce'); ?>
 			           </h2>
 								<fieldset>
 
