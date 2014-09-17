@@ -328,3 +328,8 @@ Mobile Styles
 
 }
 
+.template-shop .product_meta
+{
+	top:0px;
+	margin-bottom:10px;
+}
