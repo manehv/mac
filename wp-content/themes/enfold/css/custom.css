@@ -112,7 +112,7 @@ body .column-top-margin{margin-top:10px; }
 .clshide,{ display:none; }
 .custom_table.shop_table table td, .custom_table.shop_table table th{background-color:inherit; }
 .custom_table.shop_table.cart{border:1px solid #ffffff; }
-.images{display:none; }
+/* .images{display:none; } */
 .textwidget{font-size:12px; }
 .clsSidebar .row{margin-bottom:10px; }
 #top .clsSidebar div .quantity input.plus, #top  .clsSidebar div .quantity input.minus{border:1px solid #e4e4e4; background:#ffffff; width:22px; height:22px; line-height:20px; border-radius:50%; color:#231F20; }
