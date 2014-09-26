@@ -102,9 +102,9 @@ global $post, $woocommerce, $product;
 							</div>
 							<div class="clsDetails">
 								<div id="prodtitle" title="<?php the_title(); ?>"><?php the_title(); ?></div>	
-								<div class="clsDetails" id="sku"></div>
-								<div class="clsDetails" id="shipping"></div>
-								<div class="clsDetails" id="price"></div>	
+								<div id="sku"></div>
+								<div id="shipping">sdfsdfs</div>
+								<div id="price"></div>	
 							</div>
 
 							<div class="single_variation_wrap">
