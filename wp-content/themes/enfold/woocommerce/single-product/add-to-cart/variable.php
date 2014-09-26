@@ -58,7 +58,7 @@ global $woocommerce, $product, $post;
 			</tbody>
 		</table>
 	<?php endif; ?>
-	<?php if ( ! empty( $available_variations ) ) : ?>
+	<?php if ( ! empty( $available_variations ) && 0 ) : //EXPLICITLY BYPASSED BY MANISH ?>
 		<?php do_action( 'woocommerce_before_add_to_cart_button' ); ?>
 
 		<div class="single_variation_wrap" style="display:none;">

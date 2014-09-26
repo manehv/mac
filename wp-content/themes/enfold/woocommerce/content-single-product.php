@@ -88,7 +88,7 @@ global $post, $woocommerce, $product;
 			<div id="idSticky" class="clsSticky">
 				<div class="clsSidebar prodSideBar">
 					<h3><?php _e('Abstract','woocommerce'); ?></h3>
-				 <hr>
+					<div class="row">  
 					<?php 
 					  $available_variations = $product->get_available_variations();
 					  $attributes = $product->get_variation_attributes();
@@ -100,6 +100,12 @@ global $post, $woocommerce, $product;
 							<div class="clsDetails clsDetailsImg images">
 								<img class="variation_image v-image" src=""/>
 							</div>
+							<div class="clsDetails">
+								<div id="prodtitle" title="<?php the_title(); ?>"><?php the_title(); ?></div>	
+								<div class="clsDetails" id="sku"></div>
+								<div class="clsDetails" id="shipping"></div>
+								<div class="clsDetails" id="price"></div>	
+							</div>
 
 							<div class="single_variation_wrap">
 								<?php do_action( 'woocommerce_before_single_variation' ); ?>
@@ -108,7 +114,7 @@ global $post, $woocommerce, $product;
 
 								<div class="variations_button">
 									<?php woocommerce_quantity_input(); ?>
-									<button type="submit" class="single_add_to_cart_button button alt"><?php echo $product->single_add_to_cart_text(); ?></button>
+									<button type="submit" class="single_add_to_cart_button button alt"><?php echo apply_filters('single_add_to_cart_text', __( 'Add to cart', 'woocommerce' ), $product->product_type); ?></button>
 								</div>
 
 								<input type="hidden" name="add-to-cart" value="<?php echo $product->id; ?>" />
@@ -125,32 +131,7 @@ global $post, $woocommerce, $product;
 							<p class="stock out-of-stock"><?php _e( 'This product is currently out of stock and unavailable.', 'woocommerce' ); ?></p>
 
 						<?php endif; ?>				 
-				 <hr>
-					
-					<div class="row">  
-						<div class="clsDetails">
-							<div id="prodtitle" title="<?php the_title(); ?>"><?php the_title(); ?></div>	
-						</div>
-					  <div>
-					   <div class="clsDetails" id="sku"></div>
-					  </div> 
-					  <div>
-					   <div class="clsDetails" id="shipping"></div>
-					  </div> 
-						<div>
-							<div class="clsDetails" id="price"></div>	
-						</div>
-						<div class="clsDetails hideform">
-							<form  method="post"  enctype='multipart/form-data'>
-								<input type="hidden" id="addtocart" value="" name="add-to-cart"/>
-								<input id="set-aqy" class="qty" type="hidden" name="quantity" value="1" />
-								<div>
-									<?php woocommerce_quantity_input(); ?>
-									<button type="submit" class="single_add_to_cart_button button alt"><?php echo apply_filters('single_add_to_cart_text', __( 'Add to cart', 'woocommerce' ), $product->product_type); ?></button>
-								</div>
-							</form>
-						</div>
-					</div>
+				 </div>
 				</div>
 				
 				<div class="clsSidebar">
