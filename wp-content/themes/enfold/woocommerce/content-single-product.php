@@ -97,7 +97,7 @@ global $post, $woocommerce, $product;
 					if ( ! empty( $available_variations ) ) : ?>
 					<form class="variations_form cart" method="post" enctype='multipart/form-data' data-product_id="<?php echo $post->ID; ?>" data-product_variations="<?php echo esc_attr( json_encode( $available_variations ) ) ?>">
 							<?php do_action( 'woocommerce_before_add_to_cart_button' ); ?>
-							<div class="clsDetails clsDetailsImg">
+							<div class="clsDetails clsDetailsImg images">
 								<img class="variation_image v-image" src=""/>
 							</div>
 
@@ -125,7 +125,6 @@ global $post, $woocommerce, $product;
 							<p class="stock out-of-stock"><?php _e( 'This product is currently out of stock and unavailable.', 'woocommerce' ); ?></p>
 
 						<?php endif; ?>				 
-				 Manish
 				 <hr>
 					
 					<div class="row">  
