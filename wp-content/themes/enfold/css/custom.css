@@ -18,7 +18,7 @@
 }
 .clsTopList li a{}
 .clsTopList li a:hover{text-decoration:none; }
-.clsTopList li img{disply:inline-block; width:80px; }
+.clsTopList li img{display:inline-block; width:80px; }
 .clsRelTitle{padding:0; color:#368CCA; font-size:12px; font-weight:bold; display:inline-block; width:140px; margin-left:10px; vertical-align:top; margin-top:25px; }
 .clsSinProd .col-lg-3{padding-right:0; }
 .clsSinProd .upsells{margin-top:25px; }
@@ -295,7 +295,7 @@ Desktop Styles
 
 @media only screen and (min-width:768px) and (max-width:1023px){
 	#top #header .mega_menu_title a{width:145px !important; }
-	.logo img{width:80% !important; }
+	/* .logo img{width:80% !important; } */
 	#socket .sub_menu_socket li{display: inline-block; float: none; padding: 0; width: 130px; border-left:medium none; }
 	div .products .product a:hover{background-color:transparent !important; }
 	.products .thumbnail_container{height:auto; }
@@ -317,23 +317,13 @@ Desktop Styles
 	.clsRelTitle{width:105px; }
 }
 
-
-/*
-Mobile Styles
-================================================== */
-/* Note: Add new css to the media query below that you want to only effect the Mobile and Tablet Portrait view */
-
-@media only screen and (max-width: 767px) {
-  /* Add your Mobile Styles here */
-
-}
-
 .template-shop .product_meta
 {
 	top:0px;
 	margin-bottom:10px;
 	display:none;
 }
+
 .template-shop .single-product-main-image .images a{
 	border-style:none;
 }
@@ -350,4 +340,23 @@ div form.cart table{text-align:left;}
 	background-color:transparent;
 	border-style:none;
 	padding:0px;
+
+
+
+/*
+Mobile Styles
+================================================== */
+/* Note: Add new css to the media query below that you want to only effect the Mobile and Tablet Portrait view */
+
+@media only screen and (max-width: 767px) {
+  /* Add your Mobile Styles here */
+
+}
+
+
+
+@media only screen and (min-width: 990px) {
+	.cart_dropdown.visible_cart {
+		top: 200px;
+	}
 }
