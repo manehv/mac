@@ -86,12 +86,49 @@ global $post, $woocommerce, $product;
 		<div class="col-md-3">
 			
 			<div id="idSticky" class="clsSticky">
-				<div class="clsSidebar">
+				<div class="clsSidebar prodSideBar">
 					<h3><?php _e('Abstract','woocommerce'); ?></h3>
-					<div class="row clshide">  
-						<div class="clsDetails clsDetailsImg">
-							<img class="variation_image v-image" src=""/>
-						</div>
+				 <hr>
+					<?php 
+					  $available_variations = $product->get_available_variations();
+					  $attributes = $product->get_variation_attributes();
+					  $selected_attributes = $product-> get_variation_default_attributes();
+					  
+					if ( ! empty( $available_variations ) ) : ?>
+					<form class="variations_form cart" method="post" enctype='multipart/form-data' data-product_id="<?php echo $post->ID; ?>" data-product_variations="<?php echo esc_attr( json_encode( $available_variations ) ) ?>">
+							<?php do_action( 'woocommerce_before_add_to_cart_button' ); ?>
+							<div class="clsDetails clsDetailsImg">
+								<img class="variation_image v-image" src=""/>
+							</div>
+
+							<div class="single_variation_wrap">
+								<?php do_action( 'woocommerce_before_single_variation' ); ?>
+
+								<div class="single_variation"></div>
+
+								<div class="variations_button">
+									<?php woocommerce_quantity_input(); ?>
+									<button type="submit" class="single_add_to_cart_button button alt"><?php echo $product->single_add_to_cart_text(); ?></button>
+								</div>
+
+								<input type="hidden" name="add-to-cart" value="<?php echo $product->id; ?>" />
+								<input type="hidden" name="product_id" value="<?php echo esc_attr( $post->ID ); ?>" />
+								<input type="hidden" name="variation_id" value="" />
+
+								<?php do_action( 'woocommerce_after_single_variation' ); ?>
+							</div>
+
+							<?php do_action( 'woocommerce_after_add_to_cart_button' ); ?>
+
+						<?php else : ?>
+
+							<p class="stock out-of-stock"><?php _e( 'This product is currently out of stock and unavailable.', 'woocommerce' ); ?></p>
+
+						<?php endif; ?>				 
+				 Manish
+				 <hr>
+					
+					<div class="row">  
 						<div class="clsDetails">
 							<div id="prodtitle" title="<?php the_title(); ?>"><?php the_title(); ?></div>	
 						</div>
