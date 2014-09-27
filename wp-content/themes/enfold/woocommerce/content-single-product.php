@@ -30,8 +30,8 @@ global $post, $woocommerce, $product;
 		echo do_shortcode($mymeta[0]);
 	?>
 	
-	<div class="row clsContent">
-		<div class="col-md-9">
+	<div class="row">
+		<div class="col-md-9 clsContent">
 			<h1 class="clsBotTitle">
 				<?php _e('Choose a ','woocommerce').the_title(); ?>
 			</h1>
@@ -138,13 +138,13 @@ global $post, $woocommerce, $product;
 									}
 							 endforeach;?>
 							<div class="clsDetails">
-								<div id="prodtitle" title="<?php the_title(); ?>"><?php the_title(); ?></div>	
-								<div id="sku"></div>
-								<div id="shipping">sdfsdfs</div>
-								<div id="price"></div>	
+								<div class="clsSubDiv" id="prodtitle" title="<?php the_title(); ?>"><?php the_title(); ?></div>	
+								<div class="clsSubDiv" id="sku"></div>
+								<div class="clsSubDiv" id="shipping">sdfsdfs</div>
+								<div class="clsSubDiv" id="price"></div>	
 							</div>
 
-							<div class="single_variation_wrap">
+							<div class="single_variation_wrap clsDetails">
 								<?php do_action( 'woocommerce_before_single_variation' ); ?>
 
 								<div class="single_variation"></div>
