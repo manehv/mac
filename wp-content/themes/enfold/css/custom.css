@@ -323,7 +323,13 @@ Desktop Styles
 	margin-bottom:10px;
 	display:none;
 }
-
+.single_variation_wrap{
+	margin:10px;
+}
+div.product p.stock
+{
+	padding:0 5px;margin:0;
+}
 .template-shop .single-product-main-image .images a{
 	border-style:none;
 }

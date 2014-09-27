@@ -100,6 +100,43 @@ global $post, $woocommerce, $product;
 							<div class="clsDetails clsDetailsImg images">
 								<img class="variation_image v-image" src=""/>
 							</div>
+							<?php
+							$loop = 0; foreach ( $attributes as $name => $options ) : $loop++; 
+									
+									if ( is_array( $options ) ) {
+											if ( empty( $_POST ) )
+													$selected_value = ( isset( $selected_attributes[ sanitize_title( $name ) ] ) ) ? $selected_attributes[ sanitize_title( $name ) ] : '';
+											else
+													$selected_value = isset( $_POST[ 'attribute_' . sanitize_title( $name ) ] ) ? $_POST[ 'attribute_' . sanitize_title( $name ) ] : '';
+			//echo   $selected_value;
+											// Get terms if this is a taxonomy - ordered
+											if ( taxonomy_exists( sanitize_title( $name ) ) ) {
+
+													$terms = get_terms( sanitize_title($name), array('menu_order' => 'ASC') );
+				
+													foreach ( $terms as $term ) {
+															if ( ! in_array( $term->slug, $options ) ) continue;
+															if(strtolower ($selected_value) == strtolower ($term->slug))
+															echo '<input type="hidden" value="' . strtolower($term->slug) . '" ' . 
+															checked( strtolower ($selected_value), strtolower ($term->slug), false ) . ' 
+															id="attribute_'. esc_attr( sanitize_title($name) ) .'_SidBar"
+															name="attribute_'. sanitize_title($name).'">' . apply_filters( 'woocommerce_variation_option_name', $term->name );
+													}
+											} else {
+													foreach ( $options as $option ){
+															if(sanitize_title( $selected_value ) == sanitize_title( $option ))
+															echo '<input type="hidden" value="' .esc_attr( sanitize_title( $option ) ) . '" 
+															 id="attribute_'. esc_attr( sanitize_title($name) ) .'_SidBar" name="attribute_'. sanitize_title($name).'">' ;
+															elseif ($selected_value == ""){
+																echo '<input type="hidden" value="" 
+																	id="attribute_'. esc_attr( sanitize_title($name) ) .'_SidBar" name="attribute_'. sanitize_title($name).'">' ;	
+																break;
+															}
+															
+													}
+											}
+									}
+							 endforeach;?>
 							<div class="clsDetails">
 								<div id="prodtitle" title="<?php the_title(); ?>"><?php the_title(); ?></div>	
 								<div id="sku"></div>
