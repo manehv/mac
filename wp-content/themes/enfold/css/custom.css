@@ -39,12 +39,13 @@ h2.clsFinish{color: #000000; font-size: 18px; font-family: 'open_sanslight'; fon
 .clsContent .active.clsModel .clsModelName{border-color:#368CCA !important; }
 .clsSidebar h3{padding:5px 14px; border-bottom:1px solid #e1e1e1; color:#292325; font-size:12px; font-family:'open_sanslight'; font-weight:bold;}
 .clsDetails, #top .clsDetails .price span.amount{color:#292325; font-size:12px; font-family:'open_sanslight'; font-weight:normal; line-height:normal; }
-.clsDetails{margin:5px 15px; font-size:12px; }
-.clsDetails img{height:150px; }
+.clsDetails .clsSubDiv{margin:5px 15px; font-size:12px; }
+#top div.product div.clsDetails.images img{height:150px; width:auto; margin:0 auto; }
 #top .clsDetails form{margin-bottom:0; }
-.clsDetails button.single_add_to_cart_button{background-color: #00a14f !important; transition:all 0.3s ease-out 0s; border-radius:2px; font-family:'open_sansregular'; padding:10px; font-size:11px; }
+.clsDetails button.single_add_to_cart_button{background-color: #00a14f !important; transition:all 0.3s ease-out 0s; border-radius:2px; font-family:'open_sansregular'; padding:10px; font-size:11px; margin-top:10px; }
 #top div div.woocommerce-message a.button.wc-forward{width:14%; padding:10px; }
 .clsDetails button.single_add_to_cart_button:hover, #top div div.woocommerce-message a.button.wc-forward:hover{background-color:#0088cc !important; border-color: #0066aa !important; transition:all 0.3s ease-out 0s; }
+.clsDetails #price .price {font-size:12px; line-height:normal; }
 .clsSidebar{border-radius: 2px; box-shadow: 0 0 2px rgba(0, 0, 0, 0.3); margin-top:15px; border:1px solid #e5e6e7; padding:1px; }
 .clsSidebar .clsBotDetails{padding:5px 15px; border-bottom:1px solid #e1e1e1; color:#292325; font-size:11px; font-family:'open_sanslight'; margin:0; }
 /*.clsSidebar:last-child{border-bottom:0 none; } */
