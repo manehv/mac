@@ -481,24 +481,7 @@ add_theme_support( 'avia_post_meta_compat');
 add_theme_support('force-post-thumbnails-in-widget');
 
 
-/*
- *  register custom functions that are not related to the framework but necessary for the theme to run
- *
-/
 
-
-//code for adding custom fields in variation box
-+	//Display Fields
-+	add_action( 'woocommerce_product_after_variable_attributes', 'variable_fields', 10, 2 );
-+	//JS to add fields for new variations
-+	add_action( 'woocommerce_product_after_variable_attributes_js', 'variable_fields_js' );
-+	//Save variation fields
-+	add_action( 'woocommerce_process_product_meta_variable', 'save_variable_fields', 10, 1 );
-+ 
-+	/**
-+	* Create new fields for variations
-+	*
-+	*/
 
 
 require_once( 'functions-enfold.php');
@@ -552,39 +535,7 @@ require_once( 'functions-enfold.php');
 	}
 
 
-/* function variable_fields_js() {
-?>
-<tr>
-  <td>
-    <?php  
-    // Textarea
-    woocommerce_wp_textarea_input(
-    array(
-	    'id' => '_textarea[ + loop + ]',
-	    'label' => __( 'Shipping Notes', 'woocommerce' ),
-	    'placeholder' => '',
-	    'description' => __( 'Enter the custom value here.', 'woocommerce' ),
-	    'value' => $variation_data['_textarea'][0],
-	    'name'=>'shipping notes',
-	    )
-	);
-    woocommerce_wp_textarea_input(
-    array(
-	    'id' => '_description[ + loop + ]',
-	    'label' => __( 'Description', 'woocommerce' ),
-	    'placeholder' => '',
-	    'description' => __( 'Enter the description here.', 'woocommerce' ),
-	    'value' => $variation_data['_description'][0],
-	    'name'=>'Description',
-	    )
-	);
-	
-    ?>
-  </td>
-</tr>
-<?php
-}
-*/ 
+
  
 /**
 * Save new fields for variations
@@ -611,123 +562,6 @@ endif;
 
 }
 
-/*
-
-function woocommerce_variable_add_to_cart() {
-
-  global $product, $post;
- 
-  $variations = $product->get_available_variations();
- 
-  ?>
-  
-  <script type="text/javascript">
-            var product_variation = <?php echo json_encode($variations) ?>;
-   </script>
- <h2 class="clsFinish">Elige un acabado:</h2>
- <div class="row clsVariation">
-   <div class="col-lg-2 col-md-2 col-sm-2 col-xs-4">
-      <ul>
-	<?php
-	  $cnt=1;
-	  $possibleColors = $possibleModels = array();
-
-	  foreach ($variations as $key => $value) 
-	  {
-     
-	    $active='';
-	    if($cnt==1)
-	    {
-	     $active='active';
-	     $cnt=0;
-	     }
-	     
-	    
-	      
-	     if(!in_array($value['attributes']['attribute_model'], $possibleModels))
-	     $possibleModels[] = $value['attributes']['attribute_model'].':'.$value['variation_id'].':'.$value['price_html'];
-	     if(!in_array($value['attributes']['attribute_color'],$possibleColors )){	
-	    ?>
-	    <li attr-value="<?php echo $value['attributes']['attribute_color'];?>" variation_id="<?php echo $value['variation_id']?>" class="variation colour_click <?php echo $active ?>"><?php echo $value['attributes']['attribute_color'];?></li>
-	    <?php
-	      $possibleColors[] = $value['attributes']['attribute_color'];
-	     }
-	  }
-	    ?>
-      </ul>
-    </div> <!-- col-lg-6 -->
-    <div class="col-lg-10 col-md-10 col-sm-10 col-xs-8">
-      <?php 
-      foreach ($variations as $key => $value) 
-      {
-      ?>
-	<div class="clshide <?php echo $value['variation_id']?>">
-	  <img class="v-image" src="<?php echo $value['image_src']?>"/> 
-	</div>
-      <?php
-      }
-      ?>
-    </div> <!-- col-lg-6 -->
- </div> <!-- row -->
- 
- <div class="row model">
- <h2 class="clsModelSel">Selecciona un modelo</h2>
-    <?php 
-      $cnt=1;
-    
-    
-      foreach ($possibleModels as $key => $value) 
-			{
-					$active='';
-					if($cnt==1)
-					{
-						$active='active';
-						$cnt=0;
-					}
-					if($value != ''){
-					  $temp=array();
-					  $temp=explode(':',$value)
-					?>
-						<div class="col-lg-4 col-md-4 col-sm-6 <?php echo $temp[1]; ?>">
-							<div attr-value="<?php echo $temp[0]; ?>" class="variation <?php echo $active ?> clsModel" variation_id="<?php echo $temp[1]; ?>" >
-								<span class="clsModelName"><?php echo $temp[0]; ?></span>
-							  <div><?php echo $temp[2];?></div>
-								<div class="clsModelDesc"><?php echo get_post_meta($temp[1], '_description', true );?></div>
-							 </div>
-						</div> <!-- col-lg-4 -->
-					<?php
-					}
-			}
-	  
-      ?>
- </div>
- <?php if($post->post_excerpt) ?>
-		<div class="clsExc"><?php the_excerpt(); ?></div>
-<?php
-}
-
-*/
-
-
-/*function Row( $atts, $content = null ) {
-   return '<div class="row clsSpec">' . do_shortcode($content) . '</div>';
-}
-add_shortcode('row', 'Row');
-
-function Meta( $atts, $content = null ) {
-   return '<div class="col-lg-4 clsMetaImg">' . do_shortcode($content) . '</div>';
-}
-add_shortcode('meta', 'Meta');
-
-function Content_Full( $atts, $content = null ) {
-   return '<div class="col-lg-8 clsDesc">' . do_shortcode($content) . '</div>';
-}
-add_shortcode('content_full_column', 'Content_Full');
-
-function Content_Half( $atts, $content = null ) {
-   return '<div class="col-lg-4 clsDesc">' . do_shortcode($content) . '</div>';
-}
-add_shortcode('content_half_column', 'Content_Half'); */
 
 /* add symbol for colombiam peso */
 add_filter('woocommerce_currency_symbol', 'change_existing_currency_symbol', 10, 2);
