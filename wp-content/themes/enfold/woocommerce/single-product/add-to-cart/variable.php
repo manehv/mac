@@ -22,7 +22,11 @@ global $woocommerce, $product, $post;
 	<?php if ( ! empty( $available_variations ) ) : ?>
 		<table class="variations" cellspacing="0" cellpadding="0">
 			<tbody>
-				<?php $loop = 0; foreach ( $attributes as $name => $options ) : $loop++; ?>
+				<?php $loop = 0; 
+				//Check how many attributes it having
+				$cnt = count($attributes);
+				// If the attribute length is last then we needs to check extra description and cost for the product
+				foreach ( $attributes as $name => $options ) : $loop++; ?>
 					<tr>
 						<!--<td class="label"><label for="<?php echo sanitize_title($name); ?>"><?php echo wc_attribute_label( $name ); ?></label></td> -->
 						<td class="value"><fieldset>
@@ -42,10 +46,27 @@ global $woocommerce, $product, $post;
 													foreach ( $terms as $term ) {
 															if ( ! in_array( $term->slug, $options ) ) continue;
 															echo '<input type="radio" value="' . strtolower($term->slug) . '" ' . checked( strtolower ($selected_value), strtolower ($term->slug), false ) . ' id="'. esc_attr( sanitize_title($name) ) .'" name="attribute_'. sanitize_title($name).'">' . apply_filters( 'woocommerce_variation_option_name', $term->name ).'<br />';
+															//Check if its last
+															if($cnt == $loop)
+															{
+																echo '<div class="rdPrice_'. strtolower($term->slug) .'"></div>';
+																echo '<div class="rdDesc_'. strtolower($term->slug) .'"></div>';
+															}
 													}
 											} else {
-													foreach ( $options as $option )
+													if($cnt == $loop){
+														echo "<input type='hidden' id='lastAttr' value='attribute_". sanitize_title($name)."'>";
+													}
+													foreach ( $options as $option ){
 															echo '<input type="radio" value="' .esc_attr( sanitize_title( $option ) ) . '" ' . checked( sanitize_title( $selected_value ), sanitize_title( $option ), false ) . ' id="'. esc_attr( sanitize_title($name) ) .'" name="attribute_'. sanitize_title($name).'">' . apply_filters( 'woocommerce_variation_option_name', $option ) . '<br />';
+															//Check if its last
+															if($cnt == $loop)
+															{
+																echo '<div class="rdPrice_'. esc_attr( sanitize_title( $option ) ) .'"></div>';
+																echo '<div class="rdDesc_'. esc_attr( sanitize_title( $option ) ) .'"></div>';
+															}
+															
+													}
 											}
 									}
 							?>
@@ -80,7 +101,7 @@ global $woocommerce, $product, $post;
 
 		<?php do_action( 'woocommerce_after_add_to_cart_button' ); ?>
 
-	<?php else : ?>
+	<?php elseif(0): ?>
 
 		<p class="stock out-of-stock"><?php _e( 'This product is currently out of stock and unavailable.', 'woocommerce' ); ?></p>
 
