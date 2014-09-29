@@ -221,6 +221,7 @@ div .clsvari form.cart table {
 .clsvari .value {
 	/*white-space:nowrap;*/
 	width:50%;
+	padding:10px;
 }
 .clsvari fieldset div{
 	font-size:14px;
@@ -235,6 +236,21 @@ div .clsvari form.cart table {
 .spacer{
 	padding:8px;
 }	
+.variations input[type=radio]{
+	width:auto;
+	margin:4px 4px 4px 4px;
+	
+}
+.variations span.bold{
+	font-weight:800 !important;
+}
+.variations .clsspacer{
+	margin-left:20px;
+}
+.variations .clsspacer_last{
+	margin-bottom:20px;
+}
+.variations .clsspacer .amount{color:#000;}
 
 /* Media Queries */
 @media only screen and (min-width:320px) and (max-width:480px){
@@ -347,8 +363,7 @@ div form.cart table{text-align:left;}
 	background-color:transparent;
 	border-style:none;
 	padding:0px;
-
-
+}
 
 /*
 Mobile Styles

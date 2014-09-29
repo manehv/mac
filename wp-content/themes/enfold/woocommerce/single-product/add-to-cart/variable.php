@@ -38,6 +38,11 @@ global $woocommerce, $product, $post;
 											else
 													$selected_value = isset( $_POST[ 'attribute_' . sanitize_title( $name ) ] ) ? $_POST[ 'attribute_' . sanitize_title( $name ) ] : '';
 			//echo   $selected_value;
+											if($cnt == $loop){
+												echo "<input type='hidden' id='lastAttr' value='attribute_". sanitize_title($name)."'>";
+												$class = 'bold';
+											}
+			
 											// Get terms if this is a taxonomy - ordered
 											if ( taxonomy_exists( sanitize_title( $name ) ) ) {
 
@@ -45,25 +50,22 @@ global $woocommerce, $product, $post;
 				
 													foreach ( $terms as $term ) {
 															if ( ! in_array( $term->slug, $options ) ) continue;
-															echo '<input type="radio" value="' . strtolower($term->slug) . '" ' . checked( strtolower ($selected_value), strtolower ($term->slug), false ) . ' id="'. esc_attr( sanitize_title($name) ) .'" name="attribute_'. sanitize_title($name).'">' . apply_filters( 'woocommerce_variation_option_name', $term->name ).'<br />';
+															echo '<input type="radio" value="' . strtolower($term->slug) . '" ' . checked( strtolower ($selected_value), strtolower ($term->slug), false ) . ' id="'. esc_attr( sanitize_title($name) ) .'" name="attribute_'. sanitize_title($name).'" ><span class="'. $class .'">' . apply_filters( 'woocommerce_variation_option_name', $term->name ).'</span><br />';
 															//Check if its last
 															if($cnt == $loop)
 															{
-																echo '<div class="rdPrice_'. strtolower($term->slug) .'"></div>';
-																echo '<div class="rdDesc_'. strtolower($term->slug) .'"></div>';
+																echo '<div class="clsspacer rdPrice_'. strtolower($term->slug) .'"></div>';
+																echo '<div class="clsspacer clsspacer_last rdDesc_'. strtolower($term->slug) .'"></div>';
 															}
 													}
 											} else {
-													if($cnt == $loop){
-														echo "<input type='hidden' id='lastAttr' value='attribute_". sanitize_title($name)."'>";
-													}
 													foreach ( $options as $option ){
-															echo '<input type="radio" value="' .esc_attr( sanitize_title( $option ) ) . '" ' . checked( sanitize_title( $selected_value ), sanitize_title( $option ), false ) . ' id="'. esc_attr( sanitize_title($name) ) .'" name="attribute_'. sanitize_title($name).'">' . apply_filters( 'woocommerce_variation_option_name', $option ) . '<br />';
+															echo '<input type="radio" value="' .esc_attr( sanitize_title( $option ) ) . '" ' . checked( sanitize_title( $selected_value ), sanitize_title( $option ), false ) . ' id="'. esc_attr( sanitize_title($name) ) .'" name="attribute_'. sanitize_title($name).'" ><span class="'. $class .'">' . apply_filters( 'woocommerce_variation_option_name', $option ) . '</span><br />';
 															//Check if its last
 															if($cnt == $loop)
 															{
-																echo '<div class="rdPrice_'. esc_attr( sanitize_title( $option ) ) .'"></div>';
-																echo '<div class="rdDesc_'. esc_attr( sanitize_title( $option ) ) .'"></div>';
+																echo '<div class="clsspacer rdPrice_'. esc_attr( sanitize_title( $option ) ) .'"></div>';
+																echo '<div class="clsspacer clsspacer_last rdDesc_'. esc_attr( sanitize_title( $option ) ) .'"></div>';
 															}
 															
 													}
