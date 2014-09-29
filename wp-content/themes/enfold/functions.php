@@ -545,6 +545,7 @@ require_once( 'functions-enfold.php');
 		if (isset( $_POST['variable_sku'] ) ) :
              $variable_sku = $_POST['variable_sku'];
              $variable_post_id = $_POST['variable_post_id'];
+            // print_r($variable_post_id);die; // Array ( [0] => 2207 [1] => 2208 [2] => 2209 [3] => 2210 [4] => 3657 [5] => 3660 ) 
 				// Textarea
 					$_textarea = $_POST['_textarea'];
 					$_description = $_POST['_description'];
@@ -717,3 +718,10 @@ function reorder_woocommerce_fields($fields) {
         return $fields2;
 }
 
+add_filter( 'woocommerce_available_variation', 'fetch_custom_product_meta', 10, 3);
+//This will be used to pull custom fields which we have added for that product
+function fetch_custom_product_meta( $data, $product, $variation){
+	$data['shipping_notes'] = get_post_meta($variation->variation_id,'_textarea',true); // This will be shipping details
+	$data['description'] = get_post_meta($variation->variation_id,'_description',true) ; // This will be model description
+	return $data ;
+}
