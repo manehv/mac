@@ -723,5 +723,10 @@ add_filter( 'woocommerce_available_variation', 'fetch_custom_product_meta', 10, 
 function fetch_custom_product_meta( $data, $product, $variation){
 	$data['shipping_notes'] = get_post_meta($variation->variation_id,'_textarea',true); // This will be shipping details
 	$data['description'] = get_post_meta($variation->variation_id,'_description',true) ; // This will be model description
+	if ($data['price_html'] == '') {
+		$data['price_html'] = '<span class="price">' . $variation->get_price_html() . '</span>';
+	}	
 	return $data ;
 }
+
+  
