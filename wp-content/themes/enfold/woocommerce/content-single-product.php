@@ -84,7 +84,7 @@ global $post, $woocommerce, $product;
 			<?php the_content(); ?>
 		</div><!-- end of col-md-9 -->
 		<?php
-		if($product->product_type == "variable"): 
+		// if($product->product_type == "variable"): 
 		?>
 		
 		<div class="col-md-3">
@@ -191,7 +191,7 @@ global $post, $woocommerce, $product;
 			
 		</div> <!-- end of col-md-3 -->
 		<?php
-		endif; // checked if its variable product
+		// endif; // checked if its variable product
 		?>
 	</div> <!-- end of row -->
 </div><!-- #product-<?php the_ID(); ?> -->
