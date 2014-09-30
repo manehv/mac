@@ -194,7 +194,7 @@ margin-bottom: 30px;
 	#top form {
 		margin-bottom: 20px; }
 	#top fieldset {
-		margin-bottom: 20px; }
+		margin-bottom: 20px;  padding: 20px; }
 	#top .input-text,
 	#top input[type="text"],
 	#top input[type="input"],
