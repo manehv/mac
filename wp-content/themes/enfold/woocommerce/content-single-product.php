@@ -75,7 +75,7 @@ global $post, $woocommerce, $product;
 				*/
 				//do_action( 'woocommerce_after_single_product_summary' );
 			?>
-			<!-- </div> -->
+			</div>
 			<?php if( $post->post_excerpt ): ?>
 				<div class="clsExc">
 					<?php the_excerpt(); ?>
