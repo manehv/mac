@@ -83,6 +83,10 @@ global $post, $woocommerce, $product;
 			<?php endif; ?>
 			<?php the_content(); ?>
 		</div><!-- end of col-md-9 -->
+		<?php
+		if($product->product_type == "variable"): 
+		?>
+		
 		<div class="col-md-3">
 			
 			<div id="idSticky" class="clsSticky">
@@ -90,85 +94,88 @@ global $post, $woocommerce, $product;
 					<h3><?php _e('Abstract','woocommerce'); ?></h3>
 					<div class="row">  
 					<?php 
-					  $available_variations = $product->get_available_variations();
-					  $attributes = $product->get_variation_attributes();
-					  $selected_attributes = $product-> get_variation_default_attributes();
-					  
-					if ( ! empty( $available_variations ) ) : ?>
-					<form class="variations_form cart" method="post" enctype='multipart/form-data' data-product_id="<?php echo $post->ID; ?>" data-product_variations="<?php echo esc_attr( json_encode( $available_variations ) ) ?>">
-							<?php do_action( 'woocommerce_before_add_to_cart_button' ); ?>
-							<div class="clsDetails clsDetailsImg images">
-								<img class="variation_image v-image" src=""/>
-							</div>
-							<?php
-							$loop = 0; foreach ( $attributes as $name => $options ) : $loop++; 
-									
-									if ( is_array( $options ) ) {
-											if ( empty( $_POST ) )
-													$selected_value = ( isset( $selected_attributes[ sanitize_title( $name ) ] ) ) ? $selected_attributes[ sanitize_title( $name ) ] : '';
-											else
-													$selected_value = isset( $_POST[ 'attribute_' . sanitize_title( $name ) ] ) ? $_POST[ 'attribute_' . sanitize_title( $name ) ] : '';
-			//echo   $selected_value;
-											// Get terms if this is a taxonomy - ordered
-											if ( taxonomy_exists( sanitize_title( $name ) ) ) {
+						//print_r($product);
+							
+							$available_variations = $product->get_available_variations();
+							$attributes = $product->get_variation_attributes();
+							$selected_attributes = $product-> get_variation_default_attributes();
+							
+						if ( ! empty( $available_variations ) ) : ?>
+							<form class="variations_form cart" method="post" enctype='multipart/form-data' data-product_id="<?php echo $post->ID; ?>" data-product_variations="<?php echo esc_attr( json_encode( $available_variations ) ) ?>">
+									<?php do_action( 'woocommerce_before_add_to_cart_button' ); ?>
+									<div class="clsDetails clsDetailsImg images">
+										<img class="variation_image v-image" src=""/>
+									</div>
+									<?php
+									$loop = 0; foreach ( $attributes as $name => $options ) : $loop++; 
+											
+											if ( is_array( $options ) ) {
+													if ( empty( $_POST ) )
+															$selected_value = ( isset( $selected_attributes[ sanitize_title( $name ) ] ) ) ? $selected_attributes[ sanitize_title( $name ) ] : '';
+													else
+															$selected_value = isset( $_POST[ 'attribute_' . sanitize_title( $name ) ] ) ? $_POST[ 'attribute_' . sanitize_title( $name ) ] : '';
+					//echo   $selected_value;
+													// Get terms if this is a taxonomy - ordered
+													if ( taxonomy_exists( sanitize_title( $name ) ) ) {
 
-													$terms = get_terms( sanitize_title($name), array('menu_order' => 'ASC') );
-				
-													foreach ( $terms as $term ) {
-															if ( ! in_array( $term->slug, $options ) ) continue;
-															if(strtolower ($selected_value) == strtolower ($term->slug))
-															echo '<input type="hidden" value="' . strtolower($term->slug) . '" ' . 
-															checked( strtolower ($selected_value), strtolower ($term->slug), false ) . ' 
-															id="attribute_'. esc_attr( sanitize_title($name) ) .'_SidBar"
-															name="attribute_'. sanitize_title($name).'">' . apply_filters( 'woocommerce_variation_option_name', $term->name );
-													}
-											} else {
-													foreach ( $options as $option ){
-															if(sanitize_title( $selected_value ) == sanitize_title( $option ))
-															echo '<input type="hidden" value="' .esc_attr( sanitize_title( $option ) ) . '" 
-															 id="attribute_'. esc_attr( sanitize_title($name) ) .'_SidBar" name="attribute_'. sanitize_title($name).'">' ;
-															elseif ($selected_value == ""){
-																echo '<input type="hidden" value="" 
-																	id="attribute_'. esc_attr( sanitize_title($name) ) .'_SidBar" name="attribute_'. sanitize_title($name).'">' ;	
-																break;
+															$terms = get_terms( sanitize_title($name), array('menu_order' => 'ASC') );
+						
+															foreach ( $terms as $term ) {
+																	if ( ! in_array( $term->slug, $options ) ) continue;
+																	if(strtolower ($selected_value) == strtolower ($term->slug))
+																	echo '<input type="hidden" value="' . strtolower($term->slug) . '" ' . 
+																	checked( strtolower ($selected_value), strtolower ($term->slug), false ) . ' 
+																	id="attribute_'. esc_attr( sanitize_title($name) ) .'_SidBar"
+																	name="attribute_'. sanitize_title($name).'">' . apply_filters( 'woocommerce_variation_option_name', $term->name );
 															}
-															
+													} else {
+															foreach ( $options as $option ){
+																	if(sanitize_title( $selected_value ) == sanitize_title( $option ))
+																	echo '<input type="hidden" value="' .esc_attr( sanitize_title( $option ) ) . '" 
+																	id="attribute_'. esc_attr( sanitize_title($name) ) .'_SidBar" name="attribute_'. sanitize_title($name).'">' ;
+																	elseif ($selected_value == ""){
+																		echo '<input type="hidden" value="" 
+																			id="attribute_'. esc_attr( sanitize_title($name) ) .'_SidBar" name="attribute_'. sanitize_title($name).'">' ;	
+																		break;
+																	}
+																	
+															}
 													}
 											}
-									}
-							 endforeach;?>
-							<div class="clsDetails">
-								<div class="clsSubDiv" id="prodtitle" title="<?php the_title(); ?>"><?php the_title(); ?></div>	
-								<div class="clsSubDiv" id="sku"></div>
-								<div class="clsSubDiv" id="shipping">sdfsdfs</div>
-								<div class="clsSubDiv" id="price"></div>	
-							</div>
+									endforeach;?>
+									<div class="clsDetails">
+										<div class="clsSubDiv" id="prodtitle" title="<?php the_title(); ?>"><?php the_title(); ?></div>	
+										<div class="clsSubDiv" id="sku"></div>
+										<div class="clsSubDiv" id="shipping"></div>
+										<div class="clsSubDiv" id="price"></div>	
+									</div>
 
-							<div class="single_variation_wrap clsDetails">
-								<?php do_action( 'woocommerce_before_single_variation' ); ?>
+									<div class="single_variation_wrap clsDetails">
+										<?php do_action( 'woocommerce_before_single_variation' ); ?>
 
-								<div class="single_variation"></div>
+										<div class="single_variation"></div>
 
-								<div class="variations_button">
-									<?php woocommerce_quantity_input(); ?>
-									<button type="submit" class="single_add_to_cart_button button alt"><?php echo apply_filters('single_add_to_cart_text', __( 'Add to cart', 'woocommerce' ), $product->product_type); ?></button>
-								</div>
+										<div class="variations_button">
+											<?php woocommerce_quantity_input(); ?>
+											<button type="submit" class="single_add_to_cart_button button alt"><?php echo apply_filters('single_add_to_cart_text', __( 'Add to cart', 'woocommerce' ), $product->product_type); ?></button>
+										</div>
 
-								<input type="hidden" name="add-to-cart" value="<?php echo $product->id; ?>" />
-								<input type="hidden" name="product_id" value="<?php echo esc_attr( $post->ID ); ?>" />
-								<input type="hidden" name="variation_id" value="" />
+										<input type="hidden" name="add-to-cart" value="<?php echo $product->id; ?>" />
+										<input type="hidden" name="product_id" value="<?php echo esc_attr( $post->ID ); ?>" />
+										<input type="hidden" name="variation_id" value="" />
 
-								<?php do_action( 'woocommerce_after_single_variation' ); ?>
-							</div>
+										<?php do_action( 'woocommerce_after_single_variation' ); ?>
+									</div>
 
-							<?php do_action( 'woocommerce_after_add_to_cart_button' ); ?>
+									<?php do_action( 'woocommerce_after_add_to_cart_button' ); ?>
 
-						<?php else : ?>
+								<?php else : ?>
 
-							<p class="stock out-of-stock"><?php _e( 'This product is currently out of stock and unavailable.', 'woocommerce' ); ?></p>
+									<p class="stock out-of-stock"><?php _e( 'This product is currently out of stock and unavailable.', 'woocommerce' ); ?></p>
 
-						<?php endif; ?>				 
-				 </div>
+								<?php endif; ?>				 
+							</form>
+					</div>
 				</div>
 				
 				<div class="clsSidebar">
@@ -183,6 +190,9 @@ global $post, $woocommerce, $product;
 			</div> <!-- clsSticky -->
 			
 		</div> <!-- end of col-md-3 -->
+		<?php
+		endif; // checked if its variable product
+		?>
 	</div> <!-- end of row -->
 </div><!-- #product-<?php the_ID(); ?> -->
 
