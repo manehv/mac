@@ -15,7 +15,7 @@ jQuery(function()
 	
 	 
 	 
-	//for showing galary
+	//for showing gallery
 	 jQuery('#showImage').click(function(){
 		 jQuery('.woocommerce-main-image').click();
 		 return false;
