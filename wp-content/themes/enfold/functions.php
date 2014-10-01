@@ -15,6 +15,11 @@ global $avia_config;
 
 
 
+add_action('admin_menu','wphidenag');
+function wphidenag() {
+	remove_action( 'admin_notices', 'update_nag', 3 );
+}
+
 wp_enqueue_script( 'lock_fixed', get_template_directory_uri() . '/js/jquery.lockfixed.js', array(), '1.0.0', true );
 wp_enqueue_script( 'custom_js', get_template_directory_uri() . '/js/custom.js', array(), '1.0.0', true );
  

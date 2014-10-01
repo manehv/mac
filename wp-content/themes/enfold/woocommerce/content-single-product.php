@@ -24,7 +24,7 @@ global $post, $woocommerce, $product;
 	 */
 	 do_action( 'woocommerce_before_single_product' );
 ?>
-<div itemscope itemtype="http://schema.org/Product" id="product-<?php the_ID(); ?>" <?php post_class(); ?> class="single-product">
+<div itemscope itemtype="http://schema.org/Product" id="product-<?php the_ID(); ?>" <?php post_class("single-product"); ?>>
 	<?php 
 		$mymeta = get_post_meta( get_the_ID(), 'carousel' );
 		echo do_shortcode($mymeta[0]);
@@ -95,8 +95,9 @@ global $post, $woocommerce, $product;
 				<?php the_content(); ?>
 			</div>
 		</div><!-- end of col-md-9 -->
+
 		<?php
-		if($product->product_type == "variable"): 
+		 if($product->product_type == "variable"): 
 		?>
 		
 		<div class="col-md-3">
