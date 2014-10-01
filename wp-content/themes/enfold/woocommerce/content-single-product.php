@@ -36,6 +36,7 @@ global $post, $woocommerce, $product;
 				<?php _e('Choose a ','woocommerce').the_title(); ?>
 			</h1>
 			<div class='row'>
+				<?php if($product->product_type == "variable"): ?>
 					<div class="entry-summary col-md-6">
 						<?php
 							/**
@@ -64,7 +65,16 @@ global $post, $woocommerce, $product;
 						*/
 						do_action( 'woocommerce_before_single_product_summary' );
 					?>
-					</div> <!-- col-md-4' -->
+					</div> <!-- col-md-4 -->
+					
+					<?php elseif($product->product_type == "simple"): ?>
+					
+					<div class="entry-summary col-md-8">
+						<?php
+								do_action( 'woocommerce_before_single_product_summary' );
+						?>
+					</div> <!-- .entry-summary -->
+					<?php endif; ?>
 			</div> <!-- row -->
 			<?php
 				/**
@@ -81,7 +91,9 @@ global $post, $woocommerce, $product;
 					<?php the_excerpt(); ?>
 				</div>
 			<?php endif; ?>
-			<?php the_content(); ?>
+			<div id="desc">
+				<?php the_content(); ?>
+			</div>
 		</div><!-- end of col-md-9 -->
 		<?php
 		if($product->product_type == "variable"): 
@@ -173,15 +185,15 @@ global $post, $woocommerce, $product;
 
 									<p class="stock out-of-stock"><?php _e( 'This product is currently out of stock and unavailable.', 'woocommerce' ); ?></p>
 
-								<?php endif; ?>				 
+								<?php endif; ?>
 							</form>
 					</div>
 				</div>
 				
 				<div class="clsSidebar">
 					<p class="clsBotDetails clsBotTitle"><?php _e('More information on how to buy your ','woocommerce').the_title(); ?></p>
-					<p class="clsBotDetails" id="scroll-top"><a href="#"><?php _e('General description','woocommerce'); ?></a></p>
-					<p class="clsBotDetails" id="des-top"><a href="#" ><?php _e('Technical specifications','woocommerce'); ?></a></p>
+					<p class="clsBotDetails"><a href="#" id="scroll-top"><?php _e('General description','woocommerce'); ?></a></p>
+					<p class="clsBotDetails"><a href="#" id="des-top"><?php _e('Technical specifications','woocommerce'); ?></a></p>
 					<p class="clsBotDetails">
 						<a href="#" Id="showImage"><?php _e('View Gallery','woocommerce'); ?></a>
 					</p>
@@ -191,7 +203,73 @@ global $post, $woocommerce, $product;
 			
 		</div> <!-- end of col-md-3 -->
 		<?php
-		endif; // checked if its variable product
+		elseif($product->product_type == "simple"):
+		$thumb_id = get_post_thumbnail_id();
+		$thumb_url = wp_get_attachment_image_src($thumb_id,'thumbnail-size', true);
+		?>
+		<div class="col-md-3">
+			<div id="idSticky" class="clsSticky">
+				<div class="clsSidebar">
+					<h3><?php _e('Abstract','woocommerce'); ?></h3>
+					<div class="row">  
+						<div class="clsDetails clsDetailsImg">
+							<img class="variation_image v-image" src="<?php echo $thumb_url[0]; ?>" />
+						</div>
+						<div class="clsDetails">
+							<div class="clsSubDiv" id="prodtitle" title="<?php the_title(); ?>"><?php the_title(); ?></div>
+							<div class="clsSubDiv" id="sku"><?php echo $product->get_sku(); ?></div>
+							<div class="clsSubDiv" id="price"><?php echo $product->get_price_html(); ?></div>
+							
+							<?php
+									// Availability
+									$availability = $product->get_availability();
+
+									if ( $availability['availability'] )
+										echo apply_filters( 'woocommerce_stock_html', '<p class="stock ' . esc_attr( $availability['class'] ) . '">' . esc_html( $availability['availability'] ) . '</p>', $availability['availability'] );
+							?>
+							<?php if ( $product->is_in_stock() ) : ?>
+								<div class="clsSubDiv">
+
+										<?php do_action( 'woocommerce_before_add_to_cart_form' ); ?>
+
+										<form class="cart" method="post" enctype='multipart/form-data'>
+											<?php do_action( 'woocommerce_before_add_to_cart_button' ); ?>
+
+											<?php
+												if ( ! $product->is_sold_individually() )
+													woocommerce_quantity_input( array(
+														'min_value' => apply_filters( 'woocommerce_quantity_input_min', 1, $product ),
+														'max_value' => apply_filters( 'woocommerce_quantity_input_max', $product->backorders_allowed() ? '' : $product->get_stock_quantity(), $product )
+													) );
+											?>
+
+											<input type="hidden" name="add-to-cart" value="<?php echo esc_attr( $product->id ); ?>" />
+
+											<button type="submit" class="single_add_to_cart_button button alt"><?php echo $product->single_add_to_cart_text(); ?></button>
+
+											<?php do_action( 'woocommerce_after_add_to_cart_button' ); ?>
+										</form>
+
+										<?php do_action( 'woocommerce_after_add_to_cart_form' ); ?>
+								</div>
+							<?php endif; ?>
+						</div> <!-- .clsDetails -->
+					</div> <!-- .row -->
+				</div> <!-- clsSidebar -->
+
+				<div class="clsSidebar">
+					<p class="clsBotDetails clsBotTitle"><?php _e('More information on how to buy your ','woocommerce').the_title(); ?></p>
+					<p class="clsBotDetails"><a href="#" id="scroll-top"><?php _e('General description','woocommerce'); ?></a></p>
+					<p class="clsBotDetails"><a href="#" id="des-top"><?php _e('Technical specifications','woocommerce'); ?></a></p>
+					<p class="clsBotDetails">
+						<a href="#" id="showImage"><?php _e('View Gallery','woocommerce'); ?></a>
+					</p>
+					<?php echo do_shortcode( "[av_sidebar widget_area='Single Product Contact']" ) ?>
+				</div> <!-- clsSidebar -->
+			</div> <!-- clsSticky -->
+		</div> <!-- col-md-3 -->
+		<?php
+		endif; // checked if it is variable product or simple product
 		?>
 	</div> <!-- end of row -->
 </div><!-- #product-<?php the_ID(); ?> -->
