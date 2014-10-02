@@ -719,6 +719,8 @@ function reorder_woocommerce_fields($fields) {
         $fields2['shipping'] = $fields['shipping'];
         $fields2['account'] = $fields['account'];
         $fields2['order'] = $fields['order'];
+	     $fields2['billing']['billing_phone']['label'] = 'Teléfono';
+	     $fields2['billing']['billing_mobile_phone']['label'] = 'Celular';
  
         return $fields2;
 }
@@ -732,15 +734,5 @@ function fetch_custom_product_meta( $data, $product, $variation){
 		$data['price_html'] = '<span class="price">' . $variation->get_price_html() . '</span>';
 	}	
 	return $data ;
-}
-
-// Hook in
-add_filter( 'woocommerce_checkout_fields' , 'custom_override_checkout_fields' );
-
-// Our hooked in function - $fields is passed via the filter!
-function custom_override_checkout_fields( $fields ) {
-     $fields['billing']['billing_phone']['label'] = 'Teléfono';
-     $fields['billing']['billing_mobile_phone']['label'] = 'Celular';
-     return $fields;
 }
   
