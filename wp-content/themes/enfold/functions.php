@@ -734,4 +734,13 @@ function fetch_custom_product_meta( $data, $product, $variation){
 	return $data ;
 }
 
+// Hook in
+add_filter( 'woocommerce_checkout_fields' , 'custom_override_checkout_fields' );
+
+// Our hooked in function - $fields is passed via the filter!
+function custom_override_checkout_fields( $fields ) {
+     $fields['billing']['billing_phone']['label'] = 'Teléfono';
+     $fields['billing']['billing_mobile_phone']['label'] = 'Celular';
+     return $fields;
+}
   
