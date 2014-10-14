@@ -214,7 +214,7 @@ function avia_add_cart_button()
 
 	if($product->product_type == 'simple' || $product->product_type == 'subscription')
 	{
-		$output .= '<a class="button show_details_button" href="'.get_permalink($product->id).'"><span '.av_icon_string("details").'></span>  '.__("Mostrar Detalles","avia_framework").'</a>';
+		$output .= '<a class="button show_details_button" href="'.get_permalink($product->id).'"><span '.av_icon_string("details").'></span>  Mostrar Detalles</a>';
 	}
 	else
 	{
