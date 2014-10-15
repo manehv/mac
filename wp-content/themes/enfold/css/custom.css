@@ -356,7 +356,7 @@ Desktop Styles
 }
 div.product p.stock
 {
-	padding:0 5px;margin:0;
+	padding:0 0px;margin:5px 0px;
 }
 .template-shop .single-product-main-image .images a{
 	border-style:none;
@@ -375,7 +375,39 @@ div form.cart table{text-align:left;}
 	border-style:none;
 	padding:0px;
 }
-
+button.single_add_to_cart_button{
+	background-color: #00a14f !important;
+}
+.woocommerce-page .button.single_add_to_cart_button{
+	padding:10px;
+}
+#top div .quantity input.plus, #top div .quantity input.minus {
+	height:auto;
+	line-height:30px;
+}
+#top div .quantity input.qty{
+		width:35px;
+		line-height:30px;
+		height:auto;
+}
+.single-product-main-image .thumbnails{
+	display:none;
+}
+.main_color tr:nth-child(2n+1), .main_color .pricing-table > li:nth-child(2n+1), .main_color .pricing-extra{
+	background-color:transparent; 
+}
+.single_variation{
+	margin:10px;
+	padding:10px;
+	background-color:#f8f8f8;
+}
+.single_variation .amount{
+	font-size:16px;
+}
+.single_variation p{
+	padding:5px;
+	margin:0px;
+}
 /*
 Mobile Styles
 ================================================== */
