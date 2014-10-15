@@ -719,6 +719,8 @@ function reorder_woocommerce_fields($fields) {
         $fields2['shipping'] = $fields['shipping'];
         $fields2['account'] = $fields['account'];
         $fields2['order'] = $fields['order'];
+	     $fields2['billing']['billing_phone']['label'] = 'Teléfono';
+	     $fields2['billing']['billing_mobile_phone']['label'] = 'Celular';
  
         return $fields2;
 }
@@ -733,5 +735,4 @@ function fetch_custom_product_meta( $data, $product, $variation){
 	}	
 	return $data ;
 }
-
   
