@@ -249,7 +249,7 @@ div .clsvari form.cart table {
 	
 }
 .variations .clsspacer_last{
-	margin-bottom:20px;
+	/*margin-bottom:20px; */
 }
 .variations .clsspacer .amount{color:#000;font-weight: 300 !important;}
 .cart_dropdown .dropdown_widget .widget_shopping_cart_content p {padding:0; margin-bottom:5px; }
