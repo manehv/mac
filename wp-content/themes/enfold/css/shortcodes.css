@@ -3168,11 +3168,12 @@ font-size: 25px;
 top:50%;
 margin:-30px 15px 0;
 background: transparent;
-color: #fff;
+color: #56656D;
 visibility: hidden;
 opacity: 0.5;
 z-index: 10000;
 left:30px;
+text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.4);
 }
 
 .avia-layerslider .ls-inner div, .avia-layerslider .ls-inner img{
