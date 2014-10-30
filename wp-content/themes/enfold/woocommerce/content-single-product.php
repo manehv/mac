@@ -104,7 +104,7 @@ global $post, $woocommerce, $product;
 			
 			<div id="idSticky" class="clsSticky">
 				<div class="clsSidebar prodSideBar">
-					<h3><?php _e('Abstract','woocommerce'); ?></h3>
+					<h3><?php _e('Abstract','avia_framework'); ?></h3>
 					<div class="row">  
 					<?php 
 						//print_r($product);
@@ -192,11 +192,11 @@ global $post, $woocommerce, $product;
 				</div>
 				
 				<div class="clsSidebar">
-					<p class="clsBotDetails clsBotTitle"><?php _e('More information on how to buy your ','woocommerce').the_title(); ?></p>
-					<p class="clsBotDetails"><a href="#" id="scroll-top"><?php _e('General description','woocommerce'); ?></a></p>
-					<p class="clsBotDetails"><a href="#" id="des-top"><?php _e('Technical specifications','woocommerce'); ?></a></p>
+					<p class="clsBotDetails clsBotTitle"><?php _e('More information on how to buy your ','avia_framework').the_title(); ?></p>
+					<p class="clsBotDetails"><a href="#" id="scroll-top"><?php _e('General description','avia_framework'); ?></a></p>
+					<p class="clsBotDetails"><a href="#" id="des-top"><?php _e('Technical specifications','avia_framework'); ?></a></p>
 					<p class="clsBotDetails">
-						<a href="#" Id="showImage"><?php _e('View Gallery','woocommerce'); ?></a>
+						<a href="#" Id="showImage"><?php _e('View Gallery','avia_framework'); ?></a>
 					</p>
 					<?php echo do_shortcode( "[av_sidebar widget_area='Single Product Contact']" ) ?>
 				</div> <!-- clsSidebar -->
@@ -211,7 +211,7 @@ global $post, $woocommerce, $product;
 		<div class="col-md-3">
 			<div id="idSticky" class="clsSticky">
 				<div class="clsSidebar">
-					<h3><?php _e('Abstract','woocommerce'); ?></h3>
+					<h3><?php _e('Abstract','avia_framework'); ?></h3>
 					<div class="row">  
 						<div class="clsDetails clsDetailsImg">
 							<img class="variation_image v-image" src="<?php echo $thumb_url[0]; ?>" />
@@ -259,11 +259,11 @@ global $post, $woocommerce, $product;
 				</div> <!-- clsSidebar -->
 
 				<div class="clsSidebar">
-					<p class="clsBotDetails clsBotTitle"><?php _e('More information on how to buy your ','woocommerce').the_title(); ?></p>
-					<p class="clsBotDetails"><a href="#" id="scroll-top"><?php _e('General description','woocommerce'); ?></a></p>
-					<p class="clsBotDetails"><a href="#" id="des-top"><?php _e('Technical specifications','woocommerce'); ?></a></p>
+					<p class="clsBotDetails clsBotTitle"><?php _e('More information on how to buy your ','avia_framework').the_title(); ?></p>
+					<p class="clsBotDetails"><a href="#" id="scroll-top"><?php _e('General description','avia_framework'); ?></a></p>
+					<p class="clsBotDetails"><a href="#" id="des-top"><?php _e('Technical specifications','avia_framework'); ?></a></p>
 					<p class="clsBotDetails">
-						<a href="#" id="showImage"><?php _e('View Gallery','woocommerce'); ?></a>
+						<a href="#" id="showImage"><?php _e('View Gallery','avia_framework'); ?></a>
 					</p>
 					<?php echo do_shortcode( "[av_sidebar widget_area='Single Product Contact']" ) ?>
 				</div> <!-- clsSidebar -->
