@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Development package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2014-10-30 08:58+0530\n"
+"PO-Revision-Date: 2014-10-30 10:01+0530\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -7337,14 +7337,7 @@ msgstr "No tienes autorización para subir archivos."
 #: /Projects/Mac/mac/wp-content/themes/enfold/woocommerce/single-product/add-to-cart/variable1.php:51
 #: /Projects/Mac/mac/wp-content/themes/enfold/woocommerce/single-product/add-to-cart/simple1.php:29
 msgid "Choose a "
-msgstr "Elija una"
-
-#: /Projects/Mac/mac/wp-content/themes/enfold/woocommerce/content-single-product.php:107
-#: /Projects/Mac/mac/wp-content/themes/enfold/woocommerce/content-single-product.php:214
-#: /Projects/Mac/mac/wp-content/themes/enfold/woocommerce/single-product/add-to-cart/variable1.php:131
-#: /Projects/Mac/mac/wp-content/themes/enfold/woocommerce/single-product/add-to-cart/simple1.php:44
-msgid "Abstract"
-msgstr "Abstracto"
+msgstr "Elija una "
 
 #: /Projects/Mac/mac/wp-content/themes/enfold/woocommerce/content-single-product.php:187
 #: /Projects/Mac/mac/wp-content/themes/enfold/woocommerce/single-product/add-to-cart/variable.php:110
@@ -7487,3 +7480,452 @@ msgstr "Total:"
 #: /Projects/Mac/mac/wp-content/themes/enfold/woocommerce/checkout/thankyou.php:60
 msgid "Payment method:"
 msgstr "Método de pago :"
+
+#: /Projects/Mac/mac/wp-content/themes/enfold/config-woocommerce/config.php:217
+msgid "Show Details"
+msgstr "Mostrar detalles"
+
+#: /Projects/Mac/mac/wp-content/themes/enfold/woocommerce/content-single-product.php:107
+#: /Projects/Mac/mac/wp-content/themes/enfold/woocommerce/content-single-product.php:214
+#: /Projects/Mac/mac/wp-content/themes/enfold/woocommerce/single-product/add-to-cart/variable1.php:131
+#: /Projects/Mac/mac/wp-content/themes/enfold/woocommerce/single-product/add-to-cart/simple1.php:44
+msgid "Abstract"
+msgstr "Abstracto"
+
+#: /Projects/Mac/mac/wp-content/themes/enfold/woocommerce/content-single-product.php:173
+#: /Projects/Mac/mac/wp-content/themes/enfold/woocommerce/single-product/add-to-cart/variable1.php:153
+#: /Projects/Mac/mac/wp-content/themes/enfold/woocommerce/single-product/add-to-cart/simple1.php:63
+msgid "Add to cart"
+msgstr "Añadir a la cesta"
+
+#: /Projects/Mac/mac/wp-content/themes/enfold/woocommerce/single-product/add-to-cart/variable1.php:104
+msgid "Clear selection"
+msgstr "Borrar selección"
+
+#: /Projects/Mac/mac/wp-content/themes/enfold/woocommerce/single-product/tabs/description.php:14
+#, fuzzy
+msgid "Product Description"
+msgstr "Descripción general"
+
+#: /Projects/Mac/mac/wp-content/themes/enfold/woocommerce/cart/cart.php:62
+msgid "Remove this item"
+msgstr "Eliminar este producto"
+
+#: /Projects/Mac/mac/wp-content/themes/enfold/woocommerce/cart/cart.php:89
+msgid "Available on backorder"
+msgstr "Disponible por pedido pendiente"
+
+#: /Projects/Mac/mac/wp-content/themes/enfold/woocommerce/checkout/form-checkout.php:20
+msgid "You must be logged in to checkout."
+msgstr "Usted debe estar conectado a la caja."
+
+#: /Projects/Mac/mac/wp-content/themes/enfold/config-woocommerce/admin-import.php:61
+#: /Projects/Mac/mac/wp-content/themes/enfold/config-woocommerce/admin-import.php:62
+msgid "Parent"
+msgstr "padre"
+
+#: /Projects/Mac/mac/wp-content/themes/enfold/config-woocommerce/admin-import.php:65
+msgid "Add New"
+msgstr "Agregar nuevo"
+
+#: /Projects/Mac/mac/wp-content/themes/enfold/config-woocommerce/admin-import.php:66
+msgid "New"
+msgstr ""
+
+#: /Projects/Mac/mac/wp-content/themes/enfold/config-woocommerce/admin-import.php:117
+#, fuzzy
+msgid "Product Category"
+msgstr "Producto"
+
+#: /Projects/Mac/mac/wp-content/themes/enfold/config-woocommerce/admin-import.php:118
+msgid "Search Product Categories"
+msgstr ""
+
+#: /Projects/Mac/mac/wp-content/themes/enfold/config-woocommerce/admin-import.php:119
+msgid "All Product Categories"
+msgstr ""
+
+#: /Projects/Mac/mac/wp-content/themes/enfold/config-woocommerce/admin-import.php:120
+msgid "Parent Product Category"
+msgstr ""
+
+#: /Projects/Mac/mac/wp-content/themes/enfold/config-woocommerce/admin-import.php:121
+msgid "Parent Product Category:"
+msgstr ""
+
+#: /Projects/Mac/mac/wp-content/themes/enfold/config-woocommerce/admin-import.php:122
+msgid "Edit Product Category"
+msgstr ""
+
+#: /Projects/Mac/mac/wp-content/themes/enfold/config-woocommerce/admin-import.php:123
+msgid "Update Product Category"
+msgstr ""
+
+#: /Projects/Mac/mac/wp-content/themes/enfold/config-woocommerce/admin-import.php:124
+msgid "Add New Product Category"
+msgstr ""
+
+#: /Projects/Mac/mac/wp-content/themes/enfold/config-woocommerce/admin-import.php:125
+msgid "New Product Category Name"
+msgstr ""
+
+#: /Projects/Mac/mac/wp-content/themes/enfold/config-woocommerce/admin-import.php:140
+#, fuzzy
+msgid "Product Tag"
+msgstr "Producto"
+
+#: /Projects/Mac/mac/wp-content/themes/enfold/config-woocommerce/admin-import.php:141
+#, fuzzy
+msgid "Search Product Tags"
+msgstr "Productos Relacionados"
+
+#: /Projects/Mac/mac/wp-content/themes/enfold/config-woocommerce/admin-import.php:142
+#, fuzzy
+msgid "All Product Tags"
+msgstr "Productos Relacionados"
+
+#: /Projects/Mac/mac/wp-content/themes/enfold/config-woocommerce/admin-import.php:143
+msgid "Parent Product Tag"
+msgstr ""
+
+#: /Projects/Mac/mac/wp-content/themes/enfold/config-woocommerce/admin-import.php:144
+msgid "Parent Product Tag:"
+msgstr ""
+
+#: /Projects/Mac/mac/wp-content/themes/enfold/config-woocommerce/admin-import.php:145
+#, fuzzy
+msgid "Edit Product Tag"
+msgstr "Producto"
+
+#: /Projects/Mac/mac/wp-content/themes/enfold/config-woocommerce/admin-import.php:146
+#, fuzzy
+msgid "Update Product Tag"
+msgstr "Productos Relacionados"
+
+#: /Projects/Mac/mac/wp-content/themes/enfold/config-woocommerce/admin-import.php:147
+msgid "Add New Product Tag"
+msgstr ""
+
+#: /Projects/Mac/mac/wp-content/themes/enfold/config-woocommerce/admin-import.php:148
+msgid "New Product Tag Name"
+msgstr ""
+
+#: /Projects/Mac/mac/wp-content/themes/enfold/config-woocommerce/admin-import.php:160
+#, fuzzy
+msgid "Products"
+msgstr "Producto"
+
+#: /Projects/Mac/mac/wp-content/themes/enfold/config-woocommerce/admin-import.php:162
+#, fuzzy
+msgid "Add Product"
+msgstr "Producto"
+
+#: /Projects/Mac/mac/wp-content/themes/enfold/config-woocommerce/admin-import.php:163
+#, fuzzy
+msgid "Add New Product"
+msgstr "Producto"
+
+#: /Projects/Mac/mac/wp-content/themes/enfold/config-woocommerce/admin-import.php:165
+#, fuzzy
+msgid "Edit Product"
+msgstr "Producto"
+
+#: /Projects/Mac/mac/wp-content/themes/enfold/config-woocommerce/admin-import.php:166
+#, fuzzy
+msgid "New Product"
+msgstr "Producto"
+
+#: /Projects/Mac/mac/wp-content/themes/enfold/config-woocommerce/admin-import.php:167
+#: /Projects/Mac/mac/wp-content/themes/enfold/config-woocommerce/admin-import.php:168
+#, fuzzy
+msgid "View Product"
+msgstr "Producto"
+
+#: /Projects/Mac/mac/wp-content/themes/enfold/config-woocommerce/admin-import.php:169
+#, fuzzy
+msgid "Search Products"
+msgstr "Productos Relacionados"
+
+#: /Projects/Mac/mac/wp-content/themes/enfold/config-woocommerce/admin-import.php:170
+msgid "No Products found"
+msgstr "No se encontraron productos"
+
+#: /Projects/Mac/mac/wp-content/themes/enfold/config-woocommerce/admin-import.php:171
+msgid "No Products found in trash"
+msgstr ""
+
+#: /Projects/Mac/mac/wp-content/themes/enfold/config-woocommerce/admin-import.php:172
+#, fuzzy
+msgid "Parent Product"
+msgstr "Productos Relacionados"
+
+#: /Projects/Mac/mac/wp-content/themes/enfold/config-woocommerce/admin-import.php:174
+msgid "This is where you can add new products to your store."
+msgstr ""
+
+#: /Projects/Mac/mac/wp-content/themes/enfold/config-woocommerce/admin-import.php:192
+msgid "Variations"
+msgstr ""
+
+#: /Projects/Mac/mac/wp-content/themes/enfold/config-woocommerce/admin-import.php:193
+msgid "Variation"
+msgstr ""
+
+#: /Projects/Mac/mac/wp-content/themes/enfold/config-woocommerce/admin-import.php:194
+msgid "Add Variation"
+msgstr ""
+
+#: /Projects/Mac/mac/wp-content/themes/enfold/config-woocommerce/admin-import.php:195
+msgid "Add New Variation"
+msgstr ""
+
+#: /Projects/Mac/mac/wp-content/themes/enfold/config-woocommerce/admin-import.php:197
+msgid "Edit Variation"
+msgstr ""
+
+#: /Projects/Mac/mac/wp-content/themes/enfold/config-woocommerce/admin-import.php:198
+msgid "New Variation"
+msgstr ""
+
+#: /Projects/Mac/mac/wp-content/themes/enfold/config-woocommerce/admin-import.php:199
+#: /Projects/Mac/mac/wp-content/themes/enfold/config-woocommerce/admin-import.php:200
+msgid "View Variation"
+msgstr ""
+
+#: /Projects/Mac/mac/wp-content/themes/enfold/config-woocommerce/admin-import.php:201
+msgid "Search Variations"
+msgstr ""
+
+#: /Projects/Mac/mac/wp-content/themes/enfold/config-woocommerce/admin-import.php:202
+msgid "No Variations found"
+msgstr ""
+
+#: /Projects/Mac/mac/wp-content/themes/enfold/config-woocommerce/admin-import.php:203
+msgid "No Variations found in trash"
+msgstr ""
+
+#: /Projects/Mac/mac/wp-content/themes/enfold/config-woocommerce/admin-import.php:204
+msgid "Parent Variation"
+msgstr ""
+
+#: /Projects/Mac/mac/wp-content/themes/enfold/config-woocommerce/admin-import.php:233
+#, fuzzy
+msgid "Orders"
+msgstr "Orden:"
+
+#: /Projects/Mac/mac/wp-content/themes/enfold/config-woocommerce/admin-import.php:234
+#, fuzzy
+msgid "Order"
+msgstr "Orden:"
+
+#: /Projects/Mac/mac/wp-content/themes/enfold/config-woocommerce/admin-import.php:235
+#, fuzzy
+msgid "Add Order"
+msgstr "Orden:"
+
+#: /Projects/Mac/mac/wp-content/themes/enfold/config-woocommerce/admin-import.php:236
+msgid "Add New Order"
+msgstr ""
+
+#: /Projects/Mac/mac/wp-content/themes/enfold/config-woocommerce/admin-import.php:238
+#, fuzzy
+msgid "Edit Order"
+msgstr "Orden:"
+
+#: /Projects/Mac/mac/wp-content/themes/enfold/config-woocommerce/admin-import.php:239
+#, fuzzy
+msgid "New Order"
+msgstr "Orden:"
+
+#: /Projects/Mac/mac/wp-content/themes/enfold/config-woocommerce/admin-import.php:240
+#: /Projects/Mac/mac/wp-content/themes/enfold/config-woocommerce/admin-import.php:241
+#: /Projects/Mac/mac/wp-content/themes/enfold/config-woocommerce/config.php:297
+#, fuzzy
+msgid "View Order"
+msgstr "Ver galería"
+
+#: /Projects/Mac/mac/wp-content/themes/enfold/config-woocommerce/admin-import.php:242
+msgid "Search Orders"
+msgstr ""
+
+#: /Projects/Mac/mac/wp-content/themes/enfold/config-woocommerce/admin-import.php:243
+msgid "No Orders found"
+msgstr "No hay pedidos encontrados"
+
+#: /Projects/Mac/mac/wp-content/themes/enfold/config-woocommerce/admin-import.php:244
+msgid "No Orders found in trash"
+msgstr ""
+
+#: /Projects/Mac/mac/wp-content/themes/enfold/config-woocommerce/admin-import.php:245
+msgid "Parent Orders"
+msgstr ""
+
+#: /Projects/Mac/mac/wp-content/themes/enfold/config-woocommerce/admin-import.php:247
+msgid "This is where store orders are stored."
+msgstr ""
+
+#: /Projects/Mac/mac/wp-content/themes/enfold/config-woocommerce/admin-import.php:269
+msgid "Order statuses"
+msgstr ""
+
+#: /Projects/Mac/mac/wp-content/themes/enfold/config-woocommerce/admin-import.php:270
+msgid "Order status"
+msgstr ""
+
+#: /Projects/Mac/mac/wp-content/themes/enfold/config-woocommerce/admin-import.php:271
+msgid "Search Order statuses"
+msgstr ""
+
+#: /Projects/Mac/mac/wp-content/themes/enfold/config-woocommerce/admin-import.php:272
+msgid "All  Order statuses"
+msgstr ""
+
+#: /Projects/Mac/mac/wp-content/themes/enfold/config-woocommerce/admin-import.php:273
+msgid "Parent Order status"
+msgstr ""
+
+#: /Projects/Mac/mac/wp-content/themes/enfold/config-woocommerce/admin-import.php:274
+msgid "Parent Order status:"
+msgstr ""
+
+#: /Projects/Mac/mac/wp-content/themes/enfold/config-woocommerce/admin-import.php:275
+msgid "Edit Order status"
+msgstr ""
+
+#: /Projects/Mac/mac/wp-content/themes/enfold/config-woocommerce/admin-import.php:276
+#, fuzzy
+msgid "Update Order status"
+msgstr "Actualizar Cesta"
+
+#: /Projects/Mac/mac/wp-content/themes/enfold/config-woocommerce/admin-import.php:277
+msgid "Add New Order status"
+msgstr ""
+
+#: /Projects/Mac/mac/wp-content/themes/enfold/config-woocommerce/admin-import.php:278
+msgid "New Order status Name"
+msgstr ""
+
+#: /Projects/Mac/mac/wp-content/themes/enfold/config-woocommerce/admin-import.php:290
+#, fuzzy
+msgid "Coupons"
+msgstr "Cupón"
+
+#: /Projects/Mac/mac/wp-content/themes/enfold/config-woocommerce/admin-import.php:292
+#, fuzzy
+msgid "Add Coupon"
+msgstr "Cupón"
+
+#: /Projects/Mac/mac/wp-content/themes/enfold/config-woocommerce/admin-import.php:293
+#, fuzzy
+msgid "Add New Coupon"
+msgstr "Aplicar Cupón"
+
+#: /Projects/Mac/mac/wp-content/themes/enfold/config-woocommerce/admin-import.php:295
+#, fuzzy
+msgid "Edit Coupon"
+msgstr "Cupón"
+
+#: /Projects/Mac/mac/wp-content/themes/enfold/config-woocommerce/admin-import.php:296
+#, fuzzy
+msgid "New Coupon"
+msgstr "Cupón"
+
+#: /Projects/Mac/mac/wp-content/themes/enfold/config-woocommerce/admin-import.php:297
+#, fuzzy
+msgid "View Coupons"
+msgstr "Cupón"
+
+#: /Projects/Mac/mac/wp-content/themes/enfold/config-woocommerce/admin-import.php:298
+#, fuzzy
+msgid "View Coupon"
+msgstr "Cupón"
+
+#: /Projects/Mac/mac/wp-content/themes/enfold/config-woocommerce/admin-import.php:299
+#, fuzzy
+msgid "Search Coupons"
+msgstr "Cupón"
+
+#: /Projects/Mac/mac/wp-content/themes/enfold/config-woocommerce/admin-import.php:300
+#, fuzzy
+msgid "No Coupons found"
+msgstr "Código de descuento"
+
+#: /Projects/Mac/mac/wp-content/themes/enfold/config-woocommerce/admin-import.php:301
+msgid "No Coupons found in trash"
+msgstr ""
+
+#: /Projects/Mac/mac/wp-content/themes/enfold/config-woocommerce/admin-import.php:302
+#, fuzzy
+msgid "Parent Coupon"
+msgstr "Cupón"
+
+#: /Projects/Mac/mac/wp-content/themes/enfold/config-woocommerce/admin-import.php:304
+msgid ""
+"This is where you can add new coupons that customers can use in your store."
+msgstr ""
+
+#: /Projects/Mac/mac/wp-content/themes/enfold/config-woocommerce/admin-options.php:150
+#, fuzzy
+msgid "Product Hover"
+msgstr "Producto"
+
+#: /Projects/Mac/mac/wp-content/themes/enfold/config-woocommerce/config.php:212
+msgid "Select options"
+msgstr "Seleccione opciones"
+
+#: /Projects/Mac/mac/wp-content/themes/enfold/config-woocommerce/config.php:295
+msgid "Change Password"
+msgstr ""
+
+#: /Projects/Mac/mac/wp-content/themes/enfold/config-woocommerce/config.php:296
+msgid "Edit Address"
+msgstr "Editar Dirección"
+
+#: /Projects/Mac/mac/wp-content/themes/enfold/config-woocommerce/config.php:439
+msgid "Search results for:"
+msgstr "Resultados de la búsqueda para:"
+
+#: /Projects/Mac/mac/wp-content/themes/enfold/config-woocommerce/config.php:488
+msgid "Tag"
+msgstr ""
+
+#: /Projects/Mac/mac/wp-content/themes/enfold/config-woocommerce/config.php:540
+msgid "Shop"
+msgstr "Tienda"
+
+#: /Projects/Mac/mac/wp-content/themes/enfold/config-woocommerce/config.php:787
+msgid "was added to the cart"
+msgstr "esta en el carrito"
+
+#: /Projects/Mac/mac/wp-content/themes/enfold/config-woocommerce/config.php:986
+msgid "Default Order"
+msgstr "Orden por defecto"
+
+#: /Projects/Mac/mac/wp-content/themes/enfold/config-woocommerce/config.php:989
+#, fuzzy
+msgid "Date"
+msgstr "Fecha:"
+
+#: /Projects/Mac/mac/wp-content/themes/enfold/config-woocommerce/config.php:990
+msgid "Popularity"
+msgstr "Popularidad"
+
+#: /Projects/Mac/mac/wp-content/themes/enfold/config-woocommerce/config.php:992
+msgid "Click to order products ascending"
+msgstr "Haga clic para pedir productos ascendente"
+
+#: /Projects/Mac/mac/wp-content/themes/enfold/config-woocommerce/config.php:993
+msgid "Click to order products descending"
+msgstr "Haga clic para pedir productos descendente"
+
+#: /Projects/Mac/mac/wp-content/themes/enfold/config-woocommerce/config.php:995
+msgid "Products per page"
+msgstr "Productos por página"
+
+#: /Projects/Mac/mac/wp-content/themes/enfold/config-woocommerce/config.php:1017
+msgid "Sort by"
+msgstr "Ordenar por"
+
+#: /Projects/Mac/mac/wp-content/themes/enfold/config-woocommerce/config.php:1036
+msgid "Display"
+msgstr "visualización"
