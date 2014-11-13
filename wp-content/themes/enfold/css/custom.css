@@ -22,7 +22,7 @@
 .clsRelTitle{padding:0; color:#368CCA; font-size:12px; font-weight:bold; display:inline-block; width:140px; margin-left:10px; vertical-align:top; margin-top:25px; }
 .clsSinProd .col-lg-3{padding-right:0; }
 .clsSinProd .upsells{margin-top:45px; }
-.clsContent{padding-left:0; padding-right:50px; }
+.clsContent{padding-left:0; padding-right:50px; min-height:650px;}
 h1.clsBotTitle{color:#292325; font-size:28px; margin-top:10px; padding-bottom:10px; border-bottom:1px solid #AAAAAA; font-family:'open_sansregular'; font-weight:normal; letter-spacing:-1px; }
 h2.clsFinish{color: #000000; font-size: 18px; font-family: 'open_sanslight'; font-weight: normal; margin: 20px 0 10px;text-transform:capitalize }
 /*Please do not change the following line */
