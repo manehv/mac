@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Development package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2014-12-30 11:43-0500\n"
+"PO-Revision-Date: 2014-12-30 11:51-0500\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -6888,7 +6888,7 @@ msgstr "Este producto se encuentra actualmente fuera de stock y no disponible ."
 #: /Projects/Mac/mac/wp-content/themes/enfold/woocommerce/single-product/add-to-cart/variable1.php:162
 #: /Projects/Mac/mac/wp-content/themes/enfold/woocommerce/single-product/add-to-cart/simple1.php:71
 msgid "More information on how to buy your "
-msgstr "Más información acerca de cómo comprar su"
+msgstr "Más información acerca de cómo comprar su "
 
 #: /Projects/Mac/mac/wp-content/themes/enfold/woocommerce/content-single-product.php:196
 #: /Projects/Mac/mac/wp-content/themes/enfold/woocommerce/content-single-product.php:263
