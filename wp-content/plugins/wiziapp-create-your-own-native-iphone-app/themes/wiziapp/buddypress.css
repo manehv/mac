@@ -1,0 +1,207 @@
+.wiziapp-buddypress-content-page .wiziapp-buddypress-page-title {
+	font-size: 20px;
+	font-weight: bold;
+	margin-bottom: 1em;
+	clear: both;
+	text-align: center;
+}
+
+.wiziapp-buddypress-content-page .wiziapp-buddypress-page-content {
+	font-size: 16px;
+	margin-top: 1em;
+}
+
+.wiziapp-buddypress-content-page #buddypress div.dir-search {
+	float: none;
+	margin-top: 0;
+	text-align: inherit;
+}
+
+.wiziapp-buddypress-content-page #buddypress .standard-form input, .wiziapp-buddypress-content-page #buddypress .standard-form#signup_form input, .wiziapp-buddypress-content-page #buddypress .standard-form textarea, .wiziapp-buddypress-content-page #buddypress div.dir-search input {
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	font-size: 16px;
+	background: none;
+	border: none;
+}
+
+.wiziapp-buddypress-page-content form div.ui-input-text {
+	padding: 0.4em;
+	margin: 0;
+	border: 1px solid #aaa;
+	-moz-border-radius: .6em;
+	-webkit-border-radius: .6em;
+	border-radius: .6em;
+	-moz-box-shadow: inset 0px 1px 4px rgba(0,0,0,.2);
+	-webkit-box-shadow: inset 0px 1px 4px rgba(0,0,0,.2);
+	box-shadow: inset 0px 1px 4px rgba(0,0,0,.2);
+	cursor: text;
+}
+
+.wiziapp-buddypress-page-content .ui-btn {
+	font-weight: bold;
+	color: #fff;
+	border: 1px solid #ddd;
+	background: #000;
+	background-image: -webkit-gradient(linear, left top, left bottom, from( #444), to( #222 ));
+	background-image: -webkit-linear-gradient( #444, #222);
+	background-image:    -moz-linear-gradient( #444, #222);
+	background-image:     -ms-linear-gradient( #444, #222);
+	background-image:      -o-linear-gradient( #444, #222);
+	background-image:         linear-gradient( #444, #222);
+	font-weight: bold;
+	-moz-box-shadow: 0px 1px 4px rgba(0,0,0,.3);
+	-webkit-box-shadow: 0px 1px 4px rgba(0,0,0,.3);
+	box-shadow: 0px 1px 4px rgba(0,0,0,.3);
+	-moz-border-radius: 1em;
+	-webkit-border-radius: 1em;
+	border-radius: 1em;
+}
+
+.wiziapp-buddypress-page-content #buddypress div.item-list-tabs ul li {
+	float: none;
+	margin: 1em 0;
+}
+
+.wiziapp-buddypress-page-content #buddypress div.item-list-tabs ul li.last select, .wiziapp-buddypress-page-content #buddypress form#whats-new-form #whats-new-options select {
+	max-width: none;
+	margin: 0;
+}
+
+.wiziapp-buddypress-page-content #buddypress .standard-form #basic-details-section, #buddypress .standard-form #blog-details-section, #buddypress .standard-form #profile-details-section {
+	float: none;
+	width: auto;
+}
+
+.wiziapp-buddypress-page-content #buddypress .standard-form#signup_form div.submit, .wiziapp-buddypress-page-content #buddypress form#whats-new-form #whats-new-submit {
+	float: none;
+}
+
+.wiziapp-buddypress-page-content #buddypress form#whats-new-form #whats-new-content {
+	clear: both;
+	margin: 0;
+	padding: 0;
+}
+
+.wiziapp-buddypress-page-content #buddypress form#whats-new-form textarea {
+	height: 50px !important;
+	font-size: 16px;
+	padding: .4em;
+}
+
+.wiziapp-buddypress-page-content #buddypress #whats-new-options {
+	height: auto !important;
+	overflow: hidden;
+}
+
+.wiziapp-buddypress-page-content #buddypress div.activity-meta a {
+	display: block;
+	margin: 1em 0;
+}
+
+.wiziapp-buddypress-page-content td .ui-radio input {
+	position: static;
+}
+
+.wiziapp-buddypress-page-content #buddypress div.item-title .activity-read-more {
+	font-size: 16px;
+	margin: 0.4em 0;
+	display: block;
+}
+
+.wiziapp-buddypress-page-content #buddypress div.item-title .activity-read-more a {
+	background: #fff;
+	border: 1px solid #ccc;
+	color: #777;
+	font-size: .8rem;
+	cursor: pointer;
+	outline: none;
+	padding: 4px 10px;
+	text-align: center;
+	text-decoration: none;
+}
+
+.wiziapp-buddypress-page-content #buddypress div#item-header div.generic-button {
+	float: none;
+	margin: 0.4em 0;
+}
+
+.wiziapp-buddypress-page-content #buddypress div#item-header div.generic-button a {
+	display: block;
+}
+
+.wiziapp-buddypress-page-content #buddypress ul.item-list li div.item-title, .wiziapp-buddypress-page-content #buddypress ul.item-list li h4 {
+	width: auto;
+}
+
+.wiziapp-buddypress-content-page #buddypress .standard-form textarea {
+	border: 1px solid #AAAAAA;
+	color: #333333;
+	text-shadow: 0 1px 0 #FFFFFF;
+	-moz-box-shadow: inset 0px 1px 4px rgba(0,0,0,.2);
+	-webkit-box-shadow: inset 0px 1px 4px rgba(0,0,0,.2);
+	box-shadow: inset 0px 1px 4px rgba(0,0,0,.2);
+	-moz-border-radius: .6em;
+	-webkit-border-radius: .6em;
+	border-radius: .6em;
+	padding: .4em;
+}
+
+.wiziapp-buddypress-content-page #buddypress .standard-form div.radio label.ui-radio-on {
+	color: #fff;
+	border: 1px solid #155678;
+	background: #4596CE;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#85BAE4), to(#5393C5));
+	background-image: -webkit-linear-gradient(#85BAE4, #5393C5);
+	background-image: -moz-linear-gradient(#85BAE4, #5393C5);
+	background-image: -ms-linear-gradient(#85BAE4, #5393C5);
+	background-image: -o-linear-gradient(#85BAE4, #5393C5);
+	background-image: linear-gradient(#85BAE4, #5393C5);
+	text-shadow: 0 -1px 1px #145072;
+}
+
+.wiziapp-buddypress-content-page #buddypress form.standard-form .left-menu, .wiziapp-buddypress-content-page #buddypress div#item-header div#item-actions, .wiziapp-buddypress-content-page #buddypress div#item-header ul li, body.activity-permalink .wiziapp-buddypress-content-page #buddypress .activity-list .activity-avatar, body.activity-permalink .wiziapp-buddypress-content-page #buddypress ul.item-list li img.avatar {
+	float: none;
+	width: auto;
+	text-align: inherit;
+}
+
+.wiziapp-buddypress-content-page #buddypress form.standard-form .main-column, body.activity-permalink .wiziapp-buddypress-content-page #buddypress .activity-list li .activity-content, body.activity-permalink .wiziapp-buddypress-content-page #buddypress .activity-list div.activity-comments {
+	margin: 0;
+}
+
+.wiziapp-buddypress-content-page #buddypress form#whats-new-form p.activity-greeting {
+	line-height: inherit;
+}
+
+.wiziapp-buddypress-content-page #buddypress ul.item-list li div.action {
+	position: static;
+}
+
+.wiziapp-buddypress-content-page #buddypress #message-threads .thread-options a {
+	display: block;
+}
+
+.wiziapp-buddypress-content-page #buddypress #message-threads .ui-checkbox input {
+	position: static;
+	width: 1em;
+	height: 1em;
+	margin: 1.5em;
+}
+
+.wiziapp-buddypress-content-page #buddypress #message-threads .message-single {
+	border-bottom: 1px solid #000;
+	margin-bottom: .4em;
+}
+
+.wiziapp-buddypress-content-page #buddypress .unread span.unread-count {
+	background: #dd0000;
+	color: #fff;
+	font-weight: bold;
+	padding: 2px 8px;
+}
+
+.wiziapp-buddypress-content-page #buddypress .unread .thread-count {
+	margin-bottom: .4em;
+}

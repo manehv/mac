@@ -1,0 +1,544 @@
+msgid ""
+msgstr ""
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: includes/purchase_hook.php:51:22
+msgid "Billing"
+msgstr ""
+
+#: includes/purchase_hook.php:78:35
+msgid "Billing error"
+msgstr ""
+
+#: includes/purchase_hook.php:79:48
+msgid "An error occurred during the billing process. Please reload the page and try again"
+msgstr ""
+
+#: includes/settings.php:450:42
+msgid "Wiziapp Default Menu"
+msgstr ""
+
+#: modules/admin.php:43:27
+#: modules/admin.php:43:60
+msgid "Wiziapp"
+msgstr ""
+
+#: modules/admin.php:180:23
+msgid "Settings"
+msgstr ""
+
+#: modules/admin.php:184:23
+msgid "Themes"
+msgstr ""
+
+#: modules/admin.php:188:23
+msgid "Plugins"
+msgstr ""
+
+#: modules/admin.php:218:82
+msgid "Upgrade"
+msgstr ""
+
+#: modules/admin.php:221:30
+msgid "Welcome to the new WiziApp plugin version, which includes a major upgrade with new features and mobile themes directory to choose from. You can always customize your App’s settings and your mobile theme from the WiziApp plugin control panel."
+msgstr ""
+
+#: modules/admin.php:222:30
+msgid "<strong>Users that have already purchased a premium license in the past</strong>, please contact <a href=\"mailto:support@wiziapp.com\">support@wiziapp.com</a> in order to activate the Android App and the new “Pro” theme, free of charge."
+msgstr ""
+
+#: modules/admin.php:223:30
+msgid "Users that have already purchased a native iPhone App, please download and activate the \"Wiziapp iOS\" plugin in order to keep your iPhone App activated."
+msgstr ""
+
+#: modules/admin.php:224:30
+msgid "Please don’t hesitate to contact us for any further information."
+msgstr ""
+
+#: modules/admin.php:226:82
+#: modules/theme_purchase.php:84:105
+msgid "Done"
+msgstr ""
+
+#: modules/admin.php:281:28
+msgid "General Settings"
+msgstr ""
+
+#: modules/admin.php:286:36
+msgid "Google Analytics"
+msgstr ""
+
+#: modules/admin.php:287:42
+msgid " Enter the full code: &#34;UA-..&#34;"
+msgstr ""
+
+#: modules/admin.php:291:46
+msgid "Google Analytics ID"
+msgstr ""
+
+#: modules/admin.php:298:28
+msgid "HTML5 WebApp Settings"
+msgstr ""
+
+#: modules/admin.php:303:36
+msgid "Activate WebApp"
+msgstr ""
+
+#: modules/admin.php:304:42
+msgid "Activate the HTML5 WebApp for users that access your website from their smartphone&#39;s browsers"
+msgstr ""
+
+#: modules/admin.php:310:36
+msgid "Activate WebApp for Tablets"
+msgstr ""
+
+#: modules/admin.php:311:42
+msgid "Activate the HTML5 WebApp for users that access your website from their tablet&#39;s browsers"
+msgstr ""
+
+#: modules/admin.php:317:36
+#: modules/admin.php:397:36
+msgid "Theme"
+msgstr ""
+
+#: modules/admin.php:322:40
+#: modules/admin.php:402:40
+msgid "Customize theme"
+msgstr ""
+
+#: modules/admin.php:328:36
+msgid "Home Screen shortcut icon"
+msgstr ""
+
+#: modules/admin.php:329:42
+#: modules/admin.php:409:42
+msgid "Please upload your App icon, 1024*1024 PNG file, the icon is a graphic that represents your application on the device&#39;s home screen"
+msgstr ""
+
+#: modules/admin.php:335:36
+msgid "Home Screen icon title"
+msgstr ""
+
+#: modules/admin.php:336:42
+#: modules/admin.php:416:42
+msgid "A title that will display below your icon. We recommend to use up to 10 characters"
+msgstr ""
+
+#: modules/admin.php:342:36
+#: modules/admin.php:429:36
+msgid "Navigation"
+msgstr ""
+
+#: modules/admin.php:343:42
+msgid "Choose your Web App Menu. You can use the default menu, or customize it"
+msgstr ""
+
+#: modules/admin.php:344:52
+#: modules/admin.php:431:52
+msgid "here"
+msgstr ""
+
+#: modules/admin.php:350:40
+#: modules/admin.php:437:40
+msgid "Edit menu"
+msgstr ""
+
+#: modules/admin.php:359:19
+msgid "Create your own Native Android App"
+msgstr ""
+
+#: modules/admin.php:360:19
+msgid "Publish your App to Google play Store"
+msgstr ""
+
+#: modules/admin.php:361:19
+#: modules/admin.php:532:19
+msgid "Unlimited push notification"
+msgstr ""
+
+#: modules/admin.php:366:85
+msgid "$79"
+msgstr ""
+
+#: modules/admin.php:366:200
+#: modules/admin.php:537:193
+msgid "/Year"
+msgstr ""
+
+#: modules/admin.php:367:85
+#: modules/admin.php:538:81
+msgid "Not Auto Renewable"
+msgstr ""
+
+#: modules/admin.php:370:34
+msgid "Android Application"
+msgstr ""
+
+#: modules/admin.php:370:88
+#: modules/admin.php:541:169
+msgid "Create Now"
+msgstr ""
+
+#: modules/admin.php:373:15
+#: modules/admin.php:1123:31
+msgid "Already have a license key?"
+msgstr ""
+
+#: modules/admin.php:373:95
+#: modules/admin.php:1123:111
+msgid "License"
+msgstr ""
+
+#: modules/admin.php:373:137
+#: modules/admin.php:1123:153
+msgid "Activate now"
+msgstr ""
+
+#: modules/admin.php:380:28
+msgid "Android App"
+msgstr ""
+
+#: modules/admin.php:390:36
+msgid "Activate Android App"
+msgstr ""
+
+#: modules/admin.php:408:36
+msgid "Home Screen installation icon"
+msgstr ""
+
+#: modules/admin.php:415:36
+msgid "App installation name"
+msgstr ""
+
+#: modules/admin.php:422:36
+msgid "Splash Screen"
+msgstr ""
+
+#: modules/admin.php:423:42
+msgid "Splash Screen is the initial screen displayed each time the end user launches your app. Please upload a PNG\n480(width) X 800(height) file"
+msgstr ""
+
+#: modules/admin.php:430:42
+msgid "Choose your Android App Menu. You can use the default menu, or customize it"
+msgstr ""
+
+#: modules/admin.php:443:36
+msgid "Display Intro Screen"
+msgstr ""
+
+#: modules/admin.php:444:42
+msgid "Display an intro screen for users that visit your site via an android device&#39;s browser, offering them to download your Android App "
+msgstr ""
+
+#: modules/admin.php:450:36
+msgid "Google Cloud Project Number"
+msgstr ""
+
+#: modules/admin.php:451:42
+msgid "Notify users about new content using push notification, Get this value from the Google Cloud Console,"
+msgstr ""
+
+#: modules/admin.php:452:52
+#: modules/admin.php:461:52
+#: modules/admin.php:498:52
+msgid "See How"
+msgstr ""
+
+#: modules/admin.php:459:36
+msgid "Google Cloud API Key"
+msgstr ""
+
+#: modules/admin.php:460:42
+msgid "To enable the push notification service, register your App with Google cloud,"
+msgstr ""
+
+#: modules/admin.php:468:36
+msgid "Admob Id"
+msgstr ""
+
+#: modules/admin.php:474:36
+msgid "APK File"
+msgstr ""
+
+#: modules/admin.php:475:42
+msgid "The APK file is the final installation file of your App. To recreate the APK, just re-enter the &#34;Project Number&#34;."
+msgstr ""
+
+#: modules/admin.php:479:46
+msgid "Icon, splash, and application name are required to build an application"
+msgstr ""
+
+#: modules/admin.php:482:77
+msgid "Create new APK"
+msgstr ""
+
+#: modules/admin.php:482:129
+msgid "Please click this button to update your APK with the latest changes"
+msgstr ""
+
+#: modules/admin.php:485:55
+msgid "Building APK file..."
+msgstr ""
+
+#: modules/admin.php:489:121
+msgid "Download APK"
+msgstr ""
+
+#: modules/admin.php:496:36
+msgid "Google Play Store"
+msgstr ""
+
+#: modules/admin.php:497:42
+msgid "Publish your Android App to the Google Play Store."
+msgstr ""
+
+#: modules/admin.php:503:46
+msgid "Application not yet built"
+msgstr ""
+
+#: modules/admin.php:506:68
+msgid "Not published"
+msgstr ""
+
+#: modules/admin.php:509:68
+msgid "Published"
+msgstr ""
+
+#: modules/admin.php:530:19
+msgid "Create your own Native iPhone &amp; iPad Apps"
+msgstr ""
+
+#: modules/admin.php:531:19
+msgid "Publish your App to Apple AppStore"
+msgstr ""
+
+#: modules/admin.php:537:81
+msgid "$199"
+msgstr ""
+
+#: modules/admin.php:541:124
+msgid "Create now"
+msgstr ""
+
+#: modules/admin.php:548:28
+msgid "Native iOS App"
+msgstr ""
+
+#: modules/admin.php:597:28
+msgid "Monetization"
+msgstr ""
+
+#: modules/admin.php:602:36
+msgid "Google Adsense Publisher ID"
+msgstr ""
+
+#: modules/admin.php:603:42
+msgid "You will find the Adsense publisher ID on your Google Adsense account - Account settings tab - Account information section."
+msgstr ""
+
+#: modules/admin.php:609:36
+msgid "Google Adsense Slot ID"
+msgstr ""
+
+#: modules/admin.php:610:42
+msgid "To get the Slot ID, you should log on to your account, add a new ad unit, size “320×50”. Once you save your new ad unit OR just view an existing one, please click the “Get Code” and you should find within the code the “google_ad_slot”, please enter here its numeric value."
+msgstr ""
+
+#: modules/admin.php:618:82
+msgid "In order to create your own Native iOS App please download and install the \"WiziApp iOS App\" plugin"
+msgstr ""
+
+#: modules/admin.php:619:170
+#: modules/android.php:203:328
+msgid "Download Now"
+msgstr ""
+
+#: modules/admin.php:627:13
+msgid "Please note, if you are using a cached plugin or a cached service, this change may take several hours to take effect. You can clear the cached in order for it to take effect immediately."
+msgstr ""
+
+#: modules/admin.php:870:39
+msgid "Drop a file here or"
+msgstr ""
+
+#: modules/admin.php:872:43
+msgid "select a file"
+msgstr ""
+
+#: modules/admin.php:883:39
+msgid "Incorrect file type or image size"
+msgstr ""
+
+#: modules/admin.php:994:82
+#: modules/admin.php:1087:74
+msgid "Current Theme"
+msgstr ""
+
+#: modules/admin.php:1048:136
+#: modules/admin.php:1102:136
+msgid "Update theme"
+msgstr ""
+
+#: modules/admin.php:1048:183
+#: modules/admin.php:1102:183
+msgid "Update"
+msgstr ""
+
+#: modules/admin.php:1103:130
+#: modules/theme_purchase.php:17:20
+msgid "Installing theme"
+msgstr ""
+
+#: modules/admin.php:1103:181
+msgid "Install"
+msgstr ""
+
+#: modules/admin.php:1104:130
+msgid "Pricing"
+msgstr ""
+
+#: modules/admin.php:1104:172
+msgid "See Pricing"
+msgstr ""
+
+#: modules/admin.php:1105:119
+#: modules/admin.php:1125:92
+msgid "Live Demo"
+msgstr ""
+
+#: modules/admin.php:1145:93
+msgid "Product: "
+msgstr ""
+
+#: modules/admin.php:1148:93
+msgid "License: "
+msgstr ""
+
+#: modules/admin.php:1151:93
+msgid "Price: "
+msgstr ""
+
+#: modules/admin.php:1154:119
+msgid "I accept WiziApp "
+msgstr ""
+
+#: modules/admin.php:1154:220
+msgid "Terms &amp; Conditions"
+msgstr ""
+
+#: modules/admin.php:1157:85
+msgid "Proceed with:"
+msgstr ""
+
+#: modules/admin.php:1167:27
+msgid "Input license key"
+msgstr ""
+
+#: modules/admin.php:1168:162
+msgid "Activate"
+msgstr ""
+
+#: modules/admin.php:1169:47
+msgid "Invalid license, or license already used"
+msgstr ""
+
+#: modules/android.php:191:34
+msgid "Get the ultimate Android experience with our new App!"
+msgstr ""
+
+#: modules/android.php:197:323
+msgid "Google Play"
+msgstr ""
+
+#: modules/android.php:207:34
+msgid "No thanks. Continue to:"
+msgstr ""
+
+#: modules/android.php:208:282
+#: modules/android.php:249:290
+msgid "Mobile Site"
+msgstr ""
+
+#: modules/android.php:246:46
+msgid "Please pull-down your notification center to complete the installation"
+msgstr ""
+
+#: modules/android.php:248:42
+msgid "Continue to:"
+msgstr ""
+
+#: modules/pages.php:11:39
+msgid "Latest"
+msgstr ""
+
+#: modules/pages.php:12:38
+msgid "Pages"
+msgstr ""
+
+#: modules/pages.php:13:43
+msgid "Categories"
+msgstr ""
+
+#: modules/pages.php:14:37
+msgid "Tags"
+msgstr ""
+
+#: modules/pages.php:15:46
+msgid "Archive"
+msgstr ""
+
+#: modules/pages.php:16:47
+msgid "Archive By Months"
+msgstr ""
+
+#: modules/pages.php:17:42
+msgid "Links"
+msgstr ""
+
+#: modules/pages.php:18:39
+msgid "Search"
+msgstr ""
+
+#: modules/pages.php:36:31
+msgid "WiziApp Mobile Pages"
+msgstr ""
+
+#: modules/pages.php:37:40
+msgid "WiziApp Mobile Page"
+msgstr ""
+
+#: modules/push.php:34:43
+msgid "New post published"
+msgstr ""
+
+#: modules/theme_purchase.php:41:35
+msgid "Purchase Complete"
+msgstr ""
+
+#: modules/theme_purchase.php:46:40
+msgid "Product:"
+msgstr ""
+
+#: modules/theme_purchase.php:50:40
+msgid "License:"
+msgstr ""
+
+#: modules/theme_purchase.php:50:103
+msgid "%1$d of %2$d used"
+msgstr ""
+
+#: modules/theme_purchase.php:51:40
+msgid "License key:"
+msgstr ""
+
+#: modules/theme_purchase.php:176:87
+msgid "%1$d licenses $%2$d"
+msgstr ""
+
+#: modules/theme_purchase.php:176:166
+msgid "Single license $%2$d"
+msgstr ""
+

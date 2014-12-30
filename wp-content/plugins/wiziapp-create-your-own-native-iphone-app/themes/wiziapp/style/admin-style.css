@@ -1,0 +1,22 @@
+#customize-preview {
+	background: url("../images/iphone.png") no-repeat scroll left top / 100% auto transparent;
+	margin: 0 auto;
+	width: 500px;
+	padding: 95px 0 0;
+	height: auto;
+}
+
+.ios .wp-full-overlay {
+	position: fixed !important;
+}
+
+.ios #customize-preview {
+	position: absolute !important;
+}
+
+#customize-preview iframe {
+	margin: 0 40px;
+	width: 425px !important;
+	height: 610px !important;
+	background: white;
+}

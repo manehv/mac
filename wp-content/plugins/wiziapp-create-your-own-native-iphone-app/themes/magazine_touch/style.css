@@ -1,0 +1,288 @@
+/*
+Theme Name: Magazine Touch
+Description: Magazine Touch
+Author: WiziApp Solutions Ltd.
+Author URI: http://www.wiziapp.com
+Version: 1.0.4
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: custom-menu, flexible-header, full-width-template, microformats, post-formats, theme-options, threaded-comments, black, white
+Text Domain: wiziapp-theme
+Template: wiziapp
+
+Copyright (C) Wiziapp Solutions Ltd.
+*/
+
+div.wiziapp-panel div.wiziapp-menu-links p:first-child,
+div.ui-loader-default.ui-loader div.wiziapp-menu-links p:first-child,
+ul.wiziapp-content-list.wiziapp-content-comment-list div.wiziapp-menu-links p:first-child,
+.wiziapp-header-has-back a.wiziapp_magazine_touch_menu,
+.wiziapp-content-post-list .wiziapp-post-thumbnail-img-small,
+ul.wiziapp-content-post-list div.wiziapp-post-thumbnail-img-medium,
+ul.wiziapp-content-post-list div.wiziapp-post-content,
+.wiziapp-content-post-list .wiziapp-post-thumbnail-overlay,
+.wiziapp-content-post-list .wiziapp-post-comments-count,
+.wiziapp-content-list .ui-icon-arrow-r,
+div.wiziapp-tabs div.wiziapp-tabs-header a.wiziapp-tabs-selected span,
+a.wiziapp-back-button span.ui-btn-text {
+	display: none;
+}
+
+div.wiziapp-header {
+	background: #282828;
+	border-bottom: 2px solid #73b4b5;
+}
+
+.wiziapp-header a, .wiziapp-header a:hover {
+	background: none;
+	border: none;
+	border-radius: 0;
+}
+
+.wiziapp-header a.wiziapp-back-button {
+	top: 0 !important;
+}
+
+.wiziapp-header a.wiziapp_magazine_touch_menu, .wiziapp-header a.wiziapp_magazine_touch_menu:hover {
+	top: 13px !important;
+	left: 14px;
+	background: none;
+	border: none;
+}
+
+.wiziapp-header .ui-icon-bars, .wiziapp-header .ui-icon-back, .wiziapp-header .ui-icon-search {
+	background-color: rgba(0, 0, 0, 0);
+	border-radius: 0;
+}
+
+.wiziapp-header .ui-icon-bars {
+	width: 27px;
+	background-position: -513px -1px;
+	background-size: auto 100%;
+	margin: 0 !important;
+}
+
+.wiziapp-header .ui-icon-search {
+	height: 26px;
+	width: 26px;
+	background-position: -670px 1px;
+	background-size: auto 100%;
+	margin: 0 !important;
+}
+
+.wiziapp-header a .ui-btn-inner {
+	border: none;
+	border-radius: 0;
+	height: 40px;
+	padding: 0 !important;
+	width: 40px;
+}
+
+.wiziapp-header a.ui-btn-right span.ui-btn-inner {
+	left: -12px
+}
+
+.wiziapp-header a .ui-btn-inner .ui-icon-back {
+	background-position: -600px 11px;
+	background-size: auto 50%;
+	width: 40px;
+	height: 40px;
+	top: 0 !important;
+	left: 0 !important;
+	margin: 0 !important;
+}
+
+.wiziapp-header .new-child-app-icon {
+	position: absolute;
+	left: 26px;
+	width: 80px;
+	min-height: 100%;
+	background-position: 0 center !important;
+	background-size: auto 80% !important;
+}
+
+ul.wiziapp-content-post-list div.wiziapp-post-title {
+	height: 42px;
+}
+
+ul.wiziapp-content-list a.wiziapp-content-list-item div.wiziapp-post-description div.wiziapp-post-date,
+ul.wiziapp-content-list a.wiziapp-content-list-item div.wiziapp-post-description div.wiziapp-post-author {
+	color: #2F3E46;
+	font-weight: bold;
+}
+
+ul.wiziapp-content-post-list div.wiziapp-post-thumbnail {
+	float: none !important;
+	width: 100% !important;
+	height: 250px !important;
+}
+
+.wiziapp-content-post-list .wiziapp-post-thumbnail-img-large {
+	display: block !important;
+	background-size: cover;
+	background-position: center;
+}
+
+ul.wiziapp-content-list.wiziapp-content-post-list li.wiziapp-post-not-featured a.wiziapp-content-list-item {
+	padding-right: 15px !important;
+}
+
+div.wiziapp-customized-background {
+	background: #fefefe;
+}
+
+.wiziapp-content-post-list li {
+	background: none repeat scroll 0 0 #FFFFFF !important;
+	border-bottom: 2px solid #727272;
+	margin: 10px !important;
+}
+
+.wiziapp-content-post, .wiziapp-content-page {
+	background: #fff;
+	padding: 14px 14px 0;
+}
+
+.wiziapp-panel, .wiziapp-panel li {
+	background: #282828;
+	border-top: none;
+}
+
+div.wiziapp-panel li.ui-li.ui-btn {
+	margin: 0 15px;
+	border-bottom: 2px solid #cfe1e1;
+}
+
+.wiziapp-panel li.ui-li.ui-btn:hover {
+	background: #73b4b5;
+	margin: 0;
+}
+
+div.wiziapp-panel li.ui-li.ui-btn a.ui-link-inherit {
+	padding-left: 0;
+}
+
+div.wiziapp-panel li.ui-li.ui-btn:hover a.ui-link-inherit {
+	padding-left: 15px;
+}
+
+div:not(.wiziapp-tabs-content-tab) > div > .wiziapp-content-category-list,
+div:not(.wiziapp-tabs-content-tab) > div > .wiziapp-content-tag-list,
+.wiziapp-content-page-list,
+.wiziapp-content-bookmark-list {
+	background: #282828;
+}
+
+div:not(.wiziapp-tabs-content-tab) > div > .wiziapp-content-category-list 	li,
+div:not(.wiziapp-tabs-content-tab) > div > .wiziapp-content-tag-list 		li,
+.wiziapp-content-page-list 		li,
+.wiziapp-content-bookmark-list 	li {
+	background: #282828;
+	border-bottom: 1px solid #cfe1e1;
+	margin: 0 15px !important;
+}
+
+div.wiziapp-tabs-content-tab .wiziapp-content-category-list li,
+div.wiziapp-tabs-content-tab .wiziapp-content-tag-list 		li {
+	background: #cfe1e1;
+	border-bottom: 1px solid #73b4b5;
+}
+
+div:not(.wiziapp-tabs-content-tab) > div > .wiziapp-content-category-list 	li:hover,
+div:not(.wiziapp-tabs-content-tab) > div > .wiziapp-content-tag-list 		li:hover,
+.wiziapp-content-page-list 		li:hover,
+.wiziapp-content-bookmark-list 	li:hover {
+	background: #73b4b5;
+	margin: 0 !important;
+}
+
+div:not(.wiziapp-tabs-content-tab) > div > .wiziapp-content-category-list 	li a.wiziapp-content-list-item,
+div:not(.wiziapp-tabs-content-tab) > div > .wiziapp-content-tag-list 		li a.wiziapp-content-list-item,
+.wiziapp-content-page-list 		li a.wiziapp-content-list-item,
+.wiziapp-content-bookmark-list 	li a.wiziapp-content-list-item {
+	color: #fff;
+}
+
+div:not(.wiziapp-tabs-content-tab) > div > .wiziapp-content-category-list 	li:hover a.wiziapp-content-list-item,
+div:not(.wiziapp-tabs-content-tab) > div > .wiziapp-content-tag-list 		li:hover a.wiziapp-content-list-item,
+.wiziapp-content-page-list 		li:hover a.wiziapp-content-list-item,
+.wiziapp-content-bookmark-list 	li:hover a.wiziapp-content-list-item {
+	color: #000;
+	padding-left: 30px;
+}
+
+.wiziapp-content-category-list 	li:not(:hover)	.wiziapp-category-post-count,
+.wiziapp-content-tag-list 		li:not(:hover)	.wiziapp-tag-post-count {
+	color: #fff;
+}
+
+.wiziapp-content-category-list 	li:hover	.wiziapp-category-post-count,
+.wiziapp-content-tag-list 		li:hover	.wiziapp-tag-post-count {
+	right: 56px;
+}
+
+div.wiziapp-tabs {
+	border: none;
+}
+
+div.wiziapp-tabs div.wiziapp-tabs-header {
+	margin: 20px 18px;
+}
+
+div.wiziapp-tabs div.wiziapp-tabs-header a {
+	background: #fff;
+	font-weight: bold;
+	font-size: 18px;
+	padding: 5px 0;
+}
+
+div.wiziapp-tabs div.wiziapp-tabs-header a.wiziapp-tabs-selected {
+	border-bottom: 4px solid #73b4b5;
+}
+
+div.wiziapp-tabs div.wiziapp-tabs-content-tab div#respond {
+	background: #cfe1e1;
+	padding: 12px;
+}
+
+#commentform p.form-submit {
+	text-align: right;
+}
+
+#commentform .wiziapp-comment-content textarea#comment {
+	width: 100%;
+	border: 1px solid #000;
+	background: #fff;
+}
+
+#submit {
+	color: #fff;
+	background: #73b4b5;
+	border: none;
+	padding: 8px;
+}
+
+.wiziapp-comment .wiziapp-comment-text {
+	padding: 20px 10px 78px 0;
+	background: #cfe1e1;
+}
+
+.wiziapp-collapsible-comment-replies {
+	bottom: 80px;
+	margin: 30px 10px 0 10px;
+}
+
+.wiziapp-form-comment label.ui-input-text div.ui-input-text, #commentform label.ui-input-text div.ui-input-text, .wiziapp-form-search div.ui-input-text, .wiziapp-page-content form div.ui-input-text {
+	background: #fff;
+}
+
+@media screen and (min-width: 720px) {
+	.wiziapp-content-post-list .wiziapp-post-not-featured {
+		width: 47%;
+		float: left;
+	}
+
+	.wiziapp-content-post-list .wiziapp-show-more-link {
+		float: none;
+		clear: both;
+	}
+}

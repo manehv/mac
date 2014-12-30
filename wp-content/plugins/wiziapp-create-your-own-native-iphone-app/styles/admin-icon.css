@@ -1,0 +1,9 @@
+#adminmenu .toplevel_page_wiziapp-plugin-settings div.wp-menu-image {
+	background-image: url(../images/admin.png);
+	background-repeat: no-repeat;
+	background-position: 5px -33px;
+}
+
+#adminmenu .toplevel_page_wiziapp-plugin-settings:hover div.wp-menu-image, #adminmenu .toplevel_page_wiziapp-plugin-settings.has-current-submenu div.wp-menu-image, #adminmenu .toplevel_page_wiziapp-plugin-settings.current div.wp-menu-image {
+	background-position: 5px -1px;
+}
