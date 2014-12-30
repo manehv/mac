@@ -20,4 +20,11 @@ jQuery(document).ready(function($)
 	});
 	return false;
 	});
+
+	$(".clsFinish").each(function() {
+		var text = $(this).text();
+		text = text.replace("pa_color", "color");
+		$(this).text(text);
+	});
+	
 });
