@@ -191,7 +191,7 @@ global $post, $woocommerce, $product;
 					</div>
 				</div>
 				
-				<div class="clsSidebar">
+				<!-- <div class="clsSidebar">
 					<p class="clsBotDetails clsBotTitle"><?php _e('More information on how to buy your ','avia_framework').the_title(); ?></p>
 					<p class="clsBotDetails"><a href="#" id="scroll-top"><?php _e('General description','avia_framework'); ?></a></p>
 					<p class="clsBotDetails"><a href="#" id="des-top"><?php _e('Technical specifications','avia_framework'); ?></a></p>
@@ -199,7 +199,7 @@ global $post, $woocommerce, $product;
 						<a href="#" Id="showImage"><?php _e('View Gallery','avia_framework'); ?></a>
 					</p>
 					<?php echo do_shortcode( "[av_sidebar widget_area='Single Product Contact']" ) ?>
-				</div> <!-- clsSidebar -->
+				</div> --> <!-- clsSidebar -->
 			</div> <!-- clsSticky -->
 			
 		</div> <!-- end of col-md-3 -->
