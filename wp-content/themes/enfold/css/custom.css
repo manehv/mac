@@ -357,7 +357,8 @@ Desktop Styles
 }
 div.product p.stock
 {
-	padding:0 0px;margin:5px 0px;
+	padding:0 0px;
+	margin:5px 15px;
 }
 .template-shop .single-product-main-image .images a{
 	border-style:none;
