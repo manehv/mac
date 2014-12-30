@@ -33,7 +33,7 @@ global $post, $woocommerce, $product;
 	<div class="row">
 		<div class="col-md-9 clsContent">
 			<h1 class="clsBotTitle">
-				<?php _e('Choose a ','avia_framework'). the_title(); ?>
+				<?php the_title(); ?>
 			</h1>
 			<div class='row'>
 				<?php if($product->product_type == "variable"): ?>
