@@ -1261,7 +1261,7 @@ text-align: right;
 
 .single_variation_wrap{overflow: hidden; display:block; margin: 10px 0px 20px 90px;}
 
-.single_variation_wrap div.variations_button {
+.entry-summary .single_variation_wrap div.variations_button {
 	display:none !important;
 } 
 
