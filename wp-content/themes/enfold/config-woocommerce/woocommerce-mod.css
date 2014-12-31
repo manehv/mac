@@ -1262,8 +1262,9 @@ text-align: right;
 .single_variation_wrap{overflow: hidden; display:block; margin: 10px 0px 20px 90px;}
 
 div.variations_button{
-overflow: hidden;
-width:100%;
+	display:none;
+	overflow: hidden;
+	width:100%;
 }
 
 div.variations_button .button{
