@@ -168,10 +168,10 @@ global $post, $woocommerce, $product;
 
 										<div class="single_variation"></div>
 
-										<div class="variations_button">
+										<!-- <div class="variations_button">
 											<?php woocommerce_quantity_input(); ?>
 											<button type="submit" class="single_add_to_cart_button button alt"><?php echo apply_filters('single_add_to_cart_text', __( 'Add to cart', 'woocommerce' ), $product->product_type); ?></button>
-										</div>
+										</div> -->
 
 										<input type="hidden" name="add-to-cart" value="<?php echo $product->id; ?>" />
 										<input type="hidden" name="product_id" value="<?php echo esc_attr( $post->ID ); ?>" />
@@ -229,8 +229,7 @@ global $post, $woocommerce, $product;
 										echo apply_filters( 'woocommerce_stock_html', '<p class="stock ' . esc_attr( $availability['class'] ) . '">' . esc_html( $availability['availability'] ) . '</p>', $availability['availability'] );
 							?>
 							<?php if ( $product->is_in_stock() ) : ?>
-								<div class="clsSubDiv">
-
+								<!-- 
 										<?php do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 
 										<form class="cart" method="post" enctype='multipart/form-data'>
@@ -252,7 +251,7 @@ global $post, $woocommerce, $product;
 										</form>
 
 										<?php do_action( 'woocommerce_after_add_to_cart_form' ); ?>
-								</div>
+								</div> -->
 							<?php endif; ?>
 						</div> <!-- .clsDetails -->
 					</div> <!-- .row -->
