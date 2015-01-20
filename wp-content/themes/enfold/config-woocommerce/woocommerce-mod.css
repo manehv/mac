@@ -1261,8 +1261,9 @@ text-align: right;
 
 .single_variation_wrap{overflow: hidden; display:block; margin: 10px 0px 20px 90px;}
 
-.entry-summary .single_variation_wrap div.variations_button {
-	display:none !important;
+.single_variation_wrap div.variations_button {
+	/* display:none !important; */ /*Though I never like to update parent theme but it looks like important is causing issue */
+	display:none ;
 } 
 
 div.variations_button { 
