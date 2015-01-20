@@ -383,7 +383,7 @@ button.single_add_to_cart_button{
 	background-color: #00a14f !important;
 }
 .woocommerce-page .button.single_add_to_cart_button{
-	padding:10px;
+	padding:10px !important;
 }
 #top div .quantity input.plus, #top div .quantity input.minus {
 	height:auto;
