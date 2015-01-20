@@ -104,7 +104,7 @@ global $post, $woocommerce, $product;
 			
 			<div id="idSticky" class="clsSticky">
 				<div class="clsSidebar prodSideBar">
-					<h3><?php _e('Abstract','avia_framework'); ?></h3>
+					<h3><?php _e('Producto','avia_framework'); ?></h3>
 					<div class="row">  
 					<?php 
 						//print_r($product);
