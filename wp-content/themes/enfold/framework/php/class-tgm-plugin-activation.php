@@ -1953,7 +1953,7 @@ if ( ! class_exists( 'WP_Upgrader' ) && ( isset( $_GET[sanitize_key( 'page' )] )
 				/** Automatic activation strings */
 				if ( TGM_Plugin_Activation::$instance->is_automatic ) {
 					$this->upgrader->strings['skin_upgrade_start']        = __( 'The installation and activation process is starting. This process may take a while on some hosts, so please be patient.', TGM_Plugin_Activation::$instance->domain );
-					$this->upgrader->strings['skin_update_successful']    = __( '%1$s installed and activated successfully.', TGM_Plugin_Activation::$instance->domain ) . ' <a onclick="%2$s" href="#" class="hide-if-no-js"><span>' . __( 'Show Details', TGM_Plugin_Activation::$instance->domain ) . '</span><span class="hidden">' . __( 'Hide Details', TGM_Plugin_Activation::$instance->domain ) . '</span>.</a>';
+					$this->upgrader->strings['skin_update_successful']    = __( '%1$s installed and activated successfully.', TGM_Plugin_Activation::$instance->domain ) . ' <a onclick="%2$s" href="#" class="hide-if-no-js"><span>' . __( 'Mostrar Detalles', TGM_Plugin_Activation::$instance->domain ) . '</span><span class="hidden">' . __( 'Hide Details', TGM_Plugin_Activation::$instance->domain ) . '</span>.</a>';
 					$this->upgrader->strings['skin_upgrade_end']          = __( 'All installations and activations have been completed.', TGM_Plugin_Activation::$instance->domain );
 					$this->upgrader->strings['skin_before_update_header'] = __( 'Installing and Activating Plugin %1$s (%2$d/%3$d)', TGM_Plugin_Activation::$instance->domain );
 				}
@@ -1962,7 +1962,7 @@ if ( ! class_exists( 'WP_Upgrader' ) && ( isset( $_GET[sanitize_key( 'page' )] )
 					$this->upgrader->strings['skin_upgrade_start']        = __( 'The installation process is starting. This process may take a while on some hosts, so please be patient.', TGM_Plugin_Activation::$instance->domain );
 					$this->upgrader->strings['skin_update_failed_error']  = __( 'An error occurred while installing %1$s: <strong>%2$s</strong>.', TGM_Plugin_Activation::$instance->domain );
 					$this->upgrader->strings['skin_update_failed']        = __( 'The installation of %1$s failed.', TGM_Plugin_Activation::$instance->domain );
-					$this->upgrader->strings['skin_update_successful']    = __( '%1$s installed successfully.', TGM_Plugin_Activation::$instance->domain ) . ' <a onclick="%2$s" href="#" class="hide-if-no-js"><span>' . __( 'Show Details', TGM_Plugin_Activation::$instance->domain ) . '</span><span class="hidden">' . __( 'Hide Details', TGM_Plugin_Activation::$instance->domain ) . '</span>.</a>';
+					$this->upgrader->strings['skin_update_successful']    = __( '%1$s installed successfully.', TGM_Plugin_Activation::$instance->domain ) . ' <a onclick="%2$s" href="#" class="hide-if-no-js"><span>' . __( 'Mostrar Detalles', TGM_Plugin_Activation::$instance->domain ) . '</span><span class="hidden">' . __( 'Hide Details', TGM_Plugin_Activation::$instance->domain ) . '</span>.</a>';
 					$this->upgrader->strings['skin_upgrade_end']          = __( 'All installations have been completed.', TGM_Plugin_Activation::$instance->domain );
 					$this->upgrader->strings['skin_before_update_header'] = __( 'Installing Plugin %1$s (%2$d/%3$d)', TGM_Plugin_Activation::$instance->domain );
 				}
