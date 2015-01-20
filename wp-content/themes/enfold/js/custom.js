@@ -26,5 +26,10 @@ jQuery(document).ready(function($)
 		text = text.replace("pa_color", "color");
 		$(this).text(text);
 	});
+
+	$('#idSticky .single_add_to_cart_button').on( 'click', function(e){
+		e.preventDefault();
+		$('.variations_form .single_add_to_cart_button').click();
+	});
 	
 });
