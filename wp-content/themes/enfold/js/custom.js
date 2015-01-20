@@ -29,6 +29,7 @@ jQuery(document).ready(function($)
 
 	$('#idSticky .single_add_to_cart_button').on( 'click', function(e){
 		e.preventDefault();
+		console.log("kidnap");
 		$('.variations_form .single_add_to_cart_button').click();
 	});
 	
