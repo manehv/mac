@@ -58,7 +58,7 @@ border-bottom-width: 1px;
 }
 
 
-.woocommerce-page .button{min-width:110px; padding:15px;line-height:1em;margin:4px 2px 0 0;float:left;font-size:12px;width:auto;vertical-align:middle;text-align:center;text-decoration:none;border:none;cursor:pointer;font-family:inherit;border-radius:2px;}
+.woocommerce-page .button{min-width:110px; padding:15px !important;line-height:1em;margin:4px 2px 0 0;float:left;font-size:12px;width:auto;vertical-align:middle;text-align:center;text-decoration:none;border:none;cursor:pointer;font-family:inherit;border-radius:2px;}
 .button.alt:hover{}
 #reviews h2 small{float:right;font-size:15px;line-height:21px;margin:10px 0 0 0;}#reviews h2 small a{text-decoration:none;}
 #reviews h3{margin:0;}
@@ -136,7 +136,8 @@ form .form-row input.input-text,#content .form-row input.input-text,form .form-r
 form .form-row textarea,#content .form-row textarea{height:3.5em;line-height:1.5em;display:block;box-shadow:none;}
 .form-row-first,.form-row-last{float:left;width:47%;overflow:visible;}
 .form-row-last{float:right;}
-#top form.login, #top form.register{padding:20px;margin:20px 0 20px 0px;text-align:left;border-radius:5px;border-style: solid;border-width: 1px;}
+#top form.login, #top form.register{padding:20px;margin:20px 0 20px 0px;text-align:left;border-radius:5px;border-style: solid;border-width: 1px;height: 300px;
+background-color: #ffffff !important;}
 #top #payment{border-radius:5px; border-style: solid;border-width: 1px;}
 #top #payment ul.payment_methods{overflow:hidden;zoom:1;text-align:left;padding:1em;margin:0;list-style:none outside;}
 #top #payment ul.payment_methods li{line-height:2em;text-align:left;margin:-1px 0 0 0;font-weight:normal;  border-style: solid;border-width: 1px; padding:15px;}

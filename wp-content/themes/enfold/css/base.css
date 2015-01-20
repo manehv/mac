@@ -207,7 +207,7 @@ margin-bottom: 30px;
 	#top textarea,
 	#top select {
 		 -webkit-appearance: none;
-		border: 1px solid #e1e1e1;
+		border: 1px solid #e1e1e1 !important;
 		padding: 8px 6px;
 		outline: none;
 		font: 13px "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -219,6 +219,12 @@ margin-bottom: 30px;
 		margin-bottom: 20px;
 		background: #fff;
 /*		border-radius: 20px;*/
+/*
+        border-bottom: 1px solid #C9C9C9 !important;
+        border-left: none !important;
+        border-top: none !important;
+        border-right: none !important;
+*/
 		}
 
 	#top input[type="text"]:focus,
@@ -375,13 +381,15 @@ font-size: smaller;
 	height:100%; width:100%; position: fixed; z-index: 0; top:0; left:0;
 	}
 
-	.image-overlay{position: absolute; background: #fff; z-index: 500; height:100%; width:100%; opacity: 0; filter:alpha(opacity=0); }
+	.image-overlay{position: absolute; z-index: 500; height:100%; width:100%;  }
 	.image-overlay .image-overlay-inside{height:100%; width:100%; position: absolute; left:0; top:0; -webkit-backface-visibility: hidden;}
-	.image-overlay .image-overlay-inside:before{position: absolute; border-radius: 50px; background: #000; height:30px; width:30px; line-height:30px; left:50%; top:50%; margin: -15px 0 0 -15px; z-index: 500; text-align: center; color:#fff;}
+	.image-overlay .image-overlay-inside:before{visibility: hidden; position: absolute; border-radius: 50px; background: #000; height:30px; width:30px; line-height:30px; left:50%; top:50%; margin: -15px 0 0 -15px; z-index: 500; text-align: center; color:#fff;}
+/*
 	.image-overlay .image-overlay-inside:before{content:"\E869"; font-family: 'entypo-fontello'; font-size: 18px; font-weight: normal; }
 	.image-overlay.overlay-type-extern .image-overlay-inside:before{content:"\plus-squared";}
 	.image-overlay.overlay-type-video .image-overlay-inside:before{content:"\E897";}
-	#top .hide-inner-overlay .image-overlay-inside{display: none;}
+*/
+/*	#top .hide-inner-overlay .image-overlay-inside{display: none;}*/
 
 /* #WordPress Generated Generics
 ================================================== */
