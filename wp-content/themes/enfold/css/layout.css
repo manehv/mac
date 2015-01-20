@@ -267,7 +267,8 @@ width:100%;
 height:auto;
 float:left;
 text-align:left;
-height:23px;
+height:auto;
+    background-color: #56656D;
 padding:8px 15px;
 font-size: 12px;
 min-height: 23px;
@@ -338,7 +339,7 @@ display:none;
     height: 26px;
    /* background-color: #fff !important;*/
     border: medium none;
-    width: 150px !important;
+    width: auto !important;
     color: #56656D !important;
    /* border-bottom: 2px solid #000;*/
 }
@@ -355,7 +356,10 @@ padding-bottom: 10px;
 
 #header .avia_mega_div{ /* use similar styles to .main_menu .menu ul */
 display: none;
-margin: 0px 0 0 0;
+    margin-top: 3px !important;
+    margin-left:0px;
+    margin-right: 0px;
+margin-bottom: 0px ;
 right: 0;
 position: absolute;
 top: 100%;
@@ -363,7 +367,7 @@ z-index: 2;
 padding: 0px 0;
 box-shadow: none;
 overflow: hidden;
-background-color: #fff;
+background-color:transparent !important;
     
 
 
