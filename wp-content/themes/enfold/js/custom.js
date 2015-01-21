@@ -27,10 +27,12 @@ jQuery(document).ready(function($)
 		$(this).text(text);
 	});
 
-	$('#idSticky .single_add_to_cart_button').on( 'click', function(e){
-		e.preventDefault();
-		console.log("kidnap");
-		$('.clsContent .single_add_to_cart_button').click();
-	});
+	if( $('.variations_form').length > 0 ){
+		$('#idSticky .single_add_to_cart_button').on( 'click', function(e){
+			e.preventDefault();
+			console.log("kidnap");
+			$('.clsContent .single_add_to_cart_button').click();
+		});
+	}
 	
 });
