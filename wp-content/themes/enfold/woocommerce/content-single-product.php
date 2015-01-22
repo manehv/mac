@@ -211,7 +211,7 @@ global $post, $woocommerce, $product;
 		<div class="col-md-3">
 			<div id="idSticky" class="clsSticky">
 				<div class="clsSidebar">
-					<h3><?php _e('Abstract','avia_framework'); ?></h3>
+					<h3><?php _e('Producto','avia_framework'); ?></h3>
 					<div class="row">  
 						<div class="clsDetails clsDetailsImg">
 							<img class="variation_image v-image" src="<?php echo $thumb_url[0]; ?>" />
@@ -219,7 +219,7 @@ global $post, $woocommerce, $product;
 						<div class="clsDetails">
 							<div class="clsSubDiv" id="prodtitle" title="<?php the_title(); ?>"><?php the_title(); ?></div>
 							<div class="clsSubDiv" id="sku"><?php echo $product->get_sku(); ?></div>
-							<div class="clsSubDiv" id="price"><?php echo $product->get_price_html(); ?></div>
+							<div class="clsSubDiv" id="price"><strong><?php echo $product->get_price_html(); ?></strong></div>
 							
 							<?php
 									// Availability
