@@ -69,7 +69,7 @@ global $post, $woocommerce, $product;
 					
 					<?php elseif($product->product_type == "simple"): ?>
 					
-					<div class="entry-summary col-md-8">
+					<div class="entry-summary col-md-12">
 						<?php
 								do_action( 'woocommerce_before_single_product_summary' );
 						?>
