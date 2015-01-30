@@ -38,5 +38,47 @@ jQuery(document).ready(function($)
 			$('.clsContent .single_add_to_cart_button').click();
 		});
 	}
-	
+	setTimeout(function(){ // Do not remove setTimeout as woocoomerce "on" event is running very late. so its much needed
+			$(document).off('click',".plus, .minus")
+								 .on("click",".plus, .minus", function(e) {
+		
+		// Get values
+		var $qty		= $( this ).closest( '.quantity' ).find( '.qty' ),
+			currentVal	= parseFloat( $qty.val() ),
+			max			= parseFloat( $qty.attr( 'max' ) ),
+			min			= parseFloat( $qty.attr( 'min' ) ),
+			step		= $qty.attr( 'step' ),
+			$qty_all = $( '.qty' ) ;
+
+		// Format values
+		if ( ! currentVal || currentVal === '' || currentVal === 'NaN' ) currentVal = 0;
+		if ( max === '' || max === 'NaN' ) max = '';
+		if ( min === '' || min === 'NaN' ) min = 0;
+		if ( step === 'any' || step === '' || step === undefined || parseFloat( step ) === 'NaN' ) step = 1;
+
+		// Change the value
+		if ( $( this ).is( '.plus' ) ) {
+			if ( max && ( max == currentVal || currentVal > max ) ) {
+				$qty_all.val(max);
+			} else {
+				var $val = currentVal + parseFloat( step );
+				$qty_all.val($val);
+			}
+
+		} else {
+
+			if ( min && ( min == currentVal || currentVal < min ) ) {
+				$qty_all.val(min);
+			} else if ( currentVal > 0 ) {
+				var $val = currentVal - parseFloat( step );
+				$qty_all.val( $val);
+			}
+
+		}
+
+		
+		// Trigger change event
+		$qty.trigger( 'change' );
+	});	
+	}, 1000); // Timeout
 });
