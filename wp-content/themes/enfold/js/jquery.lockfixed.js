@@ -1,4 +1,4 @@
-/*!
+﻿/*!
  * jQuery lockfixed plugin
  * http://www.directlyrics.com/code/lockfixed/
  *
@@ -6,7 +6,7 @@
  * Released under the MIT license
  * http://www.directlyrics.com/code/lockfixed/license.txt
  *
- * Date: Sun Feb 9 2014 12:00:01 GMT
+ * Date: Sun March 4 2014 12:00:01 GMT
  */
 (function($, undefined){
 	$.extend({
@@ -40,16 +40,16 @@
 				}
 
 				/*
-				// adds throttle to position calc; modern browsers should handle resize event fine
-				$(window).bind('scroll resize orientationchange load lockfixed:pageupdate',el,function(e){
+				// adds throttle to scroll call
+				$(window).bind('scroll',el,function(e){
 
 					window.setTimeout(function(){
-						$(document).trigger('lockfixed:pageupdate:async');
-					});			
+						$(document).trigger('lockfixed:pageupdate');
+					},25);			
 				});
 				*/
 
-				$(window).bind('scroll resize orientationchange load lockfixed:pageupdate',el,function(e){
+				$(window).bind('DOMContentLoaded load scroll resize orientationchange lockfixed:pageupdate',el,function(e){
 					// if we have a input focus don't change this (for smaller screens)
 					if(pos_not_fixed && document.activeElement && document.activeElement.nodeName === "INPUT"){
 						return;	
@@ -66,14 +66,8 @@
 						el_top = el.offset().top;
 						el_position_top = el.css("top");
 					}
-         
-          if($(window).width() < 800)
-				 {
-				    	el.css({'position': 'static'});
-				 }
-				 else
-				 { 
-        	if (scroll_top >= (el_top-(el_margin_top ? el_margin_top : 0)-config.offset.top)){
+
+					if (scroll_top >= (el_top-(el_margin_top ? el_margin_top : 0)-config.offset.top)){
 
 						if(max_height < (scroll_top + el_height + el_margin_top + config.offset.top)){
 							top = (scroll_top + el_height + el_margin_top + config.offset.top) - max_height;
@@ -82,17 +76,13 @@
 						}
 
 						if (pos_not_fixed){
-							el.css({'marginTop': (parseInt(scroll_top - el_top - top,10) + (2 * config.offset.top))+'px' ,'marginBottom':'114px'});
+							el.css({'marginTop': (parseInt(scroll_top - el_top - top,10) + (2 * config.offset.top))+'px'});
 						}else{
-							el.css({'position': 'fixed','top':(config.offset.top-top)+'px','width':el_width +"px",'marginBottom':'114px'});
+							el.css({'position': 'fixed','top':(config.offset.top-top)+'px','width':el_width +"px"});
 						}
 					}else{
-						el.css({'position': el_position,'top': el_position_top, 'width':el_width +"px", 'marginTop': (el_margin_top && !pos_not_fixed ? el_margin_top : 0)+"px",'marginBottom':'114px'});
+						el.css({'position': el_position,'top': el_position_top, 'width':el_width +"px", 'marginTop': (el_margin_top && !pos_not_fixed ? el_margin_top : 0)+"px"});
 					}
-					
-				 }
-					
-					
 				});	
 			}
 		}
