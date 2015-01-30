@@ -1,7 +1,11 @@
 jQuery(document).ready(function($)
 {
-	$.lockfixed("#idSticky",{offset: {top: 120, bottom: 70}});
-	
+	//OLD Code
+	//$.lockfixed("#idSticky",{offset: {top: 120, bottom: 70}});
+	//New Code
+	if($(window).height() > ($("#idSticky").height() + 200) ){  ; // 200 is buffer kept for menu and footer
+		$.lockfixed("#idSticky",{offset: {top: 120, bottom: 70}});
+	}
 	//for showing gallery
 	 $('#showImage').click(function(){
 		 $('.woocommerce-main-image').click();
