@@ -276,6 +276,21 @@ div .clsvari form.cart table {
 .my_account_orders th{
 	font-weight:400;
 }
+#top div.woocommerce-message{
+	/* background-color: rgba(0, 136, 204, 0.9); */
+	position:fixed !important;
+	bottom:0px;
+	margin-bottom:0px;
+	width:100%;
+	z-index:9000;
+	left:0px;
+}
+.footer_color{
+	position:static !important;
+}
+#socket{
+	z-index:0;
+}
 /* Media Queries */
 @media only screen and (min-width:320px) and (max-width:480px){
 	.responsive .logo a, .responsive .logo img{height:70px !important; }
