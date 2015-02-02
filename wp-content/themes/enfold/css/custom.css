@@ -264,8 +264,33 @@ div .clsvari form.cart table {
 #top .dropdown_widget .buttons .button {padding:15px !important; background-color:#00a14f; color:#ffffff !important; width:50%; border-radius:0; font-weight:normal; transition: all 0.3s ease-out 0s; }
 .cart_dropdown .dropdown_widget .widget_shopping_cart_content p.buttons {margin-bottom:0; }
 #top .dropdown_widget .buttons .button:hover {background-color: #0088cc !important; transition: all 0.3s ease-out 0s; }
-
-
+.clsMyAcc{
+	margin-top:30px;
+}
+.myaccount_user{
+	font-weight:bold;
+}
+.myaccount_user a{
+	text-decoration:underline;
+}
+.my_account_orders th{
+	font-weight:400;
+}
+#top div.woocommerce-message{
+	/* background-color: rgba(0, 136, 204, 0.9); */
+	position:fixed !important;
+	bottom:0px;
+	margin-bottom:0px;
+	width:100%;
+	z-index:9000;
+	left:0px;
+}
+.footer_color{
+	position:static !important;
+}
+#socket{
+	z-index:0;
+}
 /* Media Queries */
 @media only screen and (min-width:320px) and (max-width:480px){
 	.responsive .logo a, .responsive .logo img{height:70px !important; }
