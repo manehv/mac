@@ -265,6 +265,7 @@ div .clsvari form.cart table {
 .cart_dropdown .dropdown_widget .widget_shopping_cart_content p.buttons {margin-bottom:0; }
 #top .dropdown_widget .buttons .button:hover {background-color: #0088cc !important; transition: all 0.3s ease-out 0s; }
 
+
 .sub-menu li a{line-height:10px !important;}
 .sub-menu li a span{font-weight:800;}
 
@@ -274,6 +275,35 @@ div .clsvari form.cart table {
 }
 .login .form-row input.input-text{padding:17px 6px !important;}
 #main, .html_stretched #wrap_all{background-color:#ffffff !important;}
+
+
+.clsMyAcc{
+	margin-top:30px;
+}
+.myaccount_user{
+	font-weight:bold;
+}
+.myaccount_user a{
+	text-decoration:underline;
+}
+.my_account_orders th{
+	font-weight:400;
+}
+#top div.woocommerce-message{
+	/* background-color: rgba(0, 136, 204, 0.9); */
+	position:fixed !important;
+	bottom:0px;
+	margin-bottom:0px;
+	width:100%;
+	z-index:9000;
+	left:0px;
+}
+.footer_color{
+	position:static !important;
+}
+#socket{
+	z-index:0;
+}
 
 /* Media Queries */
 @media only screen and (min-width:320px) and (max-width:480px){
@@ -399,7 +429,7 @@ button.single_add_to_cart_button{
 	line-height:30px;
 }
 #top div .quantity input.qty{
-		width:35px;
+		width:35px !important;
 		line-height:30px;
 		height:auto;
 }
