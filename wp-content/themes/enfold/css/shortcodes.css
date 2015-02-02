@@ -741,6 +741,7 @@ font-size: 11px;
 user-select: none;
 border-style: solid;
 border-width:1px;
+border-color:#eeeeee;
 }
 
 .js_active .top_tab .tab{

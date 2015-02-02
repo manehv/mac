@@ -149,7 +149,7 @@ border-bottom-style: solid;
 z-index: 1;
 border-color: #E0E0E0 !important;
 overflow-y: visible;
-height: 50px !important;
+height: auto !important;
 box-shadow: rgba(0,0,0,0.1)0px 2px 2px;
 }
 
@@ -204,6 +204,7 @@ overflow: hidden;
 position: relative;
 display: block;
 height: 100%;
+    min-width: 189px;
 }
 
 .logo img{
@@ -269,7 +270,7 @@ float:left;
 text-align:left;
 height:auto;
     background-color: #56656D;
-padding:8px 15px;
+padding:0px 15px;
 font-size: 12px;
 min-height: 23px;
 max-width: none;

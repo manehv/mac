@@ -390,7 +390,7 @@ button.single_add_to_cart_button{
 	line-height:30px;
 }
 #top div .quantity input.qty{
-		width:35px;
+		width:35px !important;
 		line-height:30px;
 		height:auto;
 }
