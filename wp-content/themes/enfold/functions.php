@@ -21,6 +21,7 @@ function wphidenag() {
 }
 
 wp_enqueue_script( 'lock_fixed', get_template_directory_uri() . '/js/jquery.lockfixed.js', array(), '1.0.0', true );
+wp_enqueue_script( 'slim_scroll', get_template_directory_uri() . '/js/perfect-scrollbar/jquery.slimscroll.min.js', array(), '1.0.0', true );
 wp_enqueue_script( 'custom_js', get_template_directory_uri() . '/js/custom.js', array(), '1.0.0', true );
  
 if(isset($avia_config['use_child_theme_functions_only'])) return;

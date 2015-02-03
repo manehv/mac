@@ -305,9 +305,9 @@ div .clsvari form.cart table {
 	z-index:0;
 }
 .prod-img{width:100% !important;}
-.widget_shopping_cart_content {
-    max-height: 350px;
-    overflow: scroll !important;
+div ul.product_list_widget{
+	overflow:auto;
+	height:400px;
 }
 
 /* Media Queries */
