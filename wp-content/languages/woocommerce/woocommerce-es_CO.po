@@ -3,16 +3,17 @@ msgstr ""
 "Project-Id-Version: English-Spanish\n"
 "Report-Msgid-Bugs-To: https://github.com/woothemes/woocommerce/issues\n"
 "POT-Creation-Date: 2014-06-30 14:28:36+00:00\n"
-"PO-Revision-Date: 2014-10-15 16:10+0530\n"
-"Last-Translator: \n"
+"PO-Revision-Date: 2015-02-03 08:31-0500\n"
+"Last-Translator: 8manos i18n <i18n@8manos.com>\n"
 "Language-Team: Language\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.5.4\n"
+"X-Generator: Poedit 1.7.3\n"
 "X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_e\n"
 "X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-SearchPath-0: /Projects/mac/wp-content/themes/enfold/woocommerce\n"
 
 #: assets/js/admin/editor_plugin_lang.php:5
@@ -3133,31 +3134,31 @@ msgstr ""
 
 #: i18n/strings.php:16
 msgid "pending"
-msgstr ""
+msgstr "pendiente"
 
 #: i18n/strings.php:17
 msgid "failed"
-msgstr ""
+msgstr "falló"
 
 #: i18n/strings.php:18
 msgid "on-hold"
-msgstr ""
+msgstr "en espera"
 
 #: i18n/strings.php:19
 msgid "processing"
-msgstr ""
+msgstr "procesando"
 
 #: i18n/strings.php:20
 msgid "completed"
-msgstr ""
+msgstr "completa"
 
 #: i18n/strings.php:21
 msgid "refunded"
-msgstr ""
+msgstr "devolución"
 
 #: i18n/strings.php:22
 msgid "cancelled"
-msgstr ""
+msgstr "cancelada"
 
 #: includes/abstracts/abstract-wc-email.php:570
 #: includes/emails/class-wc-email-customer-completed-order.php:140
