@@ -305,6 +305,10 @@ div .clsvari form.cart table {
 	z-index:0;
 }
 .prod-img{width:100% !important;}
+.widget_shopping_cart_content {
+    height: 800px;
+    overflow: scroll !important;
+}
 
 /* Media Queries */
 @media only screen and (min-width:320px) and (max-width:480px){
