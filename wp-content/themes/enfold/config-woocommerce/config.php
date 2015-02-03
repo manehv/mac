@@ -929,7 +929,7 @@ if(!function_exists('avia_add_image_div'))
 {
 	function avia_add_image_div()
 	{
-		echo "<div class='four units single-product-main-image alpha'>";
+		echo "<div class='four units single-product-main-image prod-img alpha'>";
 	}
 }
 
