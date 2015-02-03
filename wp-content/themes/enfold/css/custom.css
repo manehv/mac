@@ -305,9 +305,20 @@ div .clsvari form.cart table {
 	z-index:0;
 }
 .prod-img{width:100% !important;}
-.widget_shopping_cart_content {
-    height: 800px;
-    overflow: scroll !important;
+div ul.product_list_widget{
+	overflow:auto;
+	height:400px;
+}
+.header_color .main_menu ul:first-child > li:hover{
+	background-color: #56656d;
+}
+.header_color .main_menu ul:first-child > li:hover > a{
+	color:#fff !important;
+}
+.sub-menu a{
+	height:auto !important;
+	padding-top:10px;
+	padding-bottom:10px;
 }
 
 /* Media Queries */
