@@ -309,6 +309,12 @@ div ul.product_list_widget{
 	overflow:auto;
 	height:400px;
 }
+.header_color .main_menu ul:first-child > li:hover{
+	background-color: #56656d;
+}
+.header_color .main_menu ul:first-child > li:hover > a{
+	color:#fff !important;
+}
 
 /* Media Queries */
 @media only screen and (min-width:320px) and (max-width:480px){
