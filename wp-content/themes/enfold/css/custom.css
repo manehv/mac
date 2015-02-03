@@ -307,7 +307,7 @@ div .clsvari form.cart table {
 .prod-img{width:100% !important;}
 div ul.product_list_widget{
 	overflow:auto;
-	height:400px;
+	height:200px;
 }
 .header_color .main_menu ul:first-child > li:hover{
 	background-color: #56656d;
