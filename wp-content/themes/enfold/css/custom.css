@@ -304,6 +304,7 @@ div .clsvari form.cart table {
 #socket{
 	z-index:0;
 }
+.prod-img{width:100% !important;}
 
 /* Media Queries */
 @media only screen and (min-width:320px) and (max-width:480px){
