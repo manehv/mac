@@ -306,7 +306,7 @@ div .clsvari form.cart table {
 }
 .prod-img{width:100% !important;}
 .widget_shopping_cart_content {
-    height: 800px;
+    max-height: 350px;
     overflow: scroll !important;
 }
 
