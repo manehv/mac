@@ -320,7 +320,16 @@ div ul.product_list_widget{
 	padding-top:10px;
 	padding-bottom:10px;
 }
-
+#simplr-form input[type="text"] {    
+    box-shadow: unset !important;
+    padding: 15px !important;
+		border-radius:unset;
+}
+#simplr-form input[type="submit"] {
+    background-image: -moz-linear-gradient(center bottom , #777777 43%, #777777 75%, #777777 89%)!important;
+    border-radius: unset !important;
+    box-shadow: unset !important;
+}
 /* Media Queries */
 @media only screen and (min-width:320px) and (max-width:480px){
 	.responsive .logo a, .responsive .logo img{height:70px !important; }
