@@ -25,6 +25,7 @@ wp_enqueue_script( 'slim_scroll', get_template_directory_uri() . '/js/perfect-sc
 wp_enqueue_script( 'custom_js', get_template_directory_uri() . '/js/custom.js', array(), '1.0.0', true );
  
 if(isset($avia_config['use_child_theme_functions_only'])) return;
+add_theme_support('avia_conditionals_for_mega_menu');
 //set builder mode to debug
 add_action('avia_builder_mode', "builder_set_debug");
 function builder_set_debug()
@@ -375,32 +376,7 @@ if(!function_exists('avia_nav_menus'))
 }
 
 
-add_filter('wp_nav_menu_items', 'wps_add_login_logout_link', 10, 2);
-function wps_add_login_logout_link($items, $args) {
-	$login = __('Log In');
-	$logout = __('Log Out');
-	//print_r($items);
-	//use one of the following methods of identification
-	$menu_id = ''; // This will be login
-	$menu_name = "Login"; //name you gave to the menu
-	$menu_slug = ""; //slug of the menu, generally menu_name reduced to lowercase
 
-	if ( ! is_user_logged_in() ){
-	$link = '<a href="' . esc_url( wp_login_url('mi-cuenta') ) . '">' . $login . '111</a>';
-	}
-	else{
-	$link = '<a href="' . esc_url( wp_logout_url($redirect) ) . '">' . $logout . '222</a>';
-	}
-
-	if ( ($menu_id) && ($args->menu->term_id == $menu_id) )
-	$items .= '<li>'. $link .'</li>';
-	elseif ( ($menu_name) && ($args->menu->name == $menu_name) )
-	$items .= '<li>'. $link .'</li>';
-	elseif ( ($menu_slug) && ($args->menu->slug == $menu_slug) )
-	$items .= '<li>'. $link .'</li>';
-
-	return $items;
-}
 
 
 
@@ -761,4 +737,26 @@ function fetch_custom_product_meta( $data, $product, $variation){
 	}	
 	return $data ;
 }
-  
+
+
+function wp_nav_menu_attributes_filter($var) {
+	return is_array($var) ? array_intersect($var, array('main')) : '';
+}
+add_filter('nav_menu_css_class', 'wp_nav_menu_attributes_filter', 100, 1);
+add_filter('nav_menu_item_id', 'wp_nav_menu_attributes_filter', 100, 1);
+add_filter('page_css_class', 'wp_nav_menu_attributes_filter', 100, 1);
+
+
+//add_filter( 'wp_nav_menu_items', 'my_nav_menu_profile_link');
+function my_nav_menu_profile_link($menu) {
+    if (!is_user_logged_in()){
+         return $menu;
+    }  else {
+							$logout_url = get_permalink();
+							$items .= '<li><a href="'. wp_logout_url($logout_url) .'">Log Out</a></li>';
+							$current_user = wp_get_current_user();
+							$title="Hi! ".$current_user->user_login;
+return $menu.$items;
+			}
+}
+
