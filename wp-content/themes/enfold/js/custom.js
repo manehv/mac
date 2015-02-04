@@ -51,7 +51,7 @@ jQuery(document).ready(function($)
 			currentVal	= parseFloat( $qty.val() ),
 			max			= parseFloat( $qty.attr( 'max' ) ),
 			min			= parseFloat( $qty.attr( 'min' ) ),
-			step		= $qty.attr( 'step' ),
+			step		= $qty.attr( 'step' ),	
 			$qty_all = $( '.qty' ) ;
 
 		// Format values
@@ -63,24 +63,42 @@ jQuery(document).ready(function($)
 		// Change the value
 		if ( $( this ).is( '.plus' ) ) {
 			if ( max && ( max == currentVal || currentVal > max ) ) {
-				$qty_all.val(max);
+				if(!$(this).parents(".single-product").length){
+					$qty.val( max );
+				}
+				else{
+					$qty_all.val(max);
+				}
 			} else {
 				var $val = currentVal + parseFloat( step );
-				$qty_all.val($val);
+				if(!$(this).parents(".single-product").length){
+					$qty.val( $val );
+				}
+				else{
+					$qty_all.val($val);
+				}
 			}
 
 		} else {
 
 			if ( min && ( min == currentVal || currentVal < min ) ) {
-				$qty_all.val(min);
+				if(!$(this).parents(".single-product").length){
+					$qty.val( min );
+				}
+				else{
+					$qty_all.val(min);
+				}
 			} else if ( currentVal > 0 ) {
 				var $val = currentVal - parseFloat( step );
-				$qty_all.val( $val);
+				if(!$(this).parents(".single-product").length){
+					$qty.val( $val );
+				}
+				else{
+					$qty_all.val( $val);
+				}
 			}
 
 		}
-
-		
 		// Trigger change event
 		$qty.trigger( 'change' );
 	});	
