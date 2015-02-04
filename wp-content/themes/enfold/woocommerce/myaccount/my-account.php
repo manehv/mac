@@ -12,7 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 wc_print_notices(); ?>
-<h2 class='clsMyAcc'><?php _e('My Shopping','avia_framework'); ?></h2>
+<h2 class='clsMyAcc'>Mi Cuenta</h2>
 <p class="myaccount_user">
 	Desde la página de cuenta puedes ver pedidos recientes, gestionar tu dirección de envío, dirección de facturación y cambiar tu contraseña.
 </p>
