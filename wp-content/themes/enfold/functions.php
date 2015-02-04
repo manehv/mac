@@ -375,7 +375,32 @@ if(!function_exists('avia_nav_menus'))
 }
 
 
+add_filter('wp_nav_menu_items', 'wps_add_login_logout_link', 10, 2);
+function wps_add_login_logout_link($items, $args) {
+	$login = __('Log In');
+	$logout = __('Log Out');
+	//print_r($items);
+	//use one of the following methods of identification
+	$menu_id = ''; // This will be login
+	$menu_name = "Login"; //name you gave to the menu
+	$menu_slug = ""; //slug of the menu, generally menu_name reduced to lowercase
 
+	if ( ! is_user_logged_in() ){
+	$link = '<a href="' . esc_url( wp_login_url('mi-cuenta') ) . '">' . $login . '111</a>';
+	}
+	else{
+	$link = '<a href="' . esc_url( wp_logout_url($redirect) ) . '">' . $logout . '222</a>';
+	}
+
+	if ( ($menu_id) && ($args->menu->term_id == $menu_id) )
+	$items .= '<li>'. $link .'</li>';
+	elseif ( ($menu_name) && ($args->menu->name == $menu_name) )
+	$items .= '<li>'. $link .'</li>';
+	elseif ( ($menu_slug) && ($args->menu->slug == $menu_slug) )
+	$items .= '<li>'. $link .'</li>';
+
+	return $items;
+}
 
 
 
