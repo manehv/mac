@@ -1,0 +1,224 @@
+form#add-field {
+	margin:10px 10% 30px 0;
+	padding:10px;
+	background: #fff;
+	border-radius:6px;
+	-webkit-border-radius:6px;
+	-moz-border-radius:6px;
+	clear:both;
+}
+
+form#add-field h3 {
+	margin: 15px 0;
+	font-weight:normal;
+	font-size:40px;
+}
+
+form#add-field .option-field {
+	clear:both;
+	width:100%;
+	margin:10px 0;
+	padding: 15px 0;
+	border-top:1px dashed #ccc;
+}
+
+form#add-field label {
+	width:300px;
+	display: block;
+	margin: 5px 0;
+	font-size: 1.1em;
+	font-weight:bold;
+}
+
+form#add-field input[type=text], form#add-field textarea {
+	width: 55%;
+	padding:5px;
+	box-shadow: inset 1px 1px 3px #eee;
+	-webkit-box-shadow: inset 1px 1px 3px #eee;
+	-moz-box-shadow: inset 1px 1px 3px #eee;
+	-khtml-box-shadow: inset 1px 1px 3px #eee;
+	border:1px solid #ccc;
+	background: #f9f9f9;i
+	border-radius:3px;
+}
+
+form#add-field input:focus, form#add-field textarea:focus {
+	background:#fff;
+}
+
+form#add-field .chzn-container input {
+	 box-shadow: none;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        -khtml-box-shadow: none;
+}
+
+form#add-field textarea {
+ 	padding: 10px;
+ 	line-height: 1.5em;
+}
+
+form#add-field input[type='checkbox'] {
+	width: 20px;
+}
+
+form#add-field input[type='submit'] {
+		border-radius:6px;
+	-webkit-border-radius:6px;
+	-moz-border-radius:6px;
+}
+
+form#add-field .form-comment {
+	clear:both;
+	color: #666;
+	font-size: 11px;
+	font-style: italic;
+	display:block;
+	float:left;
+	margin:10px 0 10px 0;
+	width:60%;
+}
+
+form#add-field select {
+	width: 200px;
+}
+
+form#add-field #choices {
+	background:#f7f7f7;
+	border: 1px solid #eee;
+	padding: 0 10px;
+}
+
+#simplr-sub-nav {
+	margin: 5px 0 10px 0;
+	padding: 5px;
+}
+
+.add-field-button {
+	margin-right:5px;
+}
+
+#recaptcha_widget_div {
+	margin: 0 0 20px;
+	padding: 5px;
+	border:1px solid #eee;
+	background: #f7f7f7;
+	width: 325px;
+}
+
+form#add-field .info {
+	background: transparent url('images/question-mark.png') no-repeat top left;
+	padding-left: 20px;
+	font-size: 11px;
+}
+
+form#add-field .info:hover {
+	cursor: pointer;
+}
+
+#fblogin {
+	text-align:right;
+	clear:both;
+	width:100%;
+}
+
+#your-profile label {
+	width:220px;
+	display:block;
+	float:left;
+	padding:10px;
+	clear: left;
+}
+
+#your-profile .option-field {
+	padding: 0px 5px;
+	clear: both;
+}
+
+#your-profile .option-field input,#your-profile .option-field select,#your-profile .option-field textarea {
+	margin:10px;
+	padding:2px;
+}
+
+#your-profile .option-field textarea {
+	padding: 10px;
+	width:400px;
+}
+
+.checkbox-wrapper {
+	height: 100px;
+	width: 90%;
+	padding:10px 20px;
+	clear: both;
+}
+
+.perm {
+	float:left;
+	width: 200px;
+	margin: 0 5px;
+}
+
+table#fields-table tbody td.key {
+	color:#999;
+	font-style: italic;
+}
+
+table#fields-table tbody td.label {
+	font-weight: bold;
+}
+
+table#fields-table tbody td.label:hover {
+	cursor: move;
+}
+
+table#fields-table tbody td {
+	padding:5px;
+	vertical-align: middle;
+}
+
+.ajaxloading {
+	color:#666;
+	font-style:italic;
+	float:right;
+	display:none;
+}
+
+.clearfix {
+	clear:both;
+}
+
+p.submit {
+	padding:0 !important;
+}
+
+/*table#reg-table {
+	font-family: Tahoma, helvetica;
+	overflow:scroll;
+}
+
+table#reg-table input[type='text'],textarea {
+	width: 90%;
+}
+
+table#reg-table tr {
+	
+}
+
+table#reg-table tr th {
+	background: #f7f7f7;
+	text-align:right;
+	width:20%;
+	border-right:1px solid #eee;
+	border-bottom:1px dotted #eee;
+}
+*/
+#sortable .item {
+	background: #f7f7f7;
+	border:1px solid #ccc;
+	padding: 5px;
+	margin: 5px;
+}
+
+#sortable .item:hover {
+	cursor:move;
+}
