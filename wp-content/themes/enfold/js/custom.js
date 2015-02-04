@@ -49,8 +49,8 @@ jQuery(document).ready(function($)
 		// Get values
 		var $qty		= $( this ).closest( '.quantity' ).find( '.qty' ),
 			currentVal	= parseFloat( $qty.val() ),
-			max			= parseFloat( $qty.attr( 'max' ) ),
-			min			= parseFloat( $qty.attr( 'min' ) ),
+			max			= parseFloat( $qty.data( 'max' ) ),
+			min			= parseFloat( $qty.data( 'min' ) ),
 			step		= $qty.attr( 'step' ),	
 			$qty_all = $( '.qty' ) ;
 
@@ -59,7 +59,7 @@ jQuery(document).ready(function($)
 		if ( max === '' || max === 'NaN' ) max = '';
 		if ( min === '' || min === 'NaN' ) min = 0;
 		if ( step === 'any' || step === '' || step === undefined || parseFloat( step ) === 'NaN' ) step = 1;
-
+		console.log(max);
 		// Change the value
 		if ( $( this ).is( '.plus' ) ) {
 			if ( max && ( max == currentVal || currentVal > max ) ) {
