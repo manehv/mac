@@ -266,7 +266,7 @@ div .clsvari form.cart table {
 #top .dropdown_widget .buttons .button:hover {background-color: #0088cc !important; transition: all 0.3s ease-out 0s; }
 
 
-.sub-menu li a{line-height:10px !important;}
+.sub-menu li a{line-height:28px !important;}
 .sub-menu li a span{font-weight:800;}
 
  #top form.login ,#top form.register{border:none;}
@@ -512,3 +512,10 @@ color:#6D6D6D;
 .lost_password a{
 	color:#6D6D6D;
 }
+.sub-menu .avia-menu-text{
+	padding:6px;
+}
+.sub-menu{
+	min-width: 101px;
+}
+
