@@ -274,7 +274,7 @@ div .clsvari form.cart table {
     clear: none;
 }
 .login .form-row input.input-text{padding:17px 6px !important;}
-#main, .html_stretched #wrap_all{background-color:#ffffff !important;}
+#main, .html_stretched #wrap_all{background-color:#ffffff;}
 
 
 .clsMyAcc{
@@ -512,6 +512,7 @@ input[type="submit"], #submit, .button {
 .lost_password a{
 	color:#6D6D6D;
 }
+
 .sub-menu .avia-menu-text{
 	padding:6px;
 }
@@ -522,6 +523,7 @@ input[type="submit"], #submit, .button {
 .entry-summary  .variations_button{
 	display:none!important;	
 }
+
 .nameset{
 	background-color:none;
 	font-size:14px;
@@ -537,3 +539,4 @@ input[type="submit"], #submit, .button {
 .linkcolor a{
 	color:#282828;
 }
+
