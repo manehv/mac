@@ -738,22 +738,30 @@ function fetch_custom_product_meta( $data, $product, $variation){
 	return $data ;
 }
 
-
 																																																																		
-add_filter( 'wp_nav_menu_items', 'my_nav_menu_profile_link');
+add_filter( 'wp_nav_menu_items', 'my_nav_menu_profile_link',10,2);
 
-function my_nav_menu_profile_link($menu) {
-    if (!is_user_logged_in()){
-					return $menu;
-	  	}  else {
+function my_nav_menu_profile_link($menu, $args) {
+
+			if (!is_user_logged_in()){
+							return $menu;
+	  	}
+
+	  	else if($args->theme_location=='avia'){
+	  	
 								 $logout_url= home_url()."/login";
 												//  $items .= '<li><a href="'. wp_logout() .'">Click Here (Log Out)</a></li>';
 								 $current_user = wp_get_current_user();
 							   $title="Hi! ".$current_user->user_login.".";
+							   $title=SUBSTR($title,0,15);
 							   $items.= '<span class="adminset">';
 							   $items .= '<span class="nameset">'.$title.'</span>';
 						     $items .= '<span class="linkcolor"><a href="'.wp_logout_url($logout_url).'">'.__('Logout').'</a></span></span>';
-													return $menu.$items;
+													return $menu.$items;													
+			}
+			else
+			{
+								return $menu;
 			}
 }
 
