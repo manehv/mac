@@ -494,3 +494,21 @@ Mobile Styles
         right: 50px;
 	}
 }
+input[type="submit"], #submit, .button {
+	border-radius: 0px;
+	color:#ffffff;
+	background-color:#666666;
+	padding: 9px 54px;
+	font-size:14px;
+}
+#top .form-row label{
+	font-size:14px;
+  color:#666666;
+}
+ .inline{
+	 font-weight:normal!important;
+color:#6D6D6D;
+}
+.lost_password a{
+	color:#6D6D6D;
+}
