@@ -1,0 +1,26 @@
+<?php 
+$perms = array(
+	'email' => 'Email',
+	'user_about_me' => 'User About Me',
+	'user_activities'=>	'User Activities',
+	'user_birthday'	=> 'User Birtday',
+	'user_checkins' =>	'Checkings',
+	'user_education_history' =>	'User Education History',
+	'user_events'	=> 'User Events',
+	'user_groups'	=> 'User Groups',
+	'user_hometown'	=> 'User Hometown',
+	'user_interests' => 'User Interests',
+	'user_likes' =>	'User Likes',
+	'user_location' =>	'User Location',
+	'user_notes' => 'User Notes',
+	'user_online_presence' => 'User Online Presence',
+	'user_photo_video_tags' => 'User Photo Video Tags',
+	'user_photos' => 'User Photos',
+	'user_relationships' => 'User Relationshipts',
+	'user_relationship_details' => 'User Relationship Details',
+	'user_religion_politics' =>	'User Religion and Politics',
+	'user_status' =>	'User Status',
+	'user_videos'	=> 'User Videos',
+	'user_website' => 'User Website',
+	'user_work_history' => 'User Work History'
+);

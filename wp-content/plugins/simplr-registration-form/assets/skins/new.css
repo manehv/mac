@@ -1,0 +1,57 @@
+/* new styleshee for version 2.2 */
+
+.simplr-field, .option-field {
+	margin:10px 0;
+}
+
+.simplr-field label,.option-field label {
+	width: 30%;
+	display:block;
+	float:left;
+}
+
+.simplr-field input, .option-field input {
+	background: #f7f7f7;
+	width: 60%;
+}
+
+.simplr-field.error input, .option-field.error input , .select.error select {
+	background: #FFBABA;
+}
+
+.simplr-field input:focus, .option-field input:focus {
+	background: #fff;
+}
+
+
+#simplr-message {
+	border-radius: 6px;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	padding:10px;
+	width:90%;
+	margin:10px 5px; 
+}
+
+.simplr-message {
+	margin:5px 0; 
+	padding:5px 10px; 
+	font-size:12px; 
+	border-radius: 6px; 
+	-webkit-border-radius:6px; 
+	-moz-border-radius:6px; 
+	opacity:0.7;
+}
+
+.simplr-message.success { 
+	background: #DFF2BF; 
+	color:#4F8A10; 
+	border-color: #4F8A10;
+}
+
+.simplr-message.error { 
+	background: #FFBABA; 
+	color: #D8000C;
+	border-color: #D8000C; 
+}
+

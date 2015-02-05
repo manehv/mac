@@ -25,6 +25,7 @@ wp_enqueue_script( 'slim_scroll', get_template_directory_uri() . '/js/perfect-sc
 wp_enqueue_script( 'custom_js', get_template_directory_uri() . '/js/custom.js', array(), '1.0.0', true );
  
 if(isset($avia_config['use_child_theme_functions_only'])) return;
+add_theme_support('avia_conditionals_for_mega_menu');
 //set builder mode to debug
 add_action('avia_builder_mode', "builder_set_debug");
 function builder_set_debug()
@@ -736,4 +737,32 @@ function fetch_custom_product_meta( $data, $product, $variation){
 	}	
 	return $data ;
 }
-  
+
+
+function wp_nav_menu_attributes_filter($var) {
+	return is_array($var) ? array_intersect($var, array('main')) : '';
+}
+add_filter('nav_menu_css_class', 'wp_nav_menu_attributes_filter', 100, 1);
+add_filter('nav_menu_item_id', 'wp_nav_menu_attributes_filter', 100, 1);
+add_filter('page_css_class', 'wp_nav_menu_attributes_filter', 100, 1);
+
+
+//add_filter( 'wp_nav_menu_items', 'my_nav_menu_profile_link');
+function my_nav_menu_profile_link($menu) {
+    if (!is_user_logged_in()){
+         return $menu;
+    }  else {
+							$logout_url = get_permalink();
+							$items .= '<li><a href="'. wp_logout_url($logout_url) .'">Log Out</a></li>';
+							$current_user = wp_get_current_user();
+							$title="Hi! ".$current_user->user_login;
+return $menu.$items;
+			}
+}
+
+add_action('wp_logout','go_home');
+function go_home(){  
+  $logout_url= home_url()."/login";
+  wp_redirect($logout_url);
+  exit();
+}

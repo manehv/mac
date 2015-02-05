@@ -307,7 +307,7 @@ div .clsvari form.cart table {
 .prod-img{width:100% !important;}
 div ul.product_list_widget{
 	overflow:auto;
-	height:400px;
+	height:200px;
 }
 .header_color .main_menu ul:first-child > li:hover{
 	background-color: #56656d;
@@ -320,7 +320,16 @@ div ul.product_list_widget{
 	padding-top:10px;
 	padding-bottom:10px;
 }
-
+#simplr-form input[type="text"] {    
+    box-shadow: unset !important;
+    padding: 15px !important;
+		border-radius:unset;
+}
+#simplr-form input[type="submit"] {
+    background-image: -moz-linear-gradient(center bottom , #777777 43%, #777777 75%, #777777 89%)!important;
+    border-radius: unset !important;
+    box-shadow: unset !important;
+}
 /* Media Queries */
 @media only screen and (min-width:320px) and (max-width:480px){
 	.responsive .logo a, .responsive .logo img{height:70px !important; }
@@ -484,4 +493,22 @@ Mobile Styles
 		top: 25px;
         right: 50px;
 	}
+}
+input[type="submit"], #submit, .button {
+	border-radius: 0px;
+	color:#ffffff;
+	background-color:#666666;
+	padding: 9px 54px;
+	font-size:14px;
+}
+#top .form-row label{
+	font-size:14px;
+  color:#666666;
+}
+ .inline{
+	 font-weight:normal!important;
+color:#6D6D6D;
+}
+.lost_password a{
+	color:#6D6D6D;
 }

@@ -1,0 +1,519 @@
+# Language file for Simplr REgistration Forms.
+# Copyright (C) 2014 Marcel Pol
+# This file is distributed under the same license as the Simplr Registration Forms package.
+# Marcel Pol <marcel@timelord.nl>, 2014.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-24 23:01+0100\n"
+"PO-Revision-Date: 2014-12-24 23:07+0100\n"
+"Last-Translator: Marcel Pol <marcel@timelord.nl>\n"
+"Language-Team: NL <nl@li.org>\n"
+"Language: nl_NL\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.10\n"
+
+#: main_options_page.php:8 simplr_reg_page.php:116
+msgid "Settings"
+msgstr "Instellingen"
+
+#: main_options_page.php:9
+#, fuzzy
+msgid "Fields"
+msgstr "Velden met  een * zijn verplicht."
+
+#: main_options_page.php:10
+msgid "Moderation"
+msgstr ""
+
+#: main_options_page.php:12
+msgid "Instructions"
+msgstr ""
+
+#: main_options_page.php:24
+msgid ""
+"Your site is not configured to allow user registrations. To turn on user "
+"registration change the membership setting on the <strong>Settings >> "
+"General</strong> menu."
+msgstr ""
+
+#: simplr_form_functions.php:33
+msgid "The passwords you entered do not match."
+msgstr ""
+
+#: simplr_form_functions.php:38
+msgid "You must enter a password to register for this site."
+msgstr ""
+
+#: simplr_form_functions.php:45
+msgid "You must enter a username."
+msgstr ""
+
+#: simplr_form_functions.php:51
+#, fuzzy
+msgid "Invalid Username."
+msgstr "Ongeldige post ID opgegeven"
+
+#: simplr_form_functions.php:57
+#, fuzzy
+msgid "This username already exists."
+msgstr "bericht was al gemarkeerd als spam en is niet veranderd. "
+
+#: simplr_form_functions.php:65 lib/profile.php:207
+msgid "You must enter an email."
+msgstr ""
+
+#: simplr_form_functions.php:68
+msgid "The emails you entered do not match."
+msgstr ""
+
+#: simplr_form_functions.php:72 lib/profile.php:213
+msgid "An account with this email has already been registered."
+msgstr ""
+
+#: simplr_form_functions.php:76 lib/profile.php:217
+msgid "Please enter a valid email."
+msgstr ""
+
+#: simplr_form_functions.php:93 simplr_form_functions.php:97
+msgid " is a required field. Please enter a value."
+msgstr ""
+
+#: simplr_form_functions.php:237
+msgid "Please check your email for confirmation."
+msgstr ""
+
+#: simplr_form_functions.php:239
+#, fuzzy
+msgid "Your Registration was successful."
+msgstr "Registratie Forms"
+
+#: simplr_form_functions.php:257
+#, fuzzy
+msgid "A new user registered for"
+msgstr "Nieuw"
+
+#: simplr_form_functions.php:257
+msgid "A new user has registered for"
+msgstr ""
+
+#: simplr_form_functions.php:260
+msgid "You should login and change your password as soon as possible."
+msgstr ""
+
+#: simplr_form_functions.php:262
+#, fuzzy
+msgid "Username:"
+msgstr "Pagina %s"
+
+#: simplr_form_functions.php:273
+#, fuzzy
+msgid "Registration Confirmation"
+msgstr "Registratie Forms"
+
+#: simplr_form_functions.php:304
+#, fuzzy
+msgid "Email Address:"
+msgstr "E-mail"
+
+#: simplr_form_functions.php:305
+#, fuzzy
+msgid "Confirm Email:"
+msgstr "E-mail"
+
+#: simplr_form_functions.php:306
+#, fuzzy
+msgid "Your Username:"
+msgstr "Voer je Facebook URL in"
+
+#: simplr_form_functions.php:307
+msgid "Choose a Password"
+msgstr ""
+
+#: simplr_form_functions.php:308 lib/profile.php:131
+msgid "Confirm Password"
+msgstr ""
+
+#: simplr_form_functions.php:418 lib/login.php:480 lib/login.php:536
+#: lib/login.php:578
+msgid "Register"
+msgstr ""
+
+#: simplr_form_functions.php:445
+#, fuzzy
+msgid "Thank you for registering."
+msgstr "Bedankt voor je bericht."
+
+#: simplr_form_functions.php:449
+msgid "You are already registered for this site!!!"
+msgstr ""
+
+#: simplr_form_functions.php:502
+#, fuzzy
+msgid "Thank you for registering"
+msgstr "Bedankt voor je bericht."
+
+#: simplr_form_functions.php:510
+msgid "You should not register admin users via a public form"
+msgstr ""
+
+#: simplr_form_functions.php:530
+msgid ""
+"The reCAPTCHA wasn't entered correctly. Go back and try it again. (reCAPTCHA "
+"said:"
+msgstr ""
+
+#: simplr_reg_options.php:140 simplr_reg_options.php:143
+#, fuzzy
+msgid "Registration Form"
+msgstr "Formulier"
+
+#: simplr_reg_options.php:146
+#, fuzzy
+msgid "Options"
+msgstr "Opties"
+
+#: simplr_reg_options.php:153
+msgid "Role"
+msgstr ""
+
+#: simplr_reg_options.php:154
+msgid "Specify the registration user role."
+msgstr ""
+
+#: simplr_reg_options.php:156
+#, fuzzy
+msgid "Select role ..."
+msgstr "Selecteer pagina"
+
+#: simplr_reg_options.php:166
+#, fuzzy
+msgid "Thank You page"
+msgstr "Bedankt voor je bericht."
+
+#: simplr_reg_options.php:167
+msgid "Leave blank to display message on this page."
+msgstr ""
+
+#: simplr_reg_options.php:170
+#, fuzzy
+msgid "Select"
+msgstr "Selecteer pagina"
+
+#: simplr_reg_options.php:177
+#, fuzzy
+msgid "Message"
+msgstr "Bericht"
+
+#: simplr_reg_options.php:178
+#, fuzzy
+msgid "Confirmation for registered users."
+msgstr "De volgende gebruikers hebben zich aangemekd voor deze service:"
+
+#: simplr_reg_options.php:184
+msgid "Notifications"
+msgstr ""
+
+#: simplr_reg_options.php:185
+msgid "Notify these emails."
+msgstr ""
+
+#: simplr_reg_options.php:191 lib/login.php:558
+#, fuzzy
+msgid "Password"
+msgstr "Voer je wachtwoord in om reacties te lezen."
+
+#: simplr_reg_options.php:193
+msgid "Select \"yes\" to allow users to set their password."
+msgstr ""
+
+#: simplr_reg_options.php:195
+msgid "No"
+msgstr ""
+
+#: simplr_reg_options.php:196
+msgid "Yes"
+msgstr ""
+
+#: simplr_reg_options.php:201
+#, fuzzy
+msgid "Custom Fields"
+msgstr "Velden met  een * zijn verplicht."
+
+#: simplr_reg_page.php:100
+msgid "Registration Forms"
+msgstr "Registratie Forms"
+
+#: simplr_reg_page.php:720 simplr_reg_page.php:737
+#, fuzzy
+msgid "Your settings were saved."
+msgstr "Je instellingen zijn opgeslagen"
+
+#: simplr_reg_page.php:748
+msgid "Field deleted."
+msgstr ""
+
+#: simplr_reg_page.php:758
+#, fuzzy
+msgid "Fields were deleted."
+msgstr "Velden met  een * zijn verplicht."
+
+#: simplr_reg_page.php:768
+#, fuzzy
+msgid "Your Field was saved."
+msgstr "Je instellingen zijn opgeslagen"
+
+#: simplr_reg_page.php:793
+msgid "Could not activate requested user."
+msgstr ""
+
+#: simplr_reg_page.php:816
+#, fuzzy
+msgid "Emails resent"
+msgstr "E-mail"
+
+#: simplr_reg_page.php:832
+msgid "Sorry, We could not find the requested account."
+msgstr ""
+
+#: simplr_reg_page.php:834
+msgid "Congratulations! Your Account was activated!"
+msgstr ""
+
+#: simplr_reg_page.php:933
+msgid ""
+"<strong>ERROR</strong>: This account has not yet been approved by the "
+"moderator"
+msgstr ""
+
+#: lib/login.php:69
+msgid "Sorry, that key does not appear to be valid."
+msgstr ""
+
+#: lib/login.php:114
+msgid "You have logged in successfully."
+msgstr ""
+
+#: lib/login.php:143
+msgid ""
+"<strong>ERROR</strong>: Cookies are blocked or not supported by your "
+"browser. You must <a href='http://www.google.com/cookies.html'>enable "
+"cookies</a> to use WordPress."
+msgstr ""
+
+#: lib/login.php:147
+msgid "You are now logged out."
+msgstr ""
+
+#: lib/login.php:149
+msgid "User registration is currently not allowed."
+msgstr ""
+
+#: lib/login.php:151
+msgid "Check your e-mail for the confirmation link."
+msgstr ""
+
+#: lib/login.php:153
+msgid "Check your e-mail for your new password."
+msgstr ""
+
+#: lib/login.php:155
+msgid "Registration complete. Please check your e-mail."
+msgstr ""
+
+#: lib/login.php:157
+msgid "Your session has expired. Please log-in again."
+msgstr ""
+
+#: lib/login.php:239
+#, fuzzy, php-format
+msgid "&larr; Back to %s"
+msgstr "Pagina %s"
+
+#: lib/login.php:280
+msgid "<strong>ERROR</strong>: Enter a username or e-mail address."
+msgstr ""
+
+#: lib/login.php:285
+msgid ""
+"<strong>ERROR</strong>: There is no user registered with that email address."
+msgstr ""
+
+#: lib/login.php:297
+msgid "<strong>ERROR</strong>: Invalid username or e-mail."
+msgstr ""
+
+#: lib/login.php:311
+msgid "Password reset is not allowed for this user"
+msgstr ""
+
+#: lib/login.php:323
+msgid "Someone requested that the password be reset for the following account:"
+msgstr ""
+
+#: lib/login.php:325
+#, fuzzy, php-format
+msgid "Username: %s"
+msgstr "Pagina %s"
+
+#: lib/login.php:326
+msgid "If this was a mistake, just ignore this email and nothing will happen."
+msgstr ""
+
+#: lib/login.php:327
+msgid "To reset your password, visit the following address:"
+msgstr ""
+
+#: lib/login.php:337
+#, fuzzy, php-format
+msgid "[%s] Password Reset"
+msgstr "Pagina %s"
+
+#: lib/login.php:343
+#, fuzzy
+msgid "The e-mail could not be sent."
+msgstr "E-Mail"
+
+#: lib/login.php:343
+msgid "Possible reason: your host may have disabled the mail() function..."
+msgstr ""
+
+#: lib/login.php:364 lib/login.php:367 lib/login.php:372
+#, fuzzy
+msgid "Invalid key"
+msgstr "Ongeldige post ID opgegeven"
+
+#: lib/login.php:407
+msgid "<strong>ERROR</strong>: Please enter a username."
+msgstr ""
+
+#: lib/login.php:409
+msgid ""
+"<strong>ERROR</strong>: This username is invalid because it uses illegal "
+"characters. Please enter a valid username."
+msgstr ""
+
+#: lib/login.php:412
+msgid ""
+"<strong>ERROR</strong>: This username is already registered, please choose "
+"another one."
+msgstr ""
+
+#: lib/login.php:417
+msgid "<strong>ERROR</strong>: Please type your e-mail address."
+msgstr ""
+
+#: lib/login.php:419
+msgid "<strong>ERROR</strong>: The email address isn&#8217;t correct."
+msgstr ""
+
+#: lib/login.php:422
+msgid ""
+"<strong>ERROR</strong>: This email is already registered, please choose "
+"another one."
+msgstr ""
+
+#: lib/login.php:435
+#, php-format
+msgid ""
+"<strong>ERROR</strong>: Couldn&#8217;t register you... please contact the <a "
+"href=\"mailto:%s\">webmaster</a> !"
+msgstr ""
+
+#: lib/login.php:469
+#, fuzzy
+msgid "Username or E-mail:"
+msgstr "E-Mail"
+
+#: lib/login.php:478 lib/login.php:503 lib/login.php:534
+msgid "Log in"
+msgstr "Inloggen"
+
+#: lib/login.php:500
+#, fuzzy
+msgid "The passwords do not match."
+msgstr "OK, daar gaat ie dan !"
+
+#: lib/login.php:503
+msgid "Password Reset"
+msgstr ""
+
+#: lib/login.php:503
+msgid "Your password has been reset."
+msgstr ""
+
+#: lib/login.php:511
+msgid "Reset Password"
+msgstr ""
+
+#: lib/login.php:511
+#, fuzzy
+msgid "Enter your new password below."
+msgstr "Voer je wachtwoord in om reacties te lezen."
+
+#: lib/login.php:518
+msgid "New password"
+msgstr ""
+
+#: lib/login.php:522
+#, fuzzy
+msgid "Confirm new password"
+msgstr "Voer je wachtwoord in om reacties te lezen."
+
+#: lib/login.php:526
+msgid "Strength indicator"
+msgstr ""
+
+#: lib/login.php:527
+msgid ""
+"Hint: The password should be at least seven characters long. To make it "
+"stronger, use upper and lower case letters, numbers and symbols like ! \" ? "
+"$ % ^ &amp; )."
+msgstr ""
+
+#: lib/login.php:554
+msgid "Username"
+msgstr ""
+
+#: lib/login.php:579 lib/login.php:581
+#, fuzzy
+msgid "Password Lost and Found"
+msgstr "Voer je wachtwoord in om reacties te lezen."
+
+#: lib/login.php:579 lib/login.php:581
+#, fuzzy
+msgid "Lost your password?"
+msgstr "Voer je wachtwoord in om reacties te lezen."
+
+#: lib/profile.php:32
+#, fuzzy
+msgid "Your profile was saved"
+msgstr "Je instellingen zijn opgeslagen"
+
+#: lib/profile.php:121
+msgid "Change Password"
+msgstr ""
+
+#: lib/profile.php:125
+msgid "New Password"
+msgstr ""
+
+#: lib/profile.php:127
+msgid ""
+"If you would like to change the password type a new one. Otherwise leave "
+"this blank."
+msgstr ""
+
+#: views/api.php:81 views/api.php:166 views/main.php:107
+#, fuzzy
+msgid "Save Changes"
+msgstr "Opslaan"
+
+#: views/moderation.php:23
+#, fuzzy
+msgid "Settings saved"
+msgstr "Je instellingen zijn opgeslagen"
