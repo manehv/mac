@@ -760,3 +760,9 @@ return $menu.$items;
 			}
 }
 
+add_action('wp_logout','go_home');
+function go_home(){  
+  $logout_url= home_url()."/login";
+  wp_redirect($logout_url);
+  exit();
+}
