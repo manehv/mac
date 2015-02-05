@@ -91,12 +91,12 @@ function simplr_build_form1($data,$atts) {
 	}
 	
 	$fields = explode(',',@$atts['fields']);
-	$form .=  '<form method="post" action="" id="simplr-reg">';
+	$form .=  '<form class="col-lg-7 col-lg-offset-3" method="post" action="" id="simplr-reg">';
 	$form .= apply_filters('simplr-reg-first-form-elem','');
 	$form .= '<div class="row">';
 	//if the user has not added their own user name field lets force one
 	if( !in_array('username',$fields) OR empty($custom->fields->custom['username']) ) {
-		$form .=  '<div class="simplr-field '.apply_filters('username_error_class','') .'">';
+		$form .=  '<div class="simplr-field col-lg-6 '.apply_filters('username_error_class','') .'">';
 		$form .=  '<label for="username" class="left">' .@esc_attr($label_username ).' <span class="required">*</span></label>';
 		$form .=  '<input type="text" name="username" class="right" value="'.@esc_attr($data['username']) .'" />';
 		$form .=  '</div>';
@@ -111,6 +111,7 @@ function simplr_build_form1($data,$atts) {
 			$form .= "<h3 class='registration'>".$matches[1]."</h3>";
 		}
 		$cf = @$custom->fields->custom[$field];
+	
 		$out = '';
 		if($cf['key'] != '') {
 			if($fb_user != null) {
@@ -150,14 +151,14 @@ function simplr_build_form1($data,$atts) {
 		$form .= '<div class="row">';
 	//only insert the email fields if the user hasn't specified them. 
 	if( !in_array('email',$fields) ) {	
-		$form .=  '<div class="simplr-field email-field '.apply_filters('email_error_class','').'">';
+		$form .=  '<div class="simplr-field col-lg-6 email-field '.apply_filters('email_error_class','').'">';
 		$form .=  '<label for="email" class="left">' .$label_email .' <span class="required">*</span></label>';
 		$form .=  '<input type="text" name="email" class="right" value="'.esc_attr(@$data['email']) .'" />';
 		$form .=  '</div>';
 	} 
 
 	if( !in_array('email_confirm', $fields) ) {
-		$form .=  '<div class="simplr-field email-field '.apply_filters('email_error_class','').'">';
+		$form .=  '<div class="simplr-field col-lg-6 email-field '.apply_filters('email_error_class','').'">';
 		$form .=  '<label for="email" class="left">' .$label_confirm_email .' <span class="required">*</span></label>';
 		$form .=  '<input type="text" name="email_confirm" class="right" value="'.esc_attr(@$data['email_confirm']) .'" />';
 		$form .=  '</div>';
@@ -169,12 +170,12 @@ function simplr_build_form1($data,$atts) {
 	if('yes' == @$atts['password']) 
 	{
 		$form .= '<div class="row">';
-		$form .=  '<div class="simplr-field '.apply_filters('password_error_class','').'">';
+		$form .=  '<div class="simplr-field col-lg-6 '.apply_filters('password_error_class','').'">';
 		$form .=  '<label for="password" class="left">' .$label_pass .'</label>';
 		$form .=  '<input type="password" name="password" class="right" value="'.esc_attr(@$data['password']) .'"/>';
 		$form .=  '</div>';
 		
-		$form .=  '<div class="simplr-field '.apply_filters('password_error_class','').'">';
+		$form .=  '<div class="simplr-field col-lg-6 '.apply_filters('password_error_class','').'">';
 		$form .=  '<label for="password-confirm" class="left">' .$label_confirm .'</label>';
 		$form .=  '<input type="password" name="password_confirm" class="right" value="'.esc_attr(@$data['password_confirm']) .'"/>';
 		$form .=  '</div>';
