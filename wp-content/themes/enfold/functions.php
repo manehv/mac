@@ -5,12 +5,11 @@ include_once(PLUGIN_DIR.'/lib/form.class.php');
 class SimplrExt extends SREG_Form{
 	function text($option, $vals, $class = 'wide') { 
 	?>	
-		<div class="option-field <?php echo apply_filters($option['name'].'_error_class',''); ?>">
+		<div class="option-field col-lg-6 <?php echo apply_filters($option['name'].'_error_class',''); ?>">
 			<label for="<?php echo $option['name']; ?>"><?php echo $option['label'] . show_required($option); ?></label>
 			<input type="text" name="<?php echo $option['name']; ?>" id="<?php echo $option['name']; ?>" value="<?php echo esc_attr($vals); ?>" class="<?php echo @$class; ?> <?php echo @$class; ?>"/>	
 			<?php if(isset($option['comment'])) { echo '<div class="form-comment">'.$option['comment'].'</div>'; } ?>
 		</div>
-		<div class="simplr-clr"></div>
 	<?php
 	}
 
@@ -106,7 +105,7 @@ function simplr_build_form1($data,$atts) {
 	$fields = explode(',',@$atts['fields']);
 	$form .=  '<form class="col-lg-7 col-lg-offset-3" method="post" action="" id="simplr-reg">';
 	$form .= apply_filters('simplr-reg-first-form-elem','');
-	$form .= '<div class="row">';
+	$form .= '<div >';
 	//if the user has not added their own user name field lets force one
 	if( !in_array('username',$fields) OR empty($custom->fields->custom['username']) ) {
 		$form .=  '<div class="simplr-field col-lg-6 '.apply_filters('username_error_class','') .'">';
@@ -118,7 +117,7 @@ function simplr_build_form1($data,$atts) {
 	foreach(@$fields as $field):
 		$i++;
 		if($i % 2 == 0){
-			$form .= '</div><div class="row">';
+			$form .= '</div><div >';
 		}
 		if ( preg_match("#^\{(.*)\}#",$field, $matches) ) {
 			$form .= "<h3 class='registration'>".$matches[1]."</h3>";
@@ -161,7 +160,7 @@ function simplr_build_form1($data,$atts) {
 	endforeach;
 	$form .=  '</div>';
 	$form = apply_filters('simplr-add-personal-fields', $form);
-		$form .= '<div class="row">';
+		$form .= '<div >';
 	//only insert the email fields if the user hasn't specified them. 
 	if( !in_array('email',$fields) ) {	
 		$form .=  '<div class="simplr-field col-lg-6 email-field '.apply_filters('email_error_class','').'">';
@@ -182,7 +181,7 @@ function simplr_build_form1($data,$atts) {
 	
 	if('yes' == @$atts['password']) 
 	{
-		$form .= '<div class="row">';
+		$form .= '<div >';
 		$form .=  '<div class="simplr-field col-lg-6 '.apply_filters('password_error_class','').'">';
 		$form .=  '<label for="password" class="left">' .$label_pass .'</label>';
 		$form .=  '<input type="password" name="password" class="right" value="'.esc_attr(@$data['password']) .'"/>';
@@ -210,7 +209,7 @@ function simplr_build_form1($data,$atts) {
 	}
 	 
 	//submission button. Use filter to custommize
-	$form .=  apply_filters('simplr-reg-submit', '<input type="submit" name="submit-reg" value="Register" class="submit button">');
+	$form .=  apply_filters('simplr-reg-submit', '<div class="col-lg-6"><input type="submit" name="submit-reg" value="Register" class="submit button"></div>');
 	
 	//wordress nonce for security
 	$nonce = wp_create_nonce('simplr_nonce');

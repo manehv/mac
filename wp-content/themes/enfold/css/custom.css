@@ -330,6 +330,17 @@ div ul.product_list_widget{
     border-radius: unset !important;
     box-shadow: unset !important;
 }
+.simplr-field label, .option-field label {
+    width: 50% !important;
+}
+#simplr-form .simplr-field, .option-field {
+    margin:0;
+}
+#simplr-form  input[type="text"]{
+	margin:0px;
+}
+#simplr-form input[type="submit"] {
+	margin-top:20px;}
 /* Media Queries */
 @media only screen and (min-width:320px) and (max-width:480px){
 	.responsive .logo a, .responsive .logo img{height:70px !important; }
