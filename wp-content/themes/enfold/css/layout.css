@@ -269,14 +269,14 @@ height:auto;
 float:left;
 text-align:left;
 height:auto;
-    background-color: #56656D;
-padding:0px 15px;
+background-color: #56656D;
+padding: 0px 16px 0 17px;
 font-size: 12px;
 min-height: 23px;
 max-width: none;
 text-decoration: none;
 color:#ffffff;
-    z-index: 999;
+z-index: 999;
 }
 
 #top .av-main-nav ul ul {
@@ -1441,7 +1441,7 @@ background: rgba(0,0,0,0.8);
 
 .avia-post-nav .label{position: absolute; top:50%; height:22px; line-height: 22px; margin-top:-11px; font-size: 24px;}
 .avia-post-nav .entry-image{height:80px; width:80px; display:block;}
-.avia-post-nav .entry-image img{border-radius: 100px; display: block;border: 1px solid rgba(0, 0, 0, 0.3);}
+.avia-post-nav .entry-image img{border-radius: 100px; display: block; box-shadow: rgba(0,0,0,0.2) 0 0 1px;}
 
 
 .avia-post-prev{ left:0; border-top-right-radius: 4px; border-bottom-right-radius: 4px;}
@@ -2327,7 +2327,7 @@ z-index: 1;
 padding:15px 0;
 }
 
-#socket{font-size: 11px; margin-top: -1px; z-index: 1;}
+#socket{font-size: 11px; margin-top: 10px; z-index: 1;}
 #socket .menu{margin-top:6px;}
 #socket .sub_menu_socket{float:right; margin:0;}
 #socket .sub_menu_socket div{overflow: hidden;}
