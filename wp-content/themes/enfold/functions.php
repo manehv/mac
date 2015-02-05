@@ -108,7 +108,7 @@ function simplr_build_form1($data,$atts) {
 	$form .= '<div >';
 	//if the user has not added their own user name field lets force one
 	if( !in_array('username',$fields) OR empty($custom->fields->custom['username']) ) {
-		$form .=  '<div class="simplr-field col-lg-6 '.apply_filters('username_error_class','') .'">';
+		$form .=  '<div class="option-field col-lg-6 '.apply_filters('username_error_class','') .'">';
 		$form .=  '<label for="username" class="left">' .@esc_attr($label_username ).' <span class="required">*</span></label>';
 		$form .=  '<input type="text" name="username" class="right" value="'.@esc_attr($data['username']) .'" />';
 		$form .=  '</div>';
@@ -187,7 +187,7 @@ function simplr_build_form1($data,$atts) {
 		$form .=  '<input type="password" name="password" class="right" value="'.esc_attr(@$data['password']) .'"/>';
 		$form .=  '</div>';
 		
-		$form .=  '<div class="simplr-field col-lg-6 '.apply_filters('password_error_class','').'">';
+		$form .=  '<div class="option-field col-lg-6 '.apply_filters('password_error_class','').'">';
 		$form .=  '<label for="password-confirm" class="left">' .$label_confirm .'</label>';
 		$form .=  '<input type="password" name="password_confirm" class="right" value="'.esc_attr(@$data['password_confirm']) .'"/>';
 		$form .=  '</div>';
