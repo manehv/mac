@@ -739,24 +739,21 @@ function fetch_custom_product_meta( $data, $product, $variation){
 }
 
 
-function wp_nav_menu_attributes_filter($var) {
-	return is_array($var) ? array_intersect($var, array('main')) : '';
-}
-add_filter('nav_menu_css_class', 'wp_nav_menu_attributes_filter', 100, 1);
-add_filter('nav_menu_item_id', 'wp_nav_menu_attributes_filter', 100, 1);
-add_filter('page_css_class', 'wp_nav_menu_attributes_filter', 100, 1);
+																																																																		
+add_filter( 'wp_nav_menu_items', 'my_nav_menu_profile_link');
 
-
-//add_filter( 'wp_nav_menu_items', 'my_nav_menu_profile_link');
 function my_nav_menu_profile_link($menu) {
     if (!is_user_logged_in()){
-         return $menu;
-    }  else {
-							$logout_url = get_permalink();
-							$items .= '<li><a href="'. wp_logout_url($logout_url) .'">Log Out</a></li>';
-							$current_user = wp_get_current_user();
-							$title="Hi! ".$current_user->user_login;
-return $menu.$items;
+					return $menu;
+	  	}  else {
+								 $logout_url= home_url()."/login";
+												//  $items .= '<li><a href="'. wp_logout() .'">Click Here (Log Out)</a></li>';
+								 $current_user = wp_get_current_user();
+							   $title="Hi! ".$current_user->user_login.".";
+							   $items.= '<span class="adminset">';
+							   $items .= '<span class="nameset">'.$title.'</span>';
+						     $items .= '<span class="linkcolor"><a href="'.wp_logout_url($logout_url).'">'.__('Logout').'</a></span></span>';
+													return $menu.$items;
 			}
 }
 
@@ -765,4 +762,4 @@ function go_home(){
   $logout_url= home_url()."/login";
   wp_redirect($logout_url);
   exit();
-}
+} 

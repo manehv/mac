@@ -507,7 +507,7 @@ input[type="submit"], #submit, .button {
 }
  .inline{
 	 font-weight:normal!important;
-color:#6D6D6D;
+  color:#6D6D6D;
 }
 .lost_password a{
 	color:#6D6D6D;
@@ -521,4 +521,19 @@ color:#6D6D6D;
 
 .entry-summary  .variations_button{
 	display:none!important;	
+}
+.nameset{
+	background-color:none;
+	font-size:14px;
+	font-weight:bold;
+	color:#282828;
+	display:block;
+}
+.adminset{
+	line-height:25px;
+	padding:0 10px;
+	display:inline-block;
+}
+.linkcolor a{
+	color:#282828;
 }
