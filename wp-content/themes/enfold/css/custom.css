@@ -519,3 +519,6 @@ color:#6D6D6D;
 	min-width: 101px;
 }
 
+.entry-summary  .variations_button{
+	display:none!important;	
+}
