@@ -1,7 +1,20 @@
 <?php
-
+error_reporting(E_ALL);
 define("PLUGIN_DIR", ABSPATH . 'wp-content/plugins/simplr-registration-form' );
+include_once(PLUGIN_DIR.'/lib/form.class.php');
+class SimplrExt extends SREG_Form{
+	function text($option, $vals, $class = 'wide') { 
+	?>	
+		<div class="option-field <?php echo apply_filters($option['name'].'_error_class',''); ?>">
+			<label for="<?php echo $option['name']; ?>"><?php echo $option['label'] . show_required($option); ?></label>
+			<input type="text" name="<?php echo $option['name']; ?>" id="<?php echo $option['name']; ?>" value="<?php echo esc_attr($vals); ?>" class="<?php echo @$class; ?> <?php echo @$class; ?>"/>	
+			<?php if(isset($option['comment'])) { echo '<div class="form-comment">'.$option['comment'].'</div>'; } ?>
+		</div>
+		<div class="simplr-clr"></div>
+	<?php
+	}
 
+}
 
 add_shortcode('register', 'sreg_figure1');
 
@@ -60,7 +73,7 @@ function sreg_basic1($atts) {
 } //END FUNCTION
 
 function simplr_build_form1($data,$atts) {
-	include_once(PLUGIN_URL.'/lib/form.class.php');
+	include_once(PLUGIN_DIR.'/lib/form.class.php');
 	if(get_option('users_can_register') != '1') { print('Registrations have been disabled'); 
 	} else {
 	// retrieve fields and options
@@ -139,7 +152,7 @@ function simplr_build_form1($data,$atts) {
 			
 			// do field
 			if($cf['type'] != '') {
-				SREG_Form::$cf['type']($args, @esc_attr($key_val), '', $cf['options_array']);
+				SimplrExt::$cf['type']($args, @esc_attr($key_val), '', $cf['options_array']);
 			}
 			
 			$form .= ob_get_contents();
@@ -216,6 +229,9 @@ function simplr_build_form1($data,$atts) {
 	return $form;
 	}
 }
+
+
+
 
 
 global $avia_config;

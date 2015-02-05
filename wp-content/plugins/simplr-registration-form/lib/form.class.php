@@ -10,7 +10,7 @@ class SREG_Form {
 	
 	// static functions that handle form fields
 	
-	static function text($option, $vals, $class = 'wide') { 
+	 function text($option, $vals, $class = 'wide') { 
 	?>	
 		<div class="option-field <?php echo apply_filters($option['name'].'_error_class',''); ?>">
 			<label for="<?php echo $option['name']; ?>"><?php echo $option['label'] . show_required($option); ?></label>
