@@ -23,6 +23,9 @@ wc_print_notices(); ?>
 
 <?php wc_get_template( 'myaccount/my-orders.php', array( 'order_count' => $order_count ) ); ?>
 
+<div class="avia-button" style="color:#ffffff;background-color:#3D89CC;margin-bottom:20px"><a href="javascript:history.back()" style="color:#ffffff"><?php echo __("Go To Store") ?></a></div>
+
+
 <?php wc_get_template( 'myaccount/my-address.php' ); ?>
 
 <?php do_action( 'woocommerce_after_my_account' ); ?>

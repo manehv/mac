@@ -313,9 +313,40 @@ background-color: #56656d;
 color:#fff !important;
 }
 .sub-menu a{
+<<<<<<< HEAD
 height:auto !important;
 padding-top:10px;
 padding-bottom:10px;
+=======
+	height:auto !important;
+	padding-top:10px;
+	padding-bottom:10px;
+}
+#simplr-form input[type="text"] {    
+    box-shadow: unset !important;
+    padding: 15px !important;
+		border-radius:unset;
+}
+#simplr-form input[type="submit"] {
+    background-image: -moz-linear-gradient(center bottom , #777777 43%, #777777 75%, #777777 89%)!important;
+    border-radius: unset !important;
+    box-shadow: unset !important;
+}
+.simplr-field label, .option-field label {
+    width: 100% !important;
+}
+#simplr-form .simplr-field, .option-field {
+    margin:0;
+}
+#simplr-form  input[type="text"]{
+	margin:0px;
+}
+#simplr-form input[type="submit"] {
+	margin-top:20px;}
+.simplr-field input, .option-field input {
+    
+    width: 265px !important;
+>>>>>>> 5066f19e9942c3efa80a099a401db0c2be1e5ed2
 }
 
 /* Media Queries */
@@ -469,16 +500,58 @@ Mobile Styles
 ================================================== */
 /* Note: Add new css to the media query below that you want to only effect the Mobile and Tablet Portrait view */
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width:767px) {
   /* Add your Mobile Styles here */
 
 }
 
 
 
-@media only screen and (min-width: 990px) {
-.cart_dropdown.visible_cart {
-top: 25px;
-        right: 50px;
+@media only screen and (min-width:990px) {
+	.cart_dropdown.visible_cart {
+		top: 25px;
+    right: 50px;
 }
 }
+
+#top .form-row label{
+	font-size:14px;
+  color:#666666;
+}
+ .inline{
+	 font-weight:normal!important;
+  color:#6D6D6D;
+}
+.lost_password a{
+	color:#6D6D6D;
+}
+
+.sub-menu .avia-menu-text{
+	padding:6px;
+}
+.sub-menu{
+	min-width: 102px;
+}
+
+.entry-summary  .single_variation_wrap{
+	display:none!important;	
+}
+
+.nameset{
+	background-color:none;
+	font-size:14px;
+	font-weight:bold;
+	color:#282828;
+	display:block;
+}
+.adminset{
+	line-height:25px;
+	padding:0 10px;
+	display:inline-block;
+}
+.linkcolor a{
+	color:#282828;
+	display:inline-block;
+}
+
+
