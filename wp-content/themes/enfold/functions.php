@@ -985,7 +985,7 @@ function my_nav_menu_profile_link($menu, $args) {
 								 $logout_url= home_url()."/login";
 												//  $items .= '<li><a href="'. wp_logout() .'">Click Here (Log Out)</a></li>';
 								 $current_user = wp_get_current_user();
-							   $title="Hi! ".$current_user->user_login.".";
+							   $title="Hola ".$current_user->user_login.".";
 							   $title=SUBSTR($title,0,15);
 							   $items.= '<span class="adminset">';
 							   $items .= '<span class="nameset">'.$title.'</span>';
