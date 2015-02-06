@@ -988,8 +988,8 @@ function my_nav_menu_profile_link($menu, $args) {
 							   $title="Hola ".$current_user->user_login.".";
 							   $title=SUBSTR($title,0,15);
 							   $items.= '<span class="adminset">';
-							   $items .= '<span class="nameset">'.$title.'</span>';
-						     $items .= '<span class="linkcolor"><a href="'.wp_logout_url($logout_url).'">'.__('Logout').'</a></span></span>';
+							   $items .= '<span class="nameset">'.$title.'</span><br />';
+						     $items .= '<span class="linkcolor"><a href="'.wp_logout_url($logout_url).'">'.__('Cerrar sesión').'</a></span></span>';
 													return $menu.$items;													
 			}
 			else
