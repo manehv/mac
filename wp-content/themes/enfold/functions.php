@@ -982,14 +982,14 @@ function my_nav_menu_profile_link($menu, $args) {
 
 	  	else if($args->theme_location=='avia'){
 	  	
-								 $logout_url= home_url()."/login";
+								 $logout_url= home_url();
 												//  $items .= '<li><a href="'. wp_logout() .'">Click Here (Log Out)</a></li>';
 								 $current_user = wp_get_current_user();
-							   $title="Hi! ".$current_user->user_login.".";
+							   $title="Hola ".$current_user->user_login.".";
 							   $title=SUBSTR($title,0,15);
 							   $items.= '<span class="adminset">';
-							   $items .= '<span class="nameset">'.$title.'</span>';
-						     $items .= '<span class="linkcolor"><a href="'.wp_logout_url($logout_url).'">'.__('Logout').'</a></span></span>';
+							   $items .= '<span class="nameset">'.$title.'</span> ';
+						     $items .= '<span class="linkcolor"><a href="'.wp_logout_url($logout_url).'">'.__('Cerrar sesión').'</a></span></span>';
 													return $menu.$items;													
 			}
 			else
@@ -1000,7 +1000,7 @@ function my_nav_menu_profile_link($menu, $args) {
 
 add_action('wp_logout','go_home');
 function go_home(){  
-  $logout_url= home_url()."/login";
+  $logout_url= home_url();
   wp_redirect($logout_url);
   exit();
 } 
