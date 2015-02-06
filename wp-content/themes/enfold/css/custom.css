@@ -345,6 +345,7 @@ div ul.product_list_widget{
     
     width: 265px !important;
 }
+
 /* Media Queries */
 @media only screen and (min-width:320px) and (max-width:480px){
 	.responsive .logo a, .responsive .logo img{height:70px !important; }
@@ -496,14 +497,14 @@ Mobile Styles
 ================================================== */
 /* Note: Add new css to the media query below that you want to only effect the Mobile and Tablet Portrait view */
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width:767px) {
   /* Add your Mobile Styles here */
 
 }
 
 
 
-@media only screen and (min-width: 990px) {
+@media only screen and (min-width:990px) {
 	.cart_dropdown.visible_cart {
 		top: 25px;
         right: 50px;
@@ -553,5 +554,6 @@ input[type="submit"], #submit, .button {
 }
 .linkcolor a{
 	color:#282828;
+	display:inline-block;
 }
 
