@@ -1,4 +1,237 @@
 <?php
+error_reporting(E_ALL);
+define("PLUGIN_DIR", ABSPATH . 'wp-content/plugins/simplr-registration-form' );
+include_once(PLUGIN_DIR.'/lib/form.class.php');
+class SimplrExt extends SREG_Form{
+	function text($option, $vals, $class = 'wide') { 
+	?>	
+		<div class="option-field col-lg-6 <?php echo apply_filters($option['name'].'_error_class',''); ?>">
+			<label for="<?php echo $option['name']; ?>"><?php echo $option['label'] . show_required($option); ?></label>
+			<input type="text" name="<?php echo $option['name']; ?>" id="<?php echo $option['name']; ?>" value="<?php echo esc_attr($vals); ?>" class="<?php echo @$class; ?> <?php echo @$class; ?>"/>	
+			<?php if(isset($option['comment'])) { echo '<div class="form-comment">'.$option['comment'].'</div>'; } ?>
+		</div>
+	<?php
+	}
+
+}
+
+add_shortcode('register', 'sreg_figure1');
+
+//this function determines which version of the registration to call
+function sreg_figure1($atts) {
+	global $options;
+	extract(shortcode_atts(array(
+	'role' => 'subscriber',
+	'from' => get_option('sreg_admin_email'),
+	'message' => 'Thank you for registering',
+	'notify' => get_option('sreg_email'),
+	'fields' => null,
+	'fb' => false,
+	), $atts));
+		if($role != 'admin') {
+			$function = sreg_basic1($atts);
+		} else { 
+			$function = 'You should not register admin users via a public form';
+		}
+	return $function;
+}//End Function
+
+function sreg_basic1($atts) {
+
+	require_once PLUGIN_DIR .'/lib/sreg.class.php';
+	//Check if the user is logged in, if so he doesn't need the registration page
+	if ( is_user_logged_in() AND !current_user_can('administrator') ) {
+		global $user_ID;
+		$first_visit = get_user_meta($user_ID, 'first_visit',true);
+		if(empty($first_visit)) {
+		
+			$message = !empty($atts['message'])?$atts['message']:"Thank you for registering.";
+			update_user_meta($user_ID,'first_visit',date('Y-m-d'));
+			echo '<div id="message" class="success"><p>'.$message.'</p></div>';
+		} else {
+			echo "You are already registered for this site!!!";
+		}
+	} else {
+		//Then check to see whether a form has been submitted, if so, I deal with it.
+		global $sreg;
+		if( !is_object($sreg) ) $sreg = new Sreg_Submit();
+		$out = '';
+		if(isset($sreg->success)) {
+			return $sreg->output;
+		} elseif( isset($sreg->errors) AND is_array($sreg->errors)) {
+			foreach($sreg->errors as $mes) {
+		        	$out .= '<div class="simplr-message error">'.$mes .'</div>';
+	        	}
+		} elseif(is_string($sreg->errors)) {
+	        	$out = '<div class="simplr-message error">'.$message .'</div>';
+		}
+		return $out.simplr_build_form1($_POST,$atts);
+
+	} //Close LOGIN Conditional
+
+} //END FUNCTION
+
+function simplr_build_form1($data,$atts) {
+	include_once(PLUGIN_DIR.'/lib/form.class.php');
+	if(get_option('users_can_register') != '1') { print('Registrations have been disabled'); 
+	} else {
+	// retrieve fields and options
+	$custom = new SREG_Fields();
+	$soptions = get_option('simplr_reg_options');
+
+	$fb_user = sreg_fb_connect();
+	if( isset($fb_user) && is_array(@$fb_user))  {
+		$fb_button = '<span="fb-window">Connected via Facebook as <fb:name useyou="false" uid="'.$fb_user['id'].'" /></span>';
+		$data['username'] = $fb_user['username'];
+	} elseif( isset($fb_user) && is_string($fb_user)) {
+		$fb_button = $fb_user;
+		$fb_user = null;
+	}
+	
+	$label_email = apply_filters('simplr_label_email', __('Email Address:','simplr-reg') );
+	$label_confirm_email = apply_filters('simplr_label_confirm_email', __('Confirm Email:','simplr-reg') );
+	$label_username = apply_filters('simplr_label_username', __('Your Username:','simplr-reg') );
+	$label_pass = apply_filters('simplr_label_password', __('Choose a Password','simpr-reg'));
+	$label_confirm = apply_filters('simplr_label_confirm', __('Confirm Password','simpr-reg'));
+	
+	//POST FORM
+	$form = '';
+	$form .= apply_filters('simplr-reg-instructions', __('', 'simplr-reg'));
+	$form .=  '<div id="simplr-form">';
+	if(isset($fb_button)) {
+		$form .= '<div class="fb-button">'.$fb_button.'</div>';
+	}
+	
+	$fields = explode(',',@$atts['fields']);
+	$form .=  '<form class="col-lg-7 col-lg-offset-3" method="post" action="" id="simplr-reg">';
+	$form .= apply_filters('simplr-reg-first-form-elem','');
+	$form .= '<div >';
+	//if the user has not added their own user name field lets force one
+	if( !in_array('username',$fields) OR empty($custom->fields->custom['username']) ) {
+		$form .=  '<div class="option-field col-lg-6 '.apply_filters('username_error_class','') .'">';
+		$form .=  '<label for="username" class="left">' .@esc_attr($label_username ).' <span class="required">*</span></label>';
+		$form .=  '<input type="text" name="username" class="right" value="'.@esc_attr($data['username']) .'" />';
+		$form .=  '</div>';
+	}
+	$i = 0 ;
+	foreach(@$fields as $field):
+		$i++;
+		if($i % 2 == 0){
+			$form .= '</div><div >';
+		}
+		if ( preg_match("#^\{(.*)\}#",$field, $matches) ) {
+			$form .= "<h3 class='registration'>".$matches[1]."</h3>";
+		}
+		$cf = @$custom->fields->custom[$field];
+	
+		$out = '';
+		if($cf['key'] != '') {
+			if($fb_user != null) {
+				$key_val = (array_key_exists($cf['key'],$fb_user)) ? $fb_user[$cf['key']] : $data[$cf['key']];
+			}
+			$args = array(
+				'name'		=>$cf['key'],
+				'label'		=>$cf['label'],
+				'required'	=> $cf['required']
+			);
+
+			ob_start();
+			//setup specific field values for date and callback
+			if(isset($data[$cf['key']])) {
+				if($cf['type'] == 'date') {
+					$key_val = implode('-',array($data[$cf['key'].'-yr'],$data[$cf['key'].'-mo'],$data[$cf['key'].'-dy']));
+				} elseif($cf['key'] != 'user_login' AND $cf['key'] != 'user_password' AND $cf['key'] != 'user_email') { 
+					$key_val = $data[$cf['key']];
+				}		
+			}
+			
+			if($cf['type'] == 'callback') {
+				$cf['options_array'][1] = array( @$data[$cf['key']] );
+			}
+			
+			// do field
+			if($cf['type'] != '') {
+				SimplrExt::$cf['type']($args, @esc_attr($key_val), '', $cf['options_array']);
+			}
+			
+			$form .= ob_get_contents();
+			ob_end_clean();
+		}
+	endforeach;
+	$form .=  '</div>';
+	$form = apply_filters('simplr-add-personal-fields', $form);
+		$form .= '<div >';
+	//only insert the email fields if the user hasn't specified them. 
+	if( !in_array('email',$fields) ) {	
+		$form .=  '<div class="simplr-field col-lg-6 email-field '.apply_filters('email_error_class','').'">';
+		$form .=  '<label for="email" class="left">' .$label_email .' <span class="required">*</span></label>';
+		$form .=  '<input type="text" name="email" class="right" value="'.esc_attr(@$data['email']) .'" />';
+		$form .=  '</div>';
+	} 
+
+	if( !in_array('email_confirm', $fields) ) {
+		$form .=  '<div class="simplr-field col-lg-6 email-field '.apply_filters('email_error_class','').'">';
+		$form .=  '<label for="email" class="left">' .$label_confirm_email .' <span class="required">*</span></label>';
+		$form .=  '<input type="text" name="email_confirm" class="right" value="'.esc_attr(@$data['email_confirm']) .'" />';
+		$form .=  '</div>';
+	}
+	$form .= '</div>';
+	$form = apply_filters('simplr-add-contact-fields', $form);
+	
+	
+	if('yes' == @$atts['password']) 
+	{
+		$form .= '<div >';
+		$form .=  '<div class="simplr-field col-lg-6 '.apply_filters('password_error_class','').'">';
+		$form .=  '<label for="password" class="left">' .$label_pass .'</label>';
+		$form .=  '<input type="password" name="password" class="right" value="'.esc_attr(@$data['password']) .'"/>';
+		$form .=  '</div>';
+		
+		$form .=  '<div class="option-field col-lg-6 '.apply_filters('password_error_class','').'">';
+		$form .=  '<label for="password-confirm" class="left">' .$label_confirm .'</label>';
+		$form .=  '<input type="password" name="password_confirm" class="right" value="'.esc_attr(@$data['password_confirm']) .'"/>';
+		$form .=  '</div>';
+		$form .= '</div>';
+	}
+
+	//filter for adding profile fields
+	$form = apply_filters('simplr_add_form_fields', $form);
+	if( isset( $soptions->recap_on ) AND $soptions->recap_on == 'yes') {
+		$form .= sreg_recaptcha_field();
+	}
+	
+	//add attributes to form
+	if(!empty($atts)) {
+		foreach($atts as $k=>$v)
+		{
+			$form .= '<input type="hidden" name="atts['.$k.']" value="'.$v.'" />';
+		}
+	}
+	 
+	//submission button. Use filter to custommize
+	$form .=  apply_filters('simplr-reg-submit', '<div class="col-lg-6"><input type="submit" name="submit-reg" value="Register" class="submit button"></div>');
+	
+	//wordress nonce for security
+	$nonce = wp_create_nonce('simplr_nonce');
+	$form .= '<input type="hidden" name="simplr_nonce" value="' .$nonce .'" />';
+	
+	if(!empty($fb_user)) {
+		$form .= '<input type="hidden" name="fbuser_id" value="'.$fb_user['id'].'" />';
+	}
+	
+	$form .= '<div style="clear:both;"></div>';
+	$form .=  '</form>';
+	$form .=  '</div>';
+	if( isset($options->fb_connect_on) AND $soptions->fb_connect_on == 'yes') {
+		$form .= sreg_load_fb_script(); 
+	}
+	return $form;
+	}
+}
+
+
+
+
 
 global $avia_config;
 
@@ -749,14 +982,14 @@ function my_nav_menu_profile_link($menu, $args) {
 
 	  	else if($args->theme_location=='avia'){
 	  	
-								 $logout_url= home_url()."/login";
+								 $logout_url= home_url();
 												//  $items .= '<li><a href="'. wp_logout() .'">Click Here (Log Out)</a></li>';
 								 $current_user = wp_get_current_user();
-							   $title="Hi! ".$current_user->user_login.".";
+							   $title="Hola ".$current_user->user_login.".";
 							   $title=SUBSTR($title,0,15);
 							   $items.= '<span class="adminset">';
-							   $items .= '<span class="nameset">'.$title.'</span>';
-						     $items .= '<span class="linkcolor"><a href="'.wp_logout_url($logout_url).'">'.__('Logout').'</a></span></span>';
+							   $items .= '<span class="nameset">'.$title.'</span> ';
+						     $items .= '<span class="linkcolor"><a href="'.wp_logout_url($logout_url).'">'.__('Cerrar sesión').'</a></span></span>';
 													return $menu.$items;													
 			}
 			else
@@ -767,7 +1000,7 @@ function my_nav_menu_profile_link($menu, $args) {
 
 add_action('wp_logout','go_home');
 function go_home(){  
-  $logout_url= home_url()."/login";
+  $logout_url= home_url();
   wp_redirect($logout_url);
   exit();
 } 
