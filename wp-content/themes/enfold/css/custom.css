@@ -41,6 +41,7 @@ h2.clsFinish{color: #000000; font-size: 18px; font-family: 'open_sanslight'; fon
 .clsSidebar h3{padding:5px 14px; border-bottom:1px solid #e1e1e1; color:#292325; font-size:12px; font-family:'open_sanslight'; font-weight:bold;}
 .clsDetails, #top .clsDetails .price span.amount{color:#292325; font-size:12px; font-family:'open_sanslight'; font-weight:normal; line-height:normal; }
 #top .clsDetails .price span.amount { font-family:'Open Sans', arial, sans-serif; font-weight: bold }
+#top .clsDetails span.amount { font-family:'Open Sans', arial, sans-serif; font-weight: bold }
 .clsDetails .clsSubDiv{margin:5px 15px; font-size:12px; }
 div.product p.stock { margin: 0 15px; }
 #top div.product div.clsDetails.images img{height:150px; width:auto; margin:0 auto; }
