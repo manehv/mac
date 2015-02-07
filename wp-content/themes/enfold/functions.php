@@ -982,7 +982,7 @@ function my_nav_menu_profile_link($menu, $args) {
 
 	  	else if($args->theme_location=='avia'){
 	  	
-								 $logout_url= home_url();
+								 $logout_url= home_url()."/login";
 												//  $items .= '<li><a href="'. wp_logout() .'">Click Here (Log Out)</a></li>';
 								 $current_user = wp_get_current_user();
 							   $title="Hola ".$current_user->user_login.".";
@@ -1000,7 +1000,7 @@ function my_nav_menu_profile_link($menu, $args) {
 
 add_action('wp_logout','go_home');
 function go_home(){  
-  $logout_url= home_url();
+  $logout_url= home_url()."/login";
   wp_redirect($logout_url);
   exit();
 } 

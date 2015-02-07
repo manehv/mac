@@ -7,23 +7,23 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
 ?>
-<div class="col-lg-12">
+<div class="col-lg-12 ">
 <?php wc_print_notices(); ?>
 <?php do_action( 'woocommerce_before_customer_login_form' ); ?>
 <div class="col-lg-offset-3" id="customer_login">
 	<div class="">
 		<h2><?php// _e( 'Login', 'woocommerce' ); ?></h2>
 
-		<form method="post" class="login col-lg-7">
+		<form method="post" class="login col-lg-7 ">
 
 			<?php do_action( 'woocommerce_login_form_start' ); ?>
 <h2><?php _e( 'Login', 'woocommerce' ); ?></h2>
-			<p class="form-row col-lg-6 form-row-wide" >
-				<label class="col-lg-12" for="username"><?php _e( 'Usuario', 'woocommerce' ); ?> <span class="required">*</span></label>
+			<p class="form-row col-lg-6 col-sm-12 col-xs-12 form-row-wide" >
+				<label class="col-lg-12 col-sm-12 col-xs-12 " for="username"><?php _e( 'Usuario', 'woocommerce' ); ?> <span class="required">*</span></label>
 				<input type="text" class="input-text col-lg-8"  name="username" id="username" value="<?php if ( ! empty( $_POST['username'] ) ) echo esc_attr( $_POST['username'] ); ?>" />
 			</p>
-			<p class="form-row col-lg-6 form-row-wide">
-				<label class="col-lg-12" for="password"><?php _e( 'Password', 'woocommerce' ); ?> <span class="required">*</span></label>
+			<p class="form-row col-lg-6 col-sm-12 col-xs-12 form-row-wide">
+				<label class="col-lg-12 col-sm-12 col-xs-12 " for="password"><?php _e( 'Password', 'woocommerce' ); ?> <span class="required">*</span></label>
 				<input class="input-text " style="margin-left:5px;" type="password" name="password" id="password" />
 			</p>
 			<?php do_action( 'woocommerce_login_form' ); ?>
