@@ -557,4 +557,7 @@ input[type="submit"], #submit, .button {
 	color:#282828;
 	display:inline-block;
 }
+#customer_login {
+	padding-top:100px;
+}
 
