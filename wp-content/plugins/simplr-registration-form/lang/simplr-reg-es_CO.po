@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-12-24 23:24+0100\n"
-"PO-Revision-Date: 2015-02-09 10:45-0500\n"
+"PO-Revision-Date: 2015-02-09 10:52-0500\n"
 "Last-Translator: 8manos i18n <i18n@8manos.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -20,19 +20,19 @@ msgstr ""
 
 #: main_options_page.php:8 simplr_reg_page.php:116
 msgid "Settings"
-msgstr ""
+msgstr "Configuración"
 
 #: main_options_page.php:9
 msgid "Fields"
-msgstr ""
+msgstr "Campos"
 
 #: main_options_page.php:10
 msgid "Moderation"
-msgstr ""
+msgstr "Moderación"
 
 #: main_options_page.php:12
 msgid "Instructions"
-msgstr ""
+msgstr "Instrucciones"
 
 #: main_options_page.php:24
 msgid ""
@@ -51,67 +51,67 @@ msgstr ""
 
 #: simplr_form_functions.php:45
 msgid "You must enter a username."
-msgstr ""
+msgstr "Debes ingresar un nombre de usuario"
 
 #: simplr_form_functions.php:51
 msgid "Invalid Username."
-msgstr ""
+msgstr "Nombre de usuario no válido"
 
 #: simplr_form_functions.php:57
 msgid "This username already exists."
-msgstr ""
+msgstr "Usuario ya registrado"
 
 #: simplr_form_functions.php:65 lib/profile.php:207
 msgid "You must enter an email."
-msgstr ""
+msgstr "Debes ingresar un email"
 
 #: simplr_form_functions.php:68
 msgid "The emails you entered do not match."
-msgstr ""
+msgstr "Los emails ingresados no coinciden"
 
 #: simplr_form_functions.php:72 lib/profile.php:213
 msgid "An account with this email has already been registered."
-msgstr ""
+msgstr "Email ya registrado"
 
 #: simplr_form_functions.php:76 lib/profile.php:217
 msgid "Please enter a valid email."
-msgstr ""
+msgstr "Ingresa un email valido"
 
 #: simplr_form_functions.php:93 simplr_form_functions.php:97
 msgid " is a required field. Please enter a value."
-msgstr ""
+msgstr "es un campo obligatorio."
 
 #: simplr_form_functions.php:237
 msgid " Please check your email for confirmation."
-msgstr ""
+msgstr "Revisa tu email para confirmación."
 
 #: simplr_form_functions.php:239
 msgid "Your Registration was successful."
-msgstr ""
+msgstr "Registro exitoso."
 
 #: simplr_form_functions.php:257
 msgid "A new user registered for"
-msgstr ""
+msgstr "Nuevo usuario registrado"
 
 #: simplr_form_functions.php:257
 msgid "A new user has registered for"
-msgstr ""
+msgstr "Un nuevo usuario registrado para"
 
 #: simplr_form_functions.php:260
 msgid "You should login and change your password as soon as possible."
-msgstr ""
+msgstr "Debes ingresar y cambiar tu clave tan pronto como sea posible."
 
 #: simplr_form_functions.php:262
 msgid "Username:"
-msgstr ""
+msgstr "Usuario:"
 
 #: simplr_form_functions.php:273
 msgid "Registration Confirmation"
-msgstr ""
+msgstr "Confirmación de registro"
 
 #: simplr_form_functions.php:304
 msgid "Email Address:"
-msgstr ""
+msgstr "Email:"
 
 #: simplr_form_functions.php:305
 msgid "Confirm Email:"
@@ -119,28 +119,28 @@ msgstr "Confirmar Email:"
 
 #: simplr_form_functions.php:306
 msgid "Your Username:"
-msgstr ""
+msgstr "Nombre de usuario:"
 
 #: simplr_form_functions.php:307
 msgid "Choose a Password"
-msgstr ""
+msgstr "Escoger clave"
 
 #: simplr_form_functions.php:308 lib/profile.php:131
 msgid "Confirm Password"
-msgstr ""
+msgstr "Confirmar clave"
 
 #: simplr_form_functions.php:418 lib/login.php:480 lib/login.php:536
 #: lib/login.php:578
 msgid "Register"
-msgstr ""
+msgstr "Registrar"
 
 #: simplr_form_functions.php:445
 msgid "Thank you for registering."
-msgstr ""
+msgstr "Gracias por su registro."
 
 #: simplr_form_functions.php:449
 msgid "You are already registered for this site!!!"
-msgstr ""
+msgstr "Ya te has registrado en este sitio."
 
 #: simplr_form_functions.php:510
 msgid "You should not register admin users via a public form"
@@ -158,11 +158,11 @@ msgstr ""
 
 #: simplr_reg_options.php:146
 msgid "Options"
-msgstr ""
+msgstr "Opciones"
 
 #: simplr_reg_options.php:153
 msgid "Role"
-msgstr ""
+msgstr "Rol"
 
 #: simplr_reg_options.php:154
 msgid "Specify the registration user role."
@@ -170,7 +170,7 @@ msgstr ""
 
 #: simplr_reg_options.php:156
 msgid "Select role ..."
-msgstr ""
+msgstr "Elegir rol ..."
 
 #: simplr_reg_options.php:166
 msgid "Thank You page"
@@ -194,7 +194,7 @@ msgstr ""
 
 #: simplr_reg_options.php:184
 msgid "Notifications"
-msgstr ""
+msgstr "Notificaciones"
 
 #: simplr_reg_options.php:185
 msgid "Notify these emails."
@@ -202,7 +202,7 @@ msgstr ""
 
 #: simplr_reg_options.php:191 lib/login.php:558
 msgid "Password"
-msgstr ""
+msgstr "Clave"
 
 #: simplr_reg_options.php:193
 msgid "Select \"yes\" to allow users to set their password."
@@ -214,7 +214,7 @@ msgstr ""
 
 #: simplr_reg_options.php:196
 msgid "Yes"
-msgstr ""
+msgstr "Si"
 
 #: simplr_reg_options.php:201
 msgid "Custom Fields"
@@ -279,7 +279,7 @@ msgstr ""
 
 #: lib/login.php:147
 msgid "You are now logged out."
-msgstr ""
+msgstr "Sesión cerrada"
 
 #: lib/login.php:149
 msgid "User registration is currently not allowed."
@@ -451,7 +451,7 @@ msgstr ""
 
 #: lib/login.php:579 lib/login.php:581
 msgid "Lost your password?"
-msgstr ""
+msgstr "Clave olvidada?"
 
 #: lib/profile.php:32
 msgid "Your profile was saved"
