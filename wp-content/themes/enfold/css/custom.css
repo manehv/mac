@@ -513,11 +513,16 @@ Mobile Styles
 }
 input[type="submit"], #submit, .button {
 	border-radius: 0px;
+}
+
+.form-row input[type="submit"], #submit, .button {
+	border-radius: 0px;
 	color:#ffffff;
 	background-color:#666666;
 	padding: 9px 54px;
 	font-size:14px;
 }
+
 #top .form-row label{
 	font-size:14px;
   color:#666666;
@@ -561,3 +566,7 @@ input[type="submit"], #submit, .button {
 	padding-top:100px;
 }
 
+#av_section_3 {
+    position: relative;   
+    z-index: -1;
+}
