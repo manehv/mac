@@ -1011,5 +1011,6 @@ add_action( 'admin_init', 'redirect_non_logged_users_to_specific_page' );
 function redirect_non_logged_users_to_specific_page() {
 	if ( !is_user_logged_in() && is_page('mi-cuenta') && $_SERVER['PHP_SELF'] != '/wp-admin/admin-ajax.php' ) {
 		wp_redirect( get_bloginfo('url').'/login' ); 
+	}
     exit;
 }
