@@ -1007,10 +1007,15 @@ function go_home(){
   exit();
 } 
 
-add_action( 'admin_init', 'redirect_non_logged_users_to_specific_page' );
-function redirect_non_logged_users_to_specific_page() {
-	if ( !is_user_logged_in() && is_page('mi-cuenta') && $_SERVER['PHP_SELF'] != '/wp-admin/admin-ajax.php' ) {
-		wp_redirect(  home_url( '/login' ) ); 
-		exit();
+add_action( 'template_redirect', function() {
+
+	if ( is_user_logged_in() || !is_page() ) return;
+
+	$restricted = array( 7116 ); // all your restricted pages
+
+	if ( in_array( get_queried_object_id(), $restricted ) ) {
+	wp_redirect( site_url( '/login' ) );
+	exit();
 	}
-}
+
+});
