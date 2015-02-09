@@ -539,10 +539,10 @@ input[type="submit"], #submit, .button {
 }
 
 .sub-menu .avia-menu-text{
-	padding:6px;
+/*	padding:6px;*/
 }
 .sub-menu{
-	max-width: 88px;
+	min-width: 88px;
 }
 
 .entry-summary  .single_variation_wrap{
