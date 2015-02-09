@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-12-24 23:24+0100\n"
-"PO-Revision-Date: 2015-02-09 11:21-0500\n"
+"PO-Revision-Date: 2015-02-09 11:57-0500\n"
 "Last-Translator: 8manos i18n <i18n@8manos.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -395,6 +395,8 @@ msgid ""
 "<strong>ERROR</strong>: Couldn&#8217;t register you... please contact the <a "
 "href=\"mailto:%s\">webmaster</a> !"
 msgstr ""
+"<strong>ERROR</strong>: Error en el registro, por favof contacta a <a href="
+"\"mailto:%s\">servicio técnico.</a>"
 
 #: lib/login.php:469
 msgid "Username or E-mail:"
@@ -410,7 +412,7 @@ msgstr "Las contraseñas no coinciden."
 
 #: lib/login.php:503
 msgid "Password Reset"
-msgstr ""
+msgstr "Reestablecer clave"
 
 #: lib/login.php:503
 msgid "Your password has been reset."
@@ -418,7 +420,7 @@ msgstr "Tu clave ha sido reseteada."
 
 #: lib/login.php:511
 msgid "Reset Password"
-msgstr ""
+msgstr "Reestablecer clave"
 
 #: lib/login.php:511
 msgid "Enter your new password below."
@@ -441,15 +443,15 @@ msgid ""
 "Hint: The password should be at least seven characters long. To make it "
 "stronger, use upper and lower case letters, numbers and symbols like ! \" ? "
 "$ % ^ &amp; )."
-msgstr ""
+msgstr "Tip: La clave debe tener más de 7 letras y números. "
 
 #: lib/login.php:554
 msgid "Username"
-msgstr ""
+msgstr "Usuario"
 
 #: lib/login.php:579 lib/login.php:581
 msgid "Password Lost and Found"
-msgstr ""
+msgstr "Contraseña perdida y encontrada"
 
 #: lib/login.php:579 lib/login.php:581
 msgid "Lost your password?"
@@ -457,26 +459,28 @@ msgstr "Clave olvidada?"
 
 #: lib/profile.php:32
 msgid "Your profile was saved"
-msgstr ""
+msgstr "Perfil actualizado"
 
 #: lib/profile.php:121
 msgid "Change Password"
-msgstr ""
+msgstr "Cambiar clave"
 
 #: lib/profile.php:125
 msgid "New Password"
-msgstr ""
+msgstr "Nueva clave"
 
 #: lib/profile.php:127
 msgid ""
 "If you would like to change the password type a new one. Otherwise leave "
 "this blank."
 msgstr ""
+"Si quieres cambiar la clave ingresa una nueva. De lo contrario deja los "
+"campos en blanco."
 
 #: views/api.php:81 views/api.php:166 views/main.php:107
 msgid "Save Changes"
-msgstr ""
+msgstr "Guardar cambios"
 
 #: views/moderation.php:23
 msgid "Settings saved"
-msgstr ""
+msgstr "Configuración guardada"
