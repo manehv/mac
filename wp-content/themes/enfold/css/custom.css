@@ -542,7 +542,7 @@ input[type="submit"], #submit, .button {
 	padding:6px;
 }
 .sub-menu{
-	min-width: 88px;
+	max-width: 88px;
 }
 
 .entry-summary  .single_variation_wrap{
