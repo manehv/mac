@@ -580,4 +580,6 @@ input[type="submit"], #submit, .button {
    margin-top: -30px;
    margin-right: 30px;
 }
-
+.woocommerce-checkout .av_textblock_section:nth-child(2) .avia_textblock p{
+	display:none;
+}
