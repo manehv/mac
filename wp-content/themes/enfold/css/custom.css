@@ -348,7 +348,7 @@ color:#fff !important;
 
 /* Media Queries */
 @media only screen and (min-width:320px) and (max-width:480px){
-.responsive .logo a, .responsive .logo img{height:70px !important; }
+.responsive .logo a, .responsive .logo img{/*height:70px !important;*/ }
 #mobile-advanced{background-color:transparent; border:0 none; }
 #mobile-advanced li{background-color:#ffffff; }
 #mobile-advanced .sub-menu a:hover{background-color:transparent; color:#0088cc; }
