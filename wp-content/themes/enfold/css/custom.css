@@ -342,7 +342,7 @@ color:#fff !important;
 	margin-top:20px;}
 .simplr-field input, .option-field input {
     
-    width: 265px !important;
+    width: 250px !important;
 
 }
 
@@ -547,7 +547,7 @@ input[type="submit"], #submit, .button {
 
 .nameset{
 	background-color:none;
-	font-size:14px;
+	font-size:18px;
 	font-weight:bold;
 	color:#282828;
 	display:block;
@@ -560,6 +560,8 @@ input[type="submit"], #submit, .button {
 .linkcolor a{
 	color:#282828;
 	display:inline-block;
+  font-weight: bold;
+  font-size: 11px;
 }
 #customer_login {
 	padding-top:100px;
