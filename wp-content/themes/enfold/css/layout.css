@@ -2338,7 +2338,7 @@ padding:15px 0;
 }
 
 #socket{font-size: 11px; margin-top: 10px; z-index: 1;}
-#socket .menu{margin-top:6px;}
+#socket .menu{float:left !important; margin: 5px 0px 0px -18px !important}
 #socket .sub_menu_socket{float:left !important; margin: 5px 0px 0px -18px !important}
 #socket .sub_menu_socket div{overflow: hidden;}
 #socket .sub_menu_socket li{float:left; display:block; padding:0 10px; border-left-style: solid; border-left-width: 1px; line-height: 10px;}
