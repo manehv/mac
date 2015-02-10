@@ -572,6 +572,7 @@ input[type="submit"], #submit, .button {
 	line-height:10px;
 	padding:0 10px;
 	display:inline-block;
+	margin-left:-31px;
 }
 .linkcolor a{
 	color:#282828;
