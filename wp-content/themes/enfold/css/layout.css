@@ -1587,7 +1587,12 @@ margin-bottom: -13px;
 #Page Styles
 ====================================================================================================================================================== */
 
-.template-page .entry-content-wrapper h1, .template-page .entry-content-wrapper h2{
+.template-page .entry-content-wrapper h1{
+text-transform: none;
+letter-spacing: 1px;
+padding:0px 0px 0px 20px !important;
+}
+.template-page .entry-content-wrapper h2{
 text-transform: none;
 letter-spacing: 1px;
 }
