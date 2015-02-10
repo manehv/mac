@@ -1354,7 +1354,7 @@ list-style-type: none;
 #payment img{display:inline-block;}
 
 #top .my_account_orders a.button{
-padding: 20px 0px 0px 0px;
+padding: 20px 0px 0px 0px !important;
 }
 
 #top  div .quantity input.plus, #top  div .quantity input.minus {
