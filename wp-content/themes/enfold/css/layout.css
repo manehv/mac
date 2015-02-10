@@ -1590,7 +1590,7 @@ margin-bottom: -13px;
 .template-page .entry-content-wrapper h1{
 text-transform: none;
 letter-spacing: 1px;
-padding:0px 0px 0px 20px !important;
+padding:0px 0px 0px 0px;
 }
 .template-page .entry-content-wrapper h2{
 text-transform: none;
