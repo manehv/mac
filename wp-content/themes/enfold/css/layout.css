@@ -678,6 +678,7 @@ border-bottom-style: dashed;
 border-bottom-width: 1px;
 clear:both;
 overflow: hidden;
+width:150px;
 }
 
 #top div .ajax_search_entry.with_image .ajax_search_image{
