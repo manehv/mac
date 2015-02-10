@@ -499,16 +499,27 @@ Mobile Styles
 
 @media only screen and (max-width:767px) {
   /* Add your Mobile Styles here */
-
+.chosen-container {
+	width:270px!important;
+  }
+}
+@media only screen and (min-width:768px) and (max-width: 980px) {
+	.chosen-container {
+	 width:440px!important;
+  }
 }
 
-
+@media only screen and (min-width:1280px) and (max-width: 1290px) {
+	.chosen-container {
+	 width:665px!important;
+  }
+}
 
 @media only screen and (min-width:990px) {
 	.cart_dropdown.visible_cart {
 		top: 25px;
     right: 50px;
-	}
+	}  
 }
 input[type="submit"], #submit, .button {
 	border-radius: 0px;
