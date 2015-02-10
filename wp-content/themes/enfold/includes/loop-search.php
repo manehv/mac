@@ -133,10 +133,10 @@ if (have_posts()) :
                 </ul>
 
                 <div class='hr_invisible'></div>
-                <h3 class=''><?php _e('Feel like browsing some posts instead?', 'avia_framework'); ?></h3>
+                
 
         <?php
-        the_widget('avia_combo_widget', 'error404widget', array('widget_id'=>'arbitrary-instance-'.$id,
+        the_widget( 'error404widget', array('widget_id'=>'arbitrary-instance-'.$id,
                 'before_widget' => '<div class="widget avia_combo_widget">',
                 'after_widget' => '</div>',
                 'before_title' => '<h3 class="widgettitle">',
