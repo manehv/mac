@@ -2339,7 +2339,7 @@ padding:15px 0;
 
 #socket{font-size: 11px; margin-top: 10px; z-index: 1;}
 #socket .menu{margin-top:6px;}
-#socket .sub_menu_socket{float:right; margin:0;}
+#socket .sub_menu_socket{float:left; margin-left:-18px !important; margin-top:0; margin-bottom:0}
 #socket .sub_menu_socket div{overflow: hidden;}
 #socket .sub_menu_socket li{float:left; display:block; padding:0 10px; border-left-style: solid; border-left-width: 1px; line-height: 10px;}
 #socket .sub_menu_socket li:first-child{border:none;}
