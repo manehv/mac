@@ -29,7 +29,7 @@ global $avia_config;
                         </section>
                     </div>
 
-                    <div style="min-height:400px">
+                    <div style="min-height:200px">
                     <?php
                     if(!empty($_GET['s']))
                     {
