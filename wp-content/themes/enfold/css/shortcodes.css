@@ -61,7 +61,7 @@ position: relative;
 .flex_column + .av-special-heading{float:left; }
 
 body .av-special-heading .av-special-heading-tag{
-padding:0;
+padding:0px 0px 0px 20px;
 margin:0;
 
 float:left;
