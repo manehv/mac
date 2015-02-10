@@ -21,7 +21,7 @@ global $avia_config;
                         <section class="search_form_field">
                             <?php
                             echo "<h4>".__('New Search','avia_framework')."</h4>";
-                            echo "<p>".__('If you are not happy with the results below please do another search','avia_framework')."</p>";
+                            echo "<p>".__('Si no estas feliz con los resultados, podrías hacer otra búsqueda','avia_framework')."</p>";
 
                             get_search_form();
                             echo "<span class='author-extra-border'></span>";
@@ -29,7 +29,7 @@ global $avia_config;
                         </section>
                     </div>
 
-
+                    <div style="min-height:400px">
                     <?php
                     if(!empty($_GET['s']))
                     {
@@ -45,6 +45,7 @@ global $avia_config;
                     }
 
                     ?>
+                        </div>
 
 				<!--end content-->
 				</main>
