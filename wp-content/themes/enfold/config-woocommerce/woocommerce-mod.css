@@ -58,7 +58,7 @@ border-bottom-width: 1px;
 }
 
 
-.woocommerce-page .button{min-width:110px; padding:15px !important;line-height:1em;margin:4px 2px 0 0;float:left;font-size:12px;width:auto;vertical-align:middle;text-align:center;text-decoration:none;border:none;cursor:pointer;font-family:inherit;border-radius:2px;}
+.woocommerce-page .button{min-width:110px;line-height:1em;margin:4px 2px 0 0;float:left;font-size:12px;width:auto;vertical-align:middle;text-align:center;text-decoration:none;border:none;cursor:pointer;font-family:inherit;border-radius:2px;}
 .button.alt:hover{}
 #reviews h2 small{float:right;font-size:15px;line-height:21px;margin:10px 0 0 0;}#reviews h2 small a{text-decoration:none;}
 #reviews h3{margin:0;}
