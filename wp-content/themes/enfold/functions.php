@@ -987,11 +987,11 @@ function my_nav_menu_profile_link($menu, $args) {
 								 $current_user = wp_get_current_user();
 								 $user_name =$current_user->user_login;
 								 $user_name =SUBSTR($user_name,0,15);
-							   $title="Hola ".$user_name.".";
+							   $title="Hola, ".$user_name;
 							  
 							   $items.= '<span class="adminset">';
 							   $items .= '<span class="nameset">'.$title.'</span> ';
-						     $items .= '<span class="linkcolor"><a href="'.wp_logout_url($logout_url).'">'.__('¿no eres ').$user_name.__('? ( Salir )').'</a></span></span>';
+						     $items .= '<span class="linkcolor"><a href="'.wp_logout_url($logout_url).'">'.__('Cerrar sesión').'</a></span></span>';
 													return $menu.$items;													
 			}
 			else
@@ -1006,3 +1006,16 @@ function go_home(){
   wp_redirect($logout_url);
   exit();
 } 
+
+add_action( 'template_redirect', function() {
+
+	if ( is_user_logged_in() || !is_page() ) return;
+
+	$restricted = array( 7116 ); // all your restricted pages
+
+	if ( in_array( get_queried_object_id(), $restricted ) ) {
+	wp_redirect( site_url( '/login' ) );
+	exit();
+	}
+
+});

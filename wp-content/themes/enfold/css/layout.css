@@ -2826,7 +2826,7 @@ animation:         avia_pop_small 0.5s 1 cubic-bezier(0.175, 0.885, 0.320, 1.275
 .responsive .main_menu{position: static;}
 .responsive .logo{position: static; height:80px !important; float:none;}
 .responsive .mobile_slide_out .logo{float:left;}
-.responsive .logo a , .responsive .logo img{margin: 0 auto; max-width: 100%; height:80px !important; max-height:80px !important;}
+.responsive .logo a , .responsive .logo img{margin: 0 auto; max-width: 200px !important; height:52px !important;  margin-top:8px !important;}
 .responsive #header_main .container{height:auto !important; }
 .responsive #top .header_bg { opacity: 1; filter: alpha(opacity=1); }
 .responsive #top .mobileMenu{margin: 0 0 10px 0; width:100%; padding: 10px 4px;}

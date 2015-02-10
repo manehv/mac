@@ -59,6 +59,16 @@ if( @$simplr_options->mod_on == 'yes' ) {
 	}
 }
 
+add_action( 'plugins_loaded', 'myplugin_load_textdomain' );
+/**
+ * Load plugin textdomain.
+ *
+ * @since 1.0.0
+ */
+function myplugin_load_textdomain() {
+  load_plugin_textdomain( 'simplr-reg', false, dirname( plugin_basename( __FILE__ ) ) . '/lang' ); 
+}
+
 /*
 **
 ** Plugin Activation Hook
