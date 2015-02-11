@@ -1144,7 +1144,7 @@ line-height: 21px;
 
 .avia_ajax_form .button{
 margin:0;
-padding: 16px 50px;
+padding: 10px 50px !important;
 border-radius: 2px;
 border-bottom-width:1px;
 border-bottom-style:solid;
