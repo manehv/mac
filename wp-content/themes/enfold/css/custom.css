@@ -164,18 +164,23 @@ table.cart .remove-custom img{width:12px; }
 .flex_column .av_one_full .av-special-heading{margin-top:10px; }
 #top .avia-logo-element-container .slide-entry{margin-bottom:1px; }
 /* Following is for making all button colours same */
-.main_color .primary-background, .main_color .primary-background a, div .main_color .button, .main_color #submit, .main_color input[type="submit"], .main_color .small-preview:hover, .main_color .avia-menu-fx, .main_color .avia-menu-fx .avia-arrow, .main_color.iconbox_top .iconbox_icon, .main_color .iconbox_top a.iconbox_icon:hover, .main_color .avia-data-table th.avia-highlight-col, .main_color .avia-color-theme-color, .main_color .avia-color-theme-color:hover, .main_color .image-overlay .image-overlay-inside:before, .main_color .comment-count, .main_color .av_dropcap2{
+.main_color .primary-background, .main_color .primary-background a, div .main_color .button, .main_color #submit, .main_color .small-preview:hover, .main_color .avia-menu-fx, .main_color .avia-menu-fx .avia-arrow, .main_color.iconbox_top .iconbox_icon, .main_color .iconbox_top a.iconbox_icon:hover, .main_color .avia-data-table th.avia-highlight-col, .main_color .avia-color-theme-color, .main_color .avia-color-theme-color:hover, .main_color .image-overlay .image-overlay-inside:before, .main_color .comment-count, .main_color .av_dropcap2{
+background-color: #777777;
+border-color: #555555;
+color: #ffffff;
+}
+.main_color input[type="submit"]{
 max-width: 100%;
 background-color: #428BCA;
 border-color: #428BCA;
 border-radius: 3px;
-color: #ffffff;
 font-size: 13px;
 min-width: 90px;
 border-bottom-style: solid;
 border-bottom-width: 1px;
 margin: 3px 0px;
 line-height: 1.2em;
+color: #FFF;
 }
 .main_color .button:hover, .main_color .ajax_controlls a:hover, .main_color #submit:hover, .main_color .big_button:hover, .main_color .contentSlideControlls a:hover, .main_color #submit:hover, .main_color input[type="submit"]:hover{
 background-color: #0088cc;
