@@ -1594,10 +1594,8 @@ margin-bottom: -13px;
 
 .template-page .entry-content-wrapper h1{
 text-transform: none;
-/*letter-spacing: 1px;*/
-padding:2px 2px 2px 30px !important;
-border: 1px solid #eee;
-width: 960px;
+letter-spacing: 1px;
+padding:0px 0px 0px 0px;
 }
 .template-page .entry-content-wrapper h2{
 text-transform: none;
