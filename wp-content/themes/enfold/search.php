@@ -62,11 +62,12 @@ global $avia_config;
 			</div><!--end container-->
 
 		</div><!-- close default .container_wrap element -->
-<?php echo do_shortcode("[av_hr class='full' height='50' shadow='no-shadow' position='center']"); ?> 
 
-<?php echo do_shortcode('[contact-form-7 id="13274" title="suscribe_copy"]'); ?> 
-<div style="width:910px; margin:auto">
-    <?php echo do_shortcode("[av_hr class='invisible' height='-20' shadow='shadow' position='center']
+<div style="width:960px; margin:auto">
+<?php echo do_shortcode("[av_three_fourth first][av_textblock][contact-form-7 id='4122' title='suscribe'][/av_textblock][/av_three_fourth]"); ?> 
+<?php echo do_shortcode("[av_one_fourth]
+
+[av_hr class='invisible' height='45' shadow='shadow' position='center']
 
 [av_font_icon icon='ue8f5' font='entypo-fontello' style='' caption='' link='manually,https://www.facebook.com/maccentercolombia' linktarget='_blank' color='#000000' size='19px' position='left'][/av_font_icon]
 
@@ -80,12 +81,9 @@ global $avia_config;
 
 [av_font_icon icon='ue8bd' font='entypo-fontello' style='' caption='' link='' linktarget='_blank' color='#f7f7f7' size='40px' position='left'][/av_font_icon]
 
-[av_font_icon icon='ue921' font='entypo-fontello' style='' caption='' link='manually,https://www.youtube.com/user/MacCenterColombia' linktarget='_blank' color='#000000' size='19px' position='left'][/av_font_icon]
+[av_font_icon icon='ue921' font='entypo-fontello' style='' caption='' link='manually,https://www.youtube.com/user/MacCenterColombia' linktarget='_blank' color='#000000' size='17px' position='left'][/av_font_icon]
 
-[av_hr class='full' height='-50' shadow='no-shadow' position='center']
-
-
-"); ?> 
+[/av_one_fourth]"); ?> 
     </div>
-
+<?php echo do_shortcode("[av_hr class='full' height='50' shadow='no-shadow' position='center']"); ?> 
 <?php get_footer(); ?>
