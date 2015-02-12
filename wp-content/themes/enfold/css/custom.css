@@ -480,7 +480,7 @@ Mobile Styles
 @media only screen and (min-width: 990px) {
 .cart_dropdown.visible_cart {
 top: 25px;
-        right: 50px;
+        right: 10px;
 }
 }
 
