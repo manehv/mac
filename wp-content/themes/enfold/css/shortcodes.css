@@ -277,7 +277,7 @@ transition: 		all 0.3s ease-in-out;
 
 /*tooltip*/
 
-#top .avia-icon-tooltip{  width:250px; font-size: 15px; line-height: 1.6em;}
+#top .avia-icon-tooltip{  width:auto; font-size: 10px; line-height: 1.2em;}
 
 
 /*big icon with border*/
