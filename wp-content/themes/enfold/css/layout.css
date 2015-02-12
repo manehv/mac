@@ -559,7 +559,7 @@ border:none;
     position: absolute;
     z-index: 9999999;
     padding: 0px;
-    width: 300px;
+    width: auto;
     top: 0px !important;
     margin-left: 128px;
 /*
