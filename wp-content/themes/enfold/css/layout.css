@@ -22,7 +22,7 @@
 
 /*ALTO DE BLOQUE DE TEXTO EN PAG DESCRIPTIVAS*/
 .av_textblock_section{
-min-height: 180px !important;
+min-height: 110px !important;
 }
 #header{
 position: relative;
