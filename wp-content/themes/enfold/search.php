@@ -21,7 +21,7 @@ global $avia_config;
                         <section class="search_form_field">
                             <?php
                             echo "<h4>".__('New Search','avia_framework')."</h4>";
-                            echo "<p>".__('If you are not happy with the results below please do another search','avia_framework')."</p>";
+                            echo "<p>".__('Si no estas feliz con los resultados, podrías hacer otra búsqueda','avia_framework')."</p>";
 
                             get_search_form();
                             echo "<span class='author-extra-border'></span>";
@@ -29,7 +29,7 @@ global $avia_config;
                         </section>
                     </div>
 
-
+                    <div style="min-height:250px">
                     <?php
                     if(!empty($_GET['s']))
                     {
@@ -45,6 +45,7 @@ global $avia_config;
                     }
 
                     ?>
+                        </div>
 
 				<!--end content-->
 				</main>
@@ -62,7 +63,27 @@ global $avia_config;
 
 		</div><!-- close default .container_wrap element -->
 
+<div style="width:960px; margin:auto">
+<?php echo do_shortcode("[av_three_fourth first][av_textblock][contact-form-7 id='4122' title='suscribe'][/av_textblock][/av_three_fourth]"); ?> 
+<?php echo do_shortcode("[av_one_fourth]
 
+[av_hr class='invisible' height='45' shadow='shadow' position='center']
 
+[av_font_icon icon='ue8f5' font='entypo-fontello' style='' caption='' link='manually,https://www.facebook.com/maccentercolombia' linktarget='_blank' color='#000000' size='19px' position='left'][/av_font_icon]
 
+[av_font_icon icon='ue8bd' font='entypo-fontello' style='' caption='' link='' linktarget='_blank' color='#f7f7f7' size='40px' position='left'][/av_font_icon]
+
+[av_font_icon icon='ue8f1' font='entypo-fontello' style='' caption='' link='manually,https://twitter.com/MacCenter' linktarget='_blank' color='#000000' size='19px' position='left'][/av_font_icon]
+
+[av_font_icon icon='ue8bd' font='entypo-fontello' style='' caption='' link='' linktarget='_blank' color='#f7f7f7' size='40px' position='left'][/av_font_icon]
+
+[av_font_icon icon='ue909' font='entypo-fontello' style='' caption='' link='manually,http://instagram.com/maccenter' linktarget='_blank' color='#000000' size='19px' position='left'][/av_font_icon]
+
+[av_font_icon icon='ue8bd' font='entypo-fontello' style='' caption='' link='' linktarget='_blank' color='#f7f7f7' size='40px' position='left'][/av_font_icon]
+
+[av_font_icon icon='ue921' font='entypo-fontello' style='' caption='' link='manually,https://www.youtube.com/user/MacCenterColombia' linktarget='_blank' color='#000000' size='17px' position='left'][/av_font_icon]
+
+[/av_one_fourth]"); ?> 
+    </div>
+<?php echo do_shortcode("[av_hr class='full' height='50' shadow='no-shadow' position='center']"); ?> 
 <?php get_footer(); ?>

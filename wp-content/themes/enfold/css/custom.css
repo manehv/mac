@@ -26,7 +26,8 @@ display: none;
 h1.clsBotTitle{color:#292325; font-size:28px; margin-top:10px; padding-bottom:10px; border-bottom:1px solid #AAAAAA; font-family:'open_sansregular'; font-weight:normal; letter-spacing:-1px; }
 h2.clsFinish{color: #000000; font-size: 18px; font-family: 'open_sanslight'; font-weight: normal; margin: 20px 0 10px;text-transform:capitalize }
 /*Please do not change the following line */
-.content {padding-bottom: 50px;  padding-top: 50px; }
+/*.content {padding-bottom: 50px;  padding-top: 50px; }*/
+.content {padding-bottom: 50px; }
 .sidebar{padding-bottom: 50px;  padding-top: 50px; }
 .clsContent .clsCenTitle{font-size:18px; color:#6B6869; font-weight:bold; margin-bottom:30px; }
 .clsContent ul{margin-left:0; margin-top:25px;  }
@@ -41,7 +42,6 @@ h2.clsFinish{color: #000000; font-size: 18px; font-family: 'open_sanslight'; fon
 .clsSidebar h3{padding:5px 14px; border-bottom:1px solid #e1e1e1; color:#292325; font-size:12px; font-family:'open_sanslight'; font-weight:bold;}
 .clsDetails, #top .clsDetails .price span.amount{color:#292325; font-size:12px; font-family:'open_sanslight'; font-weight:normal; line-height:normal; }
 #top .clsDetails .price span.amount { font-family:'Open Sans', arial, sans-serif; font-weight: bold }
-#top .clsDetails span.amount { font-family:'Open Sans', arial, sans-serif; font-weight: bold }
 .clsDetails .clsSubDiv{margin:5px 15px; font-size:12px; }
 div.product p.stock { margin: 0 15px; }
 #top div.product div.clsDetails.images img{height:150px; width:auto; margin:0 auto; }
@@ -70,7 +70,7 @@ div.product p.stock { margin: 0 15px; }
 .products .thumbnail_container img{display:table-cell; vertical-align:middle; }
 #top div .quantity input.qty, .quantity input.qty{border:1px solid #e1e1e1; margin:0 10px; }
 table div.quantity{width:150px; }
-.woocommerce-page .button{margin-top:0px; }
+/*.woocommerce-page .button{margin-top:10px; }*/
 #top .avia-post-nav {background: none rgba(0, 0, 0, 0.1) !important; }
 .clsContent .avia-image-container{ /* width:64px; Commented because it makes all image too small */ display:inline-block; margin-right:25px; max-width: 100%; }
 .clsContent .av-special-heading{margin-top:0; }
@@ -89,9 +89,9 @@ table div.quantity{width:150px; }
 .custom_table.shop_table tr.cart_item td{border:1px solid #E6E7E8; }
 .clsActions{border:1px solid #E6E7E8; }
 #top .custom_table.shop_table .actions .coupon .input-text{border:1px solid #e1e1e1; line-height:normal; font-size:11px; background-color: #f8f8f8; border-color: #e1e1e1; color: #919191;}
-#top table.shop_table .actions .button{padding:15px 30px !important; }
+#top table.shop_table .actions .button{padding:13px 0; }
 #top .custom_table.shop_table .actions .coupon .input-text:focus{box-shadow:0 0 2px 0 rgba(0, 0, 0, 0.2); }
-#top table.custom_table.shop_table .actions .checkout-button, #top #payment #place_order{padding:15px 30px !important; border-radius:2px; font-size:11px; background-color:#00a14f; border:1px solid #00a14f; transition:all 0.3s ease-out 0s; }
+#top table.custom_table.shop_table .actions .checkout-button, #top #payment #place_order{padding:13px 0; border-radius:2px; font-size:11px; background-color:#00a14f; border:1px solid #00a14f; transition:all 0.3s ease-out 0s; }
 #top table.custom_table.shop_table .actions .checkout-button:hover, #top #payment #place_order:hover{background-color:#0088cc; border-color: #0066aa; transition:all 0.3s ease-out 0s; }
 #top .main_color table.custom_table.shop_table .quantity input.plus, #top .main_color table.custom_table.shop_table .quantity input.minus{border:1px solid #e4e4e4; background:#ffffff; width:30px; height:30px; line-height:24px; border-radius:50%; color:#231F20; }
 #top table.custom_table.shop_table .quantity input.qty{border:1px solid #e4e4e4; border-radius:4px; color:#231F20; width: 35px !important;}
@@ -314,41 +314,14 @@ background-color: #56656d;
 color:#fff !important;
 }
 .sub-menu a{
-
-	height:auto !important;
-	padding-top:10px;
-	padding-bottom:10px;
-}
-#simplr-form input[type="text"] {    
-    box-shadow: unset !important;
-    padding: 15px !important;
-		border-radius:unset;
-}
-#simplr-form input[type="submit"] {
-    background-image: -moz-linear-gradient(center bottom , #777777 43%, #777777 75%, #777777 89%)!important;
-    border-radius: unset !important;
-    box-shadow: unset !important;
-}
-.simplr-field label, .option-field label {
-    width: 100% !important;
-}
-#simplr-form .simplr-field, .option-field {
-    margin:0;
-}
-#simplr-form  input[type="text"]{
-	margin:0px;
-}
-#simplr-form input[type="submit"] {
-	margin-top:20px;}
-.simplr-field input, .option-field input {
-    
-    width: 250px !important;
-
+height:auto !important;
+padding-top:10px;
+padding-bottom:10px;
 }
 
 /* Media Queries */
 @media only screen and (min-width:320px) and (max-width:480px){
-.responsive .logo a, .responsive .logo img{/*height:70px !important;*/ }
+.responsive .logo a, .responsive .logo img{height:70px !important; }
 #mobile-advanced{background-color:transparent; border:0 none; }
 #mobile-advanced li{background-color:#ffffff; }
 #mobile-advanced .sub-menu a:hover{background-color:transparent; color:#0088cc; }
@@ -497,102 +470,20 @@ Mobile Styles
 ================================================== */
 /* Note: Add new css to the media query below that you want to only effect the Mobile and Tablet Portrait view */
 
-@media only screen and (max-width:767px) {
+@media only screen and (max-width: 767px) {
   /* Add your Mobile Styles here */
-.chosen-container {
-	width:270px!important;
-  }
-}
-@media only screen and (min-width:768px) and (max-width: 980px) {
-	.chosen-container {
-	 width:440px!important;
-  }
+
 }
 
-@media only screen and (min-width:1280px) and (max-width: 1290px) {
-	.chosen-container {
-	 width:665px!important;
-  }
+
+
+@media only screen and (min-width: 990px) {
+.cart_dropdown.visible_cart {
+top: 25px;
+        right: 10px;
+}
 }
 
-@media only screen and (min-width:990px) {
-	.cart_dropdown.visible_cart {
-		top: 25px;
-    right: 1px;
-	}  
-}
-input[type="submit"], #submit, .button {
-	border-radius: 0px;
-}
-
-.form-row input[type="submit"], #submit, .button {
-	border-radius: 0px;
-	color:#ffffff;
-	background-color:#666666;
-	padding: 9px 54px!important;
-	font-size:14px;
-}
-.woocommerce .form-row input[type="submit"], #submit, .button {
-  margin-top:0px;
-	padding: 1px 2px!important;
-}
-
-#top .form-row label{
-	font-size:14px;
-  color:#666666;
-}
- .inline{
-	 font-weight:normal!important;
-  color:#6D6D6D;
-}
-.lost_password a{
-	color:#6D6D6D;
-}
-
-.sub-menu .avia-menu-text{
-/*	padding:6px;*/
-}
-.sub-menu{
-	min-width: 88px;
-}
-
-.entry-summary  .single_variation_wrap{
-	display:none!important;	
-}
-
-.nameset{
-	font-size: 12px;
-	font-weight: bold;
-	color: #282828;
-	display: block;
-	
-	margin-top: 19px;
-}
-.adminset{
-	line-height:10px;
-	padding:0 10px;
-	display:inline-block;
-	margin-left:-31px;
-}
-.linkcolor a{
-	color:#282828;
-	display:inline-block;
-  /*font-weight: bold;*/
-  font-size: 10px;
-}
-#customer_login {
-	padding-top:100px;
-}
-
-#av_section_3 {
-    position: relative;   
-    z-index: -1;
-}
-.woocommerce  #customer_login{
-	 margin-left: -50px;
-   margin-top: -30px;
-   margin-right: 30px;
-}
-.woocommerce-checkout .av_textblock_section:nth-child(2) .avia_textblock p{
-	display:none;
+.sub-menu {
+    width: auto !important;
 }

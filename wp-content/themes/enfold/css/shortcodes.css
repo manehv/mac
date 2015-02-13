@@ -61,7 +61,7 @@ position: relative;
 .flex_column + .av-special-heading{float:left; }
 
 body .av-special-heading .av-special-heading-tag{
-padding:0px;
+padding:0;
 margin:0;
 
 float:left;
@@ -277,7 +277,7 @@ transition: 		all 0.3s ease-in-out;
 
 /*tooltip*/
 
-#top .avia-icon-tooltip{  width:250px; font-size: 15px; line-height: 1.6em;}
+#top .avia-icon-tooltip{  width:auto; font-size: 10px; line-height: 1.2em;}
 
 
 /*big icon with border*/
@@ -1144,7 +1144,7 @@ line-height: 21px;
 
 .avia_ajax_form .button{
 margin:0;
-padding: 16px 50px;
+padding: 10px 50px !important;
 border-radius: 2px;
 border-bottom-width:1px;
 border-bottom-style:solid;
