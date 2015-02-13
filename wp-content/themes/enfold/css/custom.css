@@ -532,9 +532,13 @@ input[type="submit"], #submit, .button {
 	padding: 9px 54px!important;
 	font-size:14px;
 }
-.woocommerce .form-row input[type="submit"], #submit, .button {
+.woocommerce .form-row input[type="submit"], #submit,  {
   margin-top:0px;
-	padding: 13px 54px!important;
+padding: 13px 54px!important;
+}
+.button {
+    margin-top: 0px;
+    padding: 1px 5px !important;
 }
 
 #top .form-row label{
