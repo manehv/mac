@@ -16,9 +16,13 @@
 /* ======================================================================================================================================================
 #Site Styles
 ====================================================================================================================================================== */
+.main_color b{
+   color:#000000 !important;
+}
+
 /*ALTO DE BLOQUE DE TEXTO EN PAG DESCRIPTIVAS*/
 .av_textblock_section{
-min-height: 180px !important;
+min-height: 150px !important;
 }
 #header{
 position: relative;
@@ -610,7 +614,7 @@ top: 15px;
 #top #searchform>div{position: relative;  max-width: 300px;}
 #top .widget #searchform>div{margin:0;}
 #top #searchform br{display:none;}
-#top #s{width:150px; position: relative; padding:10px 47px 11px 5px;  z-index: 1; margin:0; box-shadow: none;border-radius: 20px;
+#top #s{width:150px; position: relative; padding:10px 10px 11px 5px;  z-index: 1; margin:0; box-shadow: none;border-radius: 20px;
 border: 1px solid rgba(255,255,255,0.2); text-align: right}
 #top #searchsubmit, .ajax_load{
 width: 40px;
@@ -678,6 +682,7 @@ border-bottom-style: dashed;
 border-bottom-width: 1px;
 clear:both;
 overflow: hidden;
+width:150px;
 }
 
 #top div .ajax_search_entry.with_image .ajax_search_image{
@@ -1593,8 +1598,11 @@ margin-bottom: -13px;
 
 .template-page .entry-content-wrapper h1{
 text-transform: none;
-letter-spacing: 1px;
-padding:0px 0px 0px 0px;
+/*letter-spacing: 1px;*/
+padding: 10px 2px 10px 30px !important;
+border: 1px solid #cccccc;
+width: 100%;
+font-weight: 100 !important;
 }
 .template-page .entry-content-wrapper h2{
 text-transform: none;
@@ -2337,9 +2345,9 @@ padding:15px 0;
 }
 
 #socket{font-size: 11px; margin-top: 10px; z-index: 1;}
-#socket .menu{margin-top:6px;}
-#socket .sub_menu_socket{float:right; margin:0;}
-#socket .sub_menu_socket div{overflow: hidden;}
+#socket .menu{float:left !important; margin: 5px}
+#socket .sub_menu_socket{float:right!important}
+#socket .sub_menu_socket div{overflow: hidden; margin-left:-20px !important}
 #socket .sub_menu_socket li{float:left; display:block; padding:0 10px; border-left-style: solid; border-left-width: 1px; line-height: 10px;}
 #socket .sub_menu_socket li:first-child{border:none;}
 #socket .sub_menu_socket li:last-child{padding-right:0;}
