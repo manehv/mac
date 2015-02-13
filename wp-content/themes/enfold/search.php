@@ -86,4 +86,6 @@ global $avia_config;
 [/av_one_fourth]"); ?> 
     </div>
 <?php echo do_shortcode("[av_hr class='full' height='50' shadow='no-shadow' position='center']"); ?> 
+
 <?php get_footer(); ?>
+
