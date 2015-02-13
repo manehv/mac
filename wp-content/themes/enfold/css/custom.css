@@ -592,3 +592,6 @@ input[type="submit"], #submit, .button {
    margin-right: 30px;
 }
 
+#top form.login {
+    margin-bottom: 100px;   
+}
