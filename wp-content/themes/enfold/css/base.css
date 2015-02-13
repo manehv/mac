@@ -226,7 +226,7 @@ margin-bottom: 30px;
         border-right: none !important;
 */
 		}
-	#top input[type="text"]{text-align: left !important; padding: 8px 10px !important;}
+	#top input[type="text"]{text-align: left !important; }
 	#top input[type="text"]:focus,
 	#top input[type="password"]:focus,
 	#top input[type="email"]:focus,
