@@ -3,11 +3,11 @@ error_reporting(E_ALL);
 define("PLUGIN_DIR", ABSPATH . 'wp-content/plugins/simplr-registration-form' );
 include_once(PLUGIN_DIR.'/lib/form.class.php');
 class SimplrExt extends SREG_Form{
-	function text($option, $vals, $class = 'wide') { 
-	?>	
+	function text($option, $vals, $class = 'wide') {
+	?>
 		<div class="option-field col-lg-6 col-sm-6 col-xs-12<?php echo apply_filters($option['name'].'_error_class',''); ?>">
 			<label for="<?php echo $option['name']; ?>"><?php echo $option['label'] . show_required($option); ?></label>
-			<input type="text" name="<?php echo $option['name']; ?>" id="<?php echo $option['name']; ?>" value="<?php echo esc_attr($vals); ?>" class="<?php echo @$class; ?> <?php echo @$class; ?>"/>	
+			<input type="text" name="<?php echo $option['name']; ?>" id="<?php echo $option['name']; ?>" value="<?php echo esc_attr($vals); ?>" class="<?php echo @$class; ?> <?php echo @$class; ?>"/>
 			<?php if(isset($option['comment'])) { echo '<div class="form-comment">'.$option['comment'].'</div>'; } ?>
 		</div>
 	<?php
@@ -30,7 +30,7 @@ function sreg_figure1($atts) {
 	), $atts));
 		if($role != 'admin') {
 			$function = sreg_basic1($atts);
-		} else { 
+		} else {
 			$function = 'You should not register admin users via a public form';
 		}
 	return $function;
@@ -44,7 +44,7 @@ function sreg_basic1($atts) {
 		global $user_ID;
 		$first_visit = get_user_meta($user_ID, 'first_visit',true);
 		if(empty($first_visit)) {
-		
+
 			$message = !empty($atts['message'])?$atts['message']:"Thank you for registering.";
 			update_user_meta($user_ID,'first_visit',date('Y-m-d'));
 			echo '<div id="message" class="success"><p>'.$message.'</p></div>';
@@ -73,7 +73,7 @@ function sreg_basic1($atts) {
 
 function simplr_build_form1($data,$atts) {
 	include_once(PLUGIN_DIR.'/lib/form.class.php');
-	if(get_option('users_can_register') != '1') { print('Registrations have been disabled'); 
+	if(get_option('users_can_register') != '1') { print('Registrations have been disabled');
 	} else {
 	// retrieve fields and options
 	$custom = new SREG_Fields();
@@ -87,13 +87,13 @@ function simplr_build_form1($data,$atts) {
 		$fb_button = $fb_user;
 		$fb_user = null;
 	}
-	
+
 	$label_email = apply_filters('simplr_label_email', __('Email Address:','simplr-reg') );
 	$label_confirm_email = apply_filters('simplr_label_confirm_email', __('Confirm Email:','simplr-reg') );
 	$label_username = apply_filters('simplr_label_username', __('Your Username:','simplr-reg') );
 	$label_pass = apply_filters('simplr_label_password', __('Choose a Password','simpr-reg'));
 	$label_confirm = apply_filters('simplr_label_confirm', __('Confirm Password','simpr-reg'));
-	
+
 	//POST FORM
 	$form = '';
 	$form .= apply_filters('simplr-reg-instructions', __('', 'simplr-reg'));
@@ -101,7 +101,7 @@ function simplr_build_form1($data,$atts) {
 	if(isset($fb_button)) {
 		$form .= '<div class="fb-button">'.$fb_button.'</div>';
 	}
-	
+
 	$fields = explode(',',@$atts['fields']);
 	$form .=  '<form class="col-lg-7 col-lg-offset-3" method="post" action="" id="simplr-reg">';
 	$form .= apply_filters('simplr-reg-first-form-elem','');
@@ -123,7 +123,7 @@ function simplr_build_form1($data,$atts) {
 			$form .= "<h3 class='registration'>".$matches[1]."</h3>";
 		}
 		$cf = @$custom->fields->custom[$field];
-	
+
 		$out = '';
 		if($cf['key'] != '') {
 			if($fb_user != null) {
@@ -140,20 +140,20 @@ function simplr_build_form1($data,$atts) {
 			if(isset($data[$cf['key']])) {
 				if($cf['type'] == 'date') {
 					$key_val = implode('-',array($data[$cf['key'].'-yr'],$data[$cf['key'].'-mo'],$data[$cf['key'].'-dy']));
-				} elseif($cf['key'] != 'user_login' AND $cf['key'] != 'user_password' AND $cf['key'] != 'user_email') { 
+				} elseif($cf['key'] != 'user_login' AND $cf['key'] != 'user_password' AND $cf['key'] != 'user_email') {
 					$key_val = $data[$cf['key']];
-				}		
+				}
 			}
-			
+
 			if($cf['type'] == 'callback') {
 				$cf['options_array'][1] = array( @$data[$cf['key']] );
 			}
-			
+
 			// do field
 			if($cf['type'] != '') {
 				SimplrExt::$cf['type']($args, @esc_attr($key_val), '', $cf['options_array']);
 			}
-			
+
 			$form .= ob_get_contents();
 			ob_end_clean();
 		}
@@ -161,13 +161,13 @@ function simplr_build_form1($data,$atts) {
 	$form .=  '</div>';
 	$form = apply_filters('simplr-add-personal-fields', $form);
 		$form .= '<div >';
-	//only insert the email fields if the user hasn't specified them. 
-	if( !in_array('email',$fields) ) {	
+	//only insert the email fields if the user hasn't specified them.
+	if( !in_array('email',$fields) ) {
 		$form .=  '<div class="simplr-field col-lg-6 col-sm-6 col-xs-12 email-field '.apply_filters('email_error_class','').'">';
 		$form .=  '<label for="email" class="left">' .$label_email .' <span class="required">*</span></label>';
 		$form .=  '<input type="text" name="email" class="right" value="'.esc_attr(@$data['email']) .'" />';
 		$form .=  '</div>';
-	} 
+	}
 
 	if( !in_array('email_confirm', $fields) ) {
 		$form .=  '<div class="simplr-field col-lg-6 col-sm-6 col-xs-12 email-field '.apply_filters('email_error_class','').'">';
@@ -177,16 +177,16 @@ function simplr_build_form1($data,$atts) {
 	}
 	$form .= '</div>';
 	$form = apply_filters('simplr-add-contact-fields', $form);
-	
-	
-	if('yes' == @$atts['password']) 
+
+
+	if('yes' == @$atts['password'])
 	{
 		$form .= '<div >';
 		$form .=  '<div class="simplr-field col-lg-6 col-sm-6 col-xs-12 '.apply_filters('password_error_class','').'">';
 		$form .=  '<label for="password" class="left">' .$label_pass .'</label>';
 		$form .=  '<input type="password" name="password" class="right" value="'.esc_attr(@$data['password']) .'"/>';
 		$form .=  '</div>';
-		
+
 		$form .=  '<div class="option-field col-lg-6 col-sm-6 col-xs-12'.apply_filters('password_error_class','').'">';
 		$form .=  '<label for="password-confirm" class="left">' .$label_confirm .'</label>';
 		$form .=  '<input type="password" name="password_confirm" class="right" value="'.esc_attr(@$data['password_confirm']) .'"/>';
@@ -199,7 +199,7 @@ function simplr_build_form1($data,$atts) {
 	if( isset( $soptions->recap_on ) AND $soptions->recap_on == 'yes') {
 		$form .= sreg_recaptcha_field();
 	}
-	
+
 	//add attributes to form
 	if(!empty($atts)) {
 		foreach($atts as $k=>$v)
@@ -207,23 +207,23 @@ function simplr_build_form1($data,$atts) {
 			$form .= '<input type="hidden" name="atts['.$k.']" value="'.$v.'" />';
 		}
 	}
-	 
+
 	//submission button. Use filter to custommize
 	$form .=  apply_filters('simplr-reg-submit', '<div class="col-lg-6 col-sm-6 col-xs-12"><input type="submit" name="submit-reg" value="Register" class="submit button"></div>');
-	
+
 	//wordress nonce for security
 	$nonce = wp_create_nonce('simplr_nonce');
 	$form .= '<input type="hidden" name="simplr_nonce" value="' .$nonce .'" />';
-	
+
 	if(!empty($fb_user)) {
 		$form .= '<input type="hidden" name="fbuser_id" value="'.$fb_user['id'].'" />';
 	}
-	
+
 	$form .= '<div style="clear:both;"></div>';
 	$form .=  '</form>';
 	$form .=  '</div>';
 	if( isset($options->fb_connect_on) AND $soptions->fb_connect_on == 'yes') {
-		$form .= sreg_load_fb_script(); 
+		$form .= sreg_load_fb_script();
 	}
 	return $form;
 	}
@@ -241,7 +241,7 @@ global $avia_config;
  *
  * example: global $avia_config; $avia_config['use_child_theme_functions_only'] = true;
  * The default functions.php file will then no longer be loaded. You need to make sure then
- * to include framework and functions that you want to use by yourself. 
+ * to include framework and functions that you want to use by yourself.
  *
  * This is only recommended for advanced users
  */
@@ -256,7 +256,7 @@ function wphidenag() {
 wp_enqueue_script( 'lock_fixed', get_template_directory_uri() . '/js/jquery.lockfixed.js', array(), '1.0.0', true );
 wp_enqueue_script( 'slim_scroll', get_template_directory_uri() . '/js/perfect-scrollbar/jquery.slimscroll.min.js', array(), '1.0.0', true );
 wp_enqueue_script( 'custom_js', get_template_directory_uri() . '/js/custom.js', array(), '1.0.0', true );
- 
+
 if(isset($avia_config['use_child_theme_functions_only'])) return;
 add_theme_support('avia_conditionals_for_mega_menu');
 //set builder mode to debug
@@ -294,27 +294,27 @@ $avia_config['color_sets'] = array(
     'footer_color'      => 'Footer',
     'socket_color'      => 'Socket'
  );
- 
- 
+
+
 
 /*
  * add support for responsive mega menus
  */
- 
+
 add_theme_support('avia_mega_menu');
 
 
 /*
  * deactivates the default mega menu and allows us to pass individual menu walkers when calling a menu
  */
- 
+
 add_filter('avia_mega_menu_walker', '__return_false');
 
 
 /*
  * adds support for the new avia sidebar manager
  */
- 
+
 add_theme_support('avia_sidebar_manager');
 
 
@@ -369,7 +369,7 @@ $avia_config['selectableImgSize'] = array(
 	'entry_with_sidebar' 	=> __('Entry with Sidebar','avia_framework'),
 	'entry_without_sidebar'	=> __('Entry without Sidebar','avia_framework'),
 	'extra_large' 			=> __('Fullscreen Sections/Sliders','avia_framework'),
-	
+
 );
 
 avia_backend_add_thumbnail_size($avia_config);
@@ -400,9 +400,9 @@ $avia_config['layout']['sidebar_right'] = array('content' => 'nine alpha',   'si
  * These are some of the font icons used in the theme, defined by the entypo icon font. the font files are included by the new aviaBuilder
  * common icons are stored here for easy retrieval
  */
- 
+
  $avia_config['font_icons'] = apply_filters('avf_default_icons', array(
- 
+
     //post formats
     'standard' 		=> array( 'font' =>'entypo-fontello', 'icon' => 'ue836'),
     'link'    		=> array( 'font' =>'entypo-fontello', 'icon' => 'ue822'),
@@ -411,8 +411,8 @@ $avia_config['layout']['sidebar_right'] = array('content' => 'nine alpha',   'si
     'quote'   		=> array( 'font' =>'entypo-fontello', 'icon' => 'ue833'),
     'gallery'   	=> array( 'font' =>'entypo-fontello', 'icon' => 'ue80e'),
     'video'   		=> array( 'font' =>'entypo-fontello', 'icon' => 'ue80d'),
-    				
-    //social		
+
+    //social
     'behance' 		=> array( 'font' =>'entypo-fontello', 'icon' => 'ue915'),
 	'dribbble' 		=> array( 'font' =>'entypo-fontello', 'icon' => 'ue8fe'),
 	'facebook' 		=> array( 'font' =>'entypo-fontello', 'icon' => 'ue8f3'),
@@ -425,18 +425,18 @@ $avia_config['layout']['sidebar_right'] = array('content' => 'nine alpha',   'si
 	'tumblr' 		=> array( 'font' =>'entypo-fontello', 'icon' => 'ue8fa'),
 	'twitter' 		=> array( 'font' =>'entypo-fontello', 'icon' => 'ue8f1'),
 	'vimeo' 		=> array( 'font' =>'entypo-fontello', 'icon' => 'ue8ef'),
-	'rss' 			=> array( 'font' =>'entypo-fontello', 'icon' => 'ue853'),  
-	'youtube'		=> array( 'font' =>'entypo-fontello', 'icon' => 'ue921'),  
-	'xing'			=> array( 'font' =>'entypo-fontello', 'icon' => 'ue923'),  
-	'soundcloud'	=> array( 'font' =>'entypo-fontello', 'icon' => 'ue913'),  
-	'five_100_px'	=> array( 'font' =>'entypo-fontello', 'icon' => 'ue91d'),  
+	'rss' 			=> array( 'font' =>'entypo-fontello', 'icon' => 'ue853'),
+	'youtube'		=> array( 'font' =>'entypo-fontello', 'icon' => 'ue921'),
+	'xing'			=> array( 'font' =>'entypo-fontello', 'icon' => 'ue923'),
+	'soundcloud'	=> array( 'font' =>'entypo-fontello', 'icon' => 'ue913'),
+	'five_100_px'	=> array( 'font' =>'entypo-fontello', 'icon' => 'ue91d'),
 	'mail' 			=> array( 'font' =>'entypo-fontello', 'icon' => 'ue805'),
-					
-	//woocomemrce    
+
+	//woocomemrce
 	'cart' 			=> array( 'font' =>'entypo-fontello', 'icon' => 'ue859'),
 	'details'		=> array( 'font' =>'entypo-fontello', 'icon' => 'ue84b'),
 
-	//bbpress    
+	//bbpress
 	'supersticky'	=> array( 'font' =>'entypo-fontello', 'icon' => 'ue808'),
 	'sticky'		=> array( 'font' =>'entypo-fontello', 'icon' => 'ue809'),
 	'one_voice'		=> array( 'font' =>'entypo-fontello', 'icon' => 'ue83b'),
@@ -444,7 +444,7 @@ $avia_config['layout']['sidebar_right'] = array('content' => 'nine alpha',   'si
 	'closed'		=> array( 'font' =>'entypo-fontello', 'icon' => 'ue824'),
 	'sticky_closed' => array( 'font' =>'entypo-fontello', 'icon' => 'ue808\ue824'),
 	'supersticky_closed' => array( 'font' =>'entypo-fontello', 'icon' => 'ue809\ue824'),
-					
+
 	//navigation, slider & controls
 	'play' 			=> array( 'font' =>'entypo-fontello', 'icon' => 'ue897'),
 	'pause'			=> array( 'font' =>'entypo-fontello', 'icon' => 'ue899'),
@@ -455,14 +455,14 @@ $avia_config['layout']['sidebar_right'] = array('content' => 'nine alpha',   'si
 	'close'			=> array( 'font' =>'entypo-fontello', 'icon' => 'ue814'),
 	'reload'		=> array( 'font' =>'entypo-fontello', 'icon' => 'ue891'),
 	'mobile_menu'	=> array( 'font' =>'entypo-fontello', 'icon' => 'ue8a5'),
-					
-	//image hover overlays		
+
+	//image hover overlays
     'ov_external'	=> array( 'font' =>'entypo-fontello', 'icon' => 'ue832'),
     'ov_image'		=> array( 'font' =>'entypo-fontello', 'icon' => 'ue869'),
     'ov_video'		=> array( 'font' =>'entypo-fontello', 'icon' => 'ue897'),
-    
-					
-	//misc			
+
+
+	//misc
     'search'  		=> array( 'font' =>'entypo-fontello', 'icon' => 'ue803'),
     'info'    		=> array( 'font' =>'entypo-fontello', 'icon' => 'ue81e'),
 	'clipboard' 	=> array( 'font' =>'entypo-fontello', 'icon' => 'ue8d1'),
@@ -515,14 +515,14 @@ if(!function_exists('avia_register_frontend_scripts'))
 		wp_enqueue_script( 'avia-shortcodes', $template_url.'/js/shortcodes.js', array('jquery'), 1, true );
 		wp_enqueue_script( 'avia-prettyPhoto',  $template_url.'/js/prettyPhoto/js/jquery.prettyPhoto.js', 'jquery', "3.1.5", true);
 
-		
-	// wp_dequeue_script('wc-add-to-cart-variation'); 
-//   wp_register_script( 'wc-add-to-cart-variation',$template_url.'/js/custom_variation.js',true); 
+
+	// wp_dequeue_script('wc-add-to-cart-variation');
+//   wp_register_script( 'wc-add-to-cart-variation',$template_url.'/js/custom_variation.js',true);
 
     wp_deregister_script('wc-add-to-cart-variation');
     //wp_register_script('wc-add-to-cart-variation', get_bloginfo( 'stylesheet_directory' ). '/woocommerce/assets/js/frontend/add-to-cart-variation.min.js',array( 'jquery' ), WC_VERSION, true);
 		wp_register_script('wc-add-to-cart-variation', $template_url . '/woocommerce/assets/js/frontend/add-to-cart-variation.min.js', WC_VERSION, true);
-  
+
 		wp_enqueue_script( 'jquery' );
 		wp_enqueue_script( 'wp-mediaelement' );
 
@@ -541,12 +541,12 @@ if(!function_exists('avia_register_frontend_scripts'))
 		wp_enqueue_style( 'avia-prettyP', $template_url."/js/prettyPhoto/css/prettyPhoto.css", array(), '1', 'screen' );
 		wp_enqueue_style( 'avia-media'  , $template_url."/js/mediaelement/skin-1/mediaelementplayer.css", array(), '1', 'screen' );
 		wp_enqueue_style( 'avia-print' ,  $template_url."/css/print.css", array(), '1', 'print' );
-		
-		
+
+
 		if ( is_rtl() ) {
 			wp_enqueue_style(  'avia-rtl',  $template_url."/css/rtl.css", array(), '1', 'screen' );
 		}
-		
+
 
         global $avia;
 		$safe_name = avia_backend_safe_string($avia->base_data['prefix']);
@@ -735,7 +735,7 @@ require_once( 'functions-enfold.php');
 	add_action( 'woocommerce_product_after_variable_attributes_js', 'variable_fields_js' );
 	//Save variation fields
 	add_action( 'woocommerce_process_product_meta_variable', 'save_variable_fields', 10, 1 );
- 
+
 	/**
 	* Create new fields for variations
 	*
@@ -754,7 +754,7 @@ require_once( 'functions-enfold.php');
 		    'placeholder' => '',
 		    'description' => __( 'Enter the custom value here.', 'woocommerce' ),
 		    'value' => $variation_data['_textarea'][0],
-		    )		
+		    )
 		    );
 		  // Textarea
 		  woocommerce_wp_textarea_input(
@@ -765,9 +765,9 @@ require_once( 'functions-enfold.php');
 		    'placeholder' => '',
 		    'description' => __( 'Enter the description here.', 'woocommerce' ),
 		    'value' => $variation_data['_description'][0],
-		    )		
+		    )
 		    );
-		    
+
 		?>
 	    </td>
 	</tr>
@@ -776,7 +776,7 @@ require_once( 'functions-enfold.php');
 
 
 
- 
+
 /**
 * Save new fields for variations
 *
@@ -785,7 +785,7 @@ require_once( 'functions-enfold.php');
 		if (isset( $_POST['variable_sku'] ) ) :
              $variable_sku = $_POST['variable_sku'];
              $variable_post_id = $_POST['variable_post_id'];
-            // print_r($variable_post_id);die; // Array ( [0] => 2207 [1] => 2208 [2] => 2209 [3] => 2210 [4] => 3657 [5] => 3660 ) 
+            // print_r($variable_post_id);die; // Array ( [0] => 2207 [1] => 2208 [2] => 2209 [3] => 2210 [4] => 3657 [5] => 3660 )
 				// Textarea
 					$_textarea = $_POST['_textarea'];
 					$_description = $_POST['_description'];
@@ -797,7 +797,7 @@ require_once( 'functions-enfold.php');
 						if ( isset( $_textarea[$i] ) ) {
 						update_post_meta( $variation_id, '_description', stripslashes( $_description[$i] ) );
 						}
-						
+
 					endfor;
 endif;
 
@@ -829,6 +829,7 @@ function custom_admin_head() {
 
   echo '<style type="text/css">'.$css.'</style>';
 }
+/*
 add_action('admin_head', 'custom_admin_head');
 
 unset($fields['billing']['billing_address_2']);
@@ -837,57 +838,60 @@ unset($fields['billing']['billing_address_2']);
 // Hook in
 add_filter( 'woocommerce_checkout_fields' , 'custom_override_checkout_fields' );
 
+
+
+
 // Our hooked in function - $fields is passed via the filter!
 function custom_override_checkout_fields( $fields ) {
-     $fields['billing']['billing_first_name'] = array(
+   $fields['billing']['billing_first_name'] = array(
         'label'     => __('Name', 'woocommerce'),
         'placeholder'   => (''),
 				'required'  => true,
 				'class'     => array('form-row-quarter')
      );
-     
+
      $fields['billing']['billing_last_name'] = array(
         'label'     => __('Last Name', 'woocommerce'),
         'placeholder'   => (''),
 				'required'  => true,
 				'class'     => array('form-row-quarter')
-     );
-     
+     ); 
+
      $fields['billing']['billing_email'] = array(
         'label'     => __('Email', 'woocommerce'),
         'placeholder'   => (''),
 				'required'  => true,
 				'class'     => array('form-row-quarter')
      );
-     
+
      $fields['billing']['billing_phone'] = array(
         'label'     => __('Telephone', 'woocommerce'),
         'placeholder'   => (''),
 				'required'  => true,
 				'class'     => array('form-row-quarter', 'form-row-quarter-last ')
      );
-     
+
      $fields['billing']['billing_mobile_phone'] = array(
         'label'     => __('Mobile', 'woocommerce'),
         'placeholder'   => (''),
 				'required'  => true,
 				'class'     => array('form-row-quarter')
      );
-     
+
      $fields['billing']['billing_nit'] = array(
         'label'     => __('N.I.T', 'woocommerce'),
         'placeholder'   => (''),
 				'required'  => false,
 				'class'     => array('form-row-quarter')
      );
-     
+
      $fields['billing']['billing_company'] = array(
         'label'     => __('Company Name', 'woocommerce'),
         'placeholder'   => (''),
 				'required'  => false,
 				'class'     => array('form-row-half', 'form-row-half-last')
      );
-     
+
      $fields['billing']['billing_country'] = array(
 				'type'     => 'country',
         'label'     => __('Country', 'woocommerce'),
@@ -895,7 +899,7 @@ function custom_override_checkout_fields( $fields ) {
 				'required'  => true,
 				'class'     => array('form-row-half', 'address-field', 'update_totals_on_change')
      );
-     
+
      $fields['billing']['billing_state'] = array(
 				'type'     => 'state',
         'label'     => __('State', 'woocommerce'),
@@ -905,7 +909,7 @@ function custom_override_checkout_fields( $fields ) {
 				'validate'    => array( 'state' ),
 				'clear'    => false
      );
-     
+
      $fields['billing']['billing_city'] = array(
         'label'     => __('City', 'woocommerce'),
         'placeholder'   => (''),
@@ -913,14 +917,14 @@ function custom_override_checkout_fields( $fields ) {
 				'class'     => array('form-row-quarter', 'address-field'),
 				'clear'    => false
      );
-     
+
      $fields['billing']['billing_address_1'] = array(
         'label'     => __('Address', 'woocommerce'),
         'placeholder'   => (''),
 				'required'  => true,
 				'class'     => array('form-row-half', 'address-field')
      );
-     
+
      $fields['billing']['billing_postcode'] = array(
         'label'     => __('Zip Code', 'woocommerce'),
         'placeholder'   => (''),
@@ -929,7 +933,7 @@ function custom_override_checkout_fields( $fields ) {
 				'validate'    => array( 'postcode' ),
 				'clear'    => false
      );
-    
+
      return $fields;
 }
 
@@ -938,7 +942,7 @@ function custom_override_checkout_fields( $fields ) {
 add_filter('woocommerce_checkout_fields','reorder_woocommerce_fields');
 
 function reorder_woocommerce_fields($fields) {
-        
+
         $fields2['billing']['billing_first_name'] = $fields['billing']['billing_first_name'];
         $fields2['billing']['billing_last_name'] = $fields['billing']['billing_last_name'];
         $fields2['billing']['billing_email'] = $fields['billing']['billing_email'];
@@ -956,10 +960,10 @@ function reorder_woocommerce_fields($fields) {
         $fields2['order'] = $fields['order'];
 	     $fields2['billing']['billing_phone']['label'] = 'Teléfono';
 	     $fields2['billing']['billing_mobile_phone']['label'] = 'Celular';
- 
+
         return $fields2;
 }
-
+*/
 add_filter( 'woocommerce_available_variation', 'fetch_custom_product_meta', 10, 3);
 //This will be used to pull custom fields which we have added for that product
 function fetch_custom_product_meta( $data, $product, $variation){
@@ -967,11 +971,11 @@ function fetch_custom_product_meta( $data, $product, $variation){
 	$data['description'] = get_post_meta($variation->variation_id,'_description',true) ; // This will be model description
 	if ($data['price_html'] == '') {
 		$data['price_html'] = '<span class="price">' . $variation->get_price_html() . '</span>';
-	}	
+	}
 	return $data ;
 }
 
-																																																																		
+
 add_filter( 'wp_nav_menu_items', 'my_nav_menu_profile_link',10,2);
 
 function my_nav_menu_profile_link($menu, $args) {
@@ -981,18 +985,18 @@ function my_nav_menu_profile_link($menu, $args) {
 	  	}
 
 	  	else if($args->theme_location=='avia'){
-	  	
+
 								 $logout_url= home_url();
 												//  $items .= '<li><a href="'. wp_logout() .'">Click Here (Log Out)</a></li>';
 								 $current_user = wp_get_current_user();
 								 $user_name =$current_user->user_login;
 								 $user_name =SUBSTR($user_name,0,15);
-							   $title="Hola, ".$user_name;
-							  
+							   $title="Hola ".$user_name.".";
+
 							   $items.= '<span class="adminset">';
 							   $items .= '<span class="nameset">'.$title.'</span> ';
-						     $items .= '<span class="linkcolor"><a href="'.wp_logout_url($logout_url).'">'.__('Cerrar sesión').'</a></span></span>';
-													return $menu.$items;													
+						     $items .= '<span class="linkcolor"><a href="'.wp_logout_url($logout_url).'">'.__('¿no eres ').$user_name.__('? ( Salir )').'</a></span></span>';
+													return $menu.$items;
 			}
 			else
 			{
@@ -1001,21 +1005,34 @@ function my_nav_menu_profile_link($menu, $args) {
 }
 
 add_action('wp_logout','go_home');
-function go_home(){  
+function go_home(){
   $logout_url= home_url();
   wp_redirect($logout_url);
   exit();
-} 
+}
 
-add_action( 'template_redirect', function() {
+add_filter( 'woocommerce_checkout_fields' , 'custom_override_checkout_fields' );
+add_filter( 'woocommerce_billing_fields' , 'custom_override_billing_fields' );
+add_filter( 'woocommerce_shipping_fields' , 'custom_override_shipping_fields' );
 
-	if ( is_user_logged_in() || !is_page() ) return;
+function custom_override_checkout_fields( $fields ) {
+  unset($fields['billing']['billing_address_2']);
+  unset($fields['billing']['billing_email']);  
+  unset($fields['shipping']['billing_address_2']);
+  unset($fields['shipping']['billing_email']);
+  return $fields;
+}
 
-	$restricted = array( 7116 ); // all your restricted pages
+function custom_override_billing_fields( $fields ) {
+  unset($fields['billing_address_2']);
+  unset($fields['billing_email']);
+  return $fields;
+}
 
-	if ( in_array( get_queried_object_id(), $restricted ) ) {
-	wp_redirect( site_url( '/login' ) );
-	exit();
-	}
+function custom_override_shipping_fields( $fields ) {
+  unset($fields['billing_address_2']);
+  unset($fields['billing_email']);
+  return $fields;
+}
 
-});
+
