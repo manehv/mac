@@ -600,3 +600,6 @@ input[type="submit"], #submit, .button {
 #top .chosen-container-single .chosen-single{
 	 height:35px;
 }
+.woocommerce_top {
+	margin-top:100px;
+}
