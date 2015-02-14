@@ -829,20 +829,65 @@ function custom_admin_head() {
 
   echo '<style type="text/css">'.$css.'</style>';
 }
+
+add_filter( 'woocommerce_available_variation', 'fetch_custom_product_meta', 10, 3);
+//This will be used to pull custom fields which we have added for that product
+function fetch_custom_product_meta( $data, $product, $variation){
+	$data['shipping_notes'] = get_post_meta($variation->variation_id,'_textarea',true); // This will be shipping details
+	$data['description'] = get_post_meta($variation->variation_id,'_description',true) ; // This will be model description
+	if ($data['price_html'] == '') {
+		$data['price_html'] = '<span class="price">' . $variation->get_price_html() . '</span>';
+	}
+	return $data ;
+}
+
+
+add_filter( 'wp_nav_menu_items', 'my_nav_menu_profile_link',10,2);
+
+function my_nav_menu_profile_link($menu, $args) {
+
+			if (!is_user_logged_in()){
+							return $menu;
+	  	}
+
+	  	else if($args->theme_location=='avia'){
+
+								 $logout_url= home_url();
+												//  $items .= '<li><a href="'. wp_logout() .'">Click Here (Log Out)</a></li>';
+								 $current_user = wp_get_current_user();
+								 $user_name =$current_user->user_login;
+								 $user_name =SUBSTR($user_name,0,15);
+							   $title="Hola ".$user_name.".";
+
+							   $items.= '<span class="adminset">';
+							   $items .= '<span class="nameset">'.$title.'</span> ';
+						     $items .= '<span class="linkcolor"><a href="'.wp_logout_url($logout_url).'">'.__('¿no eres ').$user_name.__('? ( Salir )').'</a></span></span>';
+													return $menu.$items;
+			}
+			else
+			{
+								return $menu;
+			}
+}
+
+add_action('wp_logout','go_home');
+function go_home(){
+  $logout_url= home_url();
+  wp_redirect($logout_url);
+  exit();
+}
+
+
 /*
-add_action('admin_head', 'custom_admin_head');
-
-unset($fields['billing']['billing_address_2']);
-unset($fields['billing']['billing_address_2']);
-
-// Hook in
-add_filter( 'woocommerce_checkout_fields' , 'custom_override_checkout_fields' );
-
-
-
-
-// Our hooked in function - $fields is passed via the filter!
 function custom_override_checkout_fields( $fields ) {
+  unset($fields['billing']['billing_address_2']);
+  unset($fields['billing']['billing_email']);
+  unset($fields['billing']['billing_state']);
+  unset($fields['shipping']['billing_state']);
+  unset($fields['shipping']['billing_address_2']);
+  unset($fields['shipping']['billing_email']);
+  $fields['billing']['billing_address_1']['placeholder'] = 'My new placeholder';
+
    $fields['billing']['billing_first_name'] = array(
         'label'     => __('Name', 'woocommerce'),
         'placeholder'   => (''),
@@ -855,7 +900,7 @@ function custom_override_checkout_fields( $fields ) {
         'placeholder'   => (''),
 				'required'  => true,
 				'class'     => array('form-row-quarter')
-     ); 
+     );
 
      $fields['billing']['billing_email'] = array(
         'label'     => __('Email', 'woocommerce'),
@@ -934,105 +979,185 @@ function custom_override_checkout_fields( $fields ) {
 				'clear'    => false
      );
 
-     return $fields;
-}
-
-//Reordering of woocommerce billing fields
-
-add_filter('woocommerce_checkout_fields','reorder_woocommerce_fields');
-
-function reorder_woocommerce_fields($fields) {
-
-        $fields2['billing']['billing_first_name'] = $fields['billing']['billing_first_name'];
-        $fields2['billing']['billing_last_name'] = $fields['billing']['billing_last_name'];
-        $fields2['billing']['billing_email'] = $fields['billing']['billing_email'];
-        $fields2['billing']['billing_phone'] = $fields['billing']['billing_phone'];
-        $fields2['billing']['billing_mobile_phone'] = $fields['billing']['billing_mobile_phone'];
-        $fields2['billing']['billing_nit'] = $fields['billing']['billing_nit'];
-        $fields2['billing']['billing_company'] = $fields['billing']['billing_company'];
-        $fields2['billing']['billing_address_1'] = $fields['billing']['billing_address_1'];
-        $fields2['billing']['billing_city'] = $fields['billing']['billing_city'];
-        $fields2['billing']['billing_state'] = $fields['billing']['billing_state'];
-        $fields2['billing']['billing_country'] = $fields['billing']['billing_country'];
-        $fields2['billing']['billing_postcode'] = $fields['billing']['billing_postcode'];
-        $fields2['shipping'] = $fields['shipping'];
-        $fields2['account'] = $fields['account'];
-        $fields2['order'] = $fields['order'];
-	     $fields2['billing']['billing_phone']['label'] = 'Teléfono';
-	     $fields2['billing']['billing_mobile_phone']['label'] = 'Celular';
-
-        return $fields2;
-}
-*/
-add_filter( 'woocommerce_available_variation', 'fetch_custom_product_meta', 10, 3);
-//This will be used to pull custom fields which we have added for that product
-function fetch_custom_product_meta( $data, $product, $variation){
-	$data['shipping_notes'] = get_post_meta($variation->variation_id,'_textarea',true); // This will be shipping details
-	$data['description'] = get_post_meta($variation->variation_id,'_description',true) ; // This will be model description
-	if ($data['price_html'] == '') {
-		$data['price_html'] = '<span class="price">' . $variation->get_price_html() . '</span>';
-	}
-	return $data ;
-}
-
-
-add_filter( 'wp_nav_menu_items', 'my_nav_menu_profile_link',10,2);
-
-function my_nav_menu_profile_link($menu, $args) {
-
-			if (!is_user_logged_in()){
-							return $menu;
-	  	}
-
-	  	else if($args->theme_location=='avia'){
-
-								 $logout_url= home_url();
-												//  $items .= '<li><a href="'. wp_logout() .'">Click Here (Log Out)</a></li>';
-								 $current_user = wp_get_current_user();
-								 $user_name =$current_user->user_login;
-								 $user_name =SUBSTR($user_name,0,15);
-							   $title="Hola ".$user_name.".";
-
-							   $items.= '<span class="adminset">';
-							   $items .= '<span class="nameset">'.$title.'</span> ';
-						     $items .= '<span class="linkcolor"><a href="'.wp_logout_url($logout_url).'">'.__('¿no eres ').$user_name.__('? ( Salir )').'</a></span></span>';
-													return $menu.$items;
-			}
-			else
-			{
-								return $menu;
-			}
-}
-
-add_action('wp_logout','go_home');
-function go_home(){
-  $logout_url= home_url();
-  wp_redirect($logout_url);
-  exit();
-}
-
-add_filter( 'woocommerce_checkout_fields' , 'custom_override_checkout_fields' );
+  return $fields;  
+} 
+add_filter( 'woocommerce_checkout_fields' , 'custom_override_checkout_fields' ); */
 add_filter( 'woocommerce_billing_fields' , 'custom_override_billing_fields' );
 add_filter( 'woocommerce_shipping_fields' , 'custom_override_shipping_fields' );
-
-function custom_override_checkout_fields( $fields ) {
-  unset($fields['billing']['billing_address_2']);
-  unset($fields['billing']['billing_email']);  
-  unset($fields['shipping']['billing_address_2']);
-  unset($fields['shipping']['billing_email']);
-  return $fields;
-}
 
 function custom_override_billing_fields( $fields ) {
   unset($fields['billing_address_2']);
   unset($fields['billing_email']);
+  unset($fields['billing_phone']);
+  unset($fields['billing_state']);
+  unset($fields['billing']);
+
+   $fields['billing_first_name'] = array(
+        'label'     => __('Nombre', 'woocommerce'),
+        'placeholder'   => (''),
+				'required'  => true,
+				'class'     => array('form-row-first')
+     );
+
+     $fields['billing_last_name'] = array(
+        'label'     => __('Apellido', 'woocommerce'),
+        'placeholder'   => (''),
+				'required'  => true,
+				'class'     => array('form-row-last')
+     );
+
+     	 $fields['billing_country'] = array(
+				'type'     => 'country',
+        'label'     => __('Country', 'woocommerce'),
+        'placeholder'   => (''),
+				'required'  => true,
+				'class'     => array('form-row-first', 'address-field', 'update_totals_on_change')
+     ); 
+
+      $fields['billing_city'] = array(
+        'label'     => __('Ciudad/Localidad', 'woocommerce'),
+        'placeholder'   => (''),
+				'required'  => true,
+				'class'     => array('form-row-last', 'address-field'),
+				'clear'    => false
+     );   
+      $fields['billing_company'] = array(
+        'label'     => __('Departamento', 'woocommerce'),
+        'placeholder'   => (''),
+				'required'  => true,
+				'class'     => array('form-row-first')
+     );
+     
+       $fields['billing_postcode'] = array(
+        'label'     => __('Código postal/Zip', 'woocommerce'),
+        'placeholder'   => (''),
+				'required'  => false,
+				'class'     => array('form-row-last', 'address-field'),
+				'validate'    => array( 'postcode' ),
+				'clear'    => false
+     );
+     
+      $fields['billing_address_1'] = array(
+        'label'     => __('Dirección Completa', 'woocommerce'),
+        'placeholder'   => (''),
+				'required'  => true,
+				'class'     => array('form-row-first', 'address-field')
+     );
+     
+      $fields['billing_mobile_phone'] = array(
+        'label'     => __('Celular', 'woocommerce'),
+        'placeholder'   => (''),
+				'required'  => false,
+				'class'     => array('form-row-last')
+     );
+ 
   return $fields;
 }
 
 function custom_override_shipping_fields( $fields ) {
   unset($fields['billing_address_2']);
   unset($fields['billing_email']);
+  unset($fields['billing_phone']);
+  unset($fields['billing_state']);
+  unset($fields['billing']);
+
+   $fields['billing_first_name'] = array(
+        'label'     => __('Nombre', 'woocommerce'),
+        'placeholder'   => (''),
+				'required'  => true,
+				'class'     => array('form-row-first')
+     );
+
+     $fields['billing_last_name'] = array(
+        'label'     => __('Apellido', 'woocommerce'),
+        'placeholder'   => (''),
+				'required'  => true,
+				'class'     => array('form-row-last')
+     );
+
+     	 $fields['billing_country'] = array(
+				'type'     => 'country',
+        'label'     => __('Country', 'woocommerce'),
+        'placeholder'   => (''),
+				'required'  => true,
+				'class'     => array('form-row-first', 'address-field', 'update_totals_on_change')
+     );
+
+      $fields['billing_city'] = array(
+        'label'     => __('Ciudad/Localidad', 'woocommerce'),
+        'placeholder'   => (''),
+				'required'  => true,
+				'class'     => array('form-row-last', 'address-field'),
+				'clear'    => false
+     );
+      $fields['billing_company'] = array(
+        'label'     => __('Departamento', 'woocommerce'),
+        'placeholder'   => (''),
+				'required'  => true,
+				'class'     => array('form-row-first')
+     );
+
+       $fields['billing_postcode'] = array(
+        'label'     => __('Código postal/Zip', 'woocommerce'),
+        'placeholder'   => (''),
+				'required'  => false,
+				'class'     => array('form-row-last', 'address-field'),
+				'validate'    => array( 'postcode' ),
+				'clear'    => false
+     );
+
+      $fields['billing_address_1'] = array(
+        'label'     => __('Dirección Completa', 'woocommerce'),
+        'placeholder'   => (''),
+				'required'  => true,
+				'class'     => array('form-row-first', 'address-field')
+     );
+
+      $fields['billing_mobile_phone'] = array(
+        'label'     => __('Celular', 'woocommerce'),
+        'placeholder'   => (''),
+				'required'  => false,
+				'class'     => array('form-row-last')
+     );
+
   return $fields;
 }
+
+
+//Reordering of woocommerce billing fields
+add_filter( 'woocommerce_shipping_fields','reorder_woocommerce_fields');
+add_filter( 'woocommerce_billing_fields','reorder_woocommerce_fields');
+
+function reorder_woocommerce_fields($fields) {
+
+        $fields2['billing_first_name'] = $fields['billing_first_name'];
+        $fields2['billing_last_name'] = $fields['billing_last_name'];
+        $fields2['billing_country'] = $fields['billing_country'];
+        $fields2['billing_city'] = $fields['billing_city'];
+        $fields2['billing_company'] = $fields['billing_company'];
+        $fields2['billing_postcode'] = $fields['billing_postcode'];
+        $fields2['billing_address_1'] = $fields['billing_address_1'];
+        $fields2['billing_mobile_phone'] = $fields['billing_mobile_phone'];
+      
+
+   /*   $fields2['billing']['billing_first_name'] = $fields['billing']['billing_first_name'];
+        $fields2['billing']['billing_last_name'] = $fields['billing']['billing_last_name'];
+        $fields2['billing']['billing_email'] = $fields['billing']['billing_email'];
+        $fields2['billing']['billing_phone'] = $fields['billing']['billing_phone'];
+        $fields2['billing']['billing_mobile_phone'] = $fields['billing']['billing_mobile_phone'];
+        $fields2['billing']['billing_phone'] = $fields['billing']['billing_phone'];
+        $fields2['billing']['billing_nit'] = $fields['billing']['billing_nit'];
+        $fields2['billing']['billing_company'] = $fields['billing']['billing_company'];       
+        $fields2['billing']['billing_city'] = $fields['billing']['billing_city'];
+        $fields2['billing']['billing_state'] = $fields['billing']['billing_state'];         
+        $fields2['shipping'] = $fields['shipping'];
+        $fields2['account'] = $fields['account'];
+        $fields2['order'] = $fields['order'];
+	      $fields2['billing']['billing_phone']['label'] = 'Teléfono';
+	      $fields2['billing']['billing_mobile_phone']['label'] = 'Celular';  */
+
+        return $fields2; 
+}
+
 
 

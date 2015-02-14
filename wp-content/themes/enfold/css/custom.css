@@ -505,13 +505,13 @@ Mobile Styles
 }
 @media only screen and (min-width:768px) and (max-width: 980px) {
 	.chosen-container {
-	 width:440px!important;
+	 width:210px!important;
   }
 }
 
 @media only screen and (min-width:1280px) and (max-width: 1290px) {
 	.chosen-container {
-	 width:665px!important;
+	 width:315px!important;
   }
 }
 
@@ -594,6 +594,9 @@ input[type="submit"], #submit, .button {
 #top form.login {
     margin-bottom: 100px;
 }
- .template-page .entry-content-wrapper .col-lg-offset-3{
+.template-page .entry-content-wrapper .col-lg-offset-3{
 	  border:none;
+}
+#top .chosen-container-single .chosen-single{
+	 height:35px;
 }
