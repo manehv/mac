@@ -103,7 +103,9 @@ function simplr_build_form1($data,$atts) {
 	}
 
 	$fields = explode(',',@$atts['fields']);
-	$form .=  '<form class="col-lg-7 col-lg-offset-3" method="post" action="" id="simplr-reg">';
+	$form .=  '<form class="col-lg-6 col-lg-offset-3" method="post" action="" id="simplr-reg">';
+	$form .= '<h1>Registro <span class="pull-right">*Information Compulsory</span></h1>';
+	$form .= '<hr/>';
 	$form .= apply_filters('simplr-reg-first-form-elem','');
 	$form .= '<div >';
 	//if the user has not added their own user name field lets force one
@@ -163,7 +165,7 @@ function simplr_build_form1($data,$atts) {
 		$form .= '<div >';
 	//only insert the email fields if the user hasn't specified them.
 	if( !in_array('email',$fields) ) {
-		$form .=  '<div class="simplr-field col-lg-6 col-sm-6 col-xs-12 email-field '.apply_filters('email_error_class','').'">';
+		$form .=  '<div class="option-field col-lg-6 col-sm-6 col-xs-12 email-field '.apply_filters('email_error_class','').'">';
 		$form .=  '<label for="email" class="left">' .$label_email .' <span class="required">*</span></label>';
 		$form .=  '<input type="text" name="email" class="right" value="'.esc_attr(@$data['email']) .'" />';
 		$form .=  '</div>';
