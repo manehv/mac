@@ -573,10 +573,11 @@ padding: 13px 54px!important;
 	display:block;
 }
 .adminset{
-	padding: 0px 10px;
-	display: inline-block;
-	line-height: 12px;
-	margin-top: 19px;
+	padding: 0px 0px;
+display: inline-block;
+line-height: 12px;
+margin-top: 19px;
+margin-left: -30px;
 }
 .linkcolor a{
 	color:#282828;
