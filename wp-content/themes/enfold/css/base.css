@@ -196,7 +196,7 @@ margin-bottom: 30px;
 	#top fieldset {
 		margin-bottom: 20px;  padding: 20px; }
 	#top .input-text,
-	#top input[type="text"],
+
 	#top input[type="input"],
 	#top input[type="password"],
 	#top input[type="email"],
@@ -226,7 +226,18 @@ margin-bottom: 30px;
         border-right: none !important;
 */
 		}
-
+	#top input[type="text"]{text-align: left !important;  -webkit-appearance: none;
+		border: 1px solid #e1e1e1 !important;
+		padding: 8px 6px;
+		outline: none;
+		font: 13px "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+		color: #777;
+		margin: 0px 30px 0px 0px;
+		width: 200px;
+/*		max-width: 100%;*/
+		display: inline;
+		margin-bottom: 20px;
+		background: #fff;}
 	#top input[type="text"]:focus,
 	#top input[type="password"]:focus,
 	#top input[type="email"]:focus,

@@ -26,7 +26,7 @@ display: none;
 h1.clsBotTitle{color:#292325; font-size:28px; margin-top:10px; padding-bottom:10px; border-bottom:1px solid #AAAAAA; font-family:'open_sansregular'; font-weight:normal; letter-spacing:-1px; }
 h2.clsFinish{color: #000000; font-size: 18px; font-family: 'open_sanslight'; font-weight: normal; margin: 20px 0 10px;text-transform:capitalize }
 /*Please do not change the following line */
-.content {padding-bottom: 50px;  padding-top: 50px; }
+.content {padding-bottom: 50px;  /*padding-top: 50px; */}
 .sidebar{padding-bottom: 50px;  padding-top: 50px; }
 .clsContent .clsCenTitle{font-size:18px; color:#6B6869; font-weight:bold; margin-bottom:30px; }
 .clsContent ul{margin-left:0; margin-top:25px;  }
@@ -348,7 +348,7 @@ color:#fff !important;
 
 /* Media Queries */
 @media only screen and (min-width:320px) and (max-width:480px){
-.responsive .logo a, .responsive .logo img{height:70px !important; }
+.responsive .logo a, .responsive .logo img{/*height:70px !important;*/ }
 #mobile-advanced{background-color:transparent; border:0 none; }
 #mobile-advanced li{background-color:#ffffff; }
 #mobile-advanced .sub-menu a:hover{background-color:transparent; color:#0088cc; }
@@ -503,13 +503,13 @@ Mobile Styles
 	width:270px!important;
   }
 }
-@media only screen and (min-width:768px) and (max-width: 980px) {
+@media only screen and (min-width:768px) and (max-width:980px) {
 	.chosen-container {
 	 width:210px!important;
   }
 }
 
-@media only screen and (min-width:1280px) and (max-width: 1290px) {
+@media only screen and (min-width:1280px) and (max-width:1290px) {
 	.chosen-container {
 	 width:315px!important;
   }
@@ -532,9 +532,13 @@ input[type="submit"], #submit, .button {
 	padding: 9px 54px!important;
 	font-size:14px;
 }
-.woocommerce .form-row input[type="submit"], #submit, .button {
+.woocommerce .form-row input[type="submit"], #submit,  {
   margin-top:0px;
-	padding: 13px 54px!important;
+padding: 13px 54px!important;
+}
+.button {
+    margin-top: 0px;
+    padding: 1px 5px !important;
 }
 
 #top .form-row label{
@@ -553,7 +557,8 @@ input[type="submit"], #submit, .button {
 	padding:4px;
 }
 .sub-menu{
-	min-width: 84px;
+	/*min-width: 84px;*/
+	min-width:100% !important;
 }
 
 .entry-summary  .single_variation_wrap{
@@ -562,21 +567,23 @@ input[type="submit"], #submit, .button {
 
 .nameset{
 	background-color:none;
-	font-size:18px;
+	font-size:12px;
 	font-weight:bold;
 	color:#282828;
 	display:block;
 }
 .adminset{
-	line-height:25px;
-	padding:0 10px;
-	display:inline-block;
+	padding: 0px 0px;
+display: inline-block;
+line-height: 12px;
+margin-top: 19px;
+margin-left: -30px;
 }
 .linkcolor a{
 	color:#282828;
 	display:inline-block;
   font-weight: bold;
-  font-size: 11px;
+  font-size: 10px;
 }
 #customer_login {
 	padding-top:100px;
@@ -597,6 +604,7 @@ input[type="submit"], #submit, .button {
 .template-page .entry-content-wrapper .col-lg-offset-3{
 	  border:none;
 }
+
 #top .chosen-container-single .chosen-single{
 	 height:35px;
 }
