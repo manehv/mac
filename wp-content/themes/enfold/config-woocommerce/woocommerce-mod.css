@@ -1394,7 +1394,7 @@ vertical-align: middle;
 margin: 0;
 border-left: none;
 border-right: none;
-text-align: center;
+text-align: center !important;
 }
 
 #top div td.actions .coupon .input-text {
