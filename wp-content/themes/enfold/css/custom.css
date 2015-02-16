@@ -32,6 +32,7 @@ h1.clsBotTitle{
     color:#292325; 
 font-size:28px; 
 position:absolute;
+z-index:2;
 }	
 
 /*color:#292325; 
