@@ -360,7 +360,10 @@ color:#fff !important;
 	margin:0px;
 }
 #simplr-form input[type="submit"] {
-	margin-top:20px;}
+	margin-top:22px;
+	padding: 12px 30px !important;
+border-radius: 2px !important;
+}
 .simplr-field input, .option-field input {
 
     width: 250px !important;
