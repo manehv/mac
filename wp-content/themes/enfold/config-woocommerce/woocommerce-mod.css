@@ -841,10 +841,10 @@ padding:0;
 
 
 .template-shop div.product div.images{
-/*width:100%;*/
+width:100%;
 float: none;
 margin: auto;
-width: 450px;
+/*width: 450px;*/
 }
 
 /*.template-shop div.product div.summary{
