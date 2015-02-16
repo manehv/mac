@@ -117,7 +117,7 @@ table div.quantity{width:150px; }
 #top .main_color table.custom_table.shop_table .quantity input.plus, #top .main_color table.custom_table.shop_table .quantity input.minus{border:1px solid #e4e4e4; background:#ffffff; width:30px; height:30px; line-height:24px; border-radius:50%; color:#231F20; }
 #top table.custom_table.shop_table .quantity input.qty{border:1px solid #e4e4e4; border-radius:4px; color:#231F20; width: 35px !important;}
 .clsTopImg{margin:40px 0; }
-.clsTopImg img{display:block; margin-top:5px; }
+.clsTopImg img{display:block; margin-top:5px; width: 400px; }
 .clsTopImg span{display: inline-block; margin-right:57px; width: 65px; color:#231F20; }
 .product-remove .remove{border:1px solid #ED1D24; }
 #top .main_color .custom_table.shop_table .product-remove a.remove, #top .main_color .custom_table.shop_table .product-remove a.remove:hover{color:#ED1D24; background-color:#ED1D24; }
