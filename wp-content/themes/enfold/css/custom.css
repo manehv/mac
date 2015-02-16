@@ -28,6 +28,7 @@ h1.clsBotTitle{
     padding: 5px 2px 5px 30px !important;
     border: 1px solid #CCC;
     width: 960px !important;
+    min-width:240px !important;
     font-weight: 100 !important;
     color:#292325; 
     font-size:28px; 
