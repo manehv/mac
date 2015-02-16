@@ -71,7 +71,7 @@ div.product p.stock { margin: 0 15px; }
 #top div div.woocommerce-message a.button.wc-forward{width:14%; padding:10px; }
 .clsDetails button.single_add_to_cart_button:hover, #top div div.woocommerce-message a.button.wc-forward:hover{background-color:#0088cc !important; border-color: #0066aa !important; transition:all 0.3s ease-out 0s; }
 .clsDetails #price .price {font-size:12px; line-height:normal; font-weight: bold; }
-.clsSidebar{border-radius: 2px; box-shadow: 0 0 2px rgba(0, 0, 0, 0.3); margin-top:15px; border:1px solid #e5e6e7; padding:1px; }
+.clsSidebar{border-radius: 2px; box-shadow: 0 0 2px rgba(0, 0, 0, 0.3); margin-top:50px; border:1px solid #e5e6e7; padding:1px; }
 .clsSidebar .clsBotDetails{padding:5px 15px; border-bottom:1px solid #e1e1e1; color:#292325; font-size:11px; font-family:'open_sanslight'; margin:0; }
 /*.clsSidebar:last-child{border-bottom:0 none; } */
 .clsSidebar .clsBotTitle{padding:5px 15px; line-height:normal; font-weight:bold; }
