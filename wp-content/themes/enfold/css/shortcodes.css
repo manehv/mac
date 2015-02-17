@@ -3317,7 +3317,6 @@ Partner/Logo Slider + Content Slider
 #top .avia-smallarrow-slider  .avia-slideshow-arrows a:hover{opacity: 0.5;}
 #top .avia-smallarrow-slider  .avia-slideshow-arrows a:before{line-height: 25px; border-radius: 1px;}
 #top .avia-smallarrow-slider  .slide-image, #top .avia-logo-element-container img{margin:0 auto; display: block; width:auto; width: 100%\9;}
-/*#top .avia-smallarrow-slider-heading{display: table; width:100%;}*/
 #top .avia-smallarrow-slider-heading{display: table; width:150px;}
 #top .avia-smallarrow-slider-heading> div{display: table-cell;}
 #top .avia-smallarrow-slider-heading h3{top:-3px; position: relative;}
@@ -3333,7 +3332,7 @@ Partner/Logo Slider + Content Slider
 /*partner only*/
 #top .avia-logo-element-container .slide-entry { padding:1px; }
 #top .avia-logo-element-container img{ box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.3); }
-#top .av-border-deactivate.avia-logo-element-container img{ box-shadow: none; }
+#top .av-border-deactivate.avia-logo-element-container img{ box-shadow: none; width: 150px; }
 #top .avia-logo-element-container .slide-image{overflow: visible;}
 
 @media only screen and (max-width: 767px)
