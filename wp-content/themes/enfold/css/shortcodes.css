@@ -3316,7 +3316,7 @@ Partner/Logo Slider + Content Slider
 #top .avia-smallarrow-slider  .avia-slideshow-arrows a{opacity: 1; margin:0; width:24px; height:24px; line-height: 25px; font-size: 10px; top:40px;}
 #top .avia-smallarrow-slider  .avia-slideshow-arrows a:hover{opacity: 0.5;}
 #top .avia-smallarrow-slider  .avia-slideshow-arrows a:before{line-height: 25px; border-radius: 1px;}
-#top .avia-smallarrow-slider  .slide-image, #top .avia-logo-element-container img{margin:0 auto; display: block; width:auto; width: 100%\9;}
+#top .avia-smallarrow-slider  .slide-image, #top .avia-logo-element-container img{margin:0 auto; display: block; width:auto; width: 100%\9; background-color:#fff;}
 #top .avia-smallarrow-slider-heading{display: table; width:150px;}
 #top .avia-smallarrow-slider-heading> div{display: table-cell;}
 #top .avia-smallarrow-slider-heading h3{top:-3px; position: relative;}
