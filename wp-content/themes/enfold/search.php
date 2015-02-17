@@ -21,7 +21,7 @@ global $avia_config;
                         <section class="search_form_field">
                             <?php
                             echo "<h4>".__('New Search','avia_framework')."</h4>";
-                            echo "<p>".__('Si no eno te gunta el resultado de la búsqueda, puedes hacer otra con distintos términos','avia_framework')."</p>";
+                            echo "<p>".__('Si no te gusta el resultado de la búsqueda, puedes hacer otra con distintos términos','avia_framework')."</p>";
 
                             get_search_form();
                             echo "<span class='author-extra-border'></span>";
