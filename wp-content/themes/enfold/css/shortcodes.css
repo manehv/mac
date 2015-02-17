@@ -343,7 +343,8 @@ opacity: 0.1;
 -webkit-transform:scale(0.5);
 -ms-transform:scale(0.5);
 transform:scale(0.5);
-    margin-top: 10px;
+/*margin-top:1 0px;*/
+    margin-top: 0px;
 }
 
 
