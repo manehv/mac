@@ -1,4 +1,67 @@
-<!-- ####### END FOOTER CONTAINER ####### -->
+		<?php
+		global $avia_config;
+		$blank = isset($avia_config['template']) ? $avia_config['template'] : "";
+
+		//reset wordpress query in case we modified it
+		wp_reset_query();
+
+
+		//get footer display settings
+		$the_id 				= avia_get_the_id(); //use avia get the id instead of default get id. prevents notice on 404 pages
+		$footer 				= get_post_meta($the_id, 'footer', true);
+		$footer_widget_setting 	= !empty($footer) ? $footer : avia_get_option('display_widgets_socket');
+
+
+		//check if we should display a footer
+		if(!$blank && $footer_widget_setting != 'nofooterarea' )
+		{
+			if( $footer_widget_setting != 'nofooterwidgets' )
+			{
+				//get columns
+				$columns = avia_get_option('footer_columns');
+		?>
+				<div class='container_wrap footer_color' id='footer'>
+
+					<div class='container'>
+
+						<?php
+						do_action('avia_before_footer_columns');
+
+						//create the footer columns by iterating
+
+						
+				        switch($columns)
+				        {
+				        	case 1: $class = ''; break;
+				        	case 2: $class = 'av_one_half'; break;
+				        	case 3: $class = 'av_one_third'; break;
+				        	case 4: $class = 'av_one_fourth'; break;
+				        	case 5: $class = 'av_one_fifth'; break;
+				        	case 6: $class = 'av_one_sixth'; break;
+				        }
+				        
+				        $firstCol = "first el_before_{$class}";
+
+						//display the footer widget that was defined at appearenace->widgets in the wordpress backend
+						//if no widget is defined display a dummy widget, located at the bottom of includes/register-widget-area.php
+						for ($i = 1; $i <= $columns; $i++)
+						{
+							if($i != 1) $class .= " el_after_{$class}  el_before_{$class}";
+							echo "<div class='flex_column {$class} {$firstCol}'>";
+							if (function_exists('dynamic_sidebar') && dynamic_sidebar('Footer - column'.$i) ) : else : avia_dummy_widget($i); endif;
+							echo "</div>";
+							$firstCol = "";
+						}
+
+						do_action('avia_after_footer_columns');
+
+						?>
+
+
+					</div>
+
+
+				<!-- ####### END FOOTER CONTAINER ####### -->
 				</div>
 
 	<?php   } //endif nofooterwidgets ?>
