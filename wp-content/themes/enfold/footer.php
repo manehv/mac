@@ -123,12 +123,7 @@
 [/av_one_fifth]
 [/av_section]"); ?> 
 
-					<div class='container'>
-
 					
-
-
-					</div>
 
 
 				<!-- ####### END FOOTER CONTAINER ####### -->
