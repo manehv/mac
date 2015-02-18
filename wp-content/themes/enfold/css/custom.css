@@ -23,10 +23,31 @@ display: none;
 .clsSinProd .col-lg-3{padding-right:0; }
 .clsSinProd .upsells{margin-top:45px; }
 .clsContent{padding-left:0; padding-right:50px; min-height:650px;}
-h1.clsBotTitle{color:#292325; font-size:28px; margin-top:10px; padding-bottom:10px; border-bottom:1px solid #AAAAAA; font-family:'open_sansregular'; font-weight:normal; letter-spacing:-1px; }
+h1.clsBotTitle{
+    text-transform: none;
+    padding: 5px 2px 5px 30px !important;
+    border: 1px solid #CCC;
+    width: 945px !important;
+    min-width:240px !important;
+    font-weight: 100 !important;
+    color:#292325; 
+    font-size:28px; 
+    z-index:200;
+}	
+
+/*color:#292325; 
+font-size:28px; 
+margin-top:10px; 
+padding-bottom:10px; 
+border-bottom:1px solid #AAAAAA; 
+font-family:'open_sansregular'; 
+font-weight:normal; 
+letter-spacing:-1px;
+}*/
+
 h2.clsFinish{color: #000000; font-size: 18px; font-family: 'open_sanslight'; font-weight: normal; margin: 20px 0 10px;text-transform:capitalize }
 /*Please do not change the following line */
-.content {padding-bottom: 50px;  padding-top: 50px; }
+.content {padding-bottom: 50px;  /*padding-top: 50px; */}
 .sidebar{padding-bottom: 50px;  padding-top: 50px; }
 .clsContent .clsCenTitle{font-size:18px; color:#6B6869; font-weight:bold; margin-bottom:30px; }
 .clsContent ul{margin-left:0; margin-top:25px;  }
@@ -50,7 +71,7 @@ div.product p.stock { margin: 0 15px; }
 #top div div.woocommerce-message a.button.wc-forward{width:14%; padding:10px; }
 .clsDetails button.single_add_to_cart_button:hover, #top div div.woocommerce-message a.button.wc-forward:hover{background-color:#0088cc !important; border-color: #0066aa !important; transition:all 0.3s ease-out 0s; }
 .clsDetails #price .price {font-size:12px; line-height:normal; font-weight: bold; }
-.clsSidebar{border-radius: 2px; box-shadow: 0 0 2px rgba(0, 0, 0, 0.3); margin-top:15px; border:1px solid #e5e6e7; padding:1px; }
+.clsSidebar{border-radius: 2px; box-shadow: 0 0 2px rgba(0, 0, 0, 0.3); margin-top:60px; border:1px solid #e5e6e7; padding:1px; }
 .clsSidebar .clsBotDetails{padding:5px 15px; border-bottom:1px solid #e1e1e1; color:#292325; font-size:11px; font-family:'open_sanslight'; margin:0; }
 /*.clsSidebar:last-child{border-bottom:0 none; } */
 .clsSidebar .clsBotTitle{padding:5px 15px; line-height:normal; font-weight:bold; }
@@ -96,8 +117,8 @@ table div.quantity{width:150px; }
 #top .main_color table.custom_table.shop_table .quantity input.plus, #top .main_color table.custom_table.shop_table .quantity input.minus{border:1px solid #e4e4e4; background:#ffffff; width:30px; height:30px; line-height:24px; border-radius:50%; color:#231F20; }
 #top table.custom_table.shop_table .quantity input.qty{border:1px solid #e4e4e4; border-radius:4px; color:#231F20; width: 35px !important;}
 .clsTopImg{margin:40px 0; }
-.clsTopImg img{display:block; margin-top:5px; }
-.clsTopImg span{display: inline-block; margin-right:57px; width: 65px; color:#231F20; }
+.clsTopImg img{display:block; margin-top:5px; width: 400px; }
+.clsTopImg span{display: inline-block; margin-right:57px; width: 130px; color:#231F20; }
 .product-remove .remove{border:1px solid #ED1D24; }
 #top .main_color .custom_table.shop_table .product-remove a.remove, #top .main_color .custom_table.shop_table .product-remove a.remove:hover{color:#ED1D24; background-color:#ED1D24; }
 .custom_table.shop_table .product-name a, .custom_table.shop_table .product-price .amount, .custom_table.shop_table .product-subtotal .amount{color:#231F20; }
@@ -339,7 +360,10 @@ color:#fff !important;
 	margin:0px;
 }
 #simplr-form input[type="submit"] {
-	margin-top:20px;}
+	margin-top:22px;
+	padding: 12px 30px !important;
+border-radius: 2px !important;
+}
 .simplr-field input, .option-field input {
 
     width: 250px !important;
@@ -358,7 +382,7 @@ color:#fff !important;
 
 /* Media Queries */
 @media only screen and (min-width:320px) and (max-width:480px){
-.responsive .logo a, .responsive .logo img{height:70px !important; }
+.responsive .logo a, .responsive .logo img{/*height:70px !important;*/ }
 #mobile-advanced{background-color:transparent; border:0 none; }
 #mobile-advanced li{background-color:#ffffff; }
 #mobile-advanced .sub-menu a:hover{background-color:transparent; color:#0088cc; }
@@ -513,13 +537,13 @@ Mobile Styles
 	width:270px!important;
   }
 }
-@media only screen and (min-width:768px) and (max-width: 980px) {
+@media only screen and (min-width:768px) and (max-width:980px) {
 	.chosen-container {
 	 width:210px!important;
   }
 }
 
-@media only screen and (min-width:1280px) and (max-width: 1290px) {
+@media only screen and (min-width:1280px) and (max-width:1290px) {
 	.chosen-container {
 	 width:315px!important;
   }
@@ -535,16 +559,28 @@ input[type="submit"], #submit, .button {
 	border-radius: 0px;
 }
 
-.form-row input[type="submit"], #submit, .button {
+.form-row input[type="submit"], #submit{
 	border-radius: 0px;
 	color:#ffffff;
 	background-color:#666666;
 	padding: 9px 54px!important;
 	font-size:14px;
 }
-.woocommerce .form-row input[type="submit"], #submit, .button {
+.button {
+	border-radius: 0px;
+	color:#ffffff;
+	background-color:#666666;
+	padding: 0px 0px!important;
+	font-size:14px;
+}
+
+.woocommerce .form-row input[type="submit"], #submit,  {
   margin-top:0px;
-	padding: 13px 54px!important;
+padding: 13px 54px!important;
+}
+.button {
+    margin-top: 0px;
+    padding: 1px 5px !important;
 }
 
 #top .form-row label{
@@ -563,7 +599,8 @@ input[type="submit"], #submit, .button {
 	padding:4px;
 }
 .sub-menu{
-	min-width: 84px;
+	/*min-width: 84px;*/
+	min-width:100% !important;
 }
 
 .entry-summary  .single_variation_wrap{
@@ -572,21 +609,23 @@ input[type="submit"], #submit, .button {
 
 .nameset{
 	background-color:none;
-	font-size:18px;
+	font-size:12px;
 	font-weight:bold;
 	color:#282828;
 	display:block;
 }
 .adminset{
-	line-height:25px;
-	padding:0 10px;
-	display:inline-block;
+	padding: 0px 0px;
+display: inline-block;
+line-height: 12px;
+margin-top: 19px;
+margin-left: 10px;
 }
 .linkcolor a{
 	color:#282828;
 	display:inline-block;
   font-weight: bold;
-  font-size: 11px;
+  font-size: 10px;
 }
 #customer_login {
 	padding-top:100px;
@@ -607,6 +646,7 @@ input[type="submit"], #submit, .button {
 .template-page .entry-content-wrapper .col-lg-offset-3{
 	  border:none;
 }
+
 #top .chosen-container-single .chosen-single{
 	 height:35px;
 }

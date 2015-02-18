@@ -16,10 +16,28 @@
 /* ======================================================================================================================================================
 #Site Styles
 ====================================================================================================================================================== */
+#scroll-top-link {
+    background-color: red;
+    background: #B5BDC8;
+    background: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2I1YmRjOCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjODI4Yzk1IiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzI4MzQzYiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=");
+    background: -moz-linear-gradient(top, #B5BDC8 0%, #828C95 0%, #28343B 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#b5bdc8), color-stop(0%,#828c95), color-stop(100%,#28343b));
+    background: -webkit-linear-gradient(top, #b5bdc8 0%,#828c95 0%,#28343b 100%);
+    background: -o-linear-gradient(top, #b5bdc8 0%,#828c95 0%,#28343b 100%);
+    background: -ms-linear-gradient(top, #b5bdc8 0%,#828c95 0%,#28343b 100%);
+    background: linear-gradient(to bottom, #B5BDC8 0%,#828C95 0%,#28343B 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#b5bdc8", endColorstr="#28343b",GradientType=0 );
+}
+
 .main_color b{
    color:#000000 !important;
 }
-
+/*AJUSTE SUBMENU TAB SOPORTE*/
+.header_color .main_menu ul ul{
+   background-color: #F7F7F7;
+color: #7C7C7C;
+width: 100% !important;
+}
 /*ALTO DE BLOQUE DE TEXTO EN PAG DESCRIPTIVAS*/
 .av_textblock_section{
 min-height: 150px !important;
@@ -275,9 +293,9 @@ transition: color 0.4s ease-in-out;
 width:100%;
 border-top:1px solid rgba(255,255,255,0.1);
 float:left;
-text-align:left;
+text-align:center;
 background-color: #56656D;
-padding: 18px 16px 10px 17px;
+padding: 18px 2px;
 font-size: 10px;
 height: 45px !important;
 max-width: none;
@@ -543,6 +561,8 @@ text-decoration:none !important;
 #top #menu-item-search{
 z-index: 100;
 left:150px;
+/*left:-884px;*/
+
 }
 
 #top .menu-item-search-dropdown > a, #searchform #searchsubmit, .ajax_search_image, .iconfont{
@@ -561,7 +581,8 @@ border:none;
     padding: 0px;
     width: auto;
     top: 0px !important;
-    margin-left: 128px;
+    margin-left: -54px;
+}
 /*
 border-radius: 3px;
 box-shadow: 0px 3px 13px 0px rgba(0, 0, 0, 0.2);
@@ -611,12 +632,12 @@ top: 15px;
 }
 
 #top #searchform {margin:0; padding:0;}
-#top #searchform>div{position: relative;  max-width: 300px;}
+#top #searchform>div{position: relative;  max-width: 150px;}
 #top .widget #searchform>div{margin:0;}
 #top #searchform br{display:none;}
 #top #s{width:150px; position: relative; padding:10px 10px 11px 5px;  z-index: 1; margin:0; box-shadow: none;border-radius: 20px;
 border: 1px solid rgba(255,255,255,0.2); text-align: right}
-#top #searchsubmit, .ajax_load{
+.ajax_load{
 width: 40px;
 height: 39px;
 line-height: 40px;
@@ -629,7 +650,19 @@ min-width: 40px;
 border-radius: 20px;
     background-color: #777777;
 }
-
+#top #searchsubmit {
+   width: 40px;
+height: 39px;
+line-height: 40px;
+padding: 0px;
+position: absolute;
+top: 0px;
+z-index: 2;
+margin-left: 109px;
+min-width: 40px;
+border-radius: 20px;
+background-color: #777;
+}
 .avia_mobile #top #searchsubmit, .avia_mobile .ajax_load{
 height: 41px;
 }
@@ -1599,7 +1632,7 @@ margin-bottom: -13px;
 .template-page .entry-content-wrapper h1{
 text-transform: none;
 /*letter-spacing: 1px;*/
-padding: 10px 2px 10px 30px !important;
+padding: 5px 2px 5px 30px !important;
 border: 1px solid #cccccc;
 width: 100%;
 font-weight: 100 !important;
@@ -2365,7 +2398,7 @@ text-decoration: none;
 text-align: center;
 opacity: 0;
 right:50px;
-bottom:30px;
+bottom:50%;
 z-index: 10000;
 visibility: hidden;
     border-radius: 30px;
@@ -2859,7 +2892,7 @@ animation:         avia_pop_small 0.5s 1 cubic-bezier(0.175, 0.885, 0.320, 1.275
 .responsive.bottom_nav_header #header_main .social_bookmarks{ position: relative; top: 0; right: 0; margin: 10px auto; clear:both;}
 .responsive #header_main_alternate .mobileMenu{ margin:16px 0;}
 .responsive.bottom_nav_header.social_header .main_menu>div{height:auto;}
-.responsive .mobile_slide_out .logo img{margin:0;}
+.responsive .mobile_slide_out .logo img{margin:0; min-width: 210px;}
 
 /*related images*/
 .responsive #top .related_entries_container .av_one_eighth{width:25%;}
