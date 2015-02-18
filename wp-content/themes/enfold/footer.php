@@ -107,7 +107,7 @@
 [av_textblock]
 <strong>Soporte</strong>
 
-<small><a href='http://mc.arbolnaranja.com/mi-cuenta/view-order/' target='_blank'>Estado del pedido
+<small><a href='http://mc.arbolnaranja.com/mi-cuenta/view-order/ 'target='_blank'>Estado del pedido
 </a><a title='Preguntas frecuentes' href='http://mc.arbolnaranja.com/preguntas-frecuentes/'target='_blank'>Preguntas frecuentes</a>
 <a href='http://mc.arbolnaranja.com/condiciones-garantia-apple/' title='Condiciones Garantía Apple 'target='_blank'>Condiciones garantía Apple</a>
 </small>
