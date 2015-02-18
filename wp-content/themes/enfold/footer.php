@@ -24,7 +24,7 @@
 
 					<div class='container'>
 
-					<?php echo do_shortcode('[av_section color='main_color' custom_bg='#f7f7f7' src='' attachment='' attach='scroll' position='top left' repeat='no-repeat' video='' video_ratio='16:9' min_height='' padding='no-padding' shadow='no-shadow' id='']
+					<?php echo do_shortcode("[av_section color='main_color' custom_bg='#f7f7f7' src='' attachment='' attach='scroll' position='top left' repeat='no-repeat' video='' video_ratio='16:9' min_height='' padding='no-padding' shadow='no-shadow' id='']
 [av_hr class='invisible' height='30' shadow='no-shadow' position='center']
 
 [av_one_fifth first]
@@ -39,7 +39,7 @@
 
 [av_hr class='invisible' height='-30' shadow='no-shadow' position='center']
 
-[av_heading tag='h6' padding='0' heading='<a href="http://mc.arbolnaranja.com/accesorios/">Accesorios <strong>›</strong></a>' color='custom-color-heading' style='blockquote modern-quote modern-centered' custom_font='#0088cc' size='' subheading_active='' subheading_size='15'][/av_heading]
+[av_heading tag='h6' padding='0' heading='<a href='http://mc.arbolnaranja.com/accesorios/'>Accesorios <strong>›</strong></a>' color='custom-color-heading' style='blockquote modern-quote modern-centered' custom_font='#0088cc' size='' subheading_active='' subheading_size='15'][/av_heading]
 
 [/av_one_fifth][av_one_fifth]
 
@@ -51,7 +51,7 @@
 
 [av_hr class='invisible' height='-30' shadow='no-shadow' position='center']
 
-[av_heading tag='h6' padding='0' heading='<a href="http://mc.arbolnaranja.com/tiendas">Tiendas <strong>›</strong></a>' color='custom-color-heading' style='blockquote modern-quote modern-centered' custom_font='#0088cc' size='' subheading_active='' subheading_size='15'][/av_heading]
+[av_heading tag='h6' padding='0' heading='<a href='http://mc.arbolnaranja.com/tiendas'>Tiendas <strong>›</strong></a>' color='custom-color-heading' style='blockquote modern-quote modern-centered' custom_font='#0088cc' size='' subheading_active='' subheading_size='15'][/av_heading]
 
 [/av_one_fifth][av_one_fifth]
 
@@ -63,7 +63,7 @@
 
 [av_hr class='invisible' height='-30' shadow='no-shadow' position='center']
 
-[av_heading tag='h6' padding='0' heading='<a href="http://mc.arbolnaranja.com/soporte/">Información <strong>›</strong></a>' color='custom-color-heading' style='blockquote modern-quote modern-centered' custom_font='#0088cc' size='' subheading_active='' subheading_size='15'][/av_heading]
+[av_heading tag='h6' padding='0' heading='<a href='http://mc.arbolnaranja.com/soporte/'>Información <strong>›</strong></a>' color='custom-color-heading' style='blockquote modern-quote modern-centered' custom_font='#0088cc' size='' subheading_active='' subheading_size='15'][/av_heading]
 
 [/av_one_fifth][av_hr class='invisible' height='35' shadow='no-shadow' position='center']
 [/av_section]
@@ -73,8 +73,8 @@
 
 [av_textblock ]<strong>Mac Center</strong>
 
-<small><a href="http://mc.arbolnaranja.com/quienes-somos/" target="blank">Compañía</a>
-<a href="http://mc.arbolnaranja.com/soporte/">Contáctanos</a>
+<small><a href='http://mc.arbolnaranja.com/quienes-somos/' target="blank">Compañía</a>
+<a href='http://mc.arbolnaranja.com/soporte/'>Contáctanos</a>
 </small>
 
 [/av_textblock]
@@ -84,11 +84,11 @@
 [av_textblock]
 <strong>Comprar </strong>
 
-<small><a href="http://mc.arbolnaranja.com/imac-5k/">Comprar Mac</a>
-<a href="http://mc.arbolnaranja.com/ipod-touch/">Comprar iPod</a>
-<a href="http://mc.arbolnaranja.com/iphone-6/">Comprar iPhone</a>
-<a href="http://mc.arbolnaranja.com/ipad-air-2/">Comprar iPad</a>
-<a href="http://mc.arbolnaranja.com/comprar/accesorios/">Comprar accesorios</a></small>
+<small><a href='http://mc.arbolnaranja.com/imac-5k/'>Comprar Mac</a>
+<a href='http://mc.arbolnaranja.com/ipod-touch/'>Comprar iPod</a>
+<a href='http://mc.arbolnaranja.com/iphone-6/'>Comprar iPhone</a>
+<a href='http://mc.arbolnaranja.com/ipad-air-2/'>Comprar iPad</a>
+<a href='http://mc.arbolnaranja.com/comprar/accesorios/'>Comprar accesorios</a></small>
 [/av_textblock]
 
 [/av_one_fifth][av_one_fifth]
@@ -96,9 +96,9 @@
 [av_textblock]
 <strong>Comparar </strong>
 
-<small><a href="http://mc.arbolnaranja.com/comparar-mac/">Comparar Mac</a>
-<a href="http://mc.arbolnaranja.com/comparar/">Comparar iPhone</a>
-<a href="http://mc.arbolnaranja.com/comparar-ipad/">Comparar iPad</a>
+<small><a href='http://mc.arbolnaranja.com/comparar-mac/'>Comparar Mac</a>
+<a href='http://mc.arbolnaranja.com/comparar/'>Comparar iPhone</a>
+<a href='http://mc.arbolnaranja.com/comparar-ipad/'>Comparar iPad</a>
 </small>
 [/av_textblock]
 
@@ -107,9 +107,9 @@
 [av_textblock]
 <strong>Soporte</strong>
 
-<small><a href="http://mc.arbolnaranja.com/mi-cuenta/view-order/ "target="_blank">Estado del pedido
-</a><a title="Preguntas frecuentes" href="http://mc.arbolnaranja.com/preguntas-frecuentes/"target="_blank">Preguntas frecuentes</a>
-<a href="http://mc.arbolnaranja.com/condiciones-garantia-apple/" title="Condiciones Garantía Apple "target="_blank">Condiciones garantía Apple</a>
+<small><a href='http://mc.arbolnaranja.com/mi-cuenta/view-order/' target="_blank">Estado del pedido
+</a><a title="Preguntas frecuentes" href='http://mc.arbolnaranja.com/preguntas-frecuentes/'target="_blank">Preguntas frecuentes</a>
+<a href='http://mc.arbolnaranja.com/condiciones-garantia-apple/' title="Condiciones Garantía Apple "target="_blank">Condiciones garantía Apple</a>
 </small>
 [/av_textblock]
 
@@ -118,13 +118,13 @@
 [av_textblock]
 <strong>Tiendas </strong>
 
-<small><a title="Tiendas" href="http://mc.arbolnaranja.com/tiendas/">Encuentra una Tienda</a>
-<a title="Entrenamiento" href="http://mc.arbolnaranja.com/training-room/">Training Room</a>
+<small><a title="Tiendas" href='http://mc.arbolnaranja.com/tiendas/'>Encuentra una Tienda</a>
+<a title="Entrenamiento" href='http://mc.arbolnaranja.com/training-room/'>Training Room</a>
 </small>
 [/av_textblock]
 
 [/av_one_fifth]
-[/av_section]'); ?> 
+[/av_section]"); ?> 
 
 
 					</div>
