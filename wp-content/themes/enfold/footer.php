@@ -73,7 +73,7 @@
 
 [av_textblock ]<strong>Mac Center</strong>
 
-<small><a href='http://mc.arbolnaranja.com/quienes-somos/' target="blank">Compañía</a>
+<small><a href='http://mc.arbolnaranja.com/quienes-somos/' target='blank'>Compañía</a>
 <a href='http://mc.arbolnaranja.com/soporte/'>Contáctanos</a>
 </small>
 
@@ -107,9 +107,9 @@
 [av_textblock]
 <strong>Soporte</strong>
 
-<small><a href='http://mc.arbolnaranja.com/mi-cuenta/view-order/' target="_blank">Estado del pedido
-</a><a title="Preguntas frecuentes" href='http://mc.arbolnaranja.com/preguntas-frecuentes/'target="_blank">Preguntas frecuentes</a>
-<a href='http://mc.arbolnaranja.com/condiciones-garantia-apple/' title="Condiciones Garantía Apple "target="_blank">Condiciones garantía Apple</a>
+<small><a href='http://mc.arbolnaranja.com/mi-cuenta/view-order/' target='_blank'>Estado del pedido
+</a><a title='Preguntas frecuentes' href='http://mc.arbolnaranja.com/preguntas-frecuentes/'target='_blank'>Preguntas frecuentes</a>
+<a href='http://mc.arbolnaranja.com/condiciones-garantia-apple/' title='Condiciones Garantía Apple 'target='_blank'>Condiciones garantía Apple</a>
 </small>
 [/av_textblock]
 
@@ -118,8 +118,8 @@
 [av_textblock]
 <strong>Tiendas </strong>
 
-<small><a title="Tiendas" href='http://mc.arbolnaranja.com/tiendas/'>Encuentra una Tienda</a>
-<a title="Entrenamiento" href='http://mc.arbolnaranja.com/training-room/'>Training Room</a>
+<small><a title='Tiendas' href='http://mc.arbolnaranja.com/tiendas/'>Encuentra una Tienda</a>
+<a title='Entrenamiento' href='http://mc.arbolnaranja.com/training-room/'>Training Room</a>
 </small>
 [/av_textblock]
 
