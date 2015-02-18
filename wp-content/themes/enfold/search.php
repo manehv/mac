@@ -19,15 +19,14 @@ global $avia_config;
 
                     <div class='page-heading-container clearfix'>
                         <section class="search_form_field">
-                        <div style="width:560px; margin:auto  height:450px background-color:#eeeeee!important; border-radius:2px">
-                            <?php echo do_shortcode("[av_heading tag='h1' padding='10' heading='   Buscar' color='' style='blockquote modern-quote' custom_font='' size='' subheading_active='' subheading_size='15'][/av_heading]")?>                         <?php
+                        
+                            <?php echo do_shortcode("[av_heading tag='h1' padding='10' heading='   Buscar producto' color='' style='blockquote modern-quote' custom_font='' size='' subheading_active='' subheading_size='15'][/av_heading]")?>                         <?php
                             /*echo "<h4>".__('New Search','avia_framework')."</h4>";*/
                             echo "<p>".__('Si no te gusta el resultado de la búsqueda, puedes hacer otra con distintos términos','avia_framework')."</p>";
-
                             get_search_form();
                             echo "<span class='author-extra-border'></span>";
                             ?>
-                            </div>
+                            
                         </section>
                     </div>
 
