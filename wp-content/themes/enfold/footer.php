@@ -21,10 +21,7 @@
 				$columns = avia_get_option('footer_columns');
 		?>
 				<div class='container_wrap footer_color' id='footer'>
-
-					<div class='container'>
-
-					<?php echo do_shortcode("[av_section color='main_color' custom_bg='#f7f7f7' src='' attachment='' attach='scroll' position='top left' repeat='no-repeat' video='' video_ratio='16:9' min_height='' padding='no-padding' shadow='no-shadow' id='']
+                    <?php echo do_shortcode("[av_section color='main_color' custom_bg='#f7f7f7' src='' attachment='' attach='scroll' position='top left' repeat='no-repeat' video='' video_ratio='16:9' min_height='' padding='no-padding' shadow='no-shadow' id='']
 [av_hr class='invisible' height='30' shadow='no-shadow' position='center']
 
 [av_one_fifth first]
@@ -125,6 +122,10 @@
 
 [/av_one_fifth]
 [/av_section]"); ?> 
+
+					<div class='container'>
+
+					
 
 
 					</div>
