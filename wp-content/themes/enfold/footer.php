@@ -24,38 +24,107 @@
 
 					<div class='container'>
 
-						<?php
-						do_action('avia_before_footer_columns');
+					<?php echo do_shortcode("[av_section color='main_color' custom_bg='#f7f7f7' src='' attachment='' attach='scroll' position='top left' repeat='no-repeat' video='' video_ratio='16:9' min_height='' padding='no-padding' shadow='no-shadow' id='']
+[av_hr class='invisible' height='30' shadow='no-shadow' position='center']
 
-						//create the footer columns by iterating
+[av_one_fifth first]
 
-						
-				        switch($columns)
-				        {
-				        	case 1: $class = ''; break;
-				        	case 2: $class = 'av_one_half'; break;
-				        	case 3: $class = 'av_one_third'; break;
-				        	case 4: $class = 'av_one_fourth'; break;
-				        	case 5: $class = 'av_one_fifth'; break;
-				        	case 6: $class = 'av_one_sixth'; break;
-				        }
-				        
-				        $firstCol = "first el_before_{$class}";
+[/av_one_fifth][av_one_fifth]
 
-						//display the footer widget that was defined at appearenace->widgets in the wordpress backend
-						//if no widget is defined display a dummy widget, located at the bottom of includes/register-widget-area.php
-						for ($i = 1; $i <= $columns; $i++)
-						{
-							if($i != 1) $class .= " el_after_{$class}  el_before_{$class}";
-							echo "<div class='flex_column {$class} {$firstCol}'>";
-							if (function_exists('dynamic_sidebar') && dynamic_sidebar('Footer - column'.$i) ) : else : avia_dummy_widget($i); endif;
-							echo "</div>";
-							$firstCol = "";
-						}
+[av_font_icon icon='ue823' font='entypo-fontello' style='' caption='' link='' linktarget='' color='#000000' size='20px' position='center'][/av_font_icon]
 
-						do_action('avia_after_footer_columns');
+[av_hr class='invisible' height='-30' shadow='no-shadow' position='center']
 
-						?>
+[av_heading tag='h3' padding='0' heading='Más.' color='' style='blockquote modern-quote modern-centered' custom_font='' size='' subheading_active='' subheading_size='15'][/av_heading]
+
+[av_hr class='invisible' height='-30' shadow='no-shadow' position='center']
+
+[av_heading tag='h6' padding='0' heading='<a href='http://mc.arbolnaranja.com/accesorios/'>Accesorios <strong>›</strong></a>' color='custom-color-heading' style='blockquote modern-quote modern-centered' custom_font='#0088cc' size='' subheading_active='' subheading_size='15'][/av_heading]
+
+[/av_one_fifth][av_one_fifth]
+
+[av_font_icon icon='u5555' font='misiconos' style='' caption='' link='' linktarget='' color='#000000' size='20px' position='center'][/av_font_icon]
+
+[av_hr class='invisible' height='-30' shadow='no-shadow' position='center']
+
+[av_heading tag='h3' padding='0' heading='Visítanos.' color='' style='blockquote modern-quote modern-centered' custom_font='' size='' subheading_active='' subheading_size='15'][/av_heading]
+
+[av_hr class='invisible' height='-30' shadow='no-shadow' position='center']
+
+[av_heading tag='h6' padding='0' heading='<a href='http://mc.arbolnaranja.com/tiendas'>Tiendas <strong>›</strong></a>' color='custom-color-heading' style='blockquote modern-quote modern-centered' custom_font='#0088cc' size='' subheading_active='' subheading_size='15'][/av_heading]
+
+[/av_one_fifth][av_one_fifth]
+
+[av_font_icon icon='u7777' font='misiconos' style='' caption='' link='' linktarget='' color='#000000' size='18px' position='center'][/av_font_icon]
+
+[av_hr class='invisible' height='-30' shadow='no-shadow' position='center']
+
+[av_heading tag='h3' padding='0' heading='Contáctanos.' color='' style='blockquote modern-quote modern-centered' custom_font='' size='' subheading_active='' subheading_size='15'][/av_heading]
+
+[av_hr class='invisible' height='-30' shadow='no-shadow' position='center']
+
+[av_heading tag='h6' padding='0' heading='<a href='http://mc.arbolnaranja.com/soporte/'>Información <strong>›</strong></a>' color='custom-color-heading' style='blockquote modern-quote modern-centered' custom_font='#0088cc' size='' subheading_active='' subheading_size='15'][/av_heading]
+
+[/av_one_fifth][av_hr class='invisible' height='35' shadow='no-shadow' position='center']
+[/av_section]
+
+[av_section color='footer_color' custom_bg='' src='' attachment='' attach='scroll' position='top center' repeat='no-repeat' video='' video_ratio='16:9' min_height='' padding='no-padding' shadow='no-shadow' id='']
+[av_one_fifth first]
+
+[av_textblock ]<strong>Mac Center</strong>
+
+<small><a href='http://mc.arbolnaranja.com/quienes-somos/' target='blank'>Compañía</a>
+<a href='http://mc.arbolnaranja.com/soporte/'>Contáctanos</a>
+</small>
+
+[/av_textblock]
+
+[/av_one_fifth][av_one_fifth]
+
+[av_textblock]
+<strong>Comprar </strong>
+
+<small><a href='http://mc.arbolnaranja.com/imac-5k/'>Comprar Mac</a>
+<a href='http://mc.arbolnaranja.com/ipod-touch/'>Comprar iPod</a>
+<a href='http://mc.arbolnaranja.com/iphone-6/'>Comprar iPhone</a>
+<a href='http://mc.arbolnaranja.com/ipad-air-2/'>Comprar iPad</a>
+<a href='http://mc.arbolnaranja.com/comprar/accesorios/'>Comprar accesorios</a></small>
+[/av_textblock]
+
+[/av_one_fifth][av_one_fifth]
+
+[av_textblock]
+<strong>Comparar </strong>
+
+<small><a href='http://mc.arbolnaranja.com/comparar-mac/'>Comparar Mac</a>
+<a href='http://mc.arbolnaranja.com/comparar/'>Comparar iPhone</a>
+<a href='http://mc.arbolnaranja.com/comparar-ipad/'>Comparar iPad</a>
+</small>
+[/av_textblock]
+
+[/av_one_fifth][av_one_fifth]
+
+[av_textblock]
+<strong>Soporte</strong>
+
+<small><a href='http://mc.arbolnaranja.com/mi-cuenta/view-order/' target='_blank'>Estado del pedido
+</a><a title='Preguntas frecuentes' href='http://mc.arbolnaranja.com/preguntas-frecuentes/'target='_blank'>Preguntas frecuentes</a>
+<a href='http://mc.arbolnaranja.com/condiciones-garantia-apple/' title='Condiciones Garantía Apple 'target='_blank'>Condiciones garantía Apple</a>
+</small>
+[/av_textblock]
+
+[/av_one_fifth][av_one_fifth]
+
+[av_textblock]
+<strong>Tiendas </strong>
+
+<small><a title='Tiendas' href='http://mc.arbolnaranja.com/tiendas/'>Encuentra una Tienda</a>
+<a title='Entrenamiento' href='http://mc.arbolnaranja.com/training-room/'>Training Room</a>
+</small>
+[/av_textblock]
+
+[/av_one_fifth]
+[/av_section]"); ?> 
 
 
 					</div>
