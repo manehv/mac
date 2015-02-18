@@ -20,10 +20,11 @@
 				//get columns
 				$columns = avia_get_option('footer_columns');
 		?>
-				
+				<div class='container_wrap footer_color' id='footer'>
 
 					<div class='container'>
-                    <?php echo do_shortcode("[av_section color='main_color' custom_bg='#f7f7f7' src='' attachment='' attach='scroll' position='top left' repeat='no-repeat' video='' video_ratio='16:9' min_height='' padding='no-padding' shadow='no-shadow' id='']
+
+					<?php echo do_shortcode("[av_section color='main_color' custom_bg='#f7f7f7' src='' attachment='' attach='scroll' position='top left' repeat='no-repeat' video='' video_ratio='16:9' min_height='' padding='no-padding' shadow='no-shadow' id='']
 [av_hr class='invisible' height='30' shadow='no-shadow' position='center']
 
 [av_one_fifth first]
@@ -65,8 +66,9 @@
 [av_heading tag='h6' padding='0' heading='<a href='http://mc.arbolnaranja.com/soporte/'>Información <strong>›</strong></a>' color='custom-color-heading' style='blockquote modern-quote modern-centered' custom_font='#0088cc' size='' subheading_active='' subheading_size='15'][/av_heading]
 
 [/av_one_fifth][av_hr class='invisible' height='35' shadow='no-shadow' position='center']
-[/av_section]")?>
-					<?php echo do_shortcode("[av_section color='footer_color' custom_bg='' src='' attachment='' attach='scroll' position='top center' repeat='no-repeat' video='' video_ratio='16:9' min_height='' padding='no-padding' shadow='no-shadow' id='']
+[/av_section]
+
+[av_section color='footer_color' custom_bg='' src='' attachment='' attach='scroll' position='top center' repeat='no-repeat' video='' video_ratio='16:9' min_height='' padding='no-padding' shadow='no-shadow' id='']
 [av_one_fifth first]
 
 [av_textblock ]<strong>Mac Center</strong>
@@ -105,7 +107,7 @@
 [av_textblock]
 <strong>Soporte</strong>
 
-<small><a href='http://mc.arbolnaranja.com/mi-cuenta/view-order/ 'target='_blank'>Estado del pedido
+<small><a href='http://mc.arbolnaranja.com/mi-cuenta/view-order/' target='_blank'>Estado del pedido
 </a><a title='Preguntas frecuentes' href='http://mc.arbolnaranja.com/preguntas-frecuentes/'target='_blank'>Preguntas frecuentes</a>
 <a href='http://mc.arbolnaranja.com/condiciones-garantia-apple/' title='Condiciones Garantía Apple 'target='_blank'>Condiciones garantía Apple</a>
 </small>
@@ -129,7 +131,7 @@
 
 
 				<!-- ####### END FOOTER CONTAINER ####### -->
-			
+				</div>
 
 	<?php   } //endif nofooterwidgets ?>
 
