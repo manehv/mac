@@ -343,8 +343,18 @@ color:#fff !important;
 .simplr-field input, .option-field input {
 
     width: 250px !important;
-
 }
+
+.page-id-7116 #main #formulariologin , #after_section_1{background-color:#f2f2f2 !important;}
+.page-id-7116 #main #formulariologin .av_two_third .woocommerce form {
+	background-color:#ffffff !important; 
+	border-radius:5px;
+	padding-left:25px;
+	padding-right:25px;
+}
+.page-id-7116 #main #formulariologin .av_two_third form p{margin:4px 8px 8px 10px;}
+.page-id-7116 #main #formulariologin .av_two_third form p .button{float:none; margin-bottom:30px; margin-top:15px;}
+.page-id-7116 #main #formulariologin .av_two_third form  h3{margin:0 0 -15px 8px;font-size:28px;}
 
 /* Media Queries */
 @media only screen and (min-width:320px) and (max-width:480px){
