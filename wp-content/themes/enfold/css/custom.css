@@ -549,13 +549,21 @@ input[type="submit"], #submit, .button {
 	border-radius: 0px;
 }
 
-.form-row input[type="submit"], #submit, .button {
+.form-row input[type="submit"], #submit{
 	border-radius: 0px;
 	color:#ffffff;
 	background-color:#666666;
 	padding: 9px 54px!important;
 	font-size:14px;
 }
+.button {
+	border-radius: 0px;
+	color:#ffffff;
+	background-color:#666666;
+	padding: 0px 0px!important;
+	font-size:14px;
+}
+
 .woocommerce .form-row input[type="submit"], #submit,  {
   margin-top:0px;
 padding: 13px 54px!important;
