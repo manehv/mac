@@ -12,14 +12,7 @@
 		$footer_widget_setting 	= !empty($footer) ? $footer : avia_get_option('display_widgets_socket');
 
 
-		//check if we should display a footer
-		if(!$blank && $footer_widget_setting != 'nofooterarea' )
-		{
-			if( $footer_widget_setting != 'nofooterwidgets' )
-			{
-				//get columns
-				$columns = avia_get_option('footer_columns');
-		?>
+
 				<div class='container_wrap footer_color' id='footer'>
 
 					<div class='container'>
