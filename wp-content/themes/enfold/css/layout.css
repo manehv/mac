@@ -632,7 +632,7 @@ top: 15px;
 }
 
 #top #searchform {margin:0; padding:0;}
-#top #searchform>div{position: relative;  max-width: 300px;}
+#top #searchform>div{position: relative;  max-width: 150px;}
 #top .widget #searchform>div{margin:0;}
 #top #searchform br{display:none;}
 #top #s{width:150px; position: relative; padding:10px 10px 11px 5px;  z-index: 1; margin:0; box-shadow: none;border-radius: 20px;
