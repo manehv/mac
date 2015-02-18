@@ -24,7 +24,7 @@
 
 					<div class='container'>
 
-					<?php echo do_shortcode("[av_hr class='full' height='50' shadow='no-shadow' position='center']"); ?> 
+					
 
 
 					</div>
