@@ -24,7 +24,7 @@ global $avia_config;
                             /*echo "<h4>".__('New Search','avia_framework')."</h4>";*/
                             echo "<p>".__('Si no te gusta el resultado de la búsqueda, puedes hacer otra con distintos términos','avia_framework')."</p>";
                             get_search_form();
-                            echo "<span class='author-extra-border'></span>";
+                            /*echo "<span class='author-extra-border'></span>";*/
                             ?>
                             
                         </section>
