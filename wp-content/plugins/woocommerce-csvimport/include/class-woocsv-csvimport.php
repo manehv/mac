@@ -1,14 +1,10 @@
 <?php
 class woocsvImport
 {
-
+	
 	public $importLog;
 	
-	public $version = '2.1.0';
-	
 	public $options;
-	
-	public $plugin_url;
 	
 	public $header;
 
@@ -26,6 +22,7 @@ class woocsvImport
 		'debug'=>0,
 		'match_by' => 'sku',
 		'roles' => array('shop_manager'), 
+		'match_author_by' => 'login',
 	);
 
 	public $fields = array (
@@ -61,19 +58,22 @@ class woocsvImport
 		29 =>'ID',
 		30 =>'ping_status',
 		31 => 'menu_order',		// open,closed
+		32 => 'post_author', //user name or nice name of an user
 	);
 
 
 	public function __construct()
 	{
+		// activation hook
 		register_activation_hook( __FILE__, array($this, 'install' ));
-		$options = get_option('woocsv-options');
-		if (empty($options)) {
-			update_option('woocsv-options', $this->options_default);
-		}
-		$this->options = get_option('woocsv-options');
+
+		//check install
 		$this->checkInstall();
+
+		//load options
 		$this->checkOptions();
+		
+		//fill header
 		$this->fillHeader();
 	}
 
@@ -110,9 +110,11 @@ class woocsvImport
 			}
 		}
 		if ($update) {
-			update_option('woocsv-options',$options);			
-			$this->options = $options;
+			update_option('woocsv-options',$options);
 		}
+		
+		$options = get_option('woocsv-options');
+		$this->options = $options;
 	}
 
 	public function checkInstall()
