@@ -292,10 +292,13 @@ margin-left:20px;
 .login .form-row.form-row-wide {
     clear: none;
 }
-.login .form-row input.input-text{padding:17px 6px !important;}
+.login hr{border:1px solid #adafb2;}
+#simplr-form hr , .page-id-239 hr{border:1px solid #adafb2;}
+.login .form-row .input-text{/*padding:17px 6px !important;*/ padding:4px !important;border:2px solid #e1e1e1 !important; border-radius:5px;}
+.page-id-10747 .login .frm-row .uname , .pwd{border: 2px solid #e1e1e1 !important;}
 #main, .html_stretched #wrap_all{background-color:#ffffff;}
 
-
+h2 span,h1 span{font-size:10px;}
 .clsMyAcc{
 margin-top:30px;
 }
@@ -342,30 +345,45 @@ color:#fff !important;
 }
 #simplr-form input[type="text"] {
     box-shadow: unset !important;
-    padding: 15px !important;
-		border-radius:unset;
+    padding: 4px !important;
+		border-radius:5px;
+		margin:0px;
 }
 #simplr-form input[type="submit"] {
-    background-image: -moz-linear-gradient(center bottom , #777777 43%, #777777 75%, #777777 89%)!important;
-    border-radius: unset !important;
+/*     background-image: -moz-linear-gradient(center bottom , #777777 43%, #777777 75%, #777777 89%)!important; */
+    border-radius: 2px !important;
     box-shadow: unset !important;
+		margin-top:29px;
+	  padding: 4px 10px !important;
+		float:right;
+		background-color:#f5f5f5;
+		color:#919191;
 }
 .simplr-field label, .option-field label {
     width: 100% !important;
 }
-#simplr-form .simplr-field, .option-field {
+#simplr-form #simpler-reg .simplr-field, .option-field {
     margin:0;
 }
-#simplr-form  input[type="text"]{
-	margin:0px;
-}
-#simplr-form input[type="submit"] {
-	margin-top:22px;
-	padding: 12px 30px !important;
-border-radius: 2px !important;
-}
-.simplr-field input, .option-field input {
 
+#simplr-form{margin-top:100px;}
+.page-id-10749 .template-page .entry-content-wrapper h1{
+	padding:5px 2px 0px 0px !important;
+	border:none !important;
+	color:#87898d;
+	font-weight:600 !important;
+	font-size:25px;
+}
+.page-id-239 .template-page .entry-content-wrapper h1{
+	padding:5px 2px 0px 0px !important;
+	border:none !important;
+	color:#87898d;
+	font-weight:600 !important;
+	font-size:25px;
+}
+ .page-id-239 fieldset{padding:0 !important;}
+
+.simplr-field input, .option-field input {
     width: 250px !important;
 }
 
@@ -380,6 +398,22 @@ border-radius: 2px !important;
 .page-id-7116 #main #formulariologin .av_two_third form p .button{float:none; margin-bottom:30px; margin-top:15px;}
 .page-id-7116 #main #formulariologin .av_two_third form  h3{margin:0 0 -15px 8px;font-size:28px;}
 
+.page-id-239 .avia_ajax_form .text_input, .page-id-239 .avia_ajax_form .select, .page-id-239 .avia_ajax_form .text_area{
+	border:2px solid #e1e1e1;
+	border-radius: 5px !important;
+  padding: 4px !important;
+		
+}
+.page-id-239 .avia_ajax_form .text_input, .page-id-239 .avia_ajax_form .select{width:95% !important;}
+.page-id-239 .avia_ajax_form .button {
+	background-color:#f5f5f5;
+	color:#919191;
+  float: right;
+  padding: 6px 25px !important;
+	border-bottom-style: none;
+  border-bottom-width: 0;
+}
+.page-id-239 input[type="text"]{border:2px solid #e1e1e1;}
 /* Media Queries */
 @media only screen and (min-width:320px) and (max-width:480px){
 .responsive .logo a, .responsive .logo img{/*height:70px !important;*/ }
@@ -536,11 +570,15 @@ Mobile Styles
 .chosen-container {
 	width:270px!important;
   }
+  .page-id-7116 #main #formulariologin .av_two_third form p{margin:0;}
+  .page-id-7116 #main #formulariologin .av_two_third form #billing_country_chosen{padding-right:52px;}
 }
 @media only screen and (min-width:768px) and (max-width:980px) {
 	.chosen-container {
 	 width:210px!important;
   }
+  .page-id-7116 #main #formulariologin .av_two_third form p{margin:0 0 10px;}
+  .page-id-7116 #main #formulariologin .av_two_third form #billing_country_chosen{padding-right:26px;}
 }
 
 @media only screen and (min-width:1280px) and (max-width:1290px) {
@@ -560,12 +598,21 @@ input[type="submit"], #submit, .button {
 }
 
 .form-row input[type="submit"], #submit{
-	border-radius: 0px;
+	border-radius: 2px;
 	color:#ffffff;
 	background-color:#666666;
 	padding: 9px 54px!important;
 	font-size:14px;
 }
+.login .form-row{padding:3px 14px 0 0 !important;}
+.login .form-row input[type="submit"], #submit{
+	border-radius: 0px;
+	color:#919191;
+	background-color:#F9F9FA;
+	padding: 4px 15px!important;
+	font-size:13px;
+}
+.login h2{color:#87898d; font-size:25px;}
 .button {
 	border-radius: 0px;
 	color:#ffffff;
