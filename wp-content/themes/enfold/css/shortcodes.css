@@ -655,7 +655,7 @@ font-size: 11px;
 text-shadow: none;
 }
 
-.avia_message_box_content{ font-size: 14px; text-transform: uppercase; font-weight:600;}
+.avia_message_box_content{ font-size: 14px; text-transform: none; font-weight:600;}
 .avia_message_box_icon{ position: relative; left: -0.5em; font-size: 1.3em;}
 .avia_message_box.avia-size-normal{ padding: 15px; }
 .avia_message_box.avia-size-large{ padding: 35px; }
