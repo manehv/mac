@@ -72,7 +72,7 @@
 
 	/*default*/
 	h1, h2, h3, h4, h5, h6 {
-	/*	font-family: "Georgia", "Times New Roman", Helvetica, Arial, sans-serif; */
+		font-family: "MiryadSetPro-Medium", "Times New Roman", Helvetica, Arial, sans-serif;
 		font-weight: 600; }
 	#top h1 a, #top h2 a, #top h3 a, #top h4 a, #top h5 a, #top h6 a { font-weight: inherit; text-decoration: none; color: inherit; }
 	#top h1 strong, #top h2 strong, #top h3 strong, #top h4 strong, #top h5 strong, #top h6 strong { color: inherit; }
