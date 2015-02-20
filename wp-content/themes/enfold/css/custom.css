@@ -1,9 +1,13 @@
 /* Have fun adding your style here :) - PS: At all times this file should contain a comment or a rule, otherwise opera might act buggy :( */
 
-@import url('fonts/open-sans-fontfacekit/web-fonts/opensans_light/stylesheet.css');
+/*@import url('fonts/open-sans-fontfacekit/web-fonts/opensans_light/stylesheet.css');
 @import url('fonts/open-sans-fontfacekit/web-fonts/opensans_bold/stylesheet.css');
 @import url('fonts/open-sans-fontfacekit/web-fonts/opensans_semibold/stylesheet.css');
-@import url('fonts/open-sans-fontfacekit/web-fonts/opensans_regular/stylesheet.css');
+@import url('fonts/open-sans-fontfacekit/web-fonts/opensans_regular/stylesheet.css');*/
+@import url('fonts_mc/MyriadSetPro-Bold/stylesheet.css');
+@import url('fonts_mc/MyriadSetPro-Medium/stylesheet.css');
+
+
 
 /* General Custom CSS */
 .clsTitleCon{background-color:#000000; height:110px; }
