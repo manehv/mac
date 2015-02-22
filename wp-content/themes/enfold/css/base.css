@@ -73,7 +73,7 @@
 	/*default*/
 	h1, h2, h3, h4, h5, h6 {
 		font-family: 'myriad_set_promedium', "Times New Roman", Helvetica, Arial, sans-serif;
-		font-weight: 600; }
+		font-weight: 600 !important; }
 	#top h1 a, #top h2 a, #top h3 a, #top h4 a, #top h5 a, #top h6 a { font-weight: inherit; text-decoration: none; color: inherit; }
 	#top h1 strong, #top h2 strong, #top h3 strong, #top h4 strong, #top h5 strong, #top h6 strong { color: inherit; }
 	h1 { font-size: 34px; line-height: 1.1em; margin-bottom: 14px;}
