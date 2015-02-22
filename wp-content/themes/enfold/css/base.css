@@ -72,7 +72,7 @@
 
 	/*default*/
 	h1, h2, h3, h4, h5, h6 {
-		font-family: "MyriadSetPro-Medium", "Times New Roman", Helvetica, Arial, sans-serif;
+		font-family: 'myriad_set_promedium', "Times New Roman", Helvetica, Arial, sans-serif;
 		font-weight: 600; }
 	#top h1 a, #top h2 a, #top h3 a, #top h4 a, #top h5 a, #top h6 a { font-weight: inherit; text-decoration: none; color: inherit; }
 	#top h1 strong, #top h2 strong, #top h3 strong, #top h4 strong, #top h5 strong, #top h6 strong { color: inherit; }
@@ -87,7 +87,7 @@
 
 	p + h1, p + h2, p + h3, p + h4, p + h5, p + h6{
 	margin-top:1.5em;
-	font-family:"MyriadSetPro_Medium";
+	font-family: 'myriad_set_promedium';
 	}
 
 	p { margin: 0.85em 0; }
@@ -472,7 +472,7 @@ font-style:italic;
 margin:0 auto;
 padding:3px 10px 5px;
 text-align:center;
-font-family: Georgia,"Times New Roman";
+font-family: 'myriad_set_promedium';
 }
 
 #top .wp-caption.aligncenter{
