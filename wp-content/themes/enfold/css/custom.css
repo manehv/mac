@@ -7,11 +7,6 @@
 @import url('fonts/MyriadSetPro-Bold-fontfacekit/web-fonts/MyriadSetPro-Bold/stylesheet.css');
 @import url('fonts/MyriadSetPro-Medium-fontfacekit/stylesheet.css');
 
-body {
-    font-family: "myriad_set_promedium" !important;
-}
-
-
 /* General Custom CSS */
 .clsTitleCon{background-color:#000000; height:110px; }
 .clsTitleCon img{margin-top:15px; }
