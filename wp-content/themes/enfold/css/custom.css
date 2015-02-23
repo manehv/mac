@@ -168,7 +168,14 @@ margin: 10px auto 0px auto;
 }
 
 .single-product .clsContent .av-special-heading-tag {
-font-family: 'myriad_set_promedium' !important;
+    font-family: "myriad_set_promedium" !important;
+    text-transform: none;
+    padding: 5px 2px 5px 30px !important;
+    border: 1px solid #CCC;
+    width: 100%;
+    font-weight: 100 !important;
+    font-size: 28px;
+    margin-bottom: 30px;
 }
 
 .clsSidebar {
