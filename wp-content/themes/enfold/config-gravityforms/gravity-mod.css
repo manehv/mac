@@ -20,7 +20,7 @@
 }
 
 /* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
-@media only screen and (min-width: 480px) and (max-width: 650px) {
+@media only screen and (min-width: 480px) and (max-width: 767px) {
     #top .gform_wrapper li.gfield.gf_list_3col ul.gfield_checkbox li,
     #top .gform_wrapper li.gfield.gf_list_3col ul.gfield_radio li,
     #top .gform_wrapper li.gfield.gf_3col ul.gfield_checkbox li,
