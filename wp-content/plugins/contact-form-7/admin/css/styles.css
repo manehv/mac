@@ -60,7 +60,7 @@ input#wpcf7-title {
 	background-color: transparent;
 	box-shadow: none;
 	width: 80%;
-	max-width:150px !important;
+
 }
 
 input#wpcf7-title.focus {
@@ -82,6 +82,7 @@ p.tagcode {
 
 input#contact-form-anchor-text, input#contact-form-anchor-text-old {
 	width: 100%;
+	max-width:150px !important;
 }
 
 .postbox .half, .postbox .half-left, .postbox .half-right {
