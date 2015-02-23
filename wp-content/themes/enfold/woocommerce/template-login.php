@@ -17,7 +17,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<form method="post" class="login col-lg-7 ">
 
 			<?php do_action( 'woocommerce_login_form_start' ); ?>
-<h2><?php _e( 'Login', 'woocommerce' ); ?> <span class="pull-right">*<?php _e('Information Compulsory','woocommerce'); ?></span></h2>
+<h2><?php _e( 'Login', 'woocommerce' ); ?> <span class="pull-right">*<?php _e('Información requerida','woocommerce'); ?></span></h2>
 <hr/>
 			<p class="form-row col-lg-6 col-sm-12 col-xs-12 form-row-wide" >
 				<label class=" " for="username"><?php _e( 'Usuario', 'woocommerce' ); ?> <span class="required">*</span></label>
@@ -30,7 +30,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<?php do_action( 'woocommerce_login_form' ); ?>
 			<p class="form-row">
 				<?php wp_nonce_field( 'woocommerce-login' ); ?>
-				<input type="submit" class="button pull-right" name="login" value="<?php _e( 'Login', 'woocommerce' ); ?>" /> 
+				<input type="submit" class="button pull-right" name="login" value="Ingresar" /> 
 				
 			</p>
 			<label for="rememberme" class="inline">
