@@ -196,11 +196,30 @@ margin-bottom: 30px;
 		margin-bottom: 20px; }
 	#top fieldset {
 		margin-bottom: 20px;  padding: 20px; }
+			#top input[type="email"]{
+				max-width: 100%;
+				display: inline;
+				margin-bottom: 20px;
+				border-radius: 5px !IMPORTANT;
+				background-color: #F3F3F3 !important;
+				-moz-box-shadow: inset 0 0 2px #000000;
+				-webkit-box-shadow: inset 0 0 2px #000000;
+				box-shadow: inset 0 0 2px #ADADAD;
+				border: 1px solid #CCC !important;
+				padding: 10px;
+				outline: none;
+				font: 13px "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+				text-align: left !important;
+				-webkit-appearance: none;
+			}
+		
+		
+		
 	#top .input-text,
 
 	#top input[type="input"],
 	#top input[type="password"],
-	#top input[type="email"],
+
 	#top input[type="number"],
     #top input[type="url"],
     #top input[type="tel"],
