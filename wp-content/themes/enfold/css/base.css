@@ -37,7 +37,7 @@
 		content: none; }
 	table {
 		border-collapse: collapse;
-		border-spacing: 0; }
+		border-spacing: 0;font-family: 'myriad_set_promedium'; }
     * { -moz-box-sizing: border-box;
         -webkit-box-sizing: border-box;
         box-sizing: border-box; }
