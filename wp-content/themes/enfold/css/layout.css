@@ -343,7 +343,9 @@ display:none;
 
 .current-menu-item>a>.avia-menu-fx>.avia-arrow-wrap, .current_page_item>a>.avia-menu-fx>.avia-arrow-wrap{display:block;}
 .avia-menu-fx .avia-arrow-wrap .avia-arrow{ top: 10px; }
-
+.html_main_nav_header #top .main_menu .menu > li:last-child > a{
+    background-color: #F7F7F7;
+}
 
 .html_main_nav_header #top .main_menu .menu>li:last-child>a, .html_bottom_nav_header #top #menu-item-search>a{ }
 .html_bottom_nav_header.html_logo_center #top #menu-item-search>a{ padding-right:13px; border-right-style: solid; border-right-width: 1px; }
