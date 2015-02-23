@@ -353,7 +353,7 @@ color:#fff !important;
 /*     background-image: -moz-linear-gradient(center bottom , #777777 43%, #777777 75%, #777777 89%)!important; */
     border-radius: 2px !important;
     box-shadow: unset !important;
-		margin-top:29px;
+		margin-top:45px;
 	  padding: 4px 10px !important;
 		float:right;
 		background-color:#f5f5f5;
@@ -365,6 +365,9 @@ color:#fff !important;
 .page-id-10749 #simplr-form #simpler-reg .simplr-field , .option-field {
     margin:0;
 }
+#simplr-form  .checkbox{width:50% !important;float:left;margin:0px 0px -7px; top:26px;}
+#simplr-form  .checkbox label{ font-weight:unset !important; float:right;font-size:10px;}
+#simplr-form  .checkbox input[type="checkbox"]{width:2px !important;margin-left:0px;}
 .simplr-field, .option-field {
    padding:0 14px 0 0;
 }
@@ -395,6 +398,7 @@ color:#fff !important;
 	border-radius:5px;
 	padding-left:25px;
 	padding-right:25px;
+	margin-top:25%;
 }
 .page-id-7116 #main #formulariologin .av_two_third form p{margin:4px 8px 8px 10px;}
 .page-id-7116 #main #formulariologin .av_two_third form p .button{float:none; margin-bottom:30px; margin-top:15px;}
@@ -646,6 +650,15 @@ padding: 13px 54px!important;
 .lost_password a{
 	color:#6D6D6D;
 }
+.lost_reset_password .input-text{
+	padding:4px !important;
+	border-radius:5px;
+}
+.page-id-7116 .lost_reset_password input[type="submit"]{
+	padding:8px 8px !important;
+	color:#919191;
+	background-color:#f5f5f5;
+}	
 
 .sub-menu .avia-menu-text{
 	padding:4px;
