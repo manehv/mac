@@ -1003,7 +1003,13 @@ display:block;
 .taglist {margin-bottom:5px;}
 .taglist .tag-seperator:last-child{display:none;}
 .taglist .tag-seperator{padding:0px 4px;}
-.single_toggle{ width:100%; float:left; display: block; margin: 0 0 -2px 0; padding-bottom: 1px; overflow: hidden; position: relative;}
+.single_toggle{ width:100%; float:left; display: block; margin: 0 0 -2px 0; padding-bottom: 1px; overflow: hidden; position: relative;    border-radius: 5px !important;
+    background-color: #F3F3F3 !important;
+    -moz-box-shadow: inset 0 0 2px #000000;
+    -webkit-box-shadow: inset 0 0 2px #000000;
+    box-shadow: inset 0 0 2px #ADADAD;
+    border: 1px solid #CCC !important;
+}}
 
 
 /* ======================================================================================================================================================
