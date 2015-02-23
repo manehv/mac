@@ -18,7 +18,7 @@ msgstr ""
 "Project-Id-Version: WooCommerce\n"
 "Report-Msgid-Bugs-To: https://github.com/woothemes/woocommerce/issues\n"
 "POT-Creation-Date: 2014-08-21 16:05:26+00:00\n"
-"PO-Revision-Date: 2014-08-29 11:50-0500\n"
+"PO-Revision-Date: 2015-02-23 15:50-0500\n"
 "Last-Translator: 8manos i18n <i18n@8manos.com>\n"
 "Language-Team: Spanish (Colombia) (http://www.transifex.com/projects/p/"
 "woocommerce/language/es_CO/)\n"
@@ -27,7 +27,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Language: es_CO\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 1.6.7\n"
+"X-Generator: Poedit 1.7.4\n"
 
 #: i18n/countries.php:16
 msgid "Afghanistan"
@@ -5418,7 +5418,7 @@ msgstr "Debes haber iniciado sesión para descargar archivos."
 #: templates/global/form-login.php:35 templates/myaccount/form-login.php:27
 #: templates/myaccount/form-login.php:46
 msgid "Login"
-msgstr "Identificarse"
+msgstr "Ingresar a Mi Cuenta"
 
 #: includes/class-wc-download-handler.php:80
 msgid "Log in to Download Files"
