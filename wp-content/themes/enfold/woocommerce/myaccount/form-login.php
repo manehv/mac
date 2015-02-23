@@ -36,7 +36,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<?php do_action( 'woocommerce_login_form' ); ?>
 			<p class="form-row">
 				<?php wp_nonce_field( 'woocommerce-login' ); ?>
-				<input type="submit" class="button pull-right" name="login" value="<?php _e( 'Login', 'woocommerce' ); ?>" />
+				<input type="submit" class="button pull-right" name="login" value="Ingresar" />
 
 			</p>
 			<label for="rememberme" class="inline">
