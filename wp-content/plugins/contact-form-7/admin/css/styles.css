@@ -82,7 +82,7 @@ p.tagcode {
 
 input#contact-form-anchor-text, input#contact-form-anchor-text-old {
 	/*width: 100%;*/
-	max-width:150px !important;
+	width:150px !important;
 }
 
 .postbox .half, .postbox .half-left, .postbox .half-right {
