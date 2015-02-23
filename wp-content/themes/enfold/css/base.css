@@ -238,7 +238,16 @@ margin-bottom: 30px;
 		max-width: 100%;
 		display: inline;
 		margin-bottom: 20px;
-		background: #fff;}
+		background: #fff;
+		/*ESTILOS NUEVO DISEÑO*/
+		    border-radius: 5px;
+    background-color: #F3F3F3 !important;
+    -moz-box-shadow: inset 0 0 2px #000000;
+    -webkit-box-shadow: inset 0 0 2px #000000;
+    box-shadow: inset 0 0 2px #ADADAD;
+    border: 1px solid #CCC !important;
+}
+	}
 	#top input[type="text"]:focus,
 	#top input[type="password"]:focus,
 	#top input[type="email"]:focus,
