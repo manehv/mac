@@ -81,8 +81,8 @@ p.tagcode {
 }
 
 input#contact-form-anchor-text, input#contact-form-anchor-text-old {
-	/*width: 100%;*/
-	width:150px !important;
+	width: 100%;
+	
 }
 
 .postbox .half, .postbox .half-left, .postbox .half-right {
