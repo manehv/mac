@@ -37,6 +37,10 @@ h1.clsBotTitle{
     z-index:200;
 }	
 
+#top form.login, #top form.register {
+    height: auto;
+}
+
 /*color:#292325; 
 font-size:28px; 
 margin-top:10px; 
