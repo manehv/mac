@@ -104,7 +104,7 @@ function simplr_build_form1($data,$atts) {
 
 	$fields = explode(',',@$atts['fields']);
 	$form .=  '<form class="col-lg-6 col-lg-offset-3" method="post" action="" id="simplr-reg">';
-	$form .= '<h1>Registro <span class="pull-right">*Information Compulsory</span></h1>';
+	$form .= '<h1>Registro <span class="pull-right">* Información requerida</span></h1>';
 	$form .= '<hr/>';
 	$form .= apply_filters('simplr-reg-first-form-elem','');
 	$form .= '<div >';
@@ -225,7 +225,7 @@ function simplr_build_form1($data,$atts) {
 	}
 
 	//submission button. Use filter to custommize
-	$form .=  apply_filters('simplr-reg-submit', '<div class="col-lg-6 col-sm-6 col-xs-12"><input type="submit" name="submit-reg" value="Register" class="submit button"></div>');
+	$form .=  apply_filters('simplr-reg-submit', '<div class="col-lg-6 col-sm-6 col-xs-12"><input type="submit" name="submit-reg" value="Registrarse" class="submit button"></div>');
 
 	//wordress nonce for security
 	$nonce = wp_create_nonce('simplr_nonce');
