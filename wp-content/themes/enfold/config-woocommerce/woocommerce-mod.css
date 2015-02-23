@@ -127,7 +127,7 @@ td.quantity{min-width:80px;}
 .cart-collaterals .cart_totals tr td,.cart-collaterals .cart_totals tr th{padding:6px 24px;}
 .cart-collaterals .cart_totals a.button.alt{width:193px;display:block;font-size:0.92em;}
 /*#top .form-row{zoom:1;padding:3px 0;margin:0 0 10px;} #top .form-row label{display:block;}*/
-#top .form-row{zoom:1;padding:3px 0;margin:0 0 10px;float: inherit;display: inline-block;} #top .form-row label{display:inline-block;}
+#top .form-row{zoom:1;padding:3px 0;margin:0 0 10px;float: left ;display: inline-block;} #top .form-row label{display:inline-block;}
 #top .form-row label.hidden{visibility:hidden;}
 #top .form-row select{width:100%;cursor:pointer;margin:0;min-width:100px;}
 #top .form-row .required{font-weight:bold;}
