@@ -1,7 +1,7 @@
 /* ======================================================================================================================================================
 GENERIC
 ====================================================================================================================================================== */
-
+@import url('fonts/MyriadSetPro-Medium-fontfacekit/stylesheet.css');
 
 p:empty, .entry-content-wrapper:empty{display:none;}
 /*.avia-shadow{box-shadow:inset 0 1px 3px rgba(0, 0, 0, 0.1);}*/
@@ -63,7 +63,7 @@ position: relative;
 body .av-special-heading .av-special-heading-tag{
 padding:0;
 margin:0;
-
+font-family: "myriad_set_promedium" !important;
 float:left;
 
 }
@@ -122,7 +122,7 @@ text-align: center;
 
 body .av-special-heading.classic-quote > *{
 display:block;
-font-family: "Droid Serif", Georgia, Times, serif;
+font-family: 'myriad_set_promedium', Georgia, Times, serif;
 font-weight: normal;
 font-style: italic;
 float: none;
@@ -391,7 +391,7 @@ text-decoration: none;
 }
 
 .iconbox .iconbox_content .iconbox_content_title {
-font-family: 'Open Sans';
+font-family: 'myriad_set_promedium';
 border: medium none;
 padding: 2px 0 0 0;
 position: relative;
@@ -655,7 +655,11 @@ font-size: 11px;
 text-shadow: none;
 }
 
-.avia_message_box_content{ font-size: 14px; text-transform: none; font-weight:600;}
+<<<<<<< HEAD
+-.avia_message_box_content{ font-size: 14px; text-transform: none; font-weight:600;}
+=======
+.avia_message_box_content{ font-size: 12px; text-transform: none; text-align:left;}
+>>>>>>> origin/variations
 .avia_message_box_icon{ position: relative; left: -0.5em; font-size: 1.3em;}
 .avia_message_box.avia-size-normal{ padding: 15px; }
 .avia_message_box.avia-size-large{ padding: 35px; }

@@ -65,3 +65,5 @@ build/buildinfo.properties
 build/config/buildinfo.properties
 wp-content/plugins/akismet/*
 repositories
+
+wp-content/themes/enfold/fonts_mc/myriad-set-pro_text 2.ttf
