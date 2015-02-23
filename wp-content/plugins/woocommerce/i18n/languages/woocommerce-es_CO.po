@@ -18,7 +18,7 @@ msgstr ""
 "Project-Id-Version: WooCommerce\n"
 "Report-Msgid-Bugs-To: https://github.com/woothemes/woocommerce/issues\n"
 "POT-Creation-Date: 2014-08-21 16:05:26+00:00\n"
-"PO-Revision-Date: 2015-02-23 15:50-0500\n"
+"PO-Revision-Date: 2015-02-23 15:54-0500\n"
 "Last-Translator: 8manos i18n <i18n@8manos.com>\n"
 "Language-Team: Spanish (Colombia) (http://www.transifex.com/projects/p/"
 "woocommerce/language/es_CO/)\n"
@@ -8702,11 +8702,11 @@ msgstr "Si esto fue un error, por favor ignora este correo y nada sucederá."
 #: templates/emails/customer-reset-password.php:17
 #: templates/emails/plain/customer-reset-password.php:17
 msgid "To reset your password, visit the following address:"
-msgstr "Para reajustar tu contraseña, por favor visita la siguiente dirección:"
+msgstr "Para recuperar tu contraseña, por favor visita la siguiente dirección:"
 
 #: templates/emails/customer-reset-password.php:20
 msgid "Click here to reset your password"
-msgstr "Haz clic aquí para reajustar tu contraseña"
+msgstr "Haz clic aquí para recuperar tu contraseña"
 
 #: templates/emails/email-addresses.php:20
 #: templates/emails/plain/email-addresses.php:14
@@ -8917,7 +8917,7 @@ msgid ""
 "receive a link to create a new password via email."
 msgstr ""
 "Perdiste tu contraseña? Por favor ingresa tu nombre de usuario o correo "
-"electrónico. Recibirás un enlace para reajustarla por correo electrónico."
+"electrónico. Recibirás un enlace para recuperarla por correo electrónico."
 
 #: templates/myaccount/form-lost-password.php:27
 msgid "Enter a new password below."
@@ -8933,7 +8933,7 @@ msgstr "Vuelve a insertar tu nueva contraseña"
 
 #: templates/myaccount/form-lost-password.php:45
 msgid "Reset Password"
-msgstr "Reajustar Contraseña"
+msgstr "Recuperar Contraseña"
 
 #: templates/myaccount/form-lost-password.php:45
 msgid "Save"
