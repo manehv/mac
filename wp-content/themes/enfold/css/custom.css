@@ -294,7 +294,7 @@ margin-left:20px;
 .login .form-row.form-row-wide {
     clear: none;
 }
-.login hr{border:1px solid #adafb2;margin:20px 0px 5px !important;}
+.login hr{border:1px solid #adafb2;margin:20px 0px 15px !important;}
 #simplr-form hr , .page-id-239 hr{border:1px solid #adafb2; margin:20px 0px 5px !important;}
 .login .form-row .input-text{/*padding:17px 6px !important;*/ padding:4px !important;border:2px solid #e1e1e1 !important; border-radius:5px;}
 .page-id-10747 .login .frm-row .uname , .pwd{border: 2px solid #e1e1e1 !important;}
@@ -361,14 +361,14 @@ color:#fff !important;
 		background-color:#f5f5f5;
 		color:#919191;
 }
-.simplr-field label, .option-field label {
-    width: 100% !important;
+ .simplr-field label, .option-field label {
+    width: 100% !important;font-size:17px !important; font-weight:unset !important;margin-bottom:7px;
 }
 .page-id-10749 #simplr-form #simpler-reg .simplr-field , .option-field {
     margin:0;
 }
 #simplr-form  .checkbox{width:50% !important;float:left;margin:0px 0px -7px; top:26px;}
-#simplr-form  .checkbox label{ font-weight:unset !important; float:right;font-size:10px;}
+#simplr-form  .checkbox label{ font-weight:unset !important; float:right;font-size:10px !important;}
 #simplr-form  .checkbox input[type="checkbox"]{width:2px !important;margin-left:0px;}
 .simplr-field, .option-field {
    padding:0 14px 0 0;
@@ -379,14 +379,12 @@ color:#fff !important;
 	border:none !important;
 	color:#87898d;
 	font-weight:600 !important;
-	font-size:25px;
 }
 .page-id-239 .template-page .entry-content-wrapper h1{
 	padding:5px 2px 0px 0px !important;
 	border:none !important;
 	color:#87898d;
 	font-weight:600 !important;
-	font-size:25px;
 }
  .page-id-239 fieldset{padding:0 !important;}
 
@@ -413,7 +411,7 @@ color:#fff !important;
 		
 }
 .page-id-239 .avia_ajax_form .text_area{border-radius: 20px !important;}
-.page-id-239 .avia_ajax_form label, .modified_width:before{margin-bottom:0px;}
+.page-id-239 .avia_ajax_form label, .modified_width:before{font-size:17px !important; font-weight:unset !important;}
 .page-id-239 .avia_ajax_form .text_input, .page-id-239 .avia_ajax_form .select{width:95% !important;}
 .page-id-239 .avia_ajax_form .button {
 	background-color:#f5f5f5;
@@ -583,6 +581,7 @@ Mobile Styles
   }
   .page-id-7116 #main #formulariologin .av_two_third form p{margin:0;}
   .page-id-7116 #main #formulariologin .av_two_third form #billing_country_chosen{padding-right:52px;}
+  #simplr-form  .checkbox{width:auto !important;}
 }
 @media only screen and (min-width:768px) and (max-width:980px) {
 	.chosen-container {
@@ -616,6 +615,7 @@ input[type="submit"], #submit, .button {
 	font-size:14px;
 }
 .login .form-row{padding:3px 14px 0 0 !important;}
+.login .form-row label{font-size:17px !important;margin-bottom:7px; font-weight:unset !important;}
 .login .form-row input[type="submit"], #submit{
 	border-radius: 0px;
 	color:#919191;
@@ -623,7 +623,7 @@ input[type="submit"], #submit, .button {
 	padding: 4px 15px!important;
 	font-size:13px;
 }
-.login h2{color:#87898d; font-size:25px;}
+.login h2{color:#87898d;}
 .button {
 	border-radius: 0px;
 	color:#ffffff;
