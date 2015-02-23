@@ -561,6 +561,7 @@ text-decoration:none !important;
 #top #menu-item-search{
 z-index: 100;
 left:175px;
+background-color:#f7f7f7 !important;
 /*left:-884px;*/
 
 }
