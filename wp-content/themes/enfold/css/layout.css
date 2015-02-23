@@ -258,7 +258,7 @@ left:0;
 }
 
 /*menu*/
-.main_menu{ clear:none; position: absolute; z-index: 100; line-height:30px; height:100%; margin:0; left:250px; }
+.main_menu{ clear:none; position: absolute; z-index: 100; line-height:30px; height:100%; margin:0; right:0; }
 .main_menu .pointer_arrow_wrap{display:none;}
 
 .av-main-nav-wrap{float:left;}
