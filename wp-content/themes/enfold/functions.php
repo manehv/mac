@@ -108,13 +108,7 @@ function simplr_build_form1($data,$atts) {
 	$form .= '<hr/>';
 	$form .= apply_filters('simplr-reg-first-form-elem','');
 	$form .= '<div >';
-	//if the user has not added their own user name field lets force one
-	if( !in_array('username',$fields) OR empty($custom->fields->custom['username']) ) {
-		$form .=  '<div class="option-field col-lg-6 col-sm-6 col-xs-12 '.apply_filters('username_error_class','') .'">';
-		$form .=  '<label for="username" class="left">' .@esc_attr($label_username ).' <span class="required">*</span></label>';
-		$form .=  '<input type="text" name="username" class="right" value="'.@esc_attr($data['username']) .'" />';
-		$form .=  '</div>';
-	}
+	
 	$i = 0 ;
 	foreach(@$fields as $field):
 		$i++;
@@ -155,13 +149,31 @@ function simplr_build_form1($data,$atts) {
 			if($cf['type'] != '') {
 				SimplrExt::$cf['type']($args, @esc_attr($key_val), '', $cf['options_array']);
 			}
-
+			//Find the checkboxes fields and rearrange as per choices
+			if($cf['type'] == 'checkbox')
+			{
+				//save this fields in different variable 
+				//let say 
+				$form_chkBox .= ob_get_contents();
+			}else{
+			
+			}
+			//------------
+			if(!($cf['type'] == 'checkbox')){
 			$form .= ob_get_contents();
+			}
 			ob_end_clean();
 		}
 	endforeach;
 	$form .=  '</div>';
 	$form = apply_filters('simplr-add-personal-fields', $form);
+	//if the user has not added their own user name field lets force one
+	if( !in_array('username',$fields) OR empty($custom->fields->custom['username']) ) {
+		$form .=  '<div class="option-field col-lg-6 col-sm-6 col-xs-12 '.apply_filters('username_error_class','') .'">';
+		$form .=  '<label for="username" class="left">' .@esc_attr($label_username ).' <span class="required">*</span></label>';
+		$form .=  '<input type="text" name="username" class="right" value="'.@esc_attr($data['username']) .'" />';
+		$form .=  '</div>';
+	}
 		$form .= '<div >';
 	//only insert the email fields if the user hasn't specified them.
 	if( !in_array('email',$fields) ) {
@@ -170,13 +182,15 @@ function simplr_build_form1($data,$atts) {
 		$form .=  '<input type="text" name="email" class="right" value="'.esc_attr(@$data['email']) .'" />';
 		$form .=  '</div>';
 	}
-
+		
 	if( !in_array('email_confirm', $fields) ) {
 		$form .=  '<div class="simplr-field col-lg-6 col-sm-6 col-xs-12 email-field '.apply_filters('email_error_class','').'">';
 		$form .=  '<label for="email" class="left">' .$label_confirm_email .' <span class="required">*</span></label>';
 		$form .=  '<input type="text" name="email_confirm" class="right" value="'.esc_attr(@$data['email_confirm']) .'" />';
 		$form .=  '</div>';
 	}
+	$form .= $form_chkBox ;
+	
 	$form .= '</div>';
 	$form = apply_filters('simplr-add-contact-fields', $form);
 
