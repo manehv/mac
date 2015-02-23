@@ -39,6 +39,10 @@ div.wpcf7-validation-errors {
 span.wpcf7-form-control-wrap {
 	position: relative;
 }
+span.wpcf7-form-control-wrap #top input[type="text"] {
+	position: relative;
+	width:150px !important;
+}
 
 span.wpcf7-not-valid-tip {
 	color: #f00;
