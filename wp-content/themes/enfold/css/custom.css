@@ -684,10 +684,11 @@ padding: 13px 54px!important;
 }
 .adminset{
 	padding: 0px 0px;
-display: inline-block;
-line-height: 12px;
-margin-top: 19px;
-margin-left: 10px;
+	display: inline-block;
+	line-height: 12px;
+	margin-top: 19px;
+	margin-left: 10px;
+	font-family: 'myriad_set_promedium';
 }
 .linkcolor a{
 	color:#282828;
