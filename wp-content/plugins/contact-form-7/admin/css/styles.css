@@ -60,6 +60,7 @@ input#wpcf7-title {
 	background-color: transparent;
 	box-shadow: none;
 	width: 80%;
+	max-width:150px !important;
 }
 
 input#wpcf7-title.focus {
