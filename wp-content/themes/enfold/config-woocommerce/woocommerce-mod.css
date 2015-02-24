@@ -1903,7 +1903,7 @@ padding: 7px 0 0 0;
 }
 #customer_details .form-row{clear:right;}
 /*#customer_details .form-row{clear:right float: inherit;}*/
-#customer_details #order_comments_field{clear:left;}
+#customer_details #order_comments_field{clear:left; width: 47%;}
 
 .entry-content-wrapper ul.products li {
 list-style-type: none;
