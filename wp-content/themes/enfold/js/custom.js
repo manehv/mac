@@ -103,4 +103,7 @@ jQuery(document).ready(function($)
 		$qty.trigger( 'change' );
 	});	
 	}, 1000); // Timeout
+	if($("#order_comments").length){
+		$("#order_comments").attr("placeholder","");
+	}
 });
