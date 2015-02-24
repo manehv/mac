@@ -7,7 +7,7 @@
 @import url('fonts/MyriadSetPro-Bold-fontfacekit/web-fonts/MyriadSetPro-Bold/stylesheet.css');
 @import url('fonts/MyriadSetPro-Medium-fontfacekit/stylesheet.css');
 /*padding div descripcion de productos*/
-#desc.p {
+#desc p {
 padding-left:30px;	
 }
 /* General Custom CSS */
