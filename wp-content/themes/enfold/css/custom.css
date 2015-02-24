@@ -27,7 +27,7 @@ display: none;
 .clsContent{padding-left:0; padding-right:50px; min-height:650px;}
 h1.clsBotTitle{
     text-transform: none;
-    padding: 5px 2px 5px 5px !important;
+    padding: 5px 2px 5px 30px !important;
     border: 1px solid #CCC;  /* Why is this border over here */ /*please dont comment, this line is necesary.*/
     width: 945px !important;
     min-width:240px !important;
