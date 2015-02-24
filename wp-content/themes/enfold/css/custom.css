@@ -790,3 +790,9 @@ input[type="submit"], #submit, .button {
 	font-family: 'myriad_set_promedium';
 	color:#D7D8DA;	
 }
+#top .post-entry-12342 .avia_ajax_form .text_input, 
+#top .post-entry-12342  .avia_ajax_form .select,
+#top .post-entry-12342 .avia_ajax_form .text_area{
+	width:90%;
+	padding:6px;
+}
