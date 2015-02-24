@@ -752,7 +752,7 @@ input[type="submit"], #submit, .button {
   text-decoration: none;
 }
 #customer_login input[type="submit"]{float:right;}
-#customer_login .required, #simplr-form  .required {color:#a1a3a5}
+#customer_login .required, #simplr-form  .required , #top .post-entry-12342 .required  {color:#a1a3a5}
 .form-row .lost_password{display:block;line-height:15px;margin-left:0px;}
 #customer_login label.rememberme{font-size:12px !important;color:#D7D8DA;}
 #customer_login input[type="text"], 
@@ -788,5 +788,5 @@ input[type="submit"], #submit, .button {
 #top .post-entry-12342 label{
 	width: 100% !important;font-size:17px !important; font-weight:normal !important;margin-bottom:7px;	
 	font-family: 'myriad_set_promedium';
-	
+	color:#D7D8DA;	
 }
