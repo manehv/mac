@@ -27,8 +27,8 @@ display: none;
 .clsContent{padding-left:0; padding-right:50px; min-height:650px;}
 h1.clsBotTitle{
     text-transform: none;
-    padding: 5px 2px 5px 30px !important;
-    border: 1px solid #CCC;
+    padding: 5px 2px 5px 5px !important;
+    /* border: 1px solid #CCC; */ /* Why is this border over here */
     width: 945px !important;
     min-width:240px !important;
     font-weight: 100 !important;
@@ -690,7 +690,8 @@ padding: 13px 54px!important;
 	background-color:none;
 	font-size:12px;
 	font-weight:bold;
-	color:#282828;
+	/* color:#282828; */
+	color:#56656d; 
 	display:block;
 }
 .adminset{
@@ -698,11 +699,12 @@ padding: 13px 54px!important;
 	display: inline-block;
 	line-height: 12px;
 	margin-top: 19px;
-	margin-left: -30px;
+	/*margin-left: -30px; */ /* Do not uncomment this is needed for 15inch screen */
 	font-family: 'myriad_set_promedium';
 }
 .linkcolor a{
-	color:#282828;
+	/*color:#282828; */ /*Keeping As per design */
+	color:#8E8E8E;
 	display:inline-block;
   font-weight: bold;
   font-size: 10px;
