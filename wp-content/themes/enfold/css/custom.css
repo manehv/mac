@@ -765,9 +765,7 @@ input[type="submit"], #submit, .button {
 	border: 2px solid #ccc !important;
 	
 }
-#main, .html_stretched #wrap_all{
-	background-color:#F9FAFB !important;
-}
+
 .template-page .entry-content-wrapper .col-lg-offset-3{
 	  border:none;
 }
