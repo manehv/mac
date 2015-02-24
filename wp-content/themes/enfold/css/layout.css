@@ -287,7 +287,7 @@ font-family: 'myriad_set_promedium';
 -webkit-transition: color 0.4s ease-in-out;
 -moz-transition: color 0.4s ease-in-out;
 transition: color 0.4s ease-in-out;
-letter-spacing: 0.3px;
+letter-spacing: -0.3px;
 }
 
 #top .av-main-nav ul a{
