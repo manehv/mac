@@ -588,6 +588,7 @@ Mobile Styles
   .page-id-7116 #main #formulariologin .av_two_third form p{margin:0;}
   .page-id-7116 #main #formulariologin .av_two_third form #billing_country_chosen{padding-right:52px;}
   #simplr-form  .checkbox{width:auto !important;}
+  .clsinfo{top:10px;}
 }
 @media only screen and (min-width:768px) and (max-width:980px) {
 	.chosen-container {
@@ -759,7 +760,8 @@ input[type="submit"], #submit, .button {
 #customer_login input[type="password"],
 #top #simplr-form input[type="text"], 
 #top #simplr-form input[type="password"]
-#top .post-entry-12342 input[type="text"], 
+#top .post-entry-12342 input[type="text"],
+#top .post-entry-12342 .text_area, 
 {
 	background-color:#F3F3F4 !important;
 	border: 2px solid #ccc !important;
@@ -797,6 +799,8 @@ input[type="submit"], #submit, .button {
 	padding:6px;
 }
 .clsinfo{
-	position:absolute;
-	margin-top:-30px;
+	margin-top: 97px;
+	position: relative;
+	top: 25px;
+	color:#D7D8DA;	
 }
