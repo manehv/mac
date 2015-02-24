@@ -225,7 +225,7 @@ function simplr_build_form1($data,$atts) {
 	}
 
 	//submission button. Use filter to custommize
-	$form .=  apply_filters('simplr-reg-submit', '<div class="col-lg-6 col-sm-6 col-xs-12"><input type="submit" name="submit-reg" value="Registrarse" class="submit button"></div>');
+	$form .=  apply_filters('simplr-reg-submit', '<div class="col-lg-6 col-sm-6 col-xs-12"><input type="submit" name="submit-reg" value="Registrarse" class="submit button btnGradient"></div>');
 
 	//wordress nonce for security
 	$nonce = wp_create_nonce('simplr_nonce');

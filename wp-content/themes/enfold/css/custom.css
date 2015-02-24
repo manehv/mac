@@ -306,7 +306,7 @@ margin-left:20px;
     clear: none;
 }
 .login hr{border:1px solid #adafb2;margin:20px 0px 15px !important;}
-#simplr-form hr , .page-id-239 hr{border:1px solid #adafb2; margin:20px 0px 5px !important;}
+#simplr-form hr , .page-id-239 hr{border-top:1px solid #adafb2; margin:20px 0px 5px !important;}
 .login .form-row .input-text{/*padding:17px 6px !important;*/ padding:4px !important;border:2px solid #e1e1e1 !important; border-radius:5px;}
 .page-id-10747 .login .frm-row .uname , .pwd{border: 2px solid #e1e1e1 !important;}
 #main, .html_stretched #wrap_all{background-color:#ffffff;}
@@ -363,14 +363,9 @@ color:#fff !important;
 		margin:0px;
 }
 #simplr-form input[type="submit"] {
-/*     background-image: -moz-linear-gradient(center bottom , #777777 43%, #777777 75%, #777777 89%)!important; */
-    border-radius: 2px !important;
-    box-shadow: unset !important;
 		margin-top:45px;
 	  padding: 4px 10px !important;
 		float:right;
-		background-color:#f5f5f5;
-		color:#919191;
 }
  .simplr-field label, .option-field label {
     width: 100% !important;font-size:17px !important; font-weight:unset !important;margin-bottom:7px;
@@ -653,9 +648,9 @@ input[type="submit"], #submit, .button {
     padding: 1px 5px !important;
 }
 
-#top .form-row label{
+#top .form-row label, #simplr-reg label{
 	font-size:14px;
-  color:#A1A3A5;
+	color:#D7D8DA;
 }
  .inline{
 	 font-weight:normal!important;
@@ -721,10 +716,16 @@ input[type="submit"], #submit, .button {
 	margin-top:150px;
 	margin-bottom:150px;
 }
-#customer_login h2 span{
-	color:#D7D8DA;
+#simplr-reg h1 {
+	color:#949699;
 }
-
+#customer_login h2 span, #simplr-reg h1 span{
+	color:#D7D8DA;
+	font-size:12px !important;
+}
+#simplr-form h1{
+	padding-left:0px !important;
+}
 .btnGradient {
   background: #ffffff;
   background-image: -webkit-linear-gradient(top, #ffffff, #e3e3e3);
@@ -735,9 +736,8 @@ input[type="submit"], #submit, .button {
   -webkit-border-radius: 6;
   -moz-border-radius: 6;
   border-radius: 6px !important;
-  font-family: Arial;
-  color: #AFB1B3;
-  font-size: 20px;
+  color: #AFB1B3 !important;
+  font-size: 14px;
   padding: 10px 20px 10px 20px;
   border: #DEDEDF 1px solid !important;
   text-decoration: none;
@@ -753,11 +753,13 @@ input[type="submit"], #submit, .button {
   text-decoration: none;
 }
 #customer_login input[type="submit"]{float:right;}
-#customer_login .required{color:#a1a3a5}
+#customer_login .required, #simplr-form  .required {color:#a1a3a5}
 .form-row .lost_password{display:block;line-height:15px;margin-left:0px;}
 #customer_login label.rememberme{font-size:12px !important;color:#D7D8DA;}
 #customer_login input[type="text"], 
-#customer_login input[type="password"]
+#customer_login input[type="password"],
+#top #simplr-form input[type="text"], 
+#top #simplr-form input[type="password"]
 {
 	background-color:#F3F3F4 !important;
 	border: 2px solid #ccc !important;
