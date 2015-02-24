@@ -104,7 +104,7 @@ function simplr_build_form1($data,$atts) {
 
 	$fields = explode(',',@$atts['fields']);
 	$form .=  '<form class="col-lg-6 col-lg-offset-3" method="post" action="" id="simplr-reg">';
-	$form .= '<h2>'. __('Registration','simpr-reg')  .'<span class="pull-right">* Información requerida</span></h2>';
+	$form .= '<h2>'. __('Registrarme','simpr-reg')  .'<span class="pull-right">* Información requerida</span></h2>';
 	$form .= '<hr/>';
 	$form .= apply_filters('simplr-reg-first-form-elem','');
 	$form .= '<div >';
