@@ -726,7 +726,7 @@ input[type="submit"], #submit, .button {
 #simplr-form h1{
 	padding-left:0px !important;
 }
-.btnGradient {
+.btnGradient, #top .post-entry-12342 .avia_ajax_form input[type="submit"] {
   background: #ffffff;
   background-image: -webkit-linear-gradient(top, #ffffff, #e3e3e3);
   background-image: -moz-linear-gradient(top, #ffffff, #e3e3e3);
@@ -743,7 +743,7 @@ input[type="submit"], #submit, .button {
   text-decoration: none;
 }
 
-.btnGradient:hover {
+.btnGradient:hover, #top .post-entry-12342 .avia_ajax_form input[type="submit"]:hover {
   background: #e3e3e3;
   background-image: -webkit-linear-gradient(top, #e3e3e3, #ffffff);
   background-image: -moz-linear-gradient(top, #e3e3e3, #ffffff);
@@ -797,6 +797,9 @@ input[type="submit"], #submit, .button {
 #top .post-entry-12342 .avia_ajax_form .text_area{
 	width:90%;
 	padding:6px;
+	background-color:#F3F3F4 !important;
+	border: 2px solid #ccc !important;
+	
 }
 .clsinfo{
 	margin-top: 97px;
