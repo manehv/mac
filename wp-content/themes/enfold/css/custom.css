@@ -452,6 +452,7 @@ color:#fff !important;
 .clsTopImg span{margin-right:24px; width:70px; }
 .clsTopImg span:nth-child(3){margin-right:0; }
 .form-row-half, .form-row-quarter, .form-row-first, .form-row-last{width:100%; }
+
 #top #payment{width:100%; }
 .responsive table.shop_table tr.clsBlank{display:none; }
 .responsive #top table .product-name{font-weight:bold; }
@@ -735,3 +736,7 @@ padding: 13px 54px!important;
 .woocommerce_top {
 	margin-top:100px;
 }
+.woocommerce a.continue-button{
+	background-color:#2F9BF2
+}
+#top .form-row.form-row-last {margin-left:10px !important}

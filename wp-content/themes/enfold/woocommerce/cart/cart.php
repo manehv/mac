@@ -14,6 +14,12 @@ global $woocommerce;
 wc_print_notices();
 
 do_action( 'woocommerce_before_cart' ); ?>
+<?php 
+$url = home_url( '/' );
+echo '<a href="'. $url .'" class="pull-right checkout-button button alt wc-forward continue-button">';
+ _e( 'Continue Shopping', 'woocommerce' );
+echo '</a>';
+?>
 
 <div class="clsTopImg">
 	<span>Resumen de orden</span>

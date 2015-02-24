@@ -23,7 +23,12 @@ if ( ! $checkout->enable_signup && ! $checkout->enable_guest_checkout && ! is_us
 
 // filter hook for include new pages inside the payment method
 $get_checkout_url = apply_filters( 'woocommerce_get_checkout_url', WC()->cart->get_checkout_url() ); ?>
-
+<?php 
+$url = home_url( '/' );
+echo '<a href="'. $url .'" class="pull-right checkout-button button alt wc-forward continue-button">';
+ _e( 'Continue Shopping', 'woocommerce' );
+echo '</a>';
+?>
 <div class="clsTopImg">
 	<span>Resumen de orden</span>
 	<span>Comprar</span>

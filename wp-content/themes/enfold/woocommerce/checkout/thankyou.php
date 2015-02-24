@@ -12,7 +12,12 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 global $woocommerce;
 
 if ( $order ) : ?>
-
+<?php 
+$url = home_url( '/' );
+echo '<a href="'. $url .'" class="pull-right checkout-button button alt wc-forward continue-button">';
+ _e( 'Continue Shopping', 'woocommerce' );
+echo '</a>';
+?>
 	<div class="clsTopImg">
 		<span>Resumen de orden</span>
 		<span>Comprar</span>
