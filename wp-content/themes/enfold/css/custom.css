@@ -803,11 +803,11 @@ input[type="submit"], #submit, .button {
 }
 #top .post-entry-12342 .avia_ajax_form .text_area{
 	border-radius:10px !important;
-	width:100%;
+	width:96%;
 }
 #top .post-entry-12342 .avia_ajax_form input[type="submit"]{
 	padding: 4px 21px !important;
-	margin-right:38px;
+	margin-right:26px;
 	float:right;
 }
 
