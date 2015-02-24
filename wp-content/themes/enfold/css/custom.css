@@ -759,6 +759,7 @@ input[type="submit"], #submit, .button {
 #customer_login input[type="password"],
 #top #simplr-form input[type="text"], 
 #top #simplr-form input[type="password"]
+#top .post-entry-12342 input[type="text"], 
 {
 	background-color:#F3F3F4 !important;
 	border: 2px solid #ccc !important;
@@ -784,3 +785,8 @@ input[type="submit"], #submit, .button {
 /* Following form is assuming its contact form */
 /* .post-entry-12342 */
 #top .post-entry-12342 fieldset{padding:0px !important}
+#top .post-entry-12342 label{
+	width: 100% !important;font-size:17px !important; font-weight:normal !important;margin-bottom:7px;	
+	font-family: 'myriad_set_promedium';
+	
+}
