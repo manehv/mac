@@ -454,6 +454,7 @@ table div.quantity{margin:0; }
 .custom_table.shop_table.cart{border:1px solid #e1e1e1; padding:0 10px; background-color:#ffffff; }
 .cart_totals table{border:1px solid #e1e1e1; }
 .cart_totals td{text-align:left; }
+#top a.cart_dropdown_link span.desc{display:none;}
 }
 
 @media only screen and (min-width:640px) and (max-width:767px) {
@@ -478,6 +479,7 @@ td.actions .coupon{width:49%; }
 .responsive table.shop_table .product-remove, .responsive table.shop_table .product-thumbnail{display:table-cell; }
 #top table.shop_table .actions .button, #top .actions .checkout-button.button.alt{min-width:0; width:24%; float:left; }
 #top #payment{width:100%; }
+#top a.cart_dropdown_link span.desc{display:none;}
 }
 input[type="submit"], #submit, .button{padding: 9px 27px;}
 
@@ -504,6 +506,7 @@ table.shop_table .product-remove, table.shop_table .product-thumbnail{display:ta
 #top table.shop_table .actions .button, #top .actions .checkout-button.button.alt{min-width:0; width:24%; float:left; }
 a:hover, a:focus{background-color:transparent; }
 #socket .menu{margin-top:0; }
+#top a.cart_dropdown_link span.desc{display:none;}
 }
 
 @media only screen and (min-width:1024px) {
@@ -820,3 +823,5 @@ input[type="submit"], #submit, .button {
 .cart_dropdown .dropdown_widget .widget_shopping_cart_content{
 	border:1px solid gray;
 }
+.cart_dropdown{width:auto;font-size:12px;font-family:'myriad_set_promedium',sans,verdana; }
+#top a.cart_dropdown_link span.desc{font-size:10px;color:#56656d;}
