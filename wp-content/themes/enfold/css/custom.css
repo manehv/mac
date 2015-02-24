@@ -485,7 +485,7 @@ td.actions .coupon{width:49%; }
 #top table.shop_table .actions .button, #top .actions .checkout-button.button.alt{min-width:0; width:24%; float:left; }
 #top #payment{width:100%; }
 }
-
+input[type="submit"], #submit, .button{padding: 9px 27px;}
 
 
 /*
@@ -646,7 +646,7 @@ input[type="submit"], #submit, .button {
 
 .woocommerce .form-row input[type="submit"], #submit,  {
   margin-top:0px;
-padding: 13px 54px!important;
+	padding: 13px 54px!important;
 }
 .button {
     margin-top: 0px;
@@ -655,14 +655,14 @@ padding: 13px 54px!important;
 
 #top .form-row label{
 	font-size:14px;
-  color:#666666;
+  color:#A1A3A5;
 }
  .inline{
 	 font-weight:normal!important;
   color:#6D6D6D;
 }
 .lost_password a{
-	color:#6D6D6D;
+	color:#D7D8DA;
 }
 .lost_reset_password .input-text{
 	padding:4px !important;
@@ -711,21 +711,60 @@ padding: 13px 54px!important;
   font-weight: bold;
   font-size: 10px;
 }
-#customer_login {
-	padding-top:100px;
-}
+
 
 #av_section_3 {
     position: relative;
     z-index: -1;
 }
-.woocommerce  #customer_login{
-	 margin-left: -50px;
-   margin-top: -30px;
-   margin-right: 30px;
+#customer_login{
+	margin-top:150px;
+	margin-bottom:150px;
 }
-#top form.login {
-    margin-bottom: 100px;
+#customer_login h2 span{
+	color:#D7D8DA;
+}
+
+.btnGradient {
+  background: #ffffff;
+  background-image: -webkit-linear-gradient(top, #ffffff, #e3e3e3);
+  background-image: -moz-linear-gradient(top, #ffffff, #e3e3e3);
+  background-image: -ms-linear-gradient(top, #ffffff, #e3e3e3);
+  background-image: -o-linear-gradient(top, #ffffff, #e3e3e3);
+  background-image: linear-gradient(to bottom, #ffffff, #e3e3e3);
+  -webkit-border-radius: 6;
+  -moz-border-radius: 6;
+  border-radius: 6px !important;
+  font-family: Arial;
+  color: #AFB1B3;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  border: #DEDEDF 1px solid !important;
+  text-decoration: none;
+}
+
+.btnGradient:hover {
+  background: #e3e3e3;
+  background-image: -webkit-linear-gradient(top, #e3e3e3, #ffffff);
+  background-image: -moz-linear-gradient(top, #e3e3e3, #ffffff);
+  background-image: -ms-linear-gradient(top, #e3e3e3, #ffffff);
+  background-image: -o-linear-gradient(top, #e3e3e3, #ffffff);
+  background-image: linear-gradient(to bottom, #e3e3e3, #ffffff);
+  text-decoration: none;
+}
+#customer_login input[type="submit"]{float:right;}
+#customer_login .required{color:#a1a3a5}
+.form-row .lost_password{display:block;line-height:15px;margin-left:0px;}
+#customer_login label.rememberme{font-size:12px !important;color:#D7D8DA;}
+#customer_login input[type="text"], 
+#customer_login input[type="password"]
+{
+	background-color:#F3F3F4 !important;
+	border: 2px solid #ccc !important;
+	
+}
+#main, .html_stretched #wrap_all{
+	background-color:#F9FAFB !important;
 }
 .template-page .entry-content-wrapper .col-lg-offset-3{
 	  border:none;
@@ -741,3 +780,5 @@ padding: 13px 54px!important;
 	background-color:#2F9BF2
 }
 #top .form-row.form-row-last {margin-left:10px !important}
+#simplr-reg h1{padding-left:0px;border:0px;}
+#top form.login, #top form.register{background-color:transparent !important;}
