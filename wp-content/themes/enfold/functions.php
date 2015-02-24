@@ -89,7 +89,7 @@ function simplr_build_form1($data,$atts) {
 	}
 
 	$label_email = apply_filters('simplr_label_email', __('E-mail','woocommerce') );
-	$label_confirm_email = apply_filters('simplr_label_confirm_email', __('Confirmar E-mail','woocommerce') );
+	$label_confirm_email = apply_filters('simplr_label_confirm_email', __('Confirmar email','woocommerce') );
 	$label_username = apply_filters('simplr_label_username', __('Username','woocommerce') );
 	$label_pass = apply_filters('simplr_label_password', __('Password','woocommerce'));
 	$label_confirm = apply_filters('simplr_label_confirm', __('Confirm New Password','woocommerce'));
