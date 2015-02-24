@@ -305,8 +305,8 @@ margin-left:20px;
 .login .form-row.form-row-wide {
     clear: none;
 }
-.login hr{border:1px solid #adafb2;margin:20px 0px 15px !important;}
-#simplr-form hr , .page-id-239 hr{border-top:1px solid #adafb2; margin:20px 0px 5px !important;}
+.login hr, .lost_reset_password hr {border-top:1px solid #adafb2;margin:10px 0px 5px !important;}
+#simplr-form hr , .page-id-239 hr{border-top:1px solid #adafb2; margin:10px 0px 5px !important;}
 .login .form-row .input-text{/*padding:17px 6px !important;*/ padding:4px !important;border:2px solid #e1e1e1 !important; border-radius:5px;}
 .page-id-10747 .login .frm-row .uname , .pwd{border: 2px solid #e1e1e1 !important;}
 
@@ -719,12 +719,18 @@ input[type="submit"], #submit, .button {
 	margin-top:150px;
 	margin-bottom:150px;
 }
-#simplr-form h2, .post-entry-12342 h2 {
+#simplr-form h2, .post-entry-12342 h2, .lost_reset_password h2{
 	color:#949699;
 }
-#customer_login h2 span, #simplr-reg h1 span{
+#customer_login h2 span, #simplr-reg h1 span, .lost_reset_password .info{
 	color:#D7D8DA;
 	font-size:12px !important;
+}
+.lost_reset_password .info{
+	padding-left:0px;
+	margin-left:0px;
+	padding-top:0px;
+
 }
 #simplr-form h1{
 	padding-left:0px !important;
@@ -827,3 +833,6 @@ input[type="submit"], #submit, .button {
 
 .cart_dropdown{width:auto;font-size:12px;font-family:'myriad_set_promedium',sans,verdana; }
 #top a.cart_dropdown_link span.desc{font-size:10px;color:#56656d;}
+.lost_reset_password{
+	margin:140px 0px;
+}
