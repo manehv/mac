@@ -817,3 +817,6 @@ input[type="submit"], #submit, .button {
 	top: 25px;
 	color:#D7D8DA;	
 }
+.cart_dropdown .dropdown_widget .widget_shopping_cart_content{
+	border:1px solid gray;
+}
