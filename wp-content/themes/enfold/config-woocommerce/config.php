@@ -789,7 +789,10 @@ function avia_woocommerce_cart_dropdown()
 	$output = "";
 	$output .= "<ul class = 'cart_dropdown' data-success='".__('was added to the cart', 'avia_framework')."'>
 							<li class='cart_dropdown_first'>"  ;
+	if($qty > 0)
 	$output .= "<a class='cart_dropdown_link' href='".$link."'><span class='desc'>" . __('Products in cart','avia_framework') .':'. $qty ."</span> <span ".av_icon_string('cart')."></span></a><!--<span class='cart_subtotal'>".$cart_subtotal."</span>-->";
+	else 
+	$output .= "<a class='cart_dropdown_link' href='".$link."'><span ".av_icon_string('cart')."></span></a><!--<span class='cart_subtotal'>".$cart_subtotal."</span>-->";
 	$output .= "<div class='dropdown_widget dropdown_widget_cart'><div class='avia-arrow'></div>";
 	$output .= '<div class="widget_shopping_cart_content"></div>';
 	$output .= "</div>";
