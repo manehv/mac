@@ -780,6 +780,7 @@ input[type="submit"], #submit, .button {
 }
 .woocommerce a.continue-button{
 	background-color:#2F9BF2
+	font-family: 'myriad_set_promedium';
 }
 #top .form-row.form-row-last {margin-left:10px !important}
 #simplr-reg h1{padding-left:0px;border:0px;}
