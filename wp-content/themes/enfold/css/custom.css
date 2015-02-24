@@ -761,7 +761,7 @@ input[type="submit"], #submit, .button {
 #top #simplr-form input[type="text"], 
 #top #simplr-form input[type="password"]
 #top .post-entry-12342 input[type="text"],
-#top .post-entry-12342 .text_area, 
+#top .post-entry-12342 .text_area 
 {
 	background-color:#F3F3F4 !important;
 	border: 2px solid #ccc !important;
