@@ -796,3 +796,7 @@ input[type="submit"], #submit, .button {
 	width:90%;
 	padding:6px;
 }
+.clsinfo{
+	position:absolute;
+	margin-top:-30px;
+}
