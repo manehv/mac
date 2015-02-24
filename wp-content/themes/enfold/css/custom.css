@@ -701,6 +701,7 @@ padding: 13px 54px!important;
 	line-height: 12px;
 	margin-top: 19px;
 	/*margin-left: -30px; */ /* Do not uncomment this is needed for 15inch screen */
+	margin-left: 10px; /* DO NOT REMOVE! Respect someone else's code */
 	font-family: 'myriad_set_promedium';
 }
 .linkcolor a{
