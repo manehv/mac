@@ -782,3 +782,5 @@ input[type="submit"], #submit, .button {
 #simplr-reg h1{padding-left:0px;border:0px;}
 #top form.login, #top form.register{background-color:transparent !important;}
 /* Following form is assuming its contact form */
+/* .post-entry-12342 */
+#top .post-entry-12342 fieldset{padding:0px !important}
