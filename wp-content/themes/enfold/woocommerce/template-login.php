@@ -11,14 +11,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 <?php wc_print_notices(); ?>
 <?php do_action( 'woocommerce_before_customer_login_form' ); ?>
 <div class="col-lg-offset-3 col-lg-6 col-xs-12 col-sm-6 clearfix" id="customer_login">
-	<div class="">
-		<h2><?php// _e( 'Login', 'woocommerce' ); ?></h2>
+	<div>
 
 		<form method="post" class="login col-lg-12 ">
 
 			<?php do_action( 'woocommerce_login_form_start' ); ?>
-<h2><?php _e( 'Login', 'woocommerce' ); ?> <span class="pull-right">*<?php _e('Información requerida','woocommerce'); ?></span></h2>
-<hr/>
+			<h2><?php _e( 'Login', 'woocommerce' ); ?> <span class="pull-right">*<?php _e('Información requerida','woocommerce'); ?></span></h2>
+			<hr/>
 			<p class="form-row col-lg-6 col-sm-12 col-xs-12 form-row-wide" >
 				<label class=" " for="username"><?php _e( 'Usuario', 'woocommerce' ); ?> <span class="required">*</span></label>
 				<input type="text" class="input-text uname col-lg-8"  name="username" id="username" value="<?php if ( ! empty( $_POST['username'] ) ) echo esc_attr( $_POST['username'] ); ?>" />

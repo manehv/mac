@@ -104,7 +104,7 @@ function simplr_build_form1($data,$atts) {
 
 	$fields = explode(',',@$atts['fields']);
 	$form .=  '<form class="col-lg-6 col-lg-offset-3" method="post" action="" id="simplr-reg">';
-	$form .= '<h1>Registro <span class="pull-right">* Información requerida</span></h1>';
+	$form .= '<h2>'. __('Registration','simpr-reg')  .'<span class="pull-right">* Información requerida</span></h2>';
 	$form .= '<hr/>';
 	$form .= apply_filters('simplr-reg-first-form-elem','');
 	$form .= '<div >';
@@ -116,7 +116,7 @@ function simplr_build_form1($data,$atts) {
 			$form .= '</div><div >';
 		}
 		if ( preg_match("#^\{(.*)\}#",$field, $matches) ) {
-			$form .= "<h3 class='registration'>".$matches[1]."</h3>";
+			$form .= "<h2 class='registration'>".$matches[1]."</h2>";
 		}
 		$cf = @$custom->fields->custom[$field];
 
