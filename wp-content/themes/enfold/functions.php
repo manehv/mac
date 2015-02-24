@@ -88,11 +88,11 @@ function simplr_build_form1($data,$atts) {
 		$fb_user = null;
 	}
 
-	$label_email = apply_filters('simplr_label_email', __('Email Address:','simplr-reg') );
-	$label_confirm_email = apply_filters('simplr_label_confirm_email', __('Confirm Email:','simplr-reg') );
-	$label_username = apply_filters('simplr_label_username', __('Your Username:','simplr-reg') );
-	$label_pass = apply_filters('simplr_label_password', __('Choose a Password','simpr-reg'));
-	$label_confirm = apply_filters('simplr_label_confirm', __('Confirm Password','simpr-reg'));
+	$label_email = apply_filters('simplr_label_email', __('Email address','woocommerce') );
+	$label_confirm_email = apply_filters('simplr_label_confirm_email', __('Confirm Email address','woocommerce') );
+	$label_username = apply_filters('simplr_label_username', __('Username','woocommerce') );
+	$label_pass = apply_filters('simplr_label_password', __('Password','woocommerce'));
+	$label_confirm = apply_filters('simplr_label_confirm', __('Confirm Password','woocommerce'));
 
 	//POST FORM
 	$form = '';
@@ -155,6 +155,7 @@ function simplr_build_form1($data,$atts) {
 				//save this fields in different variable 
 				//let say 
 				$form_chkBox .= ob_get_contents();
+
 			}else{
 			
 			}
