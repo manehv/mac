@@ -314,7 +314,7 @@ margin-left:20px;
 .login .form-row .input-text{/*padding:17px 6px !important;*/ padding:4px !important;border:2px solid #e1e1e1 !important; border-radius:5px;}
 .page-id-10747 .login .frm-row .uname , .pwd{border: 2px solid #e1e1e1 !important;}
 
-h2 span,h1 span{font-size:10px;}
+h2 span,h1 span{font-size:10px;color:#666666;font-weight:initial;}
 .clsMyAcc{
 margin-top:30px;
 }
@@ -371,14 +371,14 @@ color:#fff !important;
 		float:right;
 }
  .simplr-field label, .option-field label {
-    width: 100% !important;font-size:17px !important; font-weight:unset !important;margin-bottom:7px;color:#C4C6C8;
+    width: 100% !important;font-size:14px !important; font-weight:unset !important;margin-bottom:7px;color:#666666;
 }
 .page-id-10749 #simplr-form #simpler-reg .simplr-field , .option-field {
     margin:0;
 }
 #simplr-form  .checkbox{width:50% !important;float:left;margin:0px 0px -7px; top:37px;}
 #simplr-form  .checkbox label{ font-weight:unset !important; float:right;font-size:10px !important;}
-#simplr-form  .checkbox input[type="checkbox"]{width:2px !important;margin-left:0px;}
+#simplr-form  .checkbox input[type="checkbox"]{width:12px !important;margin-left:0px;}
 .simplr-field, .option-field {
    padding:0 14px 0 0;
 }
@@ -398,7 +398,7 @@ color:#fff !important;
  .page-id-239 fieldset{padding:0 !important;}
 
 .simplr-field input, .option-field input {
-    width: 250px !important;
+    width: 250px !important;font-size:12px !important;
 }
 
 .page-id-7116 #main #formulariologin , #after_section_1{background-color:#f2f2f2 !important;}
@@ -420,7 +420,7 @@ color:#fff !important;
 		
 }
 .page-id-239 .avia_ajax_form .text_area{border-radius: 20px !important;}
-.page-id-239 .avia_ajax_form label, .modified_width:before{color:#C4C6C8;font-size:17px !important; font-weight:unset !important;}
+.page-id-239 .avia_ajax_form label, .modified_width:before{color:#666666;font-size:14px !important; font-weight:unset !important;}
 .page-id-239 .avia_ajax_form .text_input, .page-id-239 .avia_ajax_form .select{width:95% !important;}
 .page-id-239 .avia_ajax_form .button {
 	background-color:#f5f5f5;
@@ -431,7 +431,11 @@ color:#fff !important;
   border-bottom-width: 0;
 }
 .page-id-239 input[type="text"]{border:2px solid #e1e1e1;}
-
+.login, .login p,.page-id-7116 .lost_reset_password p, #simplr-reg , .page-id-239 form p{
+	font-family: 'myriad_set_promedium' !important;}
+	
+	.page-id-7116 form p #user_login [type="text"]{border:1px solid #666666 !important; box-shadow:none !important;}
+.page-id-239 .avia_ajax_form .select{ border:1px solid #666666 !important; box-shadow:none !important;}
 /* Media Queries */
 @media only screen and (min-width:320px) and (max-width:480px){
 .responsive .logo a, .responsive .logo img{/*height:70px !important;*/ }
@@ -628,11 +632,10 @@ input[type="submit"], #submit, .button {
 	padding: 9px 54px!important;
 	font-size:14px;
 }
-.login .form-row input[type="text"] , input[type="password"]{background-color: #f8f8f8 !important;
-    border-color: #e1e1e1;
-    color: #919191;}
+.login .form-row input[type="text"] , input[type="password"]{background-color: #f8f8f8 !important;border-color: #e1e1e1;
+    color: #919191 !important;}
 .login .form-row{padding:3px 14px 0 0 !important;}
-.login .form-row label{font-size:17px !important;margin-bottom:7px; font-weight:unset !important;color:#C4C6C8!important;}
+.login .form-row label , .lost_reset_password label{font-size:14px !important;margin-bottom:7px; font-weight:unset !important;color:#666666!important;}
 .login .form-row input[type="submit"], #submit{
 	border-radius: 0px;
 	color:#919191;
@@ -658,7 +661,7 @@ input[type="submit"], #submit, .button {
     padding: 1px 5px !important;
 }
 
-#top .form-row label, #simplr-reg label{
+#top .form-row label{
 	font-size:14px;
 	color:#D7D8DA;
 }
@@ -667,7 +670,7 @@ input[type="submit"], #submit, .button {
   color:#6D6D6D;
 }
 .lost_password a{
-	color:#D7D8DA;
+	color:#666666;
 }
 .lost_reset_password .input-text{
 	padding:4px !important;
@@ -730,9 +733,9 @@ input[type="submit"], #submit, .button {
 #simplr-form h2, .post-entry-12342 h2, .lost_reset_password h2{
 	color:#949699;
 }
-#customer_login h2 span, #simplr-reg h1 span, .lost_reset_password .info{
-	color:#D7D8DA;
-	font-size:12px !important;
+#customer_login h2 span{
+	color:#666666;
+	font-size:10px !important;
 }
 .lost_reset_password .info{
 	padding-left:0px;
@@ -781,7 +784,7 @@ input[type="submit"], #submit, .button {
 #top .post-entry-12342 .text_area 
 {
 	background-color:#F3F3F4 !important;
-	border: 2px solid #ccc !important;
+	border: 1px solid #666666 !important;
 }
 
 .template-page .entry-content-wrapper .col-lg-offset-3{
