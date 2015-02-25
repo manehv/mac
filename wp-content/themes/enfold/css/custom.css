@@ -311,7 +311,7 @@ margin-left:20px;
 
 .login hr, .lost_reset_password hr {border-top:1px solid #adafb2;margin:10px 0px 5px !important;}
 #simplr-form hr , .page-id-239 hr{border-top:1px solid #adafb2; margin:10px 0px 5px !important;}
-.login .form-row .input-text{/*padding:17px 6px !important;*/ padding:4px !important;border:2px solid #e1e1e1 !important; border-radius:5px;}
+.login .form-row .input-text{/*padding:17px 6px !important;*/ padding:7px !important;border:2px solid #e1e1e1 !important; border-radius:5px;}
 .page-id-10747 .login .frm-row .uname , .pwd{border: 2px solid #e1e1e1 !important;}
 
 h2 span,h1 span{font-size:10px;color:#666666;font-weight:initial;}
@@ -361,7 +361,7 @@ color:#fff !important;
 }
 #simplr-form input[type="text"] {
     box-shadow: unset !important;
-    padding: 4px !important;
+    padding: 7px !important;
 		border-radius:5px;
 		margin:0px;
 }
@@ -673,7 +673,7 @@ input[type="submit"], #submit, .button {
 	color:#666666;
 }
 .lost_reset_password .input-text{
-	padding:4px !important;
+	padding:7px !important;
 	border-radius:5px;
 }
 .page-id-7116 .lost_reset_password input[type="submit"]{
