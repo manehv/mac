@@ -308,6 +308,7 @@ margin-left:20px;
 .login .form-row.form-row-wide {
     clear: none;
 }
+
 .login hr, .lost_reset_password hr {border-top:1px solid #adafb2;margin:10px 0px 5px !important;}
 #simplr-form hr , .page-id-239 hr{border-top:1px solid #adafb2; margin:10px 0px 5px !important;}
 .login .form-row .input-text{/*padding:17px 6px !important;*/ padding:4px !important;border:2px solid #e1e1e1 !important; border-radius:5px;}
@@ -370,7 +371,7 @@ color:#fff !important;
 		float:right;
 }
  .simplr-field label, .option-field label {
-    width: 100% !important;font-size:17px !important; font-weight:unset !important;margin-bottom:7px;
+    width: 100% !important;font-size:17px !important; font-weight:unset !important;margin-bottom:7px;color:#C4C6C8;
 }
 .page-id-10749 #simplr-form #simpler-reg .simplr-field , .option-field {
     margin:0;
@@ -419,7 +420,7 @@ color:#fff !important;
 		
 }
 .page-id-239 .avia_ajax_form .text_area{border-radius: 20px !important;}
-.page-id-239 .avia_ajax_form label, .modified_width:before{font-size:17px !important; font-weight:unset !important;}
+.page-id-239 .avia_ajax_form label, .modified_width:before{color:#C4C6C8;font-size:17px !important; font-weight:unset !important;}
 .page-id-239 .avia_ajax_form .text_input, .page-id-239 .avia_ajax_form .select{width:95% !important;}
 .page-id-239 .avia_ajax_form .button {
 	background-color:#f5f5f5;
@@ -627,8 +628,11 @@ input[type="submit"], #submit, .button {
 	padding: 9px 54px!important;
 	font-size:14px;
 }
+.login .form-row input[type="text"] , input[type="password"]{background-color: #f8f8f8 !important;
+    border-color: #e1e1e1;
+    color: #919191;}
 .login .form-row{padding:3px 14px 0 0 !important;}
-.login .form-row label{font-size:17px !important;margin-bottom:7px; font-weight:unset !important;}
+.login .form-row label{font-size:17px !important;margin-bottom:7px; font-weight:unset !important;color:#C4C6C8!important;}
 .login .form-row input[type="submit"], #submit{
 	border-radius: 0px;
 	color:#919191;
@@ -718,6 +722,7 @@ input[type="submit"], #submit, .button {
     position: relative;
     z-index: -1;
 }
+
 #customer_login{
 	margin-top:150px;
 	margin-bottom:150px;
@@ -777,7 +782,6 @@ input[type="submit"], #submit, .button {
 {
 	background-color:#F3F3F4 !important;
 	border: 2px solid #ccc !important;
-	
 }
 
 .template-page .entry-content-wrapper .col-lg-offset-3{
