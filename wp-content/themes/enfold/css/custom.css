@@ -664,6 +664,7 @@ input[type="submit"], #submit, .button {
 #top .form-row label{
 	font-size:14px;
 	color:#D7D8DA;
+	font-weight:normal;
 }
  .inline{
 	 font-weight:normal!important;
