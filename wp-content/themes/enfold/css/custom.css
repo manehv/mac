@@ -371,7 +371,7 @@ color:#fff !important;
 		float:right;
 }
  .simplr-field label, .option-field label {
-    width: 100% !important;font-size:14px !important; font-weight:unset !important;margin-bottom:7px;color:#666666;
+    width: 100% !important;font-size:14px !important; font-weight:normal !important;margin-bottom:7px;color:#666666;
 }
 .page-id-10749 #simplr-form #simpler-reg .simplr-field , .option-field {
     margin:0;
