@@ -835,7 +835,7 @@ input[type="submit"], #submit, .button {
 }
 
 .cart_dropdown{width:auto;font-size:12px;font-family:'myriad_set_promedium',sans,verdana; }
-#top a.cart_dropdown_link span.desc{font-size:10px;color:#56656d;}
+#top a.cart_dropdown_link span.desc{font-size:10px;}
 .lost_reset_password{
 	margin:140px 0px;
 }
