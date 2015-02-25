@@ -401,7 +401,7 @@ color:#fff !important;
     width: 250px !important;font-size:12px !important;
 }
 
-.page-id-7116 #main #formulariologin , #after_section_1{background-color:#f2f2f2 !important;}
+.page-id-7116 #main .main_color, #after_section_1{background-color:#F7F7F7 !important;}
 .page-id-7116 #main #formulariologin .av_two_third .woocommerce form {
 	background-color:#F7F7F7 !important; 
 	border-radius:5px;
