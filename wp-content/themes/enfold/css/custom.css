@@ -310,7 +310,7 @@ margin-left:20px;
 }
 
 .login hr, .lost_reset_password hr {border-top:1px solid #adafb2;margin:10px 0px 5px !important;}
-#simplr-form hr , .page-id-239 hr, #top .post-entry-12342 hr{border-top:1px solid #adafb2; margin:10px 0px 5px !important;}
+#simplr-form hr , .page-id-239 hr, #top .post-entry-12342 .hr{border-top:1px solid #adafb2; margin:10px 0px 5px !important;}
 .login .form-row .input-text{/*padding:17px 6px !important;*/ padding:4px !important;border:2px solid #e1e1e1 !important; border-radius:5px;}
 .page-id-10747 .login .frm-row .uname , .pwd{border: 2px solid #e1e1e1 !important;}
 
