@@ -403,7 +403,7 @@ color:#fff !important;
 
 .page-id-7116 #main #formulariologin , #after_section_1{background-color:#f2f2f2 !important;}
 .page-id-7116 #main #formulariologin .av_two_third .woocommerce form {
-	background-color:#ffffff !important; 
+	background-color:#F7F7F7 !important; 
 	border-radius:5px;
 	padding-left:25px;
 	padding-right:25px;
@@ -859,3 +859,4 @@ input[type="submit"], #submit, .button {
 #top .post-entry-12342  .av-special-heading-tag{
 	font-weight:bold;
 }
+/*forgot password */
