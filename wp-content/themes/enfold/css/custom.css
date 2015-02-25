@@ -834,6 +834,7 @@ input[type="submit"], #submit, .button {
 	padding: 4px 21px !important;
 	margin-right:26px;
 	float:right;
+	border: 1px solid #ccc !important;
 }
 
 .clsinfo{
