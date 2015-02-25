@@ -784,7 +784,7 @@ input[type="submit"], #submit, .button {
 #top .post-entry-12342 .text_area 
 {
 	background-color:#F3F3F4 !important;
-	border: 1px solid #666666 !important;
+	border: 1px solid #ccc !important;
 }
 
 .template-page .entry-content-wrapper .col-lg-offset-3{
@@ -822,7 +822,8 @@ input[type="submit"], #submit, .button {
 	padding:6px;
 	font-family: 'myriad_set_promedium';
 	background-color:#F3F3F4 !important;
-	border: 1px solid #666666 !important;
+	border: 1px solid #ccc !important;
+	box-shadow:none;
 	
 }
 #top .post-entry-12342 .avia_ajax_form .text_area{
