@@ -737,6 +737,7 @@ border-bottom-left-radius: 2px;
 */
 
 #top .avia_cart_buttons .button{
+color: #0270a3; /*CAMBIO TXT AZUL*/
 min-width:50px;
 float:left;
 width:49%;
@@ -799,6 +800,7 @@ font-size: 14px;
 position: relative;
 top:1px;
 font-weight: normal;
+color:#666666 !important; /* FORZAR COLOR GRIS EN ICONO*/
 }
 
 .button-mini-delimiter {
