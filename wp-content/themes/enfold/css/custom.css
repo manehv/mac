@@ -756,7 +756,7 @@ input[type="submit"], #submit, .button {
   -webkit-border-radius: 6;
   -moz-border-radius: 6;
   border-radius: 6px !important;
-  color: #AFB1B3 !important;
+  color: #666666 !important;
   font-size: 14px;
   padding: 10px 20px 10px 20px;
   border: #DEDEDF 1px solid !important;
