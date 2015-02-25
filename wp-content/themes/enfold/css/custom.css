@@ -432,7 +432,7 @@ color:#fff !important;
 }
 .page-id-239 input[type="text"]{border:2px solid #e1e1e1;}
 .login, .login p,.page-id-7116 .lost_reset_password p, #simplr-reg , .page-id-239 form p{
-	font-family: 'myriad_set_promedium' !important;}
+	font-family: myriad_set_promedium !important;}
 	
 	.page-id-7116 form p #user_login [type="text"]{border:1px solid #666666 !important; box-shadow:none !important;}
 .page-id-239 .avia_ajax_form .select{ border:1px solid #666666 !important; box-shadow:none !important;}
@@ -808,17 +808,21 @@ input[type="submit"], #submit, .button {
 /* .post-entry-12342 */
 #top .post-entry-12342 fieldset{padding:0px !important}
 #top .post-entry-12342 label{
-	width: 100% !important;font-size:17px !important; font-weight:normal !important;margin-bottom:7px;	
+	width: 100% !important;
+	font-size:14px !important; 
+	font-weight:normal !important;
+	margin-bottom:7px;	
 	font-family: 'myriad_set_promedium';
-	color:#D7D8DA;	
+	color:#666666;	
 }
 #top .post-entry-12342 .avia_ajax_form .text_input, 
 #top .post-entry-12342  .avia_ajax_form .select,
 #top .post-entry-12342 .avia_ajax_form .text_area{
 	width:90%;
 	padding:6px;
+	font-family: 'myriad_set_promedium';
 	background-color:#F3F3F4 !important;
-	border: 2px solid #ccc !important;
+	border: 1px solid #666666 !important;
 	
 }
 #top .post-entry-12342 .avia_ajax_form .text_area{
