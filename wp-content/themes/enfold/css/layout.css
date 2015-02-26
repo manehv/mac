@@ -639,7 +639,7 @@ top: 15px;
 #top #searchform br{display:none;}
 /*#top #s{width:100px !important; position: relative; padding:10px 10px 11px 5px;  z-index: 1; margin:0; box-shadow: none;border-radius: 20px;
 border: 1px solid rgba(255,255,255,0.2); text-align: right}*/
-*#top #s{width:150px !important; top: 48px; left:-15px; position: relative; padding:10px 10px 11px 5px;  z-index: 1; margin:0; box-shadow: none;border-radius: 20px;
+*#top #s{width:150px !important; top: 48px; left:-10px; position: relative; padding:10px 10px 11px 5px;  z-index: 1; margin:0; box-shadow: none; border-radius: 5px 5px 0px 0px !important;
 border: 1px solid rgba(255,255,255,0.2); text-align: right}/*AJUSTE POSICION Y ESTILO FORM SEARCH*/
 .header_color .avia-tt{
     background-color:transparent !important; /*ESTILO COLOR WIDGET SEARCH*/
@@ -657,7 +657,7 @@ min-width: 40px;
 border-radius: 20px;
     background-color: #777777;
 }
-#top #searchsubmit {
+/*#top #searchsubmit {
    width: 40px;
 height: 39px;
 line-height: 0px;
@@ -670,7 +670,22 @@ margin-left: 93px;
 min-width: 40px;
 border-radius: 5px;
 background-color: #777;
-}
+} ESTILO ORIGINAL*/
+
+#top #searchsubmit {
+width: 150px;
+height: 20px;
+line-height: 0px;
+padding: 0px;
+position: absolute;
+margin-top: 87px;
+margin-bottom: auto;
+z-index: 2;
+margin-left: -10px;
+border-radius: 0px 0px 5px 5px;
+background-color: #777;
+} /*CAMBIO DE POSICION Y ESTILO DEL SEARCH*/
+
 .avia_mobile #top #searchsubmit, .avia_mobile .ajax_load{
 height: 41px;
 }
