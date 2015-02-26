@@ -43,7 +43,7 @@ Si no obtuviste los resultados esperados, prueba una nueva búsqueda con diferen
 
 [/av_one_half]")?> 
 
-<div style="width:170px; float: right; margin-right: 60% ;margin-top:-150px; z-index:8000"> 
+<div style="width:170px; float: right; margin-right: 40% ;margin-top:-150px; z-index:8000"> 
 <?php
 get_search_form();
 ?>
