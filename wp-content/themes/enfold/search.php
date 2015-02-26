@@ -37,12 +37,17 @@ Si no obtuviste los resultados esperados, prueba una nueva búsqueda con diferen
 [/av_textblock]
 [/av_one_third]
 
-")?> <?php
+")?> 
+    <div style=' width: 300px;
+    margin: auto;
+    height: auto;'>
+    <?php
 /*echo "<h4>".__('New Search','avia_framework')."</h4>";*/
 
 get_search_form();
 /*echo "<span class='author-extra-border'></span>";*/
 ?>
+        </div>
 </section>
 </div>
 <div style="min-height:250px">
