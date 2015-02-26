@@ -23,7 +23,7 @@ wc_print_notices(); ?>
 
 <?php wc_get_template( 'myaccount/my-orders.php', array( 'order_count' => $order_count ) ); ?>
 
-<div class="avia-button" style="color:#ffffff;background-color:#3D89CC;margin-bottom:20px"><a href="/" style="color:#ffffff"><?php echo __("Ir a la tienda") ?></a></div>
+<div class="avia-button" style="color:#ffffff;background-color:#3D89CC;margin-bottom:20px"><a href="/comprar/" style="color:#ffffff"><?php echo __("Ir a la tienda") ?></a></div>
 
 
 <?php wc_get_template( 'myaccount/my-address.php' ); ?>

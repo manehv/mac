@@ -18,7 +18,7 @@ msgstr ""
 "Project-Id-Version: WooCommerce\n"
 "Report-Msgid-Bugs-To: https://github.com/woothemes/woocommerce/issues\n"
 "POT-Creation-Date: 2014-08-21 16:05:26+00:00\n"
-"PO-Revision-Date: 2015-02-23 15:54-0500\n"
+"PO-Revision-Date: 2015-02-25 18:43-0500\n"
 "Last-Translator: 8manos i18n <i18n@8manos.com>\n"
 "Language-Team: Spanish (Colombia) (http://www.transifex.com/projects/p/"
 "woocommerce/language/es_CO/)\n"
@@ -5418,7 +5418,7 @@ msgstr "Debes haber iniciado sesión para descargar archivos."
 #: templates/global/form-login.php:35 templates/myaccount/form-login.php:27
 #: templates/myaccount/form-login.php:46
 msgid "Login"
-msgstr "Ingresar a Mi Cuenta"
+msgstr "Ingresar a mi cuenta"
 
 #: includes/class-wc-download-handler.php:80
 msgid "Log in to Download Files"
