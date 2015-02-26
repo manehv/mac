@@ -12,7 +12,7 @@ echo avia_title(array('title' => $results ));
 <main class='content template-search <?php avia_layout_class( 'content' ); ?> units' <?php avia_markup_helper(array('context' => 'content'));?>>
 <div class='page-heading-container clearfix'>
 <section class="search_form_field">
-<?php echo do_shortcode("[av_hr class='invisible' height='100' shadow='no-shadow' position='center']
+<?php echo do_shortcode("[av_hr class='invisible' height='60' shadow='no-shadow' position='center']
 [av_one_third first]
 [av_textblock]
 <b>
@@ -26,7 +26,7 @@ echo avia_title(array('title' => $results ));
 [/av_textblock]
 [/av_one_fifth]
 [av_one_third]
-[av_hr class='invisible' height='0' shadow='no-shadow' position='center']
+
 [av_textblock]
 Si no obtuviste los resultados esperados, prueba una nueva búsqueda con diferentes términos.
 [/av_textblock]
