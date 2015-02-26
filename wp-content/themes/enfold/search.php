@@ -18,7 +18,7 @@ echo avia_title(array('title' => $results ));
 [av_one_third first]
 [av_textblock]
 <b>
-<p style='font-size: 45px; text-align: right; font-weight: 900; color: #5d5d5d;  line-height: 50px'>Resultados de tu búsqueda</p>
+<p style='font-size: 45px; text-align: right; font-weight: 900; color: #717171;  line-height: 50px'>Resultados de tu búsqueda</p>
 </b>
 [/av_textblock]
 [/av_one_third]
