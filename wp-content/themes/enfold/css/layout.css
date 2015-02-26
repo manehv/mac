@@ -745,13 +745,7 @@ padding: 10px 16px;
 border-bottom-style: dashed;
 border-bottom-width: 1px;
 clear: both;
-overflow-y: scroll;
-width: 150px;
-background-color: #EAEAEA !important;
-margin: 14px 6px;
-overflow-x: hidden;
-border-radius: 0px 0px 5px 5px;
-height: 150px;
+height: auto;
 }
 
 #top div .ajax_search_entry.with_image .ajax_search_image{
