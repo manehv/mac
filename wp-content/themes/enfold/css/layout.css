@@ -723,8 +723,8 @@ bottom:0;
 #top #searchform .ajax_search_response{
     line-height: 1.4em;
     font-size: 12px;
-    margin: 10px 6px;
-    background-color: #EAEAEA;
+    /*margin: 10px 6px;
+    background-color: #EAEAEA;*/
     overflow-y: scroll;
     height: 200px;
 
@@ -734,7 +734,7 @@ bottom:0;
 
 .ajax_search_response h4{
 padding:20px 16px 2px 16px;
-font-size: 14px;
+font-size: 12px;
 margin:0;
 }
 
@@ -747,10 +747,11 @@ border:none;
 display: block;
 text-decoration: none;
 line-height: 1.4em;
-font-size: 12px;
+font-size: 10px;
 height: auto;
 padding: 10px 16px;
 border-bottom-style: dashed;
+border-color: #ddd;
 border-bottom-width: 1px;
 clear: both;
 height: auto;
