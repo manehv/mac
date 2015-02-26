@@ -41,10 +41,9 @@ Si no obtuviste los resultados esperados, prueba una nueva búsqueda con diferen
 
 [av_one_half first]
 
-[/av_one_half]
-[av_hr class='invisible' height='-250' shadow='no-shadow' position='center']")?> 
+[/av_one_half]")?> 
 
-<div style="width:170px; float: right; margin-right: 200px;"> 
+<div style="width:170px; float: right; margin-right: 200px;margin-top:-150px; z-index:8000"> 
 <?php
 get_search_form();
 ?>
@@ -74,18 +73,7 @@ get_sidebar();
 ?>
 </div><!--end container-->
 </div><!-- close default .container_wrap element -->
-<div style='width:960px; margin:auto; display: inline-block'>
-<?php echo do_shortcode("[av_three_fourth first][av_textblock][contact-form-7 id='4122' title='suscribe'][/av_textblock][/av_three_fourth]"); ?>
-<?php echo do_shortcode("[av_one_fourth]
-[av_hr class='invisible' height='45' shadow='shadow' position='center']
-[av_font_icon icon='ue8f5' font='entypo-fontello' style='' caption='' link='manually,https://www.facebook.com/maccentercolombia' linktarget='_blank' color='#000000' size='19px' position='left'][/av_font_icon]
-[av_font_icon icon='ue8bd' font='entypo-fontello' style='' caption='' link='' linktarget='_blank' color='#f7f7f7' size='40px' position='left'][/av_font_icon]
-[av_font_icon icon='ue8f1' font='entypo-fontello' style='' caption='' link='manually,https://twitter.com/MacCenter' linktarget='_blank' color='#000000' size='19px' position='left'][/av_font_icon]
-[av_font_icon icon='ue8bd' font='entypo-fontello' style='' caption='' link='' linktarget='_blank' color='#f7f7f7' size='40px' position='left'][/av_font_icon]
-[av_font_icon icon='ue909' font='entypo-fontello' style='' caption='' link='manually,http://instagram.com/maccenter' linktarget='_blank' color='#000000' size='19px' position='left'][/av_font_icon]
-[av_font_icon icon='ue8bd' font='entypo-fontello' style='' caption='' link='' linktarget='_blank' color='#f7f7f7' size='40px' position='left'][/av_font_icon]
-[av_font_icon icon='ue921' font='entypo-fontello' style='' caption='' link='manually,https://www.youtube.com/user/MacCenterColombia' linktarget='_blank' color='#000000' size='17px' position='left'][/av_font_icon]
-[/av_one_fourth]"); ?>
-</div>
+
+-->
 <?php echo do_shortcode("[av_hr class='full' height='50' shadow='no-shadow' position='center']"); ?>
 <?php get_footer(); ?>
