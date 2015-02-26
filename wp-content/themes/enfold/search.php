@@ -39,12 +39,12 @@ Si no obtuviste los resultados esperados, prueba una nueva búsqueda con diferen
 [av_hr class='invisible' height='50' shadow='no-shadow' position='center']
 [av_hr class='default' height='50' shadow='no-shadow' position='center']
 ")?> 
-    
+ <div style="width:170px; margin:auto"  > 
 <?php
 get_search_form();
 
 ?>
-       
+  </div>     
 </section>
 </div>
 <div style="min-height:250px">
