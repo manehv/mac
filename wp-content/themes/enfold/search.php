@@ -15,15 +15,15 @@ echo avia_title(array('title' => $results ));
 <?php echo do_shortcode("[av_hr class='invisible' height='100' shadow='no-shadow' position='center']
 
 [av_one_third first]
-
 [av_textblock]
 <b>
 <p style='font-size: 45px; text-align: right; font-weight: 900; color: #5d5d5d;  line-height: 50px'>Resultados de tu búsqueda</p>
 
 </b>
 [/av_textblock]
+[/av_one_third]
 
-[/av_one_third][av_one_fifth]
+[av_one_fifth]
 [av_textblock ]
 <div style='border-left: 2px solid #ccc; width:3px; height:150px; margin:auto'></div>
 [/av_textblock]
@@ -36,10 +36,15 @@ echo avia_title(array('title' => $results ));
 Si no obtuviste los resultados esperados, prueba una nueva búsqueda con diferentes términos.
 [/av_textblock]
 [/av_one_third]
-[av_hr class='invisible' height='50' shadow='no-shadow' position='center']
 
-")?> 
- <div style="width:170px; margin:auto"  > 
+[av_hr class='invisible' height='-50' shadow='no-shadow' position='center']
+
+[av_one_half first]
+
+[av_hr class='invisible' height='-50' shadow='no-shadow' position='center']
+
+[/av_one_half]")?> 
+ <div style="width:170px; float: left"  > 
 <?php
 get_search_form();
 
