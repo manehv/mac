@@ -8,7 +8,6 @@ $results = avia_which_archive();
 echo avia_title(array('title' => $results ));
 ?>
 
-<div style="background-color:red !important;">
 <div class='container_wrap container_wrap_first main_color <?php avia_layout_class( 'main' ); ?>'>
 <div class='container'>
 <main class='content template-search <?php avia_layout_class( 'content' ); ?> units' <?php avia_markup_helper(array('context' => 'content'));?>>
@@ -66,6 +65,6 @@ get_sidebar();
 ?>
 </div><!--end container-->
 </div><!-- close default .container_wrap element -->
-</div>
+
 <?php echo do_shortcode("[av_hr class='full' height='50' shadow='no-shadow' position='center']"); ?>
 <?php get_footer(); ?>
