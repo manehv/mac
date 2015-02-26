@@ -42,7 +42,7 @@ Si no obtuviste los resultados esperados, prueba una nueva búsqueda con diferen
 [av_one_half first]
 
 [/av_one_half]")?> 
-<?php echo do_shordcode("[av_hr class='invisible' height='-50' shadow='no-shadow' position='center']")?>
+<?php echo do_shortcode("[av_hr class='invisible' height='-50' shadow='no-shadow' position='center']")?>
 <div style="width:170px; float: left"> 
 <?php
 get_search_form();
