@@ -34,17 +34,16 @@ echo avia_title(array('title' => $results ));
 
 [av_textblock]
 Si no obtuviste los resultados esperados, prueba una nueva búsqueda con diferentes términos.
-[/av_textblock]
-[/av_one_third]
-[av_hr class='invisible' height='50' shadow='no-shadow' position='center']
-[av_hr class='default' height='50' shadow='no-shadow' position='center']
-")?> 
- <div style="width:170px; margin:auto"  > 
-<?php
+[/av_textblock]")?>
+    <?php
 get_search_form();
 
 ?>
-  </div>     
+<?php echo do_shortcode("[/av_one_third]
+[av_hr class='invisible' height='50' shadow='no-shadow' position='center']
+[av_hr class='default' height='50' shadow='no-shadow' position='center']
+")?> 
+      
 </section>
 </div>
 <div style="min-height:250px">
