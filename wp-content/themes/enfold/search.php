@@ -18,7 +18,7 @@ echo avia_title(array('title' => $results ));
 [av_one_third first]
 [av_textblock]
 <b><b>
-<p style='font-size: 55px; text-align:right; font-weight: 800; color: #717171;  line-height: 50px'>Resultados de tu búsqueda</p>
+<p style='font-size: 45px; text-align:right; font-weight: 800; color: #717171;  line-height: 50px'>Resultados de tu búsqueda</p>
 </b></b>
 [/av_textblock]
 [/av_one_third]
@@ -38,7 +38,7 @@ Si no obtuviste los resultados esperados, prueba una nueva búsqueda con diferen
 
 <div style="width:170px; float: right; margin-right: 27% ;margin-top:-160px; z-index:8000"> 
 <?php
-get_search_form(searchformBuscar);
+get_search_form('Buscar');
 ?>
 </div>     
 </section>
