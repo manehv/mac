@@ -34,9 +34,9 @@ echo avia_title(array('title' => $results ));
 
 [av_textblock]
 Si no obtuviste los resultados esperados, prueba una nueva búsqueda con diferentes términos.
-<?php
+
 get_search_form();
-?>  
+
 [/av_textblock]
 
 [/av_one_third]
