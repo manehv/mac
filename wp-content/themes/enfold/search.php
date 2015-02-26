@@ -43,7 +43,7 @@ Si no obtuviste los resultados esperados, prueba una nueva búsqueda con diferen
 
 [/av_one_half]")?> 
 
-<div style="width:170px; float: right; margin-right: 200px;margin-top:-150px; z-index:8000"> 
+<div style="width:170px; float: right; margin-right: 60% ;margin-top:-150px; z-index:8000"> 
 <?php
 get_search_form();
 ?>
@@ -74,6 +74,5 @@ get_sidebar();
 </div><!--end container-->
 </div><!-- close default .container_wrap element -->
 
--->
 <?php echo do_shortcode("[av_hr class='full' height='50' shadow='no-shadow' position='center']"); ?>
 <?php get_footer(); ?>
