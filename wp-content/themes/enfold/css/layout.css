@@ -639,7 +639,7 @@ top: 15px;
 #top #searchform br{display:none;}
 /*#top #s{width:100px !important; position: relative; padding:10px 10px 11px 5px;  z-index: 1; margin:0; box-shadow: none;border-radius: 20px;
 border: 1px solid rgba(255,255,255,0.2); text-align: right}*/
-*#top #s{width:150px !important; top: 48px; left:-10px; position: relative; padding:10px 10px 11px 5px;  z-index: 1; margin:0; box-shadow: none; border-radius: 5px 5px 0px 0px !important;
+*#top #s{width:150px !important; top: 0px; left:0px; position: relative; padding:10px 10px 11px 5px;  z-index: 1; margin:0; box-shadow: none; border-radius: 5px 5px 0px 0px !important;
 border: 1px solid rgba(255,255,255,0.2); text-align: right}/*AJUSTE POSICION Y ESTILO FORM SEARCH*/
 .header_color .avia-tt{
     background-color:transparent !important; /*ESTILO COLOR WIDGET SEARCH*/
@@ -678,10 +678,10 @@ height: 20px;
 line-height: 0px;
 padding: 0px;
 position: absolute;
-margin-top: 87px;
+margin-top: 38px;
 margin-bottom: auto;
 z-index: 2;
-margin-left: -10px;
+margin-left: 0px;
 border-radius: 0px 0px 5px 5px;
 background-color: #777;
 } /*CAMBIO DE POSICION Y ESTILO DEL SEARCH*/
