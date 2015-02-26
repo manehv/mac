@@ -50,7 +50,7 @@ get_search_form();
 </div>     
 </section>
 </div>
-<div style="min-height:250px">
+<div style="min-height:250px;float: right; margin-right: 200px;">
 <?php
 if(!empty($_GET['s']))
 {
