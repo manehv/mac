@@ -641,6 +641,9 @@ top: 15px;
 border: 1px solid rgba(255,255,255,0.2); text-align: right}*/
 *#top #s{width:150px !important; top: 48px; left:-15px; position: relative; padding:10px 10px 11px 5px;  z-index: 1; margin:0; box-shadow: none;border-radius: 20px;
 border: 1px solid rgba(255,255,255,0.2); text-align: right}/*AJUSTE POSICION Y ESTILO FORM SEARCH*/
+.header_color .avia-tt{
+    background-color:transparent !important; /*ESTILO COLOR WIDGET SEARCH*/
+}
 .ajax_load{
 width: 40px;
 height: 39px;
