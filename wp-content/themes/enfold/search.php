@@ -35,19 +35,15 @@ echo avia_title(array('title' => $results ));
 [av_textblock]
 Si no obtuviste los resultados esperados, prueba una nueva búsqueda con diferentes términos.
 [/av_textblock]
+<?php
+get_search_form();
+?>
 [/av_one_third]
 
 ")?> 
-    <div style=' width: 300px;
-    margin: auto;
-    height: auto;'>
-    <?php
-/*echo "<h4>".__('New Search','avia_framework')."</h4>";*/
+    
 
-get_search_form();
-/*echo "<span class='author-extra-border'></span>";*/
-?>
-        </div>
+       
 </section>
 </div>
 <div style="min-height:250px">
