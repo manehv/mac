@@ -6,7 +6,9 @@
  * @package 	WooCommerce/Templates
  * @version     2.1.0	 
  */
-
+// Explicitly moved to login page
+wp_redirect( '/login/');
+exit;
 
 get_header();
 if ( ! defined( 'ABSPATH' ) ) {
