@@ -35,15 +35,15 @@ echo avia_title(array('title' => $results ));
 [av_textblock]
 Si no obtuviste los resultados esperados, prueba una nueva búsqueda con diferentes términos.
 [/av_textblock]
-<?php
-get_search_form();
-?>
+
 [/av_one_third]
 
 ")?> 
     
-
-       
+<?php
+get_search_form();
+?>   
+      
 </section>
 </div>
 <div style="min-height:250px">
