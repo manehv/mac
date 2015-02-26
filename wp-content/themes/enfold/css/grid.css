@@ -44,7 +44,13 @@ html.responsive {
   float: left;
   display: inline;
   margin-left: 50px;
-  position: relative;
+	/* This is commented specifically for footer is causing issue with z-index 
+	 As when notification is shown at bottom then due to position relative its coming above notification
+	 this has nothing to do with z-index its position relative which is causing this.
+	 DO NOT BELOW REMOVE COMMENTS
+	*/
+ /* position: relative; */
+ 
   z-index: 1;
   min-height: 1px;
 }
