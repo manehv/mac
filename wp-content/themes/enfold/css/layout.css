@@ -648,14 +648,13 @@ border: 1px solid rgba(255,255,255,0.2); text-align: right}*/
 *#top #s{width:150px !important; top: 0px; left:0px; position: relative; padding:10px 10px 11px 5px;  z-index: 1; margin:0; box-shadow: none; border-radius: 5px 5px 0px 0px !important;
 border: 1px solid rgba(255,255,255,0.2); text-align: right}/*AJUSTE POSICION Y ESTILO FORM SEARCH*/
 .header_color .avia-tt{
-    /*background-color:transparent !important; /*ESTILO COLOR WIDGET SEARCH*/
-     background-image: url("http://mc.arbolnaranja.com/wp-content/uploads/2015/02/BKS-011.png") !important;
-background-repeat: repeat-x;
-height: 148px;
-width: 162px;
-border-radius: 0px 0px 5px 5px;
-background-position: center 50px;
-background-color: rgba(255, 255, 255, 0) !important;
+    background-image: url("http://mc.arbolnaranja.com/wp-content/uploads/2015/02/BKS-011.png") !important;
+    background-repeat: repeat-x;
+    height: 149px;
+    width: 162px;
+    border-radius: 0px 0px 5px 5px;
+    background-position: center 52px;
+    background-color: rgba(255, 255, 255, 0) !important;
 }
 .ajax_load{
 width: 40px;
