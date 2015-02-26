@@ -12,15 +12,32 @@ echo avia_title(array('title' => $results ));
 <main class='content template-search <?php avia_layout_class( 'content' ); ?> units' <?php avia_markup_helper(array('context' => 'content'));?>>
 <div class='page-heading-container clearfix'>
 <section class="search_form_field">
-<?php echo do_shortcode("[av_heading tag='h1' padding='10' heading=' Resultados de tu busqueda' color='' style='blockquote modern-quote' custom_font='' size='' subheading_active='' subheading_size='15'][/av_heading]")?> <?php
-/*echo "<h4>".__('New Search','avia_framework')."</h4>";*/
-echo "<p>".__('Si no obtuviste los resultados esperados, prueba una nueva búsqueda con diferentes términos','avia_framework')."</p>";
-get_search_form();
-/*echo "<span class='author-extra-border'></span>";*/
-?>
-</section>
-</div>
-<div style="min-height:250px">
+<?php echo do_shortcode("[av_hr class='invisible' height='100' shadow='no-shadow' position='center']
+
+[av_one_third first]
+
+[av_textblock]
+<b>
+<p style='font-size: 45px; text-align: right; font-weight: 900; color: #5d5d5d;  line-height: 50px'>Resultados de tu búsqueda</p>
+
+</b>
+[/av_textblock]
+
+[/av_one_third][av_one_fifth]
+[av_textblock ]
+<div style='border-left: 2px solid #ccc; width:3px; height:150px; margin:auto'></div>
+[/av_textblock]
+[/av_one_fifth]
+
+[av_one_third]
+[av_hr class='invisible' height='50' shadow='no-shadow' position='center']
+
+[av_textblock]
+Si no obtuviste los resultados esperados, prueba una nueva búsqueda con diferentes términos.
+[/av_textblock]
+[/av_one_third]
+
+")?> 
 <?php
 if(!empty($_GET['s']))
 {
