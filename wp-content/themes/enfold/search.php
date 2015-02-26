@@ -42,15 +42,15 @@ Si no obtuviste los resultados esperados, prueba una nueva búsqueda con diferen
 [av_one_half first]
 
 [/av_one_half]")?> 
-<?php echo do_shortcode("[av_hr class='invisible' height='-150' shadow='no-shadow' position='center']")?>
-<div style="width:170px; float: left"> 
+
+<div style="width:700px; float: right; margin-right: 200px;"> 
 <?php
 get_search_form();
 ?>
 </div>     
 </section>
 </div>
-<div style="min-height:250px;float: right; margin-right: 200px;">
+<div style="min-height:50px;">
 <?php
 if(!empty($_GET['s']))
 {
