@@ -796,12 +796,12 @@ font-size: 15px;
 
 .ajax_search_image img{
 display:block; border:none; max-width: 100%;
-min-height:32px;
-min-width:32px;
+min-height:20px;
+min-width:20px;
 }
 
 .ajax_search_excerpt {
-font-size: 12px;
+font-size: 10px;
 line-height: 1.4em;
 display: block;
 margin-top: 3px;
