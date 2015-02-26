@@ -37,7 +37,15 @@ Si no obtuviste los resultados esperados, prueba una nueva búsqueda con diferen
 [/av_textblock]
 [/av_one_third]
 
-")?> 
+")?> <?php
+/*echo "<h4>".__('New Search','avia_framework')."</h4>";*/
+echo "<p>".__('Si no obtuviste los resultados esperados, prueba una nueva búsqueda con diferentes términos','avia_framework')."</p>";
+get_search_form();
+/*echo "<span class='author-extra-border'></span>";*/
+?>
+</section>
+</div>
+<div style="min-height:250px">
 <?php
 if(!empty($_GET['s']))
 {
