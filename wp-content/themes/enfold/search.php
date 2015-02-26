@@ -39,7 +39,7 @@ Si no obtuviste los resultados esperados, prueba una nueva búsqueda con diferen
 
 ")?> <?php
 /*echo "<h4>".__('New Search','avia_framework')."</h4>";*/
-echo "<p>".__('Si no obtuviste los resultados esperados, prueba una nueva búsqueda con diferentes términos','avia_framework')."</p>";
+
 get_search_form();
 /*echo "<span class='author-extra-border'></span>";*/
 ?>
