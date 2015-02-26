@@ -41,7 +41,8 @@ Si no obtuviste los resultados esperados, prueba una nueva búsqueda con diferen
 
 [av_one_half first]
 
-[/av_one_half]")?> 
+[/av_one_half]
+[av_hr class='invisible' height='-150' shadow='no-shadow' position='center']")?> 
 
 <div style="width:170px; float: right; margin-right: 200px;"> 
 <?php
