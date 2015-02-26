@@ -43,7 +43,7 @@ Si no obtuviste los resultados esperados, prueba una nueva búsqueda con diferen
 
 [/av_one_half]")?> 
 
-<div style="width:700px; float: right; margin-right: 200px;"> 
+<div style="width:170px; float: right; margin-right: 200px;"> 
 <?php
 get_search_form();
 ?>
@@ -73,7 +73,7 @@ get_sidebar();
 ?>
 </div><!--end container-->
 </div><!-- close default .container_wrap element -->
-<div style='width:960px; margin:auto'>
+<div style='width:960px; margin:auto; display: inline-block'>
 <?php echo do_shortcode("[av_three_fourth first][av_textblock][contact-form-7 id='4122' title='suscribe'][/av_textblock][/av_three_fourth]"); ?>
 <?php echo do_shortcode("[av_one_fourth]
 [av_hr class='invisible' height='45' shadow='shadow' position='center']
