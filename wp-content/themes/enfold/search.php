@@ -68,12 +68,13 @@ get_sidebar();
 </div><!-- close default .container_wrap element -->
 </div>
 <?php echo do_shortcode("[av_hr class='full' height='50' shadow='no-shadow' position='center']"); ?>
-[av_hr class='invisible' height='20' shadow='no-shadow' position='center']
+<div style="width:960px; margin:auto"
+<?php echo do_shortcode("[av_hr class='invisible' height='20' shadow='no-shadow' position='center']
 
-<?php echo do_shortcode("[av_partner columns='3' heading='' size='featured_large' border='' type='slider' animation='slide' navigation='no' autoplay='false' interval='5']
+[av_partner columns='3' heading='' size='featured_large' border='' type='slider' animation='slide' navigation='no' autoplay='false' interval='5']
 [av_partner_logo id='11661' attachment='' hover='' link='manually,http://mc.arbolnaranja.com/mac/' linktitle='' link_target='']
 [av_partner_logo id='8550' attachment='' hover='' link='manually,http://mc.arbolnaranja.com/accesorios/' linktitle='' link_target='']
 [av_partner_logo id='13275' attachment='' hover='' link='manually,http://mc.arbolnaranja.com/training-room/' linktitle='' link_target='']
 [/av_partner]");?>
-
+</div>
 <?php get_footer(); ?>
