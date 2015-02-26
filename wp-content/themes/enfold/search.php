@@ -36,13 +36,14 @@ echo avia_title(array('title' => $results ));
 Si no obtuviste los resultados esperados, prueba una nueva búsqueda con diferentes términos.
 [/av_textblock]
 [/av_one_third]
-
+[av_hr class='invisible' height='50' shadow='no-shadow' position='center']
+[av_hr class='default' height='50' shadow='no-shadow' position='center']
 ")?> 
     
-    <?php
-
+<?php
+echo "<h4>".__('New Search','avia_framework')."</h4>";
 get_search_form();
-/*echo "<span class='author-extra-border'></span>";*/
+
 ?>
        
 </section>
