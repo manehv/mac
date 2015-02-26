@@ -38,7 +38,7 @@ Si no obtuviste los resultados esperados, prueba una nueva búsqueda con diferen
 
 <div style="width:170px; float: right; margin-right: 27% ;margin-top:-160px; z-index:8000"> 
 <?php
-get_search_form(searchform-buscar);
+get_search_form(searchformBuscar);
 ?>
 </div>     
 </section>
