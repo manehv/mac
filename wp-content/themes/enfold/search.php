@@ -68,7 +68,7 @@ get_sidebar();
 </div><!-- close default .container_wrap element -->
 </div>
 <?php echo do_shortcode("[av_hr class='full' height='50' shadow='no-shadow' position='center']"); ?>
-<div style="width:960px; margin:auto"
+<div style="width:960px; margin:auto">
 <?php echo do_shortcode("[av_hr class='invisible' height='20' shadow='no-shadow' position='center']
 
 [av_partner columns='3' heading='' size='featured_large' border='' type='slider' animation='slide' navigation='no' autoplay='false' interval='5']
