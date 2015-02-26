@@ -732,17 +732,22 @@ border:none;
 }
 
 #top div .ajax_search_entry{
-display:block;
+display: block;
 text-decoration: none;
 line-height: 1.4em;
 font-size: 12px;
-height:auto;
-padding:10px 16px;
+height: auto;
+padding: 10px 16px;
 border-bottom-style: dashed;
 border-bottom-width: 1px;
-clear:both;
-overflow: hidden;
-width:150px;
+clear: both;
+overflow-y: scroll;
+width: 150px;
+background-color: #EAEAEA !important;
+margin: 14px 6px;
+overflow-x: hidden;
+border-radius: 0px 0px 5px 5px;
+height: 150px;
 }
 
 #top div .ajax_search_entry.with_image .ajax_search_image{
