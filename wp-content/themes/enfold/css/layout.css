@@ -28,7 +28,14 @@
     background: linear-gradient(to bottom, #B5BDC8 0%,#828C95 0%,#28343B 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#b5bdc8", endColorstr="#28343b",GradientType=0 );
 }
+/* NUEVO SEARCH FORM*/
+#top #searchformBuscar{
+    margin: 0px;
+    padding: 0px;
+    background-color:red;
+}
 
+/* FIN NUEVO SEARCH*/
 .main_color b{
    color:#000000 !important;
 }
