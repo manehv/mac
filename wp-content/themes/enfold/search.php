@@ -26,7 +26,7 @@ echo avia_title(array('title' => $results ));
 [/av_textblock]
 [/av_one_fifth]
 [av_one_third]
-[av_hr class='invisible' height='20' shadow='no-shadow' position='center']
+[av_hr class='invisible' height='0' shadow='no-shadow' position='center']
 [av_textblock]
 Si no obtuviste los resultados esperados, prueba una nueva búsqueda con diferentes términos.
 [/av_textblock]
