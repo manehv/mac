@@ -37,7 +37,7 @@ Si no obtuviste los resultados esperados, prueba una nueva búsqueda con diferen
 [/av_textblock]
 
 [/av_one_third]
-
+[av_hr class='default' height='50' shadow='no-shadow' position='center']
 ")?> 
     
 <?php
