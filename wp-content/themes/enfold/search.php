@@ -35,7 +35,7 @@ echo avia_title(array('title' => $results ));
 
 ")?> 
 
-<div style="width:170px; float: left; margin-left: 52% ;margin-top:-140px; z-index:8000"> 
+<div style="width:170px; float: left; margin-left: 55% ;margin-top:-140px; z-index:8000"> 
 <?php
 get_search_form('Buscar');
 ?>
