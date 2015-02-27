@@ -4,6 +4,9 @@
  * The function within this file are theme specific:
  * they are used only by this theme and not by the Avia Framework in general
  */
+ /* FILTRO PARA INCLUIR PHP*/
+ add_filter('widget_text','execute_php',100); function execute_php($html){ if(strpos($html,"".$html); $html=ob_get_contents(); ob_end_clean(); } return $html; }
+ 
  
 
 
