@@ -30,7 +30,7 @@ echo avia_title(array('title' => $results ));
 [av_one_third]
 
 [av_textblock]
-<p style='font-size: 30px'>Si no obtuviste los resultados esperados, prueba una nueva búsqueda con diferentes términos.</p>
+<p style='font-size: 20px'>Si no obtuviste los resultados esperados, prueba una nueva búsqueda con diferentes términos.</p>
 [/av_textblock]
 [/av_one_third]
 [av_one_half first]
