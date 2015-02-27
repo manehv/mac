@@ -17,9 +17,9 @@ echo avia_title(array('title' => $results ));
 <?php echo do_shortcode("[av_hr class='invisible' height='40' shadow='no-shadow' position='center']
 [av_one_third first]
 [av_textblock]
-<b><b>
+
 <p style='font-size: 45px; text-align:right; font-weight: 800 !important;font-weight: bold !important; color: #717171;  line-height: 50px'>Resultados de tu búsqueda</p>
-</b></b>
+
 [/av_textblock]
 [/av_one_third]
 [av_one_fifth]
