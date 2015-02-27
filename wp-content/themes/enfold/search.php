@@ -7,7 +7,7 @@ get_header();
 $results = avia_which_archive();
 echo avia_title(array('title' => $results ));
 ?>
-
+<body style='background-color:#d7d7d7'>
 <div style='background-color:#d7d7d7 !important; width:100% !important; height: auto;'>
 <div class='container_wrap container_wrap_first main_color <?php avia_layout_class( 'main' ); ?>'>
 <div class='container'>
@@ -76,4 +76,5 @@ get_sidebar();
 [av_partner_logo id='13275' attachment='' hover='' link='manually,http://mc.arbolnaranja.com/training-room/' linktitle='' link_target='']
 [/av_partner]");?>
 </div>
+</body>
 <?php get_footer(); ?>
