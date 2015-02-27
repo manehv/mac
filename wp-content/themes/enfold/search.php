@@ -14,27 +14,26 @@ echo avia_title(array('title' => $results ));
 <main class='content template-search <?php avia_layout_class( 'content' ); ?> units' <?php avia_markup_helper(array('context' => 'content'));?>>
 <div class='page-heading-container clearfix'>
 <section class="search_form_field">
-<?php echo do_shortcode("[av_hr class='invisible' height='40' shadow='no-shadow' position='center']
-[av_one_third first]
-[av_textblock]
+<?php echo do_shortcode("[av_hr class='invisible' height='50' shadow='no-shadow' position='center']
 
-<p style='font-size: 45px; text-align:right; font-weight: 800 !important;font-weight: bold !important; color: #717171;  line-height: 50px'>Resultados de tu búsqueda</p>
-
-[/av_textblock]
-[/av_one_third]
-[av_one_fifth]
-[av_textblock ]
-<div style='border-left: 2px solid #ccc; width:3px; height:150px; margin:auto'></div>
-[/av_textblock]
-[/av_one_fifth]
-[av_one_third]
-
-[av_textblock]
-<p style='font-size: 20px'>Si no obtuviste los resultados esperados, prueba una nueva búsqueda con diferentes términos.</p>
-[/av_textblock]
-[/av_one_third]
 [av_one_half first]
-[/av_one_half]")?> 
+[av_textblock ]
+<p style='font-size: 45px; text-align: right; font-weight: 900; color: #5d5d5d;  line-height: 50px;padding-top:25px'<strong>Resultados de tu búsqueda</strong></p>
+
+
+[/av_textblock]
+[/av_one_half]
+
+[av_one_half]
+[av_hr class='invisible' height='50' shadow='no-shadow' position='center']
+
+[av_textblock ]
+<p style='padding-left:40px;font-size: 20px; border-left: solid 3px #666666; height: 100px; padding-top:25px'>Si no obtuviste los resultados esperados, prueba una nueva búsqueda con diferentes términos.</p>
+
+[/av_textblock]
+[/av_one_half]
+
+")?> 
 
 <div style="width:170px; float: right; margin-right: 27% ;margin-top:-160px; z-index:8000"> 
 <?php
