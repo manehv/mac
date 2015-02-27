@@ -14,7 +14,7 @@ echo avia_title(array('title' => $results ));
 <main class='content template-search <?php avia_layout_class( 'content' ); ?> units' <?php avia_markup_helper(array('context' => 'content'));?>>
 <div class='page-heading-container clearfix'>
 <section class="search_form_field">
-<?php echo do_shortcode("[av_hr class='invisible' height='50' shadow='no-shadow' position='center']
+<?php echo do_shortcode("[av_hr class='invisible' height='100' shadow='no-shadow' position='center']
 
 [av_one_half first]
 [av_textblock ]
