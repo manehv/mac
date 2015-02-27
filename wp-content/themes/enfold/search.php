@@ -28,7 +28,7 @@ echo avia_title(array('title' => $results ));
 [av_hr class='invisible' height='50' shadow='no-shadow' position='center']
 
 [av_textblock ]
-<p style='padding-left:40px;font-size: 20px; border-left: solid 3px #666666; height: 200px; padding-top:25px'>Si no obtuviste los resultados esperados, prueba una nueva búsqueda con diferentes términos.</p>
+<p style='padding-left:40px;font-size: 20px; border-left: solid 3px #666666; height: 250px; padding-top:25px'>Si no obtuviste los resultados esperados, prueba una nueva búsqueda con diferentes términos.</p>
 
 [/av_textblock]
 [/av_one_half]
