@@ -1,5 +1,7 @@
+
 <?php
 global $avia_config;
+
 /*
 * get_header is a basic wordpress function, used to retrieve the header.php file in your theme directory.
 */
@@ -17,7 +19,7 @@ echo avia_title(array('title' => $results ));
 
 [av_one_half first]
 [av_textblock ]
-<p style=' font-family: myriad_set_probold !important;font-size: 45px; text-align: right; font-weight: 900 !important; color: #5d5d5d;  line-height: 50px;padding-top:40px'><strong>Resultados de tu búsqueda</strong></p>
+<p style='font-size: 45px; text-align: right; font-weight: 900 !important; color: #5d5d5d;  line-height: 50px;padding-top:40px'><strong>Resultados de tu búsqueda</strong></p>
 
 
 [/av_textblock]
