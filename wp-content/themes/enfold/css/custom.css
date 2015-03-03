@@ -378,8 +378,11 @@ color:#fff !important;
 #simplr-form  .checkbox{width:50% !important;float:left;margin:-2px 0px -7px; top:37px;}
 #simplr-form  .checkbox label{ font-weight: unset !important;float: right; font-size: 10px !important;}
 #simplr-form  .checkbox input[type="checkbox"]{width:12px !important;margin-left:0px }
-.simplr-field, .option-field {
+.simplr-field {
    padding:0 14px 0 0;
+}
+.option-field{
+	padding: 0px 3px 0px 0px;
 }
 #simplr-form{margin-top:100px;}
 .page-id-10749 .template-page .entry-content-wrapper h1{
