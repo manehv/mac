@@ -19,7 +19,7 @@ echo avia_title(array('title' => $results ));
 
 [av_one_half first]
 [av_textblock ]
-<div style='font-family: myriad_set_probold !important;'>
+<div style=font-family: myriad_set_probold !important;>
 <p style='font-size: 45px; text-align: right; font-weight: 900 !important; color: #5d5d5d;  line-height: 50px;padding-top:40px'><strong>Resultados de tu búsqueda</strong></p>
 </div>[/av_textblock]
 [/av_one_half]
