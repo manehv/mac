@@ -638,7 +638,7 @@ input[type="submit"], #submit, .button {
 }
 .login .form-row input[type="text"] , input[type="password"]{background-color: #f8f8f8 !important;border-color: #e1e1e1;
     color: #919191 !important;}
-.login .form-row{padding:3px 14px 0 0 !important;}
+.login .form-row{padding: 3px 0px 0px 0px !important;}
 .login .form-row label , .lost_reset_password label{font-size:14px !important;margin-bottom:7px; font-weight:unset !important;color:#666666!important;}
 .login .form-row input[type="submit"], #submit{
 	border-radius: 0px;
