@@ -19,7 +19,7 @@ $class = av_icon_class('search');
 ?>
 
 
-<form action="<?php echo $search_params['form_action']; ?>" id="searchform" method="get" class="<?php echo $disable_ajax; ?>">
+<form action="<?php echo $search_params['form_action']; ?>" id="searchformBuscar" method="get" class="<?php echo $disable_ajax; ?>">
 
 	<div>
 	<div><?php echo "Que estas buscando?"; ?></div>

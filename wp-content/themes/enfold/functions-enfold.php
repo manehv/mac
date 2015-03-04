@@ -4,7 +4,7 @@
  * The function within this file are theme specific:
  * they are used only by this theme and not by the Avia Framework in general
  */
- 
+
 
 
 /* wrap embeds into a proportion containing div */

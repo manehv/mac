@@ -15,11 +15,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 <?php wc_print_notices(); ?>
 
 <form method="post" class="lost_reset_password">
-	<h2><?php _e( 'Forgot Password', 'woocommerce' ); ?></h2>
+	<h2>Recuperar contraseña</h2>
 	<hr/>
 	<?php if( 'lost_password' == $args['form'] ) : ?>
 
-        <p class='info'><?php echo apply_filters( 'woocommerce_lost_password_message', __( 'Lost your password? Please enter your username or email address. You will receive a link to create a new password via email.', 'woocommerce' ) ); ?></p>
+        <p class='info'><?php echo apply_filters( 'woocommerce_lost_password_message', __( '¿Perdiste tu contraseña? Por favor ingresa tu nombre de usuario o correo electrónico. Recibirás un enlace para recuperarla por correo electrónico.', 'woocommerce' ) ); ?></p>
 
         <p class="form-row form-row-first"><label for="user_login"><?php _e( 'Username or email', 'woocommerce' ); ?></label> <input class="input-text" type="text" name="user_login" id="user_login" /></p>
 
