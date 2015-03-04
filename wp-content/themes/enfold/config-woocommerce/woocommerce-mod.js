@@ -36,10 +36,12 @@ function update_cart_dropdown(event)
 		msg_success		= menu_cart.data('success'),
 		product 		= jQuery.extend({name:"Product", price:"", image:""}, avia_clicked_product);
 		
-		if(!empty.length)
+		if(!empty.length || 1 ) //By Passing condition as needs to show permanant widgets
 		{
 			menu_cart.addClass('visible_cart');
 		}
+		
+		
 		
 		if(typeof event != 'undefined')
 		{
@@ -90,7 +92,7 @@ function first_load_amount()
 		{
 			var new_total = jQuery('.cart_dropdown .dropdown_widget_cart:eq(0) .total .amount');
 			
-			if(new_total.length)
+			if(new_total.length || 1) // ByPassing condition as showing permanant cart widget
 			{
 				update_cart_dropdown();
 			}
