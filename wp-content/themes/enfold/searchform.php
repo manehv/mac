@@ -22,7 +22,7 @@ $class = av_icon_class('search');
 <form action="<?php echo $search_params['form_action']; ?>" id="searchform" method="get" class="<?php echo $disable_ajax; ?>">
 
 	<div>
-	<div><?php echo "Que estas buscando?"; ?></div>
+	<div><?php echo "¿Qué estas buscando?"; ?></div>
 		<input type="submit" value="Buscar" id="searchsubmit"  <?php echo "Búscar"; ?>" />
 		<input type="text" id="s" name="<?php echo $search_params['search_id']; ?>" value="<?php if(!empty($_GET['s'])) echo get_search_query(); ?>" placeholder='<?php echo $search_params['placeholder']; ?>' />
 		<?php 
