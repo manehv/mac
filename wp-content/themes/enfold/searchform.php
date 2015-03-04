@@ -6,7 +6,7 @@ global $avia_config;
 //allows you to modify the search parameters. for example bbpress search_id needs to be 'bbp_search' instead of 's'. you can also deactivate ajax search by setting ajax_disable to true
 $search_params = apply_filters('avf_frontend_search_form_param', array(
 	
-	'placeholder'  	=> __('?','avia_framework'),
+	'placeholder'  	=> __('','avia_framework'),
 	'search_id'	   	=> 's',
 	'form_action'	=> home_url( '/' ),
 	'ajax_disable'	=> false
