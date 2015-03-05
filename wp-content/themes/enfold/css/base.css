@@ -108,12 +108,13 @@ border-left-width: 1px;
 padding-left: 20px;
 
 margin-right: 1em;
-font-size: 10px;
+font-size: 11px;
 line-height: 1.5em;
 border-color: rgba(228, 228, 228, 1) !important;
 padding-bottom: 20px;
 padding-top: 20px;
 margin-bottom: 30px;
+margin-top: 20px;
 	}
 
 	blockquote small, blockquote cite, blockquote small a, blockquote cite a, blockquote a small, blockquote a cite{font-size: 12px;}
