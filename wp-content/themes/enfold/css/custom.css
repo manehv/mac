@@ -10,6 +10,16 @@
 #desc p {
 padding-left:30px;	
 }
+
+/*POSICION BOTTOM BNT CHAT*/
+.cx-chat-btn {
+    font-size: 16px;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease 0s;
+    z-index: 999999;
+    cursor: pointer;
+    bottom: 109px !important;
+}
 /* General Custom CSS */
 .clsTitleCon{background-color:#000000; height:110px; }
 .clsTitleCon img{margin-top:15px; }
