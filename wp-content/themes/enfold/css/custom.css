@@ -26,6 +26,19 @@ padding-left:30px;
     font-size: 16px;
     font-family: 'myriad_set_promedium' !important;
 }
+/* BTN enviar*/
+.cx-form-btn {
+    display: inline-block;
+    width: inherit;
+    border: medium none;
+    padding: 7px 27px !important;
+    background: none repeat scroll 0% 0% transparent;
+    border-radius: 2px !important;
+    cursor: pointer;
+}
+
+
+
 /*POSICION BOTTOM BNT CHAT*/
 .cx-chat-btn {
     font-size: 13px !important;
