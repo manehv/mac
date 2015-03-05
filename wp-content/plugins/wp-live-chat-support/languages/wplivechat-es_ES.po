@@ -1,0 +1,1168 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WP Live Chat Support v4.2.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-01-27 10:04-0300\n"
+"PO-Revision-Date: 2015-01-27 10:15-0300\n"
+"Last-Translator: Caribdis Web Design <caribdisweb@gmail.com>\n"
+"Language-Team: Caribdis Web Design <caribdisweb@gmail.com>\n"
+"Language: es_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Poedit 1.7.3\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;"
+"_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2\n"
+"X-Poedit-Basepath: ../\n"
+"X-Textdomain-Support: yes\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: ajax-pro.php:264 ajax.php:229
+msgid "Admin has closed and ended the chat"
+msgstr "El administrador ha cerrado y finalizado el chat"
+
+#: ajax-pro.php:299 ajax.php:253
+msgid "There is No Answer. Please Try Again Later"
+msgstr "No hay respuesta. Por favor, intente más tarde."
+
+#: functions-pro.php:23 functions-pro.php:101 functions.php:171
+msgid "User Data"
+msgstr "Datos de usuario"
+
+#: functions-pro.php:24 functions-pro.php:102 functions-pro.php:178
+#: functions-pro.php:582 wp-live-chat-support-pro.php:542
+#: wp-live-chat-support-pro.php:706 wp-live-chat-support-pro.php:745
+#: functions.php:172 functions.php:826 includes/settings_page.php:152
+#: wp-live-chat-support.php:386
+msgid "Name"
+msgstr "Nombre"
+
+#: functions-pro.php:25 functions-pro.php:103 functions-pro.php:178
+#: functions-pro.php:583 wp-live-chat-support-pro.php:543
+#: wp-live-chat-support-pro.php:707 wp-live-chat-support-pro.php:746
+#: functions.php:173 functions.php:827 wp-live-chat-support.php:387
+msgid "Email"
+msgstr "Correo electrónico"
+
+#: functions-pro.php:26 functions-pro.php:104 wp-live-chat-support-pro.php:544
+#: functions.php:174 functions.php:828
+msgid "URL"
+msgstr "URL"
+
+#: functions-pro.php:27 functions-pro.php:105 wp-live-chat-support-pro.php:545
+#: functions.php:175
+msgid "Status"
+msgstr "Estado"
+
+#: functions-pro.php:28 functions-pro.php:106 wp-live-chat-support-pro.php:546
+#: functions.php:176
+msgid "Action"
+msgstr "Acción"
+
+#: functions-pro.php:46
+msgid "Initiate Chat"
+msgstr "Iniciar chat"
+
+#: functions-pro.php:48
+msgid "You must be a chat agent to initiate chats"
+msgstr "Debe ser operador de chat para iniciar un chat"
+
+#: functions-pro.php:70
+msgid "No visitors on-line at the moment"
+msgstr "No hay visitantes en línea en este momento"
+
+#: functions-pro.php:112 functions.php:182
+msgid "No chat sessions available at the moment"
+msgstr "No hay sesiones de chat disponibles en este momento"
+
+#: functions-pro.php:132 functions.php:200
+msgid "Accept Chat"
+msgstr "Aceptar chat"
+
+#: functions-pro.php:135
+msgid "You must be a chat agent to answer chats"
+msgstr "Debe ser operador de chat para responder un chat"
+
+#: functions-pro.php:142 functions.php:205
+msgid "Open Chat Window"
+msgstr "Abrir ventana de chat"
+
+#: functions-pro.php:145
+msgid "Chat has been answered by another agent"
+msgstr "El chat ha sido respondido por otro operador"
+
+#: functions-pro.php:148
+msgid "Chat has been Accepted By Chat Agent "
+msgstr "El chat ha sido aceptado por el operador "
+
+#: functions-pro.php:177
+msgid "WP Live Chat Support - Offline Message from "
+msgstr "WP Live Chat Support - Mensaje offline de "
+
+#: functions-pro.php:178 functions-pro.php:584
+#: wp-live-chat-support-pro.php:747
+msgid "Message"
+msgstr "Mensaje"
+
+#: functions-pro.php:178
+msgid "Via WP Live Chat Support"
+msgstr "Vía WP Live Chat Support"
+
+#: functions-pro.php:226
+msgid "Alert: Someone wants to chat with you on "
+msgstr "Alerta: alguien quiere chatear con usted en "
+
+#: functions-pro.php:227
+msgid "Someone wants to chat with you on your website"
+msgstr "Alguien quiere chatear con usted en su sitio"
+
+#: functions-pro.php:227
+msgid "Log in"
+msgstr "Iniciar sesión"
+
+#: functions-pro.php:382 functions-pro.php:397
+msgid "Chat Agent"
+msgstr "Operador de chat"
+
+#: functions-pro.php:387
+msgid "Make this user a chat agent"
+msgstr "Hacer que este usuario sea operador de chat"
+
+#: functions-pro.php:401
+msgid "Your user role does not allow you to make yourself a chat agent."
+msgstr ""
+"Su perfil de usuario no le permite asignarse a sí mismo el estatus de "
+"operador de chat."
+
+#: functions-pro.php:402
+msgid "Please contact the administrator of this website to change this."
+msgstr "Por favor, contacte al administrador del sitio para cambiar esto."
+
+#: functions-pro.php:482
+msgid "Chat Agent Online"
+msgstr "operador de chat en línea"
+
+#: functions-pro.php:484 functions-pro.php:489
+msgid "Chat Agents Online"
+msgstr "operadores de chat en línea"
+
+#: functions-pro.php:581 wp-live-chat-support-pro.php:541 functions.php:825
+msgid "Date"
+msgstr "Fecha"
+
+#: functions-pro.php:598
+msgid "You have not received any offline messages."
+msgstr "No ha recibido ningún mensaje offline."
+
+#: includes/settings_page_pro.php:20 includes/settings_page.php:5
+msgid "WP Live Chat Support Settings"
+msgstr "Ajustes de WP Live Chat Support"
+
+#: includes/settings_page_pro.php:32 includes/settings_page.php:19
+msgid "General Settings"
+msgstr "Ajustes generales"
+
+#: includes/settings_page_pro.php:33 includes/settings_page.php:20
+msgid "Chat Box"
+msgstr "Recuadro del chat"
+
+#: includes/settings_page_pro.php:34 includes/settings_page_pro.php:241
+#: wp-live-chat-support-pro.php:1720 includes/settings_page.php:21
+#: includes/settings_page.php:258
+msgid "Offline Messages"
+msgstr "Mensajes offline"
+
+#: includes/settings_page_pro.php:35 includes/settings_page_pro.php:339
+#: includes/settings_page.php:22 includes/settings_page.php:304
+msgid "Styling"
+msgstr "Estilo"
+
+#: includes/settings_page_pro.php:36
+msgid "Chat Agents"
+msgstr "Operadores de chat"
+
+#: includes/settings_page_pro.php:39 includes/settings_page.php:26
+msgid "Main Settings"
+msgstr "Ajustes principales"
+
+#: includes/settings_page_pro.php:42 includes/settings_page.php:29
+msgid "Chat enabled"
+msgstr "Chat activado"
+
+#: includes/settings_page_pro.php:45 includes/settings_page.php:32
+msgid "Yes"
+msgstr "Sí"
+
+#: includes/settings_page_pro.php:46 includes/settings_page.php:33
+msgid "No"
+msgstr "No"
+
+#: includes/settings_page_pro.php:52 includes/settings_page.php:39
+msgid "Hide Chat"
+msgstr "Ocultar chat"
+
+#: includes/settings_page_pro.php:53 includes/settings_page.php:40
+msgid "Hides chat for 24hrs when user clicks X"
+msgstr "Oculta el chat por 24 hs cuando el usuario hace clic en la X"
+
+#: includes/settings_page_pro.php:61 includes/settings_page.php:56
+msgid "Require Name And Email"
+msgstr "Pedir Nombre y Correo electrónico"
+
+#: includes/settings_page_pro.php:62 includes/settings_page.php:57
+msgid ""
+"Users will have to enter their Name and Email Address when starting a chat"
+msgstr ""
+"Los usuarios tendrán que ingresar su nombre y dirección de correo "
+"electrónico para iniciar el chat"
+
+#: includes/settings_page_pro.php:70 includes/settings_page.php:65
+msgid "Input Field Replacement Text"
+msgstr "Texto de reemplazo para los campos anteriores"
+
+#: includes/settings_page_pro.php:71 includes/settings_page.php:66
+msgid "This is the text that will show in place of the Name And Email fields"
+msgstr ""
+"Este texto se mostrará en lugar de los campos Nombre y Dirección de correo "
+"electrónico"
+
+#: includes/settings_page_pro.php:79 includes/settings_page.php:74
+msgid "Use Logged In User Details"
+msgstr "Usar detalles de usuario conectado"
+
+#: includes/settings_page_pro.php:80 includes/settings_page.php:75
+msgid ""
+"A user's Name and Email Address will be used by default if they are logged "
+"in."
+msgstr ""
+"Se usarán por defecto el Nombre y la Dirección de correo electrónico de un "
+"usuario cuando haya iniciado sesión."
+
+#: includes/settings_page_pro.php:88 includes/settings_page.php:83
+msgid "Enable On Mobile Devices"
+msgstr "Activar en dispositivos móviles"
+
+#: includes/settings_page_pro.php:89 includes/settings_page.php:84
+msgid ""
+"Disabling this will mean that the Chat Box will not be displayed on mobile "
+"devices. (Smartphones and Tablets)"
+msgstr ""
+"Si desactiva esto el recuadro de chat no se mostrará en dispositivos "
+"móviles. (Smartphones y Tablets)"
+
+#: includes/settings_page_pro.php:97 includes/settings_page.php:92
+msgid "Include chat window on the following pages:"
+msgstr "Incluir la ventana del chat en las siguientes páginas:"
+
+#: includes/settings_page_pro.php:98 includes/settings_page.php:93
+msgid ""
+"Show the chat window on the following pages. Leave blank to show on all. "
+"(Use comma-separated Page ID's)"
+msgstr ""
+"Mostrar la ventana del chat en las siguientes páginas. Deje en blanco para "
+"mostrarla en todas. (Use IDs de página separadas por comas)"
+
+#: includes/settings_page_pro.php:102 includes/settings_page_pro.php:112
+msgid ""
+"Do not include and exclude pages at the same time. Please only use one or "
+"the other"
+msgstr ""
+"No incluya y excluya páginas al mismo tiempo. Por favor, sólo use una u otra "
+"opción"
+
+#: includes/settings_page_pro.php:107 includes/settings_page.php:108
+msgid "Exclude chat window on the following pages:"
+msgstr "Excluir la ventana del chat en las siguientes páginas:"
+
+#: includes/settings_page_pro.php:108 includes/settings_page.php:109
+msgid ""
+"Do not show the chat window on the following pages. Leave blank to show on "
+"all. (Use comma-separated Page ID's)"
+msgstr ""
+"No mostrar la ventana del chat en las siguientes páginas. Deje en blanco "
+"para mostrarla en todas. (Use IDs de página separadas por comas)"
+
+#: includes/settings_page_pro.php:122 includes/settings_page.php:127
+msgid "Chat Window Settings"
+msgstr "Ajustes de la ventana del chat"
+
+#: includes/settings_page_pro.php:125 includes/settings_page.php:130
+msgid "Chat box alignment"
+msgstr "Alineación del recuadro de chat"
+
+#: includes/settings_page_pro.php:128 includes/settings_page.php:133
+msgid "Bottom left"
+msgstr "Inferior izquierda"
+
+#: includes/settings_page_pro.php:129 includes/settings_page.php:134
+msgid "Bottom right"
+msgstr "Inferior derecha"
+
+#: includes/settings_page_pro.php:130 includes/settings_page.php:135
+msgid "Left"
+msgstr "Izquierda"
+
+#: includes/settings_page_pro.php:131 includes/settings_page.php:136
+msgid "Right"
+msgstr "Derecha"
+
+#: includes/settings_page_pro.php:137 includes/settings_page.php:142
+msgid "Auto Pop-up"
+msgstr "Ventana emergente automática"
+
+#: includes/settings_page_pro.php:141 includes/settings_page.php:146
+msgid ""
+"Expand the chat box automatically (prompts the user to enter their name and "
+"email address)."
+msgstr ""
+"Expandir el recuadro del chat automáticamente (insta al usuario a ingresar "
+"su nombre y dirección de correo electrónico)."
+
+#: includes/settings_page_pro.php:147
+msgid "Name "
+msgstr "Nombre "
+
+#: includes/settings_page_pro.php:161 includes/settings_page.php:168
+msgid "Picture"
+msgstr "Foto"
+
+#: includes/settings_page_pro.php:169 includes/settings_page.php:171
+#: includes/settings_page.php:187
+msgid "Upload Image"
+msgstr "Subir imagen"
+
+#: includes/settings_page_pro.php:171
+msgid "Remove Image"
+msgstr "Eliminar imagen"
+
+#: includes/settings_page_pro.php:172
+msgid "Recomended Size 40px x 40px"
+msgstr "Tamaño recomendado 40px x 40px"
+
+#: includes/settings_page_pro.php:178 includes/settings_page.php:184
+msgid "Logo"
+msgstr "Logo"
+
+#: includes/settings_page_pro.php:186
+msgid "Upload Logo"
+msgstr "Subir logo"
+
+#: includes/settings_page_pro.php:188
+msgid "Remove Logo"
+msgstr "Eliminar logo"
+
+#: includes/settings_page_pro.php:189
+msgid "Recomended Size 250px x 40px"
+msgstr "Tamaño recomendado 250px x 40px"
+
+#: includes/settings_page_pro.php:195 includes/settings_page.php:200
+msgid "Chat delay (seconds)"
+msgstr "Retardo del chat (en segundos)"
+
+#: includes/settings_page_pro.php:198
+msgid "how long it takes for your chat window to pop up"
+msgstr "cuánto demora en aparecer la ventana del chat)"
+
+#: includes/settings_page_pro.php:204 includes/settings_page.php:216
+msgid "Chat notifications"
+msgstr "Notificaciones de chat"
+
+#: includes/settings_page_pro.php:208 includes/settings_page.php:220
+msgid "Alert me via email as soon as someone wants to chat"
+msgstr ""
+"Alertarme vía correo electrónico tan pronto como alguien quiera chatear"
+
+#: includes/settings_page_pro.php:209
+msgid "(while online only)"
+msgstr " (sólo mientras está online)"
+
+#: includes/settings_page_pro.php:214 includes/settings_page.php:232
+msgid "Display name and avatar in chat"
+msgstr "Mostrar nombre y avatar en el chat"
+
+#: includes/settings_page_pro.php:220 includes/settings_page.php:238
+msgid "Display the agent and user name above each message in the chat window."
+msgstr ""
+"Mostrar el nombre del operador y del usuario arriba de cada mensaje en la "
+"ventana del chat."
+
+#: includes/settings_page_pro.php:225 includes/settings_page.php:243
+msgid "Only show the chat window to users that are logged in"
+msgstr "Sólo mostrar la ventana del chat a usuarios que han iniciado sesión"
+
+#: includes/settings_page_pro.php:233 includes/settings_page.php:251
+msgid ""
+"By checking this, only users that are logged in will be able to chat with "
+"you."
+msgstr ""
+"Al seleccionar esto, sólo los usuarios que han iniciado sesión podrán "
+"chatear con usted."
+
+#: includes/settings_page_pro.php:245 includes/settings_page.php:262
+msgid "Do not allow users to send offline messages"
+msgstr "No permitir a los usuarios enviar mensajes offline"
+
+#: includes/settings_page_pro.php:253 includes/settings_page.php:266
+msgid ""
+"The chat window will be hidden when it is offline. Users will not be able to "
+"send offline messages to you"
+msgstr ""
+"La ventana del chat se ocultará cuando esté offline. Los usuarios no podrán "
+"enviarle mensajes offline"
+
+#: includes/settings_page_pro.php:258 includes/settings_page.php:271
+msgid "Email Address"
+msgstr "Dirección de correo electrónico"
+
+#: includes/settings_page_pro.php:262
+msgid "Email address where offline messages are delivered to"
+msgstr ""
+"Dirección de correo electrónico a la cual se envían los mensajes offline"
+
+#: includes/settings_page_pro.php:270
+msgid "Sending Method"
+msgstr "Método de envío"
+
+#: includes/settings_page_pro.php:271
+msgid "WP Mail"
+msgstr "WP Mail"
+
+#: includes/settings_page_pro.php:272
+msgid "PHP Mailer"
+msgstr "PHP Mailer"
+
+#: includes/settings_page_pro.php:284
+msgid "Host"
+msgstr "Host"
+
+#: includes/settings_page_pro.php:292
+msgid "Port"
+msgstr "Puerto"
+
+#: includes/settings_page_pro.php:300
+msgid "Username"
+msgstr "Nombre de usuario"
+
+#: includes/settings_page_pro.php:308
+msgid "Password"
+msgstr "Contraseña"
+
+#: includes/settings_page_pro.php:317
+msgid "Offline Chat Box Title"
+msgstr "Título del recuadro Chat offline"
+
+#: includes/settings_page_pro.php:325
+msgid "Offline Text Fields"
+msgstr "Campos de texto offline"
+
+#: includes/settings_page_pro.php:342 includes/settings_page.php:307
+msgid "Chat box fill color"
+msgstr "Color de relleno del recuadro del chat"
+
+#: includes/settings_page_pro.php:348 includes/settings_page.php:313
+msgid "Chat box font color"
+msgstr "Color de fuente del recuadro del chat"
+
+#: includes/settings_page_pro.php:354
+msgid "First Section Text"
+msgstr "Texto de la primera sección"
+
+#: includes/settings_page_pro.php:363
+msgid "Intro Text"
+msgstr "Texto introductorio"
+
+#: includes/settings_page_pro.php:369
+msgid "Second Section Text"
+msgstr "Texto de la segunda sección"
+
+#: includes/settings_page_pro.php:376
+msgid "Reactivate Chat Section Text"
+msgstr "Texto de la sección reactivar chat"
+
+#: includes/settings_page_pro.php:384
+msgid "User chat welcome"
+msgstr "Bienvenido/a al chat del usuario"
+
+#: includes/settings_page_pro.php:393
+msgid "Other text"
+msgstr "Otro texto"
+
+#: includes/settings_page_pro.php:408
+msgid "Current Users that are Chat Agents"
+msgstr "Usuarios actuales que son operadores de chat"
+
+#: includes/settings_page_pro.php:413
+msgid ""
+"To add or remove a user as a chat agent, go into the users profile and "
+"select the checkbox Chat Agent and click save."
+msgstr ""
+"Para añadir o eliminar un usuario como operador de chat, vaya a la página "
+"del perfil de usuario, seleccione la casilla Operador de chat y haga clic en "
+"Guardar."
+
+#: includes/settings_page_pro.php:414
+msgid "If there are no chat agents online, the chat will show as offline"
+msgstr ""
+"Si no hay operadores de chat en línea, el chat se mostrará como offline"
+
+#: includes/settings_page_pro.php:418 includes/settings_page.php:357
+msgid "Save Settings"
+msgstr "Guardar ajustes"
+
+#: wp-live-chat-support-pro.php:423
+msgid "Dear User"
+msgstr "Estimado Usuario"
+
+#: wp-live-chat-support-pro.php:424
+msgid "You are using an outdated version of WP Live Chat Support Basic. Please"
+msgstr ""
+"Está usando una versión desactualizada de WP Live Chat Support básico. Por "
+"favor,"
+
+#: wp-live-chat-support-pro.php:424 wp-live-chat-support.php:684
+msgid "update to at least version"
+msgstr "actualice al menos a la versión"
+
+#: wp-live-chat-support-pro.php:424 wp-live-chat-support.php:684
+msgid "to ensure all functionality is in working order"
+msgstr "para asegurarse de que todas las características estén funcionando"
+
+#: wp-live-chat-support-pro.php:425
+msgid ""
+"You're live chat box on your website has been temporarily disabled until the "
+"basic plugin has been updated. This is to ensure a smooth and hassle-free "
+"user experience for both yourself and your visitors."
+msgstr ""
+"El recuadro de chat en vivo de su sitio web ha sido temporalmente "
+"desactivado, hasta que se actualice la versión básica del plugin. Esto es "
+"para asegurar una experiencia de usuario ágil y sin complicaciones, tanto "
+"para usted como para los visitantes."
+
+#: wp-live-chat-support-pro.php:426
+msgid ""
+"You can update your plugin <a href='./update-core.php'>here</a> or <a "
+"href='./plugins.php'>here</a>."
+msgstr ""
+"Puede actualizar el plugin <a href='./update-core.php'>aquí</a> o <a href='./"
+"plugins.php'>aquí</a>."
+
+#: wp-live-chat-support-pro.php:427 wp-live-chat-support.php:687
+msgid "If you are having difficulty updating the plugin, please contact"
+msgstr ""
+"Si tiene dificultades para actualizar el plugin, por favor contacte con"
+
+#: wp-live-chat-support-pro.php:440 wp-live-chat-support.php:683
+msgid "Dear Pro User"
+msgstr "Estimado Usuario Pr "
+
+#: wp-live-chat-support-pro.php:441
+msgid ""
+"WP Live Chat Support Pro requires WP Live Chat Support to function. You can "
+"download the latest copy from"
+msgstr ""
+"WP Live Chat Support Pro requiere WP Live Chat Support para funcionar. Puede "
+"descargar la última versión de"
+
+#: wp-live-chat-support-pro.php:457 includes/settings_page.php:322
+#: wp-live-chat-support.php:338
+msgid "Questions?"
+msgstr "¿Tiene alguna pregunta?"
+
+#: wp-live-chat-support-pro.php:458 includes/settings_page.php:323
+#: wp-live-chat-support.php:338
+msgid "Chat with us"
+msgstr "Chatee con nosotros"
+
+#: wp-live-chat-support-pro.php:459
+msgid "Start live chat"
+msgstr "Empezar a chatear"
+
+#: wp-live-chat-support-pro.php:460 includes/settings_page.php:329
+#: wp-live-chat-support.php:403
+msgid "Start Chat"
+msgstr "Iniciar chat"
+
+#: wp-live-chat-support-pro.php:461
+msgid "Connecting. Please be patient..."
+msgstr "Conectando. Por favor, aguarde..."
+
+#: wp-live-chat-support-pro.php:462 includes/settings_page.php:338
+#: wp-live-chat-support.php:413
+msgid "Reactivating your previous chat..."
+msgstr "Reactivando el chat anterior..."
+
+#: wp-live-chat-support-pro.php:463 includes/settings_page.php:289
+msgid "Chat offline. Leave a message"
+msgstr "Chat offline. Deje un mensaje"
+
+#: wp-live-chat-support-pro.php:464
+msgid "Hello. Please input your details so that I may help you."
+msgstr "¡Hola! Por favor, ingrese sus datos, para poder ayudarlo."
+
+#: wp-live-chat-support-pro.php:465
+msgid ""
+"We are currently offline. Please leave a message and we'll get back to you "
+"shortly."
+msgstr ""
+"En este momento no estamos en línea. Por favor, deje un mensaje y nos "
+"pondremos en contacto muy pronto."
+
+#: wp-live-chat-support-pro.php:466
+msgid "Sending message..."
+msgstr "Enviando mensaje..."
+
+#: wp-live-chat-support-pro.php:467
+msgid "Thank you for your message. We will be in contact soon."
+msgstr "Gracias por enviar su mensaje. Nos pondremos en contacto muy pronto."
+
+#: wp-live-chat-support-pro.php:468 wp-live-chat-support-pro.php:1065
+#: wp-live-chat-support.php:418 wp-live-chat-support.php:820
+msgid "Press ENTER to send your message"
+msgstr "Presione ENTER para enviar su mensaje"
+
+#: wp-live-chat-support-pro.php:469
+msgid "Welcome. How may I help you?"
+msgstr "Bienvenido/a. ¿En qué puedo ayudarle?"
+
+#: wp-live-chat-support-pro.php:535
+msgid "\"Delete History\""
+msgstr "\"Borrar Historial\""
+
+#: wp-live-chat-support-pro.php:552
+msgid "No chats available at the moment"
+msgstr "No hay chats disponibles en este momento"
+
+#: wp-live-chat-support-pro.php:560
+msgid "View Chat History"
+msgstr "Ver historial de Chats"
+
+#: wp-live-chat-support-pro.php:657
+msgid "Minize Chat Window"
+msgstr "Minimizar ventana de chat"
+
+#: wp-live-chat-support-pro.php:658
+msgid "Close Chat Window"
+msgstr "Cerrar ventana de chat"
+
+#: wp-live-chat-support-pro.php:749
+msgid "Send message"
+msgstr "Enviar mensaje"
+
+#: wp-live-chat-support-pro.php:777 wp-live-chat-support.php:422
+#: wp-live-chat-support.php:834
+msgid "Send"
+msgstr "Enviar"
+
+#: wp-live-chat-support-pro.php:817 wp-live-chat-support.php:1229
+msgid "Please click 'Start Chat' to initiate a chat with an agent"
+msgstr "Por favor, haga clic en 'Iniciar chat' para chatear con un operador"
+
+#: wp-live-chat-support-pro.php:914 wp-live-chat-support.php:1240
+msgid "Your settings have been saved."
+msgstr "Sus ajustes han sido guardados."
+
+#: wp-live-chat-support-pro.php:928
+msgid "Chat sessions"
+msgstr "Sesiones de chat"
+
+#: wp-live-chat-support-pro.php:938
+msgid ""
+"Please note: This window must be open in order to receive new chat "
+"notifications."
+msgstr ""
+"Por favor, tenga en cuenta que esta ventana debe estar abierta para poder "
+"recibir nuevas notificaciones de chats."
+
+#: wp-live-chat-support-pro.php:943 wp-live-chat-support.php:737
+msgid "Visitors on site"
+msgstr "Visitantes en el sitio"
+
+#: wp-live-chat-support-pro.php:990 wp-live-chat-support.php:782
+msgid "Previous"
+msgstr "Anterior"
+
+#: wp-live-chat-support-pro.php:992 wp-live-chat-support.php:782
+msgid "Active"
+msgstr "Activo"
+
+#: wp-live-chat-support-pro.php:994
+msgid "Awaiting"
+msgstr "Esperando"
+
+#: wp-live-chat-support-pro.php:1012
+msgid "Unknown"
+msgstr "Desconocido"
+
+#: wp-live-chat-support-pro.php:1017 wp-live-chat-support.php:784
+msgid "Chat with"
+msgstr "Chat con "
+
+#: wp-live-chat-support-pro.php:1020 wp-live-chat-support.php:787
+msgid "End chat"
+msgstr "Finalizar chat"
+
+#: wp-live-chat-support-pro.php:1025
+msgid "Attempting to open the chat window... Please be patient."
+msgstr "Intentando abrir la ventana del chat... Por favor, aguarde."
+
+#: wp-live-chat-support-pro.php:1048 wp-live-chat-support.php:803
+msgid "Site Info"
+msgstr "Información del sitio"
+
+#: wp-live-chat-support-pro.php:1050 wp-live-chat-support.php:805
+msgid "Chat initiated on:"
+msgstr "Chat iniciado en:"
+
+#: wp-live-chat-support-pro.php:1054 wp-live-chat-support.php:809
+msgid "Advanced Info"
+msgstr "Información avanzada"
+
+#: wp-live-chat-support-pro.php:1056 wp-live-chat-support.php:811
+msgid "Browser:"
+msgstr "Navegador:"
+
+#: wp-live-chat-support-pro.php:1057 wp-live-chat-support.php:812
+msgid "IP Address:"
+msgstr "Dirección IP:"
+
+#: wp-live-chat-support-pro.php:1057 wp-live-chat-support.php:812
+msgid "Whois for"
+msgstr "Whois para"
+
+#: wp-live-chat-support-pro.php:1122
+msgid "This chat has already been answered. Please close the chat window"
+msgstr "Este chat ya ha sido respondido. Por favor, cierre la ventana del chat"
+
+#: wp-live-chat-support-pro.php:1190 wp-live-chat-support.php:937
+msgid "User has opened the chat window"
+msgstr "El usuario ha abierto la ventana del chat"
+
+#: wp-live-chat-support-pro.php:1195 wp-live-chat-support.php:942
+msgid "User has minimized the chat window"
+msgstr "El usuario ha minimizado la ventana del chat"
+
+#: wp-live-chat-support-pro.php:1200 wp-live-chat-support.php:947
+msgid "User has maximized the chat window"
+msgstr "El usuario ha maximizado la ventana del chat"
+
+#: wp-live-chat-support-pro.php:1205 wp-live-chat-support.php:952
+msgid "User has closed and ended the chat"
+msgstr "El usuario ha cerrado y finalizado el chat"
+
+#: wp-live-chat-support-pro.php:1582
+msgid ""
+"An Unexpected HTTP Error occurred during the API request.</p> <p><a href=\"?"
+"\" onclick=\"document.location.reload(); return false;\">Try again</a>"
+msgstr ""
+"Ocurrió un error HTTP inesperado durante la solicitud de API.</p> <p><a href="
+"\"?\" onclick=\"document.location.reload(); return false;\">Intente de "
+"nuevo</a>"
+
+#: wp-live-chat-support-pro.php:1587
+msgid "An unknown error occurred"
+msgstr "Se ha producido un error desconocido"
+
+#: wp-live-chat-support-pro.php:1714 wp-live-chat-support.php:215
+#: wp-live-chat-support.php:718
+msgid "Live Chat"
+msgstr "Chat en vivo"
+
+#: wp-live-chat-support-pro.php:1715 wp-live-chat-support.php:216
+msgid "Settings"
+msgstr "Ajustes"
+
+#: wp-live-chat-support-pro.php:1716 wp-live-chat-support-pro.php:1731
+#: wp-live-chat-support-pro.php:1742
+msgid "Quick Responses"
+msgstr "Respuestas rápidas"
+
+#: wp-live-chat-support-pro.php:1718 wp-live-chat-support.php:217
+msgid "History"
+msgstr "Historial"
+
+#: wp-live-chat-support-pro.php:1719 wp-live-chat-support.php:218
+msgid "Missed Chats"
+msgstr "Chats perdidos"
+
+#: wp-live-chat-support-pro.php:1721 includes/feedback-page.php:37
+#: wp-live-chat-support.php:219
+msgid "Feedback"
+msgstr "Sugerencias"
+
+#: wp-live-chat-support-pro.php:1725
+msgid "Error Log"
+msgstr "Registro de errores"
+
+#: wp-live-chat-support-pro.php:1732
+msgid "Quick Response"
+msgstr "Respuesta rápida"
+
+#: wp-live-chat-support-pro.php:1733 wp-live-chat-support-pro.php:1736
+msgid "New Quick Response"
+msgstr "Nueva respuesta rápida"
+
+#: wp-live-chat-support-pro.php:1734
+msgid "Add New Quick Response"
+msgstr "Añadir nueva respuesta rápida"
+
+#: wp-live-chat-support-pro.php:1735
+msgid "Edit Quick Response"
+msgstr "Editar respuestas rápidas"
+
+#: wp-live-chat-support-pro.php:1737
+msgid "All Quick Responses"
+msgstr "Todas las respuestas rápidas"
+
+#: wp-live-chat-support-pro.php:1738
+msgid "View Quick Responses"
+msgstr "Ver respuestas rápidas"
+
+#: wp-live-chat-support-pro.php:1739
+msgid "Search Quick Responses"
+msgstr "Buscar respuestas rápidas"
+
+#: wp-live-chat-support-pro.php:1740
+msgid "No Quick Responses found"
+msgstr "No se encontraron respuestas rápidas"
+
+#: wp-live-chat-support-pro.php:1741
+msgid "No Quick Responses found in the Trash"
+msgstr "No se encontraron respuestas rápidas en la papelera"
+
+#: wp-live-chat-support-pro.php:1746
+msgid "Quick Responses for WP Live Chat Support Pro"
+msgstr "Respuestas rápidas para WP Live Chat Support Pro"
+
+#: wp-live-chat-support-pro.php:1801 wp-live-chat-support-pro.php:1805
+#: wp-live-chat-support.php:821
+msgid "Assign Quick Response"
+msgstr "Asignar respuesta rápida"
+
+#: wp-live-chat-support-pro.php:1808 wp-live-chat-support.php:821
+msgid "Select"
+msgstr "Seleccionar"
+
+#: wp-live-chat-support-pro.php:1814
+msgid "What is this?"
+msgstr "¿Qué es esto?"
+
+#: functions.php:524
+msgid "complete"
+msgstr "completado"
+
+#: functions.php:527
+msgid "pending"
+msgstr "pendiente"
+
+#: functions.php:530
+msgid "active"
+msgstr "activo"
+
+#: functions.php:533
+msgid "deleted"
+msgstr "borrado"
+
+#: functions.php:536
+msgid "browsing"
+msgstr "navegando"
+
+#: functions.php:539
+msgid "requesting chat"
+msgstr "solicitando chat"
+
+#: functions.php:542
+msgid "Chat Ended - User still browsing"
+msgstr "Chat finalizado - El usuario aún está navegando"
+
+#: functions.php:545
+msgid "User is browsing but doesn't want to chat"
+msgstr "El usuario está navegando pero no quiere chatear"
+
+#: functions.php:611
+msgid "Get Pro Add-on to accept more chats"
+msgstr "Obtenga la versión Pro para aceptar más chats"
+
+#: functions.php:855
+msgid "You have not missed any chat requests."
+msgstr "No se ha perdido ninguna solicitud de chat."
+
+#: includes/feedback-page.php:7
+msgid "WP Live Chat Support Feedback"
+msgstr "Comentarios para WP Live Chat Support"
+
+#: includes/feedback-page.php:8
+msgid "We'd love to hear your comments and/or suggestions"
+msgstr "Nos encantaría recibir sus comentarios y/o sugerencias"
+
+#: includes/feedback-page.php:13
+msgid "Your Name"
+msgstr "Su nombre"
+
+#: includes/feedback-page.php:21
+msgid "Your Email"
+msgstr "Su dirección de correo electrónico"
+
+#: includes/feedback-page.php:29
+msgid "Your Website"
+msgstr "Su sitio web"
+
+#: includes/feedback-page.php:48
+msgid "Send Feedback"
+msgstr "Enviar sugerencias"
+
+#: includes/settings_page.php:23
+msgid "Agents"
+msgstr "Operadores"
+
+#: includes/settings_page.php:46 includes/settings_page.php:99
+#: includes/settings_page.php:115 includes/settings_page.php:158
+#: includes/settings_page.php:174 includes/settings_page.php:190
+#: includes/settings_page.php:206 includes/settings_page.php:223
+msgid "available in the"
+msgstr "disponible en la"
+
+#: includes/settings_page.php:47 includes/settings_page.php:100
+#: includes/settings_page.php:116 includes/settings_page.php:159
+#: includes/settings_page.php:175 includes/settings_page.php:191
+#: includes/settings_page.php:207 includes/settings_page.php:224
+#: includes/settings_page.php:278 includes/settings_page.php:292
+#: includes/settings_page.php:342 wp-live-chat-support.php:1185
+#: wp-live-chat-support.php:1206
+msgid "Pro Add-on"
+msgstr "versión Pro"
+
+#: includes/settings_page.php:48 includes/settings_page.php:101
+#: includes/settings_page.php:117 includes/settings_page.php:160
+#: includes/settings_page.php:176 includes/settings_page.php:192
+#: includes/settings_page.php:208 includes/settings_page.php:225
+msgid "only"
+msgstr "únicamente"
+
+#: includes/settings_page.php:49
+msgid " once off. Updates included forever."
+msgstr " en un solo pago. Incluye actualizaciones perpetuas."
+
+#: includes/settings_page.php:277
+msgid "Get offline messages with the "
+msgstr "Reciba mensajes offline con la "
+
+#: includes/settings_page.php:286
+msgid "Offline text"
+msgstr "Texto offline"
+
+#: includes/settings_page.php:291 includes/settings_page.php:341
+msgid "Edit these text fields using the "
+msgstr "Edite estos campos de texto usando la "
+
+#: includes/settings_page.php:320
+msgid "First section text"
+msgstr "Texto de la primera sección"
+
+#: includes/settings_page.php:327
+msgid "Second section text"
+msgstr "Texto de la segunda sección"
+
+#: includes/settings_page.php:330 wp-live-chat-support.php:410
+msgid "Connecting you to a sales person. Please be patient."
+msgstr "Conectándolo con un representante... Por favor, aguarde."
+
+#: includes/settings_page.php:336
+msgid "Reactivate chat section text"
+msgstr "Texto de la sección reactivar chat"
+
+#: includes/settings_page.php:353
+msgid "Multiple Agents"
+msgstr "Múltiples operadores"
+
+#: includes/settings_page.php:354
+msgid "Get"
+msgstr "Obtenga"
+
+#: includes/settings_page.php:354
+msgid "Multiple agent support"
+msgstr "soporte para múltiples operadores"
+
+#: includes/welcome_page.php:4
+msgid "Welcome to "
+msgstr "Bienvenido/a a "
+
+#: includes/welcome_page.php:6
+msgid "Version 4"
+msgstr "Versión 4"
+
+#: includes/welcome_page.php:8
+msgid "Provide Instant Live Chat Support!"
+msgstr "¡Incluya soporte instantáneo de chat en vivo!"
+
+#: includes/welcome_page.php:10
+msgid "How did you find us?"
+msgstr "¿Cómo nos encontró?"
+
+#: includes/welcome_page.php:15
+msgid "WordPress.org plugin repository "
+msgstr "Repositorio de plugins de WordPress.org "
+
+#: includes/welcome_page.php:18
+msgid "Search Term"
+msgstr "Término de búsqueda"
+
+#: includes/welcome_page.php:22
+msgid "Google or other search Engine"
+msgstr "Google u otro buscador"
+
+#: includes/welcome_page.php:28
+msgid "Friend recommendation"
+msgstr "Recomendación de un amigo"
+
+#: includes/welcome_page.php:34
+msgid "Other"
+msgstr "Otro"
+
+#: includes/welcome_page.php:38
+msgid "Please Explain"
+msgstr "Por favor, explique"
+
+#: includes/welcome_page.php:47
+msgid "Submit"
+msgstr "Enviar"
+
+#: includes/welcome_page.php:49
+msgid "Skip"
+msgstr "Saltear"
+
+#: wp-live-chat-support.php:188 wp-live-chat-support.php:1075
+msgid "Please click \\'Start Chat\\' to initiate a chat with an agent"
+msgstr ""
+"Por favor, haga clic en \\'Iniciar chat\\' para chatear con un operador"
+
+#: wp-live-chat-support.php:348
+msgid "Start Live Chat"
+msgstr "Empezar a chatear"
+
+#: wp-live-chat-support.php:684
+msgid ""
+"You are using an outdated version of <strong>WP Live Chat Support Pro</"
+"strong>. Please"
+msgstr ""
+"Está usando una versión desactualizada de <strong>WP Live Chat Support Pro</"
+"strong>. Por favor,"
+
+#: wp-live-chat-support.php:685
+msgid ""
+"You're live chat box on your website has been temporarily disabled until the "
+"Pro plugin has been updated. This is to ensure a smooth and hassle-free user "
+"experience for both yourself and your visitors."
+msgstr ""
+"El recuadro de chat en vivo de su sitio web ha sido temporalmente "
+"desactivado, hasta que se actualice la versión Pro del plugin. Esto es para "
+"asegurar una experiencia de usuario ágil y sin complicaciones, tanto para "
+"usted como para los visitantes."
+
+#: wp-live-chat-support.php:686
+msgid ""
+"You can update your plugin <a href='./update-core.php'>here</a>, <a href='./"
+"plugins.php'>here</a> or <a href='http://wp-livechat.com/get-updated-"
+"version/' target='_BLANK'>here</a>."
+msgstr ""
+"Puede actualizar el plugin <a href='./update-core.php'>here</a>, <a href='./"
+"plugins.php'>aquí</a> o <a href='http://wp-livechat.com/get-updated-"
+"version/' target='_blank'>aquí</a>."
+
+#: wp-live-chat-support.php:712
+msgid "Experiencing problems with the plugin?"
+msgstr "¿Tiene problemas con el plugin?"
+
+#: wp-live-chat-support.php:714
+msgid "Review the documentation."
+msgstr "Revise la documentación."
+
+#: wp-live-chat-support.php:715
+msgid "Or ask a question on our"
+msgstr "O háganos una pregunta en nuestro"
+
+#: wp-live-chat-support.php:715
+msgid "Support forum."
+msgstr "Foro de Soporte."
+
+#: wp-live-chat-support.php:738
+msgid "With the Pro add-on of WP Live Chat Support, you can"
+msgstr "Con la versión Pro de WP Live Chat Support puede"
+
+#: wp-live-chat-support.php:738
+msgid "see who's online and initiate chats"
+msgstr "ver quién está en línea e iniciar chats"
+
+#: wp-live-chat-support.php:738
+msgid "with your online visitors with the click of a button."
+msgstr "con los visitantes de su sitio tan sólo en un clic."
+
+#: wp-live-chat-support.php:738
+msgid "Buy the Pro add-on now for only $19.95 once off. Free Updates FOREVER."
+msgstr ""
+"Compre la versión Pro ahora por un pago único de sólo $19.95. "
+"Actualizaciones gratuitas PERPETUAS."
+
+#: wp-live-chat-support.php:738
+msgid "Buy the Pro add-on now for only $19.95 once off. Free Updates Forever."
+msgstr ""
+"Compre la versión Pro ahora por un pago único de sólo $19.95. "
+"Actualizaciones gratuitas perpetuas."
+
+#: wp-live-chat-support.php:821
+msgid "Add Quick Responses to your Live Chat"
+msgstr "Añadir respuestas rápidas para su chat en vivo"
+
+#: wp-live-chat-support.php:821
+msgid "Pro version only"
+msgstr "Sólo en la versión Pro"
+
+#: wp-live-chat-support.php:832
+msgid "type here..."
+msgstr "escriba aquí..."
+
+#: wp-live-chat-support.php:1180
+msgid "WP Live Chat History"
+msgstr "Historial de WP Live Chat"
+
+#: wp-live-chat-support.php:1185 wp-live-chat-support.php:1206
+msgid "This option is only available in the "
+msgstr "Esta opción sólo está disponible en la "
+
+#: wp-live-chat-support.php:1185 wp-live-chat-support.php:1206
+msgid "of WP Live Chat. "
+msgstr "de WP Live Chat. "
+
+#: wp-live-chat-support.php:1185 wp-live-chat-support.php:1206
+msgid "Get it now for only $19.95 once off!"
+msgstr "¡Obténgala por un págo único de sólo $19.95!"
+
+#: wp-live-chat-support.php:1190
+msgid "WP Live Chat Missed Chats"
+msgstr "Chats perdidos de WP Live Chat"
+
+#: wp-live-chat-support.php:1197
+msgid "WP Live Chat Offline Messages"
+msgstr "Mensajes offline de WP Live Chat"
+
+#: wp-live-chat-support.php:1202
+msgid ""
+"Please update to the latest version of WP Live Chat Support Pro to start "
+"recording any offline messages."
+msgstr ""
+"Por favor, actualice a la última versión de WP Live Chat Support Pro para "
+"comenzar a grabar los mensajes offline."
+
+#: wp-live-chat-support.php:1255
+msgid "Thank You for your feedback!"
+msgstr "¡Gracias por enviar su mensaje!"
+
+#: wp-live-chat-support.php:1259 wp-live-chat-support.php:1272
+msgid "Thank you for your feedback. We will be in touch soon"
+msgstr "Gracias por enviar su mensaje. Nos pondremos en contacto muy pronto"
+
+#: wp-live-chat-support.php:1276
+msgid "There was a problem sending your feedback. Please log your feedback on "
+msgstr ""
+"Hubo un problema al enviar su mensaje. Por favor, registre su mensaje en "

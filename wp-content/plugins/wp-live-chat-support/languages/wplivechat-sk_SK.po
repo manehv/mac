@@ -1,0 +1,811 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: wplc\n"
+"POT-Creation-Date: 2014-06-30 15:16+0200\n"
+"PO-Revision-Date: 2014-09-15 17:53+0100\n"
+"Last-Translator: dkadar <dana.kadarova@gst.sk>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: C:\\wamp\\www\\wordpress38\\wp-content\\plugins\\wp-"
+"live-chat-support\n"
+"X-Poedit-SearchPath-1: C:\\wamp\\www\\wordpress38\\wp-content\\plugins\\wp-"
+"live-chat-support-pro\n"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/ajax.php:209
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/ajax-pro.php:212
+msgid "Admin has closed and ended the chat"
+msgstr "Administrátor uzavrel a ukončil chat"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/ajax.php:233
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/ajax-pro.php:245
+msgid "There is No Answer. Please Try Again Later"
+msgstr "Zatiaľ žiadna odpoveď. Prosím, skúste neskôr."
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/functions.php:145
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:23
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:100
+msgid "IP"
+msgstr "IP"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/functions.php:146
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:169
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:71
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:24
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:101
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:171
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:303
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:401
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:419
+msgid "Name"
+msgstr "Meno"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/functions.php:147
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:171
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:25
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:102
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:171
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:304
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:403
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:420
+msgid "Email"
+msgstr "Email"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/functions.php:148
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:26
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:103
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:305
+msgid "URL"
+msgstr "URL adresa stránky"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/functions.php:149
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:27
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:104
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:306
+msgid "Status"
+msgstr "Stav"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/functions.php:150
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:28
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:105
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:307
+msgid "Action"
+msgstr "Aktivita"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/functions.php:156
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:111
+msgid "No chat sessions available at the moment"
+msgstr "V tejto chvíli neprebieha žiadna diskusia"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/functions.php:393
+msgid "complete"
+msgstr "ukončená"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/functions.php:396
+msgid "pending"
+msgstr "prebiehajúca"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/functions.php:399
+msgid "active"
+msgstr "aktívna"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/functions.php:402
+msgid "deleted"
+msgstr "zrušená"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/functions.php:405
+msgid "browsing"
+msgstr "prezerajúci si web"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/functions.php:408
+msgid "requesting chat"
+msgstr "vyžadujúci chat"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/functions.php:411
+msgid "Chat Ended - User still browsing"
+msgstr "Diskusia ukončená - Užívateľ si prezerá stránku"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/functions.php:414
+msgid "User is browsing but doesn't want to chat"
+msgstr "Užívateľ si prezerá stránku, ale neželá si diskutovať"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/functions.php:466
+msgid "Get Pro Add-on to accept more chats"
+msgstr "Kúpte si Pro Add-on verziu, aby ste mohli prijať viacero chat-ov"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:81
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:436
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:1198
+msgid "Live Chat"
+msgstr "Chat naživo"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:82
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:1199
+msgid "Settings"
+msgstr "Nastavenia"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:83
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:1200
+msgid "History"
+msgstr "História"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:84
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/feedback-page.php:37
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:1201
+msgid "Feedback"
+msgstr "Spätná väzba"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:159
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:208
+msgid "Questions?"
+msgstr "Otázky?"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:159
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:209
+msgid "Chat with us"
+msgstr "Pýtajte sa nás"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:173
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:215
+msgid "Start Chat"
+msgstr "Začnite diskusiu"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:180
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:216
+msgid "Connecting you to a sales person. Please be patient."
+msgstr "Pripájame Vás k našim agentom, prosíme o chvíľu strpenia."
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:183
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:224
+msgid "Reactivating your previous chat..."
+msgstr "Znovu sa aktivuje Váš predošlý chat..."
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:187
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:681
+msgid "Press ENTER to send your message"
+msgstr "Prosím stlačte ENTER na odoslanie Vašej správy"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:191
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:544
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:456
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:684
+msgid "Send"
+msgstr "Poslať"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:402
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:202
+msgid "Dear Pro User"
+msgstr "Milý užívateľ Pro verzie,"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:403
+msgid "You are using an outdated version of WP Live Chat Support Pro. Please"
+msgstr "používate neaktuálnu verziu WP Live Chat Support Pro. Prosím"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:403
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:213
+msgid "update to at least version"
+msgstr "aktualizujte si Vašu verziu,"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:403
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:213
+msgid "to ensure all functionality is in working order"
+msgstr "aby ste zabezpečili jej riadne fungovanie. "
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:405
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:215
+msgid "If you are having difficulty updating the plugin, please contact"
+msgstr "Ak máte problémy s aktualizáciou, prosím kontaktujte"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:430
+msgid "Experiencing problems with the plugin?"
+msgstr "Máte problémy s plugin-om?"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:432
+msgid "Review the documentation."
+msgstr "Prezrite si dokumentáciu"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:433
+msgid "Or ask a question on our"
+msgstr "alebo sa obráťte na"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:455
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:562
+msgid "Visitors on site"
+msgstr "Návštevníci stránky"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:456
+msgid "With the Pro add-on of WP Live Chat Support, you can"
+msgstr "S verziou Pro add-on of WP Live Chat Support "
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:456
+msgid "see who's online and initiate chats"
+msgstr "uvidíte, kto je online a môžete zahájiť chat"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:456
+msgid "with your online visitors with the click of a button."
+msgstr "s návštevníkmi vašej stránky jediným kliknutím."
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:456
+msgid "Buy the Pro add-on now for only $29.95 once off. Free Updates FOREVER."
+msgstr ""
+"Kúpte si verziu Pro add-on len za jednorázový poplatok $29.95 Aktualizácie "
+"zdarma bez časového obmedzenia."
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:456
+msgid "Buy the Pro add-on now for only $29.95 once off. Free Updates Forever."
+msgstr ""
+"Kúpte si verziu Pro add-on len za jednorázový poplatok $29.95 Aktualizácie "
+"zdarma bez časového obmedzenia."
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:516
+msgid "Previous"
+msgstr "Predošlý"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:516
+msgid "Active"
+msgstr "Aktívny"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:534
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:672
+msgid "End chat"
+msgstr "Ukončiť chat"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:644
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:799
+msgid "User has opened the chat window"
+msgstr "Používateľ otvoril okienko chat-u"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:649
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:804
+msgid "User has minimized the chat window"
+msgstr "Používateľ minimalizoval okienko chat-u"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:654
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:809
+msgid "User has maximized the chat window"
+msgstr "Používateľ maximalizoval okienko chat-u"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:659
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:814
+msgid "User has closed and ended the chat"
+msgstr "Používateľ zatvoril okienko a ukončil chat"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:856
+msgid "WP Live Chat History"
+msgstr "WP Live Chat história"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:861
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:47
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:78
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:94
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:110
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:126
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:143
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:164
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:178
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:228
+msgid "Pro Add-on"
+msgstr "Pro Add-on verzia"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:885
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:514
+msgid "Your settings have been saved."
+msgstr "Vaše nastavenia sa uložili."
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:900
+msgid "Thank You for your feedback!"
+msgstr "Ďakujeme vám za poskytnutie spätnej väzby!"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:904
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:917
+msgid "Thank you for your feedback. We will be in touch soon"
+msgstr "Ďakujeme vám za poskytnutie spätnej väzby! Ozveme sa vám čoskoro."
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:921
+msgid "There was a problem sending your feedback. Please log your feedback on "
+msgstr ""
+"Zaznamenali sme problém s odoslaním vášho odkazu. Prosím nahrajte váš odkaz."
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/feedback-page.php:7
+msgid "WP Live Chat Support Feedback"
+msgstr "WP Live Chat Support odkaz"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/feedback-page.php:8
+msgid "We'd love to hear your comments and/or suggestions"
+msgstr "Boli by sme radi, keby ste nám poslali vaše návrhy a/alebo komentáre"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/feedback-page.php:13
+msgid "Your Name"
+msgstr "Vaše meno"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/feedback-page.php:21
+msgid "Your Email"
+msgstr "Vaša Emailová adresa"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/feedback-page.php:29
+msgid "Your Website"
+msgstr "Vaša web stránka"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/feedback-page.php:48
+msgid "Send Feedback"
+msgstr "Pošlite spätnú väzbu"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:6
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:17
+msgid "WP Live Chat Support Settings"
+msgstr "Nastavenia WP Live Chat Support"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:19
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:29
+msgid "General Settings"
+msgstr "Všeobecné nastavenia"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:20
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:30
+msgid "Chat Box"
+msgstr "Okienko Chat-u"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:21
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:153
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:31
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:141
+msgid "Offline Messages"
+msgstr "Offline správy"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:22
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:190
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:32
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:226
+msgid "Styling"
+msgstr "Štýl"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:23
+msgid "Agents"
+msgstr "Agenti"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:26
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:36
+msgid "Main Settings"
+msgstr "Hlavné nastavenia"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:29
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:39
+msgid "Chat enabled"
+msgstr "Chat aktívny"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:32
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:42
+msgid "Yes"
+msgstr "Áno"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:33
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:43
+msgid "No"
+msgstr "Nie"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:39
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:49
+msgid "Hide Chat"
+msgstr "Skryť chat"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:40
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:50
+msgid "Hides chat for 24hrs when user clicks X"
+msgstr "Chat sa skryje na 24 hodín, ak používateľ zaklikne x"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:46
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:77
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:93
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:109
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:125
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:142
+msgid "available in the"
+msgstr "k disoizícii v"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:48
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:79
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:95
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:111
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:127
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:144
+msgid "only"
+msgstr "len"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:57
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:60
+msgid "Chat Window Settings"
+msgstr "Nastavenia okienka chat-u"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:60
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:63
+msgid "Chat box alignment"
+msgstr "Zarovnanie okienka chat-u"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:63
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:66
+msgid "Bottom left"
+msgstr "Vľavo dole"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:64
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:67
+msgid "Bottom right"
+msgstr "Vpravo dole"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:87
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:86
+msgid "Picture"
+msgstr "Obrázok"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:90
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:106
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:94
+msgid "Upload Image"
+msgstr "Nahrať obrázok"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:103
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:103
+msgid "Logo"
+msgstr "Logo"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:119
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:120
+msgid "Chat delay (seconds)"
+msgstr "Oneskorenie chat-u (v sekundách)"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:135
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:129
+msgid "Chat notifications"
+msgstr "Upozornenia chat-u"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:139
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:133
+msgid "Alert me via email as soon as someone wants to chat"
+msgstr ""
+"Upozorniť ma prostredníctvom emailu hneď, ako bude niekto chcieť chat-ovať"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:157
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:145
+msgid "Email Address"
+msgstr "Emailová adresa"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:163
+msgid "Get offline messages with the "
+msgstr "Obdržte offline správy s"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:172
+msgid "Offline text"
+msgstr "Offline text"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:177
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:227
+msgid "Edit these text fields using the "
+msgstr "Upravte tieto textove polia a použite"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:193
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:229
+msgid "Chat box fill color"
+msgstr "Farba výplne okienka chatu"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:199
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:235
+msgid "Chat box font color"
+msgstr "Farba textu okienka chatu"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:206
+msgid "First section text"
+msgstr "Text prvej sekcie"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:213
+msgid "Second section text"
+msgstr "Text druhej sekcie"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:222
+msgid "Reactivate chat section text"
+msgstr "Znovu aktivovať text chatu"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:239
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:294
+msgid "Multiple Agents"
+msgstr "Viacerí agenti"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:240
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:295
+msgid "Get"
+msgstr "Obdržte"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:240
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:295
+msgid "Multiple agent support"
+msgstr "podporu viacerých agentov"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:240
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:295
+msgid "for only $39.95"
+msgstr "len za $39.95"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:243
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:299
+msgid "Save Settings"
+msgstr "Uložiť nastavenia"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/welcome_page.php:4
+msgid "Welcome to "
+msgstr "Vitajte v"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/welcome_page.php:15
+msgid "WordPress.org plugin repository "
+msgstr "depozitári WordPress.org plugin-ov"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/welcome_page.php:18
+msgid "Search Term"
+msgstr "Hľadajte výraz"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/welcome_page.php:22
+msgid "Google or other search Engine"
+msgstr "Google alebo iný vyhľadávač"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/welcome_page.php:28
+msgid "Friend recommendation"
+msgstr "Odporúčanie priateľa"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/welcome_page.php:34
+msgid "Other"
+msgstr "Iné"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/welcome_page.php:38
+msgid "Please Explain"
+msgstr "Prosím vysvetlite"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/welcome_page.php:47
+msgid "Submit"
+msgstr "Pošlite"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/welcome_page.php:49
+msgid "Skip"
+msgstr "Vynechajte"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:46
+msgid "Initiate Chat"
+msgstr "Začnite chat / diskusiu"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:48
+msgid "You must be a chat agent to initiate chats"
+msgstr "Musíte byť agent chatu, aby ste mohli zahájiť chat"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:66
+msgid "No visitors on-line at the moment"
+msgstr "Momentálne nie sú online žiadni návštevníci"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:125
+msgid "Accept Chat"
+msgstr "Prijať chat"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:128
+msgid "You must be a chat agent to answer chats"
+msgstr "Musíte byť agentom chatu, aby ste mohli odpovedať na chat"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:135
+msgid "Open Chat Window"
+msgstr "Otvorte okienko chatu"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:138
+msgid "Chat has been answered by another agent"
+msgstr "Na chat už odpovedal iný agent "
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:141
+msgid "Chat has been Accpted By Chat Agent "
+msgstr "Chat akceptoval agent chatu"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:170
+msgid "WP Live Chat Support - Offline Message from"
+msgstr "WP Live Chat Support - Offline správa od"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:171
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:421
+msgid "Message"
+msgstr "Správa"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:171
+msgid "Via WP Live Chat Support"
+msgstr "prostredníctvom WP Live Chat Support-u"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:225
+msgid "Alert: Someone wants to chat with you on "
+msgstr "Upozornenie: Niekto chce s Vami chat-ovať o"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:226
+msgid "Someone wants to chat with you on your website"
+msgstr "Niekto chce s Vami chat-ovať na Vašej stránke"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:226
+msgid "Log in"
+msgstr "Prihlásenie"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:203
+msgid ""
+"WP Live Chat Support Pro requires WP Live Chat Support to function. You Can "
+"download the latest copy from"
+msgstr ""
+"WP Live Chat Support Pro verzia vyžaduje na fungovanie WP Live Chat Support. "
+"Najaktuálnejšiu verziu si môžete stiahnuť z"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:212
+msgid "Dear User"
+msgstr "Milý užívateľ,"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:213
+msgid "You are using an outdated version of WP Live Chat Support Basic. Please"
+msgstr "používate neaktuálnu verziu WP Live Chat Support Basic. Prosím"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:302
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:661
+msgid "Date"
+msgstr "Dátum"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:313
+msgid "No chats available at the moment"
+msgstr "Momentálne nie je k dispozícii žiaden chat"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:423
+msgid "Send message"
+msgstr "Poslať správu"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:535
+msgid "Chat sessions"
+msgstr "Chat-ové diskusie"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:557
+msgid ""
+"Please note: This window must be open in order to receive new chat "
+"notifications."
+msgstr ""
+"Poznámka: Toto okienko musí byť otvorené, aby ste mohli dostať upozornenie "
+"na nový chat"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:651
+msgid "Chat with"
+msgstr "Chat-ovať s"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:658
+msgid "Email address"
+msgstr "Emailová adresa"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:659
+msgid "IP Address"
+msgstr "IP adresa"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:660
+msgid "From URL"
+msgstr "z URL adresy"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:660
+msgid "open"
+msgstr "otvoriť"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:667
+msgid "Attempting to open the chat window... Please be patient."
+msgstr "Pokúšam sa otvoriť okienko chat-u...Prosím o trpezlivosť."
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:735
+msgid "This chat has already been answered. Please close the chat window"
+msgstr "Na tento chat sme už odpovedali. Prosím, zatvorte okienko chat-u."
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:1111
+msgid ""
+"An Unexpected HTTP Error occurred during the API request.</p> <p><a href=\"?"
+"\" onclick=\"document.location.reload(); return false;\">Try again</a>"
+msgstr ""
+"Počas API žiadosti nastala neočakávaná HTTP chyba. </p> <p><a href=\"?\" "
+"onclick=\"document.location.reload(); return false;\">Skúste znova</a> "
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:1116
+msgid "An unknown error occurred"
+msgstr "Objavila sa neznáma chyba"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:1203
+msgid "Error Log"
+msgstr "Chybové prihlásenie"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:33
+msgid "Chat Agents"
+msgstr "Agenti chat-u"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:74
+msgid "Name "
+msgstr "Meno"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:96
+msgid "Remove Image"
+msgstr "Odstráňte obrázok"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:97
+msgid "Recomended Size 40px x 40px"
+msgstr "Odporúčaná veľkosť 40px x 40px"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:111
+msgid "Upload Logo"
+msgstr "Nahrať logo"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:113
+msgid "Remove Logo"
+msgstr "Odstrániť logo"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:114
+msgid "Recomended Size 250px x 40px"
+msgstr "Odporúčaná veľkosť 250px x 40px"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:123
+msgid "how long it takes for your chat window to pop up"
+msgstr "ako dlho trvá, kým sa Vám objaví chat-ovacie okienko"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:134
+msgid "(while online only)"
+msgstr "(len kým ste online)"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:149
+msgid "Email address where offline messages are delivered to"
+msgstr "Emailová adresa, kam sa odosielajú offline správy"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:157
+msgid "Sending Method"
+msgstr "Spôsob odoslania"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:158
+msgid "WP Mail"
+msgstr "WP mail"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:159
+msgid "PHP Mailer"
+msgstr "PHP poštový admin"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:171
+msgid "Host"
+msgstr "Host"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:179
+msgid "Port"
+msgstr "Port"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:187
+msgid "Username"
+msgstr "Používateľské meno"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:195
+msgid "Password"
+msgstr "Heslo"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:204
+msgid "Offline Chat Box Title"
+msgstr "Názov offline okienka chat-u"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:212
+msgid "Offline Text Fields"
+msgstr "Offline textové polia"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:241
+msgid "First Section Text"
+msgstr "Text prvej sekcie"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:250
+msgid "Intro Text"
+msgstr "Úvodný text"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:256
+msgid "Second Section Text"
+msgstr "Text druhej sekcie"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:263
+msgid "Reactivate Chat Section Text"
+msgstr "Znovu aktivovať text chat-u"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:271
+msgid "User chat welcome"
+msgstr "Vitajte v užívateľskom chat-e"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:280
+msgid "Other text"
+msgstr "Iný text"

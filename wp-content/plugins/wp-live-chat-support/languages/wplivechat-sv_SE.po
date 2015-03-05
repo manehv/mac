@@ -1,0 +1,1026 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: wplc\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-06-30 15:16+0200\n"
+"PO-Revision-Date: 2014-10-02 12:20+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: sv_SE\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Loco-Source-Locale: sv_SE\n"
+"X-Generator: Poedit 1.6.5\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Loco-Parser: loco_parse_po\n"
+"X-Loco-Target-Locale: en_GB\n"
+"X-Poedit-SearchPath-0: C:\\wamp\\www\\wordpress38\\wp-content\\plugins\\wp-"
+"live-chat-support\n"
+"X-Poedit-SearchPath-1: C:\\wamp\\www\\wordpress38\\wp-content\\plugins\\wp-"
+"live-chat-support-pro\n"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/ajax.php:209
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/ajax-pro.
+#: php:212
+msgid "Admin has closed and ended the chat"
+msgstr "Administratören har stäng och avslutat chatten"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/ajax.php:233
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/ajax-pro.
+#: php:245
+msgid "There is No Answer. Please Try Again Later"
+msgstr "Inget svar. Var god och testa senare"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/functions.php:
+#: 145
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/functions-
+#: pro.php:23 pro.php:100
+msgid "IP"
+msgstr "IP"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/functions.php:
+#: 146
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-
+#: support.php:169 C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-
+#: support/includes/settings_page.php:71
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/functions-
+#: pro.php:24 pro.php:101 pro.php:171
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-
+#: chat-support-pro.php:303 chat-support-pro.php:401 chat-support-pro.php:419
+msgid "Name"
+msgstr "Namn"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/functions.php:
+#: 147
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-
+#: support.php:171
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/functions-
+#: pro.php:25 pro.php:102 pro.php:171
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-
+#: chat-support-pro.php:304 chat-support-pro.php:403 chat-support-pro.php:420
+msgid "Email"
+msgstr "E-post"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/functions.php:
+#: 148
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/functions-
+#: pro.php:26 pro.php:103
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-
+#: chat-support-pro.php:305
+msgid "URL"
+msgstr "URL"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/functions.php:
+#: 149
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/functions-
+#: pro.php:27 pro.php:104
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-
+#: chat-support-pro.php:306
+msgid "Status"
+msgstr "Status"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/functions.php:
+#: 150
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/functions-
+#: pro.php:28 pro.php:105
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-
+#: chat-support-pro.php:307
+msgid "Action"
+msgstr "Handling"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/functions.php:
+#: 156
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/functions-
+#: pro.php:111
+msgid "No chat sessions available at the moment"
+msgstr "Inga chattar är tillgängliga för tillfället"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/functions.php:
+#: 393
+msgid "complete"
+msgstr "klart"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/functions.php:
+#: 396
+msgid "pending"
+msgstr "pågående"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/functions.php:
+#: 399
+msgid "active"
+msgstr "aktiv"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/functions.php:
+#: 402
+msgid "deleted"
+msgstr "borttagen"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/functions.php:
+#: 405
+msgid "browsing"
+msgstr "online"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/functions.php:
+#: 408
+msgid "requesting chat"
+msgstr "begär chat"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/functions.php:
+#: 411
+msgid "Chat Ended - User still browsing"
+msgstr "Chat avslutad - Användare är fortfarande online"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/functions.php:
+#: 414
+msgid "User is browsing but doesn't want to chat"
+msgstr "Användaren är online men vill inte chatta."
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/functions.php:
+#: 466
+msgid "Get Pro Add-on to accept more chats"
+msgstr "Skaffa Pro Add-on för att acceptera mer chattar"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-
+#: support.php:81 support.php:436
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-
+#: chat-support-pro.php:1198
+msgid "Live Chat"
+msgstr "Live Chat"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-
+#: support.php:82
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-
+#: chat-support-pro.php:1199
+msgid "Settings"
+msgstr "Inställningar"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-
+#: support.php:83
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-
+#: chat-support-pro.php:1200
+msgid "History"
+msgstr "Historik"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-
+#: support.php:84 C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-
+#: support/includes/feedback-page.php:37
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-
+#: chat-support-pro.php:1201
+msgid "Feedback"
+msgstr "Feedback"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-
+#: support.php:159 C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-
+#: support/includes/settings_page.php:208
+msgid "Questions?"
+msgstr "Frågor?"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-
+#: support.php:159 C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-
+#: support/includes/settings_page.php:209
+msgid "Chat with us"
+msgstr "Chatta med oss"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-
+#: support.php:173 C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-
+#: support/includes/settings_page.php:215
+msgid "Start Chat"
+msgstr "Starta chatt"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-
+#: support.php:180 C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-
+#: support/includes/settings_page.php:216
+msgid "Connecting you to a sales person. Please be patient."
+msgstr "Kopplar dig till en säljare. Var god vänta."
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-
+#: support.php:183 C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-
+#: support/includes/settings_page.php:224
+msgid "Reactivating your previous chat..."
+msgstr "Återaktiverar din föregående chatt"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-
+#: support.php:187
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-
+#: chat-support-pro.php:681
+msgid "Press ENTER to send your message"
+msgstr "Tryck ENTER flr att skicka ditt meddelande"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-
+#: support.php:191 support.php:544
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-
+#: chat-support-pro.php:456 chat-support-pro.php:684
+msgid "Send"
+msgstr "Skicka"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-
+#: support.php:402
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-
+#: chat-support-pro.php:202
+msgid "Dear Pro User"
+msgstr "Kära Pro användare"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-
+#: support.php:403
+msgid "You are using an outdated version of WP Live Chat Support Pro. Please"
+msgstr "Du använder en gammal version av WP Live Chat Support Pro. Var god"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-
+#: support.php:403
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-
+#: chat-support-pro.php:213
+msgid "update to at least version"
+msgstr "uppdatera till senaste versionen"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-
+#: support.php:403
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-
+#: chat-support-pro.php:213
+msgid "to ensure all functionality is in working order"
+msgstr "för att säkerställa att alla funktioner funkar"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-
+#: support.php:405
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-
+#: chat-support-pro.php:215
+msgid "If you are having difficulty updating the plugin, please contact"
+msgstr "Om du har problem med att uppdatera detta plugin, var god kontakta"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-
+#: support.php:430
+msgid "Experiencing problems with the plugin?"
+msgstr "Upplever du problem med detta plugin?"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-
+#: support.php:432
+msgid "Review the documentation."
+msgstr "Läs dokumentationen."
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-
+#: support.php:433
+msgid "Or ask a question on our"
+msgstr "Eller ställ en fråga på vår"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-
+#: support.php:455
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-
+#: chat-support-pro.php:562
+msgid "Visitors on site"
+msgstr "Besökare på sidan"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-
+#: support.php:456
+msgid "With the Pro add-on of WP Live Chat Support, you can"
+msgstr "Med Pro add-on av WP live Chat Support, så kan du"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-
+#: support.php:456
+msgid "see who's online and initiate chats"
+msgstr "se vilka som är online och initiera chattar"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-
+#: support.php:456
+msgid "with your online visitors with the click of a button."
+msgstr "med dina besökare som är online med ett klick."
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-
+#: support.php:456
+msgid "Buy the Pro add-on now for only $29.95 once off. Free Updates FOREVER."
+msgstr ""
+"Köp Pro add-on nu för endast en engångssumma på $29.95. Fria uppdateringar "
+"för evigt!"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-
+#: support.php:456
+msgid "Buy the Pro add-on now for only $29.95 once off. Free Updates Forever."
+msgstr ""
+"Köp Pro add-on nu för endast en engångssumma på $29.95. Fria uppdateringar "
+"för evigt!"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-
+#: support.php:516
+msgid "Previous"
+msgstr "Föregående"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-
+#: support.php:516
+msgid "Active"
+msgstr "Aktiv"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-
+#: support.php:534
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-
+#: chat-support-pro.php:672
+msgid "End chat"
+msgstr "Avsluta chatt"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-
+#: support.php:644
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-
+#: chat-support-pro.php:799
+msgid "User has opened the chat window"
+msgstr "Användaren har öppnat chattfönstret"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-
+#: support.php:649
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-
+#: chat-support-pro.php:804
+msgid "User has minimized the chat window"
+msgstr "Användaren har minimerat chattfönstret"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-
+#: support.php:654
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-
+#: chat-support-pro.php:809
+msgid "User has maximized the chat window"
+msgstr "Användaren har maximerat chattfönstret"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-
+#: support.php:659
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-
+#: chat-support-pro.php:814
+msgid "User has closed and ended the chat"
+msgstr "Användaren har stängt chattfönstrtet"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-
+#: support.php:856
+msgid "WP Live Chat History"
+msgstr "WP Live Chat Historik"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-
+#: support.php:861 C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-
+#: support/includes/settings_page.php:47 support/includes/settings_page.php:78
+#: support/includes/settings_page.php:94
+#: support/includes/settings_page.php:110
+#: support/includes/settings_page.php:126
+#: support/includes/settings_page.php:143
+#: support/includes/settings_page.php:164
+#: support/includes/settings_page.php:178
+#: support/includes/settings_page.php:228
+msgid "Pro Add-on"
+msgstr "Pro Add-on"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-
+#: support.php:885
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-
+#: chat-support-pro.php:514
+msgid "Your settings have been saved."
+msgstr "Dina inställningar har blivit sparade."
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-
+#: support.php:900
+msgid "Thank You for your feedback!"
+msgstr "Tack för din feedback!"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-
+#: support.php:904 support.php:917
+msgid "Thank you for your feedback. We will be in touch soon"
+msgstr "Tack för din feedback. Vi hör av oss snart"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-
+#: support.php:921
+msgid "There was a problem sending your feedback. Please log your feedback on "
+msgstr ""
+"Det uppstod ett problem när din feedback skickades. Var god skicka din "
+"feedback på"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-
+#: support/includes/feedback-page.php:7
+msgid "WP Live Chat Support Feedback"
+msgstr "WP Live Chat Support Feedback"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-
+#: support/includes/feedback-page.php:8
+msgid "We'd love to hear your comments and/or suggestions"
+msgstr "Vi vill verkligen höra dina kommentarer och/eller förslag"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-
+#: support/includes/feedback-page.php:13
+msgid "Your Name"
+msgstr "Ditt Namn"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-
+#: support/includes/feedback-page.php:21
+msgid "Your Email"
+msgstr "Din E-post"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-
+#: support/includes/feedback-page.php:29
+msgid "Your Website"
+msgstr "Din Hemsida"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-
+#: support/includes/feedback-page.php:48
+msgid "Send Feedback"
+msgstr "Skicka Feedback"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-
+#: support/includes/settings_page.php:6
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-
+#: pro/includes/settings_page_pro.php:17
+msgid "WP Live Chat Support Settings"
+msgstr "WP live Chat Support Inställningar"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-
+#: support/includes/settings_page.php:19
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-
+#: pro/includes/settings_page_pro.php:29
+msgid "General Settings"
+msgstr "Allmänna Inställningar"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-
+#: support/includes/settings_page.php:20
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-
+#: pro/includes/settings_page_pro.php:30
+msgid "Chat Box"
+msgstr "Chatt Fönster"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-
+#: support/includes/settings_page.php:21
+#: support/includes/settings_page.php:153
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-
+#: pro/includes/settings_page_pro.php:31
+#: pro/includes/settings_page_pro.php:141
+msgid "Offline Messages"
+msgstr "Offline Meddelanden"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-
+#: support/includes/settings_page.php:22
+#: support/includes/settings_page.php:190
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-
+#: pro/includes/settings_page_pro.php:32
+#: pro/includes/settings_page_pro.php:226
+msgid "Styling"
+msgstr "Styling"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-
+#: support/includes/settings_page.php:23
+msgid "Agents"
+msgstr "Agenter"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-
+#: support/includes/settings_page.php:26
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-
+#: pro/includes/settings_page_pro.php:36
+msgid "Main Settings"
+msgstr "Huvudinställningar"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-
+#: support/includes/settings_page.php:29
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-
+#: pro/includes/settings_page_pro.php:39
+msgid "Chat enabled"
+msgstr "Chatt aktiverad"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-
+#: support/includes/settings_page.php:32
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-
+#: pro/includes/settings_page_pro.php:42
+msgid "Yes"
+msgstr "Ja"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-
+#: support/includes/settings_page.php:33
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-
+#: pro/includes/settings_page_pro.php:43
+msgid "No"
+msgstr "Nej"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-
+#: support/includes/settings_page.php:39
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-
+#: pro/includes/settings_page_pro.php:49
+msgid "Hide Chat"
+msgstr "Göm Chatt"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-
+#: support/includes/settings_page.php:40
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-
+#: pro/includes/settings_page_pro.php:50
+msgid "Hides chat for 24hrs when user clicks X"
+msgstr "Göm chatten i 24 timmar när användaren klickar på X"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-
+#: support/includes/settings_page.php:46 support/includes/settings_page.php:77
+#: support/includes/settings_page.php:93
+#: support/includes/settings_page.php:109
+#: support/includes/settings_page.php:125
+#: support/includes/settings_page.php:142
+msgid "available in the"
+msgstr "tillgängligt i"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-
+#: support/includes/settings_page.php:48 support/includes/settings_page.php:79
+#: support/includes/settings_page.php:95
+#: support/includes/settings_page.php:111
+#: support/includes/settings_page.php:127
+#: support/includes/settings_page.php:144
+msgid "only"
+msgstr "endast"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-
+#: support/includes/settings_page.php:57
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-
+#: pro/includes/settings_page_pro.php:60
+msgid "Chat Window Settings"
+msgstr "Inställningar Chattfönster"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-
+#: support/includes/settings_page.php:60
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-
+#: pro/includes/settings_page_pro.php:63
+msgid "Chat box alignment"
+msgstr "Chattfönster placering"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-
+#: support/includes/settings_page.php:63
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-
+#: pro/includes/settings_page_pro.php:66
+msgid "Bottom left"
+msgstr "Botten till vänster"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-
+#: support/includes/settings_page.php:64
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-
+#: pro/includes/settings_page_pro.php:67
+msgid "Bottom right"
+msgstr "Botten till höger"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-
+#: support/includes/settings_page.php:87
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-
+#: pro/includes/settings_page_pro.php:86
+msgid "Picture"
+msgstr "Bild"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-
+#: support/includes/settings_page.php:90
+#: support/includes/settings_page.php:106
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-
+#: pro/includes/settings_page_pro.php:94
+msgid "Upload Image"
+msgstr "Ladda upp bild"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-
+#: support/includes/settings_page.php:103
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-
+#: pro/includes/settings_page_pro.php:103
+msgid "Logo"
+msgstr "Logo"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-
+#: support/includes/settings_page.php:119
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-
+#: pro/includes/settings_page_pro.php:120
+msgid "Chat delay (seconds)"
+msgstr "Chattfördröjning (sekunder)"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-
+#: support/includes/settings_page.php:135
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-
+#: pro/includes/settings_page_pro.php:129
+msgid "Chat notifications"
+msgstr "Chattnotifikationer"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-
+#: support/includes/settings_page.php:139
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-
+#: pro/includes/settings_page_pro.php:133
+msgid "Alert me via email as soon as someone wants to chat"
+msgstr "Skicka ett email till mig så snart någon vill chatta"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-
+#: support/includes/settings_page.php:157
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-
+#: pro/includes/settings_page_pro.php:145
+msgid "Email Address"
+msgstr "E-postadress"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-
+#: support/includes/settings_page.php:163
+msgid "Get offline messages with the "
+msgstr "Få offline meddelande med"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-
+#: support/includes/settings_page.php:172
+msgid "Offline text"
+msgstr "Offline text"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-
+#: support/includes/settings_page.php:177
+#: support/includes/settings_page.php:227
+msgid "Edit these text fields using the "
+msgstr "Ändra dessa textfält med"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-
+#: support/includes/settings_page.php:193
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-
+#: pro/includes/settings_page_pro.php:229
+msgid "Chat box fill color"
+msgstr "Chattfönster färg"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-
+#: support/includes/settings_page.php:199
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-
+#: pro/includes/settings_page_pro.php:235
+msgid "Chat box font color"
+msgstr "Chattfönster textfärg"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-
+#: support/includes/settings_page.php:206
+msgid "First section text"
+msgstr "Första textsektionen"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-
+#: support/includes/settings_page.php:213
+msgid "Second section text"
+msgstr "Andra textsektionen"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-
+#: support/includes/settings_page.php:222
+msgid "Reactivate chat section text"
+msgstr "Återaktivera chatt textsektion"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-
+#: support/includes/settings_page.php:239
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-
+#: pro/includes/settings_page_pro.php:294
+msgid "Multiple Agents"
+msgstr "Flera Agenter"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-
+#: support/includes/settings_page.php:240
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-
+#: pro/includes/settings_page_pro.php:295
+msgid "Get"
+msgstr "Få"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-
+#: support/includes/settings_page.php:240
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-
+#: pro/includes/settings_page_pro.php:295
+msgid "Multiple agent support"
+msgstr "Support för flera agenter"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-
+#: support/includes/settings_page.php:240
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-
+#: pro/includes/settings_page_pro.php:295
+msgid "for only $39.95"
+msgstr "för endast $39.95"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-
+#: support/includes/settings_page.php:243
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-
+#: pro/includes/settings_page_pro.php:299
+msgid "Save Settings"
+msgstr "Spara Inställningar"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-
+#: support/includes/welcome_page.php:4
+msgid "Welcome to "
+msgstr "Välkommen till"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-
+#: support/includes/welcome_page.php:15
+msgid "WordPress.org plugin repository "
+msgstr "WordPress.org plugin repository"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-
+#: support/includes/welcome_page.php:18
+msgid "Search Term"
+msgstr "Sökterm"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-
+#: support/includes/welcome_page.php:22
+msgid "Google or other search Engine"
+msgstr "Google eller andra sökmotorer"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-
+#: support/includes/welcome_page.php:28
+msgid "Friend recommendation"
+msgstr "Vänrekommendation"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-
+#: support/includes/welcome_page.php:34
+msgid "Other"
+msgstr "Övrigt"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-
+#: support/includes/welcome_page.php:38
+msgid "Please Explain"
+msgstr "Var god förklara"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-
+#: support/includes/welcome_page.php:47
+msgid "Submit"
+msgstr "Skicka"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-
+#: support/includes/welcome_page.php:49
+msgid "Skip"
+msgstr "Hoppa över"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/functions-
+#: pro.php:46
+msgid "Initiate Chat"
+msgstr "Påbörja Chatt"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/functions-
+#: pro.php:48
+msgid "You must be a chat agent to initiate chats"
+msgstr "Du måste vara en chattagent för att påbörja chattar"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/functions-
+#: pro.php:66
+msgid "No visitors on-line at the moment"
+msgstr "Inga besökare är online för tillfället"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/functions-
+#: pro.php:125
+msgid "Accept Chat"
+msgstr "Acceptera chatt"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/functions-
+#: pro.php:128
+msgid "You must be a chat agent to answer chats"
+msgstr "Du måste vara en chattagent för att svara på chattar"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/functions-
+#: pro.php:135
+msgid "Open Chat Window"
+msgstr "Öppna chattfönster"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/functions-
+#: pro.php:138
+msgid "Chat has been answered by another agent"
+msgstr "Chatten har blivit besvarad av en annan agent"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/functions-
+#: pro.php:141
+msgid "Chat has been Accpted By Chat Agent "
+msgstr "Chatten har blivit accepterad av en chattagent"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/functions-
+#: pro.php:170
+msgid "WP Live Chat Support - Offline Message from"
+msgstr "WP Live Chat Support - Offline Meddelande från"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/functions-
+#: pro.php:171
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-
+#: chat-support-pro.php:421
+msgid "Message"
+msgstr "Meddelande"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/functions-
+#: pro.php:171
+msgid "Via WP Live Chat Support"
+msgstr "Via WP Live Chat Support"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/functions-
+#: pro.php:225
+msgid "Alert: Someone wants to chat with you on "
+msgstr "Alert: Någon vill chatta med dig"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/functions-
+#: pro.php:226
+msgid "Someone wants to chat with you on your website"
+msgstr "Någon vill chatta med dig på din hemsida"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/functions-
+#: pro.php:226
+msgid "Log in"
+msgstr "Logga in"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-
+#: chat-support-pro.php:203
+msgid ""
+"WP Live Chat Support Pro requires WP Live Chat Support to function. You Can "
+"download the latest copy from"
+msgstr ""
+"WP Live Chat Support Pro kräver WP Live Chat Support för att fungera. Du kan "
+"ladda ner den senaste versionen från"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-
+#: chat-support-pro.php:212
+msgid "Dear User"
+msgstr "Kära Användare"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-
+#: chat-support-pro.php:213
+msgid "You are using an outdated version of WP Live Chat Support Basic. Please"
+msgstr "Du använder en gammal version av WP Live Chat Support Basic Please"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-
+#: chat-support-pro.php:302 chat-support-pro.php:661
+msgid "Date"
+msgstr "Datum"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-
+#: chat-support-pro.php:313
+msgid "No chats available at the moment"
+msgstr "Inga chattar är tillgängliga för tillfället"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-
+#: chat-support-pro.php:423
+msgid "Send message"
+msgstr "Skicka meddelande"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-
+#: chat-support-pro.php:535
+msgid "Chat sessions"
+msgstr "Chattsessioner"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-
+#: chat-support-pro.php:557
+msgid ""
+"Please note: This window must be open in order to receive new chat "
+"notifications."
+msgstr ""
+"Vänligen notera: Detta fönster måste vara öppet för att kunna ta emot nya "
+"chattnotifikationer."
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-
+#: chat-support-pro.php:651
+msgid "Chat with"
+msgstr "Chatta med"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-
+#: chat-support-pro.php:658
+msgid "Email address"
+msgstr "E-postadress"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-
+#: chat-support-pro.php:659
+msgid "IP Address"
+msgstr "IP adress"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-
+#: chat-support-pro.php:660
+msgid "From URL"
+msgstr "Från URL"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-
+#: chat-support-pro.php:660
+msgid "open"
+msgstr "öppna"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-
+#: chat-support-pro.php:667
+msgid "Attempting to open the chat window... Please be patient."
+msgstr "Försöker öppna chattfönstret... Var god vänta."
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-
+#: chat-support-pro.php:735
+msgid "This chat has already been answered. Please close the chat window"
+msgstr "Denna chatt har redan blivit svarad. Var god stäng chattfönstret"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-
+#: chat-support-pro.php:1111
+msgid ""
+"An Unexpected HTTP Error occurred during the API request.</p> <p><a href=\"?"
+"\" onclick=\"document.location.reload(); return false;\">Try again</a>"
+msgstr ""
+"Ett oväntat HTTP fel har uppstått under API förfrågan.\n"
+"</p> <p><a href=\"?\" onclick=\"document.location.reload(); return false;"
+"\">Försök Igen</a>"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-
+#: chat-support-pro.php:1116
+msgid "An unknown error occurred"
+msgstr "Ett oväntat fel uppstod"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-
+#: chat-support-pro.php:1203
+msgid "Error Log"
+msgstr "Felprotokoll"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-
+#: pro/includes/settings_page_pro.php:33
+msgid "Chat Agents"
+msgstr "Chattagenter"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-
+#: pro/includes/settings_page_pro.php:74
+msgid "Name "
+msgstr "Namn"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-
+#: pro/includes/settings_page_pro.php:96
+msgid "Remove Image"
+msgstr "Ta bort bild"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-
+#: pro/includes/settings_page_pro.php:97
+msgid "Recomended Size 40px x 40px"
+msgstr "Rekommenderad Storlek 40px x 40px"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-
+#: pro/includes/settings_page_pro.php:111
+msgid "Upload Logo"
+msgstr "Ladda upp Logo"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-
+#: pro/includes/settings_page_pro.php:113
+msgid "Remove Logo"
+msgstr "Ta bort Logo"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-
+#: pro/includes/settings_page_pro.php:114
+msgid "Recomended Size 250px x 40px"
+msgstr "Rekommenderad Storlek 250px x 40px"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-
+#: pro/includes/settings_page_pro.php:123
+msgid "how long it takes for your chat window to pop up"
+msgstr "hur länge det tar innan ditt chattfönster ska öppnas"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-
+#: pro/includes/settings_page_pro.php:134
+msgid "(while online only)"
+msgstr "(enbart medans online)"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-
+#: pro/includes/settings_page_pro.php:149
+msgid "Email address where offline messages are delivered to"
+msgstr "E-postadressen dit offlinemeddelanden skickas"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-
+#: pro/includes/settings_page_pro.php:157
+msgid "Sending Method"
+msgstr "Metod för att Skicka"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-
+#: pro/includes/settings_page_pro.php:158
+msgid "WP Mail"
+msgstr "WP Mail"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-
+#: pro/includes/settings_page_pro.php:159
+msgid "PHP Mailer"
+msgstr "PHP Mailer"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-
+#: pro/includes/settings_page_pro.php:171
+msgid "Host"
+msgstr "Host"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-
+#: pro/includes/settings_page_pro.php:179
+msgid "Port"
+msgstr "Port"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-
+#: pro/includes/settings_page_pro.php:187
+msgid "Username"
+msgstr "Användarnamn"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-
+#: pro/includes/settings_page_pro.php:195
+msgid "Password"
+msgstr "Lösenord"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-
+#: pro/includes/settings_page_pro.php:204
+msgid "Offline Chat Box Title"
+msgstr "Titel för Chattfönster Offline"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-
+#: pro/includes/settings_page_pro.php:212
+msgid "Offline Text Fields"
+msgstr "Textfält Offline"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-
+#: pro/includes/settings_page_pro.php:241
+msgid "First Section Text"
+msgstr "Första Textsektionen"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-
+#: pro/includes/settings_page_pro.php:250
+msgid "Intro Text"
+msgstr "Introtext"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-
+#: pro/includes/settings_page_pro.php:256
+msgid "Second Section Text"
+msgstr "Andra Textsektionen"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-
+#: pro/includes/settings_page_pro.php:263
+msgid "Reactivate Chat Section Text"
+msgstr "Återaktivera Textsektionen för Chatt"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-
+#: pro/includes/settings_page_pro.php:271
+msgid "User chat welcome"
+msgstr "Välkomstmeddelande för Användare"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-
+#: pro/includes/settings_page_pro.php:280
+msgid "Other text"
+msgstr "Annan Text"

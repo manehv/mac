@@ -1,0 +1,340 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Translate into Chinese\n"
+"POT-Creation-Date: 2014-05-29 10:46+0200\n"
+"PO-Revision-Date: 2014-05-29 19:15+0800\n"
+"Last-Translator: janfeng <janfeng@foxmail.com>\n"
+"Language-Team: janfeng <janfeng@foxmail.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.7\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;_e;__\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: C:\\wamp\\www\\wordpress38\\wp-content\\plugins\\wp-"
+"live-chat-support-pro\n"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:25
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:94
+msgid "IP"
+msgstr "網絡地址"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:26
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:95
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:320
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:408
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:431
+msgid "Name"
+msgstr "昵稱"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:27
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:96
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:321
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:412
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:434
+msgid "Email"
+msgstr "郵箱"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:28
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:97
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:322
+msgid "URL"
+msgstr "網址"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:29
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:98
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:323
+msgid "Status"
+msgstr "狀態"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:30
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:99
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:324
+msgid "Action"
+msgstr "動作"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:37
+msgid "No visitors on-line at the moment"
+msgstr "目前沒有訪問在線"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:46
+msgid "Initiate Chat"
+msgstr "發起聊天"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:106
+msgid "No chat sessions available at the moment"
+msgstr "目前沒有進行聊天"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:128
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:68
+msgid "Name "
+msgstr "昵稱"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:141
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:80
+msgid "Picture"
+msgstr "圖片"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:143
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:87
+msgid "Upload Image"
+msgstr "上傳圖片"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:153
+msgid "Chat Delay (seconds)"
+msgstr "聊天延遲（秒）"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:164
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:115
+msgid "Chat notifications"
+msgstr "聊天通知"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:167
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:119
+msgid "Alert me via email as soon as someone wants to chat"
+msgstr "如果有人需要聊天，通過郵箱進行通知"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:167
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:120
+msgid "(while online only)"
+msgstr "（限同時在線）"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:176
+msgid "Email address"
+msgstr "郵箱地址"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:179
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:135
+msgid "Email address where offline messages are delivered to"
+msgstr "離線消息將會傳送到電子郵件地址"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:191
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:93
+msgid "Logo"
+msgstr "圖標"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:193
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:100
+msgid "Upload Logo"
+msgstr "上傳圖標"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:205
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:213
+msgid "First Section Text"
+msgstr "第壹段文字"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:214
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:222
+msgid "Intro Text"
+msgstr "介紹文字"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:220
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:228
+msgid "Second Section Text"
+msgstr "第二部分文字"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:227
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:235
+msgid "Reactivate Chat Section Text"
+msgstr "激活文本聊天部分"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:235
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:243
+msgid "User chat welcome"
+msgstr "用戶聊天歡迎消息"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:244
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:252
+msgid "Other text"
+msgstr "其它文字"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:257
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:176
+msgid "Offline Chat Box Title"
+msgstr "離線文字"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:265
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:184
+msgid "Offline Text Fields"
+msgstr "離線文字字段"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:319
+msgid "Date"
+msgstr "時間"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:330
+msgid "No chats available at the moment"
+msgstr "目前沒有聊天記錄"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:437
+msgid "Message"
+msgstr "信息"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:461
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:655
+msgid "Send"
+msgstr "發送"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:520
+msgid "Your settings have been saved."
+msgstr "您的設置已經保存。"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:541
+msgid "Chat sessions"
+msgstr "聊天會話"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:559
+msgid ""
+"Please note: This window must be open in order to receive new chat "
+"notifications."
+msgstr "註意：聊天窗口務必是打開狀態的，以便接收新的聊天通知。"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:564
+msgid "Visitors on site"
+msgstr "網站上的訪客"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:638
+msgid "Attempting to open the chat window... Please be patient."
+msgstr "正在打開聊天窗口...請耐心等待。"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:643
+msgid "End chat"
+msgstr "結束談話"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:652
+msgid "Press ENTER to send your message"
+msgstr "按回車鍵發送消息"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:829
+msgid "User has minimized the chat window"
+msgstr "用戶縮小聊天窗口"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:835
+msgid "User has opened the chat window"
+msgstr "用戶打開聊天窗口"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:841
+msgid "User has closed and ended the chat"
+msgstr "用戶關閉並結束聊天"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:1006
+msgid ""
+"An Unexpected HTTP Error occurred during the API request.</p> <p><a href=\"?"
+"\" onclick=\"document.location.reload(); return false;\">Try again</a>"
+msgstr ""
+"API請求過程中發生了意外HTTP錯誤。</p> <p><a href=\"?\" onclick=\"document."
+"location.reload(); return false;\">重試</a>"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:1011
+msgid "An unknown error occurred"
+msgstr "發生未知錯誤"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:1066
+msgid "Live Chat"
+msgstr "在線聊天"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:1067
+msgid "Settings"
+msgstr "設置"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:1068
+msgid "History"
+msgstr "歷史"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:1070
+msgid "Error Log"
+msgstr "錯誤記錄"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:12
+msgid "WP Live Chat Support Settings"
+msgstr "WP Live Chat Support 設置"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:24
+msgid "General Settings"
+msgstr "主要設置"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:25
+msgid "Chat Box"
+msgstr "聊天框"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:26
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:127
+msgid "Offline Messages"
+msgstr "離線消息"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:27
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:198
+msgid "Styling"
+msgstr "形象"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:30
+msgid "Main Settings"
+msgstr "主要設置"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:33
+msgid "Chat enabled"
+msgstr "啟用聊天"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:36
+msgid "Yes"
+msgstr "是"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:37
+msgid "No"
+msgstr "否"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:43
+msgid "Hide Chat"
+msgstr "隱藏聊天"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:54
+msgid "Chat Window Settings"
+msgstr "聊天窗口設置"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:57
+msgid "Chat box alignment"
+msgstr "聊天窗口對齊"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:60
+msgid "Bottom left"
+msgstr "左下"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:61
+msgid "Bottom right"
+msgstr "右下"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:106
+msgid "Chat delay (seconds)"
+msgstr "聊天延遲（秒）"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:131
+msgid "Email Address"
+msgstr "郵箱地址"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:143
+msgid "Host"
+msgstr "主機"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:151
+msgid "Port"
+msgstr "端口"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:159
+msgid "Username"
+msgstr "用戶名"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:167
+msgid "Password"
+msgstr "密碼"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:201
+msgid "Chat box fill color"
+msgstr "聊天框填充顏色"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:207
+msgid "Chat box font color"
+msgstr "聊天盒子字體顏色"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:262
+msgid "Save Settings"
+msgstr "保存設置"

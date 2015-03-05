@@ -1,0 +1,964 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: wplivechat\n"
+"POT-Creation-Date: 2014-10-06 11:02+0200\n"
+"PO-Revision-Date: 2014-11-25 11:25+0100\n"
+"Last-Translator: Elsy Aelvoet <elsy.aelvoet@bluematters.be>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.10\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_e\n"
+"X-Poedit-Basepath: .\n"
+"Language: en\n"
+"X-Poedit-SearchPath-0: C:\\wamp\\www\\wordpress38\\wp-content\\plugins\\wp-"
+"live-chat-support\n"
+"X-Poedit-SearchPath-1: C:\\wamp\\www\\wordpress38\\wp-content\\plugins\\wp-"
+"live-chat-support-pro\n"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/ajax.php:230
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/ajax-pro.php:261
+msgid "Admin has closed and ended the chat"
+msgstr "Admin heeft de chat afgesloten"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/ajax.php:254
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/ajax-pro.php:296
+msgid "There is No Answer. Please Try Again Later"
+msgstr "Wij kunnen nu niet antwoorden. Probeer het later eens opnieuw aub"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/functions.php:171
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:23
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:101
+msgid "User Data"
+msgstr "Gebruikersgegevens"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/functions.php:172
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:246
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:81
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:24
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:102
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:178
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:461
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:565
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:583
+msgid "Name"
+msgstr "Naam"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/functions.php:173
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:248
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:25
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:103
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:178
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:462
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:567
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:584
+msgid "Email"
+msgstr "E-mail"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/functions.php:174
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:26
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:104
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:463
+msgid "URL"
+msgstr "URL"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/functions.php:175
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:27
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:105
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:464
+msgid "Status"
+msgstr "Status"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/functions.php:176
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:28
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:106
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:465
+msgid "Action"
+msgstr "Actie"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/functions.php:182
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:112
+msgid "No chat sessions available at the moment"
+msgstr "Er zijn geen chat-sessies beschikbaar op dit moment"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/functions.php:200
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:132
+msgid "Accept Chat"
+msgstr "Chat accepteren"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/functions.php:205
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:142
+msgid "Open Chat Window"
+msgstr "Open het chatvenster"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/functions.php:441
+msgid "complete"
+msgstr "volledig"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/functions.php:444
+msgid "pending"
+msgstr "openstaand"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/functions.php:447
+msgid "active"
+msgstr "actief"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/functions.php:450
+msgid "deleted"
+msgstr "verwijderd"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/functions.php:453
+msgid "browsing"
+msgstr "surfen"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/functions.php:456
+msgid "requesting chat"
+msgstr "chataanvraag"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/functions.php:459
+msgid "Chat Ended - User still browsing"
+msgstr "De chatsessie is beëindigd - De bezoeker blijft surfen"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/functions.php:462
+msgid "User is browsing but doesn't want to chat"
+msgstr "De bezoeker is aan het surfen en wil niet chatten"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/functions.php:526
+msgid "Get Pro Add-on to accept more chats"
+msgstr "Gebruik Pro Add-on om meer chats te accepteren"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:140
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:535
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:1402
+msgid "Live Chat"
+msgstr "Live Chat"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:141
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:1403
+msgid "Settings"
+msgstr "Instellingen"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:142
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:1404
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:1406
+msgid "History"
+msgstr "Geschiedenis"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:143
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/feedback-page.php:37
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:1407
+msgid "Feedback"
+msgstr "Feedback"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:233
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:218
+msgid "Questions?"
+msgstr "Vragen?"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:233
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:219
+msgid "Chat with us"
+msgstr "Chat met ons"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:250
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:225
+msgid "Start Chat"
+msgstr "Begin Chat"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:257
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:226
+msgid "Connecting you to a sales person. Please be patient."
+msgstr "Ik verbind u met de sales afdeling. Even geduld aub."
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:260
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:234
+msgid "Reactivating your previous chat..."
+msgstr "Opstarten van de vorige chatsessie"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:265
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:847
+msgid "Press ENTER to send your message"
+msgstr "Druk op ENTER om uw boodschap te verzenden"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:269
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:651
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:620
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:850
+msgid "Send"
+msgstr "Verzenden"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:500
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:358
+msgid "Dear Pro User"
+msgstr "Beste Pro Gebruiker"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:501
+msgid ""
+"You are using an outdated version of <strong>WP Live Chat Support Pro</"
+"strong>. Please"
+msgstr ""
+"U gebruikt een verouderde versie van <strong>WP Live Chat Ondersteuning "
+"Pro</ strong>. Aub"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:501
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:339
+msgid "update to at least version"
+msgstr "update tot versie"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:501
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:339
+msgid "to ensure all functionality is in working order"
+msgstr "om alle functionaliteit te verzekeren"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:502
+msgid ""
+"You're live chat box on your website has been temporarily disabled until the "
+"Pro plugin has been updated. This is to ensure a smooth and hassle-free user "
+"experience for both yourself and your visitors."
+msgstr ""
+"De live chatbox op uw website is tijdelijk uitgeschakeld tot wanneer de Pro "
+"plugin is bijgewerkt. Dit om een vlotte en probleemloze gebruikerservaring "
+"voor zowel uzelf en uw bezoekers te verzekeren."
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:503
+msgid ""
+"You can update your plugin <a href='./update-core.php'>here</a>, <a href='./"
+"plugins.php'>here</a> or <a href='http://wp-livechat.com/get-updated-"
+"version/' target='_BLANK'>here</a>."
+msgstr ""
+"U kan uw plugin updaten <a href='./update-core.php'>hier</a>, <a href='./"
+"plugins.php'>here</a> of <a href='http://wp-livechat.com/get-updated-"
+"version/' target='_BLANK'>hier</a>."
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:504
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:342
+msgid "If you are having difficulty updating the plugin, please contact"
+msgstr ""
+"Als u problemen ondervindt bij het bijwerken van de plugin, neem contact op "
+"aub"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:529
+msgid "Experiencing problems with the plugin?"
+msgstr "Problemen met de plug-in?"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:531
+msgid "Review the documentation."
+msgstr "Raadpleeg de documentatie"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:532
+msgid "Or ask a question on our"
+msgstr "Of stel een vraag op ons"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:554
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:714
+msgid "Visitors on site"
+msgstr "Bezoekers op de site"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:555
+msgid "With the Pro add-on of WP Live Chat Support, you can"
+msgstr "Met de Pro-add-on van WP Live Chat Ondersteuning, kunt u"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:555
+msgid "see who's online and initiate chats"
+msgstr "bekijk wie er online is en start de chatsessie"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:555
+msgid "with your online visitors with the click of a button."
+msgstr "met uw online bezoekers met één druk op de knop."
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:555
+msgid "Buy the Pro add-on now for only $29.95 once off. Free Updates FOREVER."
+msgstr ""
+"Koop éénmalig de Pro add-on nu voor slechts $ 29,95 en ontvang VOORTAAN alle "
+"updates gratis."
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:555
+msgid "Buy the Pro add-on now for only $29.95 once off. Free Updates Forever."
+msgstr ""
+"Koop de Pro add-on éénmalig nu voor slechts $ 29,95 en ontvang voortaan alle "
+"updates gratis."
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:620
+msgid "Previous"
+msgstr "Vorige"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:620
+msgid "Active"
+msgstr "Actief"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:641
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:838
+msgid "End chat"
+msgstr "Beëindig chat"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:653
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:1491
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:1493
+msgid "Assign Quick Response"
+msgstr "Formuleer een Standaardantwoord"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:653
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:1495
+msgid "Select"
+msgstr "Selecteer"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:653
+msgid "Add Quick Responses to your Live Chat"
+msgstr "Voeg Standaardantwoorden toe aan uw Live Chat"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:653
+msgid "Pro version only"
+msgstr "Enkel bij Pro versie"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:753
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:964
+msgid "User has opened the chat window"
+msgstr "De bezoeker heeft het chat venster geopend"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:758
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:969
+msgid "User has minimized the chat window"
+msgstr "De bezoeker heeft het chat venster verkleind"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:763
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:974
+msgid "User has maximized the chat window"
+msgstr "De bezoeker heeft het chat venster vergroot"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:768
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:979
+msgid "User has closed and ended the chat"
+msgstr "De bezoeker heeft het chat venster gesloten en de chatsessie beëindigd"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:977
+msgid "WP Live Chat History"
+msgstr "WP Live Chat Geschiedenis"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:982
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:46
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:88
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:104
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:120
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:136
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:153
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:174
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:188
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:238
+msgid "Pro Add-on"
+msgstr "Pro Add-on"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:1007
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:679
+msgid "Your settings have been saved."
+msgstr "Uw instellingen zijn bewaard."
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:1022
+msgid "Thank You for your feedback!"
+msgstr "Bedankt voor uw feedback!"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:1026
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:1039
+msgid "Thank you for your feedback. We will be in touch soon"
+msgstr "Bedankt voor uw feedback. Wij zullen spoedig contact opnemen."
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:1043
+msgid "There was a problem sending your feedback. Please log your feedback on "
+msgstr ""
+"Er was een probleem met het verzenden van uw feedback. Gelieve uw feedback "
+"opnieuw door te sturen"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/feedback-page.php:7
+msgid "WP Live Chat Support Feedback"
+msgstr "WP Live Chat Ondersteuning Feedback"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/feedback-page.php:8
+msgid "We'd love to hear your comments and/or suggestions"
+msgstr "We willen graag uw opmerkingen en/of suggesties horen"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/feedback-page.php:13
+msgid "Your Name"
+msgstr "Uw Naam"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/feedback-page.php:21
+msgid "Your Email"
+msgstr "Uw E-mail"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/feedback-page.php:29
+msgid "Your Website"
+msgstr "Uw Website"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/feedback-page.php:48
+msgid "Send Feedback"
+msgstr "Verstuur Feedback"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:5
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:19
+msgid "WP Live Chat Support Settings"
+msgstr "Instellingen WP Live Chat Ondersteuning"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:18
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:31
+msgid "General Settings"
+msgstr "Algemene Instellingen"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:19
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:32
+msgid "Chat Box"
+msgstr "Chat Box"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:20
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:163
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:33
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:156
+msgid "Offline Messages"
+msgstr "Offline Berichten"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:21
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:200
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:34
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:241
+msgid "Styling"
+msgstr "Styling"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:22
+msgid "Agents"
+msgstr "Operators"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:25
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:38
+msgid "Main Settings"
+msgstr "Voornaamste Instellingen"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:28
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:41
+msgid "Chat enabled"
+msgstr "Chat ingeschakeld"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:31
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:44
+msgid "Yes"
+msgstr "Ja"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:32
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:45
+msgid "No"
+msgstr "Neen"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:38
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:51
+msgid "Hide Chat"
+msgstr "Verberg Chat"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:39
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:52
+msgid "Hides chat for 24hrs when user clicks X"
+msgstr "Verbergt chat voor 24 uur wanneer de gebruiker klikt op X"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:45
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:87
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:103
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:119
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:135
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:152
+msgid "available in the"
+msgstr "beschikbaar in de"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:47
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:89
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:105
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:121
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:137
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:154
+msgid "only"
+msgstr "enkel"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:56
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:62
+msgid "Chat Window Settings"
+msgstr "Instellingen Chat Venster"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:59
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:65
+msgid "Chat box alignment"
+msgstr "Uitlijning Chatbox"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:62
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:68
+msgid "Bottom left"
+msgstr "Linksonder"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:63
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:69
+msgid "Bottom right"
+msgstr "Rechtsonder"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:64
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:70
+msgid "Left"
+msgstr "Links"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:65
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:71
+msgid "Right"
+msgstr "Rechts"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:71
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:77
+msgid "Auto Pop-up"
+msgstr "Auto Pop-up"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:75
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:81
+msgid ""
+"Expand the chat box automatically (prompts the user to enter their name and "
+"email address)."
+msgstr ""
+"Vergroot de chatbox automatisch (de bezoeker wordt gevraagd om naam en e-"
+"mailadres in te voeren)."
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:97
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:101
+msgid "Picture"
+msgstr "Beeld"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:100
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:116
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:109
+msgid "Upload Image"
+msgstr "Beeld opladen"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:113
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:118
+msgid "Logo"
+msgstr "Logo"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:129
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:135
+msgid "Chat delay (seconds)"
+msgstr "Chat vertragingstijd (seconden)"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:145
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:144
+msgid "Chat notifications"
+msgstr "Chatmeldingen"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:149
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:148
+msgid "Alert me via email as soon as someone wants to chat"
+msgstr "Verwittig mij via e-mail zodra iemand wil chatten"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:167
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:160
+msgid "Email Address"
+msgstr "E-mailadres"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:173
+msgid "Get offline messages with the "
+msgstr "Krijg offline berichten met de"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:182
+msgid "Offline text"
+msgstr "Offline tekst"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:187
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:237
+msgid "Edit these text fields using the "
+msgstr "Bewerk deze tekstvelden met behulp van de"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:203
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:244
+msgid "Chat box fill color"
+msgstr "Chatbox invulkleur"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:209
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:250
+msgid "Chat box font color"
+msgstr "Chatbox lettertype kleur"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:216
+msgid "First section text"
+msgstr "Eerste tekstgedeelte"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:223
+msgid "Second section text"
+msgstr "Tweede tekstgedeelte"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:232
+msgid "Reactivate chat section text"
+msgstr "Chat tekstgedeelte opnieuw starten"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:249
+msgid "Multiple Agents"
+msgstr "Meerdere operatoren"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:250
+msgid "Get"
+msgstr "Haal op"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:250
+msgid "Multiple agent support"
+msgstr "Ondersteuning door meerdere operatoren"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:253
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:320
+msgid "Save Settings"
+msgstr "Bewaar instellingen"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/welcome_page.php:4
+msgid "Welcome to "
+msgstr "Welkom"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/welcome_page.php:15
+msgid "WordPress.org plugin repository "
+msgstr "WordPress.org plugin archief"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/welcome_page.php:18
+msgid "Search Term"
+msgstr "Zoekterm"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/welcome_page.php:22
+msgid "Google or other search Engine"
+msgstr "Google of andere zoekmachine"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/welcome_page.php:28
+msgid "Friend recommendation"
+msgstr "Aanbevolen door een vriend"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/welcome_page.php:34
+msgid "Other"
+msgstr "Andere"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/welcome_page.php:38
+msgid "Please Explain"
+msgstr "Leg uit aub"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/welcome_page.php:47
+msgid "Submit"
+msgstr "Verzenden"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/welcome_page.php:49
+msgid "Skip"
+msgstr "Overslaan"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:46
+msgid "Initiate Chat"
+msgstr "Begin met de Chatsessie"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:48
+msgid "You must be a chat agent to initiate chats"
+msgstr "U moet een operator zijn om een chat te starten"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:70
+msgid "No visitors on-line at the moment"
+msgstr "Geen bezoekers online op het moment"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:135
+msgid "You must be a chat agent to answer chats"
+msgstr "U moet een operator zijn om chats te beantwoorden"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:145
+msgid "Chat has been answered by another agent"
+msgstr "Deze chat is beantwoord door een andere operator"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:148
+msgid "Chat has been Accepted By Chat Agent "
+msgstr "Deze chat is aanvaard door de Chat operator"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:177
+msgid "WP Live Chat Support - Offline Message from"
+msgstr "WP Live Chat Ondersteuning - Offline Bericht van"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:178
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:585
+msgid "Message"
+msgstr "Bericht"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:178
+msgid "Via WP Live Chat Support"
+msgstr "Via WP Live Chat Ondersteuning"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:227
+msgid "Alert: Someone wants to chat with you on "
+msgstr "Opgelet: Iemand wil met u chatten op "
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:228
+msgid "Someone wants to chat with you on your website"
+msgstr "Iemand wil met u chatten op uw website"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:228
+msgid "Log in"
+msgstr "Log in"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:382
+msgid "Chat Agent"
+msgstr "Chat Operator"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:387
+msgid "Make this user a chat agent"
+msgstr "Maak van deze gebruiker een operator"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:465
+msgid "Chat Agent Online"
+msgstr "Chat Operator Online"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:467
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:472
+msgid "Chat Agents Online"
+msgstr "Chat Operatoren Online"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:338
+msgid "Dear User"
+msgstr "Beste Gebruiker"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:339
+msgid "You are using an outdated version of WP Live Chat Support Basic. Please"
+msgstr ""
+"U gebruikt een verouderde versie van WP Live Chat Basis Ondersteuning . Aub"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:340
+msgid ""
+"You're live chat box on your website has been temporarily disabled until the "
+"basic plugin has been updated. This is to ensure a smooth and hassle-free "
+"user experience for both yourself and your visitors."
+msgstr ""
+"Uw live chatbox op uw website is tijdelijk uitgeschakeld tot wanneer de "
+"basis plugin is bijgewerkt. Dit om een vlotte en probleemloze "
+"gebruikerservaring voor uzelf en uw bezoekers te verzekeren."
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:341
+msgid ""
+"You can update your plugin <a href='./update-core.php'>here</a> or <a "
+"href='./plugins.php'>here</a>."
+msgstr ""
+"U kan uw plugin updaten <a href='./update-core.php'>hier</a> of <a href='./"
+"plugins.php'>hier</a>."
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:359
+msgid ""
+"WP Live Chat Support Pro requires WP Live Chat Support to function. You can "
+"download the latest copy from"
+msgstr ""
+"WP Live Chat Ondersteuning Pro vereist WP Live Chat Ondersteuning om te "
+"functioneren. U kunt de nieuwste versie downloaden op"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:460
+msgid "Date"
+msgstr "Datum"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:471
+msgid "No chats available at the moment"
+msgstr "Geen chatsessies beschikbaar op dit moment"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:587
+msgid "Send message"
+msgstr "Verstuur een bericht"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:700
+msgid "Chat sessions"
+msgstr "Chat sessies"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:709
+msgid ""
+"Please note: This window must be open in order to receive new chat "
+"notifications."
+msgstr ""
+"Let op: Dit venster moet open zijn om nieuwe chatmeldingen te ontvangen."
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:809
+msgid "Unknown"
+msgstr "Onbekend"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:814
+msgid "Chat with"
+msgstr "Chat met"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:833
+msgid "Attempting to open the chat window... Please be patient."
+msgstr "Het chatvenster wordt geopend... Even geduld aub."
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:900
+msgid "This chat has already been answered. Please close the chat window"
+msgstr "Deze chat is al beantwoord. Sluit het chatvenster aub"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:1309
+msgid ""
+"An Unexpected HTTP Error occurred during the API request.</p> <p><a href=\"?"
+"\" onclick=\"document.location.reload(); return false;\">Try again</a>"
+msgstr ""
+"Een onverwacht HTTP probleem is opgetreden tijdens de API aanvraag.</p> "
+"<p><a href=\"?\" onclick=\"document.location.reload(); return false;"
+"\">Probeer opnieuw</a>"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:1314
+msgid "An unknown error occurred"
+msgstr "Er is een onbekende fout opgetreden"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:1404
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:1417
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:1428
+msgid "Quick Responses"
+msgstr "Standaardantwoorden"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:1411
+msgid "Error Log"
+msgstr "Foutenlog"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:1418
+msgid "Quick Response"
+msgstr "Standaardantwoord"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:1419
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:1422
+msgid "New Quick Response"
+msgstr "Nieuw Standaardantwoord"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:1420
+msgid "Add New Quick Response"
+msgstr "Voeg Nieuw Standaardantwoord toe"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:1421
+msgid "Edit Quick Response"
+msgstr "Bewerk Standaardantwoord"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:1423
+msgid "All Quick Responses"
+msgstr "Alle Standaardantwoorden"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:1424
+msgid "View Quick Responses"
+msgstr "Bekijk Standaardantwoorden"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:1425
+msgid "Search Quick Responses"
+msgstr "Zoek Standaardantwoorden"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:1426
+msgid "No Quick Responses found"
+msgstr "Geen Standaardantwoorden gevonden"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:1427
+msgid "No Quick Responses found in the Trash"
+msgstr "Geen Standaardantwoorden gevonden in de prullenmand"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:1432
+msgid "Quick Responses for WP Live Chat Support Pro"
+msgstr "Standaardantwoorden voor WP Live Chat Ondersteuning Pro"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:1502
+msgid "What is this?"
+msgstr "Wat is dit?"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:35
+msgid "Chat Agents"
+msgstr "Chat Operatoren"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:87
+msgid "Name "
+msgstr "Naam"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:111
+msgid "Remove Image"
+msgstr "Verwijder beeld"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:112
+msgid "Recomended Size 40px x 40px"
+msgstr "Aanbevolen grootte 40px x 40 px"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:126
+msgid "Upload Logo"
+msgstr "Logo opladen"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:128
+msgid "Remove Logo"
+msgstr "Logo verwijderen"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:129
+msgid "Recomended Size 250px x 40px"
+msgstr "Aanbevolen grootte  250px x 40px"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:138
+msgid "how long it takes for your chat window to pop up"
+msgstr "hoe lang duurt het voor het chatvenster verschijnt"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:149
+msgid "(while online only)"
+msgstr "(enkel terwijl online)"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:164
+msgid "Email address where offline messages are delivered to"
+msgstr "E-mail adres waarnaar offline berichten verzonden worden"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:172
+msgid "Sending Method"
+msgstr "Verzendmethode"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:173
+msgid "WP Mail"
+msgstr "WP Mail"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:174
+msgid "PHP Mailer"
+msgstr "PHP Mailer"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:186
+msgid "Host"
+msgstr "Host"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:194
+msgid "Port"
+msgstr "Poort"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:202
+msgid "Username"
+msgstr "Gebruikersnaam"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:210
+msgid "Password"
+msgstr "Wachtwoord"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:219
+msgid "Offline Chat Box Title"
+msgstr "Offline Chat Box Titel"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:227
+msgid "Offline Text Fields"
+msgstr "Offline Tekstvelden"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:256
+msgid "First Section Text"
+msgstr "Eerste tekstgedeelte"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:265
+msgid "Intro Text"
+msgstr "Introtekst"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:271
+msgid "Second Section Text"
+msgstr "Tweede tekstgedeelte"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:278
+msgid "Reactivate Chat Section Text"
+msgstr "Chat tekstgedeelte opnieuw starten"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:286
+msgid "User chat welcome"
+msgstr "Verwelkoming gebruiker van een chatsessie"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:295
+msgid "Other text"
+msgstr "Andere tekst"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:315
+msgid ""
+"To add or remove a user as a chat agent, go into the users profile and "
+"select the checkbox Chat Agent and click save."
+msgstr ""
+"Ga naar het gebruikersprofiel, selecteer de checkbox Chat Operator en klik "
+"op opslaan om een operator toe te voegen of te verwijderen."
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:316
+msgid "If there are no chat agents online, the chat will show as offline"
+msgstr ""
+"Als er geen chatoperatoren online zijn, zal het chatvenster als offline "
+"weergegeven worden"

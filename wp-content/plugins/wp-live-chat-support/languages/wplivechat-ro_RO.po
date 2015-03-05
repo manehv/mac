@@ -1,0 +1,814 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: wplc\n"
+"POT-Creation-Date: 2014-06-30 15:16+0200\n"
+"PO-Revision-Date: 2014-10-30 17:25-0000\n"
+"Last-Translator: Serge Balaes <gholem_01@yahoo.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.10\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_e\n"
+"X-Poedit-Basepath: .\n"
+"Language: es_ES\n"
+"X-Poedit-SearchPath-0: C:\\wamp\\www\\wordpress38\\wp-content\\plugins\\wp-"
+"live-chat-support\n"
+"X-Poedit-SearchPath-1: C:\\wamp\\www\\wordpress38\\wp-content\\plugins\\wp-"
+"live-chat-support-pro\n"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/ajax.php:209
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/ajax-pro.php:212
+msgid "Admin has closed and ended the chat"
+msgstr "Administratorul a închis fereastra de chat"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/ajax.php:233
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/ajax-pro.php:245
+msgid "There is No Answer. Please Try Again Later"
+msgstr "Niciun răspuns. Vă rugăm încercați mai târziu"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/functions.php:145
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:23
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:100
+msgid "IP"
+msgstr "IP"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/functions.php:146
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:169
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:71
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:24
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:101
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:171
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:303
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:401
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:419
+msgid "Name"
+msgstr "Nume"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/functions.php:147
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:171
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:25
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:102
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:171
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:304
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:403
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:420
+msgid "Email"
+msgstr "Email"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/functions.php:148
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:26
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:103
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:305
+msgid "URL"
+msgstr "URL"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/functions.php:149
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:27
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:104
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:306
+msgid "Status"
+msgstr "Status"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/functions.php:150
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:28
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:105
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:307
+msgid "Action"
+msgstr "Acțiune"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/functions.php:156
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:111
+msgid "No chat sessions available at the moment"
+msgstr "Nu există sesiuni de chat activate în acest moment"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/functions.php:393
+msgid "complete"
+msgstr "complet"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/functions.php:396
+msgid "pending"
+msgstr "în așteptare"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/functions.php:399
+msgid "active"
+msgstr "activă"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/functions.php:402
+msgid "deleted"
+msgstr "ștearsă"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/functions.php:405
+msgid "browsing"
+msgstr "se răsfoiește"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/functions.php:408
+msgid "requesting chat"
+msgstr "conversație solicitată"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/functions.php:411
+msgid "Chat Ended - User still browsing"
+msgstr "Conversație incheiată - Utilizatorul încă răsfoiește site-ul"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/functions.php:414
+msgid "User is browsing but doesn't want to chat"
+msgstr "Utilizatorul răsfoiește site-ul dar nu dorește să comunice"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/functions.php:466
+msgid "Get Pro Add-on to accept more chats"
+msgstr "Cumpărați Add-on-ul Pro pentru a accepta mai multe chat-uri simultane"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:81
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:436
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:1198
+msgid "Live Chat"
+msgstr "Live Chat"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:82
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:1199
+msgid "Settings"
+msgstr "Setări"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:83
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:1200
+msgid "History"
+msgstr "Istoric"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:84
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/feedback-page.php:37
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:1201
+msgid "Feedback"
+msgstr "Feedback"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:159
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:208
+msgid "Questions?"
+msgstr "Întrebări?"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:159
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:209
+msgid "Chat with us"
+msgstr "Discutați cu noi"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:173
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:215
+msgid "Start Chat"
+msgstr "Inițiați conversație"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:180
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:216
+msgid "Connecting you to a sales person. Please be patient."
+msgstr "Vă facem legătura cu o persoană de la vânzări. Vă rugam așteptați."
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:183
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:224
+msgid "Reactivating your previous chat..."
+msgstr "Se reactivează conversația anterioară..."
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:187
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:681
+msgid "Press ENTER to send your message"
+msgstr "Apăsați ENTER pentru a trimite mesajul"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:191
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:544
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:456
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:684
+msgid "Send"
+msgstr "Trimiteți"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:402
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:202
+msgid "Dear Pro User"
+msgstr "Dragă utilizator Pro"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:403
+msgid "You are using an outdated version of WP Live Chat Support Pro. Please"
+msgstr "Utilizați o versiune veche a WP Live Chat Support Pro. Vă rugăm"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:403
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:213
+msgid "update to at least version"
+msgstr "actualizați cu ultima versiune"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:403
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:213
+msgid "to ensure all functionality is in working order"
+msgstr "pentru a asigura o bună funcționare"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:405
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:215
+msgid "If you are having difficulty updating the plugin, please contact"
+msgstr ""
+"Dacă întâmpinați dificultăți la actualizarea plugin-ului, vă rugăm contactați"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:430
+msgid "Experiencing problems with the plugin?"
+msgstr "Întâmpinați probleme cu plugin-ul?"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:432
+msgid "Review the documentation."
+msgstr "Examinați documentația."
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:433
+msgid "Or ask a question on our"
+msgstr "Sau puneți o întrebare pe"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:455
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:562
+msgid "Visitors on site"
+msgstr "Vizitatori pe site"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:456
+msgid "With the Pro add-on of WP Live Chat Support, you can"
+msgstr "Cu Add-on-ul Pro al WP Live Chat Support, puteți"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:456
+msgid "see who's online and initiate chats"
+msgstr "cine este online și iniția conversații"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:456
+msgid "with your online visitors with the click of a button."
+msgstr "cu utilizatorii Dvs. de pe site printr-un simplu click."
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:456
+msgid "Buy the Pro add-on now for only $29.95 once off. Free Updates FOREVER."
+msgstr ""
+"Cumpărați Add-on-ul Pro acum pentru numai $29.95, o singura plată. "
+"Actualizări gratis pentru totdeauna."
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:456
+msgid "Buy the Pro add-on now for only $29.95 once off. Free Updates Forever."
+msgstr ""
+"Cumpărați Add-on-ul Pro acum pentru numai $29.95, o singura plată. "
+"Actualizări gratis pentru totdeauna."
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:516
+msgid "Previous"
+msgstr "Anterioară"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:516
+msgid "Active"
+msgstr "Activă"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:534
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:672
+msgid "End chat"
+msgstr "Încheiați chat-ul"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:644
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:799
+msgid "User has opened the chat window"
+msgstr "Utilizatorul a deschis o fereastră de chat"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:649
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:804
+msgid "User has minimized the chat window"
+msgstr "Utilizatorul a minimizat fereastra de chat"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:654
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:809
+msgid "User has maximized the chat window"
+msgstr "Utilizatorul a maximizat fereastra de chat"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:659
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:814
+msgid "User has closed and ended the chat"
+msgstr "Utilizatorul a închis fereastra de chat"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:856
+msgid "WP Live Chat History"
+msgstr "Istoricul discuțiilor"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:861
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:47
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:78
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:94
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:110
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:126
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:143
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:164
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:178
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:228
+msgid "Pro Add-on"
+msgstr "Versiunea Pro"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:885
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:514
+msgid "Your settings have been saved."
+msgstr "Setările Dvs. au fost salvate"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:900
+msgid "Thank You for your feedback!"
+msgstr "Vă mulțumim pentru feedback!"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:904
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:917
+msgid "Thank you for your feedback. We will be in touch soon"
+msgstr "Vă mulțumim pentru feedback! Vă vom contacta în curând"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:921
+msgid "There was a problem sending your feedback. Please log your feedback on "
+msgstr ""
+"A fost o problemă la trimiterea feedback-ului Dvs. Vă rugăm înregistrați "
+"feedback-ul la"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/feedback-page.php:7
+msgid "WP Live Chat Support Feedback"
+msgstr "WP Live Chat Support Feedback"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/feedback-page.php:8
+msgid "We'd love to hear your comments and/or suggestions"
+msgstr "Suntem bucuroși să primim comentariile și/sau sugestiile Dvs."
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/feedback-page.php:13
+msgid "Your Name"
+msgstr "Numele Dvs."
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/feedback-page.php:21
+msgid "Your Email"
+msgstr "Adresa Dvs. de email"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/feedback-page.php:29
+msgid "Your Website"
+msgstr "Adresa site-ului Dvs."
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/feedback-page.php:48
+msgid "Send Feedback"
+msgstr "Comentariul Dvs."
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:6
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:17
+msgid "WP Live Chat Support Settings"
+msgstr "Setările WP Live Chat Support"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:19
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:29
+msgid "General Settings"
+msgstr "Setări Generale"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:20
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:30
+msgid "Chat Box"
+msgstr "Fereastra de chat"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:21
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:153
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:31
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:141
+msgid "Offline Messages"
+msgstr "Mesaje offline"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:22
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:190
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:32
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:226
+msgid "Styling"
+msgstr "Stilizări"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:23
+msgid "Agents"
+msgstr "Agenți"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:26
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:36
+msgid "Main Settings"
+msgstr "Setări Principale"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:29
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:39
+msgid "Chat enabled"
+msgstr "Chat activat"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:32
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:42
+msgid "Yes"
+msgstr "Da"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:33
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:43
+msgid "No"
+msgstr "Nu"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:39
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:49
+msgid "Hide Chat"
+msgstr "Ascunde fereastra de chat"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:40
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:50
+msgid "Hides chat for 24hrs when user clicks X"
+msgstr "Ascunde fereastra de chat pentru 24h când utilizatorul face click pe X"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:46
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:77
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:93
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:109
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:125
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:142
+msgid "available in the"
+msgstr "disponibil în"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:48
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:79
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:95
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:111
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:127
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:144
+msgid "only"
+msgstr "doar"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:57
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:60
+msgid "Chat Window Settings"
+msgstr "Setările Ferestrei de Chat"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:60
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:63
+msgid "Chat box alignment"
+msgstr "Aliniere fereastră chat"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:63
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:66
+msgid "Bottom left"
+msgstr "Stânga jos"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:64
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:67
+msgid "Bottom right"
+msgstr "Dreapta jos"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:87
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:86
+msgid "Picture"
+msgstr "Imagine"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:90
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:106
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:94
+msgid "Upload Image"
+msgstr "Încarcă imagine"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:103
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:103
+msgid "Logo"
+msgstr "Logo"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:119
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:120
+msgid "Chat delay (seconds)"
+msgstr "Întârziere chat (secunde)"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:135
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:129
+msgid "Chat notifications"
+msgstr "Notificări chat"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:139
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:133
+msgid "Alert me via email as soon as someone wants to chat"
+msgstr "Alertează-mă pe email imediat când cineva dorește să discute"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:157
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:145
+msgid "Email Address"
+msgstr "Adresa de email"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:163
+msgid "Get offline messages with the "
+msgstr "Primiți mesajele offline cu"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:172
+msgid "Offline text"
+msgstr "Text offline"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:177
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:227
+msgid "Edit these text fields using the "
+msgstr "Editați căsuțele de text utilizând"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:193
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:229
+msgid "Chat box fill color"
+msgstr "Culoare pentru fereastra de chat"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:199
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:235
+msgid "Chat box font color"
+msgstr "Culoare "
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:206
+msgid "First section text"
+msgstr "Text prima secțiune"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:213
+msgid "Second section text"
+msgstr "Text a II-a secțiune"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:222
+msgid "Reactivate chat section text"
+msgstr "Text pentru secțiunea de reactivare chat"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:239
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:294
+msgid "Multiple Agents"
+msgstr "Agenți multipli"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:240
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:295
+msgid "Get"
+msgstr "Obține"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:240
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:295
+msgid "Multiple agent support"
+msgstr "Suport agenți multipli"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:240
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:295
+msgid "for only $39.95"
+msgstr "pentru numai $39.95"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:243
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:299
+msgid "Save Settings"
+msgstr "Salvează Setările"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/welcome_page.php:4
+msgid "Welcome to "
+msgstr "Bine ați venit pe"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/welcome_page.php:15
+msgid "WordPress.org plugin repository "
+msgstr "Depozitul de plugin-uri Wordpress.org"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/welcome_page.php:18
+msgid "Search Term"
+msgstr "Căutați termen"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/welcome_page.php:22
+msgid "Google or other search Engine"
+msgstr "Google sau alt motor de căutare"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/welcome_page.php:28
+msgid "Friend recommendation"
+msgstr "Recomandare prieten"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/welcome_page.php:34
+msgid "Other"
+msgstr "Altceva"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/welcome_page.php:38
+msgid "Please Explain"
+msgstr "Vă rugam să explicați"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/welcome_page.php:47
+msgid "Submit"
+msgstr "Trimite"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support/includes/welcome_page.php:49
+msgid "Skip"
+msgstr "Sari peste"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:46
+msgid "Initiate Chat"
+msgstr "Inițiere conversație"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:48
+msgid "You must be a chat agent to initiate chats"
+msgstr "Trebuie sa fiți un agent pentru a iniția o conversație"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:66
+msgid "No visitors on-line at the moment"
+msgstr "Nu există vizitatori online momentan"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:125
+msgid "Accept Chat"
+msgstr "Acceptați conversație"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:128
+msgid "You must be a chat agent to answer chats"
+msgstr "Trebuie să fiți un agent pentru a accepta conversații"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:135
+msgid "Open Chat Window"
+msgstr "Deschide Fereatra de Chat"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:138
+msgid "Chat has been answered by another agent"
+msgstr "Conversația a fost preluată de către un alt agent"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:141
+msgid "Chat has been Accpted By Chat Agent "
+msgstr "Conversația a fost acceptată de către un agent"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:170
+msgid "WP Live Chat Support - Offline Message from"
+msgstr "WP Live Chat Support - Mesaj offline de la"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:171
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:421
+msgid "Message"
+msgstr "Mesaj"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:171
+msgid "Via WP Live Chat Support"
+msgstr "Via WP Live Chat Support"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:225
+msgid "Alert: Someone wants to chat with you on "
+msgstr "Atenție: cineva dorește să discute cu Dvs. la "
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:226
+msgid "Someone wants to chat with you on your website"
+msgstr "Cineva dorește să discute cu Dvs. pe site"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:226
+msgid "Log in"
+msgstr "Autentificare"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:203
+msgid ""
+"WP Live Chat Support Pro requires WP Live Chat Support to function. You Can "
+"download the latest copy from"
+msgstr ""
+"WP Live Chat Support Pro este necesar pentru ca WP Live Chat Support să "
+"funcționeze. Puteți descărca ultima versiune de pe"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:212
+msgid "Dear User"
+msgstr "Dragă utilizatorule"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:213
+msgid "You are using an outdated version of WP Live Chat Support Basic. Please"
+msgstr "Folosiți o versiune veche a WP Live Chat Support Basic. Vă rugăm"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:302
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:661
+msgid "Date"
+msgstr "Dată"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:313
+msgid "No chats available at the moment"
+msgstr "Nu există discuții momentan"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:423
+msgid "Send message"
+msgstr "Trimiteți mesaj"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:535
+msgid "Chat sessions"
+msgstr "Sesiuni de chat"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:557
+msgid ""
+"Please note: This window must be open in order to receive new chat "
+"notifications."
+msgstr ""
+"Atenție: trebuie să închideți această fereastră pentru a primi noi "
+"notificări de chat"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:651
+msgid "Chat with"
+msgstr "Discutați cu"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:658
+msgid "Email address"
+msgstr "Adresă de email"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:659
+msgid "IP Address"
+msgstr "Adresă IP"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:660
+msgid "From URL"
+msgstr "De la URL"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:660
+msgid "open"
+msgstr "deschideți"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:667
+msgid "Attempting to open the chat window... Please be patient."
+msgstr "Se încearcă deschiderea ferestrei de chat... Vă rugăm așteptați."
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:735
+msgid "This chat has already been answered. Please close the chat window"
+msgstr ""
+"La această discuție s-a răspuns deja. Vă rugăm închideți fereastra de chat"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:1111
+msgid ""
+"An Unexpected HTTP Error occurred during the API request.</p> <p><a href=\"?"
+"\" onclick=\"document.location.reload(); return false;\">Try again</a>"
+msgstr ""
+"O eroare HTTP a avut loc când s-a făcut cererea API.</p> <p><a href=\"?\" "
+"onclick=\"document.location.reload(); return false;\">Încercați din nou</a>"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:1116
+msgid "An unknown error occurred"
+msgstr "O eroare necunoscută a avut loc"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:1203
+msgid "Error Log"
+msgstr "Registrul de erori"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:33
+msgid "Chat Agents"
+msgstr "Agenți de chat"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:74
+msgid "Name "
+msgstr "Nume"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:96
+msgid "Remove Image"
+msgstr "Ștergeți imaginea"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:97
+msgid "Recomended Size 40px x 40px"
+msgstr "Mărime recomandată: 40px x 40px"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:111
+msgid "Upload Logo"
+msgstr "Încărcați Logo"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:113
+msgid "Remove Logo"
+msgstr "Ștergeți Logo"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:114
+msgid "Recomended Size 250px x 40px"
+msgstr "Mărime recomandată: 250px x 40px"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:123
+msgid "how long it takes for your chat window to pop up"
+msgstr "cât timp durează până apare fereastra de discuții (pop up)"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:134
+msgid "(while online only)"
+msgstr "(doar cât sunteți online)"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:149
+msgid "Email address where offline messages are delivered to"
+msgstr "Adresa de email unde sunt trimise mesajele offline"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:157
+msgid "Sending Method"
+msgstr "Metoda de trimitere"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:158
+msgid "WP Mail"
+msgstr "WP Mail"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:159
+msgid "PHP Mailer"
+msgstr "PHP Mailer"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:171
+msgid "Host"
+msgstr "Host"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:179
+msgid "Port"
+msgstr "Port"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:187
+msgid "Username"
+msgstr "Nume utilizator"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:195
+msgid "Password"
+msgstr "Parolă"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:204
+msgid "Offline Chat Box Title"
+msgstr "Titlul ferestrei de chat când este offline"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:212
+msgid "Offline Text Fields"
+msgstr "Câmpurile text când este offline"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:241
+msgid "First Section Text"
+msgstr "Text prima secțiune"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:250
+msgid "Intro Text"
+msgstr "Text introductiv"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:256
+msgid "Second Section Text"
+msgstr "Text a II-a secțiune"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:263
+msgid "Reactivate Chat Section Text"
+msgstr "Text secțiune Reactivare Chat"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:271
+msgid "User chat welcome"
+msgstr "Întâmpinare chat utilizator"
+
+#: C:\wamp\www\wordpress38\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:280
+msgid "Other text"
+msgstr "Alt text"
