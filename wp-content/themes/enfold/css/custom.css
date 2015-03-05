@@ -179,7 +179,7 @@ table div.quantity{width:150px; }
 #top .form-row.form-row-quarter, #top .form-row.form-row-half{margin-right:1%; }
 #top .form-row.form-row-quarter.form-row-quarter-last, #top .form-row.form-row-half.form-row-half-last{margin-right:0; }
 div .av_two_third{margin-left:2%; }
-body .column-top-margin{margin-top:10px; }
+/*body .column-top-margin{margin-top:10px; }*/
 #top .main_color .checkout .input-text, #top .main_color .checkout .chosen-single{border-radius:2px; font-size:11px; padding:13px; line-height:normal; height:auto; }
 #top input[type="text"]:focus, #top input[type="password"]:focus, #top input[type="email"]:focus, #top input[type="number"]:focus, #top input[type="url"]:focus, #top input[type="tel"]:focus, #top input[type="search"]:focus, #top textarea:focus{box-shadow:0 0 2px 0 rgba(0, 0, 0, 0.2) !important; }
 #top #payment{border-width:2px; width:50%; }
