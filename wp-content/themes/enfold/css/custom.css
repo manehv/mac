@@ -13,7 +13,7 @@ padding-left:30px;
 
 /*POSICION BOTTOM BNT CHAT*/
 .cx-chat-btn {
-    font-size: 12px !important;
+    font-size: 14px !important;
     box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.3) !important;
     transition: background-color 0.3s ease 0s;
     z-index: 999999;
