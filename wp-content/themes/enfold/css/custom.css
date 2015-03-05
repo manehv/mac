@@ -37,7 +37,7 @@ padding-left:30px;
     font-family: 'myriad_set_promedium' !important;
     padding: 1px 21px;
 	width: 200px;
-	right: 24px;
+	right: 24px !important;
 }
 /* General Custom CSS */
 .clsTitleCon{background-color:#000000; height:110px; }
