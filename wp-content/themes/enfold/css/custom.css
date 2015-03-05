@@ -19,6 +19,7 @@ padding-left:30px;
     z-index: 999999;
     cursor: pointer;
     bottom: 109px !important;
+    font-family: 'myriad_set_promedium';
 }
 /* General Custom CSS */
 .clsTitleCon{background-color:#000000; height:110px; }
