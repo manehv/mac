@@ -10,6 +10,17 @@
 #desc p {
 padding-left:30px;	
 }
+/* txt parrafo widget chat*/
+.cx-form .cx-lead {
+    color: #222;
+    font-size: 13px !important;
+    font-family: 'myriad_set_promedium' !important;
+    text-align: justify;
+    line-height: 19px;
+    margin-bottom: 30px;
+}
+
+
 /* fuente titulo widget chat*/
 .cx-widget .cx-header > .cx-title {
     font-size: 16px;
