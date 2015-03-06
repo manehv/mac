@@ -12,7 +12,7 @@
 .av_textblock_section.ft{
 min-height: inherit !important;
 min-height: 50px !important;
-background-color:red;
+background-color:red !important;
 }
 /*padding div descripcion de productos*/
 #desc p {
