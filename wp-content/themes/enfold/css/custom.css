@@ -9,7 +9,7 @@
 
 
 /* ESTILOS PARA BLOQUES DE TXTX EN FICHAS TECNICAS*/
-.av_textblock_section.ft{
+#ft{
 min-height: inherit !important;
 min-height: 50px !important;
 background-color:red !important;
