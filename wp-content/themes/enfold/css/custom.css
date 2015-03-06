@@ -11,7 +11,7 @@
 /* ESTILOS PARA BLOQUES DE TXTX EN FICHAS TECNICAS*/
 #ft{
 min-height: inherit !important;
-min-height: 50px !important;
+height: auto !important;
 background-color:red !important;
 }
 /*padding div descripcion de productos*/
