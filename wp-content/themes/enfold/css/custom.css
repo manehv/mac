@@ -6,6 +6,13 @@
 @import url('fonts/open-sans-fontfacekit/web-fonts/opensans_regular/stylesheet.css');*/
 @import url('fonts/MyriadSetPro-Bold-fontfacekit/web-fonts/MyriadSetPro-Bold/stylesheet.css');
 @import url('fonts/MyriadSetPro-Medium-fontfacekit/stylesheet.css');
+
+
+/* ESTILOS PARA BLOQUES DE TXTX EN FICHAS TECNICAS*/
+.av_textblock_section.ft{
+min-height: inherit !important;
+min-height: 50px !important;
+}
 /*padding div descripcion de productos*/
 #desc p {
 padding-left:30px;	
@@ -19,7 +26,6 @@ padding-left:30px;
     line-height: 19px;
     margin-bottom: 30px;
 }
-
 
 /* fuente titulo widget chat*/
 .cx-widget .cx-header > .cx-title {
