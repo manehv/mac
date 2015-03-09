@@ -6,7 +6,7 @@
 @import url('fonts/open-sans-fontfacekit/web-fonts/opensans_regular/stylesheet.css');*/
 @import url('fonts/MyriadSetPro-Bold-fontfacekit/web-fonts/MyriadSetPro-Bold/stylesheet.css');
 @import url('fonts/MyriadSetPro-Medium-fontfacekit/stylesheet.css');
-/*ESTILO MENU MOVIL*/
+/*ESTILO MENU MOVIL
 #mobile-advanced li {
     margin: 0px;
     padding: 0px;
@@ -14,7 +14,7 @@
     float: none;
     float: left;
     display: block;
-    width: 100px !important;
+    width: 100px !important;*/
 }
 
 /* ESTILOS PARA BLOQUES DE TXTX EN FICHAS TECNICAS*/
