@@ -12,12 +12,7 @@
 #CSS Animations
 #Media Queries
 */
-@media screen and (max-device-width:480px){
-.main_color blockquote{
-	text-align: center !important;
-border: none !important;
-}
-}
+
 
 @import url('fonts/MyriadSetPro-Medium-fontfacekit/stylesheet.css');
 /* ======================================================================================================================================================
