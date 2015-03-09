@@ -466,7 +466,7 @@ body .units.alpha {
   .responsive #top .offset-by-eleven {
     padding-left: 0;
   }
-  
+ /*AJUSTE BLOCKUOTE RESPONSIVE Y FIVE COLUMN*/ 
   .blockquote {
    text-align:center;
     font-size: 11px;
@@ -480,7 +480,12 @@ text-align:center;
     line-height: 1.5em;
     border-color:none !important;
     margin-bottom: 20px !important;	
-	
+}
+
+.responsive #top #wrap_all .flex_column {
+    margin: 0px 0px 20px;
+    width: 100%;
+    text-align: center !important;
 }
 }
 /* #Mobile (Landscape)
