@@ -467,7 +467,7 @@ body .units.alpha {
     padding-left: 0;
   }
  /*AJUSTE BLOCKUOTE RESPONSIVE Y FIVE COLUMN*/ 
-  .blockquote {
+/*  .blockquote {
    text-align:center;
     font-size: 11px;
     line-height: 1.5em;
@@ -489,6 +489,8 @@ text-align:center;
     border-bottom: 1px solid #cccccc;
 }
 }
+
+*/
 /* #Mobile (Landscape)
 ================================================== */
 /* Note: Design for a width of 480px */
