@@ -7,7 +7,7 @@
 @import url('fonts/MyriadSetPro-Bold-fontfacekit/web-fonts/MyriadSetPro-Bold/stylesheet.css');
 @import url('fonts/MyriadSetPro-Medium-fontfacekit/stylesheet.css');
 
-@media screen and (max-device-width:480px)
+@media screen and (max-device-width:480px){
 blockquote {
     border-left-style: solid;
     border:none;
@@ -19,7 +19,7 @@ blockquote {
     margin-bottom: 20px !important;
     text-align:center;
 }
-
+}
 /*ESTILO MENU MOVIL
 
 #mobile-advanced li {
