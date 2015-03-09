@@ -8,7 +8,7 @@
 @import url('fonts/MyriadSetPro-Medium-fontfacekit/stylesheet.css');
 
 @media screen and (max-device-width:480px){
-blockquote {
+.main_color blockquote{
     border-left-style: solid;
     border:none;
     padding: 20px;
