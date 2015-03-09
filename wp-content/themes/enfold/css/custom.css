@@ -6,6 +6,20 @@
 @import url('fonts/open-sans-fontfacekit/web-fonts/opensans_regular/stylesheet.css');*/
 @import url('fonts/MyriadSetPro-Bold-fontfacekit/web-fonts/MyriadSetPro-Bold/stylesheet.css');
 @import url('fonts/MyriadSetPro-Medium-fontfacekit/stylesheet.css');
+
+@media screen and (max-device-width:480px)
+blockquote {
+    border-left-style: solid;
+    border:none;
+    padding: 20px;
+    margin-right: 1em;
+    font-size: 11px;
+    line-height: 1.5em;
+    border-color: #E4E4E4 !important;
+    margin-bottom: 20px !important;
+    text-align:center;
+}
+
 /*ESTILO MENU MOVIL
 
 #mobile-advanced li {
