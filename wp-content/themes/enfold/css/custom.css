@@ -17,6 +17,7 @@
     width: 100px;
     overflow-y: hidden;
     overflow-x: scroll !important;
+    display:block;
 }
 
 /* ESTILOS PARA BLOQUES DE TXTX EN FICHAS TECNICAS*/
