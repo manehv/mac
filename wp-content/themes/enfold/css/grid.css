@@ -467,7 +467,7 @@ body .units.alpha {
     padding-left: 0;
   }
   
-  .blockquote {
+  blockquote {
    text-align:center;
     font-size: 11px;
     line-height: 1.5em;
