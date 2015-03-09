@@ -13,19 +13,6 @@
 	#Misc
     #WordPress Generated Generics
 */
-@media screen and (max-device-width:380px){
-blockquote{
-    border-left-style: solid;
-    border:none;
-    padding: 20px;
-    margin-right: 1em;
-    font-size: 11px;
-    line-height: 1.5em;
-    border-color: #E4E4E4 !important;
-    margin-bottom: 20px !important;
-    text-align:center !important;
-}
-}
 
 
 @import url('fonts/MyriadSetPro-Medium-fontfacekit/stylesheet.css');
