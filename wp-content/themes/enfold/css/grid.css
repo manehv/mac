@@ -489,6 +489,15 @@ text-align:center;
     text-align: center !important;
     border-bottom: 1px solid #cccccc;
 }
+
+.avia-section {
+    clear: both;
+    width: 100%;
+    float: left;
+    min-height: 30px;
+    position: static;
+    margin-top: 20px;
+}
 }
 
 
