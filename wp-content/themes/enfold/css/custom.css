@@ -7,6 +7,21 @@
 @import url('fonts/MyriadSetPro-Bold-fontfacekit/web-fonts/MyriadSetPro-Bold/stylesheet.css');
 @import url('fonts/MyriadSetPro-Medium-fontfacekit/stylesheet.css');
 
+/*AJUSTE DOTS SLIDER PRINCIPAL*/
+.avia-slideshow-dots a {
+    display: inline-block;
+    height: 5px;
+    width: 5px !important;
+    border-radius: 2px;
+    background: none repeat scroll 0% 0% #000;
+    opacity: 0.6;
+    text-indent: 100px;
+    overflow: hidden;
+    padding: 5px;
+    position: relative;
+    bottom: 25px;
+    margin: 0px 20px;
+}
 
 /*ESTILO MENU MOVIL
 
