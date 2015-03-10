@@ -478,8 +478,9 @@ body .units.alpha {
 text-align:center;
     font-size: 11px;
     line-height: 1.5em;
-    border-color:none !important;
-    margin-bottom: 20px !important;	
+    border-color:transparent !important;
+    margin-bottom: 20px !important;
+   border-left-width: 0px;
 }
 
 .responsive #top #wrap_all .flex_column {
