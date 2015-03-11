@@ -6,6 +6,14 @@
 @import url('fonts/open-sans-fontfacekit/web-fonts/opensans_regular/stylesheet.css');*/
 @import url('fonts/MyriadSetPro-Bold-fontfacekit/web-fonts/MyriadSetPro-Bold/stylesheet.css');
 @import url('fonts/MyriadSetPro-Medium-fontfacekit/stylesheet.css');
+/*AJUSTE MENU MOVIL*/
+#mobile-advanced ul{
+	margin:0px;
+	padding:0px;
+	position:relative;
+	float:left;
+	display:inline-box;
+}
 
 /*AJUSTE DOTS SLIDER PRINCIPAL*/
 .avia-slideshow-dots a {
