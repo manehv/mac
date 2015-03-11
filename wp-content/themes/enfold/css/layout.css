@@ -2436,7 +2436,7 @@ padding:15px 0;
 #socket .sub_menu_socket li:first-child{border:none;}
 #socket .sub_menu_socket li:last-child{padding-right:0;}
 
-#socket .copyright{float:left; width:960px !important; 
+#socket .copyright{float:left; width:100%; 
 color:#777777;}
 
 #scroll-top-link{
