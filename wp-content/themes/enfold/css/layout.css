@@ -3054,7 +3054,7 @@ font-size: 7px;
 .html_header_mobile_behavior #mobile-advanced span > a:before{ top: 0px; }
 
 #mobile-advanced ul{margin:0; padding:0; display: block; width:100%; left:0; position: relative;}
-#mobile-advanced a , #mobile-advanced .mega_menu_title{padding:13px 28px; border-bottom-style: solid; border-bottom-width:1px; width:100%; display:block; margin:0; text-decoration: none; position: relative;}
+#mobile-advanced a , #mobile-advanced .mega_menu_title{padding:13px 28px; border-bottom-style: solid; border-bottom-width:1px; width:100%; display:block; margin:0; text-decoration: none; position: relative; min-height:48px;}
 #mobile-advanced  ul a, #mobile-advanced  .mega_menu_title{padding-left:50px;}
 #mobile-advanced  ul ul a{padding-left:80px;}
 #mobile-advanced  ul ul ul a{padding-left:110px;}
