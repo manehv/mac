@@ -6,8 +6,8 @@
 @import url('fonts/open-sans-fontfacekit/web-fonts/opensans_regular/stylesheet.css');*/
 @import url('fonts/MyriadSetPro-Bold-fontfacekit/web-fonts/MyriadSetPro-Bold/stylesheet.css');
 @import url('fonts/MyriadSetPro-Medium-fontfacekit/stylesheet.css');
-
-#mobile-advanced li {
+/*AJUSTE MENU MOVILES*/
+/*#mobile-advanced li {
     margin: 0px;
     padding: 0px;
     position: relative;
@@ -17,7 +17,7 @@
     overflow-x:visible;
     overflow-y:hidden;
 }
-
+*/
 /*AJUSTE DOTS SLIDER PRINCIPAL*/
 .avia-slideshow-dots a {
     display: inline-block;
