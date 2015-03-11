@@ -8,7 +8,7 @@
 @import url('fonts/MyriadSetPro-Medium-fontfacekit/stylesheet.css');
 
 .responsive #top #wrap_all .flex_column {
-    text-align: left;
+    text-align: left !important;
 }
 
 
