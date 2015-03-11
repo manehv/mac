@@ -7,7 +7,7 @@
 @import url('fonts/MyriadSetPro-Bold-fontfacekit/web-fonts/MyriadSetPro-Bold/stylesheet.css');
 @import url('fonts/MyriadSetPro-Medium-fontfacekit/stylesheet.css');
 
-#flex_column av_one_fifth five{
+#flex_column av_one_fifth {
 	border-bottom: none !important;
 }
 .responsive #top #wrap_all .flex_column {
