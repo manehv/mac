@@ -466,6 +466,16 @@ body .units.alpha {
   .responsive #top .offset-by-eleven {
     padding-left: 0;
   }
+ /*TITULOS PAGINAS DESCRIPTIVAS*/
+  body .av-special-heading .av-special-heading-tag {
+    padding: 5px !important;
+    margin: 0px;
+    font-family: "myriad_set_promedium" !important;
+    float: left;
+    font-size: 18px !important;
+}
+  
+  
  /*AJUSTE BLOCKUOTE RESPONSIVE Y FIVE COLUMN*/ 
  .blockquote {
    text-align:center;
