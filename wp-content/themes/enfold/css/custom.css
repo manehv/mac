@@ -16,7 +16,7 @@
 
 
 /*AJUSTE MENU MOVILES*/
-/*#mobile-advanced li {
+#mobile-advanced li {
     margin: 0px;
     padding: 0px;
     position: relative;
@@ -26,7 +26,7 @@
     overflow-x:visible;
     overflow-y:hidden;
 }
-*/
+
 /*AJUSTE DOTS SLIDER PRINCIPAL*/
 .avia-slideshow-dots a {
     display: inline-block;
