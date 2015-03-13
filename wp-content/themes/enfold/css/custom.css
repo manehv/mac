@@ -538,6 +538,10 @@ color:#fff !important;
 	
 	.page-id-7116 form p #user_login [type="text"]{border:1px solid #666666 !important; box-shadow:none !important;}
 .page-id-239 .avia_ajax_form .select{ border:1px solid #666666 !important; box-shadow:none !important;}
+
+.cart_totals .wc-proceed-to-checkout{
+	display:none;
+}
 /* Media Queries */
 @media only screen and (min-width:320px) and (max-width:480px){
 .responsive .logo a, .responsive .logo img{/*height:70px !important;*/ }
