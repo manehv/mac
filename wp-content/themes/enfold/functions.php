@@ -539,7 +539,10 @@ if(!function_exists('avia_register_frontend_scripts'))
     wp_deregister_script('wc-add-to-cart-variation');
     //wp_register_script('wc-add-to-cart-variation', get_bloginfo( 'stylesheet_directory' ). '/woocommerce/assets/js/frontend/add-to-cart-variation.min.js',array( 'jquery' ), WC_VERSION, true);
 		wp_register_script('wc-add-to-cart-variation', $template_url . '/woocommerce/assets/js/frontend/add-to-cart-variation.min.js', WC_VERSION, true);
-
+		
+		wp_deregister_script('woocommerce');
+		wp_register_script('woocommerce', $template_url . '/woocommerce/assets/js/frontend/woocommerce.min.js', WC_VERSION, true);
+		
 		wp_enqueue_script( 'jquery' );
 		wp_enqueue_script( 'wp-mediaelement' );
 
