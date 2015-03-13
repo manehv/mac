@@ -162,7 +162,7 @@ echo '</a>';
 
 				<input type="submit" class="button" name="update_cart" value="<?php _e( 'Update Cart', 'woocommerce' ); ?>" /> <input type="submit" class="checkout-button button alt wc-forward" name="proceed" value="<?php _e( 'Proceed to Checkout', 'woocommerce' ); ?>" />
 
-				<?php do_action( 'woocommerce_proceed_to_checkout' ); ?>
+				<?php //do_action( 'woocommerce_proceed_to_checkout' ); ?>
 
 				<?php wp_nonce_field( 'woocommerce-cart' ); ?>
 			</td>
@@ -176,4 +176,4 @@ echo '</a>';
 
 </form>
 
-<?php do_action( 'woocommerce_after_cart' ); ?>
+<?php //do_action( 'woocommerce_after_cart' ); ?>
