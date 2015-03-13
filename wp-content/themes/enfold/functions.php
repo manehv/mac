@@ -1,5 +1,5 @@
 <?php
-error_reporting(E_ALL);
+
 define("PLUGIN_DIR", ABSPATH . 'wp-content/plugins/simplr-registration-form' );
 include_once(PLUGIN_DIR.'/lib/form.class.php');
 class SimplrExt extends SREG_Form{
