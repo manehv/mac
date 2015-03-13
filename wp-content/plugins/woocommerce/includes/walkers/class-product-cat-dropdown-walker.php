@@ -9,19 +9,22 @@
  * @author 		WooThemes
  */
 
-if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly
+}
+
+if ( ! class_exists( 'WC_Product_Cat_Dropdown_Walker' ) ) :
 
 class WC_Product_Cat_Dropdown_Walker extends Walker {
 
-	var $tree_type = 'category';
-	var $db_fields = array ('parent' => 'parent', 'id' => 'term_id', 'slug' => 'slug' );
+	public $tree_type = 'category';
+	public $db_fields = array ('parent' => 'parent', 'id' => 'term_id', 'slug' => 'slug' );
 
 	/**
 	 * @see Walker::start_el()
 	 * @since 2.1.0
 	 *
 	 * @param string $output Passed by reference. Used to append additional content.
-	 * @param object $category Category data object.
 	 * @param int $depth Depth of category in reference to parents.
 	 * @param integer $current_object_id
 	 */
@@ -76,5 +79,7 @@ class WC_Product_Cat_Dropdown_Walker extends Walker {
 			return;
 		}
 		parent::display_element( $element, $children_elements, $max_depth, $depth, $args, $output );
-	}	
+	}
 }
+
+endif;

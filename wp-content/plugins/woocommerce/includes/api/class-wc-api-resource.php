@@ -10,7 +10,9 @@
  * @since       2.1
  */
 
-if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly
+}
 
 class WC_API_Resource {
 
@@ -34,13 +36,24 @@ class WC_API_Resource {
 		// automatically register routes for sub-classes
 		add_filter( 'woocommerce_api_endpoints', array( $this, 'register_routes' ) );
 
-		// remove fields from responses when requests specify certain fields
-		// note these are hooked at a later priority so data added via filters (e.g. customer data to the order response)
-		// still has the fields filtered properly
+		// maybe add meta to top-level resource responses
 		foreach ( array( 'order', 'coupon', 'customer', 'product', 'report' ) as $resource ) {
-
 			add_filter( "woocommerce_api_{$resource}_response", array( $this, 'maybe_add_meta' ), 15, 2 );
-			add_filter( "woocommerce_api_{$resource}_response", array( $this, 'filter_response_fields' ), 20, 3 );
+		}
+
+		$response_names = array( 'order', 'coupon', 'customer', 'product', 'report',
+			'customer_orders', 'customer_downloads', 'order_note', 'order_refund',
+			'product_reviews', 'product_category'
+		);
+
+		foreach ( $response_names as $name ) {
+
+			/* remove fields from responses when requests specify certain fields
+			 * note these are hooked at a later priority so data added via
+			 * filters (e.g. customer data to the order response) still has the
+			 * fields filtered properly
+			 */
+			add_filter( "woocommerce_api_{$name}_response", array( $this, 'filter_response_fields' ), 20, 3 );
 		}
 	}
 
@@ -59,30 +72,37 @@ class WC_API_Resource {
 	 */
 	protected function validate_request( $id, $type, $context ) {
 
-		if ( 'shop_order' === $type || 'shop_coupon' === $type )
+		if ( 'shop_order' === $type || 'shop_coupon' === $type || 'shop_webhook' === $type ) {
 			$resource_name = str_replace( 'shop_', '', $type );
-		else
+		} else {
 			$resource_name = $type;
+		}
 
 		$id = absint( $id );
 
-		// validate ID
-		if ( empty( $id ) )
+		// Validate ID
+		if ( empty( $id ) ) {
 			return new WP_Error( "woocommerce_api_invalid_{$resource_name}_id", sprintf( __( 'Invalid %s ID', 'woocommerce' ), $type ), array( 'status' => 404 ) );
+		}
 
-		// only custom post types have per-post type/permission checks
+		// Only custom post types have per-post type/permission checks
 		if ( 'customer' !== $type ) {
 
 			$post = get_post( $id );
 
-			// for checking permissions, product variations are the same as the product post type
+			if ( null === $post ) {
+				return new WP_Error( "woocommerce_api_no_{$resource_name}_found", sprintf( __( 'No %s found with the ID equal to %s', 'woocommerce' ), $resource_name, $id ), array( 'status' => 404 ) );
+			}
+
+			// For checking permissions, product variations are the same as the product post type
 			$post_type = ( 'product_variation' === $post->post_type ) ? 'product' : $post->post_type;
 
-			// validate post type
-			if ( $type !== $post_type )
+			// Validate post type
+			if ( $type !== $post_type ) {
 				return new WP_Error( "woocommerce_api_invalid_{$resource_name}", sprintf( __( 'Invalid %s', 'woocommerce' ), $resource_name ), array( 'status' => 404 ) );
+			}
 
-			// validate permissions
+			// Validate permissions
 			switch ( $context ) {
 
 				case 'read':
@@ -123,36 +143,73 @@ class WC_API_Resource {
 			$args['date_query'] = array();
 
 			// resources created after specified date
-			if ( ! empty( $request_args['created_at_min'] ) )
+			if ( ! empty( $request_args['created_at_min'] ) ) {
 				$args['date_query'][] = array( 'column' => 'post_date_gmt', 'after' => $this->server->parse_datetime( $request_args['created_at_min'] ), 'inclusive' => true );
+			}
 
 			// resources created before specified date
-			if ( ! empty( $request_args['created_at_max'] ) )
+			if ( ! empty( $request_args['created_at_max'] ) ) {
 				$args['date_query'][] = array( 'column' => 'post_date_gmt', 'before' => $this->server->parse_datetime( $request_args['created_at_max'] ), 'inclusive' => true );
+			}
 
 			// resources updated after specified date
-			if ( ! empty( $request_args['updated_at_min'] ) )
+			if ( ! empty( $request_args['updated_at_min'] ) ) {
 				$args['date_query'][] = array( 'column' => 'post_modified_gmt', 'after' => $this->server->parse_datetime( $request_args['updated_at_min'] ), 'inclusive' => true );
+			}
 
 			// resources updated before specified date
-			if ( ! empty( $request_args['updated_at_max'] ) )
+			if ( ! empty( $request_args['updated_at_max'] ) ) {
 				$args['date_query'][] = array( 'column' => 'post_modified_gmt', 'before' => $this->server->parse_datetime( $request_args['updated_at_max'] ), 'inclusive' => true );
+			}
 		}
 
 		// search
-		if ( ! empty( $request_args['q'] ) )
+		if ( ! empty( $request_args['q'] ) ) {
 			$args['s'] = $request_args['q'];
+		}
 
 		// resources per response
-		if ( ! empty( $request_args['limit'] ) )
+		if ( ! empty( $request_args['limit'] ) ) {
 			$args['posts_per_page'] = $request_args['limit'];
+		}
 
 		// resource offset
-		if ( ! empty( $request_args['offset'] ) )
+		if ( ! empty( $request_args['offset'] ) ) {
 			$args['offset'] = $request_args['offset'];
+		}
+
+		// order (ASC or DESC, ASC by default)
+		if ( ! empty( $request_args['order'] ) ) {
+			$args['order'] = $request_args['order'];
+		}
+
+		// orderby
+		if ( ! empty( $request_args['orderby'] ) ) {
+			$args['orderby'] = $request_args['orderby'];
+
+			// allow sorting by meta value
+			if ( ! empty( $request_args['orderby_meta_key'] ) ) {
+				$args['meta_key'] = $request_args['orderby_meta_key'];
+			}
+		}
+
+		// allow post status change
+		if ( ! empty( $request_args['post_status'] ) ) {
+			$args['post_status'] = $request_args['post_status'];
+			unset( $request_args['post_status'] );
+		}
+
+		// filter by a list of post id
+		if ( ! empty( $request_args['in'] ) ) {
+			$args['post__in'] = explode( ',', $request_args['in'] );
+			unset( $request_args['in'] );
+		}
+
 
 		// resource page
 		$args['paged'] = ( isset( $request_args['page'] ) ) ? absint( $request_args['page'] ) : 1;
+
+		$args = apply_filters( 'woocommerce_api_query_args', $args, $request_args );
 
 		return array_merge( $base_args, $args );
 	}
@@ -234,8 +291,9 @@ class WC_API_Resource {
 	 */
 	public function filter_response_fields( $data, $resource, $fields ) {
 
-		if ( ! is_array( $data ) || empty( $fields ) )
+		if ( ! is_array( $data ) || empty( $fields ) ) {
 			return $data;
+		}
 
 		$fields = explode( ',', $fields );
 		$sub_fields = array();
@@ -289,10 +347,11 @@ class WC_API_Resource {
 	 */
 	protected function delete( $id, $type, $force = false ) {
 
-		if ( 'shop_order' === $type || 'shop_coupon' === $type )
+		if ( 'shop_order' === $type || 'shop_coupon' === $type ) {
 			$resource_name = str_replace( 'shop_', '', $type );
-		else
+		} else {
 			$resource_name = $type;
+		}
 
 		if ( 'customer' === $type ) {
 
@@ -305,7 +364,7 @@ class WC_API_Resource {
 
 		} else {
 
-			// delete order/coupon/product
+			// delete order/coupon/product/webhook
 
 			$result = ( $force ) ? wp_delete_post( $id, true ) : wp_trash_post( $id );
 

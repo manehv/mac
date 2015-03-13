@@ -1,11 +1,15 @@
 <?php
 
-if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly
+}
 
 /**
  * Mijireh Checkout Gateway
  *
  * Provides WooCommerce with Mijireh Checkout integration.
+ *
+ * @deprecated  2.2
  *
  * @class 		WC_Gateway_Mijireh
  * @extends		WC_Payment_Gateway
@@ -88,7 +92,7 @@ class WC_Gateway_Mijireh extends WC_Payment_Gateway {
 	  		try {
 	  		      $mj_order 	= new Mijireh_Order( esc_attr( $_GET['order_number'] ) );
 	  		      $wc_order_id 	= $mj_order->get_meta_value( 'wc_order_id' );
-	  		      $wc_order 	= new WC_Order( absint( $wc_order_id ) );
+	  		      $wc_order 	= wc_get_order( absint( $wc_order_id ) );
 
 	  		      // Mark order complete
 	  		      $wc_order->payment_complete();
@@ -140,41 +144,13 @@ class WC_Gateway_Mijireh extends WC_Payment_Gateway {
 			),
 			'description' => array(
 				'title'       => __( 'Description', 'woocommerce' ),
-				'type'        => 'textarea',
+				'type'        => 'text',
 				'default'     => __( 'Pay securely with your credit card.', 'woocommerce' ),
 				'description' => __( 'This controls the description which the user sees during checkout.', 'woocommerce' ),
+				'desc_tip'    => true,
 			),
 		);
     }
-
-	/**
-	 * Admin Panel Options
-	 * - Options for bits like 'title' and availability on a country-by-country basis
-	 *
-	 * @access public
-	 * @return void
-	 */
-  	public function admin_options() {
-		?>
-		<h3><?php _e( 'Mijireh Checkout', 'woocommerce' );?></h3>
-
-		<?php if ( empty( $this->access_key ) ) : ?>
-			<div class="mijireh updated">
-				<p class="main"><strong><?php _e( 'Get started with Mijireh Checkout', 'woocommerce' ); ?></strong></p>
-				<span><a href="http://www.mijireh.com/integrations/woocommerce/">Mijireh Checkout</a> <?php _e( 'provides a fully PCI Compliant, secure way to collect and transmit credit card data to your payment gateway while keeping you in control of the design of your site. Mijireh supports a wide variety of payment gateways: Stripe, Authorize.net, PayPal, eWay, SagePay, Braintree, PayLeap, and more.', 'woocommerce' ); ?></span>
-
-				<p><a href="http://secure.mijireh.com/signup" target="_blank" class="button button-primary"><?php _e( 'Join for free', 'woocommerce' ); ?></a> <a href="http://www.mijireh.com/integrations/woocommerce/" target="_blank" class="button"><?php _e( 'Learn more about WooCommerce and Mijireh', 'woocommerce' ); ?></a></p>
-
-			</div>
-		<?php else : ?>
-			<p><a href="http://www.mijireh.com/integrations/woocommerce/">Mijireh Checkout</a> <?php _e( 'provides a fully PCI Compliant, secure way to collect and transmit credit card data to your payment gateway while keeping you in control of the design of your site.', 'woocommerce' ); ?></p>
-		<?php endif; ?>
-
-		<table class="form-table">
-			<?php $this->generate_settings_html(); ?>
-		</table><!--/.form-table-->
-		<?php
-  	}
 
     /**
      * Process the payment and return the result
@@ -188,7 +164,7 @@ class WC_Gateway_Mijireh extends WC_Payment_Gateway {
 		$this->init_mijireh();
 
 		$mj_order = new Mijireh_Order();
-		$wc_order = new WC_Order( $order_id );
+		$wc_order = wc_get_order( $order_id );
 
 		// Avoid rounding issues altogether by sending the order as one lump
 		if ( get_option( 'woocommerce_prices_include_tax' ) == 'yes' ) {
@@ -248,7 +224,7 @@ class WC_Gateway_Mijireh extends WC_Payment_Gateway {
 		$billing->country 			= $wc_order->billing_country;
 		$billing->company 			= $wc_order->billing_company;
 		$billing->phone 			= $wc_order->billing_phone;
-		
+
 		if ( $billing->validate() ) {
 			$mj_order->set_billing_address( $billing );
 		}
@@ -264,7 +240,7 @@ class WC_Gateway_Mijireh extends WC_Payment_Gateway {
 		$shipping->zip_code 		= $wc_order->shipping_postcode;
 		$shipping->country 			= $wc_order->shipping_country;
 		$shipping->company 			= $wc_order->shipping_company;
-		
+
 		if ( $shipping->validate() ) {
 			$mj_order->set_shipping_address( $shipping );
 		}
@@ -323,7 +299,7 @@ class WC_Gateway_Mijireh extends WC_Payment_Gateway {
     public static function page_slurp() {
     	self::init_mijireh();
 
-		$page 	= get_page( absint( $_POST['page_id'] ) );
+		$page 	= get_post( absint( $_POST['page_id'] ) );
 		$url 	= get_permalink( $page->ID );
 		$job_id = $url;
 		if ( wp_update_post( array( 'ID' => $page->ID, 'post_status' => 'publish' ) ) ) {

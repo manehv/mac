@@ -2,24 +2,26 @@
 /**
  * WC_Report_Sales_By_Product
  *
- * @author 		WooThemes
- * @category 	Admin
- * @package 	WooCommerce/Admin/Reports
+ * @author      WooThemes
+ * @category    Admin
+ * @package     WooCommerce/Admin/Reports
  * @version     2.1.0
  */
 class WC_Report_Sales_By_Product extends WC_Admin_Report {
 
-	public $chart_colours = array();
-	public $product_ids = array();
+	public $chart_colours      = array();
+	public $product_ids        = array();
+	public $product_ids_titles = array();
 
 	/**
 	 * Constructor
 	 */
 	public function __construct() {
-		if ( isset( $_GET['product_ids'] ) && is_array( $_GET['product_ids'] ) )
-			$this->product_ids = array_map( 'absint', $_GET['product_ids'] );
-		elseif ( isset( $_GET['product_ids'] ) )
-			$this->product_ids = array( absint( $_GET['product_ids'] ) );
+		if ( isset( $_GET['product_ids'] ) && is_array( $_GET['product_ids'] ) ) {
+			$this->product_ids = array_filter( array_map( 'absint', $_GET['product_ids'] ) );
+		} elseif ( isset( $_GET['product_ids'] ) ) {
+			$this->product_ids = array_filter( array( absint( $_GET['product_ids'] ) ) );
+		}
 	}
 
 	/**
@@ -27,12 +29,14 @@ class WC_Report_Sales_By_Product extends WC_Admin_Report {
 	 * @return array
 	 */
 	public function get_chart_legend() {
-		if ( ! $this->product_ids )
+
+		if ( ! $this->product_ids ) {
 			return array();
+		}
 
 		$legend   = array();
 
-		$total_sales 	= $this->get_order_report_data( array(
+		$total_sales = $this->get_order_report_data( array(
 			'data' => array(
 				'_line_total' => array(
 					'type'            => 'order_item_meta',
@@ -53,7 +57,8 @@ class WC_Report_Sales_By_Product extends WC_Admin_Report {
 			'query_type'   => 'get_var',
 			'filter_range' => true
 		) );
-		$total_items    = absint( $this->get_order_report_data( array(
+
+		$total_items = absint( $this->get_order_report_data( array(
 			'data' => array(
 				'_qty' => array(
 					'type'            => 'order_item_meta',
@@ -72,6 +77,7 @@ class WC_Report_Sales_By_Product extends WC_Admin_Report {
 				)
 			),
 			'query_type'   => 'get_var',
+			'order_types'  => wc_get_order_types( 'order-count' ),
 			'filter_range' => true
 		) ) );
 
@@ -80,6 +86,7 @@ class WC_Report_Sales_By_Product extends WC_Admin_Report {
 			'color' => $this->chart_colours['sales_amount'],
 			'highlight_series' => 1
 		);
+
 		$legend[] = array(
 			'title' => sprintf( __( '%s purchases for the selected items', 'woocommerce' ), '<strong>' . $total_items . '</strong>' ),
 			'color' => $this->chart_colours['item_count'],
@@ -93,7 +100,6 @@ class WC_Report_Sales_By_Product extends WC_Admin_Report {
 	 * Output the report
 	 */
 	public function output_report() {
-		global $woocommerce, $wpdb, $wp_locale;
 
 		$ranges = array(
 			'year'         => __( 'Year', 'woocommerce' ),
@@ -107,7 +113,7 @@ class WC_Report_Sales_By_Product extends WC_Admin_Report {
 			'item_count'   => '#d4d9dc',
 		);
 
-		$current_range = ! empty( $_GET['range'] ) ? $_GET['range'] : '7day';
+		$current_range = ! empty( $_GET['range'] ) ? sanitize_text_field( $_GET['range'] ) : '7day';
 
 		if ( ! in_array( $current_range, array( 'custom', 'year', 'last_month', 'month', '7day' ) ) )
 			$current_range = '7day';
@@ -119,6 +125,7 @@ class WC_Report_Sales_By_Product extends WC_Admin_Report {
 
 	/**
 	 * [get_chart_widgets description]
+	 *
 	 * @return array
 	 */
 	public function get_chart_widgets() {
@@ -142,13 +149,15 @@ class WC_Report_Sales_By_Product extends WC_Admin_Report {
 
 	/**
 	 * Show current filters
-	 * @return void
 	 */
 	public function current_filters() {
+
 		$this->product_ids_titles = array();
 
 		foreach ( $this->product_ids as $product_id ) {
-			$product = get_product( $product_id );
+
+			$product = wc_get_product( $product_id );
+
 			if ( $product ) {
 				$this->product_ids_titles[] = $product->get_formatted_name();
 			} else {
@@ -157,12 +166,11 @@ class WC_Report_Sales_By_Product extends WC_Admin_Report {
 		}
 
 		echo '<p>' . ' <strong>' . implode( ', ', $this->product_ids_titles ) . '</strong></p>';
-		echo '<p><a class="button" href="' . remove_query_arg( 'product_ids' ) . '">' . __( 'Reset', 'woocommerce' ) . '</a></p>';
+		echo '<p><a class="button" href="' . esc_url( remove_query_arg( 'product_ids' ) ) . '">' . __( 'Reset', 'woocommerce' ) . '</a></p>';
 	}
 
 	/**
 	 * Product selection
-	 * @return void
 	 */
 	public function products_widget() {
 		?>
@@ -170,7 +178,7 @@ class WC_Report_Sales_By_Product extends WC_Admin_Report {
 		<div class="section">
 			<form method="GET">
 				<div>
-					<select id="product_ids" name="product_ids[]" class="ajax_chosen_select_products" multiple="multiple" data-placeholder="<?php _e( 'Search for a product&hellip;', 'woocommerce' ); ?>" style="width:203px;"></select>
+					<input type="hidden" class="wc-product-search" style="width:203px;" name="product_ids[]" data-placeholder="<?php _e( 'Search for a product&hellip;', 'woocommerce' ); ?>" data-action="woocommerce_json_search_products_and_variations" />
 					<input type="submit" class="submit button" value="<?php _e( 'Show', 'woocommerce' ); ?>" />
 					<input type="hidden" name="range" value="<?php if ( ! empty( $_GET['range'] ) ) echo esc_attr( $_GET['range'] ) ?>" />
 					<input type="hidden" name="start_date" value="<?php if ( ! empty( $_GET['start_date'] ) ) echo esc_attr( $_GET['start_date'] ) ?>" />
@@ -179,28 +187,6 @@ class WC_Report_Sales_By_Product extends WC_Admin_Report {
 					<input type="hidden" name="tab" value="<?php if ( ! empty( $_GET['tab'] ) ) echo esc_attr( $_GET['tab'] ) ?>" />
 					<input type="hidden" name="report" value="<?php if ( ! empty( $_GET['report'] ) ) echo esc_attr( $_GET['report'] ) ?>" />
 				</div>
-				<script type="text/javascript">
-					jQuery(function(){
-						// Ajax Chosen Product Selectors
-						jQuery("select.ajax_chosen_select_products").ajaxChosen({
-						    method: 	'GET',
-						    url: 		'<?php echo admin_url('admin-ajax.php'); ?>',
-						    dataType: 	'json',
-						    afterTypeDelay: 100,
-						    data:		{
-						    	action: 		'woocommerce_json_search_products_and_variations',
-								security: 		'<?php echo wp_create_nonce("search-products"); ?>'
-						    }
-						}, function (data) {
-							var terms = {};
-
-						    jQuery.each(data, function (i, val) {
-						        terms[i] = val;
-						    });
-						    return terms;
-						});
-					});
-				</script>
 			</form>
 		</div>
 		<h4 class="section_title"><span><?php _e( 'Top Sellers', 'woocommerce' ); ?></span></h4>
@@ -222,18 +208,77 @@ class WC_Report_Sales_By_Product extends WC_Admin_Report {
 							'name'            => 'order_item_qty'
 						)
 					),
+					'where_meta'   => array(
+						array(
+							'type'       => 'order_item_meta',
+							'meta_key'   => '_line_subtotal',
+							'meta_value' => '0',
+							'operator'   => '>'
+						)
+					),
 					'order_by'     => 'order_item_qty DESC',
 					'group_by'     => 'product_id',
 					'limit'        => 12,
 					'query_type'   => 'get_results',
-					'filter_range' => true
+					'filter_range' => true,
+					'order_types'  => wc_get_order_types( 'order-count' ),
 				) );
 
 				if ( $top_sellers ) {
 					foreach ( $top_sellers as $product ) {
 						echo '<tr class="' . ( in_array( $product->product_id, $this->product_ids ) ? 'active' : '' ) . '">
 							<td class="count">' . $product->order_item_qty . '</td>
-							<td class="name"><a href="' . add_query_arg( 'product_ids', $product->product_id ) . '">' . get_the_title( $product->product_id ) . '</a></td>
+							<td class="name"><a href="' . esc_url( add_query_arg( 'product_ids', $product->product_id ) ) . '">' . get_the_title( $product->product_id ) . '</a></td>
+							<td class="sparkline">' . $this->sales_sparkline( $product->product_id, 7, 'count' ) . '</td>
+						</tr>';
+					}
+				} else {
+					echo '<tr><td colspan="3">' . __( 'No products found in range', 'woocommerce' ) . '</td></tr>';
+				}
+				?>
+			</table>
+		</div>
+		<h4 class="section_title"><span><?php _e( 'Top Freebies', 'woocommerce' ); ?></span></h4>
+		<div class="section">
+			<table cellspacing="0">
+				<?php
+				$top_freebies = $this->get_order_report_data( array(
+					'data' => array(
+						'_product_id' => array(
+							'type'            => 'order_item_meta',
+							'order_item_type' => 'line_item',
+							'function'        => '',
+							'name'            => 'product_id'
+						),
+						'_qty' => array(
+							'type'            => 'order_item_meta',
+							'order_item_type' => 'line_item',
+							'function'        => 'SUM',
+							'name'            => 'order_item_qty'
+						)
+					),
+					'where_meta'   => array(
+						array(
+							'type'       => 'order_item_meta',
+							'meta_key'   => '_line_subtotal',
+							'meta_value' => '0',
+							'operator'   => '='
+						)
+					),
+					'order_by'     => 'order_item_qty DESC',
+					'group_by'     => 'product_id',
+					'limit'        => 12,
+					'query_type'   => 'get_results',
+					'filter_range' => true,
+					'order_types'  => wc_get_order_types( 'order-count' ),
+					'nocache' => true
+				) );
+
+				if ( $top_freebies ) {
+					foreach ( $top_freebies as $product ) {
+						echo '<tr class="' . ( in_array( $product->product_id, $this->product_ids ) ? 'active' : '' ) . '">
+							<td class="count">' . $product->order_item_qty . '</td>
+							<td class="name"><a href="' . esc_url( add_query_arg( 'product_ids', $product->product_id ) ) . '">' . get_the_title( $product->product_id ) . '</a></td>
 							<td class="sparkline">' . $this->sales_sparkline( $product->product_id, 7, 'count' ) . '</td>
 						</tr>';
 					}
@@ -273,7 +318,7 @@ class WC_Report_Sales_By_Product extends WC_Admin_Report {
 					foreach ( $top_earners as $product ) {
 						echo '<tr class="' . ( in_array( $product->product_id, $this->product_ids ) ? 'active' : '' ) . '">
 							<td class="count">' . wc_price( $product->order_item_total ) . '</td>
-							<td class="name"><a href="' . add_query_arg( 'product_ids', $product->product_id ) . '">' . get_the_title( $product->product_id ) . '</a></td>
+							<td class="name"><a href="' . esc_url( add_query_arg( 'product_ids', $product->product_id ) ) . '">' . get_the_title( $product->product_id ) . '</a></td>
 							<td class="sparkline">' . $this->sales_sparkline( $product->product_id, 7, 'sales' ) . '</td>
 						</tr>';
 					}
@@ -309,11 +354,12 @@ class WC_Report_Sales_By_Product extends WC_Admin_Report {
 	 * Output an export link
 	 */
 	public function get_export_button() {
-		$current_range = ! empty( $_GET['range'] ) ? $_GET['range'] : '7day';
+
+		$current_range = ! empty( $_GET['range'] ) ? sanitize_text_field( $_GET['range'] ) : '7day';
 		?>
 		<a
 			href="#"
-			download="report-<?php echo $current_range; ?>-<?php echo date_i18n( 'Y-m-d', current_time('timestamp') ); ?>.csv"
+			download="report-<?php echo esc_attr( $current_range ); ?>-<?php echo date_i18n( 'Y-m-d', current_time('timestamp') ); ?>.csv"
 			class="export_csv"
 			data-export="chart"
 			data-xaxes="<?php _e( 'Date', 'woocommerce' ); ?>"
@@ -326,6 +372,7 @@ class WC_Report_Sales_By_Product extends WC_Admin_Report {
 
 	/**
 	 * Get the main chart
+	 *
 	 * @return string
 	 */
 	public function get_main_chart() {
@@ -447,7 +494,7 @@ class WC_Report_Sales_By_Product extends WC_Admin_Report {
 								points: { show: true, radius: 5, lineWidth: 3, fillColor: '#fff', fill: true },
 								lines: { show: true, lineWidth: 4, fill: false },
 								shadowSize: 0,
-								prepend_tooltip: "<?php echo get_woocommerce_currency_symbol(); ?>"
+								<?php echo $this->get_currency_tooltip(); ?>
 							}
 						];
 
@@ -471,47 +518,47 @@ class WC_Report_Sales_By_Product extends WC_Admin_Report {
 								legend: {
 									show: false
 								},
-							    grid: {
-							        color: '#aaa',
-							        borderColor: 'transparent',
-							        borderWidth: 0,
-							        hoverable: true
-							    },
-							    xaxes: [ {
-							    	color: '#aaa',
-							    	position: "bottom",
-							    	tickColor: 'transparent',
+								grid: {
+									color: '#aaa',
+									borderColor: 'transparent',
+									borderWidth: 0,
+									hoverable: true
+								},
+								xaxes: [ {
+									color: '#aaa',
+									position: "bottom",
+									tickColor: 'transparent',
 									mode: "time",
 									timeformat: "<?php if ( $this->chart_groupby == 'day' ) echo '%d %b'; else echo '%b'; ?>",
 									monthNames: <?php echo json_encode( array_values( $wp_locale->month_abbrev ) ) ?>,
 									tickLength: 1,
 									minTickSize: [1, "<?php echo $this->chart_groupby; ?>"],
 									font: {
-							    		color: "#aaa"
-							    	}
+										color: "#aaa"
+									}
 								} ],
-							    yaxes: [
-							    	{
-							    		min: 0,
-							    		minTickSize: 1,
-							    		tickDecimals: 0,
-							    		color: '#ecf0f1',
-							    		font: { color: "#aaa" }
-							    	},
-							    	{
-							    		position: "right",
-							    		min: 0,
-							    		tickDecimals: 2,
-							    		alignTicksWithAxis: 1,
-							    		color: 'transparent',
-							    		font: { color: "#aaa" }
-							    	}
-							    ],
-					 		}
-					 	);
+								yaxes: [
+									{
+										min: 0,
+										minTickSize: 1,
+										tickDecimals: 0,
+										color: '#ecf0f1',
+										font: { color: "#aaa" }
+									},
+									{
+										position: "right",
+										min: 0,
+										tickDecimals: 2,
+										alignTicksWithAxis: 1,
+										color: 'transparent',
+										font: { color: "#aaa" }
+									}
+								],
+							}
+						);
 
-					 	jQuery('.chart-placeholder').resize();
-					 }
+						jQuery('.chart-placeholder').resize();
+					}
 
 					drawGraph();
 

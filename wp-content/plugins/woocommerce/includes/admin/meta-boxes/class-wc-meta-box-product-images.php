@@ -10,10 +10,12 @@
  * @version     2.1.0
  */
 
-if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly
+}
 
 /**
- * WC_Meta_Box_Product_Images
+ * WC_Meta_Box_Product_Images Class
  */
 class WC_Meta_Box_Product_Images {
 
@@ -62,7 +64,7 @@ class WC_Meta_Box_Product_Images {
 	 * Save meta box data
 	 */
 	public static function save( $post_id, $post ) {
-		$attachment_ids = array_filter( explode( ',', wc_clean( $_POST['product_image_gallery'] ) ) );
+		$attachment_ids = isset( $_POST['product_image_gallery'] ) ? array_filter( explode( ',', wc_clean( $_POST['product_image_gallery'] ) ) ) : array();
 
 		update_post_meta( $post_id, '_product_image_gallery', implode( ',', $attachment_ids ) );
 	}

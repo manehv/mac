@@ -4,13 +4,15 @@
  *
  * Functions used for displaying sales and customer reports in admin.
  *
- * @author 		WooThemes
- * @category 	Admin
- * @package 	WooCommerce/Admin/Reports
+ * @author      WooThemes
+ * @category    Admin
+ * @package     WooCommerce/Admin/Reports
  * @version     2.0.0
  */
 
-if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly
+}
 
 if ( ! class_exists( 'WC_Admin_Reports' ) ) :
 
@@ -42,13 +44,13 @@ class WC_Admin_Reports {
 			'orders'     => array(
 				'title'  => __( 'Orders', 'woocommerce' ),
 				'reports' => array(
-					"sales_by_date"    => array(
+					"sales_by_date" => array(
 						'title'       => __( 'Sales by date', 'woocommerce' ),
 						'description' => '',
 						'hide_title'  => true,
 						'callback'    => array( __CLASS__, 'get_report' )
 					),
-					"sales_by_product"     => array(
+					"sales_by_product" => array(
 						'title'       => __( 'Sales by product', 'woocommerce' ),
 						'description' => '',
 						'hide_title'  => true,
@@ -110,7 +112,7 @@ class WC_Admin_Reports {
 			)
 		);
 
-		if ( get_option( 'woocommerce_calc_taxes' ) == 'yes' ) {
+		if ( wc_tax_enabled() ) {
 			$reports['taxes'] = array(
 				'title'  => __( 'Taxes', 'woocommerce' ),
 				'reports' => array(
@@ -155,7 +157,7 @@ class WC_Admin_Reports {
 		$name  = sanitize_title( str_replace( '_', '-', $name ) );
 		$class = 'WC_Report_' . str_replace( '-', '_', $name );
 
-		include_once( 'reports/class-wc-report-' . $name . '.php' );
+		include_once( apply_filters( 'wc_admin_reports_path', 'reports/class-wc-report-' . $name . '.php', $name, $class ) );
 
 		if ( ! class_exists( $class ) )
 			return;

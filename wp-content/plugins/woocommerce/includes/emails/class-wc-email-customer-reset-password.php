@@ -1,6 +1,8 @@
 <?php
 
-if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly
+}
 
 if ( ! class_exists( 'WC_Email_Customer_Reset_Password' ) ) :
 
@@ -10,7 +12,7 @@ if ( ! class_exists( 'WC_Email_Customer_Reset_Password' ) ) :
  * An email sent to the customer when they reset their password.
  *
  * @class 		WC_Email_Customer_Reset_Password
- * @version		2.0.0
+ * @version		2.3.0
  * @package		WooCommerce/Classes/Emails
  * @author 		WooThemes
  * @extends 	WC_Email
@@ -18,13 +20,13 @@ if ( ! class_exists( 'WC_Email_Customer_Reset_Password' ) ) :
 class WC_Email_Customer_Reset_Password extends WC_Email {
 
 	/** @var string */
-	var $user_login;
+	public $user_login;
 
 	/** @var string */
-	var $user_email;
+	public $user_email;
 
 	/** @var string */
-	var $reset_key;
+	public $reset_key;
 
 	/**
 	 * Constructor
@@ -36,7 +38,7 @@ class WC_Email_Customer_Reset_Password extends WC_Email {
 
 		$this->id 				= 'customer_reset_password';
 		$this->title 			= __( 'Reset password', 'woocommerce' );
-		$this->description		= __( 'Customer reset password emails are sent when a customer resets their password.', 'woocommerce' );
+		$this->description		= __( 'Customer "reset password" emails are sent when customers reset their passwords.', 'woocommerce' );
 
 		$this->template_html 	= 'emails/customer-reset-password.php';
 		$this->template_plain 	= 'emails/plain/customer-reset-password.php';
@@ -59,16 +61,17 @@ class WC_Email_Customer_Reset_Password extends WC_Email {
 	 */
 	function trigger( $user_login = '', $reset_key = '' ) {
 		if ( $user_login && $reset_key ) {
-			$this->object 		= get_user_by( 'login', $user_login );
+			$this->object     = get_user_by( 'login', $user_login );
 
-			$this->user_login 	= $user_login;
-			$this->reset_key		= $reset_key;
-			$this->user_email 	= stripslashes( $this->object->user_email );
-			$this->recipient	= $this->user_email;
+			$this->user_login = $user_login;
+			$this->reset_key  = $reset_key;
+			$this->user_email = stripslashes( $this->object->user_email );
+			$this->recipient  = $this->user_email;
 		}
 
-		if ( ! $this->is_enabled() || ! $this->get_recipient() )
+		if ( ! $this->is_enabled() || ! $this->get_recipient() ) {
 			return;
+		}
 
 		$this->send( $this->get_recipient(), $this->get_subject(), $this->get_content(), $this->get_headers(), $this->get_attachments() );
 

@@ -2,13 +2,15 @@
 /**
  * WooCommerce Integration Settings
  *
- * @author 		WooThemes
- * @category 	Admin
- * @package 	WooCommerce/Admin
+ * @author      WooThemes
+ * @category    Admin
+ * @package     WooCommerce/Admin
  * @version     2.1.0
  */
 
-if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly
+}
 
 if ( ! class_exists( 'WC_Settings_Integrations' ) ) :
 
@@ -21,6 +23,7 @@ class WC_Settings_Integrations extends WC_Settings_Page {
 	 * Constructor.
 	 */
 	public function __construct() {
+
 		$this->id    = 'integration';
 		$this->label = __( 'Integration', 'woocommerce' );
 
@@ -42,18 +45,22 @@ class WC_Settings_Integrations extends WC_Settings_Page {
 
 		$sections = array();
 
-		$integrations = WC()->integrations->get_integrations();
+		if ( ! defined( 'WC_INSTALLING' ) ) {
+			$integrations = WC()->integrations->get_integrations();
 
-		if ( ! $current_section && ! empty( $integrations ) )
-			$current_section = current( $integrations )->id;
+			if ( ! $current_section && ! empty( $integrations ) ) {
+				$current_section = current( $integrations )->id;
+			}
 
-		foreach ( $integrations as $integration ) {
-			$title = empty( $integration->method_title ) ? ucfirst( $integration->id ) : $integration->method_title;
-
-			$sections[ strtolower( $integration->id ) ] = esc_html( $title );
+			if ( sizeof( $integrations ) > 1 ) {
+				foreach ( $integrations as $integration ) {
+					$title = empty( $integration->method_title ) ? ucfirst( $integration->id ) : $integration->method_title;
+					$sections[ strtolower( $integration->id ) ] = esc_html( $title );
+				}
+			}
 		}
 
-		return $sections;
+		return apply_filters( 'woocommerce_get_sections_' . $this->id, $sections );
 	}
 
 	/**

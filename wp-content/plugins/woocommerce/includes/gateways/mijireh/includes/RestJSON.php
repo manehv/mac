@@ -1,9 +1,14 @@
 <?php
 
-if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly
+}
 
 class Mijireh_RestJSON extends Mijireh_Rest {
 
+  /**
+   * @param string $url
+   */
   public function post($url, $data, $headers=array()) {
     return parent::post($url, json_encode($data), $headers);
   }

@@ -5,49 +5,50 @@
  * Handles shipping and loads shipping methods via hooks.
  *
  * @class 		WC_Shipping
- * @version		1.6.4
+ * @version		2.3.0
  * @package		WooCommerce/Classes/Shipping
  * @category	Class
  * @author 		WooThemes
  */
 
-if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly
+}
 
 class WC_Shipping {
 
 	/** @var bool True if shipping is enabled. */
-	var $enabled					= false;
+	public $enabled					= false;
 
 	/** @var array Stores methods loaded into woocommerce. */
-	var $shipping_methods 			= array();
+	public $shipping_methods 		= array();
 
 	/** @var float Stores the cost of shipping */
-	var $shipping_total 			= 0;
+	public $shipping_total 			= 0;
 
 	/**  @var array Stores an array of shipping taxes. */
-	var $shipping_taxes				= array();
+	public $shipping_taxes			= array();
 
 	/** @var array Stores the shipping classes. */
-	var $shipping_classes			= array();
+	public $shipping_classes		= array();
 
 	/** @var array Stores packages to ship and to get quotes for. */
-	var $packages					= array();
+	public $packages				= array();
 
 	/**
-	 * @var WooCommerce The single instance of the class
+	 * @var WC_Shipping The single instance of the class
 	 * @since 2.1
 	 */
 	protected static $_instance = null;
 
 	/**
-	 * Main WooCommerce Instance
+	 * Main WC_Shipping Instance
 	 *
-	 * Ensures only one instance of WooCommerce is loaded or can be loaded.
+	 * Ensures only one instance of WC_Shipping is loaded or can be loaded.
 	 *
 	 * @since 2.1
 	 * @static
-	 * @see WC()
-	 * @return Main WooCommerce instance
+	 * @return WC_Shipping Main instance
 	 */
 	public static function instance() {
 		if ( is_null( self::$_instance ) )
@@ -338,7 +339,7 @@ class WC_Shipping {
 		if ( ! $package ) return false;
 
 		// Check if we need to recalculate shipping for this package
-		$package_hash   = 'wc_ship_' . md5( json_encode( $package ) );
+		$package_hash   = 'wc_ship_' . md5( json_encode( $package ) . WC_Cache_Helper::get_transient_version( 'shipping' ) );
 		$status_options = get_option( 'woocommerce_status_options', array() );
 
 		if ( false === ( $stored_rates = get_transient( $package_hash ) ) || ( ! empty( $status_options['shipping_debug_mode'] ) && current_user_can( 'manage_options' ) ) ) {

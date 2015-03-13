@@ -8,7 +8,9 @@
  * @version     2.2.0
  */
 
-if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly
+}
 
 global $wpdb;
 
@@ -110,8 +112,8 @@ $wpdb->query( "
 );
 
 // Update variations which manage stock
-$update_variations = $wpdb->get_col( "
-	SELECT DISTINCT posts.ID FROM {$wpdb->posts} as posts
+$update_variations = $wpdb->get_results( "
+	SELECT DISTINCT posts.ID AS variation_id, posts.post_parent AS variation_parent FROM {$wpdb->posts} as posts
 	LEFT OUTER JOIN {$wpdb->postmeta} AS postmeta ON posts.ID = postmeta.post_id AND postmeta.meta_key = '_stock'
 	LEFT OUTER JOIN {$wpdb->postmeta} as postmeta2 ON posts.ID = postmeta2.post_id AND postmeta2.meta_key = '_manage_stock'
 	WHERE posts.post_type = 'product_variation'
@@ -120,8 +122,38 @@ $update_variations = $wpdb->get_col( "
 	AND postmeta2.meta_value IS NULL
 " );
 
-foreach ( $update_variations as $variation_id ) {
-	add_post_meta( $variation_id, '_manage_stock', 'yes', true );
+foreach ( $update_variations as $variation ) {
+	$parent_backorders = get_post_meta( $variation->variation_parent, '_backorders', true );
+	add_post_meta( $variation->variation_id, '_manage_stock', 'yes', true );
+	add_post_meta( $variation->variation_id, '_backorders', $parent_backorders ? $parent_backorders : 'no', true );
+}
+
+// Update taxonomy names with correct sanitized names
+$attribute_taxonomies = $wpdb->get_results( "SELECT * FROM " . $wpdb->prefix . "woocommerce_attribute_taxonomies" );
+
+foreach ( $attribute_taxonomies as $attribute_taxonomy ) {
+	$sanitized_attribute_name = wc_sanitize_taxonomy_name( $attribute_taxonomy->attribute_name );
+	if ( $sanitized_attribute_name !== $attribute_taxonomy->attribute_name ) {
+		if ( ! $wpdb->get_var( $wpdb->prepare( "SELECT 1 FROM {$wpdb->prefix}woocommerce_attribute_taxonomies WHERE attribute_name = %s;", $sanitized_attribute_name ) ) ) {
+			// Update attribute
+			$wpdb->update(
+				"{$wpdb->prefix}woocommerce_attribute_taxonomies",
+				array(
+					'attribute_name' => $sanitized_attribute_name
+				),
+				array(
+					'attribute_id' => $attribute_taxonomy->attribute_id
+				)
+			);
+
+			// Update terms
+			$wpdb->update(
+				$wpdb->term_taxonomy,
+				array( 'taxonomy' => wc_attribute_taxonomy_name( $sanitized_attribute_name ) ),
+				array( 'taxonomy' => 'pa_' . $attribute_taxonomy->attribute_name )
+			);
+		}
+	}
 }
 
 // add webhook capabilities to shop_manager/administrator role

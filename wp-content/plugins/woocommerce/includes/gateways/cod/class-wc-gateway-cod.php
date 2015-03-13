@@ -1,6 +1,8 @@
 <?php
 
-if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly
+}
 
 /**
  * Cash on Delivery Gateway
@@ -47,12 +49,10 @@ class WC_Gateway_COD extends WC_Payment_Gateway {
      * Initialise Gateway Settings Form Fields
      */
     public function init_form_fields() {
-    	global $woocommerce;
-
     	$shipping_methods = array();
 
     	if ( is_admin() )
-	    	foreach ( WC()->shipping->load_shipping_methods() as $method ) {
+	    	foreach ( WC()->shipping()->load_shipping_methods() as $method ) {
 		    	$shipping_methods[ $method->id ] = $method->get_title();
 	    	}
 
@@ -88,7 +88,7 @@ class WC_Gateway_COD extends WC_Payment_Gateway {
 			'enable_for_methods' => array(
 				'title'             => __( 'Enable for shipping methods', 'woocommerce' ),
 				'type'              => 'multiselect',
-				'class'             => 'chosen_select',
+				'class'             => 'wc-enhanced-select',
 				'css'               => 'width: 450px;',
 				'default'           => '',
 				'description'       => __( 'If COD is only available for certain methods, set it up here. Leave blank to enable for all methods.', 'woocommerce' ),
@@ -122,7 +122,7 @@ class WC_Gateway_COD extends WC_Payment_Gateway {
 
 			if ( is_page( wc_get_page_id( 'checkout' ) ) && 0 < get_query_var( 'order-pay' ) ) {
 				$order_id = absint( get_query_var( 'order-pay' ) );
-				$order    = new WC_Order( $order_id );
+				$order    = wc_get_order( $order_id );
 
 				// Test if order needs shipping.
 				$needs_shipping = false;
@@ -200,7 +200,7 @@ class WC_Gateway_COD extends WC_Payment_Gateway {
      */
 	public function process_payment( $order_id ) {
 
-		$order = new WC_Order( $order_id );
+		$order = wc_get_order( $order_id );
 
 		// Mark as processing (payment won't be taken until delivery)
 		$order->update_status( 'processing', __( 'Payment to be made upon delivery.', 'woocommerce' ) );

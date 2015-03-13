@@ -7,9 +7,8 @@
  * @author 		WooThemes
  * @category 	Shortcodes
  * @package 	WooCommerce/Shortcodes/Order_Tracking
- * @version     2.0.0
+ * @version     2.3.0
  */
-
 class WC_Shortcode_Order_Tracking {
 
 	/**
@@ -42,9 +41,7 @@ class WC_Shortcode_Order_Tracking {
 
 		global $post;
 
-		if ( ! empty( $_REQUEST['orderid'] ) ) {
-
-			wp_verify_nonce( $_POST['_wpnonce'], 'woocommerce-order_tracking' );
+		if ( ! empty( $_REQUEST['orderid'] ) && isset( $_POST['_wpnonce'] ) && wp_verify_nonce( $_POST['_wpnonce'], 'woocommerce-order_tracking' ) ) {
 
 			$order_id 		= empty( $_REQUEST['orderid'] ) ? 0 : esc_attr( $_REQUEST['orderid'] );
 			$order_email	= empty( $_REQUEST['order_email'] ) ? '' : esc_attr( $_REQUEST['order_email']) ;
@@ -59,9 +56,9 @@ class WC_Shortcode_Order_Tracking {
 
 			} else {
 
-				$order = new WC_Order( apply_filters( 'woocommerce_shortcode_order_tracking_order_id', $order_id ) );
+				$order = wc_get_order( apply_filters( 'woocommerce_shortcode_order_tracking_order_id', $order_id ) );
 
-				if ( $order->id && $order_email ) {
+				if ( $order && $order->id && $order_email ) {
 
 					if ( strtolower( $order->billing_email ) == strtolower( $order_email ) ) {
 						do_action( 'woocommerce_track_order', $order->id );
@@ -74,7 +71,7 @@ class WC_Shortcode_Order_Tracking {
 
 				} else {
 
-					echo '<p class="woocommerce-error">' . sprintf( __( 'Sorry, we could not find that order id in our database.', 'woocommerce' ), get_permalink($post->ID ) ) . '</p>';
+					echo '<p class="woocommerce-error">' . sprintf( __( 'Sorry, we could not find that order ID in our database.', 'woocommerce' ), get_permalink($post->ID ) ) . '</p>';
 
 				}
 

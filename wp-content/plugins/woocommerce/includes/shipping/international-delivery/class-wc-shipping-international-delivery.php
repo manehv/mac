@@ -1,20 +1,23 @@
 <?php
 
-if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly
+}
 
+if ( ! class_exists( 'WC_Shipping_International_Delivery' ) ) :
 /**
  * International Shipping Method based on Flat Rate shipping
  *
  * A simple shipping method for a flat fee per item or per order.
  *
  * @class 		WC_Shipping_International_Delivery
- * @version		2.0.0
+ * @version		2.3.0
  * @package		WooCommerce/Classes/Shipping
  * @author 		WooThemes
  */
 class WC_Shipping_International_Delivery extends WC_Shipping_Flat_Rate {
 
-	var $id = 'international_delivery';
+	public $id = 'international_delivery';
 
 	/**
 	 * __construct function.
@@ -61,6 +64,7 @@ class WC_Shipping_International_Delivery extends WC_Shipping_Flat_Rate {
 			'availability' => array(
 							'title'			=> __( 'Availability', 'woocommerce' ),
 							'type'			=> 'select',
+							'class'         => 'wc-enhanced-select',
 							'description'	=> '',
 							'default'		=> 'including',
 							'options'		=> array(
@@ -71,7 +75,7 @@ class WC_Shipping_International_Delivery extends WC_Shipping_Flat_Rate {
 			'countries' => array(
 							'title'			=> __( 'Countries', 'woocommerce' ),
 							'type'			=> 'multiselect',
-							'class'			=> 'chosen_select',
+							'class'			=> 'wc-enhanced-select',
 							'css'			=> 'width: 450px;',
 							'default'		=> '',
 							'options'		=> WC()->countries->get_shipping_countries(),
@@ -82,6 +86,7 @@ class WC_Shipping_International_Delivery extends WC_Shipping_Flat_Rate {
 			'tax_status' => array(
 							'title'			=> __( 'Tax Status', 'woocommerce' ),
 							'type'			=> 'select',
+							'class'         => 'wc-enhanced-select',
 							'default'		=> 'taxable',
 							'options'		=> array(
 								'taxable'	=> __( 'Taxable', 'woocommerce' ),
@@ -91,6 +96,7 @@ class WC_Shipping_International_Delivery extends WC_Shipping_Flat_Rate {
 			'type' => array(
 							'title'			=> __( 'Cost Added...', 'woocommerce' ),
 							'type'			=> 'select',
+							'class'         => 'wc-enhanced-select',
 							'default'		=> 'order',
 							'options'		=> array(
 								'order'		=> __( 'Per Order - charge shipping for the entire order as a whole', 'woocommerce' ),
@@ -209,3 +215,5 @@ class WC_Shipping_International_Delivery extends WC_Shipping_Flat_Rate {
 	}
 
 }
+
+endif;

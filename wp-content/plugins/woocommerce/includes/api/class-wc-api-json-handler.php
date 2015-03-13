@@ -10,7 +10,9 @@
  * @since       2.1
  */
 
-if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly
+}
 
 class WC_API_JSON_Handler implements WC_API_Handler {
 
@@ -22,7 +24,7 @@ class WC_API_JSON_Handler implements WC_API_Handler {
 	 */
 	public function get_content_type() {
 
-		return 'application/json; charset=' . get_option( 'blog_charset' );
+		return sprintf( '%s; charset=%s', isset( $_GET['_jsonp'] ) ? 'application/javascript' : 'application/json', get_option( 'blog_charset' ) );
 	}
 
 	/**
@@ -64,7 +66,11 @@ class WC_API_JSON_Handler implements WC_API_Handler {
 				$data = array( array( 'code' => 'woocommerce_api_jsonp_callback_invalid', __( 'The JSONP callback function is invalid', 'woocommerce' ) ) );
 			}
 
-			return $_GET['_jsonp'] . '(' . json_encode( $data ) . ')';
+			// see http://miki.it/blog/2014/7/8/abusing-jsonp-with-rosetta-flash/
+			WC()->api->server->header( 'X-Content-Type-Options', 'nosniff' );
+
+			// Prepend '/**/' to mitigate possible JSONP Flash attacks
+			return '/**/' . $_GET['_jsonp'] . '(' . json_encode( $data ) . ')';
 		}
 
 		return json_encode( $data );

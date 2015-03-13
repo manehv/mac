@@ -1,6 +1,8 @@
 <?php
 
-if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly
+}
 
 class Mijireh_Order extends Mijireh_Model {
 
@@ -188,6 +190,10 @@ class Mijireh_Order extends Mijireh_Model {
     }
   }
 
+  /**
+   * @param string $key
+   * @param integer $value
+   */
   public function add_meta_data($key, $value) {
     if(!is_array($this->_data['meta_data'])) {
       $this->_data['meta_data'] = array();
@@ -199,6 +205,7 @@ class Mijireh_Order extends Mijireh_Model {
    * Return the value associated with the given key in the order's meta data.
    *
    * If the key does not exist, return false.
+   * @param string $key
    */
   public function get_meta_value($key) {
     $value = false;
