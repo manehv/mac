@@ -4,10 +4,12 @@
  *
  * @author 		WooThemes
  * @package 	WooCommerce/Templates
- * @version     2.0.0
+ * @version     2.3.0
  */
 
-if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
 
 global $woocommerce;
 
@@ -36,26 +38,20 @@ echo '</a>';
 	<span>Recibo</span>
 	<img src="<?php echo get_template_directory_uri(); ?>/images/cart-line2.svg" />
 </div>
-<form name="checkout" method="post" class="checkout" action="<?php echo esc_url( $get_checkout_url ); ?>">
+<form name="checkout" method="post" class="checkout woocommerce-checkout" action="<?php echo esc_url( $get_checkout_url ); ?>" enctype="multipart/form-data">
 
 	<?php if ( sizeof( $checkout->checkout_fields ) > 0 ) : ?>
 
 		<?php do_action( 'woocommerce_checkout_before_customer_details' ); ?>
 
 		<div class="col2-set" id="customer_details">
-
 			<div class="">
-
 				<?php do_action( 'woocommerce_checkout_billing' ); ?>
-
 			</div>
 
 			<div class="">
-
 				<?php do_action( 'woocommerce_checkout_shipping' ); ?>
-
 			</div>
-
 		</div>
 
 		<?php do_action( 'woocommerce_checkout_after_customer_details' ); ?>
@@ -64,7 +60,13 @@ echo '</a>';
 
 	<?php endif; ?>
 
-	<?php do_action( 'woocommerce_checkout_order_review' ); ?>
+	<?php do_action( 'woocommerce_checkout_before_order_review' ); ?>
+
+	<div id="order_review" class="woocommerce-checkout-review-order">
+		<?php do_action( 'woocommerce_checkout_order_review' ); ?>
+	</div>
+
+	<?php do_action( 'woocommerce_checkout_after_order_review' ); ?>
 
 </form>
 

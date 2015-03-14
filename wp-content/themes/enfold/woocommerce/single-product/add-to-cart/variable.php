@@ -2,12 +2,14 @@
 /**
  * Variable product add to cart
  *
- * @author 		WooThemes
- * @package 	WooCommerce/Templates
- * @version     2.1.0
+ * @author  WooThemes
+ * @package WooCommerce/Templates
+ * @version 2.3.0
  */
 
-if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
 
 global $woocommerce, $product, $post;
 ?>
@@ -22,13 +24,12 @@ global $woocommerce, $product, $post;
 	<?php if ( ! empty( $available_variations ) ) : ?>
 		<table class="variations" cellspacing="0" cellpadding="0">
 			<tbody>
-				<?php $loop = 0; 
+				<?php $loop = 0;
 				//Check how many attributes it having
 				$cnt = count($attributes);
-				// If the attribute length is last then we needs to check extra description and cost for the product
 				foreach ( $attributes as $name => $options ) : $loop++; ?>
 					<tr>
-						<!--<td class="label"><label for="<?php echo sanitize_title($name); ?>"><?php echo wc_attribute_label( $name ); ?></label></td> -->
+<!-- 						<td class="label"><label for="<?php echo sanitize_title( $name ); ?>"><?php echo wc_attribute_label( $name ); ?></label></td> -->
 						<td class="value"><fieldset>
 							<?php
 									if ( is_array( $options ) ) {
@@ -42,13 +43,13 @@ global $woocommerce, $product, $post;
 												echo "<input type='hidden' id='lastAttr' value='attribute_". sanitize_title($name)."'>";
 												$class = 'bold';
 											}
-			
-											// Get terms if this is a taxonomy - ordered
-											if ( taxonomy_exists( sanitize_title( $name ) ) ) {
 
-													$terms = get_terms( sanitize_title($name), array('menu_order' => 'ASC') );
-				
-													foreach ( $terms as $term ) {
+									// Get terms if this is a taxonomy - ordered
+									if ( taxonomy_exists( sanitize_title( $name ) ) ) {
+
+										$terms = get_terms( sanitize_title($name), array('menu_order' => 'ASC') );
+
+										foreach ( $terms as $term ) {
 															if ( ! in_array( $term->slug, $options ) ) continue;
 															echo '<input type="radio" value="' . strtolower($term->slug) . '" ' . checked( strtolower ($selected_value), strtolower ($term->slug), false ) . ' id="'. esc_attr( sanitize_title($name) ) .'" name="attribute_'. sanitize_title($name).'" ><span class="'. $class .'">' . apply_filters( 'woocommerce_variation_option_name', $term->name ).'</span><br />';
 															//Check if its last
@@ -73,15 +74,15 @@ global $woocommerce, $product, $post;
 									}
 							?>
                     </fieldset> <?php
-							if ( sizeof($attributes) == $loop )
+							if ( sizeof( $attributes ) === $loop ) 
 								//echo '<a class="reset_variations" href="#reset">' . __( 'Clear selection', 'woocommerce' ) . '</a>';
 						?></td>
 					</tr>
 		        <?php endforeach;?>
 			</tbody>
 		</table>
-	<?php endif; ?>
-	<?php if ( ! empty( $available_variations ) ) : //EXPLICITLY BYPASSED BY MANISH ?>
+		<?php endif; ?>
+		<?php if ( ! empty( $available_variations ) ) : //EXPLICITLY BYPASSED BY MANISH ?>
 		<?php do_action( 'woocommerce_before_add_to_cart_button' ); ?>
 
 		<div class="single_variation_wrap" style="display:none;">
@@ -98,7 +99,7 @@ global $woocommerce, $product, $post;
 			
 			<input type="hidden" name="add-to-cart" value="<?php echo $product->id; ?>" />
 			<input type="hidden" name="product_id" value="<?php echo esc_attr( $post->ID ); ?>" />
-			<input type="hidden" name="variation_id" value="" />
+			<input type="hidden" name="variation_id" class="variation_id" value="" />
 
 			<?php do_action( 'woocommerce_after_single_variation' ); ?>
 		</div>
