@@ -4,13 +4,13 @@
  *
  * @author 		WooThemes
  * @package 	WooCommerce/Templates
- * @version     2.1.0
+ * @version     2.3.0
  */
 
-if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
-
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly
+}
 global $woocommerce;
-
 wc_print_notices();
 
 do_action( 'woocommerce_before_cart' ); ?>
@@ -66,7 +66,7 @@ echo '</a>';
 
 					<td class="product-remove">
 						<?php
-							echo apply_filters( 'woocommerce_cart_item_remove_link', sprintf( '<a href="%s" class="remove-custom" title="%s"><img src="'.get_template_directory_uri().'/images/cerrar-01.png" /></a>', esc_url( WC()->cart->get_remove_url( $cart_item_key ) ), __( 'Remove this item', 'woocommerce' ) ), $cart_item_key );
+							echo apply_filters( 'woocommerce_cart_item_remove_link', sprintf( '<a href="%s" class="remove" title="%s">&times;</a>', esc_url( WC()->cart->get_remove_url( $cart_item_key ) ), __( 'Remove this item', 'woocommerce' ) ), $cart_item_key );
 						?>
 					</td>
 
@@ -77,7 +77,7 @@ echo '</a>';
 							if ( ! $_product->is_visible() )
 								echo $thumbnail;
 							else
-								printf( '<a href="%s">%s</a>', $_product->get_permalink(), $thumbnail );
+								printf( '<a href="%s">%s</a>', $_product->get_permalink( $cart_item ), $thumbnail );
 						?>
 					</td>
 
@@ -86,7 +86,7 @@ echo '</a>';
 							if ( ! $_product->is_visible() )
 								echo apply_filters( 'woocommerce_cart_item_name', $_product->get_title(), $cart_item, $cart_item_key );
 							else
-								echo apply_filters( 'woocommerce_cart_item_name', sprintf( '<a href="%s">%s</a>', $_product->get_permalink(), $_product->get_title() ), $cart_item, $cart_item_key );
+								echo apply_filters( 'woocommerce_cart_item_name', sprintf( '<a href="%s">%s</a>', $_product->get_permalink( $cart_item ), $_product->get_title() ), $cart_item, $cart_item_key );
 
 							// Meta data
 							echo WC()->cart->get_item_data( $cart_item );
@@ -155,14 +155,14 @@ echo '</a>';
 
 						<label for="coupon_code"><?php _e( 'Coupon', 'woocommerce' ); ?>:</label> <input type="text" name="coupon_code" class="input-text" id="coupon_code" value="" placeholder="<?php _e( 'Coupon code', 'woocommerce' ); ?>" /> <input type="submit" class="button" name="apply_coupon" value="<?php _e( 'Apply Coupon', 'woocommerce' ); ?>" />
 
-						<?php do_action('woocommerce_cart_coupon'); ?>
+						<?php do_action( 'woocommerce_cart_coupon' ); ?>
 
 					</div>
 				<?php } ?>
 
-				<input type="submit" class="button" name="update_cart" value="<?php _e( 'Update Cart', 'woocommerce' ); ?>" /> <input type="submit" class="checkout-button button alt wc-forward" name="proceed" value="<?php _e( 'Proceed to Checkout', 'woocommerce' ); ?>" />
+				<input type="submit" class="button" name="update_cart" value="<?php _e( 'Update Cart', 'woocommerce' ); ?>" /><input type="submit" class="checkout-button button alt wc-forward" name="proceed" value="<?php _e( 'Proceed to Checkout', 'woocommerce' ); ?>" />
 
-				<?php //do_action( 'woocommerce_proceed_to_checkout' ); ?>
+				<?php do_action( 'woocommerce_cart_actions' ); ?>
 
 				<?php wp_nonce_field( 'woocommerce-cart' ); ?>
 			</td>
@@ -176,4 +176,12 @@ echo '</a>';
 
 </form>
 
-<?php //do_action( 'woocommerce_after_cart' ); ?>
+<!--<div class="cart-collaterals">
+
+	<?php //do_action( 'woocommerce_cart_collaterals' ); ?>
+
+	<?php //woocommerce_cart_totals(); ?>
+
+</div>-->
+
+<?php do_action( 'woocommerce_after_cart' ); ?>
