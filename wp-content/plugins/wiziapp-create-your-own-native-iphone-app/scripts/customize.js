@@ -1,4 +1,25 @@
 (function($,w,d){
+	function check() {
+		var val = wp.customize.value("wiziapp_plugin");
+		if (val && val.get() === "customize") {
+			// Hack ahoy: Force value to be dirty, so it is sent to frame
+			val._dirty = true;
+			wp.customize.unbind("add", check);
+		}
+	}
+	function check_menu() {
+		var val = wp.customize.value("wiziapp_theme_menu");
+		if (val && val.get() !== "") {
+			// Hack ahoy: Force value to be dirty, so it is sent to frame
+			val._dirty = true;
+			wp.customize.unbind("add", check_menu);
+		}
+	}
+	wp.customize.bind("add", check);
+	wp.customize.bind("add", check_menu);
+	wp.customize.bind("saved", check);
+	check();
+	check_menu();
 	$(function() {
 		$(".wiziapp-plugin-theme-switch").change(function() {
 			var h = w.location.href, t = $(this).val(), nh = h.replace(/&theme=[^&]*/, "&theme="+encodeURIComponent(t));

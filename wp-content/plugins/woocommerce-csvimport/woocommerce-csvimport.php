@@ -4,7 +4,7 @@
 	Plugin URI: http://allaerd.org/
 	Description: Import CSV files in Woocommerce
 	
-	Version: 2.1.0
+	Version: 2.2.2
 	
 	License: GPLv2 or later
 	
@@ -35,7 +35,7 @@ if (!function_exists('notempty')) {
 	}
 }
 
-//lnaguages
+//languages
 add_action('init', 'woocsv_load_plugin_textdomain');
 
 if (!function_exists('woocsv_load_plugin_textdomain')) {

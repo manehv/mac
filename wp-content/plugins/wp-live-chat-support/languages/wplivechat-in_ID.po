@@ -1,0 +1,1532 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: wplivechat\n"
+"POT-Creation-Date: 2015-02-19 14:26+0200\n"
+"PO-Revision-Date: 2015-03-04 14:52+0700\n"
+"Last-Translator: Andrie <andriefrista@gmail.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.7.4\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_e\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Language: id\n"
+"X-Poedit-SearchPath-0: C:\\wamp\\www\\wordpress\\wp-content\\plugins\\wp-"
+"live-chat-support\n"
+"X-Poedit-SearchPath-1: C:\\wamp\\www\\wordpress\\wp-content\\plugins\\wp-"
+"live-chat-support-pro\n"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/ajax-pro.php:264
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/ajax.php:228
+msgid "Admin has closed and ended the chat"
+msgstr "Admin telah menutup dan mengakhiri percakapan"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/ajax-pro.php:299
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/ajax.php:252
+msgid "There is No Answer. Please Try Again Later"
+msgstr "Tidak ada jawaban. Silakan untuk mencoba lagi."
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:23
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:874
+msgid "Visitors on site"
+msgstr "Pengunjung situs"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:40
+msgid "Initiate Chat"
+msgstr "Memulai percakapan"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:42
+msgid "You must be a chat agent to initiate chats"
+msgstr "Untuk memulai percakapan, anda harus terdaftar sebagai 'chat agent'"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:53
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:205
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:1163
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/functions.php:205
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:940
+msgid "IP Address not recorded"
+msgstr "IP Address tidak tercatat"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:55
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:207
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:1165
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/functions.php:207
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:942
+msgid "Whois for"
+msgstr "'Whois' untuk"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:87
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:257
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:1202
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/functions.php:241
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:964
+msgid "Site Info"
+msgstr "Informasi Situs"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:89
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:259
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:1204
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/functions.php:243
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:966
+msgid "Chat initiated on:"
+msgstr "Percakapan dimulai pada :"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:93
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:263
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:1208
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/functions.php:247
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:970
+msgid "Advanced Info"
+msgstr "Info lebih lanjut"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:95
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:265
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:1210
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/functions.php:249
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:972
+msgid "Browser:"
+msgstr "Browser:"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:96
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:266
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:1211
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/functions.php:250
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:973
+msgid "IP Address:"
+msgstr "Alamat IP:"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:139
+msgid "No visitors on-line at the moment"
+msgstr "Tidak ada pengunjung on-line pada saat ini"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:182
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/functions.php:188
+msgid "No chat sessions available at the moment"
+msgstr "Tidak ada sesi percakapan pada saat ini"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:184
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/functions.php:190
+msgid "Active Chats"
+msgstr "Percapakan aktif"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:213
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/functions.php:212
+msgid "Accept Chat"
+msgstr "Terima Percakapan"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:215
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/functions.php:214
+msgid "Incoming Chat"
+msgstr "Percakapan masuk"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:215
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/functions.php:214
+msgid "You have an incoming chat."
+msgstr "Anda memiliki percakapan masuk."
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:219
+msgid "You must be a chat agent to answer chats"
+msgstr ""
+"Untuk dapat menjawab percakapan anda harus terdaftar sebagai 'chat agent'"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:225
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/functions.php:218
+msgid "Open Chat Window"
+msgstr "Buka window percakapan"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:227
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/functions.php:220
+msgid "Chat Active"
+msgstr "Percapakan aktif"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:227
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/functions.php:220
+msgid "This chat is active"
+msgstr "Percakapan ini sedang aktif"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:229
+msgid "Chat has been answered by another agent"
+msgstr "Percakapan ini sudah di jawab oleh agent lain"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:230
+msgid "Chat answered by another agent"
+msgstr "Percakapan sudah di jawab oleh agent lain"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:288
+msgid "WP Live Chat Support - Offline Message from "
+msgstr "WP Live Chat Support - Pesan Offline dari "
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:289
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:729
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:599
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:819
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:858
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/functions.php:886
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:177
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:483
+msgid "Name"
+msgstr "Nama"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:289
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:730
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:600
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:820
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:859
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/functions.php:887
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:484
+msgid "Email"
+msgstr "Email/Surel"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:289
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:731
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:860
+msgid "Message"
+msgstr "Pesan"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:289
+msgid "Via WP Live Chat Support"
+msgstr "Melalui Dukungan WP Live Chat"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:337
+msgid "Alert: Someone wants to chat with you on "
+msgstr "Perhatian : Seseorang ingin melakukan percakapan dengan anda pada"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:338
+msgid "Someone wants to chat with you on your website"
+msgstr "Seseorang ingin melakukan percakapan dengan anda pada website anda"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:338
+msgid "Log in"
+msgstr "Log in / Masuk"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:508
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:524
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:539
+msgid "Chat Agent"
+msgstr "Chat Agent/Agen Percakapan"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:513
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:529
+msgid "Make this user a chat agent"
+msgstr "Jadikan user ini sebagai chat agent"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:543
+msgid "Your user role does not allow you to make yourself a chat agent."
+msgstr "Peraturan tidak mengijinkan anda menjadi chat agent."
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:544
+msgid "Please contact the administrator of this website to change this."
+msgstr ""
+"Selahkan menghubungi administrator website ini untuk melakukan perubahan."
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:630
+msgid "Chat Agent Online"
+msgstr "Chat Agent Online"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:632
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:637
+msgid "Chat Agents Online"
+msgstr "Chat Agents Online"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:728
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:598
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/functions.php:885
+msgid "Date"
+msgstr "Tanggal"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/functions-pro.php:745
+msgid "You have not received any offline messages."
+msgstr "Anda tidak menerima pesan offline"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:20
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:5
+msgid "WP Live Chat Support Settings"
+msgstr "Pengaturan Dukungan WP Live Chat "
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:31
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:19
+msgid "General Settings"
+msgstr "Pengaturan Umum"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:32
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:20
+msgid "Chat Box"
+msgstr "Kotak Percakapan"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:33
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:261
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:1875
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:21
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:283
+msgid "Offline Messages"
+msgstr "Pesan offline"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:34
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:360
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:22
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:338
+msgid "Styling"
+msgstr "Styling"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:35
+msgid "Chat Agents"
+msgstr "Chat Agents/Agen Percakapan"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:36
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:551
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:24
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:432
+msgid "Animations"
+msgstr "Animasi"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:39
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:27
+msgid "Main Settings"
+msgstr "Pengaturan Utama"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:42
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:30
+msgid "Chat enabled"
+msgstr "percakapan diaktifkan"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:45
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:33
+msgid "Yes"
+msgstr "Ya"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:46
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:34
+msgid "No"
+msgstr "Tidak"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:51
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:39
+msgid "Choose when I want to be online"
+msgstr "Pilih waktu untuk online"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:54
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:40
+msgid ""
+"Checking this will allow you to change your status to \"Online\" or \"Offline"
+"\" on the \"Live Chat\" page."
+msgstr ""
+"Memilih ini memungkinkan anda untuk merubah status menjadi \"Online\" or "
+"\"Offline\" pada halaman \"Live Chat\" ."
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:59
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:55
+msgid "Hide Chat"
+msgstr "Sembunyikan percakapan"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:60
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:56
+msgid "Hides chat for 24hrs when user clicks X"
+msgstr "Sembunyikan percakapan selama 24 Jam ketika pengguna meng-klik X"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:68
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:72
+msgid "Require Name And Email"
+msgstr "Membutuhkan Nama Dan Alamat Email/Surel"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:69
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:73
+msgid ""
+"Users will have to enter their Name and Email Address when starting a chat"
+msgstr ""
+"Pengguna harus memasukan Nama dan Alamat Email ketika akan memulai percakapan"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:77
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:81
+msgid "Input Field Replacement Text"
+msgstr "Input penggantian Nama Field"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:78
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:82
+msgid "This is the text that will show in place of the Name And Email fields"
+msgstr "Ini adalah teks yang akan ditampilkan di kotak Nama Dan Alamat Email "
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:86
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:90
+msgid "Use Logged In User Details"
+msgstr "Gunakan Log dalan Detail Pengguna"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:87
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:91
+msgid ""
+"A user's Name and Email Address will be used by default if they are logged "
+"in."
+msgstr ""
+"Nama pengguna dan Alamat Email akan digunakan secara default ketika mereka "
+"login ."
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:95
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:99
+msgid "Enable On Mobile Devices"
+msgstr "Aktifkan pada Perangkat Bergerak (Smartphone & Tablet)"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:96
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:100
+msgid ""
+"Disabling this will mean that the Chat Box will not be displayed on mobile "
+"devices. (Smartphones and Tablets)"
+msgstr ""
+"Menonaktifkan pilihan ini berarti chatbox/kotak percakapan tidak akan "
+"ditampilkan pada perangkat bergerak. (smartphone/Tablet)"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:104
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:108
+msgid "Record a visitor's IP Address"
+msgstr "Rekap Alamat IP Pengunjung"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:105
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:109
+msgid "Disable this to enable anonymity for your visitors"
+msgstr "Nonaktifkan pilihan ini untuk mengaktifkan anominitas penjunjung anda"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:113
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:117
+msgid "Include chat window on the following pages:"
+msgstr "Sertakan kotak percakapan pada pages/halaman berikut :"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:114
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:118
+msgid ""
+"Show the chat window on the following pages. Leave blank to show on all. "
+"(Use comma-separated Page ID's)"
+msgstr ""
+"Tampilkan kotak percakapan pada halaman berikut . Biarkan kosong untuk "
+"menunjukkan pada semua .(Gunakan koma sebagai pemisah ID Halaman)"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:118
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:128
+msgid ""
+"Do not include and exclude pages at the same time. Please only use one or "
+"the other"
+msgstr ""
+"Jangan memilih dua option untuk satu halaman pada waktu yang sama. Harap "
+"hanya menggunakan salah satu pilihan"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:123
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:133
+msgid "Exclude chat window on the following pages:"
+msgstr "Jangan tampilkan kotak percakapan pada halaman berikut :"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:124
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:134
+msgid ""
+"Do not show the chat window on the following pages. Leave blank to show on "
+"all. (Use comma-separated Page ID's)"
+msgstr ""
+"Jangan tampilkan kotak percakapan pada halaman berikut. Kosongkan untuk "
+"ditampilkan pada semua. (Gunakan koma sebagai pemisak ID Halaman)"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:132
+msgid "Allow any user to make themselves a chat agent"
+msgstr "Ijinkan semua user untuk menjadi chat agent (agen percakapan)"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:135
+msgid ""
+"Checking this will allow any of your users to make themselves a chat agent "
+"when editing their profile."
+msgstr ""
+"Memilih ini akan memungkinkan setiap pengguna untuk membuat diri mereka "
+"sebagai chat agen (agen percakapan) saat mengedit profil mereka ."
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:142
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:152
+msgid "Chat Window Settings"
+msgstr "Pengaturan kotak percakapan"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:145
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:155
+msgid "Chat box alignment"
+msgstr "Posisi kotak percakapan"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:148
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:158
+msgid "Bottom left"
+msgstr "Kiri Bawah"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:149
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:159
+msgid "Bottom right"
+msgstr "Kanan Bawah"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:150
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:160
+msgid "Left"
+msgstr "Kiri"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:151
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:161
+msgid "Right"
+msgstr "Kanan"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:157
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:167
+msgid "Auto Pop-up"
+msgstr "Pop-up Otomatis"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:161
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:171
+msgid ""
+"Expand the chat box automatically (prompts the user to enter their name and "
+"email address)."
+msgstr ""
+"Perluas kotak percakapan secara otomatis (meminta pengguna untuk memasukan "
+"Nama dan Alamat Email/Surel)"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:167
+msgid "Name "
+msgstr "Nama"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:181
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:193
+msgid "Picture"
+msgstr "Gambar"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:189
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:196
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:212
+msgid "Upload Image"
+msgstr "Upload(Unggah) Gambar"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:191
+msgid "Remove Image"
+msgstr "Singkirkan Gambar"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:192
+msgid "Recomended Size 40px x 40px"
+msgstr "Ukuran yang disarankan 40px x 40px"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:198
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:209
+msgid "Logo"
+msgstr "Logo"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:206
+msgid "Upload Logo"
+msgstr "Upload (Unggah) Logo"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:208
+msgid "Remove Logo"
+msgstr "Singkirkan Logo"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:209
+msgid "Recomended Size 250px x 40px"
+msgstr "Ukuran yang disarankan 250px x 40px"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:215
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:225
+msgid "Chat delay (seconds)"
+msgstr "Jeda Percakapan (dalam detik)"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:218
+msgid "how long it takes for your chat window to pop up"
+msgstr "Berapa lama yang diperlukan agar kotak percakapan pop-up (keluar)"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:224
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:241
+msgid "Chat notifications"
+msgstr "Notifikasi Percakapan"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:228
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:245
+msgid "Alert me via email as soon as someone wants to chat"
+msgstr ""
+"Beritahukan melalui Email/Surel apabila seseorang ingin melakukan percakapan"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:229
+msgid "(while online only)"
+msgstr "(Saat oline saja)"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:234
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:257
+msgid "Display name and avatar in chat"
+msgstr "Tampilkan nama dan (gambar)avatar dalam percakapan"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:240
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:263
+msgid "Display the agent and user name above each message in the chat window."
+msgstr ""
+"Menampilkan nama agen dan nama pengguna di atas setiap pesan di kotak "
+"percakapan."
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:245
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:268
+msgid "Only show the chat window to users that are logged in"
+msgstr "Kkotak percakapan hanya tampil bagi pengguna yang sudah login"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:253
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:276
+msgid ""
+"By checking this, only users that are logged in will be able to chat with "
+"you."
+msgstr ""
+"Dengan memilih ini, hanya pengguna yang login akan dapat chatting dengan "
+"anda ."
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:265
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:287
+msgid "Do not allow users to send offline messages"
+msgstr "Tidak mengizinkan pengguna untuk mengirim pesan secara offline"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:273
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:291
+msgid ""
+"The chat window will be hidden when it is offline. Users will not be able to "
+"send offline messages to you"
+msgstr ""
+"Kotak percakapan akan disembunyikan ketika sedang offline . Pengguna tidak "
+"akan dapat mengirim pesan offline untuk Anda"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:278
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:296
+msgid "Email Address"
+msgstr "Alamat email (Surel)"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:282
+msgid "Email address where offline messages are delivered to"
+msgstr "Alamat email (Surel) untuk mengirimkan pesan secara offline"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:283
+msgid ""
+"Use comma separated email addresses to send to more than one email address"
+msgstr ""
+"Gunakan koma diantara alamat email untuk mengirimkan lebih dari satu alamat "
+"email"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:291
+msgid "Sending Method"
+msgstr "metode pengiriman"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:292
+msgid "WP Mail"
+msgstr "WP Mail"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:293
+msgid "PHP Mailer"
+msgstr "PHP Mailer"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:305
+msgid "Host"
+msgstr "Host"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:313
+msgid "Port"
+msgstr "Port"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:321
+msgid "Username"
+msgstr "Username/Nama pengguna"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:329
+msgid "Password"
+msgstr "Password/Kata Kunci"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:338
+msgid "Offline Chat Box Title"
+msgstr "Judul kotak percakapan offline"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:346
+msgid "Offline Text Fields"
+msgstr "Bidang teks percakapan offline"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:379
+msgid "Choose a theme"
+msgstr "Pilih sebuah tema"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:384
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:385
+msgid "Theme 1"
+msgstr "Tema 1"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:388
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:389
+msgid "Theme 2"
+msgstr "Tema 2"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:392
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:393
+msgid "Theme 3"
+msgstr "Tema 3"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:396
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:397
+msgid "Theme 4"
+msgstr "Tema 4"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:400
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:401
+msgid "Theme 5"
+msgstr "Tema 5"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:404
+msgid "Theme 6"
+msgstr "Tema 6"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:405
+msgid "Custom. Enter Colour Values Below"
+msgstr "Custom. Silahkan masukan kode warna"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:421
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:358
+msgid "Chat box fill color"
+msgstr "Warna dasar kotak percakapan"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:427
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:364
+msgid "Chat box font color"
+msgstr "Warna teks kotak percakapan"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:441
+msgid "First Section Text"
+msgstr "Teks bagian pertama"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:450
+msgid "Intro Text"
+msgstr "Teks Perkenalan"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:456
+msgid "Second Section Text"
+msgstr "Teks Bagian kedua"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:463
+msgid "Reactivate Chat Section Text"
+msgstr "mengaktifkan teks bagian percakapan"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:471
+msgid "User chat welcome"
+msgstr "Menyambut pengguna percakapan"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:480
+msgid "Other text"
+msgstr "Teks lainnya"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:508
+msgid "Current Users that are Chat Agents"
+msgstr "Pengguna yang adalah Chat Agent/Agen Percapakan pada saat ini"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:522
+msgid ""
+"To add or remove a user as a chat agent, go into the users profile and "
+"select the checkbox Chat Agent and click save."
+msgstr ""
+"Untuk menambah atau menghapus pengguna sebagai agen percakapan, masuk ke "
+"profil pengguna dan pilih kotak centang  Agen Percakapan dan klik simpan."
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:523
+msgid "If there are no chat agents online, the chat will show as offline"
+msgstr ""
+"Jika tidak ada agen percakapan yang online, percakapan akan menunjukkan "
+"status offline"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:556
+msgid ""
+"You are using an outdated version of WP Live Chat Support Basic. Please "
+"update your plugin to allow for animations to function"
+msgstr ""
+"Anda menggunakan versi lama dari WP Live Chat. Silakan update plugin Anda "
+"agar animasi dapat berfungsi"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:561
+msgid "Choose an animation"
+msgstr "Pilih sebuah animasi"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:567
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:442
+msgid "Slide Up"
+msgstr "Slide ke atas"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:571
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:446
+msgid "Slide From The Side"
+msgstr "Slide dari slide"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:575
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:450
+msgid "Fade In"
+msgstr "Menghilang"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:579
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:454
+msgid "No Animation"
+msgstr "Tanpa animasi"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/includes/settings_page_pro.php:592
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:462
+msgid "Save Settings"
+msgstr "Simpan Pengaturan"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:457
+msgid "Dear User"
+msgstr "Kepada Pengguna"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:458
+msgid "You are using an outdated version of WP Live Chat Support Basic. Please"
+msgstr ""
+"Anda menggunakan WP Live Chat dengan versi yang sudah tertinggal. Silahkan"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:458
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:801
+msgid "update to at least version"
+msgstr "untuk mengupdate ke versi terakhir"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:458
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:801
+msgid "to ensure all functionality is in working order"
+msgstr ""
+"untuk memastikan semua fungsi sudah sesuai dengan urutannya masing-masing"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:459
+msgid ""
+"You're live chat box on your website has been temporarily disabled until the "
+"basic plugin has been updated. This is to ensure a smooth and hassle-free "
+"user experience for both yourself and your visitors."
+msgstr ""
+"kotak percakapan di website anda untuk sementara dinonaktifkan sampai plugin "
+"diperbarui. Hal ini untuk memastikan pengalaman percakapan online yang "
+"lancar dan mudah untuk diri sendiri dan pengunjung website Anda."
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:460
+msgid ""
+"You can update your plugin <a href='./update-core.php'>here</a> or <a "
+"href='./plugins.php'>here</a>."
+msgstr ""
+"Anda dapat menmperbaharui plugin <a href='./update-core.php'>di sini</a> "
+"atau <a href='./plugins.php'>di sini</a>"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:461
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:804
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:822
+msgid "If you are having difficulty updating the plugin, please contact"
+msgstr ""
+"Jika Anda mengalami kesulitan untuk memperbarui plugin, silahkan menghubungi"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:474
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:800
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:813
+msgid "Dear Pro User"
+msgstr "kepada pengguna Pro"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:475
+msgid ""
+"WP Live Chat Support Pro requires WP Live Chat Support to function. You can "
+"download the latest copy from"
+msgstr ""
+"WP Live Chat Support Pro membutuhkan WP Live Chat Support untuk berfungsi. "
+"Anda dapat men-download salinan terbaru dari"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:487
+msgid "Admin"
+msgstr "Admin"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:491
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:373
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:437
+msgid "Questions?"
+msgstr "Pertanyaan?"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:492
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:374
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:437
+msgid "Chat with us"
+msgstr "bercakap dengan kami"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:493
+msgid "Start live chat"
+msgstr "Memulai percakapan online"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:494
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:380
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:510
+msgid "Start Chat"
+msgstr "Memulai percakapan"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:495
+msgid "Connecting. Please be patient..."
+msgstr "menghubungkan. Harap bersabar..."
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:496
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:389
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:520
+msgid "Reactivating your previous chat..."
+msgstr "mengaktifkan percakapan sebelumnya"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:497
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:314
+msgid "Chat offline. Leave a message"
+msgstr "Percakapan sedang offline. Silahkan tinggalkan pesan"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:498
+msgid "Hello. Please input your details so that I may help you."
+msgstr "Halo. Silakan masukan data anda sehingga saya dapat membantu anda."
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:499
+msgid ""
+"We are currently offline. Please leave a message and we'll get back to you "
+"shortly."
+msgstr ""
+"Pada saat ini system kami sedang offline. Silahkan tinggalkan pesan anda, "
+"dan kami akan segera menghubungi anda. Terimakasih."
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:500
+msgid "Sending message..."
+msgstr "Pewngirimkan pesan...."
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:501
+msgid "Thank you for your message. We will be in contact soon."
+msgstr "Terimakasih untuk pesan anda, kami akan segera menghubungi anda."
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:502
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:525
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:981
+msgid "Press ENTER to send your message"
+msgstr "Tekan ENTER untuk mengirim pesan anda"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:503
+msgid "Welcome. How may I help you?"
+msgstr "Selamat datang. Bagaimana kami dapat membantu anda ?"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:543
+msgid "You are currently accepting chats"
+msgstr "Pada saat ini anda sedang menerima percakapan"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:544
+msgid "You are not accepting chats"
+msgstr "Anda tidak sedang menerima percakapan"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:601
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/functions.php:888
+msgid "URL"
+msgstr "URL"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:602
+msgid "Status"
+msgstr "Status"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:603
+msgid "Action"
+msgstr "Tindakan"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:609
+msgid "No chats available at the moment"
+msgstr "Percakapan tidak tersedia pada saat ini"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:770
+msgid "Minize Chat Window"
+msgstr "Memperkecil kotak percakapan"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:771
+msgid "Close Chat Window"
+msgstr "Tutup Kotak Percakapan"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:862
+msgid "Send message"
+msgstr "Kirim Pesan"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:890
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:529
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:995
+msgid "Send"
+msgstr "Mengirim"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:930
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:1421
+msgid "Please click 'Start Chat' to initiate a chat with an agent"
+msgstr "Silakan klik 'Mulai Percakapan' untuk memulai percakapan dengan agen"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:1047
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:1445
+msgid "Your settings have been saved."
+msgstr "Pengaturan anda telah disimpan"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:1062
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:854
+msgid "Chat sessions"
+msgstr "Sesi percakapan"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:1064
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:856
+msgid ""
+"Please note: This window must be open in order to receive new chat "
+"notifications."
+msgstr ""
+"Catatan : Halaman ini harus tetap terbuka untuk menerima notifikasi "
+"percakapan baru."
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:1158
+msgid "Unknown"
+msgstr "Tidak dikenal"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:1174
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:948
+msgid "End chat"
+msgstr "Akhiri Percakapan"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:1179
+msgid "Attempting to open the chat window... Please be patient."
+msgstr "Dalam proses untuk membuka kotak percakapan ... Harap bersabar."
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:1276
+msgid "This chat has already been answered. Please close the chat window"
+msgstr "Percakapan ini sudah pernah dijawab. Silakan tutup kotak percakapan"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:1344
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:1107
+msgid "User has opened the chat window"
+msgstr "Pengguna telah membuka kotak percakapan"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:1349
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:1112
+msgid "User has minimized the chat window"
+msgstr "Pengguna telah meminimalkan kotak percakapan"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:1354
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:1117
+msgid "User has maximized the chat window"
+msgstr "Pengguna telah memaksimalkan kotak percakapan"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:1359
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:1122
+msgid "User has closed and ended the chat"
+msgstr "Pengguna telah menutup dan mengakhiri percakapan"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:1737
+msgid ""
+"An Unexpected HTTP Error occurred during the API request.</p> <p><a href=\"?"
+"\" onclick=\"document.location.reload(); return false;\">Try again</a>"
+msgstr ""
+"An Unexpected HTTP Error occurred during the API request.</p> <p><a href=\"?"
+"\" onclick=\"document.location.reload(); return false;\">Coba lagi</a>"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:1742
+msgid "An unknown error occurred"
+msgstr "Sebuah kesalahan yang tidak diketahui"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:1869
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:248
+msgid "Live Chat"
+msgstr "Live Chat/Percakapan Online"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:1870
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:249
+msgid "Settings"
+msgstr "Pengaturan"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:1871
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:1886
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:1897
+msgid "Quick Responses"
+msgstr "Respon Cepat"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:1873
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:250
+msgid "History"
+msgstr "Sejarah"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:1874
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:251
+msgid "Missed Chats"
+msgstr "Percakapan yang tak terjawab"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:1876
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/includes/feedback-page.php:37
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:252
+msgid "Feedback"
+msgstr "Masukan"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:1880
+msgid "Error Log"
+msgstr "Log Kesalahan"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:1887
+msgid "Quick Response"
+msgstr "Respon Cepat"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:1888
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:1891
+msgid "New Quick Response"
+msgstr "Respon Cepat Baru"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:1889
+msgid "Add New Quick Response"
+msgstr "Tambah Respon Cepat Baru"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:1890
+msgid "Edit Quick Response"
+msgstr "Ubah Respon Cepat"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:1892
+msgid "All Quick Responses"
+msgstr "Semua Respon Cepat"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:1893
+msgid "View Quick Responses"
+msgstr "Lihat Respon Cepat"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:1894
+msgid "Search Quick Responses"
+msgstr "Cari Respon Cepat"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:1895
+msgid "No Quick Responses found"
+msgstr "Tidak ada respon cepat yang ditemukan"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:1896
+msgid "No Quick Responses found in the Trash"
+msgstr "Tidak ada respon cepat yang ditemukan di Trash/tempatsampah"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:1901
+msgid "Quick Responses for WP Live Chat Support Pro"
+msgstr "Respon Cepat untuk WP Live Chat Support Pro"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:1956
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:1960
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:982
+msgid "Assign Quick Response"
+msgstr "Tambah Respon Cepat"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:1963
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:982
+msgid "Select"
+msgstr "Pilih"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support-pro/wp-live-chat-support-pro.php:1969
+msgid "What is this?"
+msgstr "apa ini ?"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/functions.php:566
+msgid "complete"
+msgstr "Selesai"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/functions.php:569
+msgid "pending"
+msgstr "tunda"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/functions.php:572
+msgid "active"
+msgstr "aktif"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/functions.php:575
+msgid "deleted"
+msgstr "telah di hapus"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/functions.php:578
+msgid "browsing"
+msgstr "menjelajah"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/functions.php:581
+msgid "requesting chat"
+msgstr "Meminta percakapan"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/functions.php:584
+msgid "Chat Ended - User still browsing"
+msgstr ""
+"Percakapan selesai - Pengguna mesih melakukan browsing/menjelajah website"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/functions.php:587
+msgid "User is browsing but doesn't want to chat"
+msgstr ""
+"Pengguna sedang menjelajah website tetapi tidak menginginkan percakapan"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/functions.php:671
+msgid "Get Pro Add-on to accept more chats"
+msgstr "Ambil Pro Add-on untuk menerima percakapan lebih banyak"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/functions.php:915
+msgid "You have not missed any chat requests."
+msgstr "Anda tidak pernah melewati permintaan percakapan online"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/includes/feedback-page.php:7
+msgid "WP Live Chat Support Feedback"
+msgstr "Masukan untuk WP Live Chat Support"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/includes/feedback-page.php:8
+msgid "We'd love to hear your comments and/or suggestions"
+msgstr "Kami senang mendengar komentar dan/atau masukan anda"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/includes/feedback-page.php:13
+msgid "Your Name"
+msgstr "Nama Anda"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/includes/feedback-page.php:21
+msgid "Your Email"
+msgstr "Alamat email Anda"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/includes/feedback-page.php:29
+msgid "Your Website"
+msgstr "Alamat Website Anda"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/includes/feedback-page.php:48
+msgid "Send Feedback"
+msgstr "Kirim masukan"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:23
+msgid "Agents"
+msgstr "Agen"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:46
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:62
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:124
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:140
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:183
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:199
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:215
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:231
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:248
+msgid "available in the"
+msgstr "tersedia di"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:47
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:63
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:125
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:141
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:184
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:200
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:216
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:232
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:249
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:303
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:317
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:393
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:1360
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:1380
+msgid "Pro Add-on"
+msgstr "Pro Add-on"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:48
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:64
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:126
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:142
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:185
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:201
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:217
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:233
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:250
+msgid "only"
+msgstr "saja "
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:65
+msgid " once off. Updates included forever."
+msgstr " sekali bayar. termasuk update semalanya."
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:302
+msgid "Get offline messages with the "
+msgstr "Dapatkan pesan offline dengan"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:311
+msgid "Offline text"
+msgstr "teks offline"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:316
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:392
+msgid "Edit these text fields using the "
+msgstr "Edit bidang teks dengan menggunakan"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:342
+msgid "Choose a colour scheme. Only available in the"
+msgstr "Pilih skema warna. Hanya tersedia di"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:342
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:433
+msgid "Pro add-on"
+msgstr "Pro add-on"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:346
+msgid "Colour Scheme 1"
+msgstr "Skema Warna 1"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:347
+msgid "Colour Scheme 2"
+msgstr "Skema Warna 2"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:348
+msgid "Colour Scheme 3"
+msgstr "Skema Warna 3"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:349
+msgid "Colour Scheme 4"
+msgstr "Skema Warna 4"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:350
+msgid "Colour Scheme 5"
+msgstr "Skema Warna 5"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:351
+msgid "Colour Scheme 6"
+msgstr "Skema Warna 6"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:371
+msgid "First section text"
+msgstr "Teks bagian pertama"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:378
+msgid "Second section text"
+msgstr "Teks bagian ke dua"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:381
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:517
+msgid "Connecting you to a sales person. Please be patient."
+msgstr "Sedang menghubungkan Anda bagian Penjualan. Harap bersabar."
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:387
+msgid "Reactivate chat section text"
+msgstr "Mengaktifkan kembali sesi percakapan"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:404
+msgid "Multiple Agents"
+msgstr "Beberapa Agen"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:405
+msgid "Get"
+msgstr "Ambil"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:405
+msgid "Multiple agent support"
+msgstr "Dukungan beberapa agen"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:433
+msgid "Get a variety of animations in the "
+msgstr "Dapatkan beragam animasi di"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/includes/settings_page.php:436
+msgid "Choose an animation (Pro Only)"
+msgstr "Pilih animasi (Hanya di versi Pro)"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/includes/welcome_page.php:4
+msgid "Welcome to "
+msgstr "Selamat datang di"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/includes/welcome_page.php:6
+msgid "Version 4"
+msgstr "Versi 4"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/includes/welcome_page.php:8
+msgid "Provide Instant Live Chat Support!"
+msgstr "menyediakan dukungan percakapan Online !"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/includes/welcome_page.php:10
+msgid "How did you find us?"
+msgstr "Bagaimana anda menemukan kami ?"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/includes/welcome_page.php:15
+msgid "WordPress.org plugin repository "
+msgstr "WordPress.org plugin repository "
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/includes/welcome_page.php:18
+msgid "Search Term"
+msgstr "Syarat Pencarian"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/includes/welcome_page.php:22
+msgid "Google or other search Engine"
+msgstr "Google atau mesin pencari lain"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/includes/welcome_page.php:28
+msgid "Friend recommendation"
+msgstr "Rekomendasi teman"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/includes/welcome_page.php:34
+msgid "Other"
+msgstr "lainnya"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/includes/welcome_page.php:38
+msgid "Please Explain"
+msgstr "Silahkan jelaskan"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/includes/welcome_page.php:47
+msgid "Submit"
+msgstr "Kirim"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/includes/welcome_page.php:49
+msgid "Skip"
+msgstr "Lewati"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:217
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:1253
+msgid "Please click \\'Start Chat\\' to initiate a chat with an agent"
+msgstr ""
+"Silakan klik \\ 'Mulai Percakapan \\' untuk memulai percakapan dengan agen"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:447
+msgid "Start Live Chat"
+msgstr "Mulai percakapan online"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:801
+msgid ""
+"You are using an outdated version of <strong>WP Live Chat Support Pro</"
+"strong>. Please"
+msgstr ""
+"Anda menggunakan versi lama dari <strong> WP Live Chat Pro </ strong>. Mohon "
+"Untuk"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:802
+msgid ""
+"You're live chat box on your website has been temporarily disabled until the "
+"Pro plugin has been updated. This is to ensure a smooth and hassle-free user "
+"experience for both yourself and your visitors."
+msgstr ""
+"Kotak Live Chat Pro di website Anda untuk sementara dinonaktifkan sampai "
+"Plugin telah diperbarui. Hal ini untuk memastikan pengalaman pengguna yang "
+"mudah dan lancar untuk diri sendiri dan pengunjung Anda."
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:803
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:821
+msgid ""
+"You can update your plugin <a href='./update-core.php'>here</a>, <a href='./"
+"plugins.php'>here</a> or <a href='http://wp-livechat.com/get-updated-"
+"version/' target='_BLANK'>here</a>."
+msgstr ""
+"Anda dapat memperbaharui plugin <a href='./update-core.php'>di sini</a>, <a "
+"href='./plugins.php'>di sini</a> atau <a href='http://wp-livechat.com/get-"
+"updated-version/' target='_BLANK'>di sini</a>."
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:814
+msgid ""
+"You are using an outdated version of <strong>WP Live Chat Support Pro</"
+"strong>."
+msgstr "Anda menggunakan versi lama dari <strong> WP Live Chat Pro </ strong>."
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:816
+msgid "Please update to the latest version of WP Live Chat Support Pro"
+msgstr "Silakan update ke versi terbaru dari WP Live Chat Support Pro"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:817
+msgid "Version 4.4.5"
+msgstr "Versi 4.4.5"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:818
+msgid "to take advantage of chat window transitions and colour schemes."
+msgstr ""
+"untuk mengambil keuntungan dari transisi kotak percakapan dan skema warna."
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:845
+msgid "Experiencing problems with the plugin?"
+msgstr "Mengalami masalah dengan plugin?"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:847
+msgid "Review the documentation."
+msgstr "Lihat dokumentasi"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:848
+msgid "Or ask a question on our"
+msgstr "Atau ajukan pertanyaan pada"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:848
+msgid "Support forum."
+msgstr "Support Forum/Forum Dokungan"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:876
+msgid "With the Pro add-on of WP Live Chat Support, you can"
+msgstr "Dengan Pro add-on WP Lice Chat Support, Anda dapat"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:877
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:878
+msgid "see who's online and initiate chats"
+msgstr "melihat siapa yang online dan yang memulai percakapan"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:879
+msgid "with your online visitors with the click of a button."
+msgstr "dengan pengunjung online anda hanya dengan meng-klik tombol."
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:880
+msgid "Buy the Pro add-on now for only $19.95 once off. Free Updates FOREVER."
+msgstr ""
+"Beli Pro add-on sekarang hanya dengan USD 19,95 sekali bayar. Gratis Update "
+"SELAMANYA."
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:882
+msgid "Buy the Pro add-on now for only $19.95 once off. Free Updates Forever."
+msgstr ""
+"Beli Pro add-on sekarang hanya USD 19,95 sekali bayar. Gratis Update "
+"Selamanya."
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:934
+msgid "Previous"
+msgstr "Sebelumnya"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:936
+msgid "Active"
+msgstr "Aktif"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:945
+msgid "Chat with"
+msgstr "Bercakap dengan"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:982
+msgid "Add Quick Responses to your Live Chat"
+msgstr "Tambahkan Respon Cepat di Percakapan Online anda"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:982
+msgid "Pro version only"
+msgstr "Hanya untuk versi Pro"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:993
+msgid "type here..."
+msgstr "ketik di sini..."
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:1356
+msgid "WP Live Chat History"
+msgstr "Sejarah WP Live Chat"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:1360
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:1380
+msgid "This option is only available in the "
+msgstr "Opsi ini hanya terdapat pada"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:1360
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:1380
+msgid "Get it now for only $19.95 once off!"
+msgstr "Dapatkan sekarang hanya dengan USD 19,95 sekali bayar!"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:1365
+msgid "WP Live Chat Missed Chats"
+msgstr "WP Live Chat Percakapan tak terjawab"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:1372
+msgid "WP Live Chat Offline Messages"
+msgstr "WP Live Chat Pesan Offline"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:1377
+msgid ""
+"Please update to the latest version of WP Live Chat Support Pro to start "
+"recording any offline messages."
+msgstr ""
+"Silakan update ke versi terbaru WP Live Chat Support Pro untuk mulai merekam "
+"pesan offline."
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:1460
+msgid "Thank You for your feedback!"
+msgstr "Terimakasih atas masukan anda!"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:1464
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:1477
+msgid "Thank you for your feedback. We will be in touch soon"
+msgstr "Terima kasih atas masukan Anda. Kami akan segera menghubungi Anda"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:1480
+msgid "There was a problem sending your feedback. Please log your feedback on "
+msgstr ""
+"Ada masalah saat mengirim masukan Anda. Harap masukan kembali masukan Anda"
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:1513
+msgid ""
+"WPLC: set_time_limit() is not enabled on this server. You may experience "
+"issues while using WP Live Chat Support as a result of this. Please get in "
+"contact your host to get this function enabled."
+msgstr ""
+"WPLC: set_time_limit () tidak diaktifkan pada server ini.  Sebagai akibatnya "
+"anda mungkin mengalami masalah saat menggunakan WP Live Chat Support. "
+"Silahkan hubungi host Anda untuk mengaktifkan fungsi ini."
+
+#: C:\wamp\www\wordpress\wp-content\plugins\wp-live-chat-support/wp-live-chat-support.php:1519
+msgid ""
+"WPLC: Safe mode is enabled on this server. You may experience issues while "
+"using WP Live Chat Support as a result of this. Please contact your host to "
+"get safe mode disabled."
+msgstr ""
+"WPLC: Safe mode/Mode aman diaktifkan di server ini. Sebagai akibatnya anda "
+"mungkin mengalami masalah saat menggunakan WP Live Chat Support. Silahkan "
+"hubungi host Anda untuk menonaktifkan safe mode/mode aman."

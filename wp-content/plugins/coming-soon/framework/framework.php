@@ -21,7 +21,7 @@ class SEED_CSP4_ADMIN
      * @var      object
      */
     protected static $instance = null;
-    
+
    /**
      * Slug of the plugin screen.
      *
@@ -30,7 +30,7 @@ class SEED_CSP4_ADMIN
      * @var      string
      */
     protected $plugin_screen_hook_suffix = null;
-    
+
     /**
      * Load Hooks
      */
@@ -42,7 +42,7 @@ class SEED_CSP4_ADMIN
             add_action( 'admin_init', array( &$this, 'reset_defaults' ) );
             add_action( 'admin_init', array( &$this, 'create_settings' ) );
             add_filter( 'plugin_action_links', array( &$this, 'plugin_action_links' ), 10, 2 );
-        }  
+        }
     }
 
     /**
@@ -61,7 +61,7 @@ class SEED_CSP4_ADMIN
 
         return self::$instance;
     }
-    
+
     /**
      * Reset the settings page. Reset works per settings id.
      *
@@ -75,9 +75,9 @@ class SEED_CSP4_ADMIN
 
             $_POST[ $_POST[ 'option_page' ] ] = $seed_csp4_settings_deafults[$_POST[ 'option_page' ]];
             add_settings_error( 'general', 'seed_csp4-settings-reset', __( "Settings reset." ), 'updated' );
-        }  
+        }
     }
-    
+
     /**
      * Properly enqueue styles and scripts for our theme options page.
      *
@@ -90,7 +90,7 @@ class SEED_CSP4_ADMIN
     {
         if ( $hook_suffix != $this->plugin_screen_hook_suffix )
             return;
-        
+
         wp_enqueue_script( 'media-upload' );
         wp_enqueue_script( 'jquery-ui-sortable' );
         wp_enqueue_script( 'wp-lists' );
@@ -102,7 +102,7 @@ class SEED_CSP4_ADMIN
         wp_enqueue_style( 'seed_csp4-framework-css', SEED_CSP4_PLUGIN_URL . 'framework/settings-style.css', false, $this->plugin_version );
         wp_enqueue_style( 'font-awesome', '//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css', false, $this->plugin_version );
     }
-    
+
     /**
      * Creates WordPress Menu pages from an array in the config file.
      *
@@ -112,15 +112,15 @@ class SEED_CSP4_ADMIN
      */
     function create_menus( )
     {
-      $this->plugin_screen_hook_suffix = add_options_page( 
-            __( "Coming Soon", 'coming-soon' ), 
-            __( "Coming Soon", 'coming-soon' ), 
-            'manage_options', 
-            'seed_csp4', 
+      $this->plugin_screen_hook_suffix = add_options_page(
+            __( "Coming Soon", 'coming-soon' ),
+            __( "Coming Soon", 'coming-soon' ),
+            'manage_options',
+            'seed_csp4',
             array( &$this , 'option_page' )
             );
     }
-    
+
     /**
      * Display settings link on plugin page
      */
@@ -134,8 +134,8 @@ class SEED_CSP4_ADMIN
         }
         return $links;
     }
-    
-    
+
+
     /**
      * Allow Tabs on the Settings Page
      *
@@ -146,7 +146,7 @@ class SEED_CSP4_ADMIN
         $page        = $_REQUEST[ 'page' ];
         $uses_tabs   = false;
         $current_tab = isset( $_GET[ 'tab' ] ) ? $_GET[ 'tab' ] : false;
-        
+
         //Check if this config uses tabs
         foreach ( seed_csp4_get_options() as $v ) {
             if ( $v[ 'type' ] == 'tab' ) {
@@ -154,7 +154,7 @@ class SEED_CSP4_ADMIN
                 break;
             }
         }
-        
+
         // If uses tabs then generate the tabs
         if ( $uses_tabs ) {
             echo '<h2 class="nav-tab-wrapper" style="padding-left:20px">';
@@ -176,13 +176,13 @@ class SEED_CSP4_ADMIN
             }
             echo '<a class="nav-tab seed_csp4-preview thickbox-preview" href="'.home_url().'?cs_preview=true&TB_iframe=true&width=640&height=632" title="'.__('&larr; Close Window','coming-soon').'">'.__('Live Preview','coming-soon').'</a>';
             if(defined('SEED_CSP_API_KEY') === false){
-                echo '<a class="nav-tab seed_csp4-support" style="color: #8a6d3b;background-color: #fcf8e3;float:right" href="http://www.seedprod.com/features/?utm_source=coming-soon-plugin&utm_medium=banner&utm_campaign=coming-soon-link-in-plugin" target="_blank"><i class="fa fa-star"></i> '.__('Upgrade to the Pro Version','coming-soon').'</a>';
+                echo '<a class="nav-tab seed_csp4-support" style="color: #8a6d3b;background-color: #fcf8e3;" href="http://www.seedprod.com/features/?utm_source=coming-soon-plugin&utm_medium=banner&utm_campaign=coming-soon-link-in-plugin" target="_blank"><i class="fa fa-star"></i> '.__('Upgrade to Pro for more Professional Features','coming-soon').'</a>';
             }
             echo '</h2>';
 
         }
     }
-    
+
     /**
      * Get the layout for the page. classic|2-col
      *
@@ -204,7 +204,7 @@ class SEED_CSP4_ADMIN
         }
         return $layout;
     }
-    
+
     /**
      * Render the option pages.
      *
@@ -223,19 +223,19 @@ class SEED_CSP4_ADMIN
             <?php $this->plugin_options_tabs(); ?>
             <?php if ( $layout == '2-col' ): ?>
             <div id="poststuff">
-                <div id="post-body" class="metabox-holder columns-1">
+                <div id="post-body" class="metabox-holder columns-2">
                     <div id="post-body-content" >
             <?php endif; ?>
                     <?php if(!empty($_GET['tab']))
-                            do_action( 'seed_csp4_render_page', array('tab'=>$_GET['tab'])); 
+                            do_action( 'seed_csp4_render_page', array('tab'=>$_GET['tab']));
                     ?>
                     <form action="options.php" method="post">
-                    <p>
+
                     <!-- <input name="submit" type="submit" value="<?php _e( 'Save All Changes', 'coming-soon' ); ?>" class="button-primary"/> -->
                     <?php if(!empty($_GET['tab']) && $_GET['tab'] != 'seed_csp4_tab_3') { ?>
                     <!-- <input id="reset" name="reset" type="submit" value="<?php _e( 'Reset Settings', 'coming-soon' ); ?>" class="button-secondary"/>     -->
                     <?php } ?>
-                    </p>
+
                             <?php
                             $show_submit = false;
                             foreach ( seed_csp4_get_options() as $v ) {
@@ -257,7 +257,7 @@ class SEED_CSP4_ADMIN
                                                     settings_fields( $v[ 'id' ] );
                                                     $show_submit = true;
                                                 }
-        
+
                                                 break;
                                             case 'section':
                                                 $current_tab = isset( $_GET[ 'tab' ] ) ? $_GET[ 'tab' ] : $default_tab;
@@ -269,33 +269,140 @@ class SEED_CSP4_ADMIN
                                                     } else {
                                                         do_settings_sections( $v[ 'id' ] );
                                                     }
-                                                                      
+
                                                 }
                                                 break;
-                                                
+
                                         }
-                                  
+
                                 }
                             }
                         ?>
                     <?php if($show_submit): ?>
                     <p>
                     <!-- <input name="submit" type="submit" value="<?php _e( 'Save All Changes', 'coming-soon' ); ?>" class="button-primary"/> -->
-                    <!-- <input id="reset" name="reset" type="submit" value="<?php _e( 'Reset Settings', 'coming-soon' ); ?>" class="button-secondary"/> -->    
+                    <!-- <input id="reset" name="reset" type="submit" value="<?php _e( 'Reset Settings', 'coming-soon' ); ?>" class="button-secondary"/> -->
                     </p>
                     <?php endif; ?>
-                    </form> 
+                    </form>
 
-                    <?php if ( $layout == '2-col' ): ?> 
+                    <?php if ( $layout == '2-col' ): ?>
                     </div> <!-- #post-body-content -->
 
-                
-                </div> <!-- #post-body --> 
-            </div> <!-- #poststuff --> 
+                    <div id="postbox-container-1" class="postbox-container">
+                        <div id="side-sortables" class="meta-box-sortables ui-sortable">
+                            <!-- <a href="http://www.seedprod.com/plugins/wordpress-coming-soon-pro-plugin/?utm_source=plugin&utm_medium=banner&utm_campaign=coming-soon-pro-in-plugin-banner" target="_blank"><img src="http://static.seedprod.com/ads/coming-soon-pro-sidebar.png" /></a>
+                            <br><br> -->
+                            <div class="postbox support-postbox" style="background-color: #fcf8e3">
+                                <div class="handlediv" title="Click to toggle"><br /></div>
+                                <h3 class="hndle"><span><?php _e('Plugin Support', 'coming-soon') ?></span></h3>
+                                <div class="inside">
+                                    <div class="support-widget">
+                                        <p>
+                                            <?php _e('Got a Question, Idea, Problem or Praise?') ?>
+                                        </p>
+                                        <ul>
+                                            <li>&raquo; <a href="https://wordpress.org/support/plugin/coming-soon" target="_blank"><?php _e('Support Request', 'coming-soon') ?></a></li>
+                                            <li>&raquo; <a href="http://support.seedprod.com/article/83-how-to-clear-wp-super-caches-cache" target="_blank"><?php _e('Common Caching Issues Resolutions', 'coming-soon') ?></a></li>
+                                        </ul>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <?php if($this->plugin_type != 'pro'){ ?>
+                                <div class="postbox like-postbox" style="background-color:#dff0d8">
+                                    <div class="handlediv" title="Click to toggle"><br /></div>
+                                    <h3 class="hndle"><span><?php _e('Show Some Love', 'coming-soon') ?></span></h3>
+                                    <div class="inside">
+                                        <div class="like-widget">
+                                            <p><?php _e('Like this plugin? Show your support by:', 'coming-soon')?></p>
+                                            <ul>
+                                                <li>&raquo; <a target="_blank" href="http://www.seedprod.com/features/?utm_source=coming-soon-plugin&utm_medium=banner&utm_campaign=coming-soon-link-in-plugin"><?php _e('Buy It', 'coming-soon') ?></a></li>
+
+                                                <li>&raquo; <a target="_blank" href="https://wordpress.org/support/view/plugin-reviews/coming-soon?rate=5#postform"><?php _e('Rate It', 'coming-soon') ?></a></li>
+                                                <li>&raquo; <a target="_blank" href="<?php echo "http://twitter.com/share?url=https%3A%2F%2Fwordpress.org%2Fplugins%2Fultimate-coming-soon-page%2F&text=Check out this awesome %23WordPress Plugin I'm using, Coming Soon Page and Maintenance Mode by SeedProd"; ?>"><?php _e('Tweet It', 'coming-soon') ?></a></li>
+
+                                                <li>&raquo; <a href="https://www.seedprod.com/submit-site/"><?php _e('Submit your site to the Showcase', 'coming-soon') ?></a></li>
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <?php } ?>
+                                <div class="postbox rss-postbox" style="background-color:#d9edf7">
+                                    <div class="handlediv" title="Click to toggle"><br /></div>
+                                    <h3 class="hndle"><span><?php _e("How to launch a site that's successful on Day One", 'ultimate-coming-soon-page') ?></span></h3>
+                                    <div class="inside">
+                                        <form action="https://www.getdrip.com/forms/7838563/submissions" method="post" target="_blank" data-drip-embedded-form="1541">
+
+                                            <p data-drip-attribute="description">There's nothing more disappointing than launching a new site and not get
+                                                enough visitors to support it. Find out how to build an audience before you
+                                                launch in this free 5-part course.</p>
+                                                <div>
+                                                    <label for="fields[first_name]">First Name</label><br />
+                                                    <input type="text" name="fields[first_name]" value="" />
+                                                </div>
+                                                <div>
+                                                    <label for="fields[email]">Email Address</label><br />
+                                                    <input type="text" name="fields[email]" value="" />
+                                                </div>
+                                                <br>
+                                                <div>
+                                                    <input type="submit" name="submit" value="Learn How" data-drip-attribute="sign-up-button" class="button-primary" />
+                                                </div>
+                                            </form>
+                                            <!-- <div class="rss-widget">
+                                            <?php
+                                            wp_widget_rss_output(array(
+                                            'url' => 'http://seedprod.com/feed/',
+                                            'title' => 'SeedProd Blog',
+                                            'items' => 3,
+                                            'show_summary' => 0,
+                                            'show_author' => 0,
+                                            'show_date' => 1,
+                                            ));
+                                            ?>
+                                            <ul>
+                                            <li>&raquo; <a href="http://seedprod.com/subscribe/"><?php _e('Subscribe by Email', 'ultimate-coming-soon-page') ?></a></li>
+                                        </ul>
+                                    </div> -->
+                                </div>
+                            </div>
+
+                            <div class="postbox rss-postbox" style="background-color:#f2dede">
+                                <div class="handlediv" title="Click to toggle"><br /></div>
+                                <h3 class="hndle"><span><?php _e('SeedProd Blog', 'ultimate-coming-soon-page') ?></span></h3>
+                                <div class="inside">
+
+                                    <div class="rss-widget">
+                                        <?php
+                                        wp_widget_rss_output(array(
+                                        'url' => 'http://seedprod.com/feed/',
+                                        'title' => 'SeedProd Blog',
+                                        'items' => 3,
+                                        'show_summary' => 0,
+                                        'show_author' => 0,
+                                        'show_date' => 1,
+                                        ));
+                                        ?>
+                                        <ul>
+                                            <br>
+                                            <li>&raquo; <a href="https://feedburner.google.com/fb/a/mailverify?uri=seedprod"><?php _e('Subscribe by Email', 'ultimate-coming-soon-page') ?></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div> <!-- #post-body -->
+
+
+            </div> <!-- #poststuff -->
             <?php endif; ?>
         </div> <!-- .wrap -->
 
-        <!-- JS login to confirm setting resets. -->    
+        <!-- JS login to confirm setting resets. -->
         <script>
             jQuery(document).ready(function($) {
                 $('#reset').click(function(e){
@@ -307,7 +414,7 @@ class SEED_CSP4_ADMIN
         </script>
         <?php
     }
-    
+
     /**
      * Create the settings options, sections and fields via the WordPress Settings API
      *
@@ -328,7 +435,7 @@ class SEED_CSP4_ADMIN
                     if ( empty( $v[ 'validate_function' ] ) ) {
                         $v[ 'validate_function' ] = array(
                              &$this,
-                            'validate_machine' 
+                            'validate_machine'
                         );
                     }
                     register_setting( $v[ 'id' ], $v[ 'id' ], $v[ 'validate_function' ] );
@@ -338,7 +445,7 @@ class SEED_CSP4_ADMIN
                     if ( empty( $v[ 'desc_callback' ] ) ) {
                         $v[ 'desc_callback' ] = array(
                              &$this,
-                            '__return_empty_string' 
+                            '__return_empty_string'
                         );
                     } else {
                         $v[ 'desc_callback' ] = $v[ 'desc_callback' ];
@@ -352,10 +459,10 @@ class SEED_CSP4_ADMIN
                     if ( empty( $v[ 'callback' ] ) ) {
                         $v[ 'callback' ] = array(
                              &$this,
-                            'field_machine' 
+                            'field_machine'
                         );
                     }
-                    
+
                     add_settings_field( $v[ 'id' ], $v[ 'label' ], $v[ 'callback' ], $section_id, $section_id, array(
                          'id' => $v[ 'id' ],
                         'desc' => ( isset( $v[ 'desc' ] ) ? $v[ 'desc' ] : '' ),
@@ -363,13 +470,13 @@ class SEED_CSP4_ADMIN
                         'class' => ( isset( $v[ 'class' ] ) ? $v[ 'class' ] : '' ),
                         'type' => $v[ 'type' ],
                         'default_value' => ( isset( $v[ 'default_value' ] ) ? $v[ 'default_value' ] : '' ),
-                        'option_values' => ( isset( $v[ 'option_values' ] ) ? $v[ 'option_values' ] : '' ) 
+                        'option_values' => ( isset( $v[ 'option_values' ] ) ? $v[ 'option_values' ] : '' )
                     ) );
-                    
+
             }
         }
     }
-    
+
     /**
      * Create a field based on the field type passed in.
      *
@@ -378,7 +485,7 @@ class SEED_CSP4_ADMIN
     function field_machine( $args )
     {
         extract( $args ); //$id, $desc, $setting_id, $class, $type, $default_value, $option_values
-        
+
         // Load defaults
         $defaults = array( );
         foreach ( seed_csp4_get_options() as $k ) {
@@ -394,9 +501,9 @@ class SEED_CSP4_ADMIN
             }
         }
         $options = get_option( $setting_id );
-        
+
         $options = wp_parse_args( $options, $defaults );
-        
+
         $path = SEED_CSP4_PLUGIN_PATH . 'framework/field-types/' . $type . '.php';
         if ( file_exists( $path ) ) {
             // Show Field
@@ -406,9 +513,9 @@ class SEED_CSP4_ADMIN
                 echo "<small class='description'>{$desc}</small>";
             }
         }
-        
+
     }
-    
+
     /**
      * Validates user input before we save it via the Options API. If error add_setting_error
      *
@@ -442,24 +549,24 @@ class SEED_CSP4_ADMIN
 
                                 // Test Validation
                                 include( $path );
-                                
+
                                 // Is it valid?
                                 if ( $is_valid === false ) {
                                     add_settings_error( $k[ 'id' ], 'seedprod_error', $error_msg, 'error' );
                                     // Unset invalids
                                     unset( $input[ $k[ 'id' ] ] );
                                 }
-                                
+
                             }
                         } //end foreach
-                        
+
                     }
             }
         }
-        
+
         return $input;
     }
-    
+
     /**
      * Dummy function to be called by all sections from the Settings API. Define a custom function in the config.
      *
@@ -470,8 +577,8 @@ class SEED_CSP4_ADMIN
     {
         echo '';
     }
-    
-    
+
+
     /**
      * SeedProd version of WP's do_settings_sections
      *
@@ -480,12 +587,12 @@ class SEED_CSP4_ADMIN
     function do_settings_sections( $page, $show_submit )
     {
         global $wp_settings_sections, $wp_settings_fields;
-        
+
         if ( !isset( $wp_settings_sections ) || !isset( $wp_settings_sections[ $page ] ) )
             return;
-        
+
         foreach ( (array) $wp_settings_sections[ $page ] as $section ) {
-            echo "<h3><span></span>{$section['title']}</h3>\n";
+            echo "<h3 class='hndle'>{$section['title']}</h3>\n";
             echo '<div class="inside">';
             call_user_func( $section[ 'callback' ], $section );
             if ( !isset( $wp_settings_fields ) || !isset( $wp_settings_fields[ $page ] ) || !isset( $wp_settings_fields[ $page ][ $section[ 'id' ] ] ) )
@@ -495,7 +602,7 @@ class SEED_CSP4_ADMIN
             echo '</table>';
             if($show_submit): ?>
                 <p>
-                <input name="submit" type="submit" value="<?php _e( 'Save All Changes', 'coming-soon' ); ?>" class="button-primary"/> 
+                <input name="submit" type="submit" value="<?php _e( 'Save All Changes', 'coming-soon' ); ?>" class="button-primary"/>
                 </p>
             <?php endif;
             echo '</div>';
@@ -504,10 +611,10 @@ class SEED_CSP4_ADMIN
 
     function do_settings_fields($page, $section) {
           global $wp_settings_fields;
-      
+
           if ( !isset($wp_settings_fields) || !isset($wp_settings_fields[$page]) || !isset($wp_settings_fields[$page][$section]) )
               return;
-      
+
           foreach ( (array) $wp_settings_fields[$page][$section] as $field ) {
               echo '<tr valign="top">';
               if ( !empty($field['args']['label_for']) )
@@ -520,6 +627,5 @@ class SEED_CSP4_ADMIN
               echo '</tr>';
           }
       }
-    
-}
 
+}

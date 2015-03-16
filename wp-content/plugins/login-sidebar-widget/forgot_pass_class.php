@@ -16,7 +16,7 @@ class afo_forgot_pass_class {
 				<li><?php _e('Email','lwa');?></li>
 				<li><input type="text" name="user_username" required="required"/></li>
 				<li><input name="forgot" type="submit" value="<?php _e('Submit','lwa');?>" /></li>
-				<li class="forgot-text">Please enter your email. The password reset link will be provided in your email.</li>
+				<li class="forgot-text"><?php _e('Please enter your email. The password reset link will be provided in your email.','lwa');?></li>
 			</ul>
 		</form>
 		<?php 
@@ -61,11 +61,11 @@ function forgot_pass_validate(){
 				wp_set_password( $new_password, $user_data->ID );
 			//mailing reset details to the user
 			$headers = 'From: '.get_bloginfo('name').' <no-reply@wordpress.com>' . "\r\n";
-			$message = __('Your new password for the account at:') . "\r\n\r\n";
+			$message = __('Your new password for the account at:','lwa') . "\r\n\r\n";
 			$message .= site_url() . "\r\n\r\n";
 			$message .= sprintf(__('Username: %s'), $user_login) . "\r\n\r\n";
 			$message .= sprintf(__('Password: %s'), $new_password) . "\r\n\r\n";
-			$message .= __('You can now login with your new password at: ') . site_url() . "\r\n\r\n";
+			$message .= __('You can now login with your new password at: ','lwa') . site_url() . "\r\n\r\n";
 			
 			if ( $message && !wp_mail($user_email, 'Password Reset Request', $message, $headers) ) {
 				wp_die('Email failed to send for some unknown reason');
@@ -82,7 +82,7 @@ function forgot_pass_validate(){
 		}
 }
 
-	if($_POST['option'] == "afo_forgot_pass"){
+	if(isset($_POST['option']) and $_POST['option'] == "afo_forgot_pass"){
 	
 		global $wpdb;
 		$msg = '';
@@ -111,11 +111,11 @@ function forgot_pass_validate(){
 			
 			//mailing reset details to the user
 			$headers = 'From: '.get_bloginfo('name').' <no-reply@wordpress.com>' . "\r\n";
-			$message = __('Someone requested that the password be reset for the following account:') . "\r\n\r\n";
+			$message = __('Someone requested that the password be reset for the following account:','lwa') . "\r\n\r\n";
 			$message .= site_url() . "\r\n\r\n";
 			$message .= sprintf(__('Username: %s'), $user_login) . "\r\n\r\n";
-			$message .= __('If this was a mistake, just ignore this email and nothing will happen.') . "\r\n\r\n";
-			$message .= __('To reset your password, visit the following address:') . "\r\n\r\n";
+			$message .= __('If this was a mistake, just ignore this email and nothing will happen.','lwa') . "\r\n\r\n";
+			$message .= __('To reset your password, visit the following address:','lwa') . "\r\n\r\n";
 			$message .= site_url() . "?action=reset_pwd&key=$key&login=" . rawurlencode($user_login) . "\r\n";
 			
 			if ( !wp_mail($user_email, 'Password Reset Request', $message, $headers) ) {

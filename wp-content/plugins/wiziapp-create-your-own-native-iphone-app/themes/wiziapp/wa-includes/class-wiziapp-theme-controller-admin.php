@@ -157,6 +157,7 @@
 						}
 						return false;
 					}
+					var reloading = false;
 					c.bind("change", function() {
 						var reload = false;
 						if ($.mobile.ajaxEnabled) {
@@ -169,13 +170,17 @@
 								reload = true;
 							}
 						});
-						if (reload)
+						if (reload && !reloading)
 						{
-							$.mobile.changePage($.mobile.activePage.data('url'), {
-								allowSamePageTransition: true,
-								transition: "none",
-								reloadPage: true
-							});
+							reloading = true;
+							setTimeout(function() {
+								reloading = false;
+								$.mobile.changePage($.mobile.activePage.data('url'), {
+									allowSamePageTransition: true,
+									transition: "none",
+									reloadPage: true
+								});
+							}, 0);
 						}
 					});
 					$(d).bind("pagebeforeload", function(e, data) {

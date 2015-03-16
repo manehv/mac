@@ -69,7 +69,7 @@ div.pp_woocommerce a.pp_close {
 	right: 10px;
 }
 
-div.pp_woocommerce #respond .ui-select .ui-btn-inner, .woocommerce-page form.checkout #billing_country_field .ui-select .ui-btn-inner {
+div.pp_woocommerce #respond .ui-select .ui-btn-inner {
 	display: none;
 }
 

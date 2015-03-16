@@ -1,0 +1,645 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Coming Soon v4.0.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-11-24 17:31-0500\n"
+"PO-Revision-Date: 2014-05-27 12:06-0300\n"
+"Last-Translator: DJIO | Dionizio Bonfim Bach <wordpress@djio.com.br>\n"
+"Language-Team: DJIO <wordpress@djio.com.br>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Poedit 1.6.5\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;"
+"_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2\n"
+"X-Poedit-Basepath: ../\n"
+"X-Textdomain-Support: yes\n"
+"Language: pt_BR\n"
+"X-Poedit-SearchPath-0: .\n"
+
+# @ default
+#: framework/framework.php:77
+msgid "Settings reset."
+msgstr "Configurações redefinidas."
+
+# @ coming-soon
+#: framework/framework.php:177
+msgid "&larr; Close Window"
+msgstr "&larr; Fechar janela"
+
+# @ coming-soon
+#: framework/framework.php:177
+msgid "Live Preview"
+msgstr "Visualizar"
+
+# @ coming-soon
+#: framework/field-types/date.php:8 framework/field-types/daterange.php:8
+msgid "01-Jan"
+msgstr "01-Jan"
+
+# @ coming-soon
+#: framework/field-types/date.php:9 framework/field-types/daterange.php:9
+msgid "02-Feb"
+msgstr "02-Fev"
+
+# @ coming-soon
+#: framework/field-types/date.php:10 framework/field-types/daterange.php:10
+msgid "03-Mar"
+msgstr "03-Mar"
+
+# @ coming-soon
+#: framework/field-types/date.php:11 framework/field-types/daterange.php:11
+msgid "04-Apr"
+msgstr "04-Abr"
+
+# @ coming-soon
+#: framework/field-types/date.php:12 framework/field-types/daterange.php:12
+msgid "05-May"
+msgstr "05-Mai"
+
+# @ coming-soon
+#: framework/field-types/date.php:13 framework/field-types/daterange.php:13
+msgid "06-Jun"
+msgstr "06-Jun"
+
+# @ coming-soon
+#: framework/field-types/date.php:14 framework/field-types/daterange.php:14
+msgid "07-Jul"
+msgstr "07-Jul"
+
+# @ coming-soon
+#: framework/field-types/date.php:15 framework/field-types/daterange.php:15
+msgid "08-Aug"
+msgstr "08-Ago"
+
+# @ coming-soon
+#: framework/field-types/date.php:16 framework/field-types/daterange.php:16
+msgid "09-Sep"
+msgstr "09-Set"
+
+# @ coming-soon
+#: framework/field-types/date.php:17 framework/field-types/daterange.php:17
+msgid "10-Oct"
+msgstr "10-Out"
+
+# @ coming-soon
+#: framework/field-types/date.php:18 framework/field-types/daterange.php:18
+msgid "11-Nov"
+msgstr "11-Nov"
+
+# @ coming-soon
+#: framework/field-types/date.php:19 framework/field-types/daterange.php:19
+msgid "12-Dec"
+msgstr "12-Dez"
+
+# @ coming-soon
+#: framework/field-types/date.php:29 framework/field-types/daterange.php:29
+#: framework/field-types/daterange.php:42
+msgid "day"
+msgstr "dia"
+
+# @ coming-soon
+#: framework/field-types/date.php:32 framework/field-types/daterange.php:32
+#: framework/field-types/daterange.php:45
+msgid "year"
+msgstr "ano"
+
+# @ coming-soon
+#: framework/field-types/upload.php:12
+msgid "Media Image Library"
+msgstr "Biblioteca de Mídia de Imagens"
+
+# @ coming-soon
+#: framework/validations/color.php:13
+msgid "Please enter a valid color value."
+msgstr "Por favor, informe um valor de cor válido."
+
+# @ coming-soon
+#: framework/validations/email.php:10 framework/validations/escurlraw.php:11
+msgid "Please enter a valid email."
+msgstr "Please enter a valid email."
+
+# @ coming-soon
+#: framework/validations/number.php:11
+msgid "Please enter a valid number."
+msgstr "Por favor, informe um número válido."
+
+# @ coming-soon
+#: framework/validations/required.php:10
+msgid "is required."
+msgstr "é obrigatório."
+
+# @ coming-soon
+#: inc/class-seed-csp4.php:80
+msgid "Coming Soon Mode Active"
+msgstr "Modo Em Breve Ativo"
+
+# @ coming-soon
+#: inc/class-seed-csp4.php:82
+msgid "Maintenance Mode Active"
+msgstr "Modo de Manutenção Ativo"
+
+# @ coming-soon
+#: inc/config-settings.php:44
+msgid "General"
+msgstr "Geral"
+
+# @ coming-soon
+#: inc/config-settings.php:50
+msgid "Status"
+msgstr "Status"
+
+# @ coming-soon
+#: inc/config-settings.php:52
+msgid "Disabled"
+msgstr "Inativo"
+
+# @ coming-soon
+#: inc/config-settings.php:53
+msgid "Enable Coming Soon Mode"
+msgstr "Ativar Modo Em Breve"
+
+# @ coming-soon
+#: inc/config-settings.php:54
+msgid "Enable Maintenance Mode"
+msgstr "Ativar Modo de Manutenção"
+
+# @ coming-soon
+#: inc/config-settings.php:56
+msgid ""
+"When you are logged in you'll see your normal website. Logged out visitors "
+"will see the Coming Soon or Maintenance page. Coming Soon Mode will be "
+"available to search engines if your site is not private. Maintenance Mode "
+"will notify search engines that the site is unavailable."
+msgstr ""
+"Quando você estiver conectado verá seu site normal. Visitantes não logados "
+"verão a página Em Breve ou Em Manutenção. O modo Em Breve estará disponível "
+"para os buscadores, se seu site não for privado. O Modo de Manutenção irá "
+"notificar os buscadores que o site está indisponível."
+
+# @ coming-soon
+#: inc/config-settings.php:66
+msgid "Use maintenance.php"
+msgstr "Usar maintenance.php"
+
+# @ coming-soon
+#: inc/config-settings.php:67
+msgid ""
+"maintenance.php detected, would you like to use this for your maintenance "
+"page?"
+msgstr ""
+"Arquivo maintenance.php detectado, gostaria de usá-lo para sua página de "
+"manutenção?"
+
+# @ coming-soon
+#: inc/config-settings.php:69 inc/config-settings.php:197
+#: inc/config-settings.php:265
+msgid "Yes"
+msgstr "Sim"
+
+# @ coming-soon
+#: inc/config-settings.php:79
+msgid "Page Settings"
+msgstr "Configurações da Página"
+
+# @ coming-soon
+#: inc/config-settings.php:85
+msgid "Logo"
+msgstr "Logo"
+
+# @ coming-soon
+#: inc/config-settings.php:86
+msgid "Upload a logo or teaser image (or) enter the url to your image."
+msgstr ""
+"Fazer upload de uma imagem de logotipo ou teaser (ou) Insira o url para sua "
+"imagem."
+
+# @ coming-soon
+#: inc/config-settings.php:93
+msgid "Headline"
+msgstr "Manchete"
+
+# @ coming-soon
+#: inc/config-settings.php:118
+msgid "Header"
+msgstr "Cabeçalho"
+
+# @ coming-soon
+#: inc/config-settings.php:124
+msgid "Favicon"
+msgstr "Favicon"
+
+# @ coming-soon
+#: inc/config-settings.php:125
+msgid ""
+"Favicons are displayed in a browser tab. Need Help <a href=\"http://tools."
+"dynamicdrive.com/favicon/\" target=\"_blank\">creating a favicon</a>?"
+msgstr ""
+"Favicons são exibidos na aba do navegador. Precisa de ajuda para <a href="
+"\"http://tools.dynamicdrive.com/favicon/\" target=\"_blank\">criar um "
+"favicon</a>?"
+
+# @ coming-soon
+#: inc/config-settings.php:131
+msgid "SEO Title"
+msgstr "Título do SEO"
+
+# @ coming-soon
+#: inc/config-settings.php:137
+msgid "SEO Meta Description"
+msgstr "Descrição Meta do SEO"
+
+# @ coming-soon
+#: inc/config-settings.php:146
+msgid "Analytics Code"
+msgstr "Código do Analytics"
+
+# @ coming-soon
+#: inc/config-settings.php:157
+msgid "Design"
+msgstr "Design"
+
+# @ coming-soon
+#: inc/config-settings.php:170
+msgid "Background"
+msgstr "Fundo"
+
+# @ coming-soon
+#: inc/config-settings.php:177
+msgid "Background Color"
+msgstr "Cor de Fundo"
+
+# @ coming-soon
+#: inc/config-settings.php:180
+msgid ""
+"Choose between having a solid color background or uploading an image. By "
+"default images will cover the entire background."
+msgstr ""
+"Escolha entre ter um fundo de cor sólida ou fazer upload de uma imagem. Por "
+"padrão, a imagem cobrirá todo o plano de fundo."
+
+# @ coming-soon
+#: inc/config-settings.php:188
+msgid "Background Image"
+msgstr "Imagem de Fundo"
+
+# @ coming-soon
+#: inc/config-settings.php:206
+msgid "Background Repeat"
+msgstr "Repetição do Fundo"
+
+# @ coming-soon
+#: inc/config-settings.php:208
+msgid "No-Repeat"
+msgstr "Sem Repetição"
+
+# @ coming-soon
+#: inc/config-settings.php:209
+msgid "Tile"
+msgstr "Repetir"
+
+# @ coming-soon
+#: inc/config-settings.php:210
+msgid "Tile Horizontally"
+msgstr "Repetir Horizontalmente"
+
+# @ coming-soon
+#: inc/config-settings.php:211
+msgid "Tile Vertically"
+msgstr "Repetir Verticalmente"
+
+# @ coming-soon
+#: inc/config-settings.php:220
+msgid "Background Position"
+msgstr "Posição do Fundo"
+
+# @ coming-soon
+#: inc/config-settings.php:222
+msgid "Left Top"
+msgstr "Superior Esquerda"
+
+# @ coming-soon
+#: inc/config-settings.php:223
+msgid "Left Center"
+msgstr "Esquerda Centralizado"
+
+# @ coming-soon
+#: inc/config-settings.php:224
+msgid "Left Bottom"
+msgstr "Inferior Esquerda"
+
+# @ coming-soon
+#: inc/config-settings.php:225
+msgid "Right Top"
+msgstr "Superior Direita"
+
+# @ coming-soon
+#: inc/config-settings.php:226
+msgid "Right Center"
+msgstr "Direita Centralizado"
+
+# @ coming-soon
+#: inc/config-settings.php:227
+msgid "Right Bottom"
+msgstr "Inferior Direita"
+
+# @ coming-soon
+#: inc/config-settings.php:228
+msgid "Center Top"
+msgstr "Superior Centralizado"
+
+# @ coming-soon
+#: inc/config-settings.php:229
+msgid "Center Center"
+msgstr "Centro Centralizado"
+
+# @ coming-soon
+#: inc/config-settings.php:230
+msgid "Center Bottom"
+msgstr "Inferior Centralizado"
+
+# @ coming-soon
+#: inc/config-settings.php:238
+msgid "Background Attachment"
+msgstr "Anexo do Fundo"
+
+# @ coming-soon
+#: inc/config-settings.php:240
+msgid "Fixed"
+msgstr "Fixo"
+
+# @ coming-soon
+#: inc/config-settings.php:241
+msgid "Scroll"
+msgstr "Rolar"
+
+# @ coming-soon
+#: inc/config-settings.php:275
+msgid "Text"
+msgstr "Texto"
+
+# @ coming-soon
+#: inc/config-settings.php:281
+msgid "Text Color"
+msgstr "Cor do Texto"
+
+# @ coming-soon
+#: inc/config-settings.php:297
+msgid "Headline Color"
+msgstr "Cor da Manchete"
+
+# @ coming-soon
+#: inc/config-settings.php:308
+msgid "Text Font"
+msgstr "Fonte do Texto"
+
+# @ coming-soon
+#: inc/config-settings.php:329
+msgid "Template"
+msgstr "Modelo"
+
+# @ coming-soon
+#: inc/config-settings.php:337
+msgid "Custom CSS"
+msgstr "CSS Personalizado"
+
+# @ coming-soon
+#: inc/config-settings.php:338
+msgid "Need to tweaks the styles? Add your custom CSS here."
+msgstr "Precisa de ajustes nos estilos? Adicione seu CSS personalizado aqui."
+
+# @ coming-soon
+#: inc/config-settings.php:347
+msgid "Advanced"
+msgstr "Avançadas"
+
+# @ coming-soon
+#: inc/config-settings.php:360
+msgid "Scripts"
+msgstr "Scripts"
+
+# @ coming-soon
+#: inc/config-settings.php:366
+msgid "Header Scripts"
+msgstr "Scripts de Cabeçalho"
+
+# @ coming-soon
+#: inc/config-settings.php:367
+msgid ""
+"Enter any custom scripts. You can enter Javascript or CSS. This will be "
+"rendered before the closing head tag."
+msgstr ""
+"Digite quaisquer scripts personalizados. Você pode inserir Javascript ou "
+"CSS. Isto será processado antes do fechamento da tag <head>."
+
+# @ coming-soon
+#: inc/config-settings.php:374
+msgid "Footer Scripts"
+msgstr "Roteiros de Rodapé"
+
+# @ coming-soon
+#: inc/config-settings.php:375
+msgid ""
+"Enter any custom scripts. This will be rendered before the closing body tag."
+msgstr ""
+"Digite quaisquer scripts personalizados. Isto será processado antes de "
+"fechar a tag <body>."
+
+# @ coming-soon
+#. translators: plugin header field 'Name'
+#: coming-soon.php:0 coming-soon.php:22 framework/framework.php:116
+#: framework/framework.php:117 inc/config-settings.php:22
+msgid "Coming Soon"
+msgstr "Em Breve"
+
+# @ coming-soon
+#. translators: plugin header field 'PluginURI'
+#. translators: plugin header field 'AuthorURI'
+#: coming-soon.php:0
+msgid "http://www.seedprod.com"
+msgstr "http://www.seedprod.com"
+
+# @ coming-soon
+#. translators: plugin header field 'Description'
+#: coming-soon.php:0
+msgid "Coming Soon, Maintenance Mode pages in minutes"
+msgstr "Páginas de Em Breve e Modo de Manutenção em minutos"
+
+# @ coming-soon
+#. translators: plugin header field 'Author'
+#: coming-soon.php:0
+msgid "SeedProd"
+msgstr "SeedProd"
+
+# @ coming-soon
+#. translators: plugin header field 'Version'
+#: coming-soon.php:0
+msgid "4.0.3"
+msgstr "4.0.3"
+
+# @ coming-soon
+#: framework/field-types/customsocialfollow.php:23
+msgid ""
+"Enter your social profile url's. Drag &amp; Drop the icons to reorder. "
+"Remember to save your changes. <a href='https://seedprod.zendesk.com/"
+"entries/21778652-adding-custom-icons' target='_blank'>Learn how to add your "
+"own custom icons</a>."
+msgstr ""
+"Digite a url do seu perfil social. Arraste e solte os ícones para reordenar. "
+"Lembre-se de salvar as alterações. <a href='https://seedprod.zendesk.com/"
+"entries/21778652-adding-custom-icons' target='_blank'>Saiba como adicionar "
+"seus próprios ícones personalizados</a>."
+
+# @ coming-soon
+#: framework/field-types/daterange.php:22
+msgid "Start Date"
+msgstr "Data do Início"
+
+# @ coming-soon
+#: framework/field-types/daterange.php:35
+msgid "End Date"
+msgstr "Data de Término"
+
+# @ coming-soon
+#: framework/framework.php:179
+msgid "Upgrade to the Pro Version"
+msgstr "Atualize para a Versão Pro!"
+
+# @ coming-soon
+#: framework/framework.php:234 framework/framework.php:283
+#: framework/framework.php:498
+msgid "Save All Changes"
+msgstr "Salvar Todas as Alterações"
+
+# @ coming-soon
+#: framework/framework.php:236 framework/framework.php:284
+msgid "Reset Settings"
+msgstr "Redefinir Configurações"
+
+# @ coming-soon
+#: framework/framework.php:302
+msgid ""
+"This tabs settings be deleted and reset to the defaults. Are you sure you "
+"want to reset?"
+msgstr ""
+"Estas definições de abas serão excluídas e redefinidas para os valores "
+"padrão. Tem certeza de que deseja redefinir?"
+
+# @ coming-soon
+#: inc/class-seed-csp4.php:144
+msgid "Please enter your settings."
+msgstr "Por favor, Informe suas configurações."
+
+# @ coming-soon
+#: inc/config-settings.php:33 inc/config-settings.php:249
+msgid "Content"
+msgstr "Conteúdo"
+
+# @ coming-soon
+#: inc/config-settings.php:94
+msgid "Enter a headline for your page."
+msgstr "Informe a Manchete da sua página"
+
+# @ coming-soon
+#: inc/config-settings.php:100
+msgid "Message"
+msgstr "Mensagem"
+
+# @ coming-soon
+#: inc/config-settings.php:101
+msgid "Tell the visitor what to expect from your site."
+msgstr "Diga ao visitante o que esperar de seu site o."
+
+# @ ultimate-coming-soon-page
+#: inc/config-settings.php:107
+msgid "Powered By SeedProd"
+msgstr "Movido por SeedProd"
+
+# @ coming-soon
+#: inc/config-settings.php:108
+msgid "Nope - Got No Love"
+msgstr "Não - Sem Amor"
+
+# @ coming-soon
+#: inc/config-settings.php:108
+msgid "Yep - I Love You Man"
+msgstr "Sim - Te Amo Cara!"
+
+# @ coming-soon
+#: inc/config-settings.php:109
+msgid ""
+"Can we show a <strong>cool stylish</strong> footer credit at the bottom the "
+"page."
+msgstr ""
+"Podemos mostrar créditos <strong>legais e elegantes</strong> do rodapé na "
+"parte inferior da página."
+
+# @ coming-soon
+#: inc/config-settings.php:147
+msgid ""
+"Paste in your Universal or Classic <a href=\"http://www.google.com/analytics/"
+"\" target=\"_blank\">Google Analytics</a> code."
+msgstr ""
+"Cole no seu código Universal ou Clássico do <a href=\"http://www.google.com/"
+"analytics/\" target=\"_blank\">Google Analytics</a> ."
+
+# @ coming-soon
+#: inc/config-settings.php:194
+msgid "Responsive Background"
+msgstr "Fundo Responsivo"
+
+# @ coming-soon
+#: inc/config-settings.php:195
+msgid ""
+"Scale the background image to be as large as possible so that the background "
+"area is completely covered by the background image. Some parts of the "
+"background image may not be in view within the background positioning area."
+msgstr ""
+"Redimensione a imagem de fundo para que seja tão grande quanto possível, "
+"para que a área de fundo fique completamente coberta pela imagem de fundo. "
+"Algumas partes da imagem de fundo podem não ser exibidas dentro do plano de "
+"fundo de área de posicionamento."
+
+# @ coming-soon
+#: inc/config-settings.php:205 inc/config-settings.php:219
+#: inc/config-settings.php:237
+msgid "This setting is not applied if Responsive Background is checked"
+msgstr ""
+"Essa configuração não será aplicada se fundo responsivo estiver selecionado"
+
+# @ coming-soon
+#: inc/config-settings.php:256
+msgid "Max Width"
+msgstr "Largura Máxima"
+
+# @ coming-soon
+#: inc/config-settings.php:257
+msgid ""
+"By default the max width of the content is set to 600px. Enter a number "
+"value if you need it bigger. Example: 900"
+msgstr ""
+"Por padrão, a largura máxima do conteúdo é definida como 600px. Digite um "
+"valor numérico se precisar maior. Ex: 900"
+
+# @ coming-soon
+#: inc/config-settings.php:262
+msgid "Enable Well"
+msgstr "Habilitar Poço"
+
+# @ coming-soon
+#: inc/config-settings.php:263
+msgid "This will wrap your content in a box."
+msgstr "Isto irá envolver seu conteúdo em uma caixa."
+
+# @ coming-soon
+#: inc/config-settings.php:289
+msgid "Link Color"
+msgstr "Cor dos Links"
+
+# @ coming-soon
+#: inc/config-settings.php:300
+msgid "If no Headline Color is chosen then the Link Color will be used. "
+msgstr ""
+"Se nenhuma Cor da Manchete for escolhida então a Cor dos Links será usada. "

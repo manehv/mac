@@ -3,8 +3,8 @@ Contributors: nextendweb
 Tags: facebook, register, login, social connect, social, facebook connect
 Donate link: https://www.facebook.com/nextendweb
 Requires at least: 3.0
-Tested up to: 3.4
-Stable tag: 1.4.59
+Tested up to: 4.0.1
+Stable tag: 1.5.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -49,15 +49,20 @@ After you activated the plugin, the plugin will autmatically
 
 == Installation ==
 
-1.  Extract the zip file and just drop the contents in the wp-content/plugins/ directory of your WordPress installation and then activate the Plugin from Plugins page.
-2.  Create a facebook app => https://developers.facebook.com/apps/?action=create
-3.  Choose an App Name, it can be anything you like
-4.  Click on Continue
-5.  Go to the newly created App settings page and click Edit Settings
-6.  Fill out App Domains field with: your domain name
-7.  Click on Website with Facebook Login tab abd fill out Site URL field with: http://yoursiteurl.com
-8.  Click on Save changes and the top of the page contains the App Id and App secret which you have to copy and past below.
-9.  Save changes!
+1. Install the zip file from your backend, or extract it and just drop the contents in the wp-content/plugins/ directory, then activate the Plugin from Plugins page.
+2. Create a facebook app => https://developers.facebook.com/apps/
+3. Don't choose from the listed options, but click on "advanced setup" in the bottom.
+4. Choose an app name, and a category, then click on Create App ID.
+5. Pass the security check.
+6. Go to the Settings of the application.
+7. Click on + Add Platform, and choose Website.
+8. Give your website's address at the Site URL field with: http://yoursiteurl.com
+9. Give a Contact Email and click on Save Changes.
+10. Go to Status & Review, and change the availability for the general public to YES.
+11. Go back to the Settings, and copy the App ID, and APP Secret.
+12. Paste them into your website's Settings -> Nextend Settings.
+13. Save changes!
+
 
 
 == Screenshots ==
@@ -66,6 +71,22 @@ After you activated the plugin, the plugin will autmatically
 2. Our Social Connect plugins in the profile page for account linking
 
 == Changelog ==
+
+= 1.5.4 =
+* Updated installation instruction
+
+= 1.5.3 =
+* Updated installation instruction
+
+= 1.5.2 =
+* Fixed username generation (Thanks to: Cyrus Collier)
+* Fixed redirect issue (Thanks to: Cyrus Collier)
+
+= 1.5.1 =
+* Security fix for XSS
+
+= 1.5.0 =
+* Security fix for redirects (Thanks to: Kacper Szurek and Elger Jonker)
 
 = 1.4.59 =
 * Avatar fix

@@ -3,7 +3,7 @@
 Plugin Name: Facebook Login Widget
 Plugin URI: http://avifoujdar.wordpress.com/category/my-wp-plugins/
 Description: This is a facebook login plugin as widget. This widget also supports default wordpress user login. 
-Version: 1.2.2
+Version: 2.2.0
 Author: avimegladon
 Author URI: http://avifoujdar.wordpress.com/
 */
@@ -23,6 +23,7 @@ class afo_fb_login {
 	function __construct() {
 		add_action( 'admin_menu', array( $this, 'facebook_login_widget_afo_menu' ) );
 		add_action( 'admin_init',  array( $this, 'facebook_login_widget_afo_save_settings' ) );
+		add_action( 'plugins_loaded',  array( $this, 'fb_login_widget_text_domain' ) );
 	}
 	
 	function  fb_login_widget_afo_options () {
@@ -33,10 +34,11 @@ class afo_fb_login {
 		$this->donate_form_facebook_login();
 		$this->fb_comment_addon_add();
 		$this->fb_login_pro_add();
+		$this->help_support();
 		?>
 		<form name="f" method="post" action="">
 		<input type="hidden" name="option" value="login_widget_afo_save_settings" />
-		<table width="100%" border="0"> 
+		<table width="98%" border="0" style="background-color:#FFFFFF; border:1px solid #CCCCCC; padding:0px 0px 0px 10px; margin:2px;">
 		  <tr>
 			<td width="45%"><h1>Facebook Login Widget</h1></td>
 			<td width="55%">&nbsp;</td>
@@ -61,6 +63,10 @@ class afo_fb_login {
 		</table>
 		</form>
 		<?php 
+	}
+	
+	function fb_login_widget_text_domain(){
+		load_plugin_textdomain('flw', FALSE, basename( dirname( __FILE__ ) ) .'/languages');
 	}
 	
 	function fb_login_help(){ ?>
@@ -144,20 +150,29 @@ class afo_fb_login {
 	}
 	
 	function facebook_login_widget_afo_save_settings(){
-		if($_POST['option'] == "login_widget_afo_save_settings"){
+		if(isset($_POST['option']) and $_POST['option'] == "login_widget_afo_save_settings"){
 			update_option( 'afo_fb_app_id', $_POST['afo_fb_app_id'] );
 			update_option( 'afo_fb_app_secret', $_POST['afo_fb_app_secret'] );
 		}
 	}
 	
 	function facebook_login_widget_afo_menu () {
-		add_options_page( 'FB Login Widget', 'FB Login Widget', 10, 'fb_login_widget_afo', array( $this, 'fb_login_widget_afo_options' ));
+		add_options_page( 'FB Login Widget', 'FB Login Widget', 'activate_plugins', 'fb_login_widget_afo', array( $this, 'fb_login_widget_afo_options' ));
+	}
+	
+	function help_support(){ ?>
+	<table width="98%" border="0" style="background-color:#FFFFFF; border:1px solid #CCCCCC; padding:0px 0px 0px 10px; margin:2px;">
+	  <tr>
+		<td align="right"><a href="http://aviplugins.com/support.php" target="_blank">Help and Support</a></td>
+	  </tr>
+	</table>
+	<?php
 	}
 	
 	function fb_login_pro_add(){ ?>
 	<table width="98%" border="0" style="background-color:#FFFFD2; border:1px solid #E6DB55; padding:0px 0px 0px 10px; margin:2px;">
   <tr>
-    <td><p>There is a PRO version of this plugin that supports login with <strong>Facebook</strong>, <strong>Google</strong>,  <strong>Twitter</strong> and <strong>LinkedIn</strong>. You can get it <a href="http://aviplugins.com/fb-login-widget-pro/" target="_blank">here</a> in <strong>USD 1.50</strong> </p></td>
+    <td><p>There is a PRO version of this plugin that supports login with <strong>Facebook</strong>, <strong>Google</strong>,  <strong>Twitter</strong> and <strong>LinkedIn</strong>. You can get it <a href="http://aviplugins.com/fb-login-widget-pro/" target="_blank">here</a> in <strong>USD 3.00</strong> </p></td>
   </tr>
 </table>
 	<?php }
@@ -167,7 +182,7 @@ class afo_fb_login {
 	?>
 		<table width="98%" border="0" style="background-color:#FFFFD2; border:1px solid #E6DB55; padding:0px 0px 0px 10px; margin:2px;">
 	  <tr>
-		<td><p>There is a <strong>Facebook Comments Addon</strong> for this plugin. The plugin replace the default <strong>Wordpress</strong> Comments module and enable <strong>Facebook</strong>/<strong>Disqus</strong> Comments Module. You can get it <a href="http://aviplugins.com/fb-comments-addon/" target="_blank">here</a> in <strong>USD 1.00</strong> </p></td>
+		<td><p>There is a <strong>Facebook Comments Addon</strong> for this plugin. The plugin replace the default <strong>Wordpress</strong> Comments module and enable <strong>Facebook</strong>/<strong>Disqus</strong> Comments Module. You can get it <a href="http://www.aviplugins.com/fb-comments-afo-addon/" target="_blank">here</a> in <strong>USD 1.00</strong> </p></td>
 	  </tr>
 	</table>
 	<?php 

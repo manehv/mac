@@ -1,0 +1,34 @@
+.wplc_row {
+    width:100%;
+    display:block;
+    overflow:auto;
+}
+.wplc_row_col {
+    width:90%;
+    float:left;
+    display:block;
+    overflow:auto;
+    margin:0.25%;
+    padding:0.2%;
+    min-height:420px;
+}
+.wplc_row_col h2 { 
+    font-weight:900;
+}
+.wplc_row_col ul li {
+	margin: 0.3em 2.5em;
+}
+.wplc_row_col ul {
+	list-style-type:disc;
+}
+@media only screen and (min-width:480px) {
+   .wplc_row_col {
+        width:31%;
+        float:left;
+        display:block;
+        overflow:auto;
+        margin:0.25%;
+        padding:0.2%;
+        min-height:420px;
+    } 
+}

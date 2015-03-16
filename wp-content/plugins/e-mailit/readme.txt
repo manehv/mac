@@ -1,57 +1,70 @@
 ==== Share Buttons by E-MAILiT ====
 Contributors: e-mailit
-Tags: +1, add this, add to any, AddThis, addtoany, admin, analytics, bookmark, bookmark button, buffer, button, comments, del.icio.us, Digg, e-mail, email, email button, evernote, Facebook, facebook like, facebook share, fark, gmail, google, google analytics, google bookmarks, google plus, google translate, Google+1, image, images, instagram, instapaper, Like, linkedin, links, mister-wong, myspace, page, pages, pin, pin it, pinterest, plugin, plus one, Post, posts, print, PrintFriendly, Reddit, Share, share and follow, share button, share buttons, share links, share this, Shareaholic, sharethis, sharing, sharing is caring, sharing is sexy, shortcode, sidebar, social, social bookmarking, social bookmarks, social share, social sharing, statistics, stats, stumbleupon, technorati, tumblr, tweet, tweet button, twitter, twitter button, twitter share, wanelo, widget, wpmu, yahoo, yammer
+Tags: +1, add to any, AddThis, addtoany, admin, analytics, bitly, bookmark, bookmark button, bookmarking, bookmarks, buffer, button, del.icio.us, Digg, email, e-mail, email button, email tools, emailit, E-MAILiT, evernote, Facebook, facebook like, facebook share, fark, gmail, google, google +1, google analytics, google bookmarks, google plus, google plus one, google translate, Google+1, hootsuite, image, images, instagram, instapaper, Like, linkedin, links, mister-wong, myspace, page, pages, pin, pinit, pinterest, plugin, plus1, plusone, Post, posts, print, PrintFriendly, Quora, Reddit, responsive, save, seo, Share, share and follow, share button, share buttons, share links, share this, Shareaholic, sharedaddy, sharethis, sharing, sharing buttons, sharing Is caring, sharing is sexy, shortcode, sidebar, sociable, social, social bookmarking, social bookmarks, social marketing, social share, social sharing, social tools, socialize, statistics, stats, stumbleupon, technorati, tumblr, tweet, tweet button, twitter, twitter button, twitter share, wanelo, Website Tools, whatsapp, widget, wpmu, yahoo, yammer, yummly
 
 Requires at least: 2.9
-Tested up to: 4.0
-Stable tag: 7.1
-License: GPLv2 or later
+Tested up to: 4.1.1
+Stable tag: 7.5
+License: GPLv2 or later  
 
-Make easier to increase your content distribution, generate revenue & measure social analytics for free.
+Share any content on the web with friends through Facebook, Twitter, Pinterest, WhatsApp, and lots more.
 
 == Description == 
 
-E-MAILiT Share Buttons can be deployed on any site to drive traffic, stimulate viral activity, and track the sharing of content to over 130 services. 
+E-MAILiT Share Buttons can be deployed on any WordPress powered site to help people share to over 130 social sharing services.
 
-E-MAILiT simplifies social media services. We reduce clutter on webpages, and provide instant distribution of content across social networks, and communities.  
-E-MAILiT allows media to become truly social, with the click of just one share button. 
+= Recent Updates =
 
-Understand your audience. Engage your readers. Make more money. 
+* [E-MAILiT will discontinue the account registration system on April 4th, 2015](http://blog.e-mailit.com/2015/02/important-announcement.html)
+* New UI/UX Admin Plugin Settings Panel Interface
+* Customize Services
+* Customize Following Channels
+* [Create your Advertising Campaign](http://www.e-mailit.com/features#create-campaign)
 
-= Share Buttons =
+= Sharing and Following Buttons (2 in 1): Grow Your Website and Build Your Community =
 
-* Simple activation
-* Make easier for your audience/visitors to increase the share of your content distribution with their friends
-* Share any content on the web with friends through Facebook, Twitter, LinkedIn, and lots more
+* Lots of sharing services to choose (130+ services)
+* Easy to install and to customize
+* Counters. Universal and original share counts
+* Standalone Buttons (default/custom/original/circular icons large and small sharing buttons)
+* Free from spam, clean, and adjustable
 * 3rd party share counter buttons include the Facebook Like Button, Facebook Share Button, Facebook Like/Share Button (combo), Twitter Tweet Button, Pinterest Pin It Button, Google+ Share Button, VKontakte Share Button, Odnoklassniki Share Button and LinkedIn Share Button
-* Email sharing via Email Form, Gmail, Yahoo! Mail, Outlook.com, AOL Mail and MailRu
+* Email sharing via Gmail, Yahoo! Mail, Outlook.com, AOL Mail, MailRu and any other web and native apps
 * Integrated social life-cycle engagement suite. Make easy for your visitors to connect with you, through social profiles, blogs, feeds and other social sources on the internet, saving space from the website canvas
-* Custom Placement
+* Custom Placement. Choose exactly where you want E-MAILiT to appear
 
-**Get more social traffic, likes, shares and followers on your site with E-MAILiT!**  
-Check out the <a href="http://www.e-mailit.com/" title="Sharing buttons">live demo</a> 
+<a href="http://www.e-mailit.com/" title="Sharing buttons">Share Buttons</a> demo
 
-= Social Analytics Integration =
+= Monetizing: Create revenue and keep it all - Begin creating money from your sharing button =
 
-* Automatic Google Analytics integration for sharing analytics
+* Monetize the sharing of your site's content by creating a new source of income while enjoying higher CTR, by displaying in-button ads. Generate incremental ad revenue to supplement your existing revenue sources. Create new inventory by enabling ads that emerge from the buttons without having to change your page layout
 
-= CMS Optimized =
+= WordPress Optimized =
 
+* No account necessary
 * Well-engineered code will not slow or block your website pages from loading. Asynchronous ensure a fast page launch by loading your E-MAILiT button script at the end, without long wait periods, keeping your visitors engaged with your content
-* No signup, no login, no account necessary
-
-= Additional Features =
-
-* Translated into 75 languages, automatically localized
-* Mobile-friendly optimized with automatic detection of device-type. E-MAILiT will work and look great on all mobile devices and tablets
-* Peace of mind. We use caching via major global CDNs. A content delivery network (CDN) can give an equally fast web experience across the globe and is a collection of web servers distributed across multiple locations to deliver your content more efficiently to your users
-* Fast and reliable performance. Google Page Speed Insight Compliant/Optimized
+* Fast and reliable performance
 * Very light weight script which do not effect your site's loading speed
-* Create revenue and keep it all - Begin creating money from your sharing button (signup recuired - <a href="http://www.e-mailit.com/widget/register">Start a Campaign</a> or <a href="http://www.e-mailit.com/widget/login">Sign in</a>). Our platform provides easy access for Advertisers, Publishers and Users to reach their goals
+* Caching via major global CDNs
 
-E-MAILiT has been downloaded over 180,000 times by WordPress publishers from all over the world and has quickly grown from a nights and weekends project to a hypergrowth established startup, with 500 million views and over 210 million users to-date — served 70+ million times/month to 1+ million people/day, in 75 languages. 
+= Responsive and any Mobile device Optimized =
 
-<a href="http://blog.e-mailit.com">E-MAILiT Blog</a> | <a href="http://www.e-mailit.com/privacy">Privacy Policy</a> | <a href="http://www.e-mailit.com/about#bizdev">BizDev</a> 
+* Mobile-friendly optimized with automatic detection of device-type. E-MAILiT will work and look great on all smartphones and tablets
+
+= Google Analytics integrated =
+
+* Easy Google Analytics integration for social sharing stats
+
+= Support =
+
+* 7 years of continuous service development
+* Automatically localized in 75 languages with Auto-Button Share-Text Translation
+
+<a href="http://www.e-mailit.com/sharer?url=https://wordpress.org/plugins/e-mailit/&title=WordPress Share Buttons by E-MAILiT WordPress Plugins&domain=www.wordpress.org" title="Share">Share this</a> plugin
+
+<a href="http://blog.e-mailit.com/">E-MAILiT Blog</a> | <a href="http://www.e-mailit.com/privacy">Privacy</a> 
+
+Disclaimer: E-MAILiT is an advertising-supported service, which means that we are able to offer many of our services without charge to you by displaying advertising on our platform and on partner websites. Revenue generated from these ads supports E-MAILiT. We're displaying these targeted ads (this feature is optional and can be turned off anytime or you can use it exclusively for you by monetizing your website through a share button like ours, also for free) so we can continue offering free products and services that help you expand your awareness and generate money too! Delivering and maintaining such a platform to you is expensive but if you don’t want to participate we perfectly understand!
 
 == Installation ==
 
@@ -115,14 +128,71 @@ Facebook Like Button displays the likes about a specific url. In order to show c
 The count result is common for share and like interactions. Please, see here https://developers.facebook.com/docs/plugins/like-button/ There are counters for posting an article or sharing a page content. These are two seperate different interactions. But you can include the Share button next to the Like button, having more sharing options to display on your website and not feeling confused about the similar counters. You will have two different buttons together, with one counter only to display.
 
 == Screenshots ==
-01. The settings interface
-02. 3rd party share counter buttons
-03. Automatic Google Analytics integration for social sharing metrics, without register
-04. Share menu that appears when your visitors use the share button
-05. The Google Analytics dashboard
-06. The Google Analytics dashboard
+01. Sharing buttons
+02. Settings panel
+03. Share menu that appears instantly when visitors use the sharing tools
+04. Mobile version
+05. Set your own colors for your sharing icons
 
 == Changelog ==
+= 7.5 =
+* Notice added. E-MAILiT will discontinue the account registration system on April 4th, 2015. Read our blog post http://blog.e-mailit.com/2015/02/important-announcement.html.
+* New UI/UX Admin Plugin Settings Panel Interface.
+* Customize Services.
+* Customize Following Channels.
+* Create your Advertising Campaign.
+* Customize promo display.
+* Code performance improvements. <a target="_blank" href="https://developers.google.com/speed/pagespeed/insights/?url=http://www.e-mailit.com/widget/button/js/button.js&amp;tab=desktop" target="_blank">Test Desktop version</a> - <a target="_blank" href="https://developers.google.com/speed/pagespeed/insights/?url=http://www.e-mailit.com/sharer.php&amp;tab=mobile" target="_blank">Test Mobile version</a>
+* Backend: Coding modifications.
+= 7.4.3 =
+* Add Google PageSpeed Insights.
+= 7.4.2 =
+* Update MailRu, Taringa icons.
+* Update Quantcast sharing endpoint.
+* Add Hacker News, Mixi.
+* Remove Arto, Favoriten, funP, PhoneFavs, GiveALink, iWiW, LockerBlogger, Logger24.
+= 7.4.1 =
+* Add Hootsuite.
+* Add Quora.
+= 7.4 =
+* WordPress 4.1 compatibility.
+* Add Yummly.
+= 7.3.3.2 =
+* Minor bug fixes.
+= 7.3.3.1 =
+* Backend: Coding modifications.
+= 7.3.2 =
+* Standalone Circular icons support in: Large Sharing Buttons and Custom (large) Sharing Buttons.
+* Display buttons in excerpts (fixed).
+= 7.3.1 =
+* Major new features in Admin Plugin Settings Panel Interface.
+* Re-order, drag and drop customization.
+* Minor updates.
+* Minor bug fixes.  
+
+* Standalone Buttons:
+* **Sharing Buttons**
+ * choose between large and small buttons
+ * control how many buttons show up
+ * current supported services: Facebook, Twitter, Pinterest, E-MAILiT
+* **Custom Sharing Buttons**
+ * set your own colors
+ * choose large buttons
+ * control how many buttons show up
+ * current supported services: Facebook, Twitter, Pinterest, E-MAILiT
+* **Improved Original Sharing Buttons**
+ * share counters to encourage sharing: Included
+ * get a specific sharing button or a full set
+ * control how many buttons show up
+ * current supported services: Facebook Like & Share or combo, Twitter, Google+, Pinterest, LinkedIn, Odnoklassniki, Vkontakte, E-MAILiT
+* **E-MAILiT Button**
+ * edit: text, text color, background color
+ * show count checkbox (share counter to encourage sharing: Included)
+ * show menu on click or on hover
+= 7.2 =
+* WordPress 4.0.1 compatibility.
+* Code performance improvements.
+* Add Flipboard.
 = 7.1 =
 * Code performance improvements.
 = 7.0 =
