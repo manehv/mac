@@ -31,8 +31,10 @@ html.responsive { min-width: 0px; }
   clear: both;
   position: relative;
   /* z-index: 1; */
+/*
   border-top-style: solid;
   border-top-width: 1px;
+*/
 }
 
 .unit, .units {
@@ -109,25 +111,51 @@ body .unit.alpha, body .units.alpha {
     margin-bottom: 20px;
     width: 100%;
   }
+  .responsive #top.boxed .stretch_full {
+    width: 100%;
+  }
+  /* Offsets */
+  .responsive #top .offset-by-one,
+  .responsive #top .offset-by-two,
+  .responsive #top .offset-by-three,
+  .responsive #top .offset-by-four,
+  .responsive #top .offset-by-five,
+  .responsive #top .offset-by-six,
+  .responsive #top .offset-by-seven,
+  .responsive #top .offset-by-eight,
+  .responsive #top .offset-by-nine,
+  .responsive #top .offset-by-ten,
+  .responsive #top .offset-by-eleven {
+    padding-left: 0;
+  }
+ /*TITULOS PAGINAS DESCRIPTIVAS*/
+  body .av-special-heading .av-special-heading-tag {
+    padding: 5px !important;
+    margin: 0px;
+    font-family: "myriad_set_promedium" !important;
+    font-size: 18px !important;
+}
   
   .responsive #top #wrap_all .av-flex-cells .no_margin{
-	  display: block;
-	  margin: 0;
-	  height:auto !important;
-	  overflow: hidden;
-	  padding-left:0 !important;
-	  padding-right:0 !important;
-  }
-  
+          display: block;
+          margin: 0;
+          height:auto !important;
+          overflow: hidden;
+          padding-left:0 !important;
+          padding-right:0 !important;
+}
+
   .responsive #top #wrap_all .av-flex-cells .no_margin .flex_cell_inner{
-	    width: 85%;
-		max-width: 85%;
-		margin: 0 auto;  
-  }
-  
+            width: 85%;
+                max-width: 85%;
+                margin: 0 auto;  
+}
+
   .responsive #top #wrap_all .flex_column:empty{margin:0;}
 }
 /* #Mobile (Landscape)
+================================================== */
+/* Note: Design for a width of 480px */
 ================================================== */
 /* Note: Design for a width of 480px */
 @media only screen and (min-width: 480px) and (max-width: 767px) {
@@ -137,8 +165,6 @@ body .unit.alpha, body .units.alpha {
 /* #Clearing
 ================================================== */
 /* Self Clearing Goodness */
-.container:after {
-  content: "\0020";
   display: block;
   height: 0;
   clear: both;
@@ -209,6 +235,7 @@ div .av_two_fifth {
 div .av_one_half {
   margin-left: 6%;
   width: 47%;
+
 }
 div .av_three_fifth {
   margin-left: 6%;
@@ -324,5 +351,21 @@ div .av_one_tenth {
   .responsive .av_one_fourth.first + .av_one_fourth + .av_one_fourth + .av_one_fourth,
   .responsive .av_one_fourth.first + .av_one_fourth + .av_one_half {
     margin-top: 30px;
+  }
+}
+/*breaking point logic for the  1/5 element on mobile. makes sure that it converts to a 1/2 element */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .responsive #top #wrap_all .av_one_fifth.el_after_av_one_fifth {
+    margin-left: 4%;
+    width: 48%;
+  }
+  .responsive #top #wrap_all .av_one_fifth.first + .av_one_fifth,
+  .responsive #top #wrap_all .av_one_fifth.first + .av_one_fifth + .av_one_fifth + .av_one_fifth,
+  .responsive #top #wrap_all .av_one_fifth.first.el_after_av_one_fifth {
+    margin-left: 0%;
+    clear: both;
+  }
+  .responsive #top #wrap_all .av_one_fifth.first.el_after_av_one_fifth {
+    width: 100%;
   }
 }
