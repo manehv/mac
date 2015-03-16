@@ -2,8 +2,12 @@
 
 if(class_exists('GFForms') )
 {
-	add_action('wp_enqueue_scripts', 'avia_add_gravity_scripts');
+	function loadMyScripts1(){
+		add_action('wp_enqueue_scripts', 'avia_add_gravity_scripts');
+	}
+	add_action( 'wp_enqueue_scripts','loadMyScripts1' );
 }
+
 
 
 function avia_add_gravity_scripts()

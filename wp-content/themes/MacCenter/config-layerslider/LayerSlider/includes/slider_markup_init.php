@@ -6,10 +6,13 @@ if(!defined('LS_ROOT_FILE')) {
 }
 
 // Enqueue scripts
-wp_enqueue_script('greensock');
-wp_enqueue_script('layerslider');
-wp_enqueue_script('layerslider-transitions');
-wp_enqueue_script('ls-user-transitions');
+function loadMyScripts2(){
+	wp_enqueue_script('greensock');
+	wp_enqueue_script('layerslider');
+	wp_enqueue_script('layerslider-transitions');
+	wp_enqueue_script('ls-user-transitions');
+}
+add_action( 'wp_enqueue_scripts','loadMyScripts2' );
 
 $slider = array();
 

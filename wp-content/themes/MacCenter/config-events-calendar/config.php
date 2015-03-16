@@ -11,22 +11,29 @@ include( 'event-mod-css-dynamic.php');
 //register my own styles
 if(!function_exists('avia_events_register_assets'))
 {
-	if(!is_admin()){ add_action('wp_enqueue_scripts', 'avia_events_register_assets',15); }
+	if(!is_admin()){ 
+		function loadMyScripts(){
+		add_action('wp_enqueue_scripts', 'avia_events_register_assets',15); 
+		}
+		add_action( 'wp_enqueue_scripts','loadMyScripts' );
+	}
 	
 	function avia_events_register_assets($styleUrl)
 	{
 		wp_enqueue_style( 'avia-events-cal', AVIA_BASE_URL.'config-events-calendar/event-mod.css');
 	}
+	
 }
 
 
 //register own default template
 if(!function_exists('avia_events_tempalte_paths'))
 {
-	add_action('tribe_events_template', 'avia_events_tempalte_paths', 10, 2);
 	
+	add_action('tribe_events_template', 'avia_events_tempalte_paths', 10, 2);
 	function avia_events_tempalte_paths($file, $template)
 	{
+		
 		$redirect = array('default-template.php' , 'single-event.php' , 'pro/map.php' );
 		
 		if(in_array($template, $redirect))

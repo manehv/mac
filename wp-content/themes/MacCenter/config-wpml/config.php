@@ -11,8 +11,10 @@ if(defined('ICL_SITEPRESS_VERSION') && defined('ICL_LANGUAGE_CODE'))
 	add_action( 'init', 'avia_wpml_backend_language_switch');
 	//add_action( 'avia_wpml_backend_language_switch', 'avia_default_dynamics');
 	add_action( 'avia_wpml_backend_language_switch', 'avia_wpml_copy_options');
+	function loadMyScripts4(){
 	add_action( 'wp_enqueue_scripts', 'avia_wpml_register_assets' );
-	
+	}
+	add_action( 'wp_enqueue_scripts','loadMyScripts4' );
     add_filter( 'avf_execute_avia_meta_header', '__return_true', 10, 1);
 
 
