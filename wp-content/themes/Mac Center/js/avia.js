@@ -1,9 +1,9 @@
 (function($)
-{	
+{
     "use strict";
 
     $(document).ready(function()
-    {	
+    {
         var aviabodyclasses = AviaBrowserDetection('html');
 
 		$.avia_utilities = $.avia_utilities || {};
@@ -15,23 +15,22 @@
     	{
     		$.avia_utilities.isMobile =  false;
     	}
-
     	
         //check if user uses IE7 - if yes don't execute the function or the menu will break
         if(aviabodyclasses.indexOf("avia-msie-7") == -1) avia_responsive_menu();
 
         // decreases header size when user scrolls down
         avia_header_size();
-        
+
         // set sidebar main menu option
         avia_sidebar_menu();
         
         //activates the sticky submenu
-		avia_sticky_submenu();
+                avia_sticky_submenu();
 
         //show scroll top button
         avia_scroll_top_fade();
-        
+
         //creates search tooltip
         new $.AviaTooltip({"class": 'avia-search-tooltip',data: 'avia-search-tooltip', event:'click', position:'bottom', scope: "body", attach:'element'});
 
@@ -48,9 +47,6 @@
 		//activates the mega menu javascript
 		if($.fn.aviaMegamenu)
 		$(".main_menu .menu").aviaMegamenu({modify_position:true});
-		
-
-		
 		
 		$.avia_utilities.avia_ajax_call();
 		
@@ -71,7 +67,7 @@
         $(container).avia_activate_lightbox();
         
         //scrollspy for main menu. must be located before smoothscrolling
-		if($.fn.avia_scrollspy)
+                if($.fn.avia_scrollspy)
 		{
 			if(container == 'body')
 			{
@@ -98,6 +94,7 @@
 		$(".avia_video, .avia_audio", container).avia_html5_activation({ratio:'16:9'});
 
 	}
+	
 	
 	// -------------------------------------------------------------------------------------------
 	// Error log helper
@@ -230,14 +227,14 @@
 	          + this.selector + '[href="' + target + '"]'
 	
 	        active = $(selector)
-	          .parent('li')
-	          .addClass(this.options.applyClass)
-	
-	        if (active.parent('.sub-menu').length)  {
-	          active = active.closest('li.dropdown_ul_available').addClass(this.options.applyClass)
-	        }
-	
-	        active.trigger('activate')
+                  .parent('li')
+                  .addClass(this.options.applyClass)
+        
+                if (active.parent('.sub-menu').length)  {
+                  active = active.closest('li.dropdown_ul_available').addClass(this.options.applyClass)
+                }
+        
+                active.trigger('activate')
 	      }
 	
 	  }
@@ -256,12 +253,12 @@
 	    })
 	  }
 	
-	  $.fn.avia_scrollspy.Constructor = AviaScrollSpy
-	
-	  $.fn.avia_scrollspy.defaults = {
-	    offset: (parseInt($('.html_header_sticky #main').data('scroll-offset'), 10)) + ($(".html_header_sticky #header_main_alternate").outerHeight()) + ($(".html_header_sticky #header_meta").outerHeight()) + 1 + parseInt($('html').css('margin-top'),10),
-	    applyClass: 'current-menu-item'
-	  }
+          $.fn.avia_scrollspy.Constructor = AviaScrollSpy
+        
+          $.fn.avia_scrollspy.defaults = {
+            offset: (parseInt($('.html_header_sticky #main').data('scroll-offset'), 10)) + ($(".html_header_sticky #header_main_alternate").outerHeight()) + ($(".html_header_sticky #header_meta").outerHeight()) + 1 + parseInt($('html').css('margin-top'),10),
+            applyClass: 'current-menu-item'
+          }
 
 
 
@@ -329,38 +326,38 @@
     		show_menu_btn		= $('#advanced_menu_toggle'),
     		hide_menu_btn		= $('#advanced_menu_hide'),
     		mobile_advanced 	= menu.clone().attr({id:"mobile-advanced", "class":""}),
-    		sub_hidden			= $html.is('.html_header_mobile_behavior'),
-			insert_menu 		= function()
-			{	
-				if(first_level_items == 0) 
-				{
-					show_menu_btn.remove();
-				}
-				else
-				{
-					var after_menu = $('#header .logo');
-					show_menu_btn.insertAfter(after_menu);
-					mobile_advanced.find('.noMobile').remove();
-					mobile_advanced.prependTo(container);
-					hide_menu_btn.prependTo(container);
-				}
-			},
-			set_height = function()
-			{
+                sub_hidden                      = $html.is('.html_header_mobile_behavior'),
+                        insert_menu             = function()
+                        {
+                                if(first_level_items == 0) 
+                                {
+                                        show_menu_btn.remove();
+                                }
+                                else
+                                {
+                                var after_menu = $('#header .logo');
+                                show_menu_btn.insertAfter(after_menu);
+                                mobile_advanced.find('.noMobile').remove();
+                                mobile_advanced.prependTo(container);
+                                hide_menu_btn.prependTo(container);
+                                }
+                        },
+                        set_height = function()
+                        {
 				var height = mobile_advanced.outerHeight(true), win_h  = win.height();
-				
-				if(height < win_h) height = win_h;
-				container.css({'height':height});
-				
-				mobile_advanced.css({position:'absolute', 'min-height':win_h});
-			},
-			hide_menu = function()
-			{	
-				container.removeClass('show_mobile_menu');
-				setTimeout(function(){ container.css({'height':"auto", 'overflow':'hidden', 'minHeight':0}); },600);
-				return false;
-			},
-			autohide = function()
+                                
+                                if(height < win_h) height = win_h;
+                                container.css({'height':height});
+                                
+                                mobile_advanced.css({position:'absolute', 'min-height':win_h});
+                        },
+                        hide_menu = function()
+                        {       
+                                container.removeClass('show_mobile_menu');
+                                setTimeout(function(){ container.css({'height':"auto", 'overflow':'hidden', 'minHeight':0}); },600);
+                                return false;
+                        },
+                        autohide = function()
 			{
 				if(container.is('.show_mobile_menu') && hide_menu_btn.css('display') == 'none'){ hide_menu(); }
 			},
@@ -385,13 +382,13 @@
 			var current = $(this);
 			
 			//if submenu items are hidden do the toggle
-			if(sub_hidden)
-			{
-				var list_item = current.siblings('ul, .avia_mega_div');
-				if ( current.siblings('ul').children('.avia_mega_text_block').length && current.siblings('ul').children('li').length == 1 ) { list_item = ''; }
-				if(list_item.length)
-				{
-					if(list_item.hasClass('visible_sublist'))
+                        if(sub_hidden)
+                        {
+                                var list_item = current.siblings('ul, .avia_mega_div');
+                                if ( current.siblings('ul').children('.avia_mega_text_block').length && current.siblings('ul').children('li').length == 1 ) { list_item = ''; }
+                                if(list_item.length)
+                                {
+                                        if(list_item.hasClass('visible_sublist'))
 					{
 						list_item.removeClass('visible_sublist');
 					}
@@ -425,7 +422,7 @@
 	// html 5 videos
 	// -------------------------------------------------------------------------------------------
     $.fn.avia_html5_activation = function(options)
-	{	
+	{
 		var defaults =
 		{
 			ratio: '16:9'
@@ -478,13 +475,13 @@
 		    showTimecodeFrameCount: false,
 		    // used when showTimecodeFrameCount is set to true
 		    framesPerSecond: 25,
-		    // turns keyboard support on and off for this instance
-		    enableKeyboard: true,
-		    // when this player starts, it will pause other players
-		    pauseOtherPlayers: false,
-		    poster: posterImg,
-		    success: function (mediaElement, domObject) { 
-         	
+                    // turns keyboard support on and off for this instance
+                    enableKeyboard: true,
+                    // when this player starts, it will pause other players
+                    pauseOtherPlayers: false,
+                    poster: posterImg,
+                    success: function (mediaElement, domObject) { 
+                
 				setTimeout(function()
 				{
 					if (mediaElement.pluginType == 'flash') 
@@ -517,27 +514,31 @@
 
  	// -------------------------------------------------------------------------------------------
 	// hover effect for images
-	// -------------------------------------------------------------------------------------------
+        // -------------------------------------------------------------------------------------------
     function avia_hover_effect(container)
     {
-    	//hover overlay for mobile device doesnt really make sense. in addition it often slows down the click event
-    	if($.avia_utilities.isMobile) return;
+        //hover overlay for mobile device doesnt really make sense. in addition it often slows down the click event
+        if($.avia_utilities.isMobile) return;
     
-		var overlay = "", cssTrans = $.avia_utilities.supports('transition');
-		
-		if(container == 'body')
-    	{
-    		var elements = $('#main a img').parents('a').not('.noLightbox, .noLightbox a, .avia-gallery-thumb a, .avia-layerslider a, .noHover, .noHover a').add('#main .avia-hover-fx');
+                var overlay = "", cssTrans = $.avia_utilities.supports('transition');
+                
+        if(container == 'body')
+        {
+                var elements = $('#main a img').parents('a').not('.noLightbox, .noLightbox a, .avia-gallery-thumb a, .avia-layerslider a, .noHover, .noHover a').add('#main .avia-hover-fx');
     	}
     	else
     	{
-    		var elements = $('a img', container).parents('a').not('.noLightbox, .noLightbox a, .avia-gallery-thumb a, .avia-layerslider a, .noHover, .noHover a').add('.avia-hover-fx', container);
-    	}
+                var elements = $('a img', container).parents('a').not('.noLightbox, .noLightbox a, .avia-gallery-thumb a, .avia-layerslider a, .noHover, .noHover a').add('.avia-hover-fx', container);
+        }
 
-	   elements.each(function(e)
+                var overlay = "", isMobile      = $.avia_utilities.isMobile;
+
+                if(isMobile) return; //hover overlay for mobile device doesnt really make sense. in addition it often slows done the click event
+
+           elements.each(function(e)
        {
             var link = $(this), 
-            	current = link.find('img:first');
+                current = link.find('img:first');
 
             if(current.hasClass('alignleft')) link.addClass('alignleft').css({float:'left', margin:0, padding:0});
             if(current.hasClass('alignright')) link.addClass('alignright').css({float:'right', margin:0, padding:0});
@@ -550,64 +551,64 @@
             }
             
             if(!link.css('position') || link.css('position') == 'static') { link.css({position:'relative', overflow:'hidden'}); }
-            
-            var url		 	= link.attr('href'),
-				span_class	= "overlay-type-video",
-				opa			= link.data('opacity') || 0.7,
-				overlay_offset = 5,
-				overlay 	= link.find('.image-overlay');
-            	
-            	if(url)
-				{
-					if( url.match(/(jpg|gif|jpeg|png|tif)/) ) span_class = "overlay-type-image";
-					if(!url.match(/(jpg|gif|jpeg|png|\.tif|\.mov|\.swf|vimeo\.com|youtube\.com)/) ) span_class = "overlay-type-extern";
-				}
-				
-				if(!overlay.length)
-				{
-					overlay = $("<span class='image-overlay "+span_class+"'><span class='image-overlay-inside'></span></span>").appendTo(link);
-				}
-            	
-            	link.on('mouseenter', function(e)
-				{
-					var current = link.find('img:first'),
-						_self	= current.get(0),
-						outerH 	= current.outerHeight(),
-						outerW 	= current.outerWidth(),
-						pos		= current.position(),
-						linkCss = link.css('display'),
-						overlay = link.find('.image-overlay');
-					
-					if(outerH > 100)
-					{
-						
-						if(!overlay.length)
-						{
-							overlay = $("<span class='image-overlay "+span_class+"'><span class='image-overlay-inside'></span></span>").appendTo(link);
-							
-						}
-						//can be wrapped into if !overlay.length statement if chrome fixes fade in problem
-						if(link.height() == 0) { link.addClass(_self.className); _self.className = ""; }
-						if(!linkCss || linkCss == 'inline') { link.css({display:'block'}); }
-						//end wrap
-						
-						overlay.css({left:(pos.left - overlay_offset) + parseInt(current.css("margin-left"),10), top:pos.top + parseInt(current.css("margin-top"),10)})
-							   .css({overflow:'hidden',display:'block','height':outerH,'width':(outerW + (2*overlay_offset))});
-							   
-						if(cssTrans === false ) overlay.stop().animate({opacity:opa}, 400);
-					}
-					else
-					{
-						overlay.css({display:"none"});
-					}
-		
-				}).on('mouseleave', elements, function(){
-		
-					if(overlay.length)
-					{
-						if(cssTrans === false ) overlay.stop().animate({opacity:0}, 400);
-					}
-				});
+
+            var url                     = link.attr('href'),
+                                span_class      = "overlay-type-video",
+                                opa                     = link.data('opacity') || 0.7,
+                                overlay_offset = 5,
+                        overlay = link.find('.image-overlay');
+
+                                        if(url)
+                                        {
+                                                if( url.match(/(jpg|gif|jpeg|png|tif)/) ) span_class = "overlay-type-image";
+                                                if(!url.match(/(jpg|gif|jpeg|png|\.tif|\.mov|\.swf|vimeo\.com|youtube\.com)/) ) span_class = "overlay-type-extern";
+                                        }
+        
+                                if(!overlay.length)
+                                {
+                                        overlay = $("<span class='image-overlay "+span_class+"'><span class='image-overlay-inside'></span></span>").appendTo(link);
+                        }
+
+                link.on('mouseenter', function(e)
+                        {
+                                        var current = link.find('img:first'),
+                                                _self   = current.get(0),
+                                                outerH  = current.outerHeight(),
+                                                outerW  = current.outerWidth(),
+                                                pos             = current.position(),
+                                                linkCss = link.css('display'),
+                                                overlay = link.find('.image-overlay');
+                                        
+                                        if(outerH > 100)
+                                        {
+                                                
+                                                if(!overlay.length)
+                                                {
+                                                        overlay = $("<span class='image-overlay "+span_class+"'><span class='image-overlay-inside'></span></span>").appendTo(link);
+                                                        
+                                                }
+                                                //can be wrapped into if !overlay.length statement if chrome fixes fade in problem
+                                                if(link.height() == 0) { link.addClass(_self.className); _self.className = ""; }
+                                                if(!linkCss || linkCss == 'inline') { link.css({display:'block'}); }
+                                                //end wrap
+                                                
+                                                overlay.css({left:(pos.left - overlay_offset) + parseInt(current.css("margin-left"),10), top:pos.top + parseInt(current.css("margin-top"),10)})
+                                                           .css({overflow:'hidden',display:'block','height':outerH,'width':(outerW + (2*overlay_offset))});
+                                                           
+                                                if(cssTrans === false ) overlay.stop().animate({opacity:opa}, 400);
+                        }
+                        else
+                        {
+				overlay.css({display:"none"});
+			}
+
+		}).on('mouseleave', elements, function(){
+
+                        if(overlay.length)
+                        {
+                                                if(cssTrans === false ) overlay.stop().animate({opacity:0}, 400);
+                        }
+                });
         });
     }
 
@@ -623,72 +624,74 @@
 // todo: maybe use https://github.com/ryanburnette/scrollToBySpeed/blob/master/src/scrolltobyspeed.jquery.js in the future
 // -------------------------------------------------------------------------------------------
 
-	(function($)
+        (function($)
 	{
 		$.fn.avia_smoothscroll = function(apply_to_container)
 		{
-			if(!this.length) return;
-				
-			var the_win = $(window),
-				$header = $('#header'),
-				$main 	= $('.html_header_top.html_header_sticky #main').not('.page-template-template-blank-php #main'),
-				$meta 	= $('.html_header_top #header_meta'),
-				$alt  	= $('.html_header_top #header_main_alternate'),
-				shrink	= $('.html_header_top.html_header_shrinking').length,
-				fixedMainPadding = 0,
-				isMobile = $.avia_utilities.isMobile,
-				sticky_sub = $('.sticky_placeholder:first'), 
-				calc_main_padding= function()
-				{
-					if($header.css('position') == "fixed")
+                        if(!this.length) return;
+                        
+                        var the_win = $(window),
+                                $header = $('#header'),
+                                $main   = $('.html_header_top.html_header_sticky #main').not('.page-template-template-blank-php #main'),
+                                $meta   = $('.html_header_top #header_meta'),
+                                $alt    = $('.html_header_top #header_main_alternate'),
+                                shrink  = $('.html_header_top.html_header_shrinking').length,
+                                fixedMainPadding = 0,
+                                isMobile = $.avia_utilities.isMobile,
+                                sticky_sub = $('.sticky_placeholder:first'), 
+                                calc_main_padding= function()
+                                {
+                                        if($header.css('position') == "fixed")
+                                        {
+                                        var tempPadding                 = parseInt($main.data('scroll-offset'),10) || 0,
+                                                non_shrinking           = parseInt($meta.outerHeight(),10) || 0,
+                                                non_shrinking2          = parseInt($alt.outerHeight(),10) || 0; 
+					
+					if(tempPadding > 0 && shrink) 
 					{
-						var tempPadding  		= parseInt($main.data('scroll-offset'),10) || 0,
-							non_shrinking		= parseInt($meta.outerHeight(),10) || 0,
-							non_shrinking2		= parseInt($alt.outerHeight(),10) || 0; 
-						
-						if(tempPadding > 0 && shrink) 
-						{
-							tempPadding = (tempPadding / 2 ) + non_shrinking + non_shrinking2;
-						}
-						else
-						{
-							tempPadding = tempPadding + non_shrinking + non_shrinking2;
-						}
-						
-						tempPadding += parseInt($('html').css('margin-top'),10);
-						fixedMainPadding = tempPadding;
+						tempPadding = (tempPadding / 2 ) + non_shrinking + non_shrinking2;
 					}
 					else
 					{
-						fixedMainPadding = parseInt($('html').css('margin-top'),10);
+						tempPadding = tempPadding + non_shrinking + non_shrinking2;
 					}
-					
-				};
-			
-			if(isMobile) shrink = false;
-			
-			calc_main_padding();
-			the_win.on("debouncedresize av-height-change",  calc_main_padding);
+                                        
+                                        tempPadding += parseInt($('html').css('margin-top'),10);
+                                        fixedMainPadding = tempPadding;
+                                        }
+                                        else
+                                        {
+                                                fixedMainPadding = parseInt($('html').css('margin-top'),10);
+                                        }
+                                        
+                                };
+                        
+                        if(isMobile) shrink = false;
+                        
+                        calc_main_padding();
+                        the_win.on("debouncedresize av-height-change",  calc_main_padding);
 
-			var hash = window.location.hash.replace(/\//g, "");
-			
-			//if a scroll event occurs at pageload and an anchor is set and a coresponding element exists apply the offset to the event
-			if (fixedMainPadding > 0 && hash && apply_to_container == 'body' && hash.charAt(1) != "!")
-			{
-				var scroll_to_el = $(hash), modifier = 0;
-				
-				if(scroll_to_el.length)
-				{
-					the_win.on('scroll.avia_first_scroll', function()
-					{	
-						setTimeout(function(){ //small delay so other scripts can perform necessary resizing
-							if(sticky_sub.length && scroll_to_el.offset().top > sticky_sub.offset().top) { modifier = sticky_sub.outerHeight() - 3; }
-							the_win.off('scroll.avia_first_scroll').scrollTop( scroll_to_el.offset().top - fixedMainPadding - modifier);
-						},10); 
-				    });
-			    }
+                        var hash = window.location.hash.replace(/\//g, "");
+                        
+                        //if a scroll event occurs at pageload and an anchor is set and a coresponding element exists apply the offset to the event
+                        if (fixedMainPadding > 0 && hash && apply_to_container == 'body' && hash.charAt(1) != "!")
+                        {
+                                var scroll_to_el = $(hash), modifier = 0;
+                                
+                                if(scroll_to_el.length)
+                                {
+                                        the_win.on('scroll.avia_first_scroll', function()
+                                        {       
+                                                setTimeout(function(){ //small delay so other scripts can perform necessary resizing
+                                                        if(sticky_sub.length && scroll_to_el.offset().top > sticky_sub.offset().top) { modifier = sticky_sub.outerHeight() - 3; }
+                                                        the_win.off('scroll.avia_first_scroll').scrollTop( scroll_to_el.offset().top - fixedMainPadding - modifier);
+                                                },10); 
+                                    });
+                            }
 			}
 			
+			
+
 			return this.each(function()
 			{
 				$(this).click(function(e) {
@@ -701,53 +704,53 @@
 				   {
 					   var container = "", originHash = "";
 					   
-					   if("#next-section" == newHash)
-					   {
-					   		originHash  = newHash;
-					   		container   = clicked.parents('.container_wrap:eq(0)').nextAll('.container_wrap:eq(0)');
-					   		newHash		= '#' + container.attr('id') ;
-					   }
-					   else
+                                           if("#next-section" == newHash)
+                                           {
+                                                        originHash  = newHash;
+                                                        container   = clicked.parents('.container_wrap:eq(0)').nextAll('.container_wrap:eq(0)');
+                                                        newHash         = '#' + container.attr('id');
+                                           }
+                                           else
 					   {
 					   		container = $(this.hash.replace(/\//g, ""));
 					   }
 					   
 					   
 
-						if(container.length)
-						{
-							var cur_offset = the_win.scrollTop(),
-								container_offset = container.offset().top,
-								target =  container_offset - fixedMainPadding,
-								hash = window.location.hash,
-								hash = hash.replace(/\//g, ""),
-								oldLocation=window.location.href.replace(hash, ''),
-								newLocation=this,
-								duration= data.duration || 1200,
-								easing= data.easing || 'easeInOutQuint';
-							
-							if(sticky_sub.length && container_offset > sticky_sub.offset().top) { target -= sticky_sub.outerHeight() - 3;}
-							
-							// make sure it's the same location
-							if(oldLocation+newHash==newLocation || originHash)
-							{
-								if(cur_offset != target) // if current pos and target are the same dont scroll
-								{
-									if(!(cur_offset == 0 && target <= 0 )) // if we are at the top dont try to scroll to top or above
-									{
-										// animate to target and set the hash to the window.location after the animation
-										$('html:not(:animated),body:not(:animated)').animate({ scrollTop: target }, duration, easing, function() {
-										
-											// add new hash to the browser location
-											//window.location.href=newLocation;
-											if(window.history.replaceState)
-											window.history.replaceState("", "", newHash);
-										});
-									}
-								}
-								// cancel default click action
-								e.preventDefault();
-							}
+                                           if(container.length)
+                                           {
+                                                        var cur_offset = the_win.scrollTop(),
+                                                                container_offset = container.offset().top,
+                                                                target =  container_offset - fixedMainPadding,
+                                                           hash = window.location.hash,
+                                                           hash = hash.replace(/\//g, ""),
+                                                           oldLocation=window.location.href.replace(hash, ''),
+							   newLocation=this,
+                                                           duration= data.duration || 1200,
+                                                           easing= data.easing || 'easeInOutQuint';
+                                                        
+                                                        if(sticky_sub.length && container_offset > sticky_sub.offset().top) { target -= sticky_sub.outerHeight() - 3;}
+                                                        
+                                                   // make sure it's the same location
+                                                   if(oldLocation+newHash==newLocation || originHash)
+                                                   {
+                                                                if(cur_offset != target) // if current pos and target are the same dont scroll
+                                                                {
+                                                                        if(!(cur_offset == 0 && target <= 0 )) // if we are at the top dont try to scroll to top or above
+                                                                        {
+                                                      // animate to target and set the hash to the window.location after the animation
+                                                      $('html:not(:animated),body:not(:animated)').animate({ scrollTop: target }, duration, easing, function() {
+
+						         // add new hash to the browser location
+						         //window.location.href=newLocation;
+                                                         if(window.history.replaceState)
+                                                         window.history.replaceState("", "", newHash);
+                                                      });
+                                                                        }
+                                                                }
+                                                      // cancel default click action
+                                                      e.preventDefault();
+                                                   }
 						}
 					}
 				});
@@ -818,95 +821,95 @@
 	// -------------------------------------------------------------------------------------------
 
 	(function($)
-	{
-		$.fn.avia_activate_lightbox = function(variables)
-		{
-			var defaults = {
-				groups			:	['.avia-gallery', '.isotope', '.post-entry', '.sidebar', '#main', '.main_menu'], 
-				autolinkElements:   'a[rel^="prettyPhoto"], a[rel^="lightbox"], a[href$=jpg], a[href$=png], a[href$=gif], a[href$=jpeg], a[href*=".jpg?"], a[href*=".png?"], a[href*=".gif?"], a[href*=".jpeg?"], a[href$=".mov"] , a[href$=".swf"] , a:regex(href, .vimeo\.com/[0-9]) , a[href*="youtube.com/watch"] , a[href*="screenr.com"], a[href*="iframe=true"]',
-				videoElements	: 	'a[href$=".mov"] , a[href$=".swf"] , a:regex(href, .vimeo\.com/[0-9]) , a[href*="youtube.com/watch"] , a[href*="screenr.com"], a[href*="iframe=true"]',
-				exclude			:	'.noLightbox, .noLightbox a, .fakeLightbox, .lightbox-added',
-			},
-			
-			options = $.extend({}, defaults, variables),
-			
-			av_popup = {
-				type: 				'image',
-				mainClass: 			'avia-popup mfp-zoom-in',
-				tLoading: 			'',
-				tClose: 			'',
-				removalDelay: 		300, //delay removal by X to allow out-animation
-				closeBtnInside: 	true,
-				closeOnContentClick:true,
-				midClick: 			true,
-				fixedContentPos: 	false, // allows scrolling when lightbox is open but also removes any jumping because of scrollbar removal
-				
-				image: {
-				    titleSrc: function(item){
-					    var title = item.el.attr('title');
-					    if(!title) title = item.el.find('img').attr('title');
-					    if(typeof title == "undefined") return "";
-					    return title;
-					}
-				},
-				
-				gallery: {
-					// delegate: 	options.autolinkElements,
-					tPrev:		'',
-					tNext:		'',
-					tCounter:	'%curr% / %total%',
-					enabled:	true,
-					preload:	[1,1] // Will preload 1 - before current, and 1 after the current image
-				},
+        {
+                $.fn.avia_activate_lightbox = function(variables)
+                {
+                        var defaults = {
+                                groups                  :       ['.avia-gallery', '.isotope', '.post-entry', '.sidebar', '#main', '.main_menu'], 
+                                autolinkElements:   'a[rel^="prettyPhoto"], a[rel^="lightbox"], a[href$=jpg], a[href$=png], a[href$=gif], a[href$=jpeg], a[href*=".jpg?"], a[href*=".png?"], a[href*=".gif?"], a[href*=".jpeg?"], a[href$=".mov"] , a[href$=".swf"] , a:regex(href, .vimeo\.com/[0-9]) , a[href*="youtube.com/watch"] , a[href*="screenr.com"], a[href*="iframe=true"]',
+                                videoElements   :       'a[href$=".mov"] , a[href$=".swf"] , a:regex(href, .vimeo\.com/[0-9]) , a[href*="youtube.com/watch"] , a[href*="screenr.com"], a[href*="iframe=true"]',
+                                exclude                 :       '.noLightbox, .noLightbox a, .fakeLightbox, .lightbox-added',
+                        },
 
-				callbacks: 
-				{
-					open: function()
-					{
-						//overwrite default prev + next function. Add timeout for css3 crossfade animation
-						$.magnificPopup.instance.next = function() {
-							var self = this;
-							self.wrap.removeClass('mfp-image-loaded');
-							setTimeout(function() { $.magnificPopup.proto.next.call(self); }, 120);
-						}
-						$.magnificPopup.instance.prev = function() {
-							var self = this;
-							self.wrap.removeClass('mfp-image-loaded');
-							setTimeout(function() { $.magnificPopup.proto.prev.call(self); }, 120);
-						}
-					},
-					imageLoadComplete: function() 
-					{	
-						var self = this;
-						setTimeout(function() { self.wrap.addClass('mfp-image-loaded'); }, 16);
-					}
-				}
-			},
-			
-			active = !$('html').is('.av-custom-lightbox');
-			
-			if(!active) return this;
-			
-			return this.each(function()
-			{
-				var container	= $(this),
-					videos		= $(options.videoElements, this).not(options.exclude).addClass('mfp-iframe'), /*necessary class for the correct lightbox markup*/
-					ajaxed		= !container.is('body') && !container.is('.ajax_slide');
-										
-					for (var i = 0; i < options.groups.length; i++) 
-					{
-						$(options.groups[i]).each(function() 
-						{ 
-							var links = $(options.autolinkElements, this);
-						
-							if(ajaxed) links.removeClass('lightbox-added');
-							links.not(options.exclude).addClass('lightbox-added').magnificPopup(av_popup);
-						});
-					}
-				
-			});
-		}
-	})(jQuery);
+                        options = $.extend({}, defaults, variables),
+
+                        av_popup = {
+                                type:                           'image',
+                                mainClass:                      'avia-popup mfp-zoom-in',
+                                tLoading:                       '',
+                                tClose:                         '',
+                                removalDelay:           300, //delay removal by X to allow out-animation
+                                closeBtnInside:         true,
+                                closeOnContentClick:true,
+                                midClick:                       true,
+                                fixedContentPos:        false, // allows scrolling when lightbox is open but also removes any jumping because of scrollbar removal
+
+                                image: {
+                                    titleSrc: function(item){
+                                            var title = item.el.attr('title');
+                                            if(!title) title = item.el.find('img').attr('title');
+                                            if(typeof title == "undefined") return "";
+                                            return title;
+                                        }
+                                },
+
+                                gallery: {
+                                        // delegate:    options.autolinkElements,
+                                        tPrev:          '',
+                                        tNext:          '',
+                                        tCounter:       '%curr% / %total%',
+                                        enabled:        true,
+                                        preload:        [1,1] // Will preload 1 - before current, and 1 after the current image
+                                },
+
+                                callbacks: 
+                    {
+                                        open: function()
+                        {
+                                                //overwrite default prev + next function. Add timeout for css3 crossfade animation
+                                                $.magnificPopup.instance.next = function() {
+                                                        var self = this;
+                                                        self.wrap.removeClass('mfp-image-loaded');
+                                                        setTimeout(function() { $.magnificPopup.proto.next.call(self); }, 120);
+                        }
+                                                $.magnificPopup.instance.prev = function() {
+                                                        var self = this;
+                                                        self.wrap.removeClass('mfp-image-loaded');
+                                                        setTimeout(function() { $.magnificPopup.proto.prev.call(self); }, 120);
+                                                }
+                                        },
+                                        imageLoadComplete: function() 
+                        {
+                                                var self = this;
+                                                setTimeout(function() { self.wrap.addClass('mfp-image-loaded'); }, 16);
+                        }
+                    }
+                        },
+
+                        active = !$('html').is('.av-custom-lightbox');
+
+                        if(!active) return this;
+                        
+                        return this.each(function()
+                {
+                                var container   = $(this),
+                                        videos          = $(options.videoElements, this).not(options.exclude).addClass('mfp-iframe'), /*necessary class for the correct lightbox markup*/
+                                        ajaxed          = !container.is('body') && !container.is('.ajax_slide');
+                                                                                
+                                        for (var i = 0; i < options.groups.length; i++) 
+                {
+                                                $(options.groups[i]).each(function() 
+                                                { 
+                                                        var links = $(options.autolinkElements, this);
+                                                
+                                                        if(ajaxed) links.removeClass('lightbox-added');
+                                                        links.not(options.exclude).addClass('lightbox-added').magnificPopup(av_popup);
+                                                });
+                }
+
+                        });
+                }
+        })(jQuery);
 
 
 
@@ -921,65 +924,65 @@
 		var defaults =
 		{
 			modify_position:true,
-			delay:300
-		};
+                        delay:300
+                };
 
-		var options = $.extend(defaults, variables),
-		win			= $(window),
-		width_select= $('html').is('.html_header_sidebar') ? "#main" : "#header",
-		the_main	= $(width_select + ' .container:first'),
-		css_block	= $("<style type='text/css' id='av-browser-width-mm'></style>").appendTo('head:first'),
-		calc_dimensions = function()
-		{	
-			var css			= "",
-				w_12 		= Math.round( the_main.width() );
-				
-			css += " #header .three.units{width:"	+ ( w_12 * 0.25)+	"px;}";
-			css += " #header .six.units{width:"		+ ( w_12 * 0.50)+	"px;}";
-			css += " #header .nine.units{width:"	+ ( w_12 * 0.75)+	"px;}";
-			css += " #header .twelve.units{width:"	+( w_12 )		+	"px;}";
-			
-			//ie8 needs different insert method
-			try{
-				css_block.text(css); 
-			}
-			catch(err){
-				css_block.remove();
-				css_block = $("<style type='text/css' id='av-browser-width-mm'>"+css+"</style>").appendTo('head:first');
-			}
-			
-		};
-		
-		if($('.avia_mega_div').length > 0)
-		{
-			win.on( 'debouncedresize', calc_dimensions);
-			calc_dimensions();
-		}	
+                var options = $.extend(defaults, variables),
+                win                     = $(window),
+                width_select= $('html').is('.html_header_sidebar') ? "#main" : "#header",
+                the_main        = $(width_select + ' .container:first'),
+                css_block       = $("<style type='text/css' id='av-browser-width-mm'></style>").appendTo('head:first'),
+                calc_dimensions = function()
+                {       
+                        var css                 = "",
+                                w_12            = Math.round( the_main.width() );
+                                
+                        css += " #header .three.units{width:"   + ( w_12 * 0.25)+       "px;}";
+                        css += " #header .six.units{width:"             + ( w_12 * 0.50)+       "px;}";
+                        css += " #header .nine.units{width:"    + ( w_12 * 0.75)+       "px;}";
+                        css += " #header .twelve.units{width:"  +( w_12 )               +       "px;}";
+                        
+                        //ie8 needs different insert method
+                        try{
+                                css_block.text(css); 
+                        }
+                        catch(err){
+                                css_block.remove();
+                                css_block = $("<style type='text/css' id='av-browser-width-mm'>"+css+"</style>").appendTo('head:first');
+                        }
+                        
+                };
+                
+                if($('.avia_mega_div').length > 0)
+                {
+                        win.on( 'debouncedresize', calc_dimensions);
+                        calc_dimensions();
+                }       
 
-		return this.each(function()
-		{
-			var the_html	= $('html:first'),
-				main		= $('#main .container:first'),
-				left_menu	= the_html.filter('.html_menu_left, .html_logo_center').length,
-				isMobile 	= $.avia_utilities.isMobile,
-				menu = $(this),
-				menuItems = menu.find(">li"),
+                return this.each(function()
+                {
+                        var the_html    = $('html:first'),
+                                main            = $('#main .container:first'),
+                                left_menu       = the_html.filter('.html_menu_left, .html_logo_center').length,
+                                isMobile        = $.avia_utilities.isMobile,
+                                menu = $(this),
+                                menuItems = menu.find(">li"),
 				megaItems = menuItems.find(">div").parent().css({overflow:'hidden'}),
 				menuActive = menu.find('>.current-menu-item>a, >.current_page_item>a'),
 				dropdownItems = menuItems.find(">ul").parent(),
 				parentContainer = menu.parent(),
 				mainMenuParent = menu.parents('.main_menu').eq(0),
 				parentContainerWidth = parentContainer.width(),
-				delayCheck = {},
-				mega_open = [];
-				
+                                delayCheck = {},
+                                mega_open = [];
 
-			if(!menuActive.length){ menu.find('.current-menu-ancestor:eq(0) a:eq(0), .current_page_ancestor:eq(0) a:eq(0)').parent().addClass('active-parent-item')}
-			if(!the_html.is('.html_header_top')) { options.modify_position = false; }
-			
-			
-			menuItems.on('click' ,'a', function()
-			{
+
+                        if(!menuActive.length){ menu.find('.current-menu-ancestor:eq(0) a:eq(0), .current_page_ancestor:eq(0) a:eq(0)').parent().addClass('active-parent-item')}
+                        if(!the_html.is('.html_header_top')) { options.modify_position = false; }
+                        
+
+                        menuItems.on('click' ,'a', function()
+                        {
 				if(this.href == window.location.href + "#" || this.href == window.location.href + "/#")
 				return false;
 			});
@@ -1008,22 +1011,22 @@
 				}
 
 
-				//correct position of mega menus
-				if(options.modify_position && megaDiv.length)
-				{	
-					item.one('mouseenter', function(){ calc_offset(item, pos, megaDiv, parentContainerWidth) });
-				}
+                                //correct position of mega menus
+                                if(options.modify_position && megaDiv.length)
+                                {
+                                        item.one('mouseenter', function(){ calc_offset(item, pos, megaDiv, parentContainerWidth) });
+                                }
 
 
 
-			});
-			
-			
-			function calc_offset(item, pos, megaDiv, parentContainerWidth)
-			{	
-				if(!left_menu)
-					{
-						if(pos.left + megaDiv.width() < parentContainerWidth)
+                        });
+                        
+                        
+                        function calc_offset(item, pos, megaDiv, parentContainerWidth)
+                        {       
+                                        if(!left_menu)
+                                        {
+                                                if(pos.left + megaDiv.width() < parentContainerWidth)
 						{
 							megaDiv.css({right: -megaDiv.outerWidth() + item.outerWidth()  });
 							//item.css({position:'static'});
@@ -1043,12 +1046,12 @@
 						{
 							megaDiv.css({left: (megaDiv.width() - pos.left) * -1 });
 						}
-					}
-			}
+                                        }
+                                }
 
-			function megaDivShow(i)
-			{
-				if(delayCheck[i] == true)
+                        function megaDivShow(i)
+                        {
+                                if(delayCheck[i] == true)
 				{
 					var item = megaItems.filter(':eq('+i+')').css({overflow:'visible'}).find("div:first"),
 						link = megaItems.filter(':eq('+i+')').find("a:first");
@@ -1155,54 +1158,112 @@
 // -------------------------------------------------------------------------------------------
 
     $.fn.avia_iso_sort = function(options)
-	{
-		return this.each(function()
-		{
-			var the_body		= $('body'),
-				container		= $(this),
-				portfolio_id	= container.data('portfolio-id'),
-				parentContainer	= container.parents('.entry-content-wrapper, .avia-fullwidth-portfolio'),
-				filter			= parentContainer.find('.sort_width_container[data-portfolio-id="' + portfolio_id + '"]').find('#js_sort_items').css({visibility:"visible", opacity:0}),
-				links			= filter.find('a'),
-				imgParent		= container.find('.grid-image'),
+        {
+                $.extend( $.Isotope.prototype, {
+                  _customModeReset : function() {
+
+                        this.fitRows = {
+                        x : 0,
+                        y : 0,
+                        height : 0
+                      };
+
+                   },
+                  _customModeLayout : function( $elems ) {
+
+                    var instance                = this,
+                        containerWidth  = this.element.width(),
+                        props                   = this.fitRows,
+                        percentBase     = this.element.data('margin_base') || 6,
+                        margin                  = this.element.is('.no_margin-container') ? 0 : (containerWidth / 100) * percentBase, //margin based on %
+                        extraRange              = 2; // adds a little range for % based calculation error in some browsers
+
+                      $elems.each( function() {
+                        var $this = $(this),
+                            atomW = $this.outerWidth() ,
+                            atomH = $this.outerHeight(true);
+
+                        if ( props.x !== 0 && atomW + props.x > containerWidth + extraRange ) {
+                          // if this element cannot fit in the current row
+                          props.x = 0;
+                          props.y = props.height;
+                        }
+
+                        //webkit gets blurry elements if position is a float value
+                        props.x = Math.round(props.x);
+                        props.y = Math.round(props.y);
+
+                        // position the atom
+                        instance._pushPosition( $this, props.x, props.y );
+
+                        props.height = Math.max( props.y + atomH, props.height );
+                        props.x += atomW + margin;
+
+
+                      });
+
+                  },
+                  _customModeGetContainerSize : function() {
+
+                        return { height : this.fitRows.height };
+
+                  },
+                  _customModeResizeChanged : function() {
+
+                        return true;
+
+                   }
+                });
+
+
+
+                return this.each(function()
+                {
+                        var the_body            = $('body'),
+                                container               = $(this),
+                                portfolio_id    = container.data('portfolio-id'),
+                                parentContainer = container.parents('.entry-content-wrapper, .avia-fullwidth-portfolio'),
+                                filter                  = parentContainer.find('.sort_width_container[data-portfolio-id="' + portfolio_id + '"]').find('#js_sort_items').css({visibility:"visible", opacity:0}),
+                                links                   = filter.find('a'),
+                                imgParent               = container.find('.grid-image'),
 				isoActive		= false,
 				items			= $('.post-entry', container);
 
-			function applyIso()
-			{
-				container.addClass('isotope_activated').isotope({
-					layoutMode : 'fitRows', itemSelector : '.flex_column'
+                        function applyIso()
+                        {
+                                container.addClass('isotope_activated').isotope({
+                                        layoutMode : 'fitRows', itemSelector : '.flex_column'
+                                });
+                                
+                                container.isotope( 'on', 'layoutComplete', function()
+                                {
+                                        container.css({overflow:'visible'});
+                                        the_body.trigger('av_resize_finished');
 				});
-				
-				container.isotope( 'on', 'layoutComplete', function()
-				{
-					container.css({overflow:'visible'});
-					the_body.trigger('av_resize_finished');
-				}); 
-				
+
 				isoActive = true;
 				setTimeout(function(){ parentContainer.addClass('avia_sortable_active'); }, 0);
 			};
 
-			links.bind('click',function()
-			{
-				var current		= $(this),
-			  		selector	= current.data('filter'),
-			  		linktext	= current.html(),
-			  		activeCat	= parentContainer.find('.av-current-sort-title');
+                        links.bind('click',function()
+                        {
+                                var current             = $(this),
+                                        selector        = current.data('filter'),
+                                        linktext        = current.html(),
+                                        activeCat       = parentContainer.find('.av-current-sort-title');
 
-			  		if(activeCat.length) activeCat.html(linktext);
-			  		
-					links.removeClass('active_sort');
-					current.addClass('active_sort');
+                                        if(activeCat.length) activeCat.html(linktext);
+
+                                        links.removeClass('active_sort');
+                                        current.addClass('active_sort');
 					container.attr('id', 'grid_id_'+selector);
 
-					parentContainer.find('.open_container .ajax_controlls .avia_close').trigger('click');
-					//container.css({overflow:'hidden'})
-					container.isotope({ layoutMode : 'fitRows', itemSelector : '.flex_column' , filter: '.'+selector});
+                                        parentContainer.find('.open_container .ajax_controlls .avia_close').trigger('click');
+                                        //container.css({overflow:'hidden'})
+                                        container.isotope({ layoutMode : 'fitRows', itemSelector : '.flex_column' , filter: '.'+selector});
 
-					return false;
-			});
+                                        return false;
+                        });
 
 			// update columnWidth on window resize
 			$(window).on( 'debouncedresize', function()
@@ -1232,205 +1293,205 @@
 		});
 	};
 
-	
-	
-	
-	function avia_sticky_submenu()
-	{
-		var win 		= $(window),
-			html 		= $('html:first'),
-			header  	= $('.html_header_top.html_header_sticky #header'),
-			html_margin = parseInt( $('html:first').css('margin-top'), 10),
-			setWitdth	= $('.html_header_sidebar #main, .boxed #main'),
-			menus		= $('.av-submenu-container'),
-			calc_margin	= function()
-			{
-				html_margin = parseInt( html.css('margin-top'), 10);
-				if(!$('.mobile_menu_toggle:visible').length)
-				{
-					$('.av-open-submenu').removeClass('av-open-submenu');
-				}
-			},
-			calc_values	= function()
-			{
-				var content_width = setWitdth.width();
-				html_margin = parseInt( html.css('margin-top'), 10);
-				menus.width(content_width);
-				
-			},
-			check 		= function(placeholder, no_timeout)
-			{
-				var menu_pos	= this.offset().top,
-					top_pos 	= placeholder.offset().top,
-					scrolled	= win.scrollTop(),
-					modifier 	= html_margin, fixed = false;
-					
-					if(header.length) modifier += header.outerHeight() + parseInt( header.css('margin-top'), 10);
-				
-					if(scrolled + modifier > top_pos)
-					{
-						if(!fixed)
-						{
-							this.css({top: modifier - 1, position: 'fixed'}); fixed = true
-						}
-					}
-					else
-					{
-						this.css({top: 'auto', position: 'absolute'}); fixed = false
-					}
-					
-			},
-			toggle = function(e)
-			{
-				e.preventDefault();
-				
-				var clicked = $(this), 
-					menu 	= clicked.siblings('.av-subnav-menu');
-				
-					if(menu.hasClass('av-open-submenu'))
-					{
-						menu.removeClass('av-open-submenu');
-					}
-					else
-					{
-						menu.addClass('av-open-submenu');
-					}
-			};
-		
-		win.on("debouncedresize av-height-change",  calc_margin ); calc_margin();
-			
-		if(setWitdth.length)
-		{
-			win.on("debouncedresize av-height-change",  calc_values );
-			calc_values();
-		}
-		
-		$(".av-sticky-submenu").each(function()
-		{	
-			 var menu  = $(this), placeholder = menu.next('.sticky_placeholder'), mobile_button = menu.find('.mobile_menu_toggle');
-			 win.on( 'scroll',  function(){ window.requestAnimationFrame( $.proxy( check, menu, placeholder) )} );
-			 
-			 if(mobile_button.length)
-			 {
-			 	mobile_button.on( 'click',  toggle );
-			 }
-			 
-			 
-		});
-		
-		html.on('click', '.av-submenu-hidden .av-open-submenu li a', function()
-		{
-			var current = $(this);
-			
-			var list_item = current.siblings('ul, .avia_mega_div');
-			if(list_item.length)
-			{
-				if(list_item.hasClass('av-visible-sublist'))
-				{
-				    list_item.removeClass('av-visible-sublist');
-				}
-				else
-				{
-				    list_item.addClass('av-visible-sublist');
-				}
-				return false;
-			}
-		});
-		
-		$('.avia_mobile').on('click', '.av-menu-mobile-disabled li a', function()
-		{
-			var current = $(this);
-			console.log(current); 
-			var list_item = current.siblings('ul');
-			if(list_item.length)
-			{
-				if(list_item.hasClass('av-visible-mobile-sublist'))
-				{
-				    
-				}
-				else
-				{
-					$('.av-visible-mobile-sublist').removeClass('av-visible-mobile-sublist');
-				    list_item.addClass('av-visible-mobile-sublist');
-				    return false;
-				}
-				
-			}
-		});
-		
-		
-		
-	}
-	
-	
-	
-	function avia_sidebar_menu()
-	{
-		var win				= $(window),
-			main			= $('#main'),
-			sb_header		= $('.html_header_sidebar #header_main'),
-            sidebar			= $('.html_header_sidebar #header.av_conditional_sticky');
+
+
+
+        function avia_sticky_submenu()
+        {
+                var win                 = $(window),
+                        html            = $('html:first'),
+                        header          = $('.html_header_top.html_header_sticky #header'),
+                        html_margin = parseInt( $('html:first').css('margin-top'), 10),
+                        setWitdth       = $('.html_header_sidebar #main, .boxed #main'),
+                        menus           = $('.av-submenu-container'),
+                        calc_margin     = function()
+                        {
+                                html_margin = parseInt( html.css('margin-top'), 10);
+                                if(!$('.mobile_menu_toggle:visible').length)
+                                {
+                                        $('.av-open-submenu').removeClass('av-open-submenu');
+                                }
+                        },
+                        calc_values     = function()
+                        {
+                                var content_width = setWitdth.width();
+                                html_margin = parseInt( html.css('margin-top'), 10);
+                                menus.width(content_width);
+                                
+                        },
+                        check           = function(placeholder, no_timeout)
+                        {
+                                var menu_pos    = this.offset().top,
+                                        top_pos         = placeholder.offset().top,
+                                        scrolled        = win.scrollTop(),
+                                        modifier        = html_margin, fixed = false;
+                                        
+                                        if(header.length) modifier += header.outerHeight() + parseInt( header.css('margin-top'), 10);
+                                
+                                        if(scrolled + modifier > top_pos)
+                                        {
+                                                if(!fixed)
+                                                {
+                                                        this.css({top: modifier - 1, position: 'fixed'}); fixed = true
+                                                }
+                                        }
+                                        else
+                                        {
+                                                this.css({top: 'auto', position: 'absolute'}); fixed = false
+                                        }
+                                        
+                        },
+                        toggle = function(e)
+                        {
+                                e.preventDefault();
+                                
+                                var clicked = $(this), 
+                                        menu    = clicked.siblings('.av-subnav-menu');
+                                
+                                        if(menu.hasClass('av-open-submenu'))
+                                        {
+                                                menu.removeClass('av-open-submenu');
+                                        }
+                                        else
+                                        {
+                                                menu.addClass('av-open-submenu');
+                                        }
+                        };
+                
+                win.on("debouncedresize av-height-change",  calc_margin ); calc_margin();
+                        
+                if(setWitdth.length)
+                {
+                        win.on("debouncedresize av-height-change",  calc_values );
+                        calc_values();
+                }
+                
+                $(".av-sticky-submenu").each(function()
+                {       
+                         var menu  = $(this), placeholder = menu.next('.sticky_placeholder'), mobile_button = menu.find('.mobile_menu_toggle');
+                         win.on( 'scroll',  function(){ window.requestAnimationFrame( $.proxy( check, menu, placeholder) )} );
+                         
+                         if(mobile_button.length)
+                         {
+                                mobile_button.on( 'click',  toggle );
+                         }
+                         
+                         
+                });
+                
+                html.on('click', '.av-submenu-hidden .av-open-submenu li a', function()
+                {
+                        var current = $(this);
+                        
+                        var list_item = current.siblings('ul, .avia_mega_div');
+                        if(list_item.length)
+                        {
+                                if(list_item.hasClass('av-visible-sublist'))
+                                {
+                                    list_item.removeClass('av-visible-sublist');
+                                }
+                                else
+                                {
+                                    list_item.addClass('av-visible-sublist');
+                                }
+                                return false;
+                        }
+                });
+                
+                $('.avia_mobile').on('click', '.av-menu-mobile-disabled li a', function()
+                {
+                        var current = $(this);
+                        console.log(current); 
+                        var list_item = current.siblings('ul');
+                        if(list_item.length)
+                        {
+                                if(list_item.hasClass('av-visible-mobile-sublist'))
+                                {
+                                    
+                                }
+                                else
+                                {
+                                        $('.av-visible-mobile-sublist').removeClass('av-visible-mobile-sublist');
+                                    list_item.addClass('av-visible-mobile-sublist');
+                                    return false;
+                                }
+                                
+                        }
+                });
+                
+                
+                
+        }
+        
+        
+        
+        function avia_sidebar_menu()
+        {
+                var win                         = $(window),
+                        main                    = $('#main'),
+                        sb_header               = $('.html_header_sidebar #header_main'),
+            sidebar                     = $('.html_header_sidebar #header.av_conditional_sticky');
             
         if(!sb_header.length) return;
         // main.css({"min-height":sb_header.outerHeight()});
-		
-	
+                
+        
             
         if(!sidebar.length) return;
         
-        var innerSidebar	= $('#header_main'),
-       	 	wrap			= $('#wrap_all'),
-       	 	subtract 		= parseInt($('html').css('margin-top'), 10),
-            calc_values 	= function()
+        var innerSidebar        = $('#header_main'),
+                wrap                    = $('#wrap_all'),
+                subtract                = parseInt($('html').css('margin-top'), 10),
+            calc_values         = function()
             {
-            	if(innerSidebar.outerHeight() < win.height()) 
-				{ 
-					sidebar.addClass('av_always_sticky'); 
-				}
-				else
-				{
-					sidebar.removeClass('av_always_sticky'); 
-				}
-				
-				wrap.css({'min-height': win.height() - subtract});
+                if(innerSidebar.outerHeight() < win.height()) 
+                                { 
+                                        sidebar.addClass('av_always_sticky'); 
+                                }
+                                else
+                                {
+                                        sidebar.removeClass('av_always_sticky'); 
+                                }
+                                
+                                wrap.css({'min-height': win.height() - subtract});
             };
         
         calc_values(); 
         win.on("debouncedresize av-height-change",  calc_values);
-	}
-	
-	function av_change_class($element, change_method, class_name)
-	{	
-		if($element[0].classList)
-		{
-			if(change_method == "add") 
-			{
-				$element[0].classList.add(class_name);
-			}
-			else
-			{
-				$element[0].classList.remove(class_name);
-			}
-		}
-		else
-		{
-			if(change_method == "add") 
-			{
-				$element.addClass(class_name);
-			}
-			else
-			{
-				$element.removeClass(class_name);
-			}
-		}
-	}
-	
+        }
+        
+        function av_change_class($element, change_method, class_name)
+        {       
+                if($element[0].classList)
+                {
+                        if(change_method == "add") 
+                        {
+                                $element[0].classList.add(class_name);
+                        }
+                        else
+                        {
+                                $element[0].classList.remove(class_name);
+                        }
+                }
+                else
+                {
+                        if(change_method == "add") 
+                        {
+                                $element.addClass(class_name);
+                        }
+                        else
+                        {
+                                $element.removeClass(class_name);
+                        }
+                }
+        }
+        
 
 
     //check if the browser supports element rotation
     function avia_header_size()
     {
-        var win				= $(window),
+        var win	            = $(window),
             header          = $('.html_header_top.html_header_sticky #header');
             
         if(!header.length) return;
@@ -1439,7 +1500,7 @@
             elements        = $('#header_main .container:first, #header_main .main_menu ul:first-child > li > a:not(.avia_mega_div a, #header_main_alternate a)'),
             el_height       = $(elements).filter(':first').height(),
             isMobile        = $.avia_utilities.isMobile,
-            scroll_top		= $('#scroll-top-link'),
+            scroll_top          = $('#scroll-top-link'),
             transparent 	= header.is('.av_header_transparency'),
             shrinking		= header.is('.av_header_shrinking'),
             set_height      = function()
@@ -1448,36 +1509,36 @@
 				
 				if(shrinking && !isMobile)
                 {
-	                if(st < el_height/2)
-	                {
-	                    newH = el_height - st;
-	                    
-	                    av_change_class(header, 'remove', 'header-scrolled');
-	                    //header.removeClass('header-scrolled');
-	                }
-	                else
-	                {
-	                    newH = el_height/2;
-	                    //header.addClass('header-scrolled');
-	                    av_change_class(header, 'add', 'header-scrolled');
-	                }
-	                
-	                elements.css({'height': newH + 'px', 'lineHeight': newH + 'px'});
+                        if(st < el_height/2)
+                        {
+                            newH = el_height - st;
+                            
+                            av_change_class(header, 'remove', 'header-scrolled');
+                            //header.removeClass('header-scrolled');
+                        }
+                        else
+                        {
+                            newH = el_height/2;
+                            //header.addClass('header-scrolled');
+                            av_change_class(header, 'add', 'header-scrolled');
+                        }
+                        
+                        elements.css({'height': newH + 'px', 'lineHeight': newH + 'px'});
                 	logo.css({'maxHeight': newH + 'px'});
                 }
                 
                 if(transparent)
-                {	
-                	if(st > 50)
-                	{	
-                		//header.removeClass('av_header_transparency');
-                		av_change_class(header, 'remove', 'av_header_transparency');
-                	}
-                	else
-                	{
-                		//header.addClass('av_header_transparency');
-                		av_change_class(header, 'add', 'av_header_transparency');
-                	}
+                {
+                        if(st > 50)
+                        {
+                                //header.removeClass('av_header_transparency');
+                                av_change_class(header, 'remove', 'av_header_transparency');
+                        }
+                        else
+                        {
+                                //header.addClass('av_header_transparency');
+                                av_change_class(header, 'add', 'av_header_transparency');
+                        }
                 }
 
                
@@ -1613,19 +1674,19 @@
 
 	$.AviaTooltip  =  function(options)
 	{
-	   var defaults = {
+           var defaults = {
             delay: 1500,                //delay in ms until the tooltip appears
-            delayOut: 300,             	//delay in ms when instant showing should stop
-            delayHide: 0,             	//delay hiding of tooltip in ms
-            "class": "avia-tooltip",   	//tooltip classname for css styling and alignment
-            scope: "body",             	//area the tooltip should be applied to
-            data:  "avia-tooltip",     	//data attribute that contains the tooltip text
-            attach:"body",          	//either attach the tooltip to the "mouse" or to the "element" // todo: implement mouse, make sure that it doesnt overlap with screen borders
-            event: 'mouseenter',       	//mousenter and leave or click and leave
+            delayOut: 300,             //delay in ms when instant showing should stop
+            delayHide: 0,               //delay hiding of tooltip in ms
+            "class": "avia-tooltip",     //tooltip classname for css styling and alignment
+            scope: "body",             //area the tooltip should be applied to
+            data:  "avia-tooltip",     //data attribute that contains the tooltip text
+            attach:"body",          //either attach the tooltip to the "mouse" or to the "element" // todo: implement mouse, make sure that it doesnt overlap with screen borders
+            event: 'mouseenter',       //mousenter and leave or click and leave
             position:'top',             //top or bottom
             extraClass:'avia-tooltip-class' //extra class that is defined by a tooltip element data attribute
         }
-		
+
         this.options = $.extend({}, defaults, options);
         this.body    = $('body');
         this.scope   = $(this.options.scope);
@@ -1634,7 +1695,7 @@
         this.open    = false;
         this.timer   = false;
         this.active  = false;
-		
+
         this.bind_events();
 	}
 
@@ -1680,90 +1741,90 @@
 
         display_tooltip: function(e)
         {
-            var target 		= this.options.event == "click" ? e.target : e.currentTarget,
-            	element 	= $(target),
-                text    	= element.data(this.options.data),
-                newTip  	= element.data('avia-created-tooltip'),
-            	extraClass 	= element.data('avia-tooltip-class'),
-                attach  	= this.options.attach == 'element' ? element : this.body,
-                offset  	= this.options.attach == 'element' ? element.position() : element.offset(),
-                position	= element.data('avia-tooltip-position'),
-                align		= element.data('avia-tooltip-alignment');
+            var target          = this.options.event == "click" ? e.target : e.currentTarget,
+                element         = $(target),
+                text    = element.data(this.options.data),
+                newTip  = element.data('avia-created-tooltip'),
+                extraClass      = element.data('avia-tooltip-class'),
+                attach  = this.options.attach == 'element' ? element : this.body,
+                offset          = this.options.attach == 'element' ? element.position() : element.offset(),
+                position        = element.data('avia-tooltip-position'),
+                align           = element.data('avia-tooltip-alignment');
             
             text = $.trim(text);
              
-			if(text == "") return;
-			if(position == "" || typeof position == 'undefined') position = this.options.position;
-			if(align == "" || typeof align == 'undefined') align = 'center';
-			
-			if(typeof newTip != 'undefined')
-			{
-				newTip = $.AviaTooltip.openTTs[newTip]
-			}
-			else
-			{
-				
-				this.inner.html(text); 
-				
+                        if(text == "") return;
+                        if(position == "" || typeof position == 'undefined') position = this.options.position;
+                        if(align == "" || typeof align == 'undefined') align = 'center';
+                        
+                        if(typeof newTip != 'undefined')
+                        {
+                                newTip = $.AviaTooltip.openTTs[newTip]
+                        }
+                        else
+                        {
+
+            this.inner.html(text);
+                                
                 newTip = this.options.attach == 'element' ? this.tooltip.clone().insertAfter(attach) : this.tooltip.clone().appendTo(attach);
                 if(extraClass != "") newTip.addClass(extraClass);
-			}
-			
+                        }
+                        
             this.open = true;
             this.active = newTip;
 
             if((newTip.is(':animated:visible') && e.type == 'click') || element.is('.'+this.options['class']) || element.parents('.'+this.options['class']).length != 0) return;
 
 
-            var animate1 = {}, animate2	= {}, pos1 = "", pos2 = "";
-			
-			if(position == "top" || position == "bottom")
-			{
-				switch(align)
-				{
-					case "left": pos2 = offset.left; break;
-					case "right": pos2 = offset.left + element.outerWidth() - newTip.outerWidth();  break;
-					default: pos2 = (offset.left + (element.outerWidth() / 2)) - (newTip.outerWidth() / 2); break;
-				}	
-			}
-			else
-			{
-				switch(align)
-				{
-					case "top": pos1 = offset.top; break;
-					case "bottom": pos1 = offset.top + element.outerHeight() - newTip.outerHeight();  break;
-					default: pos1 = (offset.top + (element.outerHeight() / 2)) - (newTip.outerHeight() / 2); break;
-				}	
-			}
-	
-			switch(position)
-			{
-				case "top": 
-				pos1 = offset.top - newTip.outerHeight();
+            var animate1 = {}, animate2 = {}, pos1 = "", pos2 = "";
+
+                        if(position == "top" || position == "bottom")
+            {
+                                switch(align)
+                                {
+                                        case "left": pos2 = offset.left; break;
+                                        case "right": pos2 = offset.left + element.outerWidth() - newTip.outerWidth();  break;
+                                        default: pos2 = (offset.left + (element.outerWidth() / 2)) - (newTip.outerWidth() / 2); break;
+                                }       
+                        }
+                        else
+                        {
+                                switch(align)
+                                {
+                                        case "top": pos1 = offset.top; break;
+                                        case "bottom": pos1 = offset.top + element.outerHeight() - newTip.outerHeight();  break;
+                                        default: pos1 = (offset.top + (element.outerHeight() / 2)) - (newTip.outerHeight() / 2); break;
+                                }       
+            }
+
+                        switch(position)
+                        {
+                                case "top": 
+                                pos1 = offset.top - newTip.outerHeight();
                 animate1 = {top: pos1 - 10, left: pos2};
                 animate2 = {top: pos1};
-				break;
-				case "bottom": 	
-				pos1 = offset.top + element.outerHeight();
-				animate1 = {top: pos1 + 10, left: pos2};
-				animate2 = {top: pos1};
-				break;
-				case "left": 
-				pos2 = offset.left  - newTip.outerWidth();
-				animate1 = {top: pos1, left: pos2 -10};
-            	animate2 = {left: pos2};	
-				break;
-				case "right": 	
-				pos2 = offset.left + element.outerWidth();
-				animate1 = {top: pos1, left: pos2 + 10};
-            	animate2 = {left: pos2};	
-				break;
-			}
-			
-			animate1['display'] = "block";
-			animate1['opacity'] = 0;
-			animate2['opacity'] = 1;
-			
+                                break;
+                                case "bottom":  
+                                pos1 = offset.top + element.outerHeight();
+                                animate1 = {top: pos1 + 10, left: pos2};
+                                animate2 = {top: pos1};
+                                break;
+                                case "left": 
+                                pos2 = offset.left  - newTip.outerWidth();
+                                animate1 = {top: pos1, left: pos2 -10};
+                animate2 = {left: pos2};        
+                                break;
+                                case "right":   
+                                pos2 = offset.left + element.outerWidth();
+                                animate1 = {top: pos1, left: pos2 + 10};
+                animate2 = {left: pos2};        
+                                break;
+                        }
+                        
+                        animate1['display'] = "block";
+                        animate1['opacity'] = 0;
+                        animate2['opacity'] = 1;
+                        
 
             newTip.css(animate1).stop().animate(animate2,200);
             newTip.find('input, textarea').focus();
@@ -1774,12 +1835,12 @@
 
         hide_tooltip: function(e)
         {
-            var element 	= $(e.currentTarget) , newTip, animateTo, 
-            	position	= element.data('avia-tooltip-position'),
-                align		= element.data('avia-tooltip-alignment');
+            var element         = $(e.currentTarget) , newTip, animateTo, 
+                position        = element.data('avia-tooltip-position'),
+                align           = element.data('avia-tooltip-alignment');
                 
             if(position == "" || typeof position == 'undefined') position = this.options.position;
-			if(align == "" || typeof align == 'undefined') align = 'center';
+                        if(align == "" || typeof align == 'undefined') align = 'center';
 
             if(this.options.event == 'click')
             {
@@ -1798,24 +1859,24 @@
 
             if(newTip)
             {
-            	var animate = {opacity:0};
-            	
-            	switch(position)
-            	{
-            		case "top": 	
-						animate['top'] = parseInt(newTip.css('top'),10) - 10;	
-					break;
-					case "bottom": 	
-						animate['top'] = parseInt(newTip.css('top'),10) + 10;	
-					break;
-					case "left": 	
-						animate['left'] = parseInt(newTip.css('left'), 10) - 10;
-					break;
-					case "right": 	
-						animate['left'] = parseInt(newTip.css('left'), 10) + 10;
-					break;
-            	}
-            	
+                var animate = {opacity:0};
+                
+                switch(position)
+                {
+                        case "top":     
+                                                animate['top'] = parseInt(newTip.css('top'),10) - 10;   
+                                        break;
+                                        case "bottom":  
+                                                animate['top'] = parseInt(newTip.css('top'),10) + 10;   
+                                        break;
+                                        case "left":    
+                                                animate['left'] = parseInt(newTip.css('left'), 10) - 10;
+                                        break;
+                                        case "right":   
+                                                animate['left'] = parseInt(newTip.css('left'), 10) + 10;
+                                        break;
+                }
+
                 newTip.animate(animate, 200, function()
                 {
                     newTip.css({display:'none'});
@@ -1867,7 +1928,7 @@ https://github.com/imakewebthings/jquery-waypoints/blob/master/licenses.txt
  *
  * Released under the MIT license
  */!function(a,b){"use strict";var c,d;if(a.uaMatch=function(a){a=a.toLowerCase();var b=/(opr)[\/]([\w.]+)/.exec(a)||/(chrome)[ \/]([\w.]+)/.exec(a)||/(version)[ \/]([\w.]+).*(safari)[ \/]([\w.]+)/.exec(a)||/(webkit)[ \/]([\w.]+)/.exec(a)||/(opera)(?:.*version|)[ \/]([\w.]+)/.exec(a)||/(msie) ([\w.]+)/.exec(a)||a.indexOf("trident")>=0&&/(rv)(?::| )([\w.]+)/.exec(a)||a.indexOf("compatible")<0&&/(mozilla)(?:.*? rv:([\w.]+)|)/.exec(a)||[],c=/(ipad)/.exec(a)||/(iphone)/.exec(a)||/(android)/.exec(a)||/(windows phone)/.exec(a)||/(win)/.exec(a)||/(mac)/.exec(a)||/(linux)/.exec(a)||/(cros)/i.exec(a)||[];return{browser:b[3]||b[1]||"",version:b[2]||"0",platform:c[0]||""}},c=a.uaMatch(b.navigator.userAgent),d={},c.browser&&(d[c.browser]=!0,d.version=c.version,d.versionNumber=parseInt(c.version)),c.platform&&(d[c.platform]=!0),(d.android||d.ipad||d.iphone||d["windows phone"])&&(d.mobile=!0),(d.cros||d.mac||d.linux||d.win)&&(d.desktop=!0),(d.chrome||d.opr||d.safari)&&(d.webkit=!0),d.rv){var e="msie";c.browser=e,d[e]=!0}if(d.opr){var f="opera";c.browser=f,d[f]=!0}if(d.safari&&d.android){var g="android";c.browser=g,d[g]=!0}d.name=c.browser,d.platform=c.platform,a.browser=d}(jQuery,window);
- 
+
 /*Vimeo Frogaloop API for videos*/
 var Froogaloop=function(){function e(a){return new e.fn.init(a)}function h(a,c,b){if(!b.contentWindow.postMessage)return!1;var f=b.getAttribute("src").split("?")[0],a=JSON.stringify({method:a,value:c});"//"===f.substr(0,2)&&(f=window.location.protocol+f);b.contentWindow.postMessage(a,f)}function j(a){var c,b;try{c=JSON.parse(a.data),b=c.event||c.method}catch(f){}"ready"==b&&!i&&(i=!0);if(a.origin!=k)return!1;var a=c.value,e=c.data,g=""===g?null:c.player_id;c=g?d[g][b]:d[b];b=[];if(!c)return!1;void 0!==
 a&&b.push(a);e&&b.push(e);g&&b.push(g);return 0<b.length?c.apply(null,b):c.call()}function l(a,c,b){b?(d[b]||(d[b]={}),d[b][a]=c):d[a]=c}var d={},i=!1,k="";e.fn=e.prototype={element:null,init:function(a){"string"===typeof a&&(a=document.getElementById(a));this.element=a;a=this.element.getAttribute("src");"//"===a.substr(0,2)&&(a=window.location.protocol+a);for(var a=a.split("/"),c="",b=0,f=a.length;b<f;b++){if(3>b)c+=a[b];else break;2>b&&(c+="/")}k=c;return this},api:function(a,c){if(!this.element||

@@ -7,7 +7,6 @@ global $avia_config;
 
 $default_sidebar = true;
 $sidebar_pos = avia_layout_class('main', false);
-
 $sidebar_smartphone = avia_get_option('smartphones_sidebar') == 'smartphones_sidebar' ? 'smartphones_sidebar_active' : "";
 $sidebar = "";
 
@@ -76,7 +75,7 @@ echo "<aside class='sidebar sidebar_".$sidebar." ".$sidebar_smartphone." ".avia_
         //default dummy sidebar
         if (apply_filters('avf_show_default_sidebars', $default_sidebar))
         {
-			 if(apply_filters('avf_show_default_sidebar_pages', true)) {avia_dummy_widget(2);}
+                         if(apply_filters('avf_show_default_sidebar_pages', true)) {avia_dummy_widget(2);}
              if(apply_filters('avf_show_default_sidebar_categories', true)) {avia_dummy_widget(3);}
              if(apply_filters('avf_show_default_sidebar_archiv', true)) {avia_dummy_widget(4);}
         }

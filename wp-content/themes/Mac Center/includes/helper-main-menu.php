@@ -1,9 +1,9 @@
 <?php 
 
-$responsive		= avia_get_option('responsive_active') != "disabled" ? "responsive" : "fixed_layout";
-$headerS 		= avia_header_setting();
-$social_args 	= array('outside'=>'ul', 'inside'=>'li', 'append' => '');
-$icons 			= !empty($headerS['header_social']) ? avia_social_media_icons($social_args, false) : "";
+$responsive             = avia_get_option('responsive_active') != "disabled" ? "responsive" : "fixed_layout";
+$headerS                = avia_header_setting();
+$social_args    = array('outside'=>'ul', 'inside'=>'li', 'append' => '');
+$icons                  = !empty($headerS['header_social']) ? avia_social_media_icons($social_args, false) : "";
 
 if(isset($headerS['disabled'])) return;
 
@@ -15,10 +15,9 @@ if(isset($headerS['disabled'])) return;
 
 if($responsive)
 {
-	echo '<a id="advanced_menu_toggle" href="#" '.av_icon_string('mobile_menu').'></a>';
-	echo '<a id="advanced_menu_hide" href="#" 	'.av_icon_string('close').'></a>';
+        echo '<a id="advanced_menu_toggle" href="#" '.av_icon_string('mobile_menu').'></a>';
+        echo '<a id="advanced_menu_hide" href="#"       '.av_icon_string('close').'></a>';
 }
-
 
 //subheader, only display when the user chooses a social header
 if($headerS['header_topbar'] == true)
@@ -64,13 +63,13 @@ if($headerS['header_topbar'] == true)
 						}
 						
 						
-						//phone/info text	
-						$phone			= $headerS['header_phone_active'] != "" ? $headerS['phone'] : "";
-						$phone_class 	= !empty($nav) ? "with_nav" : "";
-						if($phone) 		{ echo "<div class='phone-info {$phone_class}'><span>".do_shortcode($phone)."</span></div>"; }
-							
-							
-			        ?>
+                                                //phone/info text       
+                                                $phone                  = $headerS['header_phone_active'] != "" ? $headerS['phone'] : "";
+                                                $phone_class    = !empty($nav) ? "with_nav" : "";
+                                                if($phone)              { echo "<div class='phone-info {$phone_class}'><span>".do_shortcode($phone)."</span></div>"; }
+                                                        
+                                                        
+                                ?>
 			      </div>
 		</div>
 
@@ -86,14 +85,14 @@ if($headerS['header_topbar'] == true)
         */
         do_action('ava_main_header');
         if($headerS['header_position'] != "header_top") do_action('ava_main_header_sidebar');
-		?>
-	
-				 <div class='container'>
-				 
-					<div class='inner-container'>
-						<?php
-						/*
-						*	display the theme logo by checking if the default logo was overwritten in the backend.
+                ?>
+        
+                                 <div class='container'>
+                
+                                        <div class='inner-container'>
+                                                <?php
+                                                /*
+                                                *       display the theme logo by checking if the default logo was overwritten in the backend.
 						*   the function is located at framework/php/function-set-avia-frontend-functions.php in case you need to edit the output
 						*/
 						$addition = false;
@@ -107,49 +106,49 @@ if($headerS['header_topbar'] == true)
 						    if($headerS['header_social'] == 'icon_active_main' && !empty($headerS['bottom_menu'])) echo $icons;
 						
 						/*
-						*	display the main navigation menu
-						*   modify the output in your wordpress admin backend at appearance->menus
-						*/
-						    $extraOpen = $extraClose = $icon_beside = "";
-						    if($headerS['header_social'] == 'icon_active_main' && empty($headerS['bottom_menu'])){$icon_beside = " av_menu_icon_beside"; }
-						    if($headerS['bottom_menu']){ $extraClose = "</div></div><div id='header_main_alternate' class='container_wrap'><div class='container'>";  }
-						
-						    echo $extraClose;
+                                                *       display the main navigation menu
+                                                *   modify the output in your wordpress admin backend at appearance->menus
+                                                */
+                                                    $extraOpen = $extraClose = $icon_beside = "";
+                                                    if($headerS['header_social'] == 'icon_active_main' && empty($headerS['bottom_menu'])){$icon_beside = " av_menu_icon_beside"; }
+                                                    if($headerS['bottom_menu']){ $extraClose = "</div></div><div id='header_main_alternate' class='container_wrap'><div class='container'>";  }
+                                                
+                                                    echo $extraClose;
 						
 						    echo "<nav class='main_menu' data-selectname='".__('Select a page','avia_framework')."' ".avia_markup_helper(array('context' => 'nav', 'echo' => false)).">";
 						        $avia_theme_location = 'avia';
 						        $avia_menu_class = $avia_theme_location . '-menu';
 						        $args = array(
-						            'theme_location'	=> $avia_theme_location,
-						            'menu_id' 			=> $avia_menu_class,
-						            'menu_class'		=> 'menu av-main-nav',
-						            'container_class'	=> $avia_menu_class.' av-main-nav-wrap'.$icon_beside,
-						            'fallback_cb' 		=> 'avia_fallback_menu',
-						            'walker' 			=> new avia_responsive_mega_menu()
-						        );
-						
-						        wp_nav_menu($args);
-						        
-						     if($icon_beside) echo $icons;    
-						      
+                                                            'theme_location'    => $avia_theme_location,
+                                                            'menu_id'                   => $avia_menu_class,
+                                                            'menu_class'                => 'menu av-main-nav',
+                                                            'container_class'   => $avia_menu_class.' av-main-nav-wrap'.$icon_beside,
+                                                            'fallback_cb'               => 'avia_fallback_menu',
+                                                            'walker'                    => new avia_responsive_mega_menu()
+                                                        );
+                                                
+                                                        wp_nav_menu($args);
+                                                        
+                                                     if($icon_beside) echo $icons;    
+                                                      
+                                                    /*
+                                                    * Hook that can be used for plugins and theme extensions
+                                                    */
+                                                    do_action('ava_inside_main_menu');
+                                                        
+                                                    echo '</nav>';
+                                                
 						    /*
 						    * Hook that can be used for plugins and theme extensions
 						    */
-						    do_action('ava_inside_main_menu');
-						        
-						    echo '</nav>';
-						
-						    /*
-						    * Hook that can be used for plugins and theme extensions
-						    */
-						    do_action('ava_after_main_menu');
-						?>
-				
-					 <!-- end inner-container-->
-			        </div>
-						
-		        <!-- end container-->
-		        </div>
+                                                    do_action('ava_after_main_menu');
+                                                ?>
+                                                
+                                         <!-- end inner-container-->
+                                </div>
+                                                
+                        <!-- end container-->
+                        </div>
 
 		<!-- end container_wrap-->
 		</div>

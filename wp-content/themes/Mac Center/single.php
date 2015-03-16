@@ -23,9 +23,9 @@
 
 		<div class='container_wrap container_wrap_first main_color <?php avia_layout_class( 'main' ); ?>'>
 
-			<div class='container template-blog template-single-blog '>
+                        <div class='container template-blog template-single-blog '>
 
-				<main class='content units <?php avia_layout_class( 'content' ); ?> <?php echo avia_blog_class_string(); ?>' <?php avia_markup_helper(array('context' => 'content','post_type'=>'post'));?>>
+                                <main class='content units <?php avia_layout_class( 'content' ); ?> <?php echo avia_blog_class_string(); ?>' <?php avia_markup_helper(array('context' => 'content','post_type'=>'post'));?>>
 
                     <?php
                     /* Run the loop to output the posts.
@@ -35,12 +35,12 @@
                     */
 
                         get_template_part( 'includes/loop', 'index' );
-						
+
                         //show related posts based on tags if there are any
                         get_template_part( 'includes/related-posts');
 
                         //wordpress function that loads the comments template "comments.php"
-                        comments_template();
+                       // comments_template( '/includes/comments.php');
 
                     ?>
 
