@@ -594,7 +594,7 @@ if(!function_exists('avia_register_frontend_scripts'))
                 wp_enqueue_style( 'avia-popup-css', $template_url."/js/aviapopup/magnific-popup.css", array(), '1', 'screen' );
                 wp_enqueue_style( 'avia-media'  , $template_url."/js/mediaelement/skin-1/mediaelementplayer.css", array(), '1', 'screen' );
                 wp_enqueue_style( 'avia-print' ,  $template_url."/css/print.css", array(), '1', 'print' );
-
+								wp_enqueue_style( 'bootstrap',  $template_url."/css/bootstrap.css" );
 
                 if ( is_rtl() ) {
                         wp_enqueue_style(  'avia-rtl',  $template_url."/css/rtl.css", array(), '1', 'all' );
