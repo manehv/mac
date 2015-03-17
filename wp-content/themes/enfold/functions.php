@@ -3,7 +3,7 @@
 define("PLUGIN_DIR", ABSPATH . 'wp-content/plugins/simplr-registration-form' );
 include_once(PLUGIN_DIR.'/lib/form.class.php');
 class SimplrExt extends SREG_Form{
-	function text($option, $vals, $class = 'wide') {
+	static function text($option, $vals, $class = 'wide') {
 	?>
 		<div class="option-field col-lg-6 col-sm-6 col-xs-12<?php echo apply_filters($option['name'].'_error_class',''); ?>">
 			<label for="<?php echo $option['name']; ?>"><?php echo $option['label'] . show_required($option); ?></label>
