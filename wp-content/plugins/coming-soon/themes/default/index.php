@@ -24,3 +24,5 @@
 {Footer}
 </body>
 </html>
+
+<!-- Coming Soon Page and Maintenance Mode by SeedProd. Learn more: http://www.seedprod.com -->

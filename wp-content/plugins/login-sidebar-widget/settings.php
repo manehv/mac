@@ -26,7 +26,7 @@ class login_settings {
 	
 	function login_widget_afo_save_settings(){
 		
-		if($_POST['option'] == "login_widget_afo_save_settings"){
+		if(isset($_POST['option']) and $_POST['option'] == "login_widget_afo_save_settings"){
 			
 			if ( ! isset( $_POST['login_widget_afo_field'] )  || ! wp_verify_nonce( $_POST['login_widget_afo_field'], 'login_widget_afo_action' ) ) {
 			   wp_die( 'Sorry, your nonce did not verify.' );
@@ -40,7 +40,7 @@ class login_settings {
 			update_option( 'login_afo_forgot_pass_link',  sanitize_text_field($_POST['login_afo_forgot_pass_link']) );
 			update_option( 'login_afo_register_link',  sanitize_text_field($_POST['login_afo_register_link']) );
 			
-			if($_POST['lead_default_style'] == "Yes"){
+			if(isset($_POST['load_default_style']) and $_POST['load_default_style'] == "Yes"){
 				update_option( 'custom_style_afo', sanitize_text_field($this->default_style) );
 			} else {
 				update_option( 'custom_style_afo',  sanitize_text_field($_POST['custom_style_afo']) );
@@ -63,11 +63,12 @@ class login_settings {
 	$this->donate_form_login();
 	$this->fb_comment_addon_add();
 	$this->fb_login_pro_add();
+	$this->help_support();
 	?>
 	<form name="f" method="post" action="">
 	<?php wp_nonce_field('login_widget_afo_action','login_widget_afo_field'); ?>
 	<input type="hidden" name="option" value="login_widget_afo_save_settings" />
-	<table width="100%" border="0">
+	<table width="98%" style="background-color:#FFFFFF; border:1px solid #CCCCCC; padding:0px 0px 0px 10px; margin:2px;">
 	  <tr>
 		<td width="45%"><h1>Login Widget AFO Settings</h1></td>
 		<td width="55%">&nbsp;</td>
@@ -159,7 +160,7 @@ class login_settings {
 			<td width="55%">&nbsp;</td>
 		  </tr>
 	   <tr>
-			<td valign="top"><input type="checkbox" name="lead_default_style" value="Yes" /><strong> Load Default Styles</strong><br />
+			<td valign="top"><input type="checkbox" name="load_default_style" value="Yes" /><strong> Load Default Styles</strong><br />
 			Check this and hit the save button to go back to default styling.
 			</td>
 			<td><textarea name="custom_style_afo" style="width:80%; height:200px;"><?php echo $custom_style_afo;?></textarea></td>
@@ -259,7 +260,7 @@ class login_settings {
 	}
 	
 	function login_widget_afo_menu () {
-		add_options_page( 'Login Widget', 'Login Widget Settings', 10, 'login_widget_afo', array( $this,'login_widget_afo_options' ));
+		add_options_page( 'Login Widget', 'Login Widget Settings', 'activate_plugins', 'login_widget_afo', array( $this,'login_widget_afo_options' ));
 	}
 	
 	function load_settings(){
@@ -269,12 +270,21 @@ class login_settings {
 		register_activation_hook(__FILE__, array( $this, 'plug_install_afo_fb_login' ) );
 	}
 	
+	function help_support(){ ?>
+	<table width="98%" border="0" style="background-color:#FFFFFF; border:1px solid #CCCCCC; padding:0px 0px 0px 10px; margin:2px;">
+	  <tr>
+		<td align="right"><a href="http://aviplugins.com/support.php" target="_blank">Help and Support</a></td>
+	  </tr>
+	</table>
+	<?php
+	}
+	
 	function fb_comment_addon_add(){ 
 		if ( !is_plugin_active( 'fb-comments-afo-addon/fb_comment.php' ) ) {
 	?>
 		<table width="98%" border="0" style="background-color:#FFFFD2; border:1px solid #E6DB55; padding:0px 0px 0px 10px; margin:2px;">
 	  <tr>
-		<td><p>There is a <strong>Facebook Comments Addon</strong> for this plugin. The plugin replace the default <strong>Wordpress</strong> Comments module and enable <strong>Facebook</strong> Comments Module. You can get it <a href="http://aviplugins.com/fb-comments-addon/" target="_blank">here</a> in <strong>USD 1.00</strong> </p></td>
+		<td><p>There is a <strong>Facebook Comments Addon</strong> for this plugin. The plugin replace the default <strong>Wordpress</strong> Comments module and enable <strong>Facebook</strong> Comments Module. You can get it <a href="http://www.aviplugins.com/fb-comments-afo-addon/" target="_blank">here</a> in <strong>USD 1.00</strong> </p></td>
 	  </tr>
 	</table>
 	<?php 
@@ -284,7 +294,7 @@ class login_settings {
 	function fb_login_pro_add(){ ?>
 	<table width="98%" border="0" style="background-color:#FFFFD2; border:1px solid #E6DB55; padding:0px 0px 0px 10px; margin:2px;">
   <tr>
-    <td><p>There is a PRO version of this plugin that supports login with <strong>Facebook</strong>, <strong>Google</strong>,  <strong>Twitter</strong> and <strong>LinkedIn</strong>. You can get it <a href="http://aviplugins.com/fb-login-widget-pro/" target="_blank">here</a> in <strong>USD 1.50</strong> </p></td>
+    <td><p>There is a PRO version of this plugin that supports login with <strong>Facebook</strong>, <strong>Google</strong>,  <strong>Twitter</strong> and <strong>LinkedIn</strong>. You can get it <a href="http://aviplugins.com/fb-login-widget-pro/" target="_blank">here</a> in <strong>USD 3.00</strong> </p></td>
   </tr>
 </table>
 	<?php }

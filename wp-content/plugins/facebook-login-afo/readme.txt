@@ -3,8 +3,8 @@ Contributors: avimegladon
 Donate link: http://aviplugins.com/donate/
 Tags: facebook, fb, login form, facebook login, facebook widget, facebook login widget, fb widget login, fb sidebar login, facebook login form, fb user login, facebook authentication, twitter, twitter login, social login, google, google login, sidebar login, widget login, wordpress login, widget, shortcode, shortcode login, login widget
 Requires at least: 2.0.2
-Tested up to: 3.8.1
-Stable tag: 1.2.2
+Tested up to: 4.1.1
+Stable tag: 2.2.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -26,22 +26,25 @@ You need create a new facebook API Applitation to setup this plugin. Please foll
 * <strong>6.</strong> That's All. Have fun :)
 
 = Facebook Login Widget (PRO) =
-There is a PRO version of this plugin that supports login with <strong>Facebook</strong>, <strong>Google</strong>,  <strong>Twitter</strong> and <strong>LinkedIn</strong>. You can get it <a href="http://aviplugins.com/fb-login-widget-pro/" target="_blank">here</a> in <strong>USD 1.50</strong>
+There is a PRO version of this plugin that supports login with <strong>Facebook</strong>, <strong>Google</strong>,  <strong>Twitter</strong> and <strong>LinkedIn</strong>. You can get it <a href="http://aviplugins.com/fb-login-widget-pro/" target="_blank">here</a> in <strong>USD 3.00</strong>
+<a href="http://aviplugins.com/demo/login/" target="_blank">Click here for Live Demo</a>
 
 * The PRO version also comes with a content restriction Addon. Content of Pages and Posts can be hidden from visitors of your site.
 * Content Restriction can be applied from post edit page.
 * Use Shortcode to display login form in post or page.
+* Use only social icons for logging in. No need to put the entire login form.
+* Manage Forgot Password Email Body.
+* Update welcome text "Howdy" from plugin settings section.
 * Easy css implementation from admin panel.
 
 = Facebook Comments Extension =
-This Addon can be used to replace the default Wordpress Comments and insert a Facebook / Disqus Comments system to your site. You can get it <a href="http://aviplugins.com/fb-comments-afo-addon" target="_blank">here</a> in <strong>USD 1.00</strong>
+This Addon can be used to replace the default Wordpress Comments and insert Facebook / Disqus Comments system to your site. You can get it <a href="http://aviplugins.com/fb-comments-afo-addon" target="_blank">here</a> in <strong>USD 1.00</strong>
 
 * Facebook comments.
 * Disqus comments.
 * Globally turn off comments.
 
-
-> Get a <a href="http://aviplugins.com/get-quote.php">quote</a> for creating your own custom plugin.
+> Checkout other plugins <a href="http://aviplugins.com/wp-register-profile-pro/">WP Register Profile</a>, <a href="http://aviplugins.com/custom-post-type-attachment-pro/">Post Type Attachment</a>, <a href="http://aviplugins.com/contact-form-with-shortcode-pro/">Newsletter Subscription</a>, <a href="http://aviplugins.com/wp-support-pro/">WP Support (PRO)</a>.
 
 == Installation ==
 
@@ -51,6 +54,8 @@ This Addon can be used to replace the default Wordpress Comments and insert a Fa
 3. Go to `Settings-> FB Login Widget`, and follow the instructions.
 4. Go to `Appearance->Widgets` ,in available widgets you will find `FB Login Widget AFO` widget, drag it to chosen widget area where you want it to appear.
 5. Now visit your site and you will see the login form section.
+
+* If you want to translate the plugin in your language please translate the sample .PO file and mail me the the file at demoforafo@gmail.com and I will include that in the language file. Sample .PO file can be downloaded from <a href="http://aviplugins.com/language-sample/flw-es_ES.po">here</a>
 
 == Frequently Asked Questions ==
 
@@ -66,6 +71,15 @@ This Addon can be used to replace the default Wordpress Comments and insert a Fa
 
 
 == Changelog ==
+
+= 2.2.0 =
+* Help and Support link added.
+
+= 2.1.0 =
+* Notice message bug fixed.
+
+= 2.0.0 =
+* The plugin is now multilingual.
 
 = 1.2.2 =
 * admin menu related bug fixed.

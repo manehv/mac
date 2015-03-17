@@ -506,6 +506,13 @@
 </div>
 <?php
 			$buy_box = ob_get_clean();
+			ob_start();
+?>
+		<div class="wiziapp-plugin-admin-state-buy-billing-license">
+			<?php _e('Already have a license key?', 'wiziapp-plugin') ?> <a href="#" title="<?php _e('License', 'wiziapp-plugin') ?>"><?php _e('Activate now', 'wiziapp-plugin') ?></a>
+		</div>
+<?php
+			$license_extend = ob_get_clean();
 			$this->_renderOptionsBox(array(
 				'id' => 'android',
 				'title' => __('Android App', 'wiziapp-plugin'),
@@ -528,7 +535,8 @@
 						'extra' => array(
 							'type' => 'button',
 							'label' => __('Extend', 'wiziapp-plugin')
-						)
+						),
+						'extra_html' => $license_extend
 					),
 					array(
 						'id' => 'android_active',
@@ -776,7 +784,8 @@
 						'extra' => array(
 							'type' => 'button',
 							'label' => __('Extend', 'wiziapp-plugin')
-						)
+						),
+						'extra_html' => $license_extend
 					),
 					array(
 						'id' => 'ad_footer_url',
@@ -977,6 +986,10 @@
 						$this->_renderOptionsExtraButton($item['extra']);
 						break;
 				}
+			}
+			if (isset($item['extra_html']))
+			{
+				echo $item['extra_html'];
 			}
 ?>
 						<div class="clear"></div>

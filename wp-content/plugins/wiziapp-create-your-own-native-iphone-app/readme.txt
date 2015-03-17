@@ -2,8 +2,8 @@
 Contributors: wiziapp
 Tags: mobile theme, Android, HTML5, iphone, mobile, mobile app, smartphones, web app, webapp, wptouch, mobile themes, woocommerce mobile, buddypress mobile, android app, iphone app, adaptive theme, responsive theme, uppsite
 Requires at least: 3.3
-Tested up to: 3.8.1
-Stable tag: 3.2.3
+Tested up to: 4.1
+Stable tag: 3.2.7
 License: GPLv2
 
 Choose your dedicated mobile Theme, Create your own Native Android and iPhone Apps (Woocommerce & BuddyPress compatible)
@@ -496,6 +496,23 @@ BuddyPress Pages
 - BuddyPress Delete account Wordpress page
 
 == Changelog ==
+
+= 3.2.7 =
+
+- Woocommerce version 2.3.0 compatibility fixes.
+- Bug Fixes
+
+= 3.2.6 =
+
+- RTL support
+
+= 3.2.5 =
+
+- Bug fixes
+
+= 3.2.4 =
+
+- Bug fixes
 
 = 3.2.3 =
 

@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=ravan
 Tags: fancybox, lightbox, gallery, image, photo, video, flash, nextgen, overlay, youtube, vimeo, dailymotion, pdf, svg, iframe, swf, jquery
 Requires at least: 3.3
 Tested up to: 4.0
-Stable tag: 1.5.6
+Stable tag: 1.5.7
 
 Easily enable the FancyBox jQuery extension on just about all media links. Multi-Site compatible. Supports iFrame and Flash movies.
 
@@ -16,7 +16,7 @@ After activation, all links to **JPG, GIF and PNG images** are automatically ope
 
 **Also supports:**
 
-- All other image types _and_ image maps
+- All common image types including webp _and_ image maps
 - WordPress Galleries
 - NextGEN galleries (see FAQs for instructions)
 - Youtube galleries via Youtube Simple Gallery plugin (see FAQs for instructions)
@@ -44,6 +44,7 @@ Visit [FancyBox](http://fancybox.net/) for more information, examples and the Fa
 
 = Translators =
 
+- **Croatian** Ivan Capan, (version 1.5.6)
 - **Czech** *  Eldenroot (version 1.5.5)
 - **Dutch** *  R.A. van Hagen, http://status301.net (version 1.5.6)
 - **French** * Emmanuel Maillard, (version 1.5.5)
@@ -123,7 +124,7 @@ Please follow the trouble shooting steps on [Other Notes](http://wordpress.org/p
 
 = Will a WordPress generated gallery be displayed in a FancyBox overlay? =
 
-Yes, but _only_ if you used the option **Link To: Media File** when inserting the gallery! The gallery quicktag/shortcode should look like `[ gallery link="file"  ]`.
+Yes, but _only_ if you used the option **Link To: Media File** when inserting the gallery! The gallery quicktag/shortcode should look something like `[ gallery link="file" ]`.
 
 = The lightbox does not look good on mobile devices. What can I do about that? =
 
@@ -230,9 +231,19 @@ This script snippet will scan the image titles and if it finds a Youtube URL the
 
 You could do this manually by uploading individual thumbnails that you can retrieve by using the unique movie ID in these URLs for three different sizes:
 `
-http://i4.ytimg.com/vi/UNIQUE-MOVIE-ID/default.jpg
-http://i4.ytimg.com/vi/UNIQUE-MOVIE-ID/mqdefault.jpg
-http://i4.ytimg.com/vi/UNIQUE-MOVIE-ID/hqdefault.jpg
+http://img.youtube.com/vi/UNIQUE-MOVIE-ID/default.jpg
+http://img.youtube.com/vi/UNIQUE-MOVIE-ID/mqdefault.jpg
+http://img.youtube.com/vi/UNIQUE-MOVIE-ID/hqdefault.jpg
+`
+Other locations might be
+`
+http://img.youtube.com/vi/UNIQUE-MOVIE-ID/0.jpg (same as hqdefault.jpg)
+http://img.youtube.com/vi/UNIQUE-MOVIE-ID/1.jpg
+http://img.youtube.com/vi/UNIQUE-MOVIE-ID/2.jpg
+http://img.youtube.com/vi/UNIQUE-MOVIE-ID/3.jpg
+http://img.youtube.com/vi_webp/UNIQUE-MOVIE-ID/0.webp (same as hqdefault.webp)
+etc...
+
 `
 
 But an easier method is this one, shared by Shashank Shekhar (thanks!) :
@@ -341,10 +352,10 @@ NOTE 2: If you find that the inline contect shown in FancyBox is styled very dif
 
 = Can I display a contact form in FancyBox? =
 
-Yes. There are several methods imaginable but the easiest would be to use the Inline method. The inline content can be a shortcode like in this example using Contact Forms 7 and Easy FancyBox:
+Yes. There are several methods imaginable but the easiest would be to use the Inline method. First go to your Settings > Media admin page and enable the Inline Content option. Next, go back to edit your post or page in the Text editor tab. The inline content can be a shortcode like in this example using Contact Forms 7 and Easy FancyBox:
 
 `
-<a href="#contact_form_pop" class="fancybox">Contact Us</a>
+<a href="#contact_form_pop" class="fancybox-inline">Contact Us</a>
 
 <div style="display:none" class="fancybox-hidden">
     <div id="contact_form_pop" class="hentry" style="width:460px;height:380px;">
@@ -405,12 +416,7 @@ Yes. Designed to work with **Network Activate** and does not require manual acti
 
 = Theme conflicts = 
 
-- **Twenty Eleven** uses a very high stacking order (z-index: 9999) for the top image and menu div, resulting in FancyBox content being partially hidden under the page header. Work-around: Use the plugin [Custom CSS](http://wordpress.org/plugins/safecss/) or [Jetpack](http://wordpress.org/plugins/jetpack/) and add on the new Appearance > Edit CSS admin page the rule:
-`
-#branding {
-z-index:999;
-}
-`
+- **Twenty Eleven** uses a very high stacking order (z-index: 9999) for the top image and menu div, resulting in FancyBox content being partially hidden under the page header. Work-around: Use the plugin [Custom CSS](http://wordpress.org/plugins/safecss/) or [Jetpack](http://wordpress.org/plugins/jetpack/) and add on the new Appearance > Edit CSS admin page the rule `#branding { z-index:999; }` 
 - Older versions of **Elegant Themes** have FancyBox integrated in a hard-coded way, making them incompatible with Easy FancyBox. In the latest versions of these themes, there is an option to disable the included FancyBox. Use this option to make your theme compatible with Easy FancyBox :)
 - The **Mystique** theme has two option called "Lightbox" and "Optimize website for faster loading" that will break Easy FancyBox. Disable both in Mystique's options > Advanced.
 - **Imbalance** and other themes that uses the Photo Galleria jQuery extension: turn of the JSGallery option.
@@ -479,10 +485,23 @@ If you still do not get to see your images in FancyBox, ask on the [Easy FancyBo
 
 == Upgrade Notice ==
 
-= 1.5.6 =
+= 1.5.7 =
 Bugfix release.
 
 == Changelog ==
+
+TODO: optional disable for small sceen sizes
+TODO: move all script to footer and make that optional to for theme compat
+TODO: make jQuery inclusion optional
+TODO: make jQuery 1.6- compat optional
+
+= 1.5.7 =
+* FIX: Pro extension link update
+* NEW: WebP support and class='image' to force image media type
+* IE 6-8 css rules optional
+* iframe embed for Youtube, Vimeo and Dailymotion
+* Croation translation
+* HTML5 players allowfullscreen default
 
 = 1.5.6 =
 * iPad positioning patch

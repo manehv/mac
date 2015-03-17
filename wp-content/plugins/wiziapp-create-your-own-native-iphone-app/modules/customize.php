@@ -10,7 +10,7 @@
 			{
 				add_thickbox();
 				wp_register_style('wiziapp-plugin-customize', wiziapp_plugin_hook()->plugins_url('/styles/customize.css'), array('thickbox'));
-				wp_register_script('wiziapp-plugin-customize', wiziapp_plugin_hook()->plugins_url('/scripts/customize.js'), array());
+				wp_register_script('wiziapp-plugin-customize', wiziapp_plugin_hook()->plugins_url('/scripts/customize.js'), array('customize-base'));
 				wp_enqueue_style('wiziapp-plugin-customize');
 				wp_enqueue_script('wiziapp-plugin-customize');
 			}

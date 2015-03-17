@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>FormCraft - Documentation</title>
+	<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.0/css/bootstrap.no-icons.min.css" rel="stylesheet">
+	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' rel='stylesheet' type='text/css'>	
+	<link rel="stylesheet" type="text/css" href="css/documentation.css">
+</head>
+
+
+<body data-spy='scroll' data-target="#navcover" class='local_docs'>
+
+	<div id='navcover'>
+		<ul class='nav sidebar'>
+			<li><a class='anchorLink' href='#home'>Home</a></li>
+			<li><a class='anchorLink' href='#install'>Installation</a></li>
+			<li><a class='anchorLink' href='#build'>Form Building</a></li>
+			<li><a class='anchorLink' href='#usage'>Using the Form</a></li>
+			<li><a class='anchorLink' href='#conditional'>Conditional Laws</a></li>
+			<li><a class='anchorLink' href='#submissions'>Form Submissions</a></li>
+			<li><a class='anchorLink' href='#file'>File Manager</a></li>
+			<li><a class='anchorLink' href='#support'>Support</a></li>
+			<li><a></a></li>
+		</ul>
+	</div>
+
+	<div class='cover_1_doc'>
+		<h1 id='home' style='position: relative'>FormCraft<span style='font-size: 22px; padding-left: 10px; color: #aaa; font-weight: 400'> for WordPress</span></h1>
+		<p class='author'>by nCrafts</p>
+		<p class='author'><a href='http://ncrafts.net'>nCrafts.net</a></p>
+
+		<h2 style='margin-top: 500px;' id='install'>Installation</h2>
+		<div>
+			<ol>
+				<li>Extract the download package to a temporary location.</li>
+				<li>Zip the folder <em class='surround'>formcraft</em></li>
+				<li>Log in to WordPress and click on the <em class='surround'>Add New</em> option under <em class='surround'>Plugins.</em></li>
+				<li>Click on the <em class='surround'>Upload</em> link.</li>
+				<li>Click on <em class='surround'>Choose File</em> and browse the zipped file <em class='surround'>formcraft</em> and click on <em class='surround'>Install</em>.</li>
+				<li>Now activate the plugin</li>
+			</ol>
+			<p>If you are facing trouble with the file upload field, you need to set the permissions of the directory <Strong>wp-content/plugins/formcraft/file-upload/server/</strong> and sub directories, and files to <strong>755</strong></p>
+			<p>You can read <a target='_blank' href='http://ncrafts.net/formcraft/others/update-formcraft-without-losing-data/'>this</a> for steps on updating FormCraft</p>
+		</div>
+
+		<h2 id='build'>Form Building</h2>
+		<div>
+			<div class='l40'>
+				<p>To access the form builder, click on a form under <em class='surround'>Forms</em>. The form builder screen can be divided into two parts. The left part is the <em class='surround'>Dashboard</em> and the right part is our <em class='surround'>Form Preview</em>.</p>
+				<h3>Dashboard</h3>
+				<div>
+					<ol>
+						<li>List of Forms: Takes you back to the form index.</li>
+						<li>Save: The form saves every 180 seconds. Nevertheless, you can click on <em class='surround'>Save</em> to manually save it any time.</li>
+						<li>Form Options</li>
+						<li>Styling: This allows you to customize the various elements of the form.</li>
+					</ol>
+					<p>Below these options are the various form elements you can add. To add a form element, just click on the button.</p>
+					<p>Captcha field cannot be added more than once in a form.</p>
+					<p>You can embed Google Maps using the <em class='surround'>Custom</em> field. <a href='http://maps.google.co.in/help/maps/getmaps/plot-one.html' target='_blank'>Get the HTML link from Google Maps</a>, and paste it in the text box in the options for <em class='surround'>Custom</em> field.</p>
+					<p>Follow the same procedure to embed videos, and other widgets.</p>
+				</div>
+				<h3>Form Preview</h3>
+				<div>
+					<p>To view the options of the Form Title, Submit Button, or any added element, click on it.</p>
+					<p>You can drag and drop the elements to change their order.</p>
+					<p>The Live Form Preview tries to capture the form just as would appear on your WordPress page. However, the actual form might appear different depending on your WordPress theme, and other changes to basic CSS styles.</p>
+				</div>
+				<h2 id='usage'>Using the Forms</h2>
+				<h3>Shortcode</h3>
+				<pre class='well' style='width: 90%'>[formcraft id='20' type='sticky' opened='1' class='fc-btn' background='red' text_color='white']Contact Us[/formcraft]</pre>
+				<ol>
+					<li><em class='surround'>id</em> This attribute is compulsory.</li>
+					<br>
+
+					<li><em class='surround'>type</em>
+						<br>
+						If you want the form to open in a popup box, set this to <strong>popup</strong>.<br>
+						If you want the form to open in a sliding tab, which rests in the bottom right corner of the page, set this as <strong>sticky</strong>.<br>
+						If you want the form to open in a popup box, with the trigger button resting on the right side of the page, set this as <strong>fly</strong>.<br>
+						Else, leave this attribute.</li><br>
+
+						<li><em class='surround'>opened</em> If set as <strong>1</strong>, the form will open / slide up, as soon as the page is loaded.<br>
+							<span style='color: red'>Works only if type is sticky or fly</span>
+						</li><br>
+
+						<li><em class='surround'>class</em> If you wish to give custom style to this text, you can set a class here. If you are not sure, leave this attribute.
+							<br> 
+							<span style='color: red'>Works only if type is popup</span>
+						</li><br>
+
+						<li><em class='surround'>background</em> Set the background color of the trigger button. You can use values like red, white, blue etc... You can also use values like #333, #DD1, #45A etc...<Br>			    
+							<span style='color: red'>Works only if type is sticky or fly</span>
+						</li><br>
+
+						<li><em class='surround'>text_color</em> Set the text color of the trigger button. You can use values like red, white, blue etc... You can also use values like #333, #DD1, #45A etc...<br>	
+							<span style='color: red'>Works only if type is sticky or fly</span>
+						</li><br>
+					</ol>
+					<h3>Widget</h3>
+					<pre class='well' style='width: 90%'>Go to <em class='surround'>Appearance -> Widgets -> FormCraft</em></pre>
+					<h3>Use in Themes, and other places</h3>
+					<pre class='well' style='width: 90%'>&lt;?php formcraft($id, $type, $opened, $text, $class, $background, $text_color); ?&gt;</pre>
+					<ol>
+						<li><em class='surround'>id</em> This attribute is compulsory.</li>
+						<br>
+
+						<li><em class='surround'>type</em>
+							<br>
+							If you want the form to open in a popup box, set this to <strong>popup</strong>.<br>
+							If you want the form to open in a sliding tab, which rests in the bottom right corner of the page, set this as <strong>sticky</strong>.<br>
+							If you want the form to open in a popup box, with the trigger button resting on the right side of the page, set this as <strong>fly</strong>.<br>
+							Else, leave this attribute.</li><br>
+
+							<li><em class='surround'>opened</em> If set as <strong>1</strong>, the form will open / slide up, as soon as the page is loaded.<br>
+								<span style='color: red'>Works only if type is sticky or fly</span>
+							</li><br>
+
+							<li><em class='surround'>text</em> Text which will trigger the popup box on click.</li><br>
+
+							<li><em class='surround'>class</em> If you wish to give custom style to this text, you can set a class here. If you are not sure, leave this attribute.
+								<br> 
+								<span style='color: red'>Works only if type is popup</span>
+							</li><br>
+
+							<li><em class='surround'>background</em> Set the background color of the trigger button. You can use values like red, white, blue etc... You can also use values like #333, #DD1, #45A etc...<Br>			    
+								<span style='color: red'>Works only if type is sticky or fly</span>
+							</li><br>
+
+							<li><em class='surround'>text_color</em> Set the text color of the trigger button. You can use values like red, white, blue etc... You can also use values like #333, #DD1, #45A etc...<br>	
+								<span style='color: red'>Works only if type is sticky or fly</span>
+							</li><br>
+						</ol>
+						<pre class='well' style='width: 90%'><strong>Examples</strong>
+							<br>&lt;?php formcraft(20); ?&gt; <br>// Use the form
+							<br>&lt;?php formcraft(20, 'popup'); ?&gt; <br>// Form opens on click, in a popup box
+							<br>&lt;?php formcraft(20, 'popup', 'Contact Us'); ?&gt; <br>// Text of popup box is 'Contact Us'
+							<br>&lt;?php formcraft(20, 'sticky', '', 'Contact Us'); ?&gt; <br>// There is a button on the bottom right corner of the page which will slide up the form on click
+							<br>&lt;?php formcraft(20, 'fly', 1, 'Contact Us', '', 'red', 'white' ); ?&gt; <br>// There a red button on the right side of the page which will trigger the form on click. Also, the form would open on it's own when the page loads.
+						</pre>
+					</div>
+				</div>
+
+				<h2 id='conditional'>Understanding Conditional Laws</h2>
+				<div>
+					<h3>Basics</h3>
+					<p>You can use conditional laws to show / hide elements dynamically based on their value. However, conditional laws are not available for the following field types:
+						<ol>
+							<li>
+								Choice Matrix
+							</li>
+							<li>
+								Sliders
+							</li>
+							<li>
+								Range
+							</li>
+							<li>
+								Dividers
+							</li>
+							<li>
+								Hidden Field
+							</li>
+							<li>
+								Captcha
+							</li>
+							<li>
+								Custom
+							</li>
+						</ol>
+					</p>
+					<p>How Show / Hide Works:
+						<ol>
+							<li>
+								<p>
+									<strong>Show</strong><br>
+									If a certain value is selected / entered in the input field, a specific element is shown. It is recommended that the element which is to be shown should be <strong>Hidden by Default</strong>, from the options of the respective element.
+								</p>
+								<p>Example: I have a field #3 which is to be shown when the value of the input field #1 is set to test. If the value test is typed in this field, the field #3 will be shown, but when I type in any value other than test, the field #3 will hide (whether or not it was Hidden by Default)
+								</p>
+
+							</li>
+
+							<li>
+								<p>
+									<strong>Hide</strong><br>
+									If a certain value is selected / entered in the input field, a specific element is hidden.
+								</p>
+								<p>Example: I have a field #3 which is to be hidden when the value of the input field #1 is set to test. If the value test is typed in this field, the field #3 will hide, but when I type in any value other than test, the field #3 will be shown (whether or not it was Hidden by Default)
+								</p>
+
+							</li>
+
+
+						</ol>
+					</p>
+					<h3>Specifics</h3>
+					<ol>
+						<li>
+							<p>
+								<strong>
+									Fields: Star, Smiley, and Thumb
+								</strong><br>
+								Each selectable option of the fields Star and Smiley has a pre-defined value, from 1 to 5 (in case of Smileys) and 1 to 5 (or more, in case of Stars). If, say, you want to show field #3 when the lowest smiley rating is selected by the user, you will set the conditional law to
+								<pre class='well' style='width: 90%'>if this element <span style='font-weight: bold; font-size: 16px'>equals 1</span> <br>then <span style='font-weight: bold; font-size: 16px'>show</span> <br>element <span style='font-weight: bold; font-size: 16px'>3</span></pre>
+								Thumb fields have two predefined values: 1 for the positive rating (thumb up) and 0 for the negative rating (thumb down)
+							</p>
+						</li>
+
+						<li>
+							<p>
+								<strong>
+									Fields: CheckBox, MultiChoice, and DropDown
+								</strong><br>
+								Unlike star, smiley and thumb ratings, the value of each option is customizable here, and the show / hide event is triggered when a specific option is checked. In case of checkboxes, where multiple options can be selected, the show / hide event will be triggered if a specific option is checked, whether or not other options are also checked.
+							</p>
+						</li>
+
+						<li>
+							<p>
+								<strong>
+									Fields: Email, One Line Text, DateInput, and MultiLine
+								</strong><br>
+								The plugin also allows you to set conditional laws to text fields, and the show / hide events work live.
+							</p>
+								<p>Example: I have a field #3 which is to be hidden when the value of the One Line Input Field #1 is set to test. As soon as the value test is typed in this field, the field #3 will hide, but when I type in any value other than test, the field #3 will be shown (whether or not it was Hidden by Default)
+								</p>
+								<p>
+									Isn't it awesome?
+								</p>
+						</li>
+
+						<li>
+							<p>
+								<strong>
+									Fields: File
+								</strong><br>
+								The value of the File field will be the number of files uploaded
+							</p>
+						</li>
+					</ol>
+					<h3>New in FormCraft 2.0</h3>
+					<p>The 2.0 update allows you to conditionally set the redirection path (the URL to which the user will be redirected on successful form submission), and email recipients, based on form values.</p>
+
+				</div>
+
+				<h2 id='submissions'>Form Submissions</h2>
+				<p>When a user submits a form, the form data is delivered to the email recipients, and is saved in a database.</p>
+				<p>Email recipients can be added under <em class='surround'>Form Options</em> inside the Form Builder screen.</p>
+				<p>All the form submissions can also be accessed from the <em class='surround'>Submissions</em> table in the Form Index screen.</p>
+				<p>On the same screen you can see statistics on form submissions.</p>
+				<h3>Exporting Submissions</h3>
+				<p>You can also export the form submissions under the tab <strong>Submissions</strong>, by selecting the relevant form from the dropdown and clicking on <strong>Export</strong></p>
+				<h3>Searching Submissions <span>(new in 2.0)</span></h3>
+				<p>You can use the Search Submissions field to search the submissions content. If you type in a keyword, like, <strong>sam</strong>, the search engine will match the word against form values as well as field names.</p>
+
+
+
+				<h2 id='file'>File Manager <span>(revamped in 2.0)</span></h2>
+				<p>
+					As you might know, FormCraft has a fantastic <em class='surround'>File Upload</em> field feature for your forms. All the files uploaded by users can be viewed from the <em class='surround'>File Manager</em> table from the Form Index screen.
+				</p>
+				<p>
+					You can also access the uploaded files by viewing the form submissions data.
+				</p>
+				<p>
+				The file upload field was revamped in 2.0. You can now set minimum and maximum file size, file types, and maximum number of files allowed.
+				</p>
+
+				<h2 id='support'>Support</h2>
+				<p>
+					In case of general queries or clarifications, you can post a comment in the Item Discussion section.
+				</p>
+				<p>
+					If you encounter bugs along the way, or wish to suggest some features in the plugin, please contact me through my <a href='http://codecanyon.net/user/nCrafts' target='_blank'>profile page</a>.
+				</p>
+				<p>
+					If you like the plugin, please give a rating :)
+				</p>
+				<div style='height: 480px'></div>
+
+			</div>
+
+			<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+			<script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.0/js/bootstrap.min.js"></script>
+			<script src="js/jquery.anchor.js"></script>
+
+		</body>
+		</html>

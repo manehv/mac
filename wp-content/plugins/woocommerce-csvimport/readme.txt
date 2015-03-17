@@ -3,7 +3,7 @@ Contributors: Allaerd
 Tags: Woocommerce, commerce, e-commerce, ecommerce, inventory, stock, products, import, csv, multiple images, upload
 Requires at least: 3.7.0
 Tested up to: 4.0
-Stable tag: 2.1.0
+Stable tag: 2.2.2
 Donate link: http://allaerd.org
 License: GPLv2 or later 
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -99,12 +99,27 @@ Version 2.+  is mayor release..... Please make a backup first before you upgrade
 
 == Changelog ==
 
+= 2.2.2 = 
+* changes the shipping class a bit more to be more inline with categories *
+
+= 2.2.1 = 
+* fixed bug if shipping class was empty or contained spaces
+
+= 2.2.0 =
+* if merging keep current tags, attributes and shipping class.
+* change the way how to validate an url. Not all url's where validated and therefor not all images where uploaded
+* solved a bug when spaces or %20 where in filenames of urls. Added sanitize_file_name and url_decode to to clean the name.
+* solved the header preview, showed row 2 3 times
+* add add-on section and preparations for version control
+
+
 = 2.1.0 =
 * fixed an issue when images have the same name and are stored in the same location. The image was overridden instead of appending -X to the filename
 * if an image is uploaded with an URL and does not have an extension use CURLINFO_CONTENT_TYPE to determine the mime type
 * language support dutch,english
 * added some smartness when mapping header fields
 * added post_author field
+* price is not supported anymore. Use regular_price and/or sale_price
 
 = 2.0.8 =
 * fixed an issue in the roles

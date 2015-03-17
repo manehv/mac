@@ -5,8 +5,8 @@ Tags: login, widget, login widget, widget login, sidebar login, login form, user
 
 Requires at least: 2.0.2
 
-Tested up to: 4.0
-Stable tag: 4.0.0
+Tested up to: 4.1.1
+Stable tag: 4.2.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -18,6 +18,7 @@ This is a simple login form in the widget. This will allow users to login to the
 * just install the plugin and add the login widget in the sidebar. 
 * Change some 'optional' settings in `Settings-> Login Widget Settings` and you are good to go. 
 * Add css as you prefer because the form structure is really very simple.
+* Use this shortcode [forgot_password] in your page to display the forgot password form. Forgot password link can be added to login widget from plugin settings page.
 
 = Other Optional Options =
 * Custom forgot password form. Use shortcode to display forgot password form in your post or page.
@@ -27,21 +28,27 @@ This is a simple login form in the widget. This will allow users to login to the
 * Easy css implementation from admin panel.
 
 = Facebook Login Widget (PRO) =
-There is a PRO version of this plugin that supports login with <strong>Facebook</strong>, <strong>Google</strong>,  <strong>Twitter</strong> and <strong>LinkedIn</strong>. You can get it <a href="http://aviplugins.com/fb-login-widget-pro/" target="_blank">here</a> in <strong>USD 1.50</strong>
+There is a PRO version of this plugin that supports login with <strong>Facebook</strong>, <strong>Google</strong>,  <strong>Twitter</strong> and <strong>LinkedIn</strong>. You can get it <a href="http://aviplugins.com/fb-login-widget-pro/" target="_blank">here</a> in <strong>USD 3.00</strong>
+
+Click <a href="http://aviplugins.com/demo/login/" target="_blank">here</a> for a Live Demo.
 
 * The PRO version also comes with a content restriction Addon. Content of Pages and Posts can be hidden from visitors of your site.
 * Content Restriction can be applied from post edit page.
 * Use Shortcode to display login form in post or page.
+* Use only social icons for logging in. No need to put the entire login form.
+* Change welcome text "Howdy" from plugin settings section.
+* Manage Forgot Password Email Body.
 * Easy css implementation from admin panel.
+* And Other useful settings.
 
 = Facebook Comments Extension =
-This Addon can be used to replace the default Wordpress Comments and insert a Facebook / Disqus Comments system to your site. You can get it <a href="http://aviplugins.com/fb-comments-afo-addon" target="_blank">here</a> in <strong>USD 1.00</strong>
+This Add-on can be used to replace the default Wordpress Comments and insert Facebook / Disqus Comments system in  your site. You can get it <a href="http://aviplugins.com/fb-comments-afo-addon" target="_blank">here</a> in <strong>USD 1.00</strong>
 
 * Facebook comments.
 * Disqus comments.
 * Globally turn off comments.
 
-> Checkout other plugins <a href="http://aviplugins.com/wp-register-profile-pro/">WP Register Profile</a>, <a href="http://aviplugins.com/custom-post-type-attachment-pro/">Post Type Attachment</a>, <a href="http://aviplugins.com/contact-form-with-shortcode-pro/">Newsletter Subscription</a>.
+> Checkout other plugins <a href="http://aviplugins.com/fb-login-widget-pro/">Facebook Login Widget (PRO)</a>, <a href="http://aviplugins.com/wp-register-profile-pro/">WP Register Profile</a>, <a href="http://aviplugins.com/custom-post-type-attachment-pro/">Post Type Attachment</a>, <a href="http://aviplugins.com/contact-form-with-shortcode-pro/">Newsletter Subscription</a>, <a href="http://aviplugins.com/wp-support-pro/">WP Support (PRO)</a>, <a href="http://aviplugins.com/wp-ecommerce-wishlist/">WP Ecommerce Wishlist</a>.
 
 == Installation ==
 
@@ -73,6 +80,18 @@ The Serbo-Croatian Language translation file is provided by <a href="http://www.
 5. facebook comments addon view
 
 == Changelog ==
+
+= 4.2.2 =
+* Login and Logout page redirection modified.
+
+= 4.2.1 =
+* Remember me issue fixed.
+
+= 4.2.0 =
+* Help and Support link added.
+
+= 4.1.0 =
+* Plugin notice message bug fixed.
 
 = 4.0.0 =
 * forgot password functionality added.

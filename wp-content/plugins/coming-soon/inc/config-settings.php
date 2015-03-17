@@ -21,7 +21,7 @@ function seed_csp4_get_options(){
         "menu_type" => "add_options_page",
         "page_name" => __( "Coming Soon", 'coming-soon' ),
         "menu_slug" => "seed_csp4",
-        "layout" => "2-col" 
+        "layout" => "2-col"
     );
 
     /**
@@ -51,10 +51,10 @@ function seed_csp4_get_options(){
         "option_values" => array(
             '0' => __( 'Disabled', 'coming-soon' ),
             '1' => __( 'Enable Coming Soon Mode', 'coming-soon' ),
-            '2' => __( 'Enable Maintenance Mode', 'coming-soon' ) 
+            '2' => __( 'Enable Maintenance Mode', 'coming-soon' )
         ),
         "desc" => __( "When you are logged in you'll see your normal website. Logged out visitors will see the Coming Soon or Maintenance page. Coming Soon Mode will be available to search engines if your site is not private. Maintenance Mode will notify search engines that the site is unavailable.", 'coming-soon' ),
-        "default_value" => "0" 
+        "default_value" => "0"
     );
 
 
@@ -68,7 +68,7 @@ function seed_csp4_get_options(){
         "option_values" => array(
              'name' => __( 'Yes', 'coming-soon' ),
              //'required' => __( 'Make Name Required', 'coming-soon' ),
-        ) 
+        )
     );
     }
 
@@ -76,7 +76,7 @@ function seed_csp4_get_options(){
     $seed_csp4_options[ ] = array(
         "type" => "section",
         "id" => "seed_csp4_section_page_settings",
-        "label" => __( "Page Settings", 'coming-soon' ) 
+        "label" => __( "Page Settings", 'coming-soon' )
     );
 
     $seed_csp4_options[ ] = array(
@@ -91,7 +91,7 @@ function seed_csp4_get_options(){
         "id" => "headline",
         "class" => "large-text",
         "label" => __( "Headline", 'coming-soon' ),
-        "desc" => __( "Enter a headline for your page.", 'coming-soon' ), 
+        "desc" => __( "Enter a headline for your page.", 'coming-soon' ),
     );
 
     $seed_csp4_options[ ] = array(
@@ -99,7 +99,7 @@ function seed_csp4_get_options(){
         "id" => "description",
         "label" => __( "Message", 'coming-soon' ),
         "desc" => __( "Tell the visitor what to expect from your site.", 'coming-soon' ),
-        "class" => "large-text" 
+        "class" => "large-text"
     );
 
      $seed_csp4_options[ ] = array( "type" => "radio",
@@ -108,14 +108,14 @@ function seed_csp4_get_options(){
         "option_values" => array('0'=>__('Nope - Got No Love', 'coming-soon'),'1'=>__('Yep - I Love You Man', 'coming-soon')),
         "desc" => __("Can we show a <strong>cool stylish</strong> footer credit at the bottom the page.", 'coming-soon'),
         "default_value" => "0",
-    );  
+    );
 
 
     // Header
     $seed_csp4_options[ ] = array(
         "type" => "section",
         "id" => "seed_csp4_section_header",
-        "label" => __( "Header", 'coming-soon' ) 
+        "label" => __( "Header", 'coming-soon' )
     );
 
     $seed_csp4_options[ ] = array(
@@ -135,7 +135,7 @@ function seed_csp4_get_options(){
         "type" => "textarea",
         "id" => "seo_description",
         "label" => __( "SEO Meta Description", 'coming-soon' ),
-        "class" => "large-text" 
+        "class" => "large-text"
     );
 
 
@@ -154,12 +154,12 @@ function seed_csp4_get_options(){
     $seed_csp4_options[ ] = array(
         "type" => "tab",
         "id" => "seed_csp4_design",
-        "label" => __( "Design", 'coming-soon' ) 
+        "label" => __( "Design", 'coming-soon' )
     );
 
     $seed_csp4_options[ ] = array(
         "type" => "setting",
-        "id" => "seed_csp4_settings_design" 
+        "id" => "seed_csp4_settings_design"
     );
 
 
@@ -167,7 +167,7 @@ function seed_csp4_get_options(){
     $seed_csp4_options[ ] = array(
         "type" => "section",
         "id" => "seed_csp4_section_background",
-        "label" => __( "Background", 'coming-soon' ) 
+        "label" => __( "Background", 'coming-soon' )
     );
 
 
@@ -177,7 +177,7 @@ function seed_csp4_get_options(){
         "label" => __( "Background Color", 'coming-soon' ),
         "default_value" => "#fafafa",
         "validate" => 'color',
-        "desc" => __( "Choose between having a solid color background or uploading an image. By default images will cover the entire background.", 'coming-soon' ) 
+        "desc" => __( "Choose between having a solid color background or uploading an image. By default images will cover the entire background.", 'coming-soon' )
     );
 
 
@@ -185,7 +185,7 @@ function seed_csp4_get_options(){
         "type" => "upload",
         "id" => "bg_image",
         "desc" => "<a href='http://demo.seedprod.com/coming-soon-pro/?utm_source=coming-soon-plugin&utm_medium=link&utm_campaign=Free%20Backgrounds' target='_blank'>Looking for FREE backgrounds?</a>",
-        "label" => __( "Background Image", 'coming-soon' ),  
+        "label" => __( "Background Image", 'coming-soon' ),
     );
 
     $seed_csp4_options[ ] = array(
@@ -195,7 +195,7 @@ function seed_csp4_get_options(){
         "desc" => __("Scale the background image to be as large as possible so that the background area is completely covered by the background image. Some parts of the background image may not be in view within the background positioning area.", 'coming-soon'),
         "option_values" => array(
              '1' => __( 'Yes', 'coming-soon' ),
-        ), 
+        ),
         "default" => "1",
     );
 
@@ -246,7 +246,7 @@ function seed_csp4_get_options(){
     $seed_csp4_options[ ] = array(
         "type" => "section",
         "id" => "seed_csp4_section_well",
-        "label" => __( "Content", 'coming-soon' ) 
+        "label" => __( "Content", 'coming-soon' )
     );
 
     $seed_csp4_options[ ] = array(
@@ -263,7 +263,7 @@ function seed_csp4_get_options(){
         "desc" => __("This will wrap your content in a box.", 'coming-soon'),
         "option_values" => array(
              '1' => __( 'Yes', 'coming-soon' ),
-        ), 
+        ),
     );
 
 
@@ -272,7 +272,7 @@ function seed_csp4_get_options(){
     $seed_csp4_options[ ] = array(
         "type" => "section",
         "id" => "seed_csp4_section_text",
-        "label" => __( "Text", 'coming-soon' ) 
+        "label" => __( "Text", 'coming-soon' )
     );
 
     $seed_csp4_options[ ] = array(
@@ -326,7 +326,7 @@ function seed_csp4_get_options(){
     $seed_csp4_options[ ] = array(
         "type" => "section",
         "id" => "seed_csp4_section_template",
-        "label" => __( "Template", 'coming-soon' ) 
+        "label" => __( "Template", 'coming-soon' )
     );
 
 
@@ -344,12 +344,12 @@ function seed_csp4_get_options(){
     $seed_csp4_options[ ] = array(
         "type" => "tab",
         "id" => "seed_csp4_advanced",
-        "label" => __( "Advanced", 'coming-soon' ) 
+        "label" => __( "Advanced", 'coming-soon' )
     );
 
     $seed_csp4_options[ ] = array(
         "type" => "setting",
-        "id" => "seed_csp4_settings_advanced" 
+        "id" => "seed_csp4_settings_advanced"
     );
 
 
@@ -357,7 +357,18 @@ function seed_csp4_get_options(){
     $seed_csp4_options[ ] = array(
         "type" => "section",
         "id" => "seed_csp4_section_scripts",
-        "label" => __( "Scripts", 'coming-soon' ) 
+        "label" => __( "Scripts", 'coming-soon' )
+    );
+
+    $seed_csp4_options[ ] = array(
+        "type" => "checkbox",
+        "id" => "disable_default_excluded_urls",
+        "label" => __( "Disable Default Excluded URLs", 'coming-soon' ),
+        "desc" => __("By default we exclude urls with the terms: login, admin, dashboard and account to prevent lockouts. Check to disable.", 'coming-soon'),
+        "option_values" => array(
+             '1' => __( 'Disable', 'coming-soon' ),
+        ),
+        "default" => "1",
     );
 
     $seed_csp4_options[ ] = array(
@@ -365,7 +376,7 @@ function seed_csp4_get_options(){
         "id" => "header_scripts",
         "label" => __( "Header Scripts", 'coming-soon' ),
         "desc" => __('Enter any custom scripts. You can enter Javascript or CSS. This will be rendered before the closing head tag.', 'coming-soon'),
-        "class" => "large-text" 
+        "class" => "large-text"
     );
 
     $seed_csp4_options[ ] = array(
@@ -373,7 +384,7 @@ function seed_csp4_get_options(){
         "id" => "footer_scripts",
         "label" => __( "Footer Scripts", 'coming-soon' ),
         "desc" => __('Enter any custom scripts. This will be rendered before the closing body tag.', 'coming-soon'),
-        "class" => "large-text" 
+        "class" => "large-text"
     );
 
 

@@ -75,7 +75,7 @@ class woocsvAdminHeader
 		$csvcontent = '';
 		
 		// loop through the first 4 lines
-		while ($row < 4) {
+		while ($row < 5) {
 			$csvcontent[] = @fgetcsv($handle, 0, $woocsvImport->options['seperator']);
 			$row ++;
 		}
@@ -119,7 +119,6 @@ class woocsvAdminHeader
 					<?php 
 					// loop through the fields and check if the match the defined ones.
 					foreach (array_unique($woocsvImport->fields) as $field) : ?> 
-					<script>console.log(<?php echo $field;?>);</script>
 						<option value="<?php echo $field;?>" <?php if ( trim(strtolower($field)) == trim(strtolower($csvcontent[0][$i])) ) echo 'selected'; ?>>
 							<?php echo trim($field);?>
 						</option>
@@ -129,7 +128,7 @@ class woocsvAdminHeader
 				<td><?php if (isset($csvcontent[0][$i])) echo $csvcontent[0][$i];?></td>
 				<td><?php if (isset($csvcontent[1][$i])) echo $csvcontent[1][$i];?></td>
 				<td><?php if (isset($csvcontent[2][$i])) echo $csvcontent[2][$i];?></td>
-				<td><?php if (isset($csvcontent[2][$i])) echo $csvcontent[2][$i];?></td>
+				<td><?php if (isset($csvcontent[3][$i])) echo $csvcontent[3][$i];?></td>
 			</tr>
 			<?php endfor;?>
 			<tfoot>

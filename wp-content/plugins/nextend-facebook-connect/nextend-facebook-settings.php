@@ -10,6 +10,13 @@ if(isset($_POST['newfb_update_options'])) {
     foreach($_POST AS $k => $v){
       $_POST[$k] = stripslashes($v);
     }
+    unset($_POST['Submit']);
+    $sanitize = array('newfb_update_options', 'fb_appid', 'fb_secret', 'fb_redirect', 'fb_redirect_reg', 'fb_load_style');
+    foreach($sanitize AS $k){
+        $_POST[$k] =  sanitize_text_field($_POST[$k]);
+    }
+    
+    $_POST['fb_user_prefix'] = preg_replace("/[^A-Za-z0-9\-_ ]/", '', $_POST['fb_user_prefix']);
 		update_option("nextend_fb_connect", maybe_serialize($_POST));
 		$newfb_status = 'update_success';
 	}
@@ -69,13 +76,16 @@ function NextendFB_Options_Page() {
 	<p><?php _e('This plugins helps you create Facebook login and register buttons. The login and register process only takes one click and you can fully customize the buttons with images and other assets.', 'nextend-facebook-connect'); ?></p>
 	<h3><?php _e('Setup', 'nextend-facebook-connect'); ?></h3>
   <p>
-  <?php _e('<ol><li><a href="https://developers.facebook.com/apps/?action=create" target="_blank">Create a facebook app!</a></li>', 'nextend-facebook-connect'); ?>
-  <?php _e('<li>Choose an App Name, it can be anything you like</li>', 'nextend-facebook-connect'); ?>
-  <?php _e('<li>Click on <b>Continue</b></li>', 'nextend-facebook-connect'); ?>
-  <?php _e('<li>Go to the newly created <b>App settings page</b> and click <b>Edit Settings</b></li>', 'nextend-facebook-connect'); ?>
-  <?php _e('<li>Fill out <b>App Domains</b> field with: <b>'.$domain.'</b></li>', 'nextend-facebook-connect'); ?>
-  <?php _e('<li>Click on <b>Website with Facebook Login</b> tab abd fill out <b>Site URL</b> field with: <b>'.get_option('siteurl').'</b></li>', 'nextend-facebook-connect'); ?>
-  <?php _e('<li>Click on <b>Save changes</b> and the top of the page contains the <b>App Id</b> and <b>App secret</b> which you have to copy and past below.</li>', 'nextend-facebook-connect'); ?>
+  <?php _e('<ol><li><a href="https://developers.facebook.com/apps/" target="_blank">Create a facebook app!</a></li>', 'nextend-facebook-connect'); ?>
+  <?php _e('<li>Don\'t choose from the listed options, but click on <b>advanced setup</b> in the bottom.</li>', 'nextend-facebook-connect'); ?>
+  <?php _e('<li>Choose an <b>app name</b>, and a <b>category</b>, then click on <b>Create App ID</b>.</li>', 'nextend-facebook-connect'); ?>
+  <?php _e('<li>Pass the security check.</li>', 'nextend-facebook-connect'); ?>
+  <?php _e('<li>Go to the <b>Settings</b> of the application.</li>', 'nextend-facebook-connect'); ?>
+  <?php _e('<li>Click on <b>+ Add Platform</b>, and choose <b>Website</b>.</li>', 'nextend-facebook-connect'); ?>      
+  <?php _e('<li>Give your website\'s address at the <b>Site URL</b> field with: <b>'.get_option('siteurl').'</b></li>', 'nextend-facebook-connect'); ?>
+  <?php _e('<li>Give a <b>Contact Email</b> and click on <b>Save Changes</b>.</li>', 'nextend-facebook-connect'); ?>
+  <?php _e('<li>Go to <b>Status & Review</b>, and change the availability for the general public to <b>YES</b>.</li>', 'nextend-facebook-connect'); ?>
+  <?php _e('<li>Go back to the <b>Settings</b>, and copy the <b>App ID</b>, and <b>APP Secret</b>, which you have to copy and paste below.</li>', 'nextend-facebook-connect'); ?>
   <?php _e('<li><b>Save changes!</b></li></ol>', 'nextend-facebook-connect'); ?>
   
   
@@ -134,14 +144,14 @@ function NextendFB_Options_Page() {
 		<tr>
 		<th scope="row"><?php _e('Facebook App ID:', 'nextend-facebook-connect'); ?></th>
 		<td>
-		<input type="text" name="fb_appid" value="<?php echo $nextend_fb_connect['fb_appid']; ?>" />
+		<input type="text" name="fb_appid" value="<?php echo esc_html($nextend_fb_connect['fb_appid']); ?>" />
 		</td>
 		</tr>  
       
 		<tr>
 		<th scope="row"><?php _e('Facebook App Secret:', 'nextend-facebook-connect'); ?></th>
 		<td>
-		<input type="text" name="fb_secret" value="<?php echo $nextend_fb_connect['fb_secret']; ?>" />
+		<input type="text" name="fb_secret" value="<?php echo esc_html($nextend_fb_connect['fb_secret']); ?>" />
 		</td>
 		</tr>
 
@@ -149,7 +159,7 @@ function NextendFB_Options_Page() {
 		<th scope="row"><?php _e('New user prefix:', 'nextend-facebook-connect'); ?></th>
 		<td>
     <?php if(!isset($nextend_fb_connect['fb_user_prefix'])) $nextend_fb_connect['fb_user_prefix'] = 'Facebook - '; ?>
-		<input type="text" name="fb_user_prefix" value="<?php echo $nextend_fb_connect['fb_user_prefix']; ?>" />
+		<input type="text" name="fb_user_prefix" value="<?php echo esc_html($nextend_fb_connect['fb_user_prefix']); ?>" />
 		</td>
 		</tr>
 
@@ -157,7 +167,7 @@ function NextendFB_Options_Page() {
 		<th scope="row"><?php _e('Fixed redirect url for login:', 'nextend-facebook-connect'); ?></th>
 		<td>
     <?php if(!isset($nextend_fb_connect['fb_redirect'])) $nextend_fb_connect['fb_redirect'] = 'auto'; ?>
-		<input type="text" name="fb_redirect" value="<?php echo $nextend_fb_connect['fb_redirect']; ?>" />
+		<input type="text" name="fb_redirect" value="<?php echo esc_html($nextend_fb_connect['fb_redirect']); ?>" />
 		</td>
 		</tr>
 
@@ -165,7 +175,7 @@ function NextendFB_Options_Page() {
 		<th scope="row"><?php _e('Fixed redirect url for register:', 'nextend-facebook-connect'); ?></th>
 		<td>
     <?php if(!isset($nextend_fb_connect['fb_redirect_reg'])) $nextend_fb_connect['fb_redirect_reg'] = 'auto'; ?>
-		<input type="text" name="fb_redirect_reg" value="<?php echo $nextend_fb_connect['fb_redirect_reg']; ?>" />
+		<input type="text" name="fb_redirect_reg" value="<?php echo esc_html($nextend_fb_connect['fb_redirect_reg']); ?>" />
 		</td>
 		</tr>
 
@@ -182,7 +192,7 @@ function NextendFB_Options_Page() {
 		<th scope="row"><?php _e('Login button:', 'nextend-facebook-connect'); ?></th>
 		<td>
       <?php if(!isset($nextend_fb_connect['fb_login_button'])) $nextend_fb_connect['fb_login_button'] = '<div class="new-fb-btn new-fb-1 new-fb-default-anim"><div class="new-fb-1-1"><div class="new-fb-1-1-1">CONNECT WITH</div></div></div>'; ?>
-		  <textarea cols="83" rows="3" name="fb_login_button"><?php echo $nextend_fb_connect['fb_login_button']; ?></textarea>
+		  <textarea cols="83" rows="3" name="fb_login_button"><?php echo esc_html($nextend_fb_connect['fb_login_button']); ?></textarea>
 		</td>
 		</tr>
     
@@ -190,7 +200,7 @@ function NextendFB_Options_Page() {
 		<th scope="row"><?php _e('Link account button:', 'nextend-facebook-connect'); ?></th>
 		<td>
       <?php if(!isset($nextend_fb_connect['fb_link_button'])) $nextend_fb_connect['fb_link_button'] = '<div class="new-fb-btn new-fb-1 new-fb-default-anim"><div class="new-fb-1-1"><div class="new-fb-1-1-1">LINK ACCOUNT TO</div></div></div>'; ?>
-		  <textarea cols="83" rows="3" name="fb_link_button"><?php echo $nextend_fb_connect['fb_link_button']; ?></textarea>
+		  <textarea cols="83" rows="3" name="fb_link_button"><?php echo esc_html($nextend_fb_connect['fb_link_button']); ?></textarea>
 		</td>
 		</tr>
     
@@ -198,7 +208,7 @@ function NextendFB_Options_Page() {
 		<th scope="row"><?php _e('Unlink account button:', 'nextend-facebook-connect'); ?></th>
 		<td>
       <?php if(!isset($nextend_fb_connect['fb_unlink_button'])) $nextend_fb_connect['fb_unlink_button'] = '<div class="new-fb-btn new-fb-1 new-fb-default-anim"><div class="new-fb-1-1"><div class="new-fb-1-1-1">UNLINK ACCOUNT</div></div></div>'; ?>
-		  <textarea cols="83" rows="3" name="fb_unlink_button"><?php echo $nextend_fb_connect['fb_unlink_button']; ?></textarea>
+		  <textarea cols="83" rows="3" name="fb_unlink_button"><?php echo esc_html($nextend_fb_connect['fb_unlink_button']); ?></textarea>
 		</td>
 		</tr>
     <tr>

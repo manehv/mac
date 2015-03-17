@@ -181,11 +181,15 @@ class woocsvImportProduct
 			$sale_price = (in_array('sale_price', $this->header) && notempty($this->meta['_sale_price'] )) ? $this->meta['_sale_price'] : '' ;
 			$price = (in_array('price', $this->header) && notempty($this->meta['_price'] )) ? $this->meta['_price'] : '' ;
 		}
+		
+		// @ as of 2.1.1 remove old price way
 		//old way
+		/*
 		if ($price && !$sale_price && !$regular_price){
 			$woocsvImport->importLog[] = __('Old price field used!!!! Please use regular_price and sale_price in stead','woocsv-import');
 			$regular_price = $price;
 		}
+		*/
 		
 		//new way
 		//product on sale
@@ -280,8 +284,8 @@ class woocsvImportProduct
 		do_action( 'woocsv_product_before_images_save');
 		
 		/* !--deprecated */
-		if ($this->images)
-			$this->saveImages($post_id);
+		//if ($this->images)
+		//	$this->saveImages($post_id);
 
 		// added empty() else it overrrides the above function)	
 			
@@ -309,6 +313,11 @@ class woocsvImportProduct
 
 	public function saveTags($post_id)
 	{
+		global $woocsvImport;
+		//2.1.1 If merging do not delete else clear currrent tag
+		if (!$woocsvImport->options['merge_products'])
+			wp_set_object_terms( $this->body['ID'], null, 'product_tag' );
+		
 		//handle tags
 		foreach ($this->tags as $tags) {
 			$tags = explode('|', $tags);
@@ -318,15 +327,22 @@ class woocsvImportProduct
 
 	public function saveShippingClass()
 	{
+		global $woocsvImport;
+		
+		//2.2.2 If merging do not delete else clear currrent tag
+		if ( ! $woocsvImport->options['merge_products'] ) {
+			wp_set_object_terms( $this->body['ID'], null, 'product_shipping_class' );
+		}
 		$term = term_exists($this->shippingClass, 'product_shipping_class');
-
-		if (!$term) {
-			$term=wp_insert_term( $this->shippingClass, 'product_shipping_class');
-			wp_set_object_terms( $this->body['ID'], array ((int)$term['term_id']) , 'product_shipping_class' );
+		
+		// @since  2.2.2 beter handling for shipping class
+		if ( ! is_array( $term ) ) {
+			$term = wp_insert_term( $this->shippingClass, 'product_shipping_class');
 		}
 
-		wp_set_object_terms( $this->body['ID'], array ( (int)$term['term_id'] ) , 'product_shipping_class' );
-
+		if ( ! is_wp_error( $term ) ) {
+			wp_set_object_terms( $this->body['ID'] , array ( (int)$term['term_id'] ) , 'product_shipping_class' );			
+		}
 	}
 
 	public function saveCategories()
@@ -337,7 +353,9 @@ class woocsvImportProduct
 		delete_option("product_cat_children");
 
 		//clear currrent
-		wp_set_object_terms( $this->body['ID'], null, 'product_cat' );
+		//2.1.1 If merging do not delete else clear currrent category
+		if (!$woocsvImport->options['merge_products'])
+			wp_set_object_terms( $this->body['ID'], null, 'product_cat' );
 
 		foreach ($this->categories as $category) {
 			$cats = explode( '|', $category );
@@ -366,13 +384,15 @@ class woocsvImportProduct
 		}
 	}
 	
-	public function saveFeaturedImage()
-	{
-		$imageID = false;
+	public function saveFeaturedImage() {
+		global $woocsvImport;
 		
+		$imageID = false;
 		if ($this->isValidUrl($this->featuredImage)) {
+			$woocsvImport->importLog[] = 'featured image is imported using the URL';
 			$imageID = $this->saveImageWithUrl($this->featuredImage);
 		} else {
+			$woocsvImport->importLog[] = 'featured image is imported using the filename';			
 			$imageID = $this->saveImageWithName($this->featuredImage);
 		}
 		
@@ -385,7 +405,6 @@ class woocsvImportProduct
 		$images = explode('|', $this->productGallery);
 		$gallery = false;
 		foreach ($images as $image) {
-			
 			if ($this->isValidUrl($image)) {
 				$imageID = $this->saveImageWithUrl($image);
 			} else {
@@ -422,15 +441,19 @@ class woocsvImportProduct
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 		curl_setopt($ch, CURLOPT_BINARYTRANSFER, 1);
 		
+		//exec curl command
 		$image_data = curl_exec($ch);
-
+		
 		/* !2.1.0 get the mime type incase there is no extension */
 		$mime_type =  curl_getinfo($ch, CURLINFO_CONTENT_TYPE);
 
+		//close the curl command
 		curl_close($ch);
 
 		//get the filename
-		$filename = basename($image);
+		/* ! development add sanatize filename if name has spaces or %20 */
+		$filename =  sanitize_file_name( basename(urldecode($image)) );
+
 
 		//create the dir or take the current one
 		if (wp_mkdir_p($upload_dir['path'])) {
@@ -438,7 +461,6 @@ class woocsvImportProduct
 		} else {
 			$file = $upload_dir['basedir'] . '/' . $filename;
 		}
-
 
 		/* !2.2.0 check if file is already there and rename it if needed */
 		$i= 1;
@@ -473,7 +495,7 @@ class woocsvImportProduct
 				'post_status' => 'inherit'
 			);
 
-			$attach_id = wp_insert_attachment( $attachment, $file); //,$this->body['ID'] );
+			$attach_id = wp_insert_attachment( $attachment, $file );
 			require_once ABSPATH . 'wp-admin/includes/image.php';
 			$attach_data = @wp_generate_attachment_metadata( $attach_id, $file );
 			wp_update_attachment_metadata( $attach_id, $attach_data );	
@@ -697,7 +719,7 @@ class woocsvImportProduct
 		//check if there is a shipping
 		if (in_array('shipping_class', $woocsvImport->header)) {
 			$key = array_search('shipping_class', $woocsvImport->header);
-			$this->shippingClass = $this->rawData[$key];
+			$this->shippingClass = trim($this->rawData[$key]);
 		}
 
 		//check if there are categories
@@ -729,7 +751,7 @@ class woocsvImportProduct
 			$woocsvImport->importLog[] = "Change stock modus: stock changed from $stock to $new_stock";
 		}
 		
-		/* !--deprecated */
+		/* !--deprecated 
 		//check if there are images
 		if (in_array('images', $woocsvImport->header)) {
 			foreach ($woocsvImport->header as $key=>$value) {
@@ -737,14 +759,14 @@ class woocsvImportProduct
 					$this->images[] = $this->rawData[$key];
 			}
 		}
-		
+		*/
 		
 		//check if there is a featured image
 		if (in_array('featured_image', $woocsvImport->header)) {
 			$key = array_search('featured_image', $woocsvImport->header);
 			$this->featuredImage = $this->rawData[$key];
 		}
-
+		
 		//check if there is a product gallery
 		if (in_array('product_gallery', $woocsvImport->header)) {
 			$key = array_search('product_gallery', $woocsvImport->header);
@@ -759,7 +781,9 @@ class woocsvImportProduct
 	// ! helpers
 	public function isValidUrl($url)
 	{
-		return preg_match('|^http(s)?://[a-z0-9-]+(.[a-z0-9-]+)*(:[0-9]+)?(/.*)?$|i', $url);
+		// alternative way to check for a valid url
+		// !development
+		if  (filter_var($url, FILTER_VALIDATE_URL) === FALSE) return false; else return true;
 
 	}
 

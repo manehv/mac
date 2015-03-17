@@ -1,0 +1,82 @@
+@font-face {
+  font-family: 'formcraft';
+  src: url('../font/formcraft.eot?69449270');
+  src: url('../font/formcraft.eot?69449270#iefix') format('embedded-opentype'),
+       url('../font/formcraft.woff?69449270') format('woff'),
+       url('../font/formcraft.ttf?69449270') format('truetype'),
+       url('../font/formcraft.svg?69449270#formcraft') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'formcraft';
+    src: url('../font/formcraft.svg?69449270#formcraft') format('svg');
+  }
+}
+*/
+ 
+ [class^="formcraft-"]:before, [class*=" formcraft-"]:before {
+  font-family: "formcraft";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+ 
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+ 
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+     
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+ 
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+ 
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+ 
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+ 
+.formcraft-search:before { content: '\e816'; } /* '' */
+.formcraft-ok:before { content: '\e812'; } /* '' */
+.formcraft-plus:before { content: '\e806'; } /* '' */
+.formcraft-minus:before { content: '\e80b'; } /* '' */
+.formcraft-help-circled:before { content: '\e817'; } /* '' */
+.formcraft-bookmark-empty:before { content: '\e809'; } /* '' */
+.formcraft-download:before { content: '\e807'; } /* '' */
+.formcraft-upload:before { content: '\e804'; } /* '' */
+.formcraft-trash:before { content: '\e808'; } /* '' */
+.formcraft-folder-open:before { content: '\e80d'; } /* '' */
+.formcraft-cog-alt:before { content: '\e805'; } /* '' */
+.formcraft-wrench:before { content: '\e80e'; } /* '' */
+.formcraft-calendar:before { content: '\e811'; } /* '' */
+.formcraft-clock:before { content: '\e813'; } /* '' */
+.formcraft-left-open:before { content: '\e80c'; } /* '' */
+.formcraft-mail:before { content: '\e801'; } /* '' */
+.formcraft-angle-left:before { content: '\e81a'; } /* '' */
+.formcraft-angle-right:before { content: '\e819'; } /* '' */
+.formcraft-angle-up:before { content: '\e814'; } /* '' */
+.formcraft-angle-down:before { content: '\e815'; } /* '' */
+.formcraft-up-big:before { content: '\e80a'; } /* '' */
+.formcraft-list:before { content: '\e803'; } /* '' */
+.formcraft-puzzle:before { content: '\e810'; } /* '' */
+.formcraft-chart-bar:before { content: '\e800'; } /* '' */
+.formcraft-right:before { content: '\e81d'; } /* '' */
+.formcraft-down-bold:before { content: '\e81b'; } /* '' */
+.formcraft-up-bold:before { content: '\e81c'; } /* '' */
+.formcraft-edit:before { content: '\e802'; } /* '' */
+.formcraft-font:before { content: '\e80f'; } /* '' */
+.formcraft-right-open:before { content: '\e818'; } /* '' */

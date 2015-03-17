@@ -9,7 +9,7 @@ class fb_login_wid extends WP_Widget {
 		parent::__construct(
 	 		'fb_login_wid',
 			'FB Login Widget AFO',
-			array( 'description' => __( 'This is a simple login form in the widget.', 'text_domain' ), )
+			array( 'description' => __( 'This is a facebook social login form in the widget.', 'flw' ), )
 		);
 	 }
 
@@ -51,22 +51,22 @@ class fb_login_wid extends WP_Widget {
 		<input type="hidden" name="option" value="afo_user_login" />
 		<input type="hidden" name="redirect" value="<?php echo $redirect; ?>" />
 			<ul class="login_wid">
-			<li>Username</li>
+			<li><?php _e('Username','flw');?></li>
 			<li><input type="text" name="user_username" required="required"/></li>
-			<li>Password</li>
+			<li><?php _e('Password','flw');?></li>
 			<li><input type="password" name="user_password" required="required"/></li>
-			<li><input name="login" type="submit" value="Login" /></li>
-			<li><font size="+1" style="vertical-align:top;">Login with </font> <a href="javascript:void(0)" onClick="FBLogin();"><img src="<?php echo plugins_url( 'facebook.png' , __FILE__ );?>" alt="Fb Connect" title="Login with facebook" /></a></li>
+			<li><input name="login" type="submit" value="<?php _e('Login','flw');?>" /></li>
+			<li><font size="+1" style="vertical-align:top;"><?php _e('Login with','flw');?> </font> <a href="javascript:void(0)" onClick="FBLogin();"><img src="<?php echo plugins_url( 'facebook.png' , __FILE__ );?>" alt="<?php _e('Fb Connect','flw');?>" title="<?php _e('Login with facebook','flw');?>" /></a></li>
 			</ul>
 		</form>
 		<?php 
 		} else {
 		global $current_user;
      	get_currentuserinfo();
-		$link_with_username = 'Howdy, '.$current_user->display_name;
+		$link_with_username = __('Howdy,','flw').$current_user->display_name;
 		?>
 		<ul class="login_wid">
-			<li><?php echo $link_with_username;?> | <a href="<?php echo wp_logout_url(site_url()); ?>" title="Logout">Logout</a></li>
+			<li><?php echo $link_with_username;?> | <a href="<?php echo wp_logout_url(site_url()); ?>" title="<?php _e('Logout','flw');?>"><?php _e('Logout','flw');?></a></li>
 		</ul>
 		<?php 
 		}
@@ -103,7 +103,7 @@ function FBLogin(){
 	}
 	
 	public function error_message(){
-		if($_SESSION['msg']){
+		if(isset($_SESSION['msg']) and $_SESSION['msg']){
 			echo '<div class="'.$_SESSION['msg_class'].'">'.$_SESSION['msg'].'</div>';
 			unset($_SESSION['msg']);
 			unset($_SESSION['msg_class']);
@@ -117,7 +117,7 @@ function FBLogin(){
 } 
 
 function fb_login_validate(){
-	if($_POST['option'] == "afo_user_login"){
+	if(isset($_POST['option']) and $_POST['option'] == "afo_user_login"){
 		global $post;
 		if($_POST['user_username'] != "" and $_POST['user_password'] != ""){
 			$creds = array();
@@ -128,7 +128,7 @@ function fb_login_validate(){
 			$user = wp_signon( $creds, true );
 			if($user->ID == ""){
 				$_SESSION['msg_class'] = 'error_wid_login';
-				$_SESSION['msg'] = 'Error in login!';
+				$_SESSION['msg'] = __('Error in login!','flw');
 			} else{
 				wp_set_auth_cookie($user->ID);
 				wp_redirect( site_url() );
@@ -136,13 +136,13 @@ function fb_login_validate(){
 			}
 		} else {
 			$_SESSION['msg_class'] = 'error_wid_login';
-			$_SESSION['msg'] = 'Username or password is empty!';
+			$_SESSION['msg'] = __('Username or password is empty!','flw');
 		}
 		
 	}
 	
 	
-	if($_REQUEST['option'] == "fblogin"){
+	if(isset($_REQUEST['option']) and $_REQUEST['option'] == "fblogin"){
 		global $wpdb;
 		$appid 		= get_option('afo_fb_app_id');
 		$appsecret  = get_option('afo_fb_app_secret');

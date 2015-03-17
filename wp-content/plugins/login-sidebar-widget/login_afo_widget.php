@@ -32,6 +32,7 @@ class login_wid extends WP_Widget {
 
 
 	public function form( $instance ) {
+		$wid_title = '';
 		$wid_title = $instance[ 'wid_title' ];
 		?>
 		<p><label for="<?php echo $this->get_field_id('wid_title'); ?>"><?php _e('Title:'); ?> </label>
@@ -43,7 +44,7 @@ class login_wid extends WP_Widget {
 	public function add_remember_me(){
 		$login_afo_rem = get_option('login_afo_rem');
 		if($login_afo_rem == 'Yes'){
-			echo '<li class="remember"><input type="checkbox" name="remember" /> '.__('Remember Me','lwa').'</li>';
+			echo '<li class="remember"><input type="checkbox" name="remember" value="Yes" /> '.__('Remember Me','lwa').'</li>';
 		}
 	}
 	
@@ -64,6 +65,19 @@ class login_wid extends WP_Widget {
 		}
 	}
 	
+	public function curPageURL() {
+	 $pageURL = 'http';
+	 if (isset($_SERVER["HTTPS"]) and $_SERVER["HTTPS"] == "on") {$pageURL .= "s";}
+	 $pageURL .= "://";
+	 if (isset($_SERVER["SERVER_PORT"]) and $_SERVER["SERVER_PORT"] != "80") {
+	  $pageURL .= $_SERVER["SERVER_NAME"].":".$_SERVER["SERVER_PORT"].$_SERVER["REQUEST_URI"];
+	 } else {
+	  $pageURL .= $_SERVER["SERVER_NAME"].$_SERVER["REQUEST_URI"];
+	 }
+	 return $pageURL;
+	}
+
+
 	public function loginForm(){
 		if(!session_id()){
 			@session_start();
@@ -76,13 +90,13 @@ class login_wid extends WP_Widget {
 		if($redirect_page){
 			$redirect =  get_permalink($redirect_page);
 		} else {
-			$redirect =  get_permalink($post->ID);
+			$redirect =  $this->curPageURL();
 		}
 		
 		if($logout_redirect_page){
 			$logout_redirect_page = get_permalink($logout_redirect_page);
 		} else {
-			$logout_redirect_page = get_permalink($post->ID);
+			$logout_redirect_page = $this->curPageURL();
 		}
 		$this->load_script();
 		$this->error_message();
@@ -120,7 +134,7 @@ class login_wid extends WP_Widget {
 	}
 	
 	public function error_message(){
-		if($_SESSION['msg']){
+		if(isset($_SESSION['msg']) and $_SESSION['msg']){
 			echo '<div class="'.$_SESSION['msg_class'].'">'.$_SESSION['msg'].$this->message_close_button().'</div>';
 			unset($_SESSION['msg']);
 			unset($_SESSION['msg_class']);
@@ -151,7 +165,7 @@ class login_wid extends WP_Widget {
 } 
 
 function login_validate(){
-	if($_POST['option'] == "afo_user_login"){
+	if( isset($_POST['option']) and $_POST['option'] == "afo_user_login"){
 		if(!session_id()){
 			session_start();
 		}
@@ -161,17 +175,17 @@ function login_validate(){
 			$creds['user_login'] = $_POST['user_username'];
 			$creds['user_password'] = $_POST['user_password'];
 			if($_POST['remember'] == 'Yes'){
-				$creds['remember'] = true;
+				$remember = true;
 			} else {
-				$creds['remember'] = false;
+				$remember = false;
 			}
-		
+			$creds['remember'] = $remember;
 			$user = wp_signon( $creds, true );
 			if($user->ID == ""){
 				$_SESSION['msg_class'] = 'error_wid_login';
 				$_SESSION['msg'] = __('Error in login!','lwa');
 			} else{
-				wp_set_auth_cookie($user->ID);
+				wp_set_auth_cookie($user->ID, $remember);
 				wp_redirect( $_POST['redirect'] );
 				exit;
 			}

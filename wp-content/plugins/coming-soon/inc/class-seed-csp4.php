@@ -30,7 +30,7 @@ class SEED_CSP4{
             }
 
             // Add this script globally so we can view the notification across the admin area
-            add_action( 'admin_enqueue_scripts', array(&$this,'add_scripts') );            
+            add_action( 'admin_enqueue_scripts', array(&$this,'add_scripts') );
     }
 
     /**
@@ -81,7 +81,7 @@ class SEED_CSP4{
         }elseif($status == '2'){
         	$msg = __('Maintenance Mode Active','coming-soon');
         }
-    	//Add the main siteadmin menu item 
+    	//Add the main siteadmin menu item
         $wp_admin_bar->add_menu( array(
             'id'     => 'seed-csp4-notice',
             'href' => admin_url().'options-general.php?page=seed_csp4',
@@ -128,7 +128,7 @@ class SEED_CSP4{
         }else{
             $font_family = 'Helvetica Neue, Arial, sans-serif';
         }
-            
+
         echo $font_family;
     }
 
@@ -158,18 +158,12 @@ class SEED_CSP4{
         }
 
         // Exit if a custom login page
-        if(preg_match("/login/i",$_SERVER['REQUEST_URI']) > 0 && $is_preview == false){
-            return false;
+        if(empty($disable_default_excluded_urls)){
+            if(preg_match("/login|admin|dashboard|account/i",$_SERVER['REQUEST_URI']) > 0 && $is_preview == false){
+                return false;
+            }
         }
 
-        if(preg_match("/account/i",$_SERVER['REQUEST_URI']) > 0 && $is_preview == false){
-            return false;
-        }
-
-        //Exit if wysija double opt-in
-        if(preg_match("/wysija/i",$_SERVER['REQUEST_URI']) > 0 && $is_preview == false){
-            return false;
-        }
 
         // Check if user is logged in.
         if($is_preview === false){
@@ -181,7 +175,7 @@ class SEED_CSP4{
 
         // Finally check if we should show the coming soon page.
         $this->comingsoon_rendered = true;
-        
+
         // set headers
         if($status == '2'){
             header('HTTP/1.1 503 Service Temporarily Unavailable');
@@ -193,9 +187,9 @@ class SEED_CSP4{
                 exit();
             }
         }
-        
+
         // render template tags
-        
+
         $template = $this->get_default_template();
         require_once( SEED_CSP4_PLUGIN_PATH.'/themes/default/functions.php' );
         $template_tags = array(
@@ -213,11 +207,7 @@ class SEED_CSP4{
             );
 		echo strtr($template, $template_tags);
         exit();
-        
+
     }
 
 }
-
-
-
-

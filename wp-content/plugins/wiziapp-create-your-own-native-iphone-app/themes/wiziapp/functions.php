@@ -392,6 +392,10 @@
 			{
 				$query_vars['wiziapp_theme_sub_terms'] = $new_query;
 				$query_vars['wiziapp_theme_more_link'] = $more_link;
+				if ($paged_set)
+				{
+					$query_vars['paged'] = $paged;
+				}
 				return $query_vars;
 			}
 		}
