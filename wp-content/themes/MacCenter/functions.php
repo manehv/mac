@@ -586,7 +586,7 @@ if(!function_exists('avia_register_frontend_scripts'))
                 //register styles
                 wp_register_style( 'avia-style' ,  $child_theme_url."/style.css", array(),              '2', 'all' ); //register default style.css file. only include in childthemes. has no purpose in main theme
                 wp_register_style( 'avia-custom',  $template_url."/css/custom.css", array(),    '2', 'all' );
-                                                                                                                                                                                 
+                wp_enqueue_style( 'bootstrap',  $template_url."/css/bootstrap.css" );                                                                                                                                                                 
                 wp_enqueue_style( 'avia-grid' ,   $template_url."/css/grid.css", array(),               '2', 'all' );
                 wp_enqueue_style( 'avia-base' ,   $template_url."/css/base.css", array(),               '2', 'all' );
                 wp_enqueue_style( 'avia-layout',  $template_url."/css/layout.css", array(),     '2', 'all' );
@@ -594,10 +594,10 @@ if(!function_exists('avia_register_frontend_scripts'))
                 wp_enqueue_style( 'avia-popup-css', $template_url."/js/aviapopup/magnific-popup.css", array(), '1', 'screen' );
                 wp_enqueue_style( 'avia-media'  , $template_url."/js/mediaelement/skin-1/mediaelementplayer.css", array(), '1', 'screen' );
                 wp_enqueue_style( 'avia-print' ,  $template_url."/css/print.css", array(), '1', 'print' );
-								wp_enqueue_style( 'bootstrap',  $template_url."/css/bootstrap.css" );
+								
 
                 if ( is_rtl() ) {
-                        wp_enqueue_style(  'avia-rtl',  $template_url."/css/rtl.css", array(), '1', 'all' );
+                        wp_enqueue_style(  'avia-rtl',  $template_url."/css/rtl.css", array(), '1', 'screen' );
                 }
 
 
