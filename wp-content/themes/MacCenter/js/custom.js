@@ -17,7 +17,7 @@ jQuery(document).ready(function($)
                         });
                         return false;
                 });
-        console.log($(".widget_shopping_cart_content").html())
+        //console.log($(".widget_shopping_cart_content").html())
         /*
         $(".widget_shopping_cart_content").slimScroll({
         height:'350px'
