@@ -609,7 +609,8 @@ if(!function_exists('avia_register_frontend_scripts'))
             $avia_upload_dir = wp_upload_dir();
             if(is_ssl()) $avia_upload_dir['baseurl'] = str_replace("http://", "https://", $avia_upload_dir['baseurl']);
 
-            $avia_dyn_stylesheet_url = $avia_upload_dir['baseurl'] . '/dynamic_avia/'.$safe_name.'.css';
+           // $avia_dyn_stylesheet_url = $avia_upload_dir['baseurl'] . '/dynamic_avia/'.$safe_name.'.css';
+            $avia_dyn_stylesheet_url = $avia_upload_dir['baseurl'] . '/dynamic_avia/enfold.css';
                         $version_number = get_option('avia_stylesheet_dynamic_version'.$safe_name);
                         if(empty($version_number)) $version_number = '1';
             
