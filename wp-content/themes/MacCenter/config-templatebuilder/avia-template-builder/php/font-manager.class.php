@@ -427,7 +427,7 @@ class avia_font_manager{
 		foreach($font_configs as $config)
 		{	
 			$chars = array();
-// 			include($config['include'].'/'.$config['config']);
+ 			include($config['include'].'/'.$config['config']);
 			
 			if(!empty($chars))
 			{
