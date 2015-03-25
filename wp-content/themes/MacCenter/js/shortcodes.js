@@ -33,10 +33,10 @@
 		 $('.av-section-with-video-bg').avia_video_section();
 		
 		//creates team social icon tooltip
-        new $.AviaTooltip({'class': "avia-tooltip", data: "avia-tooltip", delay:0, scope: "body"});
-		
-		//creates icon element tooltip
-		new $.AviaTooltip({'class': "avia-tooltip avia-icon-tooltip", data: "avia-icon-tooltip", delay:0, scope: "body"});
+//         new $.AviaTooltip({'class': "avia-tooltip", data: "avia-tooltip", delay:0, scope: "body"});
+// 		
+// 		//creates icon element tooltip
+// 		new $.AviaTooltip({'class': "avia-tooltip avia-icon-tooltip", data: "avia-icon-tooltip", delay:0, scope: "body"});
 
         activate_shortcode_scripts();
         
