@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-12-24 23:24+0100\n"
-"PO-Revision-Date: 2015-03-25 10:37-0500\n"
+"PO-Revision-Date: 2015-03-25 10:38-0500\n"
 "Last-Translator: 8manos i18n <i18n@8manos.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -79,7 +79,7 @@ msgstr "Ingresa un email valido"
 
 #: simplr_form_functions.php:93 simplr_form_functions.php:97
 msgid " is a required field. Please enter a value."
-msgstr "es un campo obligatorio."
+msgstr " es un campo obligatorio."
 
 #: simplr_form_functions.php:237
 msgid " Please check your email for confirmation."
