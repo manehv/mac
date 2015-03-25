@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: English-Spanish\n"
 "Report-Msgid-Bugs-To: https://github.com/woothemes/woocommerce/issues\n"
 "POT-Creation-Date: 2014-06-30 14:28:36+00:00\n"
-"PO-Revision-Date: 2015-03-25 10:03-0500\n"
+"PO-Revision-Date: 2015-03-25 10:07-0500\n"
 "Last-Translator: 8manos i18n <i18n@8manos.com>\n"
 "Language-Team: Language\n"
 "Language: es\n"
@@ -3334,15 +3334,15 @@ msgstr ""
 #: includes/abstracts/abstract-wc-product.php:580
 #: includes/abstracts/abstract-wc-product.php:600
 msgid "In stock"
-msgstr ""
+msgstr "Disponible"
 
 #: includes/abstracts/abstract-wc-product.php:580
 msgid "Only %s left in stock"
-msgstr ""
+msgstr "Solo %s restantes"
 
 #: includes/abstracts/abstract-wc-product.php:583
 msgid "%s in stock"
-msgstr ""
+msgstr "%s en stock"
 
 #: includes/abstracts/abstract-wc-product.php:590
 msgid "(backorders allowed)"
@@ -3357,7 +3357,7 @@ msgstr "Disponible preventa"
 #: includes/abstracts/abstract-wc-product.php:613
 #: includes/abstracts/abstract-wc-product.php:617
 msgid "Out of stock"
-msgstr ""
+msgstr "Agotado"
 
 #: includes/abstracts/abstract-wc-product.php:910
 #: includes/abstracts/abstract-wc-product.php:916
