@@ -83,11 +83,7 @@
 
 
 			//you can also remove the kriesi.at backlink by adding [nolink] to your custom copyright field in the admin area
-			if($copyright && strpos($copyright, '[nolink]') !== false)
-			{
-			
-				$copyright = str_replace("[nolink]","",$copyright);
-			}
+		
 
 			if( $footer_widget_setting != 'nosocket' )
 			{
