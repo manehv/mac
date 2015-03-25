@@ -1,14 +1,14 @@
-# Language file for Simplr REgistration Forms.
+# Language file for Simplr ReEgistration Forms.
 # Copyright (C) 2014 Marcel Pol
 # This file is distributed under the same license as the Simplr Registration Forms package.
 # Marcel Pol <marcel@timelord.nl>, 2014.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: \n"
+"Project-Id-Version: 2.0.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-12-24 23:01+0100\n"
-"PO-Revision-Date: 2014-12-24 23:07+0100\n"
+"POT-Creation-Date: 2015-02-28 18:38+0100\n"
+"PO-Revision-Date: 2015-02-28 18:38+0100\n"
 "Last-Translator: Marcel Pol <marcel@timelord.nl>\n"
 "Language-Team: NL <nl@li.org>\n"
 "Language: nl_NL\n"
@@ -17,22 +17,21 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.6.10\n"
 
-#: main_options_page.php:8 simplr_reg_page.php:116
+#: main_options_page.php:8 simplr_reg_page.php:118
 msgid "Settings"
 msgstr "Instellingen"
 
 #: main_options_page.php:9
-#, fuzzy
 msgid "Fields"
-msgstr "Velden met  een * zijn verplicht."
+msgstr "Velden"
 
-#: main_options_page.php:10
+#: main_options_page.php:10 views/moderation.php:27
 msgid "Moderation"
-msgstr ""
+msgstr "Moderatie"
 
 #: main_options_page.php:12
 msgid "Instructions"
-msgstr ""
+msgstr "Instructies"
 
 #: main_options_page.php:24
 msgid ""
@@ -40,263 +39,426 @@ msgid ""
 "registration change the membership setting on the <strong>Settings >> "
 "General</strong> menu."
 msgstr ""
+"Je site is niet ingesteld om gebruikerregistraties toe te staan. "
+"Gebruikerregistratie kun je toestaan in de instelling in het "
+"<strong>Instellingen >> Algemeen</strong> menu."
 
 #: simplr_form_functions.php:33
 msgid "The passwords you entered do not match."
-msgstr ""
+msgstr "De ingevoerde wachtwoorden komen niet overeen."
 
 #: simplr_form_functions.php:38
 msgid "You must enter a password to register for this site."
 msgstr ""
+"Een wachtwoord invoeren is verplicht om op deze website te registreren."
 
 #: simplr_form_functions.php:45
 msgid "You must enter a username."
-msgstr ""
+msgstr "Een gebruikersnaam invoeren is verplicht."
 
 #: simplr_form_functions.php:51
-#, fuzzy
 msgid "Invalid Username."
-msgstr "Ongeldige post ID opgegeven"
+msgstr "Ongeldige Gebruikersnaam."
 
 #: simplr_form_functions.php:57
-#, fuzzy
 msgid "This username already exists."
-msgstr "bericht was al gemarkeerd als spam en is niet veranderd. "
+msgstr "Deze gebruikersnaam bestaat al."
 
 #: simplr_form_functions.php:65 lib/profile.php:207
 msgid "You must enter an email."
-msgstr ""
+msgstr "Een e-mailadres invoeren is verplicht."
 
 #: simplr_form_functions.php:68
 msgid "The emails you entered do not match."
-msgstr ""
+msgstr "De e-mailadressen die je invoerde komen niet overeen."
 
 #: simplr_form_functions.php:72 lib/profile.php:213
 msgid "An account with this email has already been registered."
-msgstr ""
+msgstr "Er is al een gebruiker geregistreerd met dit e-mailadres."
 
 #: simplr_form_functions.php:76 lib/profile.php:217
 msgid "Please enter a valid email."
-msgstr ""
+msgstr "Voer svp. een geldig e-mailadres in."
 
 #: simplr_form_functions.php:93 simplr_form_functions.php:97
+#: lib/profile.php:235 lib/profile.php:239
 msgid " is a required field. Please enter a value."
-msgstr ""
+msgstr " is een verplicht veld. Vul svp. een waarde in."
 
 #: simplr_form_functions.php:237
-msgid "Please check your email for confirmation."
-msgstr ""
+msgid " Please check your email for confirmation."
+msgstr " Controleer je e-mail voor bevestiging."
 
 #: simplr_form_functions.php:239
-#, fuzzy
 msgid "Your Registration was successful."
-msgstr "Registratie Forms"
+msgstr "Je Registratie was succesvol."
 
 #: simplr_form_functions.php:257
-#, fuzzy
 msgid "A new user registered for"
-msgstr "Nieuw"
+msgstr "Een nieuwe gebruiker registreerde voor"
 
 #: simplr_form_functions.php:257
 msgid "A new user has registered for"
-msgstr ""
+msgstr "Eenn ieuwe gebruiker is geregistreerd voor"
+
+#: simplr_form_functions.php:257 lib/login.php:554
+msgid "Username"
+msgstr "Gebruikersnaam"
+
+#: simplr_form_functions.php:257 lib/profile.php:51
+msgid "Email"
+msgstr "E-mail"
 
 #: simplr_form_functions.php:260
 msgid "You should login and change your password as soon as possible."
-msgstr ""
+msgstr "Je wordt aangeraden om in te loggen en je wachtwoord te veranderen."
 
 #: simplr_form_functions.php:262
-#, fuzzy
 msgid "Username:"
-msgstr "Pagina %s"
+msgstr "Gebruikersnaam:"
+
+#: simplr_form_functions.php:263
+msgid "Registered with Facebook"
+msgstr "Geregistreerd via Facebook"
+
+#: simplr_form_functions.php:263 simplr_reg_options.php:191 lib/login.php:558
+msgid "Password"
+msgstr "Wachtwoord"
+
+#: simplr_form_functions.php:263
+msgid "Login"
+msgstr "Inloggen"
 
 #: simplr_form_functions.php:273
-#, fuzzy
 msgid "Registration Confirmation"
-msgstr "Registratie Forms"
+msgstr "Registratie Bevestiging"
+
+#: simplr_form_functions.php:297
+msgid "Connected via Facebook as"
+msgstr "Verbonden via Facebook als"
 
 #: simplr_form_functions.php:304
-#, fuzzy
 msgid "Email Address:"
-msgstr "E-mail"
+msgstr "E-mail adres:"
 
 #: simplr_form_functions.php:305
-#, fuzzy
 msgid "Confirm Email:"
-msgstr "E-mail"
+msgstr "Bevestig E-mail:"
 
 #: simplr_form_functions.php:306
-#, fuzzy
 msgid "Your Username:"
-msgstr "Voer je Facebook URL in"
+msgstr "Je Gebruikersnaam:"
 
 #: simplr_form_functions.php:307
 msgid "Choose a Password"
-msgstr ""
+msgstr "Kies een Wachtwoord"
 
 #: simplr_form_functions.php:308 lib/profile.php:131
 msgid "Confirm Password"
-msgstr ""
+msgstr "Bevestig Wachtwoord"
 
 #: simplr_form_functions.php:418 lib/login.php:480 lib/login.php:536
 #: lib/login.php:578
 msgid "Register"
-msgstr ""
+msgstr "Registreren"
 
 #: simplr_form_functions.php:445
-#, fuzzy
 msgid "Thank you for registering."
-msgstr "Bedankt voor je bericht."
+msgstr "Bedankt voor het registreren."
 
 #: simplr_form_functions.php:449
 msgid "You are already registered for this site!!!"
-msgstr ""
+msgstr "Je bent al geregistreerd op deze website !"
 
 #: simplr_form_functions.php:502
-#, fuzzy
 msgid "Thank you for registering"
-msgstr "Bedankt voor je bericht."
+msgstr "Bedankt voor je registratie"
 
 #: simplr_form_functions.php:510
 msgid "You should not register admin users via a public form"
 msgstr ""
+"Je zou geen admin gebruikers moeten registreren via een publijk formulier"
 
 #: simplr_form_functions.php:530
 msgid ""
 "The reCAPTCHA wasn't entered correctly. Go back and try it again. (reCAPTCHA "
 "said:"
 msgstr ""
+"De reCAPTCHA was niet goed ingevuld. Ga terug en probeer het nogmaals. "
+"(reCAPTCHA zei:"
+
+#: simplr_form_functions.php:563
+msgid "Register using Facebook"
+msgstr "Registreer via Facebook"
+
+#: simplr_reg_options.php:135
+msgid "Close"
+msgstr "Sluiten"
 
 #: simplr_reg_options.php:140 simplr_reg_options.php:143
-#, fuzzy
 msgid "Registration Form"
-msgstr "Formulier"
+msgstr "Registratie Formulier"
 
-#: simplr_reg_options.php:146
-#, fuzzy
+#: simplr_reg_options.php:146 views/fields.php:90
 msgid "Options"
 msgstr "Opties"
 
 #: simplr_reg_options.php:153
 msgid "Role"
-msgstr ""
+msgstr "Rol"
 
 #: simplr_reg_options.php:154
 msgid "Specify the registration user role."
-msgstr ""
+msgstr "Geef de rol van de geregistreerde gebruiker op."
 
 #: simplr_reg_options.php:156
-#, fuzzy
 msgid "Select role ..."
-msgstr "Selecteer pagina"
+msgstr "Selecteer rol ..."
 
 #: simplr_reg_options.php:166
-#, fuzzy
 msgid "Thank You page"
-msgstr "Bedankt voor je bericht."
+msgstr "Bedankt-pagina"
 
 #: simplr_reg_options.php:167
 msgid "Leave blank to display message on this page."
-msgstr ""
+msgstr "Laat leeg om het bericht op deze pagina te tonen."
 
-#: simplr_reg_options.php:170
-#, fuzzy
+#: simplr_reg_options.php:170 lib/form.class.php:67
 msgid "Select"
-msgstr "Selecteer pagina"
+msgstr "Selecteren"
 
 #: simplr_reg_options.php:177
-#, fuzzy
 msgid "Message"
 msgstr "Bericht"
 
 #: simplr_reg_options.php:178
-#, fuzzy
 msgid "Confirmation for registered users."
-msgstr "De volgende gebruikers hebben zich aangemekd voor deze service:"
+msgstr "Bevestiging voor geregistreerde gebruikers."
 
 #: simplr_reg_options.php:184
 msgid "Notifications"
-msgstr ""
+msgstr "Notificaties"
 
 #: simplr_reg_options.php:185
 msgid "Notify these emails."
-msgstr ""
-
-#: simplr_reg_options.php:191 lib/login.php:558
-#, fuzzy
-msgid "Password"
-msgstr "Voer je wachtwoord in om reacties te lezen."
+msgstr "Stuur bericht naar deze e-mailadressen."
 
 #: simplr_reg_options.php:193
 msgid "Select \"yes\" to allow users to set their password."
 msgstr ""
+"Selecteer \"ja\" om gebruikers te mogelijkheid te geven hun wachtwoord in te "
+"stellen."
 
 #: simplr_reg_options.php:195
 msgid "No"
-msgstr ""
+msgstr "Nee"
 
 #: simplr_reg_options.php:196
 msgid "Yes"
-msgstr ""
+msgstr "Ja"
 
 #: simplr_reg_options.php:201
-#, fuzzy
 msgid "Custom Fields"
-msgstr "Velden met  een * zijn verplicht."
+msgstr "Aangepaste Velden"
 
-#: simplr_reg_page.php:100
+#: simplr_reg_options.php:216
+msgid "Insert Registration Form"
+msgstr "Invoegen Registratie Formulier"
+
+#: simplr_reg_page.php:102
 msgid "Registration Forms"
 msgstr "Registratie Forms"
 
-#: simplr_reg_page.php:720 simplr_reg_page.php:737
-#, fuzzy
+#: simplr_reg_page.php:134
+msgid "Website"
+msgstr "Website"
+
+#: simplr_reg_page.php:135 lib/profile.php:46
+msgid "Nickname"
+msgstr "Schuilnaam"
+
+#: simplr_reg_page.php:197
+msgid "Activate"
+msgstr "Activeren"
+
+#: simplr_reg_page.php:197
+msgid "Resend Email"
+msgstr "E-mail opnieuw verzenden"
+
+#: simplr_reg_page.php:312
+msgid "First Name"
+msgstr "Voornaam"
+
+#: simplr_reg_page.php:313
+msgid "Last Name"
+msgstr "Achternaam"
+
+#: simplr_reg_page.php:393
+msgid "No facebook account registered with this site"
+msgstr "Geen facebook account geregistreerd op deze site"
+
+#: simplr_reg_page.php:528
+msgid "Other Information"
+msgstr "Overige Informatie"
+
+#: simplr_reg_page.php:724 simplr_reg_page.php:741
 msgid "Your settings were saved."
-msgstr "Je instellingen zijn opgeslagen"
+msgstr "Je instellingen zijn opgeslagen."
 
-#: simplr_reg_page.php:748
+#: simplr_reg_page.php:752
 msgid "Field deleted."
-msgstr ""
+msgstr "Veld verwijderd."
 
-#: simplr_reg_page.php:758
-#, fuzzy
+#: simplr_reg_page.php:762
 msgid "Fields were deleted."
-msgstr "Velden met  een * zijn verplicht."
+msgstr "Velden zijn verwijderd."
 
-#: simplr_reg_page.php:768
-#, fuzzy
+#: simplr_reg_page.php:772
 msgid "Your Field was saved."
-msgstr "Je instellingen zijn opgeslagen"
+msgstr "Je Veld is opgeslagen."
 
-#: simplr_reg_page.php:793
+#: simplr_reg_page.php:797
 msgid "Could not activate requested user."
-msgstr ""
+msgstr "Kon opgegeven gebruiker niet registreren."
 
-#: simplr_reg_page.php:816
-#, fuzzy
+#: simplr_reg_page.php:822
 msgid "Emails resent"
-msgstr "E-mail"
+msgstr "E-mails opnieuw verzonden"
 
-#: simplr_reg_page.php:832
+#: simplr_reg_page.php:838
 msgid "Sorry, We could not find the requested account."
-msgstr ""
+msgstr "Sorry, we konden het opgegeven account niet vinden."
 
-#: simplr_reg_page.php:834
+#: simplr_reg_page.php:840
 msgid "Congratulations! Your Account was activated!"
-msgstr ""
+msgstr "Gefeliciteerd! Je Account is geactiveerd."
 
-#: simplr_reg_page.php:933
+#: simplr_reg_page.php:939
 msgid ""
 "<strong>ERROR</strong>: This account has not yet been approved by the "
 "moderator"
 msgstr ""
+"<strong>FOUT</strong>: Dit account is nog niet goedgekeurd door een beheerder"
+
+#: lib/fields-table.class.php:12
+msgid "Field Name"
+msgstr "Veldnaam"
+
+#: lib/fields-table.class.php:13 views/fields.php:74
+msgid "Field Key"
+msgstr "Veldsleutel"
+
+#: lib/fields-table.class.php:14
+msgid "Required"
+msgstr "Verplicht"
+
+#: lib/fields-table.class.php:15
+msgid "Field Type"
+msgstr "Veldtype"
+
+#: lib/fields-table.class.php:16
+msgid "Profile?"
+msgstr "Profiel?"
+
+#: lib/fields-table.class.php:53
+msgid "Action"
+msgstr "Actie"
+
+#: lib/fields-table.class.php:78
+msgid "Edit"
+msgstr "Bewerken"
+
+#: lib/fields-table.class.php:79
+msgid "Are you sure you want to do this?"
+msgstr "Weet je zeker dat je dit wilt doen?"
+
+#: lib/fields-table.class.php:79
+msgid "Delete"
+msgstr "Verwijderen"
+
+#: lib/form.class.php:34
+msgid "Select ..."
+msgstr "Selecteren ..."
+
+#: lib/form.class.php:116
+msgid "Upload Image"
+msgstr "Afbeelding uploaden"
+
+#: lib/form.class.php:117
+msgid "Enter a URL or upload an image for your custom logo."
+msgstr "Voer een URL in of upload een afbeelding voor een aangepast logo."
+
+#: lib/form.class.php:174
+msgid "Select Month..."
+msgstr "Selecteer Maand..."
+
+#: lib/form.class.php:175
+msgid "Jan"
+msgstr "Jan"
+
+#: lib/form.class.php:176
+msgid "Feb"
+msgstr "Feb"
+
+#: lib/form.class.php:177
+msgid "Mar"
+msgstr "Mrt"
+
+#: lib/form.class.php:178
+msgid "Apr"
+msgstr "Apr"
+
+#: lib/form.class.php:179
+msgid "May"
+msgstr "Mei"
+
+#: lib/form.class.php:180
+msgid "Jun"
+msgstr "Jun"
+
+#: lib/form.class.php:181
+msgid "Jul"
+msgstr "Jul"
+
+#: lib/form.class.php:182
+msgid "Aug"
+msgstr "Aug"
+
+#: lib/form.class.php:183
+msgid "Sep"
+msgstr "Sep"
+
+#: lib/form.class.php:184
+msgid "Oct"
+msgstr "Okt"
+
+#: lib/form.class.php:185
+msgid "Nov"
+msgstr "Nov"
+
+#: lib/form.class.php:186
+msgid "Dec"
+msgstr "Dec"
+
+#: lib/form.class.php:189
+msgid "Select Day..."
+msgstr "Selecteer Dag..."
+
+#: lib/form.class.php:203
+msgid "Select Year..."
+msgstr "Selecteer Jaar..."
+
+#: lib/form.class.php:232 views/moderation.php:95
+msgid "Submit"
+msgstr "Verzenden"
 
 #: lib/login.php:69
 msgid "Sorry, that key does not appear to be valid."
-msgstr ""
+msgstr "Sorry, die sleutel lijkt niet geldig te zijn."
 
 #: lib/login.php:114
 msgid "You have logged in successfully."
-msgstr ""
+msgstr "Je bent succesvol ingelogd."
 
 #: lib/login.php:143
 msgid ""
@@ -304,118 +466,130 @@ msgid ""
 "browser. You must <a href='http://www.google.com/cookies.html'>enable "
 "cookies</a> to use WordPress."
 msgstr ""
+"<strong>FOUT</strong>: Cookies worden geblokkeerd of worden niet ondersteund "
+"door je browser. Je moet <a href='http://www.google.com/cookies."
+"html'>cookies aanzetten</a> om WordPress te kunnen gebruiken. "
 
 #: lib/login.php:147
 msgid "You are now logged out."
-msgstr ""
+msgstr "Je bent nu uitgelogd."
 
 #: lib/login.php:149
 msgid "User registration is currently not allowed."
-msgstr ""
+msgstr "Gebruikerregistratie is op dit moment niet mogelijk."
 
 #: lib/login.php:151
 msgid "Check your e-mail for the confirmation link."
-msgstr ""
+msgstr "Controleer je e-mail voor de bevestigingslink."
 
 #: lib/login.php:153
 msgid "Check your e-mail for your new password."
-msgstr ""
+msgstr "Controleer je e-mail voor je nieuwe wachtwoord."
 
 #: lib/login.php:155
 msgid "Registration complete. Please check your e-mail."
-msgstr ""
+msgstr "Registratie is compleet. Controleer je e-mail."
 
 #: lib/login.php:157
 msgid "Your session has expired. Please log-in again."
-msgstr ""
+msgstr "Je sessie is verlopen. Log opnieuw in."
 
 #: lib/login.php:239
-#, fuzzy, php-format
+#, php-format
 msgid "&larr; Back to %s"
-msgstr "Pagina %s"
+msgstr "&larr; Terug naar %s"
 
 #: lib/login.php:280
 msgid "<strong>ERROR</strong>: Enter a username or e-mail address."
-msgstr ""
+msgstr "<strong>FOUT</strong>: Voer een gebruikersnaam of e-mailadres in."
 
 #: lib/login.php:285
 msgid ""
 "<strong>ERROR</strong>: There is no user registered with that email address."
 msgstr ""
+"<strong>FOUT</strong>: Er is geen gebruiker geregistreerd met dat e-"
+"mailadres."
 
 #: lib/login.php:297
 msgid "<strong>ERROR</strong>: Invalid username or e-mail."
-msgstr ""
+msgstr "<strong>FOUT</strong>: Ongeldige gebruikersnaam of e-mail."
 
 #: lib/login.php:311
 msgid "Password reset is not allowed for this user"
-msgstr ""
+msgstr "Wachtwoord herstellen is niet toegestaan voor deze gebruiker"
 
 #: lib/login.php:323
 msgid "Someone requested that the password be reset for the following account:"
 msgstr ""
+"Iemand deed een aanvraag om het wachtwoord te herstellen voor het volgende "
+"account:"
 
 #: lib/login.php:325
-#, fuzzy, php-format
+#, php-format
 msgid "Username: %s"
-msgstr "Pagina %s"
+msgstr "Gebruikersnaam: %s"
 
 #: lib/login.php:326
 msgid "If this was a mistake, just ignore this email and nothing will happen."
 msgstr ""
+"Als dit een vergissing was, negeer dan gewoon deze e-mail en er gebeurt "
+"niets."
 
 #: lib/login.php:327
 msgid "To reset your password, visit the following address:"
-msgstr ""
+msgstr "Om je wachtwoord te herstellen, ga naar het volgende adres:"
 
 #: lib/login.php:337
-#, fuzzy, php-format
+#, php-format
 msgid "[%s] Password Reset"
-msgstr "Pagina %s"
+msgstr "[%s] Wachtwoord Herstellen"
 
 #: lib/login.php:343
-#, fuzzy
 msgid "The e-mail could not be sent."
-msgstr "E-Mail"
+msgstr "De E-mail kon niet verzonden worden."
 
 #: lib/login.php:343
 msgid "Possible reason: your host may have disabled the mail() function..."
-msgstr ""
+msgstr "Mogelijke reden: je server heeft de mail() functie uitstaan..."
 
 #: lib/login.php:364 lib/login.php:367 lib/login.php:372
-#, fuzzy
 msgid "Invalid key"
-msgstr "Ongeldige post ID opgegeven"
+msgstr "Ongeldige sleutel"
 
 #: lib/login.php:407
 msgid "<strong>ERROR</strong>: Please enter a username."
-msgstr ""
+msgstr "<strong>FOUT</strong>: Vul een gebruikersnaam in."
 
 #: lib/login.php:409
 msgid ""
 "<strong>ERROR</strong>: This username is invalid because it uses illegal "
 "characters. Please enter a valid username."
 msgstr ""
+"<strong>FOUT</strong>: Deze gebruikersnaam is ongeldig omdat het "
+"niettoegestane karakters bevat. Voer een geldige gebruikersnaam in."
 
 #: lib/login.php:412
 msgid ""
 "<strong>ERROR</strong>: This username is already registered, please choose "
 "another one."
 msgstr ""
+"<strong>FOUT</strong>: Deze gebruikersnaam is al geregistreerd, kies een "
+"andere."
 
 #: lib/login.php:417
 msgid "<strong>ERROR</strong>: Please type your e-mail address."
-msgstr ""
+msgstr "<strong>FOUT</strong>: Voer een e-mailadres in."
 
 #: lib/login.php:419
 msgid "<strong>ERROR</strong>: The email address isn&#8217;t correct."
-msgstr ""
+msgstr "<strong>FOUT</strong>: Het e-mailadres is niet geldig."
 
 #: lib/login.php:422
 msgid ""
 "<strong>ERROR</strong>: This email is already registered, please choose "
 "another one."
 msgstr ""
+"<strong>FOUT</strong>: Dit e-mailadres is al geregistreerd, kies een andere."
 
 #: lib/login.php:435
 #, php-format
@@ -423,50 +597,48 @@ msgid ""
 "<strong>ERROR</strong>: Couldn&#8217;t register you... please contact the <a "
 "href=\"mailto:%s\">webmaster</a> !"
 msgstr ""
+"<strong>FOUT</strong>: Kon je niet registreren... Neem contact op met de <a "
+"href=\"mailto:%s\">beheerder</a>!"
 
 #: lib/login.php:469
-#, fuzzy
 msgid "Username or E-mail:"
-msgstr "E-Mail"
+msgstr "Gebruikersnaam of E-mail:"
 
 #: lib/login.php:478 lib/login.php:503 lib/login.php:534
 msgid "Log in"
 msgstr "Inloggen"
 
 #: lib/login.php:500
-#, fuzzy
 msgid "The passwords do not match."
-msgstr "OK, daar gaat ie dan !"
+msgstr "De wachtwoorden komen niet overeen."
 
 #: lib/login.php:503
 msgid "Password Reset"
-msgstr ""
+msgstr "Wachtwoord Herstellen"
 
 #: lib/login.php:503
 msgid "Your password has been reset."
-msgstr ""
+msgstr "Je wachtwoord is hersteld."
 
 #: lib/login.php:511
 msgid "Reset Password"
-msgstr ""
+msgstr "Wachtwoord Herstellen"
 
 #: lib/login.php:511
-#, fuzzy
 msgid "Enter your new password below."
-msgstr "Voer je wachtwoord in om reacties te lezen."
+msgstr "Voer je nieuwe wachtwoord hieronder in."
 
 #: lib/login.php:518
 msgid "New password"
-msgstr ""
+msgstr "Nieuw wachtwoord"
 
 #: lib/login.php:522
-#, fuzzy
 msgid "Confirm new password"
-msgstr "Voer je wachtwoord in om reacties te lezen."
+msgstr "Bevestig nieuw wachtwoord"
 
 #: lib/login.php:526
 msgid "Strength indicator"
-msgstr ""
+msgstr "Sterkte indicator"
 
 #: lib/login.php:527
 msgid ""
@@ -474,46 +646,457 @@ msgid ""
 "stronger, use upper and lower case letters, numbers and symbols like ! \" ? "
 "$ % ^ &amp; )."
 msgstr ""
-
-#: lib/login.php:554
-msgid "Username"
-msgstr ""
+"Hint: Het wachtwoord moet minimaal zeven karakters lang zijn. Om het sterker "
+"te maken, gebruik hoofd- en kleine letters, getallen en symbolen zoals ! "
+"\" ? $ % ^ &amp; )."
 
 #: lib/login.php:579 lib/login.php:581
-#, fuzzy
 msgid "Password Lost and Found"
-msgstr "Voer je wachtwoord in om reacties te lezen."
+msgstr "Wachtwoord Verloren en Gevonden"
 
 #: lib/login.php:579 lib/login.php:581
-#, fuzzy
 msgid "Lost your password?"
-msgstr "Voer je wachtwoord in om reacties te lezen."
+msgstr "Wachtwoord vergeten?"
+
+#: lib/mod.php:10
+msgid "Inactive Users"
+msgstr "Inactieve Gebruikers"
+
+#: lib/mod.php:38
+msgid "Activate Users"
+msgstr "Activeer Gebruikers"
 
 #: lib/profile.php:32
-#, fuzzy
 msgid "Your profile was saved"
-msgstr "Je instellingen zijn opgeslagen"
+msgstr "Je profiel is opgeslagen"
+
+#: lib/profile.php:40
+msgid "User Login"
+msgstr "Gebruikerslogin"
+
+#: lib/profile.php:40
+msgid "Registered"
+msgstr "Geregistreerd"
 
 #: lib/profile.php:121
 msgid "Change Password"
-msgstr ""
+msgstr "Wijzig Wachtwoord"
 
 #: lib/profile.php:125
 msgid "New Password"
-msgstr ""
+msgstr "Nieuw Wachtwoord"
 
 #: lib/profile.php:127
 msgid ""
 "If you would like to change the password type a new one. Otherwise leave "
 "this blank."
 msgstr ""
+"Als je het wachtwoord wilt wijzigen voer dan een nieuwe in. Laat het anders "
+"leeg."
 
-#: views/api.php:81 views/api.php:166 views/main.php:107
-#, fuzzy
+#: lib/profile.php:248
+msgid "The passwords you entered do not match"
+msgstr "De ingevoerde wachtwoorden komen niet overeen"
+
+#: lib/profile.php:264
+msgid "Your Profile Was Saved"
+msgstr "Je Profiel is Opgeslagen"
+
+#: views/api.php:24
+msgid "reCAPTCHA"
+msgstr "reCAPTCHA"
+
+#: views/api.php:48
+msgid ""
+"If you would like to use reCAPTCHA for blocking spam registrations, enter "
+"you API keys below:"
+msgstr ""
+"Als je reCAPTCHA wilt gebruiken voor het blokkeren van spam-registraties, "
+"voer hieronder dan je API-sleutels in:"
+
+#: views/api.php:52
+msgid "Enable reCAPTCHA?"
+msgstr "reCAPTCHA Gebruiken?"
+
+#: views/api.php:53
+msgid ""
+"In order to use reCAPTCHA anti-spam protection you first need to set you an "
+"API account here: http://www.google.com/recaptcha"
+msgstr ""
+"Om reCAPTCHA anti-spam bescherming te kunnen gebruiken dien je eerst een API-"
+"account in te stellen op: http://www.google.com/recaptcha"
+
+#: views/api.php:65
+msgid "reCAPTCHA Public Key"
+msgstr "reCAPTCHA Publieke Sleutel"
+
+#: views/api.php:72
+msgid "reCAPTCHA Private Key"
+msgstr "reCAPTCHA Prive Sleutel"
+
+#: views/api.php:81 views/api.php:166 views/fields.php:97 views/main.php:107
 msgid "Save Changes"
 msgstr "Opslaan"
 
+#: views/api.php:86
+msgid "Facebook"
+msgstr "Facebook"
+
+#: views/api.php:87
+msgid "If you intend to use Facebook for Authentication complete form below:"
+msgstr ""
+"Als je Facebook wilt gebruiken voor Authenticatie, vul dan onderstaand "
+"formulier in:"
+
+#: views/api.php:91
+msgid "Enable Facebook Connect?"
+msgstr "Facebook Connect Gebruiken?"
+
+#: views/api.php:93
+msgid ""
+"In order to user Facebook Connect you will need to have set up an "
+"application at http://www.facebook.com/developer"
+msgstr ""
+"Om Facebook Connect te kunnen gebruiken dien je een applicatie op te zetten "
+"op http://www.facebook.com/developer"
+
+#: views/api.php:104
+msgid "Facebook App ID"
+msgstr "FacebookApp ID"
+
+#: views/api.php:120
+msgid "Facebook Application Secret"
+msgstr "Facebook Applicatie Geheime Sleutel"
+
+#: views/api.php:128
+msgid "Permissions to Request"
+msgstr "Permissies voor Aanvraag"
+
+#: views/api.php:137
+msgid "Allow users to login using their Facebook account?"
+msgstr "Gebruikers toestaan om met hun Facebook account in te loggen?"
+
+#: views/api.php:149
+msgid "Facebook Login Redirect"
+msgstr "InloggenFacebook Login Herverwijzing"
+
+#: views/api.php:151
+msgid "Where should the user be redirected after logging in with Facebook."
+msgstr ""
+"Waar moet de gebruiker heen verwezen worden na het inloggen met Facebook."
+
+#: views/api.php:158
+msgid "Auto-Register"
+msgstr "Auto-Registreren"
+
+#: views/api.php:160
+msgid ""
+"Enabling this option will automatically register and login the user after "
+"agreeing to connect your application to his/her profile."
+msgstr ""
+"Deze optie aanzetten zal de gebruiker automatisch registreren en inloggen na "
+"het accepteren van de verbinding tussen jouw applicatie en zijn/haar profiel."
+
+#: views/fields.php:4 views/fields.php:97
+msgid "Add Field"
+msgstr "Veld Toevoegen"
+
+#: views/fields.php:15
+msgid "Saving sort"
+msgstr "Sortering opslaan"
+
+#: views/fields.php:17
+msgid "Delete Selected"
+msgstr "Verwijder Selectie"
+
+#: views/fields.php:17
+msgid "Are you sure you want to delete all the selected fields?"
+msgstr "Weet je zeker dat je alle geselecteerde velden wilt verwijderen?"
+
+#: views/fields.php:44
+msgid "Back to Field List"
+msgstr "Terug naar Veldenlijst"
+
+#: views/fields.php:47
+msgid ""
+"Use the form below to add a registration field. These fields can then be "
+"selected on any registration form on the site."
+msgstr ""
+"Gebruik onderstaand formulier om een registratieveld toe te voegen. Deze "
+"velden kunnen dan geselecteerd worden op ieder registratieformulier op de "
+"site."
+
+#: views/fields.php:62
+msgid "What are my options?"
+msgstr "Wat zijn mijn opties?"
+
+#: views/fields.php:73
+msgid "Field Label"
+msgstr "Veldlabel"
+
+#: views/fields.php:73
+msgid "Human readable name for display to users"
+msgstr "Menselijk leesbare naam om aan gebruikers te tonen"
+
+#: views/fields.php:74
+msgid "Machine readable name to represent this field in the Database"
+msgstr "Machine leesbare naam om dit veld weer te geven in de Database"
+
+#: views/fields.php:76
+msgid "Show this field on user admin screens?"
+msgstr "Toon dit veld op gebruikers adminschermen?"
+
+#: views/fields.php:78
+msgid "Is this field required?"
+msgstr "Is dit veld verplicht?"
+
+#: views/fields.php:79
+msgid "Show this field in user profile?"
+msgstr "Toon dit veld in gebruikersprofiel?"
+
+#: views/fields.php:80
+msgid "Type"
+msgstr "Type\t"
+
+#: views/fields.php:80
+msgid "Text Field"
+msgstr "Textveld"
+
+#: views/fields.php:80
+msgid "Textarea"
+msgstr "Tekstarea"
+
+#: views/fields.php:80
+msgid "Multiple Choice: Select Box"
+msgstr "Multiple Choice: Select Dropdown"
+
+#: views/fields.php:80
+msgid "Multiple Choice: Radio Buttons"
+msgstr "Multiple Choice: Radio Knoppen"
+
+#: views/fields.php:80
+msgid "Date Field"
+msgstr "Datumveld"
+
+#: views/fields.php:80
+msgid "Checkbox"
+msgstr "Checkbox"
+
+#: views/fields.php:80
+msgid "Hidden Field"
+msgstr "Verborgen Veld"
+
+#: views/fields.php:80
+msgid "Callback Function"
+msgstr "Callback Functie"
+
+#: views/fields.php:83
+msgid "<strong>Checkbox: </strong> Option not used."
+msgstr ""
+
+#: views/fields.php:84
+msgid "<strong>Text Field:</strong> Option is not used."
+msgstr ""
+
+#: views/fields.php:85
+msgid ""
+"<strong>Multiple Choice:</strong> Separate multiple options with a comma (i."
+"e. yes,no)."
+msgstr ""
+
+#: views/fields.php:86
+msgid ""
+"<strong>Date:</strong> Option is used to determine range of available dates. "
+"Enter two years separated by commas. i.e. 2000,2015."
+msgstr ""
+
+#: views/fields.php:87
+msgid ""
+"<strong>Textarea:</strong> Option is used to determine height and width of "
+"text box. Enter dimensions width them height, separated by a comma (i.e. "
+"<em>300px,100px</em> would generate a box that is 300 pixels wide and 100 "
+"pixels tall)."
+msgstr ""
+
+#: views/fields.php:88
+msgid ""
+"<strong>Hidden Field:</strong> Option determines the value that will be "
+"passed to the hidden field."
+msgstr ""
+
+#: views/instructions.php:2
+msgid "How to use"
+msgstr "Hoe te gebruiken"
+
+#: views/instructions.php:4
+msgid ""
+"Simply navigate to the edit screen for the post or page on which you would "
+"like the form to appear and click the Registration button on the TinyMCE "
+"(shown at the right)."
+msgstr ""
+"Navigeer simpelweg naar het bewerkscherm van het bericht of de pagina waar "
+"je het formulier wilt tonen en klik op de Registratie knop in TinyMCE (wordt "
+"rechts getoond)."
+
+#: views/instructions.php:7
+msgid "For updates please visit:"
+msgstr "Voor updates kijk op:"
+
+#: views/instructions.php:7
+msgid "Simplr Registration Form"
+msgstr "Simplr Registration Formulier"
+
+#: views/main.php:21
+msgid "Core Settings"
+msgstr "Hoofdinstellingen"
+
+#: views/main.php:25
+msgid "Redirect default signup action to this page"
+msgstr "Herverwijs standaard registratieactie naar deze pagina"
+
+#: views/main.php:27
+msgid ""
+"Use this option to redirect the default WordPress wp-login.php?"
+"action=redirect action. This will not redirect your login page as a whole."
+msgstr ""
+"Gebruik deze optie om de standaard WordPress wp-login.php?action=redirect "
+"actie te herverwijzen. Dit zal niet je loginpagina herverwijzen."
+
+#: views/main.php:43
+msgid "Redirect default profile page"
+msgstr "Herverwijs standaard profielpagina"
+
+#: views/main.php:46
+msgid ""
+"Use this option to force users to access only their \"front\" end profile "
+"page ... i.e. the page with the [profile_page] shortcode"
+msgstr ""
+
+#: views/main.php:53
+msgid "Custom Thank You Page"
+msgstr "Aangepaste Bedankt Pagina"
+
+#: views/main.php:56
+msgid ""
+"You can leave this field blank. The default behavior outputs a confirmation "
+"on the page which the registration shortcode is save. Use this only if you "
+"want to redirect the user elsewhere after registration."
+msgstr ""
+
+#: views/main.php:63
+msgid "Default FROM Email"
+msgstr "Standaard VAN E-mail"
+
+#: views/main.php:70
+msgid "Disable Plugin Styles"
+msgstr "Deactiveer Plugin Stylesheet"
+
+#: views/main.php:80
+msgid "Select a style"
+msgstr "Selecteer een stijl"
+
+#: views/main.php:88
+msgid "Override Default Stylesheet"
+msgstr "Standaard Stylesheet Vervangen"
+
+#: views/main.php:90
+msgid ""
+"Specify a custom stylesheet. Will not apply if \"Plugin Styles\" are disabled"
+msgstr ""
+
+#: views/moderation.php:5
+#, php-format
+msgid ""
+"You've successfully registered for %%blogname%% but before your account can "
+"be used you must activate it. To activate use the link below %%link%%. "
+msgstr ""
+"Het registreren voor %%blogname%% is gelukt, maar voor je het account kunt "
+"gebruiken moet je het activeren. Om te activeren gebruik de link hieronder "
+"%%link%%. "
+
+#: views/moderation.php:6
+#, php-format
+msgid "Please activate your %%blogname%% account"
+msgstr "Graag je %%blogname%% account activeren"
+
+#: views/moderation.php:8
+#, php-format
+msgid "Your account was activated. Your username is %%username%%."
+msgstr "Je account is geactiveerd. Je gebruikersnaam is %%username%%."
+
+#: views/moderation.php:9
+#, php-format
+msgid "Your %%blogname%% account was activated."
+msgstr "Je %%blogname%% account is geactiveerd."
+
 #: views/moderation.php:23
-#, fuzzy
 msgid "Settings saved"
 msgstr "Je instellingen zijn opgeslagen"
+
+#: views/moderation.php:28
+msgid "These settings allow you to enable and control moderation"
+msgstr ""
+
+#: views/moderation.php:31
+msgid "Enable Moderation?"
+msgstr "Moderatie gebruiken?"
+
+#: views/moderation.php:42
+msgid "Approval Mode"
+msgstr ""
+
+#: views/moderation.php:45
+msgid ""
+"In *automatic* mode, the user is activated/approved as soon as the "
+"activation link in the moderation email is clicked. In *manual* mode the "
+"user is only approved after a site admin has approved that account."
+msgstr ""
+
+#: views/moderation.php:46
+msgid "Automatic"
+msgstr "Automatisch"
+
+#: views/moderation.php:46
+msgid "Manual"
+msgstr "Handmatig"
+
+#: views/moderation.php:52
+msgid "Email Subject Line"
+msgstr "E-mail onderwerpregel"
+
+#: views/moderation.php:54
+#, php-format
+msgid "Welcome to %%blogname%%"
+msgstr "Welkom op %%blogname%%"
+
+#: views/moderation.php:59
+msgid "Moderation Email"
+msgstr "Modereer E-mail"
+
+#: views/moderation.php:61
+#, php-format
+msgid ""
+"You can use user submitted values in this field by wrapping them in %%. For "
+"instance to use the value of the field 'first_name' you would type 'Welcome, "
+"%%first_name%% '. Use %%link%% for the activation link. "
+msgstr ""
+
+#: views/moderation.php:62
+msgid "hello"
+msgstr "hallo"
+
+#: views/moderation.php:70
+msgid "Roles"
+msgstr "Rollen"
+
+#: views/moderation.php:72
+msgid "Which user roles can moderate new users."
+msgstr ""
+
+#: views/moderation.php:78
+msgid "Account Activated Email Subject Line"
+msgstr "Geactiveerd Account E-mail onderwerpregel"
+
+#: views/moderation.php:84
+msgid "Account Activated Email"
+msgstr "Geactiveerd Account E-mail"
