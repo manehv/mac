@@ -968,3 +968,9 @@ input[type="submit"], #submit, .button {
         font-weight:bold;
 }
 /*forgot password */
+#top .post-entry-12342 .avia_ajax_form .form_element_half{
+	margin-right:3px;
+}
+#top .post-entry-12342 .avia_ajax_form p{
+	clear:none;
+}
