@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: English-Spanish\n"
 "Report-Msgid-Bugs-To: https://github.com/woothemes/woocommerce/issues\n"
 "POT-Creation-Date: 2014-06-30 14:28:36+00:00\n"
-"PO-Revision-Date: 2015-03-25 09:58-0500\n"
+"PO-Revision-Date: 2015-03-25 10:01-0500\n"
 "Last-Translator: 8manos i18n <i18n@8manos.com>\n"
 "Language-Team: Language\n"
 "Language: es\n"
@@ -7665,7 +7665,6 @@ msgid "Shipping"
 msgstr ""
 
 #: templates/cart/cart-totals.php:16
-#, fuzzy
 msgid "Cart Totals"
 msgstr "Total"
 
@@ -7674,7 +7673,6 @@ msgid "Cart Subtotal"
 msgstr ""
 
 #: templates/cart/cart-totals.php:75 templates/checkout/review-order.php:79
-#, fuzzy
 msgid "Order Total"
 msgstr "Total"
 
@@ -7730,9 +7728,8 @@ msgid "No products in the cart."
 msgstr ""
 
 #: templates/cart/mini-cart.php:59
-#, fuzzy
 msgid "Subtotal"
-msgstr "Total"
+msgstr "Subtotal"
 
 #: templates/cart/mini-cart.php:65
 msgid "Checkout"
