@@ -976,7 +976,7 @@ input[type="submit"], #submit, .button {
 }
 /*forgot password */
 .avia_transform .av_font_icon {
-    opacity: 0;
+    opacity: 1;
     transform: scale(1);
 }
 .menu-item .av_font_icon {
