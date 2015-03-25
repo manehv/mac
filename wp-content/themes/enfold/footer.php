@@ -71,24 +71,7 @@
 			<!-- end main -->
 			</div>
 
-			<?php
-
-			//copyright
-			$copyright = do_shortcode( avia_get_option('copyright', "&copy; ".__('Copyright','avia_framework')."  - <a href='".home_url('/')."'>".get_bloginfo('name')."</a>") );
-
-			// you can filter and remove the backlink with an add_filter function
-			// from your themes (or child themes) functions.php file if you dont want to edit this file
-			// you can also just keep that link. I really do appreciate it ;)
-			//$kriesi_at_backlink =	apply_filters("kriesi_backlink", " - <a href='http://www.kriesi.at'>Enfold Theme by Kriesi</a>");
-
-
-			//you can also remove the kriesi.at backlink by adding [nolink] to your custom copyright field in the admin area
 		
-
-			if( $footer_widget_setting != 'nosocket' )
-			{
-
-			?>
 
 				<footer class='container_wrap socket_color' id='socket' <?php avia_markup_helper(array('context' => 'footer')); ?>>
                     <div class='container'>
