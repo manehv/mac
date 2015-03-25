@@ -975,3 +975,7 @@ input[type="submit"], #submit, .button {
         font-weight:bold;
 }
 /*forgot password */
+.avia_transform .av_font_icon {
+    opacity: 0;
+    transform: scale(1);
+}
