@@ -674,6 +674,9 @@ width:35px !important;
 line-height:30px;
 height:auto;
 }
+.single-product-main-image {
+    padding-top: 55px;
+}
 .single-product-main-image .thumbnails{
 display:none;
 }
@@ -802,6 +805,10 @@ input[type="submit"], #submit, .button {
 
 .entry-summary  .single_variation_wrap{
         display:none!important;
+}
+
+.entry-summary.col-md-6 {
+    padding-top: 50px;
 }
 
 .nameset{
