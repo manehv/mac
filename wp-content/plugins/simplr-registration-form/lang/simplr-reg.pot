@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-12-24 23:24+0100\n"
+"POT-Creation-Date: 2015-02-28 18:38+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: main_options_page.php:8 simplr_reg_page.php:116
+#: main_options_page.php:8 simplr_reg_page.php:118
 msgid "Settings"
 msgstr ""
 
@@ -26,7 +26,7 @@ msgstr ""
 msgid "Fields"
 msgstr ""
 
-#: main_options_page.php:10
+#: main_options_page.php:10 views/moderation.php:27
 msgid "Moderation"
 msgstr ""
 
@@ -78,6 +78,7 @@ msgid "Please enter a valid email."
 msgstr ""
 
 #: simplr_form_functions.php:93 simplr_form_functions.php:97
+#: lib/profile.php:235 lib/profile.php:239
 msgid " is a required field. Please enter a value."
 msgstr ""
 
@@ -97,6 +98,14 @@ msgstr ""
 msgid "A new user has registered for"
 msgstr ""
 
+#: simplr_form_functions.php:257 lib/login.php:554
+msgid "Username"
+msgstr ""
+
+#: simplr_form_functions.php:257 lib/profile.php:51
+msgid "Email"
+msgstr ""
+
 #: simplr_form_functions.php:260
 msgid "You should login and change your password as soon as possible."
 msgstr ""
@@ -105,8 +114,24 @@ msgstr ""
 msgid "Username:"
 msgstr ""
 
+#: simplr_form_functions.php:263
+msgid "Registered with Facebook"
+msgstr ""
+
+#: simplr_form_functions.php:263 simplr_reg_options.php:191 lib/login.php:558
+msgid "Password"
+msgstr ""
+
+#: simplr_form_functions.php:263
+msgid "Login"
+msgstr ""
+
 #: simplr_form_functions.php:273
 msgid "Registration Confirmation"
+msgstr ""
+
+#: simplr_form_functions.php:297
+msgid "Connected via Facebook as"
 msgstr ""
 
 #: simplr_form_functions.php:304
@@ -142,6 +167,10 @@ msgstr ""
 msgid "You are already registered for this site!!!"
 msgstr ""
 
+#: simplr_form_functions.php:502
+msgid "Thank you for registering"
+msgstr ""
+
 #: simplr_form_functions.php:510
 msgid "You should not register admin users via a public form"
 msgstr ""
@@ -152,11 +181,19 @@ msgid ""
 "said:"
 msgstr ""
 
+#: simplr_form_functions.php:563
+msgid "Register using Facebook"
+msgstr ""
+
+#: simplr_reg_options.php:135
+msgid "Close"
+msgstr ""
+
 #: simplr_reg_options.php:140 simplr_reg_options.php:143
 msgid "Registration Form"
 msgstr ""
 
-#: simplr_reg_options.php:146
+#: simplr_reg_options.php:146 views/fields.php:90
 msgid "Options"
 msgstr ""
 
@@ -180,7 +217,7 @@ msgstr ""
 msgid "Leave blank to display message on this page."
 msgstr ""
 
-#: simplr_reg_options.php:170
+#: simplr_reg_options.php:170 lib/form.class.php:67
 msgid "Select"
 msgstr ""
 
@@ -200,10 +237,6 @@ msgstr ""
 msgid "Notify these emails."
 msgstr ""
 
-#: simplr_reg_options.php:191 lib/login.php:558
-msgid "Password"
-msgstr ""
-
 #: simplr_reg_options.php:193
 msgid "Select \"yes\" to allow users to set their password."
 msgstr ""
@@ -220,46 +253,194 @@ msgstr ""
 msgid "Custom Fields"
 msgstr ""
 
-#: simplr_reg_page.php:100
+#: simplr_reg_options.php:216
+msgid "Insert Registration Form"
+msgstr ""
+
+#: simplr_reg_page.php:102
 msgid "Registration Forms"
 msgstr ""
 
-#: simplr_reg_page.php:720 simplr_reg_page.php:737
+#: simplr_reg_page.php:134
+msgid "Website"
+msgstr ""
+
+#: simplr_reg_page.php:135 lib/profile.php:46
+msgid "Nickname"
+msgstr ""
+
+#: simplr_reg_page.php:197
+msgid "Activate"
+msgstr ""
+
+#: simplr_reg_page.php:197
+msgid "Resend Email"
+msgstr ""
+
+#: simplr_reg_page.php:312
+msgid "First Name"
+msgstr ""
+
+#: simplr_reg_page.php:313
+msgid "Last Name"
+msgstr ""
+
+#: simplr_reg_page.php:393
+msgid "No facebook account registered with this site"
+msgstr ""
+
+#: simplr_reg_page.php:528
+msgid "Other Information"
+msgstr ""
+
+#: simplr_reg_page.php:724 simplr_reg_page.php:741
 msgid "Your settings were saved."
 msgstr ""
 
-#: simplr_reg_page.php:748
+#: simplr_reg_page.php:752
 msgid "Field deleted."
 msgstr ""
 
-#: simplr_reg_page.php:758
+#: simplr_reg_page.php:762
 msgid "Fields were deleted."
 msgstr ""
 
-#: simplr_reg_page.php:768
+#: simplr_reg_page.php:772
 msgid "Your Field was saved."
 msgstr ""
 
-#: simplr_reg_page.php:793
+#: simplr_reg_page.php:797
 msgid "Could not activate requested user."
 msgstr ""
 
-#: simplr_reg_page.php:816
+#: simplr_reg_page.php:822
 msgid "Emails resent"
 msgstr ""
 
-#: simplr_reg_page.php:832
+#: simplr_reg_page.php:838
 msgid "Sorry, We could not find the requested account."
 msgstr ""
 
-#: simplr_reg_page.php:834
+#: simplr_reg_page.php:840
 msgid "Congratulations! Your Account was activated!"
 msgstr ""
 
-#: simplr_reg_page.php:933
+#: simplr_reg_page.php:939
 msgid ""
 "<strong>ERROR</strong>: This account has not yet been approved by the "
 "moderator"
+msgstr ""
+
+#: lib/fields-table.class.php:12
+msgid "Field Name"
+msgstr ""
+
+#: lib/fields-table.class.php:13 views/fields.php:74
+msgid "Field Key"
+msgstr ""
+
+#: lib/fields-table.class.php:14
+msgid "Required"
+msgstr ""
+
+#: lib/fields-table.class.php:15
+msgid "Field Type"
+msgstr ""
+
+#: lib/fields-table.class.php:16
+msgid "Profile?"
+msgstr ""
+
+#: lib/fields-table.class.php:53
+msgid "Action"
+msgstr ""
+
+#: lib/fields-table.class.php:78
+msgid "Edit"
+msgstr ""
+
+#: lib/fields-table.class.php:79
+msgid "Are you sure you want to do this?"
+msgstr ""
+
+#: lib/fields-table.class.php:79
+msgid "Delete"
+msgstr ""
+
+#: lib/form.class.php:34
+msgid "Select ..."
+msgstr ""
+
+#: lib/form.class.php:116
+msgid "Upload Image"
+msgstr ""
+
+#: lib/form.class.php:117
+msgid "Enter a URL or upload an image for your custom logo."
+msgstr ""
+
+#: lib/form.class.php:174
+msgid "Select Month..."
+msgstr ""
+
+#: lib/form.class.php:175
+msgid "Jan"
+msgstr ""
+
+#: lib/form.class.php:176
+msgid "Feb"
+msgstr ""
+
+#: lib/form.class.php:177
+msgid "Mar"
+msgstr ""
+
+#: lib/form.class.php:178
+msgid "Apr"
+msgstr ""
+
+#: lib/form.class.php:179
+msgid "May"
+msgstr ""
+
+#: lib/form.class.php:180
+msgid "Jun"
+msgstr ""
+
+#: lib/form.class.php:181
+msgid "Jul"
+msgstr ""
+
+#: lib/form.class.php:182
+msgid "Aug"
+msgstr ""
+
+#: lib/form.class.php:183
+msgid "Sep"
+msgstr ""
+
+#: lib/form.class.php:184
+msgid "Oct"
+msgstr ""
+
+#: lib/form.class.php:185
+msgid "Nov"
+msgstr ""
+
+#: lib/form.class.php:186
+msgid "Dec"
+msgstr ""
+
+#: lib/form.class.php:189
+msgid "Select Day..."
+msgstr ""
+
+#: lib/form.class.php:203
+msgid "Select Year..."
+msgstr ""
+
+#: lib/form.class.php:232 views/moderation.php:95
+msgid "Submit"
 msgstr ""
 
 #: lib/login.php:69
@@ -441,10 +622,6 @@ msgid ""
 "$ % ^ &amp; )."
 msgstr ""
 
-#: lib/login.php:554
-msgid "Username"
-msgstr ""
-
 #: lib/login.php:579 lib/login.php:581
 msgid "Password Lost and Found"
 msgstr ""
@@ -453,8 +630,24 @@ msgstr ""
 msgid "Lost your password?"
 msgstr ""
 
+#: lib/mod.php:10
+msgid "Inactive Users"
+msgstr ""
+
+#: lib/mod.php:38
+msgid "Activate Users"
+msgstr ""
+
 #: lib/profile.php:32
 msgid "Your profile was saved"
+msgstr ""
+
+#: lib/profile.php:40
+msgid "User Login"
+msgstr ""
+
+#: lib/profile.php:40
+msgid "Registered"
 msgstr ""
 
 #: lib/profile.php:121
@@ -471,10 +664,387 @@ msgid ""
 "this blank."
 msgstr ""
 
-#: views/api.php:81 views/api.php:166 views/main.php:107
+#: lib/profile.php:248
+msgid "The passwords you entered do not match"
+msgstr ""
+
+#: lib/profile.php:264
+msgid "Your Profile Was Saved"
+msgstr ""
+
+#: views/api.php:24
+msgid "reCAPTCHA"
+msgstr ""
+
+#: views/api.php:48
+msgid ""
+"If you would like to use reCAPTCHA for blocking spam registrations, enter "
+"you API keys below:"
+msgstr ""
+
+#: views/api.php:52
+msgid "Enable reCAPTCHA?"
+msgstr ""
+
+#: views/api.php:53
+msgid ""
+"In order to use reCAPTCHA anti-spam protection you first need to set you an "
+"API account here: http://www.google.com/recaptcha"
+msgstr ""
+
+#: views/api.php:65
+msgid "reCAPTCHA Public Key"
+msgstr ""
+
+#: views/api.php:72
+msgid "reCAPTCHA Private Key"
+msgstr ""
+
+#: views/api.php:81 views/api.php:166 views/fields.php:97 views/main.php:107
 msgid "Save Changes"
+msgstr ""
+
+#: views/api.php:86
+msgid "Facebook"
+msgstr ""
+
+#: views/api.php:87
+msgid "If you intend to use Facebook for Authentication complete form below:"
+msgstr ""
+
+#: views/api.php:91
+msgid "Enable Facebook Connect?"
+msgstr ""
+
+#: views/api.php:93
+msgid ""
+"In order to user Facebook Connect you will need to have set up an "
+"application at http://www.facebook.com/developer"
+msgstr ""
+
+#: views/api.php:104
+msgid "Facebook App ID"
+msgstr ""
+
+#: views/api.php:120
+msgid "Facebook Application Secret"
+msgstr ""
+
+#: views/api.php:128
+msgid "Permissions to Request"
+msgstr ""
+
+#: views/api.php:137
+msgid "Allow users to login using their Facebook account?"
+msgstr ""
+
+#: views/api.php:149
+msgid "Facebook Login Redirect"
+msgstr ""
+
+#: views/api.php:151
+msgid "Where should the user be redirected after logging in with Facebook."
+msgstr ""
+
+#: views/api.php:158
+msgid "Auto-Register"
+msgstr ""
+
+#: views/api.php:160
+msgid ""
+"Enabling this option will automatically register and login the user after "
+"agreeing to connect your application to his/her profile."
+msgstr ""
+
+#: views/fields.php:4 views/fields.php:97
+msgid "Add Field"
+msgstr ""
+
+#: views/fields.php:15
+msgid "Saving sort"
+msgstr ""
+
+#: views/fields.php:17
+msgid "Delete Selected"
+msgstr ""
+
+#: views/fields.php:17
+msgid "Are you sure you want to delete all the selected fields?"
+msgstr ""
+
+#: views/fields.php:44
+msgid "Back to Field List"
+msgstr ""
+
+#: views/fields.php:47
+msgid ""
+"Use the form below to add a registration field. These fields can then be "
+"selected on any registration form on the site."
+msgstr ""
+
+#: views/fields.php:62
+msgid "What are my options?"
+msgstr ""
+
+#: views/fields.php:73
+msgid "Field Label"
+msgstr ""
+
+#: views/fields.php:73
+msgid "Human readable name for display to users"
+msgstr ""
+
+#: views/fields.php:74
+msgid "Machine readable name to represent this field in the Database"
+msgstr ""
+
+#: views/fields.php:76
+msgid "Show this field on user admin screens?"
+msgstr ""
+
+#: views/fields.php:78
+msgid "Is this field required?"
+msgstr ""
+
+#: views/fields.php:79
+msgid "Show this field in user profile?"
+msgstr ""
+
+#: views/fields.php:80
+msgid "Type"
+msgstr ""
+
+#: views/fields.php:80
+msgid "Text Field"
+msgstr ""
+
+#: views/fields.php:80
+msgid "Textarea"
+msgstr ""
+
+#: views/fields.php:80
+msgid "Multiple Choice: Select Box"
+msgstr ""
+
+#: views/fields.php:80
+msgid "Multiple Choice: Radio Buttons"
+msgstr ""
+
+#: views/fields.php:80
+msgid "Date Field"
+msgstr ""
+
+#: views/fields.php:80
+msgid "Checkbox"
+msgstr ""
+
+#: views/fields.php:80
+msgid "Hidden Field"
+msgstr ""
+
+#: views/fields.php:80
+msgid "Callback Function"
+msgstr ""
+
+#: views/fields.php:83
+msgid "<strong>Checkbox: </strong> Option not used."
+msgstr ""
+
+#: views/fields.php:84
+msgid "<strong>Text Field:</strong> Option is not used."
+msgstr ""
+
+#: views/fields.php:85
+msgid ""
+"<strong>Multiple Choice:</strong> Separate multiple options with a comma (i."
+"e. yes,no)."
+msgstr ""
+
+#: views/fields.php:86
+msgid ""
+"<strong>Date:</strong> Option is used to determine range of available dates. "
+"Enter two years separated by commas. i.e. 2000,2015."
+msgstr ""
+
+#: views/fields.php:87
+msgid ""
+"<strong>Textarea:</strong> Option is used to determine height and width of "
+"text box. Enter dimensions width them height, separated by a comma (i.e. "
+"<em>300px,100px</em> would generate a box that is 300 pixels wide and 100 "
+"pixels tall)."
+msgstr ""
+
+#: views/fields.php:88
+msgid ""
+"<strong>Hidden Field:</strong> Option determines the value that will be "
+"passed to the hidden field."
+msgstr ""
+
+#: views/instructions.php:2
+msgid "How to use"
+msgstr ""
+
+#: views/instructions.php:4
+msgid ""
+"Simply navigate to the edit screen for the post or page on which you would "
+"like the form to appear and click the Registration button on the TinyMCE "
+"(shown at the right)."
+msgstr ""
+
+#: views/instructions.php:7
+msgid "For updates please visit:"
+msgstr ""
+
+#: views/instructions.php:7
+msgid "Simplr Registration Form"
+msgstr ""
+
+#: views/main.php:21
+msgid "Core Settings"
+msgstr ""
+
+#: views/main.php:25
+msgid "Redirect default signup action to this page"
+msgstr ""
+
+#: views/main.php:27
+msgid ""
+"Use this option to redirect the default WordPress wp-login.php?"
+"action=redirect action. This will not redirect your login page as a whole."
+msgstr ""
+
+#: views/main.php:43
+msgid "Redirect default profile page"
+msgstr ""
+
+#: views/main.php:46
+msgid ""
+"Use this option to force users to access only their \"front\" end profile "
+"page ... i.e. the page with the [profile_page] shortcode"
+msgstr ""
+
+#: views/main.php:53
+msgid "Custom Thank You Page"
+msgstr ""
+
+#: views/main.php:56
+msgid ""
+"You can leave this field blank. The default behavior outputs a confirmation "
+"on the page which the registration shortcode is save. Use this only if you "
+"want to redirect the user elsewhere after registration."
+msgstr ""
+
+#: views/main.php:63
+msgid "Default FROM Email"
+msgstr ""
+
+#: views/main.php:70
+msgid "Disable Plugin Styles"
+msgstr ""
+
+#: views/main.php:80
+msgid "Select a style"
+msgstr ""
+
+#: views/main.php:88
+msgid "Override Default Stylesheet"
+msgstr ""
+
+#: views/main.php:90
+msgid ""
+"Specify a custom stylesheet. Will not apply if \"Plugin Styles\" are disabled"
+msgstr ""
+
+#: views/moderation.php:5
+#, php-format
+msgid ""
+"You've successfully registered for %%blogname%% but before your account can "
+"be used you must activate it. To activate use the link below %%link%%. "
+msgstr ""
+
+#: views/moderation.php:6
+#, php-format
+msgid "Please activate your %%blogname%% account"
+msgstr ""
+
+#: views/moderation.php:8
+#, php-format
+msgid "Your account was activated. Your username is %%username%%."
+msgstr ""
+
+#: views/moderation.php:9
+#, php-format
+msgid "Your %%blogname%% account was activated."
 msgstr ""
 
 #: views/moderation.php:23
 msgid "Settings saved"
+msgstr ""
+
+#: views/moderation.php:28
+msgid "These settings allow you to enable and control moderation"
+msgstr ""
+
+#: views/moderation.php:31
+msgid "Enable Moderation?"
+msgstr ""
+
+#: views/moderation.php:42
+msgid "Approval Mode"
+msgstr ""
+
+#: views/moderation.php:45
+msgid ""
+"In *automatic* mode, the user is activated/approved as soon as the "
+"activation link in the moderation email is clicked. In *manual* mode the "
+"user is only approved after a site admin has approved that account."
+msgstr ""
+
+#: views/moderation.php:46
+msgid "Automatic"
+msgstr ""
+
+#: views/moderation.php:46
+msgid "Manual"
+msgstr ""
+
+#: views/moderation.php:52
+msgid "Email Subject Line"
+msgstr ""
+
+#: views/moderation.php:54
+#, php-format
+msgid "Welcome to %%blogname%%"
+msgstr ""
+
+#: views/moderation.php:59
+msgid "Moderation Email"
+msgstr ""
+
+#: views/moderation.php:61
+#, php-format
+msgid ""
+"You can use user submitted values in this field by wrapping them in %%. For "
+"instance to use the value of the field 'first_name' you would type 'Welcome, "
+"%%first_name%% '. Use %%link%% for the activation link. "
+msgstr ""
+
+#: views/moderation.php:62
+msgid "hello"
+msgstr ""
+
+#: views/moderation.php:70
+msgid "Roles"
+msgstr ""
+
+#: views/moderation.php:72
+msgid "Which user roles can moderate new users."
+msgstr ""
+
+#: views/moderation.php:78
+msgid "Account Activated Email Subject Line"
+msgstr ""
+
+#: views/moderation.php:84
+msgid "Account Activated Email"
 msgstr ""
