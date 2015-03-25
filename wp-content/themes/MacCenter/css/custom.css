@@ -804,6 +804,10 @@ input[type="submit"], #submit, .button {
         display:none!important;
 }
 
+.entry-summary.col-md-6 {
+    padding-top: 50px;
+}
+
 .nameset{
         background-color:none;
         font-size:12px;
