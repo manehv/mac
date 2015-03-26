@@ -975,3 +975,11 @@ input[type="submit"], #submit, .button {
         font-weight:bold;
 }
 /*forgot password */
+.avia_transform .av_font_icon {
+    color: #000;
+    opacity: 1;
+    transform: scale(1);
+}
+.menu-item .av_font_icon {
+    color: #56656D;
+}

@@ -40,8 +40,7 @@ echo avia_title(array('title' => $results ));
 
 <div style="width:170px; float: left; margin-left: 58% ;margin-top:-140px; z-index:8000"> 
 <?php
-                            echo "<h4>".__('New Search','avia_framework')."</h4>";
-                            echo "<p>".__('If you are not happy with the results below please do another search','avia_framework')."</p>";
+                            
 
                             get_search_form();
                             echo "<span class='author-extra-border'></span>";
