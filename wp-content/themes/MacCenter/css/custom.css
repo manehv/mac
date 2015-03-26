@@ -944,7 +944,7 @@ input[type="submit"], #submit, .button {
 }
 #top .post-entry-12342 .avia_ajax_form .text_area{
         border-radius:10px !important;
-        width:96%;
+        width:100%;
 }
 #top .post-entry-12342 .avia_ajax_form input[type="submit"]{
         padding: 4px 21px !important;
