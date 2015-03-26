@@ -934,7 +934,7 @@ input[type="submit"], #submit, .button {
 #top .post-entry-12342 .avia_ajax_form .text_input, 
 #top .post-entry-12342  .avia_ajax_form .select,
 #top .post-entry-12342 .avia_ajax_form .text_area{
-        width:90%;
+        width:100%;
         padding:6px;
         font-family: 'myriad_set_promedium';
         background-color:#F3F3F4 !important;
