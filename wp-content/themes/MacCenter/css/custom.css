@@ -832,7 +832,7 @@ input[type="submit"], #submit, .button {
 
 #av_section_3 {
     position: relative;
-    z-index: -1;
+   /* z-index: -1;*/
 }
 
 #customer_login{
