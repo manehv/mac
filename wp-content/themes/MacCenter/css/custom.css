@@ -839,7 +839,7 @@ input[type="submit"], #submit, .button {
 
 #av_section_3 {
     position: relative;
-    z-index: -1;
+   /* z-index: -1;*/
 }
 
 #customer_login{
@@ -990,3 +990,8 @@ input[type="submit"], #submit, .button {
 #top .post-entry-12342 .avia_ajax_form p{
 	clear:none;
 }
+
+.page-id-29 .avia-image-container .avia-image-container-inner img{
+	margin:0px auto;
+}
+	
