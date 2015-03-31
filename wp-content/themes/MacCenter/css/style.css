@@ -1,95 +1,123 @@
-<!DOCTYPE html
-	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es-CO">
-<head>
-	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7; IE=EmulateIE9" /><meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1" />
-	<title>PlacetoPay - Comprobante de pago</title>
-	<link href="http://mc.arbolnaranja.com/wp-content/themes/MacCenter/css/style.css" type="text/css" rel="stylesheet"/>
+@import url('webfontkit-20150326-230131/stylesheet.css');
+body{
+	background-color:#f7f7f7;
+	margin: 0px;
+	
+	font-size: 12px;
+	font-family: 'myriad_set_promedium';
+}
+#placetopay-header{
+	background-color: #f7f7f7;
+	height: 50px;
+	z-index: 1;
+	border-color: #E0E0E0 !important;
+	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+	
+/*	padding-top: 4px;*/
+}
+.logo{
+   display: block;
+	position: relative;
+	z-index: 2;
+	transition: opacity 0.4s ease-in-out 0s;
+	background-image: url("LOGO-MACCENTER.png");
+	image-rendering: auto;
+	background-repeat: no-repeat;
+	background-position: 10px 5px;
+	height: 40px !important;
+	width: 73%;
+	background-size: 189px auto;
+	margin: auto;
+}
+.logoMC{
+   display: block;
+	position: relative;
+	z-index: 2;
+	transition: opacity 0.4s ease-in-out 0s;
+/*	LA SIGUIENTE RUTA SE MODIFICARA POR LA DEL SERVIDOR*/
+	background-image: url("http://mc.arbolnaranja.com/wp-content/uploads/2014/06/LOGO-MACCENTER.png");
+	image-rendering: auto;
+	background-repeat: no-repeat;
+	background-position: 10px 5px;
+	height: 40px !important;
+	width: 73%;
+	background-size: 189px auto;
+	margin: auto;
+}
+#placetopay-content { 
+	width: 500px; 
+	margin-left: auto; 
+	margin-right: auto; 
+	border-radius: 3px; 
+	margin-bottom: auto;
+	margin-top: auto;
+/*
+	-moz-border-radius: 3px; 
+	-webkit-border-radius: 3px; 
+	-khtml-border-radius: 3px; 
+	-webkit-box-shadow: 1px 1px 5px 0px #ccc; 
+*/
+/*	box-shadow: 1px 1px 5px 0px #ccc; */
+	padding: 30px; 
+}
 
+#placetopay-footer { 
+	width: 73%; 
+	margin-left: auto; 
+	margin-right: auto; 
+	text-align: center; 
+	color:#777;
+	font-size: 11px;
+	line-height: 30px;
+	background-color: #F7F7F7 !important;
+	padding-bottom: 20px;
+}
+h2 { 
+	border-bottom: 1px solid #E2E2E2;
+	padding: 5px;
+	color: #949699;	 
+	border-radius: 3px; 
+	-moz-border-radius: 3px; 
+	-webkit-border-radius: 3px; 
+	-khtml-border-radius: 3px; 
+	font-size: 28px; 
+	font-family: 'myriad_set_promedium';
+	letter-spacing: 1px;
+}
+	table.placetopay {width: 500px; margin-top: 20px;}
+	th.placetopay  {font-weight: bold;  color: #949699; padding-left: 5px; padding-right: 5px; text-transform: uppercase; border: 1px solid #CCC; font-size: 20px; }
+	td.placetopayheader {font-size: 14px; color: #666 !important;}
+	td.placetopaytitulo {font-size: 14px;  vertical-align: top; color: #666 !important;}
+	td.placetopayvalor {font-size: 14px; text-align: justify;color: #666 !important;}
+#line {
+	width: 100%;
+	border-bottom: solid 1px #CCC;
+	padding-bottom: 20px;
+	margin-bottom: 20px;	
+}
+#contenedor{
+	min-height: 600px !important;
+		
+}
 
-</head>
-<body>
-<div id="placetopay-header">
-	<div class="logoMC"></div></div>
-	<div id="contenedor">
-<br />
-	
-<div id="placetopay-content">
-	<h2 class="placetopay">¡Muchas gracias por su pago!</h2>
-	<div id="inform">Este es el comprobante de pago generado por su transacción, lea cuidadosamente los datos y conserve esta información.</div>
-	<br />
-	<table class="placetopay">
-	<tr><th class="placetopay" colspan="2">Datos del pagador</th></tr>
-	<tr><td class="placetopaytitulo" align="left">Identificación:&nbsp;</td>
-		<td class="placetopayvalor">##PAYERIDTYPE## ##PAYERID##</td></tr>
-	<tr><td class="placetopaytitulo" align="left">Nombre:&nbsp;</td>
-		<td class="placetopayvalor">##SHOPPERNAME##</td></tr>
-	<tr><td class="placetopaytitulo" align="left">Dirección IP:&nbsp;</td>
-		<td class="placetopayvalor">##IPADDRESS##</td></tr>
-	<tr><td colspan="2"></td></tr>
-	<tr><th class="placetopay" colspan="2">Información del pago</th></tr>
-	<tr><td class="placetopaytitulo" align="left">Tipo de transacci&oacute;n:&nbsp;</td>
-		<td class="placetopayvalor">VENTA NO PRESENCIAL</td></tr>
-	<tr><td class="placetopaytitulo" align="left">Fecha de pago:&nbsp;</td>
-		<td class="placetopayvalor">##DATE## ##TIME##</td></tr>
-	<tr><td class="placetopaytitulo" align="left">Referencia:&nbsp;</td>
-		<td class="placetopayvalor">##REFERENCE##</td></tr>
-	<tr><td class="placetopaytitulo" align="left">Valor pagado:&nbsp;</td>
-		<td class="placetopayvalor">##TOTALAMOUNT##</td></tr>
-	<tr><td class="placetopaytitulo" align="left">IVA:&nbsp;</td>
-		<td class="placetopayvalor">##TAXAMOUNT##</td></tr>
-	<tr><td class="placetopaytitulo" valign="top" align="left">Base de devoluci&oacute;n:&nbsp;</td>
-		<td class="placetopayvalor">##DEVOLUTIONBASE##<br/>
-		Sujeto a verificaci&oacute;n de la DIAN</td></tr>
-<!--
-	<tr><td class="placetopaytitulo" align="right">Valor pagado:&nbsp;</td>
-		<td class="placetopayvalor">##TOTALAMOUNTCNV##</td></tr>
-	<tr><td class="placetopaytitulo" align="right">IVA:&nbsp;</td>
-		<td class="placetopayvalor">##TAXAMOUNTCNV##</td></tr>
--->
-	<tr><td class="placetopaytitulo" align="left">Franquicia:&nbsp;</td>
-		<td class="placetopayvalor">##FRANCHISE##</td></tr>
-	<tr><td class="placetopaytitulo" align="left">##CREDITCARDNUMBER_LABEL##</td>
-		<td class="placetopayvalor">##CREDITCARDNUMBER##</td></tr>
-	<tr><td class="placetopaytitulo" align="left">##PERIOD_LABEL##</td>
-		<td class="placetopayvalor">##PERIOD##</td></tr>
-	<tr><td class="placetopaytitulo" align="left">Autorización:&nbsp;</td>
-		<td class="placetopayvalor">##AUTHORIZATION##</td></tr>
-	<tr><td class="placetopaytitulo" align="left">Recibo:&nbsp;</td>
-		<td class="placetopayvalor">##RECEIPT##</td></tr>
-	<tr><td class="placetopaytitulo" align="left">##RETAILCODE_LABEL##</td>
-		<td class="placetopayvalor">##RETAILCODE##</td></tr>
-	<tr><td class="placetopaytitulo" align="left">##TERMINALNUMBER_LABEL##</td>
-		<td class="placetopayvalor">##TERMINALNUMBER##</td></tr>
-	<tr><td class="placetopayvalor" colspan="2">##FRANCHISESLOGAN##</td></tr>
-	<tr><td colspan="2"></td></tr>
-	<tr><th class="placetopay" colspan="2">Preguntas y/o inquietudes</th></tr>
-	<tr><td class="placetopaytitulo" align="left">Producto/servicio adquirido:&nbsp;</td>
-		<td class="placetopayvalor"><a href="mailto:##MERCHANTEMAIL##">##MERCHANTEMAIL##</a></td></tr>
-	<tr><td class="placetopaytitulo" align="left">Transacción:&nbsp;</td>
-		<td class="placetopayvalor"><a href="mailto:##PROVIDEREMAIL##">##PROVIDEREMAIL##</a></td></tr>
-	<tr><td class="placetopayvalor" colspan="2">&nbsp;</td></tr>
-	<tr><th class="placetopay" colspan="2">Nota legal</th></tr>
-	<tr><td class="placetopayvalor" colspan="2" align="justify">Pagar&eacute; Incondicionalmente
-		y a la orden del acreedor, el valor total de este pagar&eacute; junto con los
-		intereses a las tasas m&aacute;ximas permitidas por la ley.</td></tr>
-	<tr><td class="placetopayvalor" colspan="2">&nbsp;</td></tr>
-	<tr><td><img src="##PROVIDERURL####PROVIDERLOGO##" alt="##PROVIDERNAME##"></td>
-	 <td align="right"><img src="##FRANCHISELOGO##" alt="##FRANCHISE##"/></td></tr>
-	</table>
-</div>
-<br />
-	</div>
-	<div id="logPlaceAb"></div>
-	
-<!--	<img src="https://www.placetopay.com/images/customers/PLACETOPAY.png" border="0"  alt=""/>-->
-	<div id="line"></div>
-<div id="placetopay-footer">
-	
+#inform {
+	font-size: 18px; text-align: center;color:#777;
+}
 
-Mac Center Colombia S.A.S. | Nit: 900311581 – 7 | Teléfonos: 7432130 - 7425701, Dirección: 14 # 81 – 19, oficina 305, Bogotá D.C. | correo electrónico: info@mac-center.com
+#logPlace {
+	margin: auto;
 	
-</div>
-</body>
-</html>
+	background-image: url("images/customers/PLACETOPAY.png");
+	height: 35px;
+	width: 100%;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+#logPlaceAb {
+	margin: auto;
+	background-image: url("https://www.placetopay.com/images/customers/PLACETOPAY.png");
+	height: 35px;
+	width: 100%;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
