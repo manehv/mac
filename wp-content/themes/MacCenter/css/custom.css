@@ -6,7 +6,18 @@
 @import url('fonts/open-sans-fontfacekit/web-fonts/opensans_regular/stylesheet.css');*/
 @import url('fonts/MyriadSetPro-Bold-fontfacekit/web-fonts/MyriadSetPro-Bold/stylesheet.css');
 @import url('fonts/MyriadSetPro-Medium-fontfacekit/stylesheet.css');
-
+/*TITULO FORMULARIO NEWS LETTER*/
+.ar_main_div_10005 .formtitle_style {
+padding: 0px;
+color: #222;
+font-family: 'myriad_set_promedium' !important;
+text-align: left;
+font-size: 14px;
+font-weight: normal;
+font-style: normal;	
+	
+	
+}
 #flex_column av_one_fifth {
         border-bottom: none !important;
 }
