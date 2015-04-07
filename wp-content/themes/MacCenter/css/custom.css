@@ -256,7 +256,7 @@ div.product p.stock { margin: 0 15px; }
 .products .thumbnail_container img{display:table-cell; vertical-align:middle; }
 #top div .quantity input.qty, .quantity input.qty{border:1px solid #e1e1e1; margin:0 10px; }
 table div.quantity{width:150px; }
-.woocommerce-page .button{margin-top:10px; }
+.woocommerce-page .button{margin-top:0px; }
 #top .avia-post-nav {background: none rgba(0, 0, 0, 0.1) !important; }
 .clsContent .avia-image-container{ /* width:64px; Commented because it makes all image too small */ display:inline-block; margin-right:25px; max-width: 100%; }
 .clsContent .av-special-heading{margin-top:0; }
