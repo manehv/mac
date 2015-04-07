@@ -790,7 +790,7 @@ Mobile Styles
         }
 }
 input[type="submit"], #submit, .button {
-        border-radius: 0px;
+        border-radius: 2px;
 }
 
 .form-row input[type="submit"], #submit{
