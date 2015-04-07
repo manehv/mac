@@ -216,7 +216,7 @@ top:6px;
 /*cart dropdown*/
 .cart_dropdown {
 position: absolute;
-right: -60px;
+right: 10px;
 height: 47px;
 width: 47px;
 line-height: 47px;
