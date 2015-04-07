@@ -12,7 +12,9 @@
 	box-shadow:rgba(255,255,255,0.0) 0 0 0 !important;
 	
 }
-
+.woocommerce-page .button.single_add_to_cart_button {
+	box-shadow:rgba(255,255,255,0.0) 0 0 0 !important;
+}
 
 
 /*BK FORMULARIO NEWSLETTER*/
