@@ -14,7 +14,7 @@ width: 150px;
 max-width: 100%;
 margin: 10px 10px 0px -20px;
 font-family: "myriad_set_promedium" !important;
-font-size: 13px !important;
+font-size: 13px!important;
 font-style: normal;
 cursor: pointer;
 background: none repeat scroll left top #1587C9;
@@ -26,6 +26,7 @@ border: 0px solid #E1E1E3;
 text-shadow: none;
 box-sizing: content-box;
 border-radius: 2px;
+box-shadow:none !important;
 
 }
 
