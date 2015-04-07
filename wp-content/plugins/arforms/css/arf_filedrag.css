@@ -1,0 +1,208 @@
+/* for file upload control */
+.arf_form .arfajax-file-upload {
+	font-weight: bold;
+	cursor:pointer;	
+	line-height:normal;
+	width:auto;
+	margin:0px 10px 0 0;
+	display: inline-block;
+	border: 1px solid #cccccc;
+	color: #ffffff;
+	text-decoration: none;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	padding: 7px 10px 0 10px;
+	background: #077bdd;
+	vertical-align:middle;
+	-webkit-box-sizing: content-box !important; 
+	-moz-box-sizing: content-box !important; 
+	box-sizing: content-box !important; 
+}
+
+.arf_form .ajax-file-remove {
+	font-size: 14px;
+	font-weight:normal;
+	cursor:pointer;	
+	line-height:normal;
+	height:20px;
+	width:auto;
+	margin:0px 10px 0 0;
+	display: inline-block;
+	border: 1px solid #9c332d;
+	color: #ffffff;
+	text-decoration: none;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	padding: 6px 7px 0 7px;
+	background: #d04540;
+	vertical-align:middle;
+	-webkit-box-sizing: content-box; 
+	-moz-box-sizing: content-box; 
+	box-sizing: content-box;
+	margin-top:-2px !important;   
+}
+
+.arf_form .ajax-file-remove img,
+.arf_form .arfajax-file-upload img { 
+	box-shadow:none !important;
+	border-radius:0 0 0 0 !important;
+	border:none !important; 
+	padding:0 !important;
+	margin:0 !important; 
+	float:left;
+	height:14px;
+	width:14px;
+}
+ 
+.arf_form .arf_info {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:13px;
+	font-weight:normal;
+	color:#787878;
+	margin-top:3px;
+}
+
+.arf_form .file_name {
+	float:left; 
+	height:18px; 
+	display:inline-block;
+}
+
+.arf_form .percent {
+	float:right; 
+	display:inline-block; 
+	height:18px; 
+	text-align:right;
+}
+
+.arf_form .arf_progress_bar {
+	display:inline-block;
+	height:20px;
+	border: none;
+	width:0%;
+} 
+
+@-webkit-keyframes progress-bar-stripes {
+  from { background-position: 40px 0; } to { background-position: 0 0; }
+}
+
+@-moz-keyframes progress-bar-stripes {
+  from { background-position: 40px 0;} to { background-position: 0 0; }
+}
+
+@-ms-keyframes progress-bar-stripes {
+  from { background-position: 40px 0; } to { background-position: 0 0; }
+}
+
+@-o-keyframes progress-bar-stripes {
+  from { background-position: 0 0; } to { background-position: 40px 0; }
+}
+
+@keyframes progress-bar-stripes { 
+	from { background-position: 40px 0; } to { background-position: 0 0; } 
+}
+
+.arf_form .progress {
+  height: 20px;
+  margin-top: 4px;
+  overflow: hidden;
+  background-color: #f7f7f7;
+  background-image: -moz-linear-gradient(top, #f5f5f5, #f9f9f9);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#f5f5f5), to(#f9f9f9));
+  background-image: -webkit-linear-gradient(top, #f5f5f5, #f9f9f9);
+  background-image: -o-linear-gradient(top, #f5f5f5, #f9f9f9);
+  background-image: linear-gradient(to bottom, #f5f5f5, #f9f9f9);
+  background-repeat: repeat-x;
+  -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+          border-radius: 4px;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff5f5f5', endColorstr='#fff9f9f9', GradientType=0);
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+     -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+          box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+.arf_form .progress .bar {
+  float: left;
+  width: 0;
+  height: 100%;
+  font-size: 12px;
+  color: #ffffff;
+  text-align: center;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  background-color: #0e90d2;
+  background-image: -moz-linear-gradient(top, #149bdf, #0480be);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#149bdf), to(#0480be));
+  background-image: -webkit-linear-gradient(top, #149bdf, #0480be);
+  background-image: -o-linear-gradient(top, #149bdf, #0480be);
+  background-image: linear-gradient(to bottom, #149bdf, #0480be);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff149bdf', endColorstr='#ff0480be', GradientType=0);
+  -webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+
+     -moz-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+          box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transition: width 0.6s ease;
+     -moz-transition: width 0.6s ease;
+       -o-transition: width 0.6s ease;
+          transition: width 0.6s ease;
+}
+
+.arf_form .progress .bar + .bar {
+  -webkit-box-shadow: inset 1px 0 0 rgba(0, 0, 0, 0.15), inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+     -moz-box-shadow: inset 1px 0 0 rgba(0, 0, 0, 0.15), inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+          box-shadow: inset 1px 0 0 rgba(0, 0, 0, 0.15), inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+}
+
+.arf_form .progress-striped .bar {
+  background-color: #149bdf;
+  background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.25, rgba(255, 255, 255, 0.15)), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, rgba(255, 255, 255, 0.15)), color-stop(0.75, rgba(255, 255, 255, 0.15)), color-stop(0.75, transparent), to(transparent));
+  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: -moz-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  -webkit-background-size: 40px 40px;
+     -moz-background-size: 40px 40px;
+       -o-background-size: 40px 40px;
+          background-size: 40px 40px;
+}
+
+.arf_form .progress.active .bar {
+  -webkit-animation: progress-bar-stripes 2s linear infinite;
+     -moz-animation: progress-bar-stripes 2s linear infinite;
+      -ms-animation: progress-bar-stripes 2s linear infinite;
+       -o-animation: progress-bar-stripes 2s linear infinite;
+          animation: progress-bar-stripes 2s linear infinite;
+}
+
+.arf_form .progress {
+	width:auto;
+	vertical-align:middle;
+	display:none;
+	height:22px;
+}
+
+.arf_form iframe {
+    width:0px;
+    height:0px;
+    border:none;
+    position:absolute;
+    left:-9999px;
+}
+
+.arf_form .file_name_info {
+	display:inline-block;
+	margin-top:5px;
+	vertical-align:middle;	
+}
+.arf_form .file_main_control img {
+	background:none;
+	box-shadow:none;
+	border:none;
+	height:14px;
+	width:14px;
+}
