@@ -6,6 +6,15 @@
 @import url('fonts/open-sans-fontfacekit/web-fonts/opensans_regular/stylesheet.css');*/
 @import url('fonts/MyriadSetPro-Bold-fontfacekit/web-fonts/MyriadSetPro-Bold/stylesheet.css');
 @import url('fonts/MyriadSetPro-Medium-fontfacekit/stylesheet.css');
+
+/*GLOW BTN AÑADIR A CARRITO*/
+.clsDetails button.single_add_to_cart_button {
+	box-shadow:rgba(255,255,255,0.0) 0 0 0 !important;
+	
+}
+
+
+
 /*BK FORMULARIO NEWSLETTER*/
 .ar_main_div_100 .arf_fieldset {
     background: none no-repeat scroll left top rgba(255, 255, 255, 0) !important;
