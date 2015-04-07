@@ -8,7 +8,7 @@
 @import url('fonts/MyriadSetPro-Medium-fontfacekit/stylesheet.css');
 /*BK FORMULARIO NEWSLETTER*/
 .ar_main_div_100 .arf_fieldset {
-    background: none no-repeat scroll left top rgba(255, 255, 255, 0);
+    background: none no-repeat scroll left top rgba(255, 255, 255, 0) !important;
     margin: 0px;
     padding: 30px 45px;
     border-radius: 0px;
