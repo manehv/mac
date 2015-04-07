@@ -7,10 +7,10 @@
 @import url('fonts/MyriadSetPro-Bold-fontfacekit/web-fonts/MyriadSetPro-Bold/stylesheet.css');
 @import url('fonts/MyriadSetPro-Medium-fontfacekit/stylesheet.css');
 /*TEXT FIELD CODIGO CUPON*/
- #top div td .actions .coupon .input-text {
+.coupon .input-text {
     width: 200px;
     float: left;
-    margin: 1px 1px 1px 0px;
+    margin: 0px 1px 1px 0px;
     font: 12px/17px "Helvetica Neue",Helvetica,Arial,sans-serif;
     padding: 12px;
     border-radius: 2px;
