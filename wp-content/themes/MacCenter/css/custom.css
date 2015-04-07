@@ -6,7 +6,13 @@
 @import url('fonts/open-sans-fontfacekit/web-fonts/opensans_regular/stylesheet.css');*/
 @import url('fonts/MyriadSetPro-Bold-fontfacekit/web-fonts/MyriadSetPro-Bold/stylesheet.css');
 @import url('fonts/MyriadSetPro-Medium-fontfacekit/stylesheet.css');
-
+/*POSISION BTN FORM NEWS LETTER*/
+.ar_main_div_100 .arf_submit_div.left_container {
+    text-align: center;
+    clear: none!important;
+    float: left!important;
+    margin: -10px 0px 0px 20px !important;
+}
 
 /*TEXT FIELD CODIGO CUPON*/
 .coupon .input-text {
