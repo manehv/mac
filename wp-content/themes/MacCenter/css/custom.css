@@ -6,8 +6,29 @@
 @import url('fonts/open-sans-fontfacekit/web-fonts/opensans_regular/stylesheet.css');*/
 @import url('fonts/MyriadSetPro-Bold-fontfacekit/web-fonts/MyriadSetPro-Bold/stylesheet.css');
 @import url('fonts/MyriadSetPro-Medium-fontfacekit/stylesheet.css');
-/*TITULO FORMULARIO NEWS LETTER*/
 
+/*STYLE BTN NEWS LETTER*/
+.ar_main_div_100 .arfsubmitbutton .arf_submit_btn {
+height: 35px;
+width: 150px;
+max-width: 100%;
+margin: 10px 10px 0px -20px;
+font-size: 13px !important;
+font-style: normal;
+cursor: pointer;
+background: none repeat scroll left top #1587C9;
+padding: 0px 10px;
+vertical-align: top;
+text-transform: none;
+color: #FFF !important;
+border: 0px solid #E1E1E3;
+text-shadow: none;
+box-sizing: content-box;
+border-radius: 2px;
+font-family: "myriad_set_promedium" !important;
+}
+
+/*TITULO FORMULARIO NEWS LETTER*/
 .ar_main_div_100 .formtitle_style {
     padding: 0px;
     color: #222;
