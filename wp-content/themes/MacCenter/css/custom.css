@@ -6,6 +6,11 @@
 @import url('fonts/open-sans-fontfacekit/web-fonts/opensans_regular/stylesheet.css');*/
 @import url('fonts/MyriadSetPro-Bold-fontfacekit/web-fonts/MyriadSetPro-Bold/stylesheet.css');
 @import url('fonts/MyriadSetPro-Medium-fontfacekit/stylesheet.css');
+
+#s2id_billing_country . select2-container country_to_state country_select{
+height: 37px;}
+
+
 /*TEXT FIELD CODIGO CUPON*/
 .coupon .input-text {
     width: 200px;
