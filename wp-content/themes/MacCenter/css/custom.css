@@ -710,7 +710,8 @@ Mobile Styles
   #simplr-form  .checkbox{width:auto !important;}
   .clsinfo{top:10px;}
   #simplr-form input[type="submit"] {
-                margin-top:45px;}
+  margin-top:45px;}
+  #advanced_menu_toggle, #advanced_menu_hide{display:block;}
 }
 @media only screen and (min-width:768px) and (max-width:980px) {
         .chosen-container {
@@ -980,6 +981,7 @@ input[type="submit"], #submit, .button {
     color: #000;
     opacity: 1;
     transform: scale(1);
+    -webkit-transform:scale(1);
 }
 .menu-item .av_font_icon {
     color: #56656D;
