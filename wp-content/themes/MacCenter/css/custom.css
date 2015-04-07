@@ -6,6 +6,16 @@
 @import url('fonts/open-sans-fontfacekit/web-fonts/opensans_regular/stylesheet.css');*/
 @import url('fonts/MyriadSetPro-Bold-fontfacekit/web-fonts/MyriadSetPro-Bold/stylesheet.css');
 @import url('fonts/MyriadSetPro-Medium-fontfacekit/stylesheet.css');
+/*TEXT FIELD CODIGO CUPON*/
+ .coupon  {
+    width: 200px;
+    float: left;
+    margin: 1px 1px 1px 0px;
+    font: 12px/17px "Helvetica Neue",Helvetica,Arial,sans-serif;
+    padding: 12px;
+    border-radius: 2px;
+    height: 38px;
+}
 
 /*GLOW BTN AÑADIR A CARRITO*/
 .clsDetails button.single_add_to_cart_button {
