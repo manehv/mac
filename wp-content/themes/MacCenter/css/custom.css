@@ -6,6 +6,12 @@
 @import url('fonts/open-sans-fontfacekit/web-fonts/opensans_regular/stylesheet.css');*/
 @import url('fonts/MyriadSetPro-Bold-fontfacekit/web-fonts/MyriadSetPro-Bold/stylesheet.css');
 @import url('fonts/MyriadSetPro-Medium-fontfacekit/stylesheet.css');
+
+.ar_main_div_104 .arfsubmitbutton .arf_submit_btn{
+	font-family: "myriad_set_promedium" !important;
+}
+
+
 /*OCULTAR LINK FORM POPUP*/
 .ar_main_div_104 #brand-div.top_container {
     margin-left: 0px;
