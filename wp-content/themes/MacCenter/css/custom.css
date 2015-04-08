@@ -12,7 +12,7 @@
     	clear: both;
     	text-align: left;
 }
-}
+
 
 
 
@@ -99,7 +99,6 @@ box-shadow:none !important;
     color: #222;
     font-family: 'myriad_set_promedium' !important;
     text-align: left;
-    font-size: 14px !important;
     font-weight: normal;
     font-style: normal;
 }
