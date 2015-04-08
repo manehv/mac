@@ -6,6 +6,18 @@
 @import url('fonts/open-sans-fontfacekit/web-fonts/opensans_regular/stylesheet.css');*/
 @import url('fonts/MyriadSetPro-Bold-fontfacekit/web-fonts/MyriadSetPro-Bold/stylesheet.css');
 @import url('fonts/MyriadSetPro-Medium-fontfacekit/stylesheet.css');
+/*POSICION BTN NEWSLETTER POPUP*/
+.ar_main_div_104 .arf_submit_div.top_container{
+	margin-left: 0 !important;
+    	clear: both;
+    	text-align: left;
+}
+}
+
+
+
+
+
 /*OCULTAR LINK ARFORMS*/
 .ar_main_div_100 #brand-div.left_container {
     text-align: center;
