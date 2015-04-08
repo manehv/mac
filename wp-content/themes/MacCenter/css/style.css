@@ -76,11 +76,8 @@ body{
 h2 { 
 	padding: 0px 2px 0px 30px !important;
 	border: 1px solid #CCC;
-	color: #949699;	 
-	border-radius: 0px; 
-	-moz-border-radius: 3px; 
-	-webkit-border-radius: 3px; 
-	-khtml-border-radius: 3px; 
+	color: #000;	 
+	border-radius: 0px;  
 	font-size: 28px; 
 	font-family: 'myriad_set_promedium';
 	letter-spacing: 1px;
