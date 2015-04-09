@@ -1,4 +1,4 @@
-@import url('/fonts/webfontkit-20150326-230131/stylesheet.css');
+@import url('/fonts/MyriadSetPro-Medium-fontfacekit/stylesheet.css');
 
 
 body{
@@ -20,7 +20,6 @@ body{
 	position: relative;
 	z-index: 2;
 	transition: opacity 0.4s ease-in-out 0s;
-/*	LA SIGUIENTE RUTA SE MODIFICARA POR LA DEL SERVIDOR*/
 	background-image: url("http://mc.arbolnaranja.com/wp-content/uploads/2014/06/LOGO-MACCENTER.png");
 	image-rendering: auto;
 	background-repeat: no-repeat;
