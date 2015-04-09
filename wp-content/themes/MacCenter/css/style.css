@@ -95,7 +95,7 @@ h2 {
 	background-position: center center;
 }
 /*ESTILOS MOVIL*/
-@media only screen and (max-width: 300px) {
+@media only screen and (max-width: 1200px) {
 	
 	#placetopay-header{
 	background-color: #f7f7f7;
