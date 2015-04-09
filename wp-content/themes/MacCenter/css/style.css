@@ -1,4 +1,5 @@
 @import url('fonts/MyriadSetPro-Medium-fontfacekit/stylesheet.css');
+
 body{
 	background-color:#f7f7f7;
 	margin: 0px;
@@ -18,7 +19,7 @@ body{
 	position: relative;
 	z-index: 2;
 	transition: opacity 0.4s ease-in-out 0s;
-	background-image: url("LOGO-MACCENTER.png");
+	background-image: url("http://mc.arbolnaranja.com/wp-content/uploads/2014/06/LOGO-MACCENTER.png");
 	image-rendering: auto;
 	background-repeat: no-repeat;
 	background-position: 10px 5px;
@@ -33,7 +34,7 @@ body{
 	z-index: 2;
 	transition: opacity 0.4s ease-in-out 0s;
 /*	LA SIGUIENTE RUTA SE MODIFICARA POR LA DEL SERVIDOR*/
-	background-image: url("LOGO-MACCENTER.png");
+	background-image: url("http://mc.arbolnaranja.com/wp-content/uploads/2014/06/LOGO-MACCENTER.png");
 	image-rendering: auto;
 	background-repeat: no-repeat;
 	background-position: 10px 5px;
@@ -130,7 +131,7 @@ h2 {
 
 }
 	.logo{
-   display: block;
+    display: block;
 	position: relative;
 	z-index: 2;
 	transition: opacity 0.4s ease-in-out 0s;
