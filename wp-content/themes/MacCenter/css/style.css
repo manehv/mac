@@ -1,10 +1,10 @@
-@import url('fonts/MyriadSetPro-Medium-fontfacekit/stylesheet.css');
+@import url('/fonts/MyriadSetPro-Medium-fontfacekit/stylesheet.css');
 
 body{
 	background-color:#f7f7f7;
 	margin: 0px;
 	font-size: 12px;
-	font-family: 'myriad_set_promedium';
+	font-family: "myriad_set_promedium"!important;
 }
 #placetopay-header{
 	background-color: #f7f7f7;
@@ -14,20 +14,7 @@ body{
 	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
 
 }
-.logo{
-   display: block;
-	position: relative;
-	z-index: 2;
-	transition: opacity 0.4s ease-in-out 0s;
-	background-image: url("http://mc.arbolnaranja.com/wp-content/uploads/2014/06/LOGO-MACCENTER.png");
-	image-rendering: auto;
-	background-repeat: no-repeat;
-	background-position: 10px 5px;
-	height: 40px !important;
-	width: 73%;
-	background-size: 189px auto;
-	margin: auto;
-}
+
 .logoMC{
    display: block;
 	position: relative;
@@ -50,7 +37,7 @@ body{
 	border-radius: 3px; 
 	margin-bottom: auto;
 	margin-top: auto;
-	font-family: 'myriad_set_promedium';
+	font-family: 'myriad_set_promedium'!important;
 /*
 	-moz-border-radius: 3px; 
 	-webkit-border-radius: 3px; 
@@ -71,7 +58,7 @@ body{
 	line-height: 30px;
 	background-color: #F7F7F7 !important;
 	padding-bottom: 20px;
-	font-family: 'myriad_set_promedium';
+	font-family: 'myriad_set_promedium'!important;
 }
 h2 { 
 	padding: 0px 2px 0px 30px !important;
@@ -83,11 +70,11 @@ h2 {
 	text-align: center;
 
 }
-	table.placetopay {width: 500px; margin-top: 20px;font-family: 'myriad_set_promedium';}
+	table.placetopay {width: 500px; margin-top: 20px;font-family: 'myriad_set_promedium'!important;}
 	th.placetopay  {font-weight: bold;  color: #949699; padding-left: 5px; padding-right: 5px; text-transform: uppercase; border: 1px solid #CCC; font-size: 20px; font-family: 'myriad_set_promedium';}
 	td.placetopayheader {font-size: 14px; color: #666 !important;font-family: 'myriad_set_promedium';}
-	td.placetopaytitulo {font-size: 14px;  vertical-align: top; color: #666 !important;font-family: 'myriad_set_promedium';}
-	td.placetopayvalor {font-size: 14px; text-align: justify;color: #666 !important;font-family: 'myriad_set_promedium';}
+	td.placetopaytitulo {font-size: 14px;  vertical-align: top; color: #666 !important;font-family: 'myriad_set_promedium'!important;}
+	td.placetopayvalor {font-size: 14px; text-align: justify;color: #666 !important;font-family: 'myriad_set_promedium'!important;}
 #line {
 	width: 100%;
 	border-bottom: solid 1px #CCC;
@@ -100,18 +87,9 @@ h2 {
 }
 
 #inform {
-	font-size: 18px; text-align: center;color:#777;font-family: 'myriad_set_promedium';
+	font-size: 18px; text-align: center;color:#777;font-family: 'myriad_set_promedium'!important;
 }
 
-#logPlace {
-	margin: auto;
-	
-	background-image: url("PLACETOPAY.png");
-	height: 35px;
-	width: 100%;
-	background-repeat: no-repeat;
-	background-position: center center;
-}
 #logPlaceAb {
 	margin: auto;
 	background-image: url("https://www.placetopay.com/images/customers/PLACETOPAY.png");
@@ -122,15 +100,16 @@ h2 {
 }
 /*ESTILOS MOVIL*/
 @media only screen and (max-width: 767px) {
+	
 	#placetopay-header{
 	background-color: #f7f7f7;
 	height: 80px;
 	z-index: 1;
 	border-color: #E0E0E0 !important;
-	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);font-family: 'myriad_set_promedium';
+	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);font-family: 'myriad_set_promedium'!important;
 
 }
-	.logo{
+	.logoMC{
     display: block;
 	position: relative;
 	z-index: 2;
@@ -142,7 +121,6 @@ h2 {
 	height: 40px !important;
 	width: 73%;
 	background-size: 189px auto;
-		
 	-ms-transform: translate(10%,50%); /* IE 9 */
    	-webkit-transform: translate(10%,50%); /* Safari */
     transform: translate(10%,50%);		
@@ -150,9 +128,29 @@ h2 {
 	#placetopay-content {
     width:auto;
     margin: auto;
-    border-radius: 3px;
+    border-radius: 2px;
     padding: 30px;
+	font-family: 'myriad_set_promedium'!important;
 }
-	table.placetopay {width: auto; margin-top: 20px;font-family: 'myriad_set_promedium';
+	table.placetopay {
+		width: auto; 
+		margin-top: 20px;
+		font-family: 'myriad_set_promedium' !important;
 	}
+	.placetopay .placetopaytitulo .placetopayvalor {
+		width:auto;
+    margin: auto;
+	}
+	th.placetopay {
+    font-weight: bold;
+    color: #949699;
+    padding-left: 5px;
+    padding-right: 5px;
+    text-transform: uppercase;
+    border: 1px solid #CCC;
+    font-size: 20px;
+    font-family: "myriad_set_promedium"!important;	width:auto;
+    margin: auto;
+}
+
 }
