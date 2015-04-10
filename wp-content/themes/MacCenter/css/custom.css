@@ -11,7 +11,12 @@
 	font-family: "myriad_set_promedium" !important;
 }
 
-
+/* TEXT FICHAS TECNICAS*/
+.main_color blockquote {
+    border-color: #777;
+    text-align: justify !important;
+    font-size: 9px !important;
+}
 /*OCULTAR LINK FORM POPUP*/
 .ar_main_div_104 #brand-div.top_container {
     margin-left: 0px;
