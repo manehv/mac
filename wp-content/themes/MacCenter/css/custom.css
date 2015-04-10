@@ -140,8 +140,11 @@ box-shadow:none !important;
 }
 .responsive #top #wrap_all .flex_column {
     /*text-align: left !important;*/
+    border-bottom:solid 1px #eee;
 }
-
+.responsive #top #wrap_all .flex_column:last-child {
+	border-bottom:none !important;
+}
 
 /*AJUSTE MENU MOVILES*/
 /*#mobile-advanced li {
