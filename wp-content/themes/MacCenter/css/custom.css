@@ -138,7 +138,7 @@ box-shadow:none !important;
 #flex_column av_one_fifth {
         border-bottom: none !important;
 }
-.responsive  .flex_column {
+.responsive #top .flex_column {
     /*text-align: left !important;*/
     border-bottom:solid 1px #eee;
 }
