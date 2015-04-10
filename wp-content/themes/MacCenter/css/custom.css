@@ -138,11 +138,11 @@ box-shadow:none !important;
 #flex_column av_one_fifth {
         border-bottom: none !important;
 }
-.responsive #top #wrap_all{
+.responsive  .flex_column {
     /*text-align: left !important;*/
     border-bottom:solid 1px #eee;
 }
-.responsive #top #wrap_all:last-child {
+.responsive #top #wrap_all.flex_column:last-child {
 	border-bottom:none !important;
 }
 
