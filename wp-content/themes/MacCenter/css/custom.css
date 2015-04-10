@@ -193,7 +193,7 @@ background-color:red !important;
 }
 /*padding div descripcion de productos*/
 #desc p {
-padding-left:30px;      
+/*padding-left:30px;*/      
 }
 /* txt parrafo widget chat*/
 .cx-form .cx-lead {
