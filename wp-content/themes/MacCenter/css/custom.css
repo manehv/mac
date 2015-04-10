@@ -829,7 +829,16 @@ Mobile Styles
 /* Note: Add new css to the media query below that you want to only effect the Mobile and Tablet Portrait view */
 
 @media only screen and (max-width:767px) {
+	
   /* Add your Mobile Styles here */
+  
+  .avia-content-slider img {
+    overflow: hidden;
+    border-radius: 2px;
+    display: block;
+    position: relative;
+    border-bottom: solid 1px #eee;
+}
 .chosen-container {
         width:270px!important;
   }
