@@ -496,7 +496,8 @@ text-align:center;
     margin: 0px 0px 20px;
     width: 100%;
     text-align: center !important;
-    border-bottom: 1px solid #cccccc;
+    /*
+    border-bottom: 1px solid #cccccc;*/
 }
 
 .avia-section {
