@@ -388,7 +388,7 @@ overflow:hidden;
 
 .single-product .clsContent .flex_column p {
 font-size: 12px;
-padding:10px 10px 10px 0px
+padding:10px 10px 10px 10px;
 }
 
 .single-product .flex_column.av_one_third.first img {
