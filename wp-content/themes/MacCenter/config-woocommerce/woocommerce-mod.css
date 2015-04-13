@@ -216,7 +216,7 @@ top:6px;
 /*cart dropdown*/
 .cart_dropdown {
 position: absolute;
-right: -60px;
+right: 10px;
 height: 47px;
 width: 47px;
 line-height: 47px;
@@ -1405,7 +1405,7 @@ text-align: center !important;
 #top div td.actions .coupon .input-text {
 width: 200px;
 float: left;
-margin: 3px 3px 3px 0;
+margin: 1px 3px 3px 0;
 font: 12px/1.7em "Helvetica Neue",Helvetica,Arial,sans-serif;
 line-height: 17px;
 padding: 12px;

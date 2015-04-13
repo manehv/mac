@@ -7,15 +7,15 @@
  * Author:            PlacetoPay
  * Author URI:        https://www.placetopay.com/
  *
- * Version:           1.3.1
+ * Version:           1.3.2
  * Requires at least:
  * License:           GNU General Public License v3.0
  * License URI:       http://www.gnu.org/licenses/gpl-3.0.html
  * Domain Path:       /i18n/languages/
  *
  * @author Soporte <soporte@placetopay.com>
- * @copyright (c) 2013-2014 EGM Ingenieria sin fronteras S.A.S.
- * @version $Id: cron.php,v 1.3.1 2014/09/12 17:38:00 ingenieria Exp $
+ * @copyright (c) 2013-2015 EGM Ingenieria sin fronteras S.A.S.
+ * @version $Id: cron.php,v 1.3.2 2015/03/05 16:29:00 ingenieria Exp $
  */
 
 // aborte si es accesado directamente
@@ -23,6 +23,17 @@ if (!defined('ABSPATH')) exit();
 
 // agrega la rutina de inicialización de Place to Pay
 add_action('plugins_loaded', 'init_placetopay_class');
+
+// funcion para agregar js de acuerdo a la version
+function wp_woocommerce_addjs( $js ) {
+  global $woocommerce;
+  
+	if ( version_compare( $woocommerce->version, "2.1", ">=" ) ) {
+		wc_enqueue_js( $js );
+	} else {
+		$woocommerce->add_inline_js( $js );
+	}
+}
 
 function init_placetopay_class() {
 	// verifica que la clase de WooCommerce de medios de pago esté cargada
@@ -57,7 +68,7 @@ function init_placetopay_class() {
 	// carga la clase de
 	class WC_Gateway_PlacetoPay extends WC_Payment_Gateway
 	{
-		const VERSION = '1.3.1';
+		const VERSION = '1.3.2';
 
 		private $urlPlacetoPayImages = 'https://www.placetopay.com/images/providers/';
 		private $urlPlacetoPayRedirect;
@@ -443,7 +454,6 @@ function init_placetopay_class() {
 
 			// instancia el componente de Place to Pay
 			require_once dirname(__FILE__) . '/classes/egmGnuPG.class.php';
-
 			$gpg = new egmGnuPG($this->programPathGnuPG, $this->homeDirectoryGnuPG);
 			$crypted = $gpg->Encrypt($this->keyID, $this->passPhrase, $this->recipientKeyID, 'Place to Pay Test');
 			if ($crypted === false) {
@@ -454,7 +464,11 @@ function init_placetopay_class() {
 				}
 
 				// informa del error
-				$woocommerce->add_error(__('Payment error:', 'woothemes') . ' ' . nl2br($errorMessage));
+				if ( version_compare( $woocommerce->version, "2.3.5", ">=" ) ) {
+					wc_add_notice( '<strong>' . $btn['label'] . '</strong> ' . __( 'Payment error:', 'woothemes' ). ' ' . nl2br($errorMessage), 'error' );
+				} else {
+					$woocommerce->add_error(__('Payment error:', 'woothemes') . ' ' . nl2br($errorMessage));
+				}				
 				return false;
 			}
 
@@ -540,7 +554,7 @@ function init_placetopay_class() {
 				$woocommerce->cart->empty_cart();
 
 				// agrega el JS de auto-submit
-				$woocommerce->add_inline_js('
+				wp_woocommerce_addjs('
 					jQuery("body").block({
 							message: "' . esc_js(__(__('We are now redirecting you to Place to Pay to make payment, if you are not redirected please press the bottom.', 'woocommerce-placetopay'))) . '",
 							baseZ: 99999,

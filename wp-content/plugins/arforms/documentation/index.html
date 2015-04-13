@@ -1,0 +1,950 @@
+﻿<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<title>ReputeInfosystems | ARForms Documentation</title>
+<meta name="description" content="Make a custom wordpress form in fraction of time - ARForms Plugin allows you to make create fully functional contact forms without any coding. Try free demo Now!" />
+
+<meta name="keywords" content="form builder plugin,  wordpress form builder,  wordpress contact form builder, wordpress contact form builder plugin" />
+
+<link rel="stylesheet" href="assets/style.css" type="text/css" media="screen, projection">
+<script language="javascript" src="js/jquery-1.7.1.js"></script>
+<script language="javascript">
+
+jQuery(function($) {
+
+    $('.panel').click(function(event) {
+		 event.preventDefault();
+         //calculate destination place
+         var dest=0;
+         if($(this.hash).offset().top > $(document).height()-$(window).height()){
+              dest=$(document).height()-$(window).height();
+         }else{
+              dest=$(this.hash).offset().top;
+         }
+         //go to destination
+         $('html,body').animate({scrollTop:dest}, 1000,'swing');
+    });
+	
+	var stickyTop = $('#sidebar').offset().top; // returns number
+	 
+	$(window).scroll(function(){ // scroll event 
+	 
+		var windowTop = $(window).scrollTop() + 20; // returns number
+	 
+		if (stickyTop < windowTop) {
+		  $('#sidebar').css({ position: 'fixed', top: 0 });
+		}
+		else {
+		  $('#sidebar').css({ position: 'absolute', top:172 });
+		}
+	 
+    });
+});
+
+function Changeovericon(val,icon)
+{
+	$('#'+val).attr('src','assets/images/'+icon);
+}
+
+function Changeouticon(val,icon)
+{
+   $('#'+val).attr('src','assets/images/'+icon);
+}
+
+</script>
+</head>
+<body>
+<div class="main_wrap"> 
+<div class="header">
+	<div class="logo"></div>
+</div>
+<div class="wrap"> 
+<div id="sidebar">
+  <!--<h3><b style="color:#3B4146;font-size:15px;font-weight:bold;">TABLE OF CONTENTS:</b></h3>-->
+  <ul>
+    <li><a class="panel" href="#intro" onMouseOver="Changeovericon('homeicon','home-icon.png');" onMouseOut="Changeouticon('homeicon','home-icon.png');"><img src="assets/images/home-icon.png" align="absmiddle" id="homeicon" alt="Home Icon"> &nbsp;Home</a></li>
+    <li><a class="panel" href="#introduction" onMouseOver="Changeovericon('aricon','ar-icon.png');" onMouseOut="Changeouticon('aricon','ar-icon.png');"><img src="assets/images/ar-icon.png" align="absmiddle" id="aricon" alt="ARForms Icon"> &nbsp;What is ARForms?</a></li>
+    <li><a class="panel" href="#installation" onMouseOver="Changeovericon('installicon','install-icon.png');" onMouseOut="Changeouticon('installicon','install-icon.png');"><img src="assets/images/install-icon.png" align="absmiddle" id="installicon" alt="Install Icon"> &nbsp;Installation And Activation</a></li>
+    <li><a class="panel" href="#configure_settings" onMouseOver="Changeovericon('configureicon','configure-icon.png');" onMouseOut="Changeouticon('configureicon','configure-icon.png');"><img src="assets/images/configure-icon.png" align="absmiddle" id="configureicon" alt="Configure Icon"> &nbsp;Configure Settings</a></li>
+    <li><a class="panel" href="#add_new_form" onMouseOver="Changeovericon('addformicon','add-form-icon.png');" onMouseOut="Changeouticon('addformicon','add-form-icon.png');"><img src="assets/images/add-form-icon.png" align="absmiddle" id="addformicon" alt="Add Form Icon"> &nbsp;Add New Form</a></li>
+    <li><a class="panel" href="#form_styling" onMouseOver="Changeovericon('formstylingicon','form-styling-icon.png');" onMouseOut="Changeouticon('formstylingicon','form-styling-icon.png');"><img src="assets/images/form-styling-icon.png" align="absmiddle" id="formstylingicon" alt="Form Styling Icon"> &nbsp;Form Styling</a></li>
+    <li><a class="panel" href="#conditional_law" onMouseOver="Changeovericon('conditionallawicon','conditional-icon.png');" onMouseOut="Changeouticon('conditionallawicon','conditional-icon.png');"><img src="assets/images/conditional-icon.png" align="absmiddle" id="conditionallawicon" alt="Conditional Law Icon"> &nbsp;Conditional Logic</a></li>
+   
+    <li><a class="panel" href="#running_total" onMouseOver="Changeovericon('runningtotalicon','running-total-icon.png');" onMouseOut="Changeouticon('runningtotalicon','running-total-icon.png');"><img src="assets/images/running-total-icon.png" align="absmiddle" id="runningtotalicon" alt="Running Total Icon"> &nbsp;Math Logic / Running Total</a></li>
+    
+    <li><a class="panel" href="#prefix_suffix" onMouseOver="Changeovericon('prefixsuffixicon','prefix_suffix-icon.png');" onMouseOut="Changeouticon('prefixsuffixicon','prefix_suffix-icon.png');"><img src="assets/images/prefix_suffix-icon.png" align="absmiddle" id="prefixsuffixicon" alt="Prefix/Suffix Icon"> &nbsp;Prefix/Suffix Icon</a></li>
+    
+    
+    <li><a class="panel" href="#form_settings" onMouseOver="Changeovericon('formsettingicon','form-setting-icon.png');" onMouseOut="Changeouticon('formsettingicon','form-setting-icon.png');"><img src="assets/images/form-setting-icon.png" align="absmiddle" id="formsettingicon" alt="Form Setting Icon"> &nbsp;Form Settings</a></li>
+    <li><a class="panel" href="#add_form_to_page" onMouseOver="Changeovericon('addformtopageicon','add-form-page.png');" onMouseOut="Changeouticon('addformtopageicon','add-form-page.png');"><img src="assets/images/add-form-page.png" align="absmiddle" id="addformtopageicon" alt="Publish Form Icon"> &nbsp;Publish Your Form</a></li>
+    <li><a class="panel" href="#sources_credits" onMouseOver="Changeovericon('infoicon','info-icon.png');" onMouseOut="Changeouticon('infoicon','info-icon.png');"><img src="assets/images/info-icon.png" align="absmiddle" id="infoicon" alt="Info Icon"> &nbsp;Sources & Credits</a></li>
+    <li><a class="panel" href="#changelog" onMouseOver="Changeovericon('changelogicon','change-log-icon.png');" onMouseOut="Changeouticon('changelogicon','change-log-icon.png');"><img src="assets/images/change-log-icon.png" align="absmiddle" id="changelogicon" alt="Change Log Icon"> &nbsp;Changelog</a></li>
+  </ul>
+</div>
+<div id="content">
+<div class="data_content">
+<div class="st-scroll">
+  <div id="intro">
+    <h1 style="margin-top:5px;margin-bottom:0px;"><b>ARForms - Exclusive Wordpress Form Builder Plugin ( Version: 2.7 )</b></h1>
+    <div style='margin-top:5px;float:left'>
+     	<div class="small_icon">
+        	<span class="icon_clock"></span><strong>Created:</strong> <span class="intro_val"> 04/04/2015</span>        </div>
+        <div class="small_icon">
+        	<span class="icon_by"></span><strong>By:</strong><span class="intro_val">&nbsp;<a href="http://www.reputeinfosystems.com" target="_blank">Repute Infosystems</a></span>        </div>
+        <div class="small_icon">
+        	<span class="icon_email"></span><strong> Email: </strong><a href="mailto:info@reputeinfosystems.com"><span class="intro_val">info@reputeinfosystems.com</span></a>        </div>
+        </div>
+    <div style="clear:both"></div>
+    <p>Thank you for purchasing my plugin. If you have any questions that are beyond the scope of this help file, please feel free to email via contact form <a href="http://reputeinfosystems.com/contactus.html" target="_blank">here</a>. Thanks so much!</p>
+  </div>
+	<div class="cont">
+	<h3 id="introduction" class="content_headline">What is ARForms?</h3>
+  <div class="content_data">
+  <p>ARForms is premium wordpress form builder plugin with inbuilt support of multiple Email Marketing Tools integration. It has support of 7 Email Marketing Tools which are Aweber, mailchimp, GetResponse, iContact, Constant Contact, eBizAC, GVO. ARForms is complete bundle and a very user friendly formbuilder to create various forms in just few clicks without any  advanced knowledge required. It supports all popular wordpress versions from 3.0 to 3.9</p>
+  <p>We have used very powerful front-end framework - Twitter bootstrap for faster and easier form builder. The Real Beauty of ARForms is, you can find ARForms in your native language. YES! Whatever you have just read is reality. ARForms is supporting various 11 languages like English, Arabic, French, Portuguese, Russian, Spanish, Japanese, Korean, Turkish, Chinese, Dutch languages by default.</p>
+  
+  <p>ARforms provides facility to use various Email Marketing Tools through API as well as Webform method.</p>
+  
+  <p class="feature"><strong>ARForms Key Features:</strong></p>
+  <div class="feature_listing">
+  <ul>
+  	<li><span></span>Exclusive Formbuilder plugin with multiple <strong>Email Marketing Tools</strong> support.</li>
+    <li><span></span>Multiple popular <strong>Email Marketing Tools integration</strong> with form.</li>
+	<li><span></span>A very unique and very rich <strong>Form Styling Tool</strong> with Google Font support.</li>
+	<li><span></span>To make your forms even better, ARForms supports <strong>Form Level Custom CSS</strong> as well as <strong>Field Level Custom CSS.</strong></li>
+    <li><span></span>Support for adding Beautiful <strong>Prefix/Suffix</strong> icons at fields</li>
+    <li><span></span><strong>Multiple column layout</strong> support. Now build your forms beautifully with <strong>2 columns and 3 columns</strong>.</li>
+    <li><span></span><strong>Multiple Form Steps </strong> facility to build <strong>Survey style forms</strong> and <strong>Wizard style forms</strong></li>
+    <li><span></span><strong>Transparent Modal Forms </strong> facility to make your form even richer</li>
+	<li><span></span>Facility to <strong>load modal forms on page load</strong></li>
+    <li><span></span><strong>Visual Composer supported</strong></li>
+    <li><span></span><strong>Flying Forms & Sticky Forms </strong> to enhance your representation of forms</li>
+	<li><span></span>Dynamic field setting using <strong>Conditional laws</strong>. You can Hide/Show fields based on rules applied on field.</li>
+	<li><span></span><strong>Data Migration</strong> is another very awesome feature of ARForms. You can <strong>Import / Export</strong> your Forms and Form Entries. </li>
+    <li><span></span>You can build forms with <strong>Custom Background Image</strong></li>
+    <li><span></span>Build forms with <strong>Transparent Fields </strong> over background image and give your form unique look</li>
+    <li><span></span>Find Arforms in your native language. <strong>Multilingual</strong> plugin with WPML support.</li>
+    <li><span></span>Absolutely <strong>no programming skill required</strong>.</li>
+    <li><span></span><strong>Ready form templates</strong> for free. e.g. Contact Us Form, Subscription Form, Job Application Form, Feedback Form, RSVP Form and many more.</li>
+    <li><span></span>Fully customizable <strong>form styling</strong> tool.</li>
+    <li><span></span>Ajax enabled forms to give smooth experience to users.</li>
+    <li><span></span>Ability to display <strong>running total</strong> based on calculation on fields' value.</li>
+    <li><span></span>Ability to <strong>display any external images</strong> on the form with Image control.</li>
+    <li><span></span>With ARForms, you can register new user</li>
+	<li><span></span><strong>Twitter bootstrap</strong> integrated</li>
+    <li><span></span><strong>Wide range of useful form elements</strong> to create various forms quickly.</li>
+	<li><span></span><strong>progressive file upload facility without FLASH</strong></li>
+	<li><span></span><strong>fancy checkbox and radio buttons</strong> with multiple color options.</li>
+	<li><span></span>To avoid spamming, ARForms has<strong> RECaptcha and Custom Captcha Support.</strong></li>
+    <li><span></span>Fully Customizable <strong>Email notifications</strong> to users and admin.</li>
+    <li><span></span>Form <strong>Analytics</strong>.</li>
+    <li><span></span><strong>Recaptcha</strong> enabled to avoid spamming.</li>
+    <li><span></span><strong>Responsive</strong> forms.</li>
+    <li><span></span><strong>Export</strong> form data.</li>
+    <li><span></span>Global as well as form level <strong>Email Marketing Tools configuration</strong>.</li>
+    <li><span></span><strong>Instant preview</strong>.</li>
+    <li><span></span><strong>Different ways</strong> to create form.<br />
+     	<ul>
+        	<li> - popup <br /></li>
+      		<li>- widget</li>
+         </ul>
+    </li>
+    <li><span></span><strong>Embedded Objects</strong> supported.</li>
+    <li><span></span>Multiple <strong>browser compatible</strong>.</li>
+    <li><span></span>Quick <strong>form duplication</strong>.</li>
+    <li><span></span>Multiple <strong>calendar themes</strong>.</li>
+    <li><span></span><strong>Dedicated support</strong>.</li>
+  </ul>
+ </div>
+ </div>
+  <h3 id="installation" class="content_headline">Installation And Activation</h3>
+   <div class="content_data">
+  <p>You can install plugin either of these two methods.</p>
+  <p><span class="hielight"> 1)	New install via  FTP </span><br />
+  </p>
+  <p style="padding-left:20px;"> a.	Download the plugin from CodeCanyon, and extract it. You should find a directory <strong>arforms</strong>.<br />
+    b.	In your WordPress installation, upload <strong>arforms</strong> to wp-content/plugins/ <br />
+    c.	Activate the <strong>"ARForms"</strong> plugin through the <strong>Plugins</strong> menu from WordPress admin panel. </p>
+  <p> <span class="hielight">2)	New install via the WordPress Uploader</span> <br />
+  </p>
+  <p style="padding-left:20px;"> 
+  	a. Download the plugin from CodeCanyon <br />
+    b.	Log in to your WordPress admin panel <br />
+    c.	go to Plugins -> Add New -> Upload <br />
+    d.	Click on choose file and browse the download package from CodeCanyon. When the plugin uploads successfully, click on Activate Plugin. </p>
+    <p>After activating the plugin, you will be able to see "<strong>ARforms</strong>" menu in admin left menu.</p>
+    <p style="padding-left:20px;"><img src="assets/images/plugin_installation.png" alt="ARForms Plugin Installation" title="ARForms Plugin Installation"/></p>
+  <!--<p class="imp"></p>-->
+  
+  <p style="padding-left:20px;"> 
+    <p>After activating the plugin, you need to activate your license for support and enables automatic upgrades. A license key only be used for one installation of WordPress at a time.</p>
+    <p>Click on "General Settings" link for activate your license. You will see below section there on that page. To activate your license, you need to enter your Name, Email address and purchase code( Unique code obtained while purchased this product). </p>
+    <p style="padding-left:20px;"><img src="assets/images/license_activation_screenshot.png" alt="ARForms License Key  Activation" title="ARForms License Key  Activation"/></p>
+  
+  </div>
+  <h3 id="configure_settings">Configure Settings</h3>
+  
+  <div class="content_data">
+    <div>
+      <p>After installing and activating plugin, now its time to configure the plugin. <br /><Br>
+        Please click on "Global Settings" link from "ARForms" menu. <br /><Br>
+        From here you can set General settings of forms and Email Marketing Tools settings as displayed in below screen shot.</p>
+      <p style="padding-left:20px;"><div class="hielight_margin">1) General settings </div><br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;You can set default Error message and Success messages, Form Submission Method, Default Email Settings, Recaptcha Settings etc. from Global Settings.</p>
+      <p style="padding-left:20px;"><img src="assets/images/ARForms_Global_Settings.png" alt="ARForms Global Settings ( General Settings / RECAPTCHA Configuration / Form Settings / Email Settings )" title="ARForms Global Settings ( General Settings / RECAPTCHA Configuration / Form Settings / Email Settings )"/></p>
+      <p style="padding-left:20px;"><div class="hielight_margin"> 2) Email Marketing Tools </div><br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;You can configure various Email Marketing Tools from this area. Here you can manage whether you want to integrate these tools through API or Webform method for all forms. <br /><br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;To configure with API method, you just need to verify your Email Marketer account by entering API key and other required detail. And system will fetch all the list name / campaign name from your account. <br /><br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;To configure with webform method, you just need to enter HTML form generated from Email Marketer account. <br />
+      <p style="padding-left:20px;"><img src="assets/images/ARForms_Global_Autoresponder_Settings.png" alt="ARForms Global Settings ( Email Marketing Tools Settings )" title="ARForms Global Settings ( Email Marketing Tools Settings )"/></p>  
+      <p style="padding-left:20px;"><img src="assets/images/aweber.png" alt="Aweber" title="Aweber" style="vertical-align:middle"/>&nbsp;&nbsp;&nbsp;<strong class="autoresponder_title">Aweber</strong></p>
+      <p style="padding-left:40px;font-size:17px;"><strong>API Configuration</strong></p>
+      <p style="padding-left:60px;">Please follow below steps to configure Aweber <strong>with API Method</strong> </p>
+      <p style="padding-left:80px;"> 1) Select "Enable using API" method. <br />
+        2) Please Enter your "Consumer key" and "Consumer Secret" obtained while application was created. <br />
+        3) Click on Continue button. It will open a dialog box to authenticate your aweber account. <br />
+        4) Please enter your Aweber username and password and click on "Allow Access" button. <br />
+        5) That's all!! System will fetch all the list names from your aweber account. Select default List name to add subscribes. <br />
+        <br />
+        <br />
+        Note: You can refresh your list names anytime by clicking the link "Refresh List" <br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;You can Deactivate your account by clicking the link "Delete Configuration". </p>
+      <p style="padding-left:40px;font-size:17px;"><strong>WebForm Configuration</strong></p>
+      <p style="padding-left:60px;">Please follow below steps to configure Aweber <strong>with WebForm Method</strong> </p>
+      <p style="padding-left:80px;"> 1) Select "Enable using Web-form" method. <br />
+        2) Please login to your aweber account. <br />
+        3) Create a HTML form. <br />
+        4) Paste HTML form to textarea . <br />
+        5) That's all!! System will add subscriber to your account via this web form. <br />
+      </p>
+      <p style="padding-left:20px; font-size:16px;"><img src="assets/images/mailchimp.png" alt="Mailchimp" title="Mailchimp" style="vertical-align:middle"/>&nbsp;&nbsp;&nbsp;<strong class="autoresponder_title">MailChimp</strong></p>
+      <p style="padding-left:60px;font-size:17px;"><strong>API Configuration</strong></p>
+      <p style="padding-left:80px;">Please follow below steps to configure Mailchimp <strong>with API Method</strong> </p>
+      <p style="padding-left:100px;"> 1) Select "Enable using API" method. <br />
+        2) Please Enter your "API Key" obtained from your Mailchimp account. <br />
+        3) Click on "Verify" link. <br />
+        5) That's all!! System will verify your account and fetch all list names from your account.  Select default List name to add subscribes.<br />
+        <br />
+        <br />
+        Note: You can refresh your list names anytime by clicking the link "Refresh List" <br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;You can Deactivate your account by clicking the link "Delete Configuration". </p>
+      <p style="padding-left:60px;font-size:17px;"><strong>WebForm Configuration</strong></p>
+      <p style="padding-left:80px;">Please follow below steps to configure Mailchimp <strong>with WebForm Method</strong> </p>
+      <p style="padding-left:100px;"> 1) Select "Enable using Web-form" method. <br />
+        2) Please login to your Mailchimp account. <br />
+        3) Create a HTML form. <br />
+        4) Paste HTML form to textarea . <br />
+        5) That's all!! System will add subscriber to your account via this web form. <br />
+      </p>
+      <p style="padding-left:20px; font-size:16px;"><img src="assets/images/getresponse.png" alt="GetReponse" title="GetReponse" style="vertical-align:middle"/>&nbsp;&nbsp;&nbsp;<strong class="autoresponder_title">Getresponse</strong></p>
+      <p style="padding-left:60px;font-size:17px;"><strong>API Configuration</strong></p>
+      <p style="padding-left:80px;">Please follow below steps to configure Getresponse <strong>with API Method</strong> </p>
+      <p style="padding-left:100px;"> 1) Select "Enable using API" method. <br />
+        2) Please Enter your "API Key" obtained from your Getresponse account. <br />
+        3) Click on "Verify" link. <br />
+        5) That's all!! System will verify your account and fetch all campaign names from your account.  Select default Campaign name to add subscribes. <br />
+        <br />
+        <br />
+        Note: You can refresh your list names anytime by clicking the link "Refresh List" <br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;You can Deactivate your account by clicking the link "Delete Configuration". </p>
+      <p style="padding-left:60px;font-size:17px;"><strong>WebForm Configuration</strong></p>
+      <p style="padding-left:80px;">Please follow below steps to configure Getresponse <strong>with WebForm Method</strong> </p>
+      <p style="padding-left:100px;"> 1) Select "Enable using Web-form" method. <br />
+        2) Please login to your Getresponse account. <br />
+        3) Create a HTML form. <br />
+        4) Paste HTML form to textarea . <br />
+        5) That's all!! System will add subscriber to your account via this web form. <br />
+      </p>
+      <p style="padding-left:20px; font-size:16px;"><img src="assets/images/icontact.png" alt="iContact" title="iContact" style="vertical-align:middle"/>&nbsp;&nbsp;&nbsp;<strong class="autoresponder_title">iContact</strong></p>
+      <p style="padding-left:60px;font-size:17px;"><strong>API Configuration</strong></p>
+      <p style="padding-left:80px;">Please follow below steps to configure iContact <strong>with API Method</strong> </p>
+      <p style="padding-left:100px;"> 1) Select "Enable using API" method. <br />
+        2) Please Enter your "APP ID" obtained from your Getresponse account,"Username" and "Password" of your iContact account. <br />
+        3) Click on "Verify" link. <br />
+        5) That's all!! System will verify your account and fetch all list names from your account.  Select default List name to add subscribes. <br />
+        <br />
+        <br />
+        Note: You can refresh your list names anytime by clicking the link "Refresh List" <br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;You can Deactivate your account by clicking the link "Delete Configuration". </p>
+      <p style="padding-left:60px;font-size:17px;"><strong>WebForm Configuration</strong></p>
+      <p style="padding-left:80px;">Please follow below steps to configure iContact <strong>with WebForm Method</strong> </p>
+      <p style="padding-left:100px;"> 1) Select "Enable using Web-form" method. <br />
+        2) Please login to your iContact account. <br />
+        3) Create a HTML form. <br />
+        4) Paste HTML form to textarea . <br />
+        5) That's all!! System will add subscriber to your account via this web form. <br />
+      </p>
+      <p style="padding-left:20px; font-size:16px;"><img src="assets/images/constant-contact.png" alt="Constant Contact"  title="Constant Contact" style="vertical-align:middle"/>&nbsp;&nbsp;&nbsp;<strong class="autoresponder_title">Constant Contact</strong></p>
+      <p style="padding-left:40px;font-size:17px;"><strong>API Configuration</strong></p>
+      <p style="padding-left:60px;">Please follow below steps to configure Constant Contact <strong>with API Method</strong> </p>
+      <p style="padding-left:100px;"> 1) Select "Enable using API" method. <br />
+        2) Please Enter your "API key" and "Access Token" obtained from your Constant Contact account. <br />
+        3) Click on "Verify" link. <br />
+        5) That's all!! System will verify your account and fetch all list names from your account.  Select default List name to add subscribes.<br />
+        <br />
+        <br />
+        Note: You can refresh your list names anytime by clicking the link "Refresh List" <br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;You can Deactivate your account by clicking the link "Delete Configuration". </p>
+      <p style="padding-left:40px;font-size:17px;"><strong>WebForm Configuration</strong></p>
+      <p style="padding-left:60px;">Please follow below steps to configure Constant Contact <strong>with WebForm Method</strong> </p>
+      <p style="padding-left:100px;"> 1) Select "Enable using Web-form" method. <br />
+        2) Please login to your Constant Contact account. <br />
+        3) Create a HTML form. <br />
+        4) Paste form URL to textarea . To get this link of form, click the link icon under Actions. <br />
+        5) That's all!! System will add subscriber to your account via this web form. <br />
+      </p>
+      <p style="padding-left:20px; font-size:16px;"><img src="assets/images/gvo.png" alt="GVO"  title="GVO" style="vertical-align:middle"/>&nbsp;&nbsp;&nbsp;<strong class="autoresponder_title">GVO</strong></p>
+      <p style="padding-left:40px;font-size:17px;"><strong>WebForm Configuration</strong></p>
+      <p style="padding-left:60px;">Please follow below steps to configure GVO <strong>with WebForm Method</strong> </p>
+      <p style="padding-left:100px;"> 1) Select "Enable using Web-form" method. <br />
+        2) Please login to your GVO account. <br />
+        3) Create a HTML form. <br />
+        4) Paste HTML form to textarea . <br />
+        5) That's all!! System will add subscriber to your account via this web form. <br />
+      </p>
+      <p style="padding-left:20px; font-size:16px;"><img src="assets/images/ebizac.png" alt="eBizAC" style="vertical-align:middle"/>&nbsp;&nbsp;&nbsp;<strong class="autoresponder_title">eBizAC</strong></p>
+      <p style="padding-left:40px;font-size:17px;"><strong>WebForm Configuration</strong></p>
+      <p style="padding-left:60px;">Please follow below steps to configure eBizAC <strong>with WebForm Method</strong> </p>
+      <p style="padding-left:80px;"> 1) Select "Enable using Web-form" method. <br />
+        2) Please login to your eBizAC account. <br />
+        3) Create a HTML form. <br />
+        4) Paste HTML form to textarea . <br />
+        5) That's all!! System will add subscriber to your account via this web form. <br />
+      </p>
+      <p class="imp">You can always change this value while creating / editing forms in case if you want to use different settings for any  particular form later.</p>
+      </p>
+    </div>
+    <div style="clear:both;"></div>
+  </div>
+  <h3 id="add_new_form" class="content_headline">Add New form</h3>
+  <div class="content_data">
+    <div>
+      <p>Now, after configuring global settings you are almost ready to publish your first form for users.</p>
+      <p>To add new form please follow below steps:</p>
+      <p style="padding-left:20px;"><div class="hielight_margin"> 1)	Click on "Add New Form" from admin left menu. It will open a popup to select your preference to add new form.</div> </p>
+      <p style="padding-left:20px;"><div class="hielight_margin">  2)	Select "Blank Form" to add new form from scratch. That means you can design the form from the scratch according to your need.</div></p>
+      <p style="padding-left:20px;"><img src="assets/images/ARForms_Add_New_Form_Selection.png" alt="ARForms - Add New Blank Form " title="ARForms - Add New Blank Form "/></p>
+      <p style="padding-left:20px;">
+      	With ARForms, you can build any type of form according to your need. For Example, You can create Contact Us Form, Registration Form, Feedback Form. You can build multi-column form also. You can set Two column or Three Column layout with ARForms. Morover, you can also build multi Steps Form like Survey style and Wizard style forms. You can show / hide form fields based on conditional logic also.
+      </p>
+      <p style="padding-left:20px;"><div class="hielight_margin">  3)	Select other ready templates to add new form using ready template. All standard basic form are ready available with ARForms. You will get 7 ready templates which you can use to build your form.</div> <br />
+        
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a. ContactUs Form <br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b. Feedback Form <br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c. Registration Form <br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;d.  RSVP Form <br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;e. Subscription Form <br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;f. Survey Form <br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;g. Job Application Form
+      </p>
+       <p style="padding-left:20px;"><img src="assets/images/ARForms_Add_New_Template.png" alt=" ARForms -  Add New Form with Prebuilt Template " title=" ARForms - Add New Form with Prebuilt Template "/></p>
+      <p style="padding-left:20px;"><div class="hielight_margin">4)	To add new fields on form, you can drag and drop fields from right panel. You will see there are form basic elements and advanced elements available to create any level of complex form. With these elements, you can create any type of form according to your need. You can add new fields by just clicking on field element also.
+      </div> </p>
+      <p style="padding-left:20px;"><img src="assets/images/ARforms_Add_New_Form.png" alt="ARForms -  Add New Fields on Form " title="ARForms -  Add New Fields on Form "/></p>
+      <p style="padding-left:20px;"> <div class="hielight_margin">5)	After adding the field into the form, change field options according to your need. You will be able to see icon set by hovering on field.</div> <br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a.	Settings –  You will get all field options by clicking on this button. You can set all settings related to that field from that popup.<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b.	Duplicate – You can create clone of a field by clicking on this button <br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b.	Move – You can change order of fields by clicking on this button <br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b.	Delete – You can delete field by clicking on this button <br />
+        
+      </p>
+       <p style="padding-left:20px;"><img src="assets/images/ARForms_Field_Settings.png" alt="ARForms Field Settings" title=" ARForms Field Settings "/></p>
+      
+      
+    </div>
+    <div style="clear:both;"></div>
+  </div>
+  <h3 id="form_styling" class="content_headline">Form Styling</h3>
+  <div class="content_data">
+    <div>
+      <p>After creating the form, You may want to design the form according to your need.</p>
+      <p>You can fully customize your form from this area. You will get mainly 5 different tabs to change form styling:</p>
+      <div class="hielight_margin_sub">1) Form settings</div>
+      <p style="padding-left:40px;">Here you will get all main options related to form styling. You can set Form width, Form alignment, form border options and form background options etc. You will be able to choose Whether form title and description should be display or not. You can also change settings related to multi step form and modal form. </p>
+      <p style="padding-left:20px;"><img src="assets/images/ARForms_Formsettings.png" alt=" ARForms Form Styling  " title=" ARForms Form Styling "/></p>
+      
+      
+      
+      <div class="hielight_margin_sub">2) Label settings </div>
+      <p style="padding-left:40px;">Here you will get options to manage styling of field label. You can set label position, label alignment, label width, font color etc.</p>
+      
+      <p style="padding-left:20px;"><img src="assets/images/ARForms_Lablesettings.png" alt=" ARForms Label Styling " title=" ARForms Label Styling " /></p>
+      
+      <div class="hielight_margin_sub">3) Input field settings </div>
+      <p style="padding-left:40px;">Here you will get options to manage styling of all the input fields like textbox, textarea, radio buttons, checkboxes etc. You can set field width, border and text color of normal state, active state and error state. You can set field border color, border size and its radius and style also. You can also set spacing between two fields.</p>
+      
+      <p style="padding-left:20px;"><img src="assets/images/ARForms_Inputfieldsettings.png" alt=" ARForms Input Field Styling " title=" ARForms Input Field Styling "/></p>
+      
+      <div class="hielight_margin_sub">4) Submit button settings </div>
+      <p style="padding-left:40px;">Here you will get options to manage styling of submit button. You can set submit button alignment, button text, button background, button width and height, button text color,  button border settings etc.</p>
+      
+      <p style="padding-left:20px;"><img src="assets/images/ARForms_Submitbuttonsettings.png" alt=" ARForms Submit Button Styling " title=" ARForms Submit Button Styling "/></p>
+      
+      <div class="hielight_margin_sub">5) Validation Style settings </div>
+      <p style="padding-left:40px;">Here you will get options to manage styling of Error and success message display while form submission. Here you can choose error style like normal / advanced. In advanced setting, error message will display with animation and in modern style. normal error message will display error message under field element.</p>
+      
+      <p style="padding-left:20px;"><img src="assets/images/ARForms_Validation_Stylesettings.png" alt=" ARForms Validation Style Settings " title=" ARForms Validation Style Settings "/></p>
+      
+     <!-- <p style="padding-left:20px;"><img src="assets/images/preview.png" alt="ARForms Form Autoresponder Settings"/></p> -->
+      
+          
+    </div>
+    <div style="clear:both;"></div>
+  </div>
+  <h3 id="conditional_law" class="content_headline">Conditional Logic</h3>
+  <div class="content_data"> 
+  <div>
+    <div>
+    <p>Conditional Logic is a way to show / hide forms' fields by applying rules on it which depends on the user's input. If you want to show or hide any particular field (or group of fields (sections) ) based on the rule you have applied, then conditional logic is used to achieve this functionality. You can set conditional logic on any fields except Hidden field.</p>
+<p>To add conditional logic on any field, click on field's Settings icon which you will get by hovering on any field. By clicking on settings icon, you will be able to see 3 tabs which are: 'Basic Options, 'CSS Property' and 'Conditional Law'. Click on 'Conditional Law' tab. And you can set rules for that field from there.</p>
+<p>For Example, You have created contact form. And you want to show "Email" field only if user's prefered contact method is Email. To achieve this, Click on settings icon of email field, and add rule as displayed in below image. </p>
+
+      <p style="padding-left:20px;"><img src="assets/images/conditional-logic.png" alt="ARForms Conditional Law" title="ARForms Conditional Law"/></p>
+      
+
+
+<p style="padding-left:40px;"><div class="hielight_margin">&nbsp;&nbsp;&nbsp;&nbsp;Show/Hide ( Action )</div>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;There is dropdown for show or hide field, select one of them as per your requirement.<br><br>
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Show -</strong> By selecting this option, target field will be displayed on specific condition is fulfilled.
+<br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Hide -</strong> By selecting this option, target field will be hide on specified condition is fulfilled.
+
+</p>
+
+
+
+<p style="padding-left:20px;"><div class="hielight_margin">&nbsp;&nbsp;&nbsp;&nbsp;All/Any: ( Condition) </div>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The condition is part of the overall conditional logic, in addition to the actual rules, that determine what action to take. 
+<br>
+<br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>All -</strong> When you have applied more than one condition on target field. And you want that each condition should be fulfilled, at that time this option is used.<br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Any -</strong> When you have applied more than one condition on target field. And you want that any of them condition should be fulfilled, at that time this option is used.
+     
+ </p>
+<p style="padding-left:20px;"><div class="hielight_margin">&nbsp;&nbsp;&nbsp;&nbsp;Rules:</div>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Field -</strong>This is a field on your form you want to use as a basis for your rule.<br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Operator -</strong>This is the operation which determines whether a value is evaluated towards your condition. Options are: <i>"equals", "not equals", "greater than", "less than", "contains", "not contains"</i><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Value -</strong>This is an Option from the selected Field Name which the user must select or not select, based on the Operator.
+</p>
+    
+    
+    </div>
+ </div>
+    
+    </section>
+</div>
+  <h3 id="running_total" class="content_headline">Math Logic / Running Total</h3>
+  <div class="content_data"> 
+  <div>
+    <div>
+    <p>ARForms provides facility of Math Logic / Running Total that will perform run time calculation based on user's input. </p>
+    <p>To add math logic, you just need to add HTML control to editor. You can add formula for calculation by clicking on checkbox "Enable Running Total".</p>
+ 
+ 	<p>
+    <p style="padding-left:20px;"><div class="hielight_margin">  <strong>Enable Running Total:</strong></div>
+    	<br>When you want to add formulas for math logic, you need to check this checkbox. When you will check this checkbox, it will automatically add a pair of &lt;arftotal&gt; tag. ( Opening and closing tag. ) where your cursor is pointing. 
+   	</p>
+    <p class="imp">After checked the Enable Running Total, Please confirm that your cursor is pointing between the &lt;arftotal&gt; tag. You need to add formula between opening and closing tag.</p>	
+    
+    <p>After enabling the running total, you will be able to see a sample formula as displayed in below screenshot: Also, you will get Form fields to add in formula along with math operators for calculation.</p>
+    
+    <p style="padding-left:20px;"><img src="assets/images/running-total.png" alt="ARForms - Math Logic / Running Total" title="ARForms - Math Logic / Running Total"/></p>
+    
+    <p>
+    	
+    </p>
+
+<p style="padding-left:20px;"><div class="hielight_margin"><strong>Add Field:</strong></div>
+This is the list of all fields which you have already added in editor for your form. Select any field which you want to use for calculation. By selecting field, it will be added to your formula which you can see in HTML content area.
+</p>
+<br>
+<p style="padding-left:20px;"><div class="hielight_margin">  <strong>Math Operators:</strong></div></p>
+
+
+<p style="padding-left:20px;"><div class="hielight_margin">&nbsp;&nbsp;&nbsp;&nbsp;{ + } Sign:</div>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;It will perform addition operation between fields(operands). Just simply click on button and it will be added to your formula where your cursor is pointing.
+</p>
+
+<p style="padding-left:20px;"><div class="hielight_margin">&nbsp;&nbsp;&nbsp;&nbsp;{ - }  Sign:</div>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;It will perform subtraction operation between fields(operands). Just simply click on button and it will be added to your formula where your cursor is pointing.
+</p>
+
+<p style="padding-left:20px;"><div class="hielight_margin">&nbsp;&nbsp;&nbsp;&nbsp;{ * } Sign:</div>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;It will perform multiplication operation between fields(operands). Just simply click on button and it will be added to your formula where your cursor is pointing.
+</p>
+
+<p style="padding-left:20px;"><div class="hielight_margin">&nbsp;&nbsp;&nbsp;&nbsp;{ / } Sign:</div>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;It will perform division operation between fields(operands). Just simply click on button and it will be added to your formula where your cursor is pointing.
+</p>
+
+<p style="padding-left:20px;"><div class="hielight_margin">&nbsp;&nbsp;&nbsp;&nbsp;{ () } Bracket:</div>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Starting and closing bracket used to differentiates and give high priority to particular operation between formulas.
+
+<br><div >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>e.g.:	([Product:123]*[Qty:125]) + 5</strong></div>
+</p>
+
+<br>
+<p style="padding-left:20px;"><div class="hielight_margin"><strong>Validate Formula:</strong></div>
+	After adding the required fields and operators to the formula, you may want to check that this formula is valid or not. So, this button will check whether your formula is valid or not. If your formula contains any incorrect expression, then it will show you error message. 
+</p>
+
+      <p style="padding-left:20px;"><img src="assets/images/running-total-exa2.png" alt="ARForms - Math Logic / Running Total" title="ARForms - Math Logic / Running Total"/></p>
+       
+    </div>
+    <div style="clear:both;"></div>
+  </div>
+  </div>
+  
+  <h3 id="prefix_suffix" class="content_headline">Prefix/Suffix Icon</h3>
+  <div class="content_data">
+    <div>
+   <p> From Now, its too easy to create beautiful forms with meaningful icons at your fields with ARForms.</p>
+   <p>ARForms allows to add prefix and suffix icon(s) on fields like Single Line Text, Email Address, Password,  Number, Phone Number, Website/URL,Date and many more. </p>
+   <p>If you want to add  Prefix/ Suffix icon to field, Drag field in form editor, click on field option icon and you can add icons as per your requirement. and thats it!! You can view selected icons in form editor also. </p>
+   <p>
+   Now, If you want to change icon's color or it's Background color, than go to styling tab and click on "INPUT FIELD SETTINGS" tab. Here you will get "Prefix & Suffix Style" with two options: 1) Background and 2) Icon Color. Change color as your form suits. </p>
+   <p>
+    If you want apply custom css on prefix/suffix icon for specific field, Click on "Settings" icon by hovering in field in editor, and you will get "CSS Property" tab. Now, click on "Icon" cloud and add your custom properties there. </p>
+    <p style="padding-left:20px;"><img src="assets/images/prefix.png" alt="ARForms ARForms Prefix/Suffix Icon" title="ARForms Prefix/Suffix Icon"/></p>
+
+
+  	
+  	</div>
+    <div style="clear:both;"></div>
+  </div>
+  
+  <h3 id="form_settings" class="content_headline">Form Settings</h3>
+  <div class="content_data">
+    <div>
+      <p>You can manage all form related setting from this area. You can manage form's After submission method from this page. You can also manage email settings after form submission. Morover, You can manage Email Marketers settings and custom css related to form, form fields, labels, submit button from this page.</p>
+      
+      <p style="padding-left:20px;"><div class="hielight_margin"> 1)	On Submit :</div></p>
+      <p style="padding-left:20px;">You can manage what action should be performed after form submission. You will get mainly 3 options for submission method. <br>
+      
+      a) <strong>Display a Message</strong> - You can display a message on page itself after form submission. That means, A message will be displayed on same page after submitting the form. This method will not redirected to any page. <br>
+      b) <strong>Redirect to URL</strong> - Page will be redirected to a entered URL after form submission. That means, External page will be displayed after form submission. <br>
+      c) <strong>Display content from another page</strong> - Existing page content from your site will be displayed after form submission. That means, After submitting the form, If you want to just display thank you message from your existing page, you can use this option.
+      </p>
+      
+      <p style="padding-left:20px;"><img src="assets/images/ARForms_Autpresponder_Settings_onsubmit.png" alt="ARForms Form OnSubmit Settings " title="ARForms Form OnSubmit Settings"/></p>
+      
+      
+      
+      <p style="padding-left:20px;"><div class="hielight_margin"> 2)	Auto Response Email :</div></p>
+      
+      <p style="padding-left:20px;">You can manage user email content and subject line and other settings from this area which will be sent after form is submitted from front end.
+      You can set Admin Email address from here where admin will be notified after form submission. You can also set From/ Replyto name and From/ Replyto Email Address to set email headers.</p>
+       
+       <p style="padding-left:20px;"><img src="assets/images/ARForms_Autpresponder_Settings_email.png" alt=" ARForms Form Auto Response Email Settings " title=" ARForms Form Auto Response Email Settings "/></p>
+        
+      <p style="padding-left:20px;"><div class="hielight_margin"> 3)	Email Marketers :</div></p>
+      
+      <p style="padding-left:20px;">You can map Email Marketer(s) like Aweber, MailChimp, GetResponse, iContact, Constant Contact, GVO, EbizAC with the form from this area.<br><Br>
+        Also, you can set different settings than global setting for that particular form only. While creating new form, settings will be copied from Global Settings and than you can change settings according to your requirement for that particular form. <br><br>
+        In API method, you can change your list name if you want to add subscriber into another list than global setting. <br><br>
+        In Webform method, you can add different form value than global setting. <br><Br>
+        From this area, you can map form's field to Email Marketers. Map Email Marketers' first name, last name and email field with form fields. </p>
+        
+       <p style="padding-left:20px;"><img src="assets/images/ARForms_Autpresponder_Settings_marketers.png" alt=" ARForms Form Email Marketers Settings " title=" ARForms Form Email Marketers Settings "/></p>
+       
+      <p style="padding-left:20px;"><div class="hielight_margin"> 4)	Custom CSS: </div></p>
+      <p style="padding-left:20px;">From this area, you can set custom styling to form. You can add your own styling properties to form entities. <br><Br>
+       </p>
+       
+       <p style="padding-left:20px;"><img src="assets/images/ARForms_General_Settings.png" alt=" ARForms Form Custom CSS " title=" ARForms Form Custom CSS "/></p>
+       
+    </div>
+    <div style="clear:both;"></div>
+  </div>
+  <h3 id="add_form_to_page" class="content_headline">Publish Your Form</h3>
+  <div class="content_data">
+    <div>
+      <p> ARForms is very flexible which supports Visual Composer to add your forms to Page / Post.</p>
+      <p> If you have Visual Composer installed on your website, you can easisy add form by just clicking on "ARForms" module. Here is an example for you.</p>
+      <p style="padding-left:20px;"><img src="assets/images/addelement.png" alt=" ARForms with Visual Composer " title=" ARForms with Visual Composer "/></p>
+      
+      <p>If you don't have visual composer installed on your website, Follow below steps to add form into page/ post.</p>
+      <p style="padding-left:20px;"><div class="hielight_margin"> 1) Insert form into Page / Post </div></p>
+      
+      ARForms allows 
+      
+      <p style="padding-left:40px;"> a)	go to "Add New" from "Pages" menu. Or "Add New" from "Posts" menu.<br />
+        b)	Add page / post title <br />
+        
+        c)	You can see the "A" icon near "Add media" button above the editor. By clicking on that icon you will able to see a popup. <br />
+        
+        <p style="padding-left:20px;"><img src="assets/images/step1.png" alt=" ARForms Insert Form into Page/Post " title=" ARForms Insert Form into Page/Post "/></p>
+        
+        d)	From that popup you can select the form from dropdown which you wish to add into that page. Also, you can select how you want to add this form into page. That means whether you want to add form in page itself (Normal Form) or want to open in a popup window. <br />
+        
+        <strong><p> * Select "Internal" option to add form into website page.</p></strong>
+        <p>By selecting "Internal", Form will be displayed in your website page content area as below image. </p>
+         
+        <p style="padding-left:20px;"><img src="assets/images/ARForms_Add_Form_Internal.png" alt=" ARForms Internal Option to Add Form " title=" ARForms Internal Option to Add Form "/></p>
+        
+        <p style="padding-left:20px;"><img src="assets/images/ARForms_Insert_Form_Into_Page.png" alt=" ARForms Internal Form View " title=" ARForms Internal Form View "/></p>
+        
+        <strong><p> * Select "Link" / "Button" option to add form in modal window. You can also set modal window's height and width from this popup.</p></strong>
+        
+        <p style="padding-left:20px;"><img src="assets/images/ARForms_Add_Form_Bottom.png" alt=" ARForms To Add Form Using External Popup Option By Selecting Button " title=" ARForms To Add Form Using External Popup Option By Selecting Button "/></p>
+        
+        <p> By selecting "Link", A link will be added in your website page. Default link text will be "Click here to open Form". You can change link text from "Desc" argument of generated shortcode. </p>
+        
+         <p>By selecting "Button", A button will be added in your website page. Default Button text will be "Click here to open Form". You can change button text from "Desc" argument of generated shortcode. </p>
+        
+        </p>So, in this case form will be open in a nice modal window by clicking on Link/ Button as below screenshot: </p>
+        
+        <p style="padding-left:20px;"><img src="assets/images/ARForms_Popupbox.png" alt=" ARForms Form in Popup Window By Selecting Button " title=" ARForms Form in Popup Window By Selecting Button "/></p>
+        
+       	<strong><p> * Select "Fly" option to add form in popup with animation. </p></strong>
+        
+        <p> A button will be added to site page. You can add Fly form at position of Right / Left position. You can also set modal height and width. </p>
+        <p> Default button text will be "Click here to open Form". You can change button text by changing argument of "Desc" parameter of generated shortcode.  </p>
+        
+        <p style="padding-left:20px;"><img src="assets/images/ARForms_Add_Form_Fly.png" alt=" ARForms To Add Form Using External Popup Option By Selecting Fly " title=" ARForms To Add Form Using External Popup Option By Selecting Fly  "/></p>
+        
+        <p style="padding-left:20px;"><img src="assets/images/ARForms_Flyin_Form.png" alt=" ARForms Form in Popup Window By Selecting Fly "/></p>
+        
+        <strong><p> * Select "Sticky" option to add form in popup with animation. </p></strong>
+        
+        <p> A sticky button will be added to site page. You can add Sticky form at position of Top / Bottom / Left / Right position. You can also set modal height and width. </p>
+        <p> Default sticky button text will be "Click here to open Form". You can change button text by changing argument of "Desc" parameter of generated shortcode.  </p>
+        
+        <p style="padding-left:20px;"><img src="assets/images/ARForms_Add_Form_Sticky.png" alt=" ARForms To Add Form Using External Popup Option By Selecting Sticky " title=" ARForms To Add Form Using External Popup Option By Selecting Sticky "/></p>
+        
+        <p style="padding-left:20px;"><img src="assets/images/ARForms_Sticky_Form.png" alt=" ARForms Form in Popup Window By Selecting Sticky " /></p>
+        
+        <strong><p>Select "Onload" option to display form in popup while loading of your website page. </p></strong>
+        
+        <p>By selecting "Onload" option, popup will be open once your website page is loaded. That means user do not need to click on any link, button or anywhere on website page. You can set modal height and width as displayed in below image.  </p>
+        
+        <p style="padding-left:20px;"><img src="assets/images/ARForms_Add_Form_Onpageload.png" alt=" ARForms To Add Form Using External Popup Option By Selecting on Page Load "/></p>
+        
+        <p style="padding-left:20px;"><img src="assets/images/ARForms_Add_Form_Onpageload_Form.png" alt=" ARForms Form in Popup Window By Selecting on Page Load " title=" ARForms Form in Popup Window By Selecting on Page Load "/></p>
+        
+      </p>
+      <p style="padding-left:20px;"><div class="hielight_margin"> 2) Insert form into widget</div> </p>
+      
+      <p>With ARForms, you can display your form not only from page, but also in sidebar of your website pages. ARForms has ready widget which you need to just drag into sidebar and you are ready to publish your form !!</p>
+      
+      <p style="padding-left:40px;"> a)	go to "Appearance" => "widgets" from admin panel.<br />
+        b)	You will find "ARForms Form" widget in widget list. <br />
+        c)	Drag that widget into any sidebar. <br />
+        d)	Give title of widget, select the form you wish to display and its relevant options in sidebar and click on "Save" button. <br />
+      </p>
+      
+      <p style="padding-left:20px;"><img src="assets/images/step3.png" alt="ARForms Add Form into Widget" title="ARForms Add Form into Widget"/></p>
+      
+      
+      <p style="padding-left:20px;"><div class="hielight_margin"> 3) Insert form into theme</div> </p>
+      <p style="padding-left:40px;"> You can insert a form into page from your current theme / template file by calling the function. <br /></p>
+      <p>
+	    For Normal Form:<br />
+        <strong>&nbsp;&nbsp;< ?php echo maincontroller::get_form_shortcode(array('id' => FORMID)); ?></strong> <br /><br />
+        </p>
+        <p>
+		For Popup View:<br />
+		<strong>< ?php echo maincontroller::get_form_shortcode_popup(array('id' => 'FORMID', 'desc'=>'Click here to open Form', 'type'=>'link', 'height'=>'540', 'width'=>'800')); ?></strong><br><br />
+        </p>
+        <p>Note : Possible argument for type argument 1.) type="link" 2.) type="button".</p>
+        <p>
+		For Sticky Form:<br />
+		<strong>< ?php echo maincontroller::get_form_shortcode_popup(array('id' => 'FORMID', 'desc'=>'Click here to open Form', position='top', 'type'=>'sticky', 'height'=>'540', 'width'=>'800')); ?></strong> <br /><br />
+        </p>
+        <p>Note : Possible argument for position argument 1.) position="top" 2.) position="bottom".</p>
+        <p>
+		For Flying Form: <br />
+		<strong>< ?php echo maincontroller::get_form_shortcode_popup(array('id' => 'FORMID', 'desc'=>'Click here to open Form', position='left', 'type'=>'fly', 'height'=>'540', 'width'=>'800')); ?></strong> <br />
+        </p>
+        <p>Note : Possible argument for position argument 1.) position="left" 2.) position="right".</p>
+        <p class="imp" style="padding-left:40px;">FORMID will be replaced with your generated form id. </p>
+        
+      </p>
+      <p>So, THAT'S IT! Your form is ready to publish. Happy Form Building!!</p>
+    </div>
+    <div style="clear:both;"></div>
+  </div>
+  <h3 id="sources_credits" class="content_headline">Sources & Credits</h3>
+  <div class="content_data"> 
+  <div>
+    <div>
+      <p style="padding-left:20px;"><div class="hielight_link"> <a href="https://github.com/aweber/AWeber-API-PHP-Library" target="_blank" style="color:#464B4F;"> 1)	Aweber API </a> </div>
+        <div class="hielight_link"><a href="http://apidocs.mailchimp.com/api/downloads/%20-%20php" target="_blank" style="color:#464B4F;">2)	MailChimp API </a></div> 
+       <div class="hielight_link"> <a href="https://github.com/GetResponse/DevZone/tree/master/API" target="_blank" style="color:#464B4F;">3)	GetResponse API </a></div>
+        <div class="hielight_link"><a href="http://developer.icontact.com/" target="_blank" style="color:#464B4F;">4)	iContact API </a></div>
+       <div class="hielight_link"> <a href="https://github.com/constantcontact/php-sdk" target="_blank" style="color:#464B4F;">5)	Constant Contact API</a></div>
+       <div class="hielight_link"> <a href="http://datatables.net/" target="_blank" style="color:#464B4F;">6)	Datatables</a></div>
+       <div class="hielight_link"> <a href="http://www.jqplot.com/" target="_blank" style="color:#464B4F;">7)	jqPlot</a></div>
+       <div class="hielight_link"> <a href="http://fortawesome.github.io/Font-Awesome/" target="_blank" style="color:#464B4F;">8)	Font Awesome</a></div>
+      </p>
+    </div>
+    <div style="clear:both;"></div>
+  </div>
+  </div>
+  <h3 id="changelog" class="content_headline">Changelog</h3>
+  <div class="content_data"> 
+  <div>
+    <div>
+    <p style="padding-left:20px;"><div class="hielight_margin">Version 2.7 (04 April, 2015)</div>
+      <p style="padding-left:40px;"> 
+	    <ul>
+        <li>Added <strong>prefix/suffix </strong> font awesome icons support</li>
+       	<li>Added <strong>Visual Composer</strong> support</li>
+        <li>added New Add-On page for all add-on listing</li>
+        <li>Improved ajax form saving in admin side with respect to max_input_vars</li>
+        <li>Improved form submission from frontend with respect to jquery conflict</li>
+        <li>Improved Admin editor - more lightweight now</li>
+        <li>Added New facility for confirm Email same as confirm password</li>
+        <li>Given Server side validation ( required field PHP side validation to prevent spam )</li>
+        <li>Now sticky menu is also available for left and right position</li>
+        <li>Improved Import/Export functionality</li>
+        <li>Given facility to customize admin email with some useful predefined shortcodes</li>
+        <li>Added new 4 css cloud to place custom css for popup ( Link / Link - Hover / Button / Button - Hover )</li>
+        <li>Better UI implementation for field options</li>
+        <li>Given image upload facility for submit button hover</li>
+        <li>Other minor bug fixes.</li>
+        </ul>
+      </p>
+    <p style="padding-left:20px;"><div class="hielight_margin">Version 2.6.3 (15 December, 2014)</div>
+      <p style="padding-left:40px;"> 
+	    <ul>
+        <li>Added <strong>RESPONSIVE MODAL WINDOW</strong> facility</li>
+       	<li>Getresponse api is chagned according to new version.</li>
+        <li>Given facility to add transparent form background in normal forms ( without modal window ).</li>
+        <li>Added "media" selector for select image source ( wp media uploader) for IMAGE FIELD </li>
+        <li>Changed Tab Index for RTL</li>
+        <li>Added min length for textbox, textarea, Number and password field</li>
+        <li>Added facility for to set default value for Time Picker</li>
+        <li>Other Minor bug fixes.</li>
+        </ul>
+      </p>
+    <p style="padding-left:20px;"><div class="hielight_margin">Version 2.6.2 (31 October, 2014)</div>
+      <p style="padding-left:40px;"> 
+	    <ul>
+       	<li>Added support of checkbox multiple values with Match Logic / Running Total.</li>
+        <li>Added facility to add placeholder text for confirm password.</li>
+        <li>Other Minor bug fixes.</li>
+        </ul>
+      </p>
+    <p style="padding-left:20px;"><div class="hielight_margin">Version 2.6.1 (08 October, 2014)</div>
+      <p style="padding-left:40px;"> 
+	    <ul>
+       	<li>Minor bug fixes.</li>
+        </ul>
+      </p>
+       <p style="padding-left:20px;"><div class="hielight_margin">Version 2.6 (27 September, 2014)</div>
+      <p style="padding-left:40px;"> 
+	    <ul>
+       	<li>Added Color Picker Control.</li>
+        <li>Added Image Control.</li>
+        <li>Added Running Total Facility.</li>
+        <li>Added SMTP mail functionality.</li>
+        <li>Upgraded Bootstrap version.</li>
+        <li>Added input mask in phone number field.</li>
+        <li>Added styling options for Survery "Progress Bar".</li>
+        <li>Added support of wordpress 4.0 (CSS fixes) .</li>
+        <li>Added month / year changable in datepicker.</li>
+       	<li>Other minor bug fixes.</li>
+        </ul>
+      </p>
+       <p style="padding-left:20px;"><div class="hielight_margin">Version 2.5.4 (11 August, 2014)</div>
+      <p style="padding-left:40px;"> 
+	    <ul>
+       	<li>Added Conditional Logic on submit button.</li>
+        <li>Added New preset field choice for "Telephone Country Codes" for selectbox, checkbox and radio button options.</li>
+        <li>Improved CSS with respect to Responsive forms.</li>
+        <li>Improved Password strength indicator validations.</li>
+        <li>Other minor changes related to css classes and fonts.</li>
+        </ul>
+      </p>
+       <p style="padding-left:20px;"><div class="hielight_margin">Version 2.5.3 (31 July, 2014)</div>
+      <p style="padding-left:40px;"> 
+	    <ul>
+       	<li>Small bug fixes related to css styling.</li>
+        <li>Improved js / css loading speed while display form in front-end.</li>
+        <li>Other minor changes related to css classes and fonts.</li>
+        </ul>
+      </p>
+       <p style="padding-left:20px;"><div class="hielight_margin">Version 2.5.2 (19 July, 2014)</div>
+      <p style="padding-left:40px;"> 
+	    <ul>
+       	<li>Small bug fixes related to editor width.</li>
+        <li>Improved js / css loading speed while display form in front-end.</li>
+        <li>Improved loading speed while preview of form.</li>
+        <li>Improved all popup forms' view. ( Popup Form / Fly Form / Sticky Form ) .</li>
+        </ul>
+      </p>
+       <p style="padding-left:20px;"><div class="hielight_margin">Version 2.5.1 (12 July, 2014)</div>
+      <p style="padding-left:40px;"> 
+	    <ul>
+       	<li>Small bug fixes related to display Form title and description.</li>
+        <li>Small bug fixes related to import/export forms.</li>
+        </ul>
+      </p>	
+      <p style="padding-left:20px;"><div class="hielight_margin">Version 2.5 (10 July, 2014)</div>
+      <p style="padding-left:40px;"> 
+	    <ul>
+        <li>Complete new admin interface</li>
+		<li>Added like and slider control</li>
+        <li>Added Confirm Password facility</li>
+        <li>Added facility to duplicate fields</li>
+        <li>Added new option "Onload" for display form in modal while page load</li>
+		<li>Added new template for job application form</li>
+		<li>Added new color picker</li>
+        <li>Added new validation error message style ( normal / advanced )</li>
+		<li>Added new preview style with 3 different resolution</li>
+		<li>Improved RTL</li>
+		<li>Improved form submission ( with respect to max_input_vars)</li>
+		<li>Added new phone number formats to validate the field</li>
+		<li>Added New tooltip style</li>
+		<li>Checkbox, radio and select box options are now sortable</li>
+		<li>IP Address column added in form entries</li>
+		<li>Submit button text can change from field editor</li>
+		<li>Form background Color + form background image both supported.</li>
+        </ul>
+      </p>
+       <p style="padding-left:20px;"><div class="hielight_margin">Version 2.0.5 (28 April, 2014)</div>
+      <p style="padding-left:40px;"> 
+	    <ul>
+        <li>Added facility to change subject of email sending out to Administrator.</li>
+        <li>Added facility to duplicate the fields.</li>
+        <li>Added facility to change file upload text color.</li>
+        <li>CSS fixes related to Wordpress 3.9.</li>
+        <li>Small bug fixes related to bootstrap error message classes.</li>
+        <li>Small bug fixes related to conditional logic rules.</li>
+        </ul>
+      </p>
+      <p style="padding-left:20px;"><div class="hielight_margin">Version 2.0.4 (11 March, 2014)</div>
+      <p style="padding-left:40px;"> 
+	    <ul>
+        <li>Small bug fixes related to file upload.</li>
+        <li>Small bug fixes related to conditional logic rules.</li>
+        </ul>
+      </p>
+      <p style="padding-left:20px;"><div class="hielight_margin">Version 2.0.3 (27 February, 2014)</div>
+      <p style="padding-left:40px;"> 
+	    <ul>
+        <li>Small bug fixes related to IE 8 And IE 9.</li>
+        <li>Small bug fixes related to form styling.</li>
+        <li>Small bug fixes related to Import / Export.</li>
+        <li>Made compatible with GEOip PHP extension.</li>
+        </ul>
+      </p>   
+      </p>
+      <p style="padding-left:20px;"><div class="hielight_margin">Version 2.0.2 (15 February, 2014)</div>
+      <p style="padding-left:40px;"> 
+	    <ul>
+        <li>Small bug fixes related to Email Attachment.</li>
+        <li>Small bug fixes related to Localization.</li>
+        <li>Small bug fixes related to CSS in different browsers.</li>
+        </ul>
+      </p>   
+      </p>
+      <p style="padding-left:20px;"><div class="hielight_margin">Version 2.0.1 (07 February, 2014)</div>
+      <p style="padding-left:40px;"> 
+	    <ul>
+        <li>Added more options to property / styling at field level.</li>
+        <li>Improved Site loading speed.</li>
+        <li>Small bug fixes related to File upload in IE 8, IE 9, Star rating.</li>
+        <li>Small bug fixes related to Import / Export (Forms / Entries).</li>
+        </ul>
+      </p>   
+      </p> 	
+	  <p style="padding-left:20px;"><div class="hielight_margin">Version 2.0 (01 February, 2014)</div>
+      <p style="padding-left:40px;"> 
+      <ul>
+		<li>Simple captcha</li> 
+        <li>Conditional laws</li>
+        <li>Import/export</li>
+        <li>Flying/sticky forms</li> 
+        <li>Editor look and feel change</li>
+        <li>Google fonts support.</li>
+        <li>Form/field level css implementation (property styling).</li>
+        <li>File upload control improvement.</li>
+        <li>Code cleanup and reduced external js/css usage.</li>
+        <li>Loader image improvement.</li>
+        <li>Better documentation.</li>
+        <li>Email notification part improved.</li>
+        <li>Few additional options on styling tool.</li>
+        <li>New fancy checkbox / radio buttons set.</li>
+        <li>Bugfix: small bug fixes related to different theme compatibility.</li>
+        <li>Bugfix: small bug fixes related to different theme compatibility.</li>
+        </ul>
+      </p>   
+      </p>
+      <p style="padding-left:20px;"><div class="hielight_margin">Version 1.2.2 (17 December, 2013)</div>
+      <p style="padding-left:40px;"> 
+      <ul><li>Bugfix: small bug fixes related to different theme compatibility.</li>
+		<li>Bugfix: wordpress version 3.8 compatibility issues fixed.</li>
+        </ul>
+      </p>   
+      </p>
+      <p style="padding-left:20px;"><div class="hielight_margin">Version 1.2.1 (13 December, 2013)</div>
+      <p style="padding-left:40px;"> 
+      <ul><li>Bugfix: small css based bug fix for dropdown, fileupload and other general formatting etc.</li>
+		<li>Bugfix: invalid file style upload message.</li>
+        <li>Bugfix: css changes conflicting with various themes.</li>
+        <li>Bugfix: admin email message after form submission.</li>
+        <li>Bugfix: wordpress version 3.8 compatibility issues fixed.</li>
+        </ul>
+      </p>   
+      </p>
+      <p style="padding-left:20px;"><div class="hielight_margin">Version 1.2 (6 December, 2013)</div>
+      <p style="padding-left:40px;"> 
+      <ul><li>Bugfix: small css based bug fix for star rating,dropdown and other general formatting etc.</li>
+		<li>Bugfix: recaptcha focus.</li>      
+    	<li>Added option for place form with link / button for modal window</li>
+    	<li>Added support for dynamic modal height and width</li>
+        <li>Added support for transparent modal window</li>
+        <li>Added background image support for form</li>
+        <li>Added option for adding transparent fields over the form</li>
+        </ul>
+      </p>   
+      </p>
+      <p style="padding-left:20px;"><div class="hielight_margin">Version 1.1.1 (28 Novermber, 2013)</div>
+      <p style="padding-left:40px;"> 
+      	<ul><li>Bugfix: small css based bug fix for checkbox,dropdown and other general formatting etc.</li>
+    	<li>Added default option for checkbox/radio button to inherit style from theme</li>
+    	<li>Added option in short code</li></ul>
+      </p>   
+      </p>
+      <p style="padding-left:20px;"><div class="hielight_margin">Version 1.1 (27 Novermber, 2013)</div>
+      <p style="padding-left:40px;"> 
+	    <ul><li>Multi column support added.</li>
+        <li>Multi steps wizard style form support.</li>
+        <li>Star rating element is added.</li>
+        <li>Multi lingual support for admin section.</li>
+        <li>New set of additional checkbox and radio buttons.</li>
+        <li>Optional email setup for admin notification.</li>
+        <li>Better data about browser etc in form entries.</li>
+        <li>Small bug fixes and text changes.</li></ul>
+      </p>   
+      </p>
+    </div>
+    <div style="clear:both;"></div>
+  </div>
+  
+  <p> If your require any assistance with using this plugin or would like personal customization, you can email me at <a href="mailto:info@reputeinfosystems.com">info@reputeinfosystems.com</a> Or from the <a href="http://codecanyon.net/user/reputeinfosystems" target="_blank">profile on CodeCanyon.</a></p>
+  <p>If you have the time, please follow me on <span class="hielight_link_small"><a  title="RepunteInfosystems Facebook" href="http://facebook.com/reputeinfosystems/" target="_blank">Facebook</a></span>, <span class="hielight_link_small"><a title="RepunteInfosystems Twitter" href="https://twitter.com/reputeinfosys" target="_blank">Twitter</a></span></p>
+  
+  <p>Once again, thank you so much for purchasing this plugin. I will be glad to help you if you have any questions relating to my plugin. You will get 24 / 7 support at : <span class="hielight_link_small"><a title="support" href="http://www.arformsplugin.com/arforms-support/" target="_blank">Support</a></span></p>
+  <p><strong>Thanks,</strong><br />
+    <strong>ReputeInfosystems</strong></p>
+    </div>
+<!-- end div .container -->
+</div>
+</div>
+</div>
+</body>
+</html>

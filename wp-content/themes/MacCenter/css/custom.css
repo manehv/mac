@@ -7,12 +7,138 @@
 @import url('fonts/MyriadSetPro-Bold-fontfacekit/web-fonts/MyriadSetPro-Bold/stylesheet.css');
 @import url('fonts/MyriadSetPro-Medium-fontfacekit/stylesheet.css');
 
+.ar_main_div_104 .arfsubmitbutton .arf_submit_btn{
+	font-family: "myriad_set_promedium" !important;
+}
+
+/* TEXT FICHAS TECNICAS*/
+.main_color blockquote {
+    border-color: #777;
+    text-align: justify !important;
+    font-size: 9px !important;
+}
+/*OCULTAR LINK FORM POPUP*/
+.ar_main_div_104 #brand-div.top_container {
+    margin-left: 0px;
+    text-align: left;
+    visibility: hidden !important;
+}
+
+
+/*FFAMILY LABEL POPUP*/
+.ar_main_div_104 label.arf_main_label {
+	font-family: "myriad_set_promedium" !important;
+}
+
+
+
+/*POSICION BTN NEWSLETTER POPUP*/
+.ar_main_div_104 .arf_submit_div.top_container{
+	margin-left: 0 !important;
+    	clear: both;
+    	text-align: left;
+}
+
+/*STYLE FONT TITULO POPUP*/
+.ar_main_div_104 .formtitle_style {
+	padding: 0px;
+color: #4A494A;
+font-family: "myriad_set_promedium" !important;
+text-align: left;
+font-size: 14px;
+font-weight: normal;
+font-style: normal;
+}
+
+/*OCULTAR LINK ARFORMS*/
+.ar_main_div_100 #brand-div.left_container {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    float: left;
+    visibility: hidden !important;
+}
+
+
+
+/*POSISION BTN FORM NEWS LETTER*/
+.ar_main_div_100 .arf_submit_div.left_container {
+    text-align: center;
+    clear: none!important;
+    float: left!important;
+    margin: -10px 0px 0px 20px !important;
+}
+
+/*TEXT FIELD CODIGO CUPON*/
+.coupon .input-text {
+    width: 200px;
+    float: left;
+    margin: 0px 1px 1px 0px;
+    font: 12px/17px "Helvetica Neue",Helvetica,Arial,sans-serif;
+    padding: 12px;
+    border-radius: 2px;
+    height: 38px;
+}
+
+/*GLOW BTN AÑADIR A CARRITO*/
+.clsDetails button.single_add_to_cart_button {
+	box-shadow:rgba(255,255,255,0.0) 0 0 0 !important;
+	
+}
+.woocommerce-page .button.single_add_to_cart_button {
+	box-shadow:rgba(255,255,255,0.0) 0 0 0 !important;
+}
+
+
+/*BK FORMULARIO NEWSLETTER*/
+.ar_main_div_100 .arf_fieldset {
+    background: none no-repeat scroll left top rgba(255, 255, 255, 0) !important;
+    margin: 0px;
+    padding: 0px 0px !important;
+    border-radius: 0px;
+    box-shadow: none;
+    border: 0px solid #D9D9D9;
+	
+}
+/*STYLE BTN NEWS LETTER*/
+.ar_main_div_100 .arfsubmitbutton .arf_submit_btn {
+height: 35px;
+width: 150px;
+max-width: 100%;
+margin: 10px 10px 0px -20px;
+font-family: inherit !important;
+font-family: "myriad_set_promedium" !important;
+font-size:inherit !important;
+font-size: 13px!important;
+font-style: normal;
+cursor: pointer;
+background: none repeat scroll left top #1587C9;
+padding: 0px 10px;
+vertical-align: top;
+text-transform: none;
+color: #FFF !important;
+border: 0px solid #E1E1E3;
+text-shadow: none;
+box-sizing: content-box;
+border-radius: 2px;
+box-shadow:none !important;
+
+}
+
+/*TITULO FORMULARIO NEWS LETTER*/
+.ar_main_div_100 .formtitle_style {
+    padding: 0px;
+    color: #222;
+    font-family: 'myriad_set_promedium' !important;
+    text-align: left;
+    font-weight: normal;
+    font-style: normal;
+}
+
 #flex_column av_one_fifth {
         border-bottom: none !important;
 }
-.responsive #top #wrap_all .flex_column {
-    text-align: left !important;
-}
+
 
 
 /*AJUSTE MENU MOVILES*/
@@ -65,7 +191,7 @@ background-color:red !important;
 }
 /*padding div descripcion de productos*/
 #desc p {
-padding-left:30px;      
+/*padding-left:30px;*/      
 }
 /* txt parrafo widget chat*/
 .cx-form .cx-lead {
@@ -200,7 +326,7 @@ div.product p.stock { margin: 0 15px; }
 .products .thumbnail_container img{display:table-cell; vertical-align:middle; }
 #top div .quantity input.qty, .quantity input.qty{border:1px solid #e1e1e1; margin:0 10px; }
 table div.quantity{width:150px; }
-.woocommerce-page .button{margin-top:10px; }
+.woocommerce-page .button{margin-top:0px !important; margin-right: 10px; }
 #top .avia-post-nav {background: none rgba(0, 0, 0, 0.1) !important; }
 .clsContent .avia-image-container{ /* width:64px; Commented because it makes all image too small */ display:inline-block; margin-right:25px; max-width: 100%; }
 .clsContent .av-special-heading{margin-top:0; }
@@ -252,7 +378,7 @@ div .av_two_third{margin-left:2%; }
 .clsSidebar .row{margin-bottom:10px; }
 #top .clsSidebar div .quantity input.plus, #top  .clsSidebar div .quantity input.minus{border:1px solid #e4e4e4; background:#ffffff; width:22px; height:22px; line-height:20px; border-radius:50%; color:#231F20; }
 #top .clsSidebar div .quantity input.qty{border:1px solid #e4e4e4; border-radius:4px; color:#231F20; }
-#top .clsSidebar div .quantity input.qty{height:30px; width:30px !important; line-height: 30px;}
+#top .clsSidebar div .quantity input.qty{height:30px; width:30px !important; line-height: 30px; margin-bottom:10px;}
 .clsDetailsImg{text-align:center;
 }
 .bigimg{
@@ -701,7 +827,16 @@ Mobile Styles
 /* Note: Add new css to the media query below that you want to only effect the Mobile and Tablet Portrait view */
 
 @media only screen and (max-width:767px) {
+	
   /* Add your Mobile Styles here */
+  
+  .avia-content-slider img {
+    overflow: hidden;
+    border-radius: 2px;
+    display: block;
+    position: relative;
+    border-bottom: solid 1px #eee;
+}
 .chosen-container {
         width:270px!important;
   }
@@ -734,7 +869,7 @@ Mobile Styles
         }
 }
 input[type="submit"], #submit, .button {
-        border-radius: 0px;
+        border-radius: 2px;
 }
 
 .form-row input[type="submit"], #submit{
