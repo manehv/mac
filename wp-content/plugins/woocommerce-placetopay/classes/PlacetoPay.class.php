@@ -1326,7 +1326,6 @@ class PlacetoPay
 			$paymentData = '<form id="frmEGM_P2P" method="post" action="' . self::PAYMENT_URL . '">' .
 				$paymentData .
 				'<input type="submit" name="btnEGMConfirm" value="Pagar con PlacetoPay"/>'.
-			echo do_shortcode("[av_button label='Preguntas Frecuentes' link='manually,http://mc.arbolnaranja.com/preguntas-frecuentes/#tab-id-5' link_target='_blank' size='medium' position='left' icon_select='no' icon='ue800' font='entypo-fontello' color='custom' custom_bg='#16a152' custom_font='#ffffff']");
 				'</form>';
 
 		return $paymentData;
