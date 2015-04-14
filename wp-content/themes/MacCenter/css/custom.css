@@ -1122,6 +1122,10 @@ input[type="submit"], #submit, .button {
 .menu-item .av_font_icon {
     color: #56656D;
 }
+
+.menu-item .av_font_icon:hover{
+    color: #fff;
+}
 #top .post-entry-12342 .avia_ajax_form .form_element_half{
 	margin-right:3px;
 }
