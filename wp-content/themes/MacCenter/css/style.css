@@ -63,7 +63,7 @@ h2 {
 	border-radius: 0px;  
 	font-size: 28px; 
 	font-family: 'myriad_set_promedium';
-	text-align: center;
+	text-align: left;
 
 }
 	table.placetopay {width: 500px; margin-top: 20px;font-family: 'myriad_set_promedium'!important;}
@@ -95,7 +95,7 @@ h2 {
 	background-position: center center;
 }
 /*ESTILOS MOVIL*/
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 767px) {
 	
 	#placetopay-header{
 	background-color: #f7f7f7;
