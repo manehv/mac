@@ -1,4 +1,14 @@
 @import url("http://mc.arbolnaranja.com/wp-content/themes/MacCenter/css/fonts/MyriadSetPro-Medium-fontfacekit/stylesheet.css");
+@font-face {
+      font-family: 'myriad_set_promedium';
+      src: url("http://mc.arbolnaranja.com/wp-content/themes/MacCenter/css/fonts/MyriadSetPro-Medium-fontfacekit/MyriadSetPro-Medium-webfont.eot"),
+		  url("http://mc.arbolnaranja.com/wp-content/themes/MacCenter/css/fonts/MyriadSetPro-Medium-fontfacekit/MyriadSetPro-Medium-webfont.svg"),
+		  url("http://mc.arbolnaranja.com/wp-content/themes/MacCenter/css/fonts/MyriadSetPro-Medium-fontfacekit/MyriadSetPro-Medium-webfont.ttf"),
+		  url("http://mc.arbolnaranja.com/wp-content/themes/MacCenter/css/fonts/MyriadSetPro-Medium-fontfacekit/MyriadSetPro-Medium-webfont.woff"),
+		  url("http://mc.arbolnaranja.com/wp-content/themes/MacCenter/css/fonts/MyriadSetPro-Medium-fontfacekit/MyriadSetPro-Medium-webfont.woff2");
+	font-weight: normal;
+  font-style: normal;
+    }
 
 body{
 	background-color:#fff;
