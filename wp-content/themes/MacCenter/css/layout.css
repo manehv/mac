@@ -301,19 +301,19 @@ transition: color 0.4s ease-in-out;
 letter-spacing: -0.35px;
 }
 
-#top .av-main-nav ul a{
-width:80px;
-border-top:1px solid rgba(255,255,255,0.1);
-float:left;
-text-align:center;
-background-color: #56656D;
-padding: 18px 2px;
-font-size: 10px;
-height: 45px !important;
-max-width: none;
-text-decoration: none;
-color:#ffffff;
-z-index: 999;
+#top .av-main-nav ul a {
+    width: auto;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    float: left;
+    text-align: left;
+    background-color: #56656D;
+    padding: 18px 12px;
+    font-size: 10px;
+    height: 45px !important;
+    min-width: 120px;
+    text-decoration: none;
+    color: #FFF;
+    z-index: 999;
 }
 
 #top .av-main-nav ul ul {
