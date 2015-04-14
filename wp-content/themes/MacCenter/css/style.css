@@ -1,5 +1,8 @@
 @import url("http://mc.arbolnaranja.com/wp-content/themes/MacCenter/css/fonts/MyriadSetPro-Medium-fontfacekit/stylesheet.css");
-
+@font-face {
+      font-family: 'myriad_set_promedium';
+      src: url("http://mc.arbolnaranja.com/wp-content/themes/MacCenter/css/fonts/MyriadSetPro-Medium-fontfacekit/stylesheet.css");
+    }
 
 body{
 	background-color:#fff;
