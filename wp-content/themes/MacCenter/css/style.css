@@ -1,8 +1,17 @@
 @import url("http://mc.arbolnaranja.com/wp-content/themes/MacCenter/css/fonts/MyriadSetPro-Medium-fontfacekit/stylesheet.css");
-
+@font-face {
+      font-family: 'myriad_set_promedium';
+      src: url("http://mc.arbolnaranja.com/wp-content/themes/MacCenter/css/fonts/MyriadSetPro-Medium-fontfacekit/MyriadSetPro-Medium-webfont.eot"),
+		  url("http://mc.arbolnaranja.com/wp-content/themes/MacCenter/css/fonts/MyriadSetPro-Medium-fontfacekit/MyriadSetPro-Medium-webfont.svg"),
+		  url("http://mc.arbolnaranja.com/wp-content/themes/MacCenter/css/fonts/MyriadSetPro-Medium-fontfacekit/MyriadSetPro-Medium-webfont.ttf"),
+		  url("http://mc.arbolnaranja.com/wp-content/themes/MacCenter/css/fonts/MyriadSetPro-Medium-fontfacekit/MyriadSetPro-Medium-webfont.woff"),
+		  url("http://mc.arbolnaranja.com/wp-content/themes/MacCenter/css/fonts/MyriadSetPro-Medium-fontfacekit/MyriadSetPro-Medium-webfont.woff2");
+	font-weight: normal;
+  font-style: normal;
+    }
 
 body{
-	background-color:#f7f7f7;
+	background-color:#fff;
 	margin: 0px;
 	font-size: 12px;
 	font-family: 'myriad_set_promedium'!important;
@@ -45,7 +54,9 @@ body{
 }
 
 #placetopay-footer { 
-	width: 73%; 
+	margin-top:20px;
+	border-top: 1px solid #ccc;
+	width: 100%; 
 	margin-left: auto; 
 	margin-right: auto; 
 	text-align: center; 
@@ -53,8 +64,9 @@ body{
 	font-size: 11px;
 	line-height: 30px;
 	background-color: #F7F7F7 !important;
+	padding-top: 20px;	
 	padding-bottom: 20px;
-	font-family: 'myriad_set_promedium'!important;
+	font-family: 'myriad_set_promedium';
 }
 h2 { 
 	padding: 0px 2px 0px 30px !important;
@@ -63,7 +75,7 @@ h2 {
 	border-radius: 0px;  
 	font-size: 28px; 
 	font-family: 'myriad_set_promedium';
-	text-align: center;
+	text-align: left !important;
 
 }
 	table.placetopay {width: 500px; margin-top: 20px;font-family: 'myriad_set_promedium'!important;}
@@ -95,7 +107,7 @@ h2 {
 	background-position: center center;
 }
 /*ESTILOS MOVIL*/
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 767px) {
 	
 	#placetopay-header{
 	background-color: #f7f7f7;
