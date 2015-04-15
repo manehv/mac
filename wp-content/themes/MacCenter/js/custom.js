@@ -3,8 +3,8 @@ jQuery(document).ready(function($)
         //OLD Code
         //$.lockfixed("#idSticky",{offset: {top: 120, bottom: 70}});
         //New Code
-        if($(window).height() > ($("#idSticky").height() + 200) ){  ; // 200 is buffer kept for menu and footer
-                $.lockfixed("#idSticky",{offset: {top: 120, bottom: 70}});
+        if($(window).height() > ($("#idSticky").height() + 100) ){  ; // 200 is buffer kept for menu and footer
+                $.lockfixed("#idSticky",{offset: {top: 0, bottom: 150}});
         }
         //for showing gallery
          $('#showImage').click(function(){
