@@ -769,6 +769,14 @@ div.product p.stock
 padding:0 0px;
 margin:5px 15px;
 }
+p.stock
+ {
+    padding: 0px;
+    margin: 5px 15px;
+    background-color: #DBDBDB;
+    text-align: center;
+}
+
 .template-shop .single-product-main-image .images a{
 border-style:none;
 }
