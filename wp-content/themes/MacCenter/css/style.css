@@ -70,7 +70,15 @@ h2 {
 
 }
 	table.placetopay {width: 500px; margin-top: 20px;font-family: 'myriad_set_promedium'!important;}
-	th.placetopay  {font-weight: bold;  color: #949699; padding-left: 5px; padding-right: 5px; text-transform: uppercase; border: 1px solid #CCC; font-size: 20px; font-family: 'myriad_set_promedium';}
+	th.placetopay  {font-weight: bold;
+color: #000;
+padding-left: 30px;
+padding-right: 5px;
+text-transform: uppercase;
+border: 1px solid #CCC;
+font-size: 20px;
+font-family: "myriad_set_promedium";
+text-align: left;}
 	td.placetopayheader {font-size: 14px; color: #666 !important;font-family: 'myriad_set_promedium';}
 	td.placetopaytitulo {font-size: 14px;  vertical-align: top; color: #666 !important;font-family: 'myriad_set_promedium'!important;}
 	td.placetopayvalor {font-size: 14px; text-align: justify;color: #666 !important;font-family: 'myriad_set_promedium'!important;}
