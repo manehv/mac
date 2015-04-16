@@ -68,8 +68,8 @@ h2 {
 	font-family: 'myriad_set_promedium' !important;
 	text-align: left !important;
 }
-h2>span{
-	text-align:left;
+h2 span{
+	text-align:left !important;
 }
 	table.placetopay {width: 500px; margin-top: 20px;font-family: 'myriad_set_promedium'!important;}
 	th.placetopay  {font-weight: bold;
