@@ -65,7 +65,7 @@ h2 {
 	color: #292325;	 
 	border-radius: 0px;  
 	font-size: 28px; 
-	font-family: 'myriad_set_promedium';
+	font-family: 'myriad_set_promedium' !important;
 	text-align: left !important;
 
 }
