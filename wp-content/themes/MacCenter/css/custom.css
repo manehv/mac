@@ -307,7 +307,7 @@ h2.clsFinish{color: #000000; font-size: 18px; font-family: 'myriad_set_promedium
 #top .clsDetails span.amount { font-family: 'myriad_set_promedium', arial, sans-serif; font-weight: bold }
 .clsDetails .clsSubDiv{margin:5px 15px; font-size:12px; }
 div.product p.stock { margin: 0 15px; }
-#top div.product div.clsDetails.images img{height:150px; width:auto; margin:0 auto; }
+#top div.product div.clsDetails.images img{height:auto; width:auto; margin:0 auto; }
 #top .clsDetails form{margin-bottom:0; }
 .clsDetails button.single_add_to_cart_button{background-color: #00a14f !important; transition:all 0.3s ease-out 0s; border-radius:2px; font-family: 'myriad_set_promedium' !important; padding:10px; font-size:11px; margin-top:10px; }
 #top div div.woocommerce-message a.button.wc-forward{width:14%; padding:10px; }
