@@ -1325,7 +1325,7 @@ class PlacetoPay
 		if (!empty($paymentData))
 			$paymentData = '<form id="frmEGM_P2P" method="post" action="' . self::PAYMENT_URL . '">' .
 				$paymentData .
-				'<input type="submit" name="btnEGMConfirm" value="Pagar con PlacetoPay"/>' .
+				'<input type="submit" name="btnEGMConfirm" value="Pagar con PlacetoPay"/>'.
 				'</form>';
 
 		return $paymentData;

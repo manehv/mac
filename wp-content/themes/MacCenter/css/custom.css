@@ -387,7 +387,8 @@ overflow:hidden;
 }
 
 .single-product .clsContent .flex_column p {
-font-size: 12px
+font-size: 12px;
+padding:10px 10px 10px 10px;
 }
 
 .single-product .flex_column.av_one_third.first img {
@@ -910,7 +911,7 @@ input[type="submit"], #submit, .button {
 
 #top .form-row label{
         font-size:14px;
-        color:#D7D8DA;
+        color:#777;
         font-weight:normal;
 }
  .inline{
@@ -1120,6 +1121,15 @@ input[type="submit"], #submit, .button {
 }
 .menu-item .av_font_icon {
     color: #56656D;
+    padding:0px 20px;
+}
+
+.menu-item .av_font_icon:hover{
+    color: #fff !important;
+}
+
+.menu-item .av_font_icon:active{
+    color: #fff !important;
 }
 #top .post-entry-12342 .avia_ajax_form .form_element_half{
 	margin-right:3px;
@@ -1151,4 +1161,6 @@ input[type="submit"], #submit, .button {
 	padding: 32px 45% 32px 36px !important;
 	position: relative;
 }
+
 #customer_details .form-row.form-row-last {margin-left:0px !important}
+
