@@ -1151,3 +1151,4 @@ input[type="submit"], #submit, .button {
 	padding: 32px 45% 32px 36px !important;
 	position: relative;
 }
+#customer_details .form-row.form-row-last {margin-left:0px !important}
