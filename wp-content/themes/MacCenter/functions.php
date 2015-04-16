@@ -1202,8 +1202,8 @@ function custom_override_shipping_fields( $fields ) {
 
 
 //Reordering of woocommerce billing fields
-/*
-add_filter( 'woocommerce_shipping_fields','reorder_woocommerce_fields');
+
+//add_filter( 'woocommerce_shipping_fields','reorder_woocommerce_fields');
 add_filter( 'woocommerce_billing_fields','reorder_woocommerce_fields');
 
 function reorder_woocommerce_fields($fields) {
@@ -1236,7 +1236,21 @@ function reorder_woocommerce_fields($fields) {
 
         return $fields2; 
 }
-*/
 
+add_filter("woocommerce_shipping_fields", "order_fields");
+
+function order_fields($fields) {
+
+    $fields2['shipping_first_name'] = $fields['shipping_first_name'];
+        $fields2['shipping_last_name'] = $fields['shipping_last_name'];
+        $fields2['shipping_country'] = $fields['shipping_country'];
+        $fields2['shipping_city'] = $fields['shipping_city'];
+        $fields2['shipping_company'] = $fields['shipping_company'];
+        $fields2['shipping_postcode'] = $fields['shipping_postcode'];
+        $fields2['shipping_address_1'] = $fields['shipping_address_1'];
+        $fields2['shipping_mobile_phone'] = $fields['shipping_mobile_phone'];
+    return $fields2;
+
+}
 
 
