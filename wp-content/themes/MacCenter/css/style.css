@@ -96,7 +96,7 @@ text-align: left;}
 }
 
 #inform {
-	font-size: 18px; text-align: left;color:#777;font-family: 'myriad_set_promedium'!important;
+	font-size: 18px; text-align: left !important;color:#777;font-family: 'myriad_set_promedium'!important;
 }
 
 #logPlaceAb {
