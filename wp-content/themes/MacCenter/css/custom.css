@@ -7,8 +7,12 @@
 @import url('fonts/MyriadSetPro-Bold-fontfacekit/web-fonts/MyriadSetPro-Bold/stylesheet.css');
 @import url('fonts/MyriadSetPro-Medium-fontfacekit/stylesheet.css');
 
+p.product.woocommerce.add_to_card_inline{
+	border:none !important;
+}
+
 div .main_color .button{
-	background-color: #777;
+	background-color: #428BCA;
 border-color: #428BCA;
 color: #FFF;
 padding: 9px 20px !important;
