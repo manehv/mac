@@ -11,8 +11,8 @@
 
 
 /*AJUSTE BTN AÑADIR AL CARRIRO SHORDCODE EN PAGINAS*/
-.product.woocommerce.add_to_card_inline{
-	width:200px !important;
+section {
+	border:none !important;
 }
 
 span.amount{
