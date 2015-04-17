@@ -7,6 +7,11 @@
 @import url('fonts/MyriadSetPro-Bold-fontfacekit/web-fonts/MyriadSetPro-Bold/stylesheet.css');
 @import url('fonts/MyriadSetPro-Medium-fontfacekit/stylesheet.css');
 
+
+.product woocommerce add_to_cart_inline {
+	border:none !important;
+}
+
 /*Ajuste dimension accesorios*/
 #top .product div.images img {
     display: block;
