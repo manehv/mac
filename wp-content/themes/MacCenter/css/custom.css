@@ -7,13 +7,14 @@
 @import url('fonts/MyriadSetPro-Bold-fontfacekit/web-fonts/MyriadSetPro-Bold/stylesheet.css');
 @import url('fonts/MyriadSetPro-Medium-fontfacekit/stylesheet.css');
 
-span.amount{
-	font-size:20px;
-}
+
 
 
 /*AJUSTE BTN AÑADIR AL CARRIRO SHORDCODE EN PAGINAS*/
-
+span.amount{
+	font-size:20px;
+	color:#000;
+}
 div .main_color .button{
 background-color: #428BCA !important;
 border-color: #428BCA !important;
