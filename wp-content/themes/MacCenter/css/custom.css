@@ -18,6 +18,8 @@ border-color: #428BCA;
 color: #FFF;
 padding: 9px 20px !important;
 border-radius: 2px;
+margin:5px;
+clear: both;
 }
 .product woocommerce add_to_cart_inline {
 	border:none !important;
