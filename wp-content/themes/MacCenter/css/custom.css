@@ -7,23 +7,18 @@
 @import url('fonts/MyriadSetPro-Bold-fontfacekit/web-fonts/MyriadSetPro-Bold/stylesheet.css');
 @import url('fonts/MyriadSetPro-Medium-fontfacekit/stylesheet.css');
 
-.product.woocommerce.add_to_card_inline{
-	border:none !important;
-	color: red !important;
-}
+/*AJUSTE BTN AÑADIR AL CARRIRO SHORDCODE EN PAGINAS*/
 
 div .main_color .button{
-	background-color: #428BCA;
-border-color: #428BCA;
+background-color: #428BCA !important;
+border-color: #428BCA !important;
 color: #FFF;
 padding: 9px 20px !important;
 border-radius: 2px;
 margin:5px;
 clear: both;
 }
-.product woocommerce add_to_cart_inline {
-	border:none !important;
-}
+
 
 /*Ajuste dimension accesorios*/
 #top .product div.images img {
