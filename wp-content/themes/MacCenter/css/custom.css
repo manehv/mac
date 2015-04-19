@@ -10,24 +10,6 @@
 
 
 
-/*AJUSTE BTN AÑADIR AL CARRIRO SHORDCODE EN PAGINAS*/
-section {
-	border:none !important;
-}
-
-span.amount{
-	font-size:20px;
-	color:#000;
-}
-div .main_color .button{
-background-color: #428BCA !important;
-border-color: #428BCA !important;
-color: #FFF;
-padding: 9px 20px !important;
-border-radius: 2px;
-margin:5px;
-clear: both;
-}
 
 
 /*Ajuste dimension accesorios*/
