@@ -9,7 +9,10 @@
 
 /*.av_textblock_section.avia_textblock p.product woocommerce add_to_cart_inline*/
 a.button.add_to_cart_button.product_type_simple{
-	padding:15px 30px !important;
+	padding: 7px 30px !important;
+	border-radius: 2px;
+	float: left;
+	margin: 20px !important;
 }
 
 
