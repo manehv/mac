@@ -8,7 +8,7 @@
 @import url('fonts/MyriadSetPro-Medium-fontfacekit/stylesheet.css');
 
 /*.av_textblock_section.avia_textblock p.product woocommerce add_to_cart_inline*/
-p.product woocommerce add_to_cart_inline
+p.product:woocommerce add_to_cart_inline
 {
 	border:none !important;
 }
