@@ -34,8 +34,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 		    }
 			?>
 
-			<pre><?php print_r( $available_methods ); ?></pre>
-
 			<?php if ( 1 === count( $available_methods ) ) :
 				$method = current( $available_methods );
 
