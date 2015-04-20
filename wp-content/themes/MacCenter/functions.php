@@ -28,9 +28,9 @@ function wcs_stock_text_shop_page() {
 
     //check if availability in the array = string 'Out of Stock'
     //if so display on page.//if you want to display the 'in stock' messages as well just leave out this, == 'Out of stock'
-    if ( $availability['availability'] == 'Out of stock') {
+    // if ( $availability['availability'] == 'Out of stock') {
         echo apply_filters( 'woocommerce_stock_html', '<p class="stock ' . esc_attr( $availability['class'] ) . '">' . esc_html( $availability['availability'] ) . '</p>', $availability['availability'] );
-    }
+    // }
 }
 
 //this function determines which version of the registration to call
