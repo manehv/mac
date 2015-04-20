@@ -7,7 +7,7 @@
 @import url('fonts/MyriadSetPro-Bold-fontfacekit/web-fonts/MyriadSetPro-Bold/stylesheet.css');
 @import url('fonts/MyriadSetPro-Medium-fontfacekit/stylesheet.css');
 
-.avia_textblock p.product woocommerce add_to_cart_inline  {
+p:.product{
 	border:none !important;
 	background-color:red;
 }
