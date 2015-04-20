@@ -7,7 +7,11 @@
 @import url('fonts/MyriadSetPro-Bold-fontfacekit/web-fonts/MyriadSetPro-Bold/stylesheet.css');
 @import url('fonts/MyriadSetPro-Medium-fontfacekit/stylesheet.css');
 
-/*.av_textblock_section.avia_textblock p.product woocommerce add_to_cart_inline*/
+span .amount{
+	font-size:20px !important;
+}
+
+/*ESTILO BTN AGREGAR A CARRITO EN PAGINAS DESCRIPTIVAS*/
 a.button.add_to_cart_button.product_type_simple{
 	padding: 7px 30px !important;
 	border-radius: 2px;
