@@ -25,6 +25,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<td>
 		<?php if ( ! empty( $available_methods ) ) : ?>
 
+			<?php
+			if( isset( $available_methods['free_shipping'] ) AND isset( $available_methods['table_rate'] ) ) {
+				// remove standard shipping option
+				unset( $available_methods['table_rate'] );
+			}
+			?>
+			
 			<pre><?php print_r( $available_methods ); ?></pre>
 
 			<?php if ( 1 === count( $available_methods ) ) :
