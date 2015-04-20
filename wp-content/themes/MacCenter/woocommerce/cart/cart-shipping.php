@@ -26,12 +26,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<?php if ( ! empty( $available_methods ) ) : ?>
 
 			<?php
-			if( isset( $available_methods['free_shipping'] ) AND isset( $available_methods['table_rate'] ) ) {
-				// remove standard shipping option
-				unset( $available_methods['table_rate'] );
-			}
+			if ( isset( $available_methods['free_shipping'] ) ) {   
+		        // To unset all methods except for free_shipping, do the following
+		        $free_shipping                      = $available_methods['free_shipping'];
+		        $available_methods                  = array();
+		        $available_methods['free_shipping'] = $free_shipping;
+		    }
 			?>
-			
+
 			<pre><?php print_r( $available_methods ); ?></pre>
 
 			<?php if ( 1 === count( $available_methods ) ) :
