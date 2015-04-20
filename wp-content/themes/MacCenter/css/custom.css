@@ -322,7 +322,7 @@ h2.clsFinish{color: #000000; font-size: 18px; font-family: 'myriad_set_promedium
 .clsDetails, #top .clsDetails .price span.amount{color:#292325; font-size:12px; font-family: 'myriad_set_promedium' !important; font-weight:normal; line-height:normal; }
 #top .clsDetails .price span.amount { font-family: 'myriad_set_promedium' !important, arial, sans-serif; font-weight: bold }
 #top .clsDetails span.amount { font-family: 'myriad_set_promedium', arial, sans-serif; font-weight: bold }
-.clsDetails .clsSubDiv{margin:5px 15px; font-size:12px; }
+.clsDetails .clsSubDiv{/*margin:5px 15px;*/ font-size:12px; }
 div.product p.stock { margin: 0px 0px 10px;}
 #top div.product div.clsDetails.images img{height:auto; width:150px; margin:0 auto; }
 #top .clsDetails form{margin-bottom:0; }
