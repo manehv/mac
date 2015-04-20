@@ -17,6 +17,22 @@ class SimplrExt extends SREG_Form{
 
 add_shortcode('register', 'sreg_figure1');
 
+//add action give it the name of our function to run
+add_action( 'woocommerce_after_shop_loop_item_title', 'wcs_stock_text_shop_page', 25 );
+
+//create our function
+function wcs_stock_text_shop_page() {
+    //returns an array with 2 items availability and class for CSS
+    global $product;
+    $availability = $product->get_availability();
+
+    //check if availability in the array = string 'Out of Stock'
+    //if so display on page.//if you want to display the 'in stock' messages as well just leave out this, == 'Out of stock'
+    if ( $availability['availability'] == 'Out of stock') {
+        echo apply_filters( 'woocommerce_stock_html', '<p class="stock ' . esc_attr( $availability['class'] ) . '">' . esc_html( $availability['availability'] ) . '</p>', $availability['availability'] );
+    }
+}
+
 //this function determines which version of the registration to call
 function sreg_figure1($atts) {
         global $options;
