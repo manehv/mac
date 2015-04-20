@@ -33,15 +33,28 @@ function wcs_stock_text_shop_page() {
     // }
 }
 
-add_filter( 'woocommerce_package_rates', 'wdm_hide_shipping_when_free_is_available', 10, 2 );
-function wdm_hide_shipping_when_free_is_available( $rates, $package ) {
-    // only modify rates if free_shipping is present
-    if ( isset( $rates['free_shipping'] ) ) {
-        // unset all methods except for free_shipping
-        $free_shipping = $rates['free_shipping'];
-        $rates = array();
+/**
+ * woocommerce_package_rates is a 2.1+ hook
+ */
+add_filter( 'woocommerce_package_rates', 'hide_shipping_when_free_is_available', 50, 2 );
+ 
+/**
+ * Hide shipping rates when free shipping is available
+ *
+ * @param array $rates Array of rates found for the package
+ * @param array $package The package array/object being shipped
+ * @return array of modified rates
+ */
+function hide_shipping_when_free_is_available( $rates, $package ) {
+    
+    // Only modify rates if free_shipping is present
+    if ( isset( $rates['free_shipping'] ) ) {   
+        // To unset all methods except for free_shipping, do the following
+        $free_shipping          = $rates['free_shipping'];
+        $rates                  = array();
         $rates['free_shipping'] = $free_shipping;
     }
+    
     return $rates;
 }
 
