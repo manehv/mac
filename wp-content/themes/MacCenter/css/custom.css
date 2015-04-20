@@ -320,6 +320,9 @@ h2.clsFinish{color: #000000; font-size: 18px; font-family: 'myriad_set_promedium
 .clsContent .active.clsModel .clsModelName{border-color:#368CCA !important; }
 .clsSidebar h3{padding:5px 14px; border-bottom:1px solid #e1e1e1; color:#292325; font-size:12px; font-family: 'myriad_set_promedium' !important; font-weight:bold;}
 .clsDetails, #top .clsDetails .price span.amount{color:#292325; font-size:12px; font-family: 'myriad_set_promedium' !important; font-weight:normal; line-height:normal; }
+.clsDetails{
+	padding:15px;}
+}
 #top .clsDetails .price span.amount { font-family: 'myriad_set_promedium' !important, arial, sans-serif; font-weight: bold }
 #top .clsDetails span.amount { font-family: 'myriad_set_promedium', arial, sans-serif; font-weight: bold }
 .clsDetails .clsSubDiv{/*margin:5px 15px;*/ font-size:12px; }
