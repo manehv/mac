@@ -13,8 +13,8 @@
 }
 
 /*ESTILO BTN AGREGAR A CARRITO EN PAGINAS DESCRIPTIVAS*/
-a.product_type_simple{
-	padding: 7px 30px !important;
+a.button.add_to_cart_button.product_type_simple{
+	padding: 3px 15px !important;
 	border-radius: 2px;
 	float: left;
 	/*margin: 20px !important;*/
