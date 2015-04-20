@@ -9,12 +9,11 @@
 
 .amount{
 	font-size:16px;
-	float:left;
-	clear:both;
+
 }
 
 /*ESTILO BTN AGREGAR A CARRITO EN PAGINAS DESCRIPTIVAS*/
-a.button.add_to_cart_button.product_type_simple{
+a.product_type_simple{
 	padding: 3px 15px !important;
 	border-radius: 2px;
 	float: left;
