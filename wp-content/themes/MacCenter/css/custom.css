@@ -780,11 +780,11 @@ margin:10px;
 div.product p.stock
 {
 padding:0 0px;
-margin:5px 15px;
+/*margin:5px 15px;*/
 }
 p.stock {
     padding: 0px;
-    margin: 5px 15px;
+    margin: 5px 0px;
     background-color: rgb(179, 179, 179);
     text-align: center;
     width: 110px;
