@@ -7,6 +7,10 @@
 @import url('fonts/MyriadSetPro-Bold-fontfacekit/web-fonts/MyriadSetPro-Bold/stylesheet.css');
 @import url('fonts/MyriadSetPro-Medium-fontfacekit/stylesheet.css');
 
+
+section{
+	border:none !important;
+}
 /*PRECIO DE PRODUCTOS WOOCOMMERCE INSERTADOS EN LAS PAGINAS DESCRIPTIVA DE APPLE*/
 .amount{
 	font-size:16px;
