@@ -33,6 +33,25 @@ function wcs_stock_text_shop_page() {
     // }
 }
 
+// Hide standard shipping option when free shipping is available
+add_filter( 'woocommerce_available_shipping_methods', 'hide_standard_shipping_when_free_is_available' , 10, 1 );
+
+/**
+* Hide Standard Shipping option when free shipping is available
+*
+* @param array $available_methods
+*/
+function hide_standard_shipping_when_free_is_available( $available_methods ) {
+
+    if( isset( $available_methods['free_shipping'] ) AND isset( $available_methods['flat_rate'] ) ) {
+
+        // remove standard shipping option
+        unset( $available_methods['flat_rate'] );
+    }
+
+    return $available_methods;
+}
+
 //this function determines which version of the registration to call
 function sreg_figure1($atts) {
         global $options;
