@@ -36,7 +36,7 @@ function wcs_stock_text_shop_page() {
 /**
  * woocommerce_package_rates is a 2.1+ hook
  */
-add_filter( 'woocommerce_package_rates', 'hide_shipping_when_free_is_available', 1, 2 );
+add_filter( 'woocommerce_package_rates', 'hide_shipping_when_free_is_available', 10, 2 );
  
 /**
  * Hide shipping rates when free shipping is available
@@ -46,6 +46,7 @@ add_filter( 'woocommerce_package_rates', 'hide_shipping_when_free_is_available',
  * @return array of modified rates
  */
 function hide_shipping_when_free_is_available( $rates, $package ) {
+    echo "<pre>" . print_r( $rates, true ) . "</pre>";
     
     // Only modify rates if free_shipping is present
     if ( isset( $rates['free_shipping'] ) ) {   
