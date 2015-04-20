@@ -9303,7 +9303,7 @@ msgstr "En espera"
 #: includes/class-wc-post-types.php:439 includes/wc-order-functions.php:28
 msgctxt "Order status"
 msgid "Completed"
-msgstr "Competada"
+msgstr "Completada"
 
 #: includes/class-wc-post-types.php:447 includes/wc-order-functions.php:29
 msgctxt "Order status"
