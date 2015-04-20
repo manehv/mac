@@ -6,8 +6,10 @@
 @import url('fonts/open-sans-fontfacekit/web-fonts/opensans_regular/stylesheet.css');*/
 @import url('fonts/MyriadSetPro-Bold-fontfacekit/web-fonts/MyriadSetPro-Bold/stylesheet.css');
 @import url('fonts/MyriadSetPro-Medium-fontfacekit/stylesheet.css');
-.av_textblock_section.avia_textblock {
+
+.avia_textblock p.product woocommerce add_to_cart_inline  {
 	border:none !important;
+	background-color:red;
 }
 .amount{
 	font-size:16px;
