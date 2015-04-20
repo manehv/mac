@@ -10,6 +10,7 @@
 .amount{
 	font-size:16px;
 	float:left;
+	clear:both;
 }
 
 /*ESTILO BTN AGREGAR A CARRITO EN PAGINAS DESCRIPTIVAS*/
