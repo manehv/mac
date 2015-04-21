@@ -1162,7 +1162,7 @@ input[type="submit"], #submit, .button {
 }
 .menu-item .av_font_icon {
     color: #56656D;
-    padding:0px 20px;
+ /*   padding:0px 20px;*/
 }
 
 .menu-item .av_font_icon:hover{
