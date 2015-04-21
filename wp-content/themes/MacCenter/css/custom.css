@@ -6,7 +6,9 @@
 @import url('fonts/open-sans-fontfacekit/web-fonts/opensans_regular/stylesheet.css');*/
 @import url('fonts/MyriadSetPro-Bold-fontfacekit/web-fonts/MyriadSetPro-Bold/stylesheet.css');
 @import url('fonts/MyriadSetPro-Medium-fontfacekit/stylesheet.css');
-
+.header_color .main_menu ul:last-child > li > a {
+	color:red;
+}
 
 /*PRECIO DE PRODUCTOS WOOCOMMERCE INSERTADOS EN LAS PAGINAS DESCRIPTIVA DE APPLE*/
 .amount{
