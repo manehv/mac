@@ -354,7 +354,10 @@ div.product p.stock { margin: 0px 0px 10px;}
 #top div .quantity input.qty, .quantity input.qty{border:1px solid #e1e1e1; margin:0 10px; }
 table div.quantity{width:150px; }
 .woocommerce-page .button{margin-top:0px !important; margin-right: 10px; }
-#top .avia-post-nav {background: none rgba(0, 0, 0, 0.1) !important; }
+#top .avia-post-nav {
+    background: none repeat scroll 0% 0% rgba(0, 0, 0, 0.1) !important;
+    visibility: hidden !important;
+}
 .clsContent .avia-image-container{ /* width:64px; Commented because it makes all image too small */ display:inline-block; margin-right:25px; max-width: 100%; }
 .clsContent .av-special-heading{margin-top:0; }
 .clsContent .av-special-heading-tag{font-size:20px; font-family: 'myriad_set_promedium' !important; color:#292325;}
