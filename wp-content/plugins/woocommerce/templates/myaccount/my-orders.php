@@ -30,6 +30,7 @@ if ( $customer_orders ) : ?>
 		<thead>
 			<tr>
 				<th class="order-number"><span class="nobr"><?php _e( 'Order', 'woocommerce' ); ?></span></th>
+				<th class="order-authorization"><span class="nobr"><?php _e( 'Autorización/CUS', 'woocommerce' ); ?></span></th>
 				<th class="order-date"><span class="nobr"><?php _e( 'Date', 'woocommerce' ); ?></span></th>
 				<th class="order-status"><span class="nobr"><?php _e( 'Status', 'woocommerce' ); ?></span></th>
 				<th class="order-total"><span class="nobr"><?php _e( 'Total', 'woocommerce' ); ?></span></th>
@@ -48,6 +49,9 @@ if ( $customer_orders ) : ?>
 						<a href="<?php echo $order->get_view_order_url(); ?>">
 							#<?php echo $order->get_order_number(); ?>
 						</a>
+					</td>
+					<td class="order-number" data-title="<?php _e( 'Autorización/CUS', 'woocommerce' ); ?>">
+							<?php echo get_post_meta($order->id, '_p2p_authorization', true); ?>
 					</td>
 					<td class="order-date" data-title="<?php _e( 'Date', 'woocommerce' ); ?>">
 						<time datetime="<?php echo date( 'Y-m-d', strtotime( $order->order_date ) ); ?>" title="<?php echo esc_attr( strtotime( $order->order_date ) ); ?>"><?php echo date_i18n( get_option( 'date_format' ), strtotime( $order->order_date ) ); ?></time>

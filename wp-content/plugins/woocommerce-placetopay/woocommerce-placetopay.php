@@ -595,7 +595,39 @@ function init_placetopay_class() {
 		 */
 		public function process_redirect($order_id)
 		{
-			echo '<p>'.__('Thank you for your order, please click the button below to pay with Place to Pay.', 'woocommerce-placetopay').'</p>';
+                 		// obtiene los últimos pedidos del cliente para revisar si tiene uno pendiente
+		$customer_orders = get_posts( apply_filters( 'woocommerce_my_account_my_orders_query', array(
+		'numberposts' => 2,
+		'meta_key' => '_customer_user',
+		'meta_value' => get_current_user_id(),
+		'post_type' => 'shop_order',
+		'post_status' => 'publish',
+		'shop_order_status' => 'on-hold'
+		) ) );
+
+		if ( $customer_orders ) {
+			foreach ($customer_orders as $order_ids) {
+				$order = new WC_Order();
+				$order->populate($order_ids);
+				if ((($order->status == 'pending') || ($order->status == 'on-hold')) && ($order->id != $order_id) ) {
+					$authcode = get_post_meta($order->id, '_p2p_authorization', true);
+					$message = sprintf( __( 'The order # %s is awaiting confirmation from your bank, Please wait a few minutes to check and see if your payment has been approved. For more information please contact our call center %s or via email %s and ask for the status of the transaction %s.', 'woocommerce-placetopay'),
+					(string)$order->id, $this->merchantPhone, $this->merchantEmail, (($authcode == '') ? '': sprintf(__('with Authorization/tracking %s', 'woocommerce-placetopay'), $authcode)));
+					echo "<table class='shop_table order_details'>
+					<tbody>
+					<tr>
+					<th scope='row'>{$message}</th>
+					</tr>
+					</tbody>
+					</table>";
+					return;
+				} else if($order->id != $order_id){
+					echo '<p>'.__('Thank you for your order, please click the button below to pay with Place to Pay.', 'woocommerce-placetopay').'</p>';
+				}
+			}
+		}
+	
+			//echo '<p>'.__('Thank you for your order, please click the button below to pay with Place to Pay.', 'woocommerce-placetopay').'</p>';
 			if ($this->debug == 'yes') {
 				$this->log->add('PlacetoPay', 'process_redirect - order #' . $order_id);
 			}
@@ -701,7 +733,7 @@ function init_placetopay_class() {
 						. '<tr><th scope="row">' . __('Reference', 'woocommerce-placetopay')
 							. '</th><td>' . $order_id . '</td></tr>'
 						. '<tr><th scope="row">' . __('Description', 'woocommerce-placetopay')
-							. '</th><td>' . sprintf(__($this->paymentDescription, 'woocommerce-placetopay'), (string)$order_id) . '</td></tr>';
+							. '</th><td>'.sprintf(__($this->paymentDescription, 'woocommerce-placetopay'), (string)$order_id) . '</td></tr>';
 					foreach ($fields as $field => $label) {
 						$value = get_post_meta($order_id, $field, true);
 						if ($value !== '') {
@@ -789,7 +821,7 @@ function init_placetopay_class() {
 
 			// verifica que la orden no haya sido completada, para no perder el
 			// tiempo haciendo un asiento
-			if (in_array($order->status, array('completed', 'processing'))) {
+			if (in_array($order->status, array('completed', 'completed'))) {
 				if ($this->debug == 'yes')
 					$this->log->add( 'PlacetoPay', sprintf(
 						__('Abort updating the Order # %s, was already completed!', 'woocommerce-placetopay'),
@@ -833,7 +865,7 @@ function init_placetopay_class() {
 					break;
 				case PlacetoPay::P2P_APPROVED:
 				case PlacetoPay::P2P_DUPLICATE:
-					update_post_meta($orderID, '_p2p_status', __('Appoved', 'woocommerce-placetopay'));
+					update_post_meta($orderID, '_p2p_status', __('Approved', 'woocommerce-placetopay'));
 					$order->add_order_note($p2p->getErrorMessage());
 					$order->payment_complete();
 
