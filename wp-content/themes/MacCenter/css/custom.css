@@ -8,7 +8,7 @@
 @import url('fonts/MyriadSetPro-Medium-fontfacekit/stylesheet.css');
 /*ESTILO BK BTN SHORDCODE ADD TO CAR*/
 div .main_color .button{
-	    background-color: #1587C9;
+background-color: #1587C9 !important;
     border-color:NONE;
     color: #FFF;
 }
