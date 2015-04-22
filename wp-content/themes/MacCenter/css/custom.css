@@ -12,6 +12,12 @@ background-color: #1587C9 !important;
     border-color:NONE;
     color: #FFF;
 }
+div .main_color .button:hoover{
+background-color: #5CAAE7 !important;
+    border-color:NONE;
+    color: #FFF;
+}
+
 /*PRECIO DE PRODUCTOS WOOCOMMERCE INSERTADOS EN LAS PAGINAS DESCRIPTIVA DE APPLE*/
 .amount{
 font-size: 20px;
