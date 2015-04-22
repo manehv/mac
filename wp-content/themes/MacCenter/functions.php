@@ -949,7 +949,7 @@ function my_nav_menu_profile_link($menu, $args) {
                                                                  $logout_url= home_url();
                                                                                                 //  $items .= '<li><a href="'. wp_logout() .'">Click Here (Log Out)</a></li>';
                                                                  $current_user = wp_get_current_user();
-                                                                 $user_name =$current_user->user_login;
+                                                                 $user_name =$current_user->user_firstname;
                                                                  $user_name =SUBSTR($user_name,0,15);
                                                            $title="Hola ".$user_name.".";
 
