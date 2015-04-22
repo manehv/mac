@@ -18,5 +18,11 @@ if ( ! $messages ){
 ?>
 
 <?php foreach ( $messages as $message ) : ?>
-	<div class="woocommerce-message"><?php echo wp_kses_post( $message ); ?></div>
+
+	<?php if ( strpos( $message, 'are now logged in as' ) === false  &&  strpos( $message, 'autenticado como' ) === false ) : ?>
+	
+		<div class="woocommerce-message"><?php echo wp_kses_post( $message ); ?></div>
+
+	<?php endif; ?>
+	
 <?php endforeach; ?>
