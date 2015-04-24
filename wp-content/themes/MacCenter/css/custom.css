@@ -1179,15 +1179,16 @@ margin-right: 10px;
 /*forgot password */
 
 .avia_transform .av_font_icon {
-    color: #000;
+    color: white !important;
+text-shadow: rgba(0,0,0,0.7)0 0 4px !important;
     opacity: 1;
     transform: scale(1);
     -webkit-transform:scale(1);
 }
-.menu-item .av_font_icon {
+ /* .menu-item .av_font_icon {
     color: green !important;
- /*   padding:0px 20px;*/
-}
+  padding:0px 20px;
+}*/
 
 .menu-item .av_font_icon:hover{
     color: #fff !important;
