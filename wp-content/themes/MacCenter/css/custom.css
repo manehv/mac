@@ -8,7 +8,7 @@
 @import url('fonts/MyriadSetPro-Medium-fontfacekit/stylesheet.css');
 
 /*.header_color .main_menu ul:first-child > li > a {*/
-.header_color .main_menu ul:last-child > li > a {
+.header_color .main_menu ul:last-child > li {
 	background-color:#red !important;
 }
 
