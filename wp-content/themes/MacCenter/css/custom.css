@@ -1178,7 +1178,7 @@ margin-right: 10px;
     -webkit-transform:scale(1);
 }
 .menu-item .av_font_icon {
-    color: #56656D;
+    color: green !important;
  /*   padding:0px 20px;*/
 }
 
