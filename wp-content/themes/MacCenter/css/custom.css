@@ -1191,7 +1191,7 @@ text-shadow: rgba(0,0,0,0.7)0 0 4px !important;
 }*/
 
 .menu-item .av_font_icon:hover{
-    color: #fff !important;
+    color: green !important;
 }
 
 .menu-item .av_font_icon:active{
