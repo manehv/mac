@@ -1177,10 +1177,9 @@ margin-right: 10px;
         font-weight:bold;
 }
 /*forgot password */
-/*
+
 .avia_transform .av_font_icon {
-    color: white !important;
-text-shadow: rgba(0,0,0,0.7)0 0 4px !important;
+    color:#56656D !important;
     opacity: 1;
     transform: scale(1);
     -webkit-transform:scale(1);
