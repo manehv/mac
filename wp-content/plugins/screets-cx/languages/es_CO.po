@@ -1503,7 +1503,7 @@ msgstr ""
 
 # @ cx
 #: ../screets-cx.php:943 ../core/fn.common.php:69
-msgid "Connect"
+msgid "Conectar"
 msgstr "Conectar"
 
 # @ cx
@@ -1544,12 +1544,12 @@ msgstr "No hay operadores online"
 
 # @ cx
 #: ../core/fn.common.php:548
-msgid "Sending"
+msgid "Enviando"
 msgstr "Enviando"
 
 # @ cx
 #: ../core/fn.common.php:549
-msgid "Connecting"
+msgid "Conectando..."
 msgstr "Conectando..."
 
 # @ cx
