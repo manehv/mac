@@ -11,7 +11,8 @@
 div form.cart div.quantity {
     float: left;
     margin: 0px;
-    width: 100px;
+    width: 100px !important;
+    min-width: 100px !important;
 }
 
 /*SOMBRA BTN CHAT*/
