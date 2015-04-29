@@ -1204,9 +1204,9 @@ width: 130px;
 }
 
 div form.cart div.quantity {
-float: left;
+/*float: left;
 margin: 0 3% 0 0;
-min-width:130px;
+min-width:130px;*/
 }
 
  form.cart .group_table div.quantity {
