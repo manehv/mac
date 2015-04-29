@@ -7,6 +7,22 @@
 @import url('fonts/MyriadSetPro-Bold-fontfacekit/web-fonts/MyriadSetPro-Bold/stylesheet.css');
 @import url('fonts/MyriadSetPro-Medium-fontfacekit/stylesheet.css');
 
+
+
+/*BTN TRAINING ROOMS*/
+.arform_modal_button_102{
+	
+	padding: 9px 19px !important;
+	border-radius: 3px;
+	float: left;
+	margin-top: 14px;
+	margin-right: 10px;
+	background-color: #1587C9;
+	color:#fff;
+}
+
+
+
 /*.header_color .main_menu ul:first-child > li > a {*/
 .header_color .main_menu ul:first-child > li > a {
 	background-color:#red !important;
