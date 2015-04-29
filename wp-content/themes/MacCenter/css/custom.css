@@ -864,6 +864,7 @@ p.stock {
     width: 110px;
     color: rgb(255, 255, 255) !important;
     border-radius: 2px;
+    /*margin: 20px auto !important;*/
    
 }
 
