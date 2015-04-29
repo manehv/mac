@@ -909,6 +909,19 @@ textarea {
   font-size: inherit;
   line-height: inherit;
 }
+button{
+  font-family: inherit;
+font-size: inherit;
+line-height: inherit;
+padding: 9px 19px;
+border-radius: 3px;
+float: left;
+margin-top: 14px;
+margin-right: 10px;
+background-color: #1C89C9;
+color: #fff;
+border: none;
+}
 a {
   color: #428bca;
   text-decoration: none;
