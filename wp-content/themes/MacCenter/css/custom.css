@@ -297,7 +297,7 @@ background-color:red !important;
     bottom: 109px !important;
     font-family: 'myriad_set_promedium' !important;
     padding: 1px 21px;
-
+width: auto !important;
         right: 24px !important;
 }
 /* General Custom CSS */
