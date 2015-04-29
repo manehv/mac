@@ -6,6 +6,11 @@
 @import url('fonts/open-sans-fontfacekit/web-fonts/opensans_regular/stylesheet.css');*/
 @import url('fonts/MyriadSetPro-Bold-fontfacekit/web-fonts/MyriadSetPro-Bold/stylesheet.css');
 @import url('fonts/MyriadSetPro-Medium-fontfacekit/stylesheet.css');
+
+.cx-chat-btn {
+	box-shadow: none !important;
+}
+
 /*LINEA ESPACIADORA ENWIDGET CHAT*/
 .cx-form .cx-line {
     margin-bottom: -10px !important;
