@@ -15,8 +15,8 @@
     bottom: 0px;
     left: 0px;
     z-index: 1040;
-    background-color: #1783A7;
-    opacity: 0.8;
+    background-color: #1783A7 !important;
+    opacity: 0.8 !important;
 }
 
 
