@@ -10,8 +10,8 @@
 /*btn agregar mas o menos en sidebar*/
 div form.cart div.quantity {
     float: left;
-    margin: 0px 3% 0px 0px;
-    width: 106px;
+    margin: 0px;
+    width: 100px;
 }
 
 /*SOMBRA BTN CHAT*/
