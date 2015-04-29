@@ -861,10 +861,10 @@ p.stock {
     margin: 5px 0px;
     background-color: rgb(179, 179, 179);
     text-align: center;
-    width: 110px;
+    width: 100%;
     color: rgb(255, 255, 255) !important;
     border-radius: 2px;
-    /*margin: 20px auto !important;*/
+    margin: 20px auto !important;
    
 }
 
