@@ -17,7 +17,7 @@
 
 
 /*POSICION ICONO CHAT*/
-cx-chat-btn .cx-ico-chat {
+.cx-chat-btn .cx-ico-chat {
     display: none;
     padding: 8px 10px!important;
     clear: both!important;
