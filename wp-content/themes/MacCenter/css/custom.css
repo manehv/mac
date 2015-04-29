@@ -7,6 +7,13 @@
 @import url('fonts/MyriadSetPro-Bold-fontfacekit/web-fonts/MyriadSetPro-Bold/stylesheet.css');
 @import url('fonts/MyriadSetPro-Medium-fontfacekit/stylesheet.css');
 
+/*POSICION ICONO CHAT*/
+cx-chat-btn .cx-ico-chat {
+    display: none;
+    padding: 8px 10px;
+    clear: both;
+    text-align: center;
+}
 
 #arf_modal_default.arform_modal_link_102:a{
 	color:#ffffff !important;
