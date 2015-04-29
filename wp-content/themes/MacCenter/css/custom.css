@@ -7,6 +7,12 @@
 @import url('fonts/MyriadSetPro-Bold-fontfacekit/web-fonts/MyriadSetPro-Bold/stylesheet.css');
 @import url('fonts/MyriadSetPro-Medium-fontfacekit/stylesheet.css');
 
+
+#arf_modal_default.arform_modal_link_102{
+	color:#ffffff !important;
+}
+
+
 /*LIGTHBOX ARFORMS*/
 .arfmodal-backdrop {
     position: fixed;
