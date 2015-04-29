@@ -236,7 +236,7 @@ msgstr "Guardado con Éxito!"
 # @ cx
 #: ../core/fn.ajax.php:341 ../core/fn.ajax.php:348 ../core/fn.ajax.php:359 ..
 #: core/fn.ajax.php:365 ../core/fn.common.php:558
-msgid "Please fill out all required fields"
+msgid "Por favor llene todos los campos requeridos"
 msgstr "Por favor llene todos los campos requeridos"
 
 # @ cx
