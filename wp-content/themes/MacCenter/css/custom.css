@@ -7,6 +7,14 @@
 @import url('fonts/MyriadSetPro-Bold-fontfacekit/web-fonts/MyriadSetPro-Bold/stylesheet.css');
 @import url('fonts/MyriadSetPro-Medium-fontfacekit/stylesheet.css');
 
+/*btn agregar mas o menos en sidebar*/
+div form.cart div.quantity {
+    float: left;
+    margin: 0px 3% 0px 0px;
+    width: 106px;
+}
+
+/*SOMBRA BTN CHAT*/
 .cx-chat-btn {
 	box-shadow: none !important;
 }
