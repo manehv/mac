@@ -473,11 +473,16 @@ height:400px;
 overflow:hidden;
 }
 
-.single-product .clsContent .flex_column p {
+/*.single-product .clsContent .flex_column p {
 font-size: 12px;
 padding:10px 10px 10px 10px;
 }
+*/
+.single-product .clsContent .flex_column p {
+    font-size: 10px !important;
 
+    color: #636363 !important;
+}
 .single-product .flex_column.av_one_third.first img {
 width: 25px;
 max-width: 25px;
