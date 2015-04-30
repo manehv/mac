@@ -46,6 +46,13 @@
 .simplr-message.success { 
 	background: rgba(255,255,255,0) !important; 
 	color:#4F8A10; 
+	width: 500px !important;
+margin: auto !important;
+background-image: url("http://mc.arbolnaranja.com/wp-content/uploads/2015/04/alert-01.png") !important;
+height: 50px !important;
+text-align: left !important;
+text-transform: uppercase !important;
+padding: 7px 10px 10px 20px !important;
 
 }
 
