@@ -44,14 +44,14 @@
 }
 
 .simplr-message.success { 
-	background: #DFF2BF; 
+	background: rgba(255,255,255,0) !important; 
 	color:#4F8A10; 
-	border-color: #4F8A10;
+
 }
 
 .simplr-message.error { 
-	background: #FFBABA; 
+	background: rgba(255,255,255,0) !important; 
 	color: #D8000C;
-	border-color: #D8000C; 
+	
 }
 
