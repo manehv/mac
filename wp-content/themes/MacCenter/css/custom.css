@@ -6,6 +6,18 @@
 @import url('fonts/open-sans-fontfacekit/web-fonts/opensans_regular/stylesheet.css');*/
 @import url('fonts/MyriadSetPro-Bold-fontfacekit/web-fonts/MyriadSetPro-Bold/stylesheet.css');
 @import url('fonts/MyriadSetPro-Medium-fontfacekit/stylesheet.css');
+/*NUEVA ALERTA REGISTRO OK*/
+.simplr-message.success {
+color: #4F8A10; !important;
+    width: 500px !important;
+    margin: auto!important;
+    background-image: url("http://mc.arbolnaranja.com/wp-content/uploads/2015/04/alert-01.png")!important;
+    height: 50px!important;
+    text-align: left!important;
+    text-transform: uppercase!important;
+    padding: 7px 10px 10px 20px!important;
+}
+
 /*NUEVA ALERTA DE ERROR*/
 .simplr-message.error {
     color: #D8000C !important;
