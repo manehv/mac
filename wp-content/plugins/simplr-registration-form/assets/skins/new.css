@@ -57,6 +57,7 @@ padding: 7px 10px 10px 20px !important;
 }
 
 .simplr-message.error { 
+	list-style:none !important;
 color: #D8000C !important;
 width: 500px !important;
 margin: auto !important;
