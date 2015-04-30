@@ -14,7 +14,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 wc_print_notices(); ?>
 <h2 class='clsMyAcc'>Mi Cuenta</h2>
 <p class="myaccount_user">
-        Desde la página de cuenta puedes ver pedidos recientes, gestionar tu dirección de envío, dirección de facturación y cambiar tu contraseña.
+        Desde la página de cuenta puedes ver pedidos recientes, gestionar tu dirección de envío, dirección de facturación y <a href="/mi-cuenta/edit-account">cambiar tu contraseña</a>.
 </p>
 
 <?php do_action( 'woocommerce_before_my_account' ); ?>
