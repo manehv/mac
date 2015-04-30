@@ -6,6 +6,16 @@
 @import url('fonts/open-sans-fontfacekit/web-fonts/opensans_regular/stylesheet.css');*/
 @import url('fonts/MyriadSetPro-Bold-fontfacekit/web-fonts/MyriadSetPro-Bold/stylesheet.css');
 @import url('fonts/MyriadSetPro-Medium-fontfacekit/stylesheet.css');
+/*NUEVA POSICION BTN CHAT*/
+.cx-chat-btn {
+    font-size: 16px;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease 0s;
+    z-index: 999999;
+    cursor: pointer;
+    bottom: 50px !important;
+}
+
 /*NUEVA ALERTA REGISTRO OK*/
 .simplr-message.success {
 	background-color: none repeat scroll 0% 0% rgba(255, 255, 255, 0) !important;
