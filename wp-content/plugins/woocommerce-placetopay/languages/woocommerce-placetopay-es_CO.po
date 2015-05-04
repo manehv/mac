@@ -3,414 +3,406 @@ msgstr ""
 "Project-Id-Version: WooCommerce - Place to Pay v1.3.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-09-12 10:02-0500\n"
-"PO-Revision-Date: 2014-09-13 18:03:19+0000\n"
-"Last-Translator: Soporte <soporte@placetopay.com>\n"
+"PO-Revision-Date: 2015-05-04 18:13-0500\n"
+"Last-Translator: 8manos i18n <i18n@8manos.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Poedit 1.6.9\n"
-"X-Poedit-Language: \n"
-"X-Poedit-Country: \n"
+"X-Generator: Poedit 1.7.5\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2\n"
 "X-Poedit-Basepath: ../\n"
-"X-Poedit-Bookmarks: \n"
+"X-Textdomain-Support: yes\n"
+"Language: es_CO\n"
 "X-Poedit-SearchPath-0: .\n"
-"X-Textdomain-Support: yes"
 
+# @ woocommerce-placetopay
 #: woocommerce-placetopay.php:524
-#@ woocommerce-placetopay
 msgid "Redirecting to Place to Pay"
 msgstr "Redireccionando a Place to Pay"
 
+# @ woocommerce-placetopay
 #: woocommerce-placetopay.php:41
-#@ woocommerce-placetopay
 msgid "Settings"
 msgstr "Ajustes"
 
-#: woocommerce-placetopay.php:68
-#: woocommerce-placetopay.php:421
-#@ woocommerce-placetopay
+# @ woocommerce-placetopay
+#: woocommerce-placetopay.php:68 woocommerce-placetopay.php:421
 msgid "Place to Pay"
 msgstr "Place to Pay"
 
+# @ woocommerce
 #: woocommerce-placetopay.php:194
-#@ woocommerce
 msgid "Enable/Disable"
 msgstr ""
 
+# @ woocommerce-placetopay
 #: woocommerce-placetopay.php:195
-#@ woocommerce-placetopay
 msgid "Enable Place to Pay"
 msgstr "Habilitar Place to Pay"
 
+# @ woocommerce
 #: woocommerce-placetopay.php:200
-#@ woocommerce
 msgid "Title"
 msgstr ""
 
+# @ woocommerce
 #: woocommerce-placetopay.php:201
-#@ woocommerce
 msgid "This controls the title which the user sees during checkout."
 msgstr ""
 
+# @ woocommerce-placetopay
 #: woocommerce-placetopay.php:203
-#@ woocommerce-placetopay
 msgid "Place to Pay - Credit cards and debits account"
 msgstr "Place to Pay - Tarjetas de crédito y débitos a cuentas"
 
-#: woocommerce-placetopay.php:207
-#: woocommerce-placetopay.php:685
-#@ woocommerce
-#@ woocommerce-placetopay
+# @ woocommerce
+# @ woocommerce-placetopay
+#: woocommerce-placetopay.php:207 woocommerce-placetopay.php:685
 msgid "Description"
 msgstr "Descripción"
 
+# @ woocommerce
 #: woocommerce-placetopay.php:208
-#@ woocommerce
 msgid "This controls the description which the user sees during checkout."
 msgstr ""
 
+# @ woocommerce-placetopay
 #: woocommerce-placetopay.php:210
-#@ woocommerce-placetopay
 msgid "Pay via Place to Pay; you can pay with credit cards or debit accounts (check and saving); another payment methods could be available."
 msgstr "Paga vía Place to Pay; usted puede pagar con tarjetas de crédito o cuentas de débito (ahorro y corriente); otros métodos de pago podrían estar disponibles."
 
+# @ woocommerce-placetopay
 #: woocommerce-placetopay.php:213
-#@ woocommerce-placetopay
 msgid "Payment method logos"
 msgstr "Logos medios de pagos"
 
+# @ woocommerce-placetopay
 #: woocommerce-placetopay.php:214
-#@ woocommerce-placetopay
 msgid "Select the payment methods that you store have available to show in the Checkout page"
 msgstr "Seleccione los métodos de pago que estarán disponibles en la página de pago"
 
+# @ woocommerce-placetopay
 #: woocommerce-placetopay.php:220
-#@ woocommerce-placetopay
 msgid "Payment Description"
 msgstr "Descripción del pago"
 
+# @ woocommerce-placetopay
 #: woocommerce-placetopay.php:221
-#@ woocommerce-placetopay
 msgid "For certification process, the text sended to the financial entities"
 msgstr "Para el proceso de certificación, el texto enviado a las entidades financieras"
 
+# @ woocommerce-placetopay
 #: woocommerce-placetopay.php:223
 #, php-format
-#@ woocommerce-placetopay
 msgid "Place to Pay Payment - %s"
 msgstr "Pago con Place to Pay - %s"
 
-#: woocommerce-placetopay.php:226
-#: woocommerce-placetopay.php:681
-#@ woocommerce-placetopay
+# @ woocommerce-placetopay
+#: woocommerce-placetopay.php:226 woocommerce-placetopay.php:681
 msgid "Merchant Name"
 msgstr "Razón social"
 
+# @ woocommerce-placetopay
 #: woocommerce-placetopay.php:227
-#@ woocommerce-placetopay
 msgid "Enter the company name like appears in the Commerce Chamber or your Brand"
 msgstr "Introduzca el nombre de la empresa, como aparece en la Cámara de Comercio o su defecto el nombre de la marca"
 
-#: woocommerce-placetopay.php:233
-#: woocommerce-placetopay.php:679
-#@ woocommerce-placetopay
+# @ woocommerce-placetopay
+#: woocommerce-placetopay.php:233 woocommerce-placetopay.php:679
 msgid "Merchant ID"
 msgstr "NIT"
 
+# @ woocommerce-placetopay
 #: woocommerce-placetopay.php:234
-#@ woocommerce-placetopay
 msgid "Provide the registration number of your company like appears in the Tax Administration records"
 msgstr "Proporcione el número de registro de su empresa como aparece en el registro tributario"
 
+# @ woocommerce-placetopay
 #: woocommerce-placetopay.php:240
-#@ woocommerce-placetopay
 msgid "Phone number"
 msgstr "Número telefónico"
 
+# @ woocommerce-placetopay
 #: woocommerce-placetopay.php:241
-#@ woocommerce-placetopay
 msgid "Provide the phone number used for the inquiries or support in your shop"
 msgstr "Proporcione el número de teléfono utilizado para las consultas o soporte en su tienda"
 
+# @ woocommerce-placetopay
 #: woocommerce-placetopay.php:247
-#@ woocommerce-placetopay
 msgid "Email"
 msgstr "Correo electrónico"
 
+# @ woocommerce-placetopay
 #: woocommerce-placetopay.php:248
-#@ woocommerce-placetopay
 msgid "Provide contact email"
 msgstr "Proporcione el correo electrónico de contacto"
 
+# @ woocommerce-placetopay
 #: woocommerce-placetopay.php:254
-#@ woocommerce-placetopay
 msgid "Customer Site ID"
 msgstr "Identificador de sitio"
 
+# @ woocommerce-placetopay
 #: woocommerce-placetopay.php:255
-#@ woocommerce-placetopay
 msgid "Identification issued by Place to Pay to the merchant"
 msgstr "Identificación emitida por Place to Pay al comerciante"
 
+# @ woocommerce-placetopay
 #: woocommerce-placetopay.php:261
-#@ woocommerce-placetopay
 msgid "Callback Url"
 msgstr "Url retorno"
 
+# @ woocommerce-placetopay
 #: woocommerce-placetopay.php:262
-#@ woocommerce-placetopay
 msgid "This callback URL must be configured in Place to Pay."
 msgstr "URL de retorno que debe ser reportada a Place to Pay."
 
+# @ woocommerce-placetopay
 #: woocommerce-placetopay.php:267
-#@ woocommerce-placetopay
 msgid "GPG Executable Path"
 msgstr "Ruta del ejecutable GPG"
 
+# @ woocommerce-placetopay
 #: woocommerce-placetopay.php:268
-#@ woocommerce-placetopay
 msgid "Full path to the GnuPG executable file"
 msgstr "Ruta completa con el archivo ejecutable del GnuPG"
 
+# @ woocommerce-placetopay
 #: woocommerce-placetopay.php:273
-#@ woocommerce-placetopay
 msgid "Keyring Home Directory"
 msgstr "Ruta del anillo de llaves"
 
+# @ woocommerce-placetopay
 #: woocommerce-placetopay.php:274
-#@ woocommerce-placetopay
 msgid "Directory where the keyring is founded"
 msgstr "Directorio en donde se encuentra el anillo de llaves"
 
+# @ woocommerce-placetopay
 #: woocommerce-placetopay.php:279
-#@ woocommerce-placetopay
 msgid "Merchant Key"
 msgstr "Llave GnuPG del comercio"
 
+# @ woocommerce-placetopay
 #: woocommerce-placetopay.php:280
-#@ woocommerce-placetopay
 msgid "GnuPG Key ID created by the merchant to connect with Place to Pay"
 msgstr "Identificador de la llave creada por el comercio para conectarse con Place to Pay"
 
+# @ woocommerce-placetopay
 #: woocommerce-placetopay.php:286
-#@ woocommerce-placetopay
 msgid "Merchant Passphrase"
 msgstr "Contraseña de la llave"
 
+# @ woocommerce-placetopay
 #: woocommerce-placetopay.php:287
-#@ woocommerce-placetopay
 msgid "Password used at the time of the creation of the key"
 msgstr "Clave usada en el momento de la creación de la llave"
 
+# @ woocommerce-placetopay
 #: woocommerce-placetopay.php:292
-#@ woocommerce-placetopay
 msgid "Place to Pay Key ID"
 msgstr "Identificador de la llave de Place to Pay"
 
+# @ woocommerce-placetopay
 #: woocommerce-placetopay.php:293
-#@ woocommerce-placetopay
 msgid "GnuPG Place to Pay Key"
 msgstr "Llave GnuPG de Place to Pay"
 
+# @ woocommerce
 #: woocommerce-placetopay.php:299
-#@ woocommerce
 msgid "Debug Log"
 msgstr ""
 
+# @ woocommerce
 #: woocommerce-placetopay.php:300
-#@ woocommerce
 msgid "Enable logging"
 msgstr ""
 
+# @ woocommerce-placetopay
 #: woocommerce-placetopay.php:301
 #, php-format
-#@ woocommerce-placetopay
 msgid "Log Place to Pay events, such as IPN requests, inside <code>woocommerce/logs/placetopay-%s.txt</code>"
 msgstr "Registra los eventos de Place to Pay, como las solicitudes de IPN, en el archivo <code>woocommerce/logs/ placetopay-%s.txt </ code>"
 
+# @ woocommerce-placetopay
 #: woocommerce-placetopay.php:323
-#@ woocommerce-placetopay
 msgid "The executable path of GnuPG (gpg) does not exist."
 msgstr "La ruta del ejecutable de GnuPG (gpg) no existe."
 
+# @ woocommerce-placetopay
 #: woocommerce-placetopay.php:328
-#@ woocommerce-placetopay
 msgid "The gpg file can not be called, check execute permissions."
 msgstr "El archivo gpg no puede ser llamado, verifique los permisos de ejecución."
 
+# @ woocommerce-placetopay
 #: woocommerce-placetopay.php:333
-#@ woocommerce-placetopay
 msgid "The route keyring does not exist."
 msgstr "La ruta del anillo de llaves no existe."
 
+# @ woocommerce-placetopay
 #: woocommerce-placetopay.php:422
-#@ woocommerce-placetopay
 msgid "Place to Pay works by sending the user to Place to Pay to enter their payment information in a secure way while keeping you in control of the design of your site."
 msgstr "Place to Pay funciona enviando al usuario a Place to Pay introducir su información de pago de forma segura mientras te mantiene en control del diseño de su sitio."
 
+# @ woocommerce-placetopay
 #: woocommerce-placetopay.php:423
-#@ woocommerce-placetopay
 msgid "Place to Pay Admin console"
 msgstr "Consola administrativa Place to Pay"
 
+# @ woocommerce-placetopay
 #: woocommerce-placetopay.php:446
-#@ woocommerce-placetopay
 msgid "Can not generate secure data to connect with Place to Pay."
 msgstr "No se pudieron generar los datos seguros para la conexión con Place to Pay."
 
+# @ woothemes
 #: woocommerce-placetopay.php:453
-#@ woothemes
 msgid "Payment error:"
 msgstr ""
 
+# @ woocommerce-placetopay
 #: woocommerce-placetopay.php:541
-#@ woocommerce-placetopay
 msgid "We are now redirecting you to Place to Pay to make payment, if you are not redirected please press the bottom."
 msgstr "Lo estamos redirigiendo a Place to Pay para hacer el pago, si usted no es redirigido por favor presione el botón."
 
+# @ woocommerce-placetopay
 #: woocommerce-placetopay.php:565
-#@ woocommerce-placetopay
 msgid "Pay with Place to Pay"
 msgstr "Pagar con Place to Pay"
 
+# @ woocommerce
 #: woocommerce-placetopay.php:566
-#@ woocommerce
 msgid "Cancel order &amp; restore cart"
 msgstr "Cancelar pedido y restaurar carrito"
 
+# @ woocommerce-placetopay
 #: woocommerce-placetopay.php:580
-#@ woocommerce-placetopay
 msgid "Thank you for your order, please click the button below to pay with Place to Pay."
 msgstr "Gracias por su pedido, por favor presione el botón de pagar con Place to Pay."
 
+# @ woocommerce-placetopay
 #: woocommerce-placetopay.php:595
-#@ woocommerce-placetopay
 msgid "Transaction date"
 msgstr "Fecha transacción"
 
+# @ woocommerce-placetopay
 #: woocommerce-placetopay.php:596
-#@ woocommerce-placetopay
 msgid "Status"
 msgstr "Estado"
 
+# @ woocommerce-placetopay
 #: woocommerce-placetopay.php:597
-#@ woocommerce-placetopay
 msgid "Reason"
 msgstr "Motivo"
 
+# @ woocommerce-placetopay
 #: woocommerce-placetopay.php:598
-#@ woocommerce-placetopay
 msgid "Franchise"
 msgstr "Franquicia"
 
+# @ woocommerce-placetopay
 #: woocommerce-placetopay.php:599
-#@ woocommerce-placetopay
 msgid "Bank Name"
 msgstr "Banco"
 
+# @ woocommerce-placetopay
 #: woocommerce-placetopay.php:600
-#@ woocommerce-placetopay
 msgid "Authorization/tracking"
 msgstr "Autorización/CUS"
 
+# @ woocommerce-placetopay
 #: woocommerce-placetopay.php:601
-#@ woocommerce-placetopay
 msgid "Receipt"
 msgstr "Recibo"
 
+# @ woocommerce-placetopay
 #: woocommerce-placetopay.php:602
-#@ woocommerce-placetopay
 msgid "Platform amount"
 msgstr "Valor cobrado"
 
+# @ woocommerce-placetopay
 #: woocommerce-placetopay.php:603
-#@ woocommerce-placetopay
 msgid "Exchange rate"
 msgstr "Tasa de cambio"
 
-#: woocommerce-placetopay.php:620
-#: woocommerce-placetopay.php:677
-#@ woocommerce-placetopay
+# @ woocommerce-placetopay
+#: woocommerce-placetopay.php:620 woocommerce-placetopay.php:677
 msgid "Transaction information"
 msgstr "Información de la transacción"
 
+# @ woocommerce-placetopay
 #: woocommerce-placetopay.php:666
-#@ woocommerce-placetopay
 msgid "Failure in the decryption of data."
 msgstr "Falla en la descripción de los datos."
 
+# @ woocommerce-placetopay
 #: woocommerce-placetopay.php:683
-#@ woocommerce-placetopay
 msgid "Reference"
 msgstr "Referencia"
 
+# @ woocommerce-placetopay
 #: woocommerce-placetopay.php:696
-#@ woocommerce-placetopay
 msgid "IP Address"
 msgstr "Dirección IP"
 
+# @ woocommerce-placetopay
 #: woocommerce-placetopay.php:699
 #, php-format
-#@ woocommerce-placetopay
 msgid "If you have any questions contact us at phone %s or email us at %s."
 msgstr "Si usted tiene alguna pregunta póngase en contacto con nosotros en el teléfono %s o envíenos un email a %s."
 
+# @ woocommerce-placetopay
 #: woocommerce-placetopay.php:738
 #, php-format
-#@ woocommerce-placetopay
 msgid "The order # %s is awaiting confirmation from your bank, Please wait a few minutes to check and see if your payment has been approved. For more information please contact our call center %s or via email %s and ask for the status of the transaction %s."
 msgstr "El pedido # %s está a la espera de confirmación de su banco, por favor espere unos minutos para comprobar y ver si su pago ha sido aprobado. Para obtener más información, póngase en contacto con nuestro centro de llamadas %s o por correo electrónico %s y pregunte por el estado de la transacción %s."
 
+# @ woocommerce-placetopay
 #: woocommerce-placetopay.php:739
 #, php-format
-#@ woocommerce-placetopay
 msgid "with Authorization/tracking %s"
 msgstr "con Autorización/CUS %s"
 
+# @ woocommerce-placetopay
 #: woocommerce-placetopay.php:777
 #, php-format
-#@ woocommerce-placetopay
 msgid "Abort updating the Order # %s, was already completed!"
 msgstr "Abortada la actualización del Pedido # %s, ya había sido completado!"
 
+# @ woocommerce-placetopay
 #: woocommerce-placetopay.php:818
-#@ woocommerce-placetopay
 msgid "Appoved"
 msgstr "Aprobada"
 
+# @ woocommerce-placetopay
 #: woocommerce-placetopay.php:827
-#@ woocommerce-placetopay
 msgid "Pending"
 msgstr "Pendiente"
 
+# @ woocommerce-placetopay
 #: woocommerce-placetopay.php:999
-#@ woocommerce-placetopay
 msgid "-- Please Select --"
 msgstr "-- Por favor seleccione --"
 
+# @ woocommerce-placetopay
 #: woocommerce-placetopay.php:1050
-#@ woocommerce-placetopay
 msgid "Place to Pay Disabled"
 msgstr "Place to Pay deshabiltado"
 
+# @ woocommerce-placetopay
 #: woocommerce-placetopay.php:1053
-#@ woocommerce-placetopay
 msgid "Click here to configure!"
 msgstr "Haga clic aquí para configurar!"
 
+# @ woocommerce-placetopay
 #: woocommerce-placetopay.php:949
 #, php-format
-#@ woocommerce-placetopay
 msgid "Querying the webservice for the Order # %s"
 msgstr "Consumiendo el webservice para el Pedido # %s"
 
+# @ woocommerce-placetopay
 #: woocommerce-placetopay.php:957
 #, php-format
-#@ woocommerce-placetopay
 msgid "Fail querying the Order # %s with Place to Pay - %s"
 msgstr "Falló el consumo de Place to Pay para el Pedido # %s - %s"
-
