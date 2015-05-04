@@ -6,6 +6,21 @@
 @import url('fonts/open-sans-fontfacekit/web-fonts/opensans_regular/stylesheet.css');*/
 @import url('fonts/MyriadSetPro-Bold-fontfacekit/web-fonts/MyriadSetPro-Bold/stylesheet.css');
 @import url('fonts/MyriadSetPro-Medium-fontfacekit/stylesheet.css');
+
+
+/*ALERTA OUT STOCK*/
+.stock out-of-stock{
+	padding: 10px !important;
+margin: 20px !important;
+position: relative;
+width: 211px!important;
+background-color: #FF7676 !important;
+text-transform: uppercase;
+font-size: 0.92em;
+}
+
+
+
 /*NUEVA POSICION BTN CHAT*/
 .cx-chat-btn {
     font-size: 16px;
