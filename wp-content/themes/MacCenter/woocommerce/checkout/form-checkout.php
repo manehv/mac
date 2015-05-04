@@ -46,6 +46,7 @@ echo '</a>';
 
                 <div class="col2-set" id="customer_details">
                         <div class="">
+                        holaaaa
                                 <?php do_action( 'woocommerce_checkout_billing' ); ?>
                         </div>
 
