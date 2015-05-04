@@ -32,6 +32,7 @@ $get_checkout_url = apply_filters( 'woocommerce_get_checkout_url', WC()->cart->g
 
 		<div class="col2-set" id="customer_details">
 			<div class="col-1">
+			holaaaaa
 				<?php do_action( 'woocommerce_checkout_billing' ); ?>
 			</div>
 
