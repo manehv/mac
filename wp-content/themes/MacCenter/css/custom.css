@@ -9,7 +9,7 @@
 
 
 /*ALERTA OUT STOCK*/
-p.stock out-of-stock{
+.stock out-of-stock p{
 	padding: 10px !important;
 margin: 20px !important;
 position: relative;
