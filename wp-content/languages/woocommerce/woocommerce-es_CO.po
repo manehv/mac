@@ -3,14 +3,14 @@ msgstr ""
 "Project-Id-Version: English-Spanish\n"
 "Report-Msgid-Bugs-To: https://github.com/woothemes/woocommerce/issues\n"
 "POT-Creation-Date: 2014-06-30 14:28:36+00:00\n"
-"PO-Revision-Date: 2015-03-25 10:15-0500\n"
+"PO-Revision-Date: 2015-05-04 18:10-0500\n"
 "Last-Translator: 8manos i18n <i18n@8manos.com>\n"
 "Language-Team: Language\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.7.4\n"
+"X-Generator: Poedit 1.7.5\n"
 "X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_e\n"
 "X-Poedit-Basepath: .\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
@@ -5122,9 +5122,8 @@ msgid "Order cancelled by customer."
 msgstr ""
 
 #: includes/class-wc-form-handler.php:520
-#, fuzzy
 msgid "Your order was cancelled."
-msgstr "Gracias! Hemos procesado tu pedido."
+msgstr "Tu pedido ha sido cancelado"
 
 #: includes/class-wc-form-handler.php:525
 msgid ""
@@ -6937,9 +6936,8 @@ msgid ""
 msgstr ""
 
 #: includes/shortcodes/class-wc-shortcode-my-account.php:202
-#, fuzzy
 msgid "Your password has been reset."
-msgstr "Gracias! Hemos procesado tu pedido."
+msgstr "Tu clave se ha reestablecido."
 
 #: includes/shortcodes/class-wc-shortcode-my-account.php:202
 msgid "Log in"
@@ -7901,7 +7899,7 @@ msgstr "Pagar"
 
 #: templates/checkout/thankyou.php:36 templates/checkout/thankyou.php:67
 msgid "Thank you. Your order has been received."
-msgstr "Gracias! Hemos procesado tu pedido."
+msgstr "Gracias! Hemos recibido tu pedido."
 
 #: templates/emails/admin-new-order.php:13
 #: templates/emails/plain/admin-new-order.php:13
