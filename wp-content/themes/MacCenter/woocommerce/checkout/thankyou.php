@@ -28,7 +28,7 @@ echo '</a>';
                 <span>Recibo</span>
                 <img src="<?php echo get_template_directory_uri(); ?>/images/cart-line3.svg" />
         </div>
-        <?php if ( in_array( $order->status, array( 'failed' ) ) ) : ?>
+        <?php if ( in_array( $order->status, array( 'failed' ) || $order->status, array( 'cancelled' ) ) ) : ?>
 
                 <p><?php _e( 'Unfortunately your order cannot be processed as the originating bank/merchant has declined your transaction.', 'woocommerce' ); ?></p>
 
