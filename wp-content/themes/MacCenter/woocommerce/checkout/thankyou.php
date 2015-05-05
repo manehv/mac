@@ -30,16 +30,16 @@ echo '</a>';
         </div>
         <?php if ( in_array( $order->status, array( 'failed' ) ) || in_array( $order->status, array( 'rejected' ) ) || in_array( $order->status, array( 'cancelled' ) ) || in_array( $order->status, array( 'failed' ) ) || in_array( $order->status, array( 'canceled' ) ) ) : ?>
 
-                <p class="fakealert"><?php _e( 'Unfortunately your order cannot be processed as the originating bank/merchant has declined your transaction.', 'woocommerce' ); ?></p>
+                <p class="fakealert cero"><?php _e( 'Unfortunately your order cannot be processed as the originating bank/merchant has declined your transaction.', 'woocommerce' ); ?></p>
 
-                <p class="fakealert"><?php
+                <p class="fakealert uno"><?php
                         if ( is_user_logged_in() )
                                 _e( 'Please attempt your purchase again or go to your account page.', 'woocommerce' );
                         else
                                 _e( 'Please attempt your purchase again.', 'woocommerce' );
                 ?></p>
 
-                <p class="fakealert">
+                <p class="fakealert dos">
                         <a href="<?php echo esc_url( $order->get_checkout_payment_url() ); ?>" class="button pay"><?php _e( 'Pay', 'woocommerce' ) ?></a>
                         <?php if ( is_user_logged_in() ) : ?>
                         <a href="<?php echo esc_url( wc_get_page_permalink( 'myaccount' ) ); ?>" class="button pay"><?php _e( 'My Account', 'woocommerce' ); ?></a>
@@ -48,7 +48,7 @@ echo '</a>';
 
         <?php else : ?>
 
-                <p class="fakealert"><?php echo apply_filters( 'woocommerce_thankyou_order_received_text', __( 'Thank you. Your order has been received.', 'woocommerce' ), $order ); ?></p>
+                <p class="fakealert tres"><?php echo apply_filters( 'woocommerce_thankyou_order_received_text', __( 'Thank you. Your order has been received.', 'woocommerce' ), $order ); ?></p>
 
                 <ul class="order_details">
                         <li class="order">
