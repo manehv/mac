@@ -107,7 +107,7 @@ jQuery(document).ready(function($)
         }, 1000); // Timeout
         if($(".tax-total").length){
             console.log( "totals remove ");
-            $('tr.tax-total').css('color','red').remove();
+            $('tr.tax-total').css('color','red').css('display','none').remove();
         }
         if($("#order_comments").length){
                 $("#order_comments").attr("placeholder","");
