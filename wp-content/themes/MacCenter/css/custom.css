@@ -7,6 +7,9 @@
 @import url('fonts/MyriadSetPro-Bold-fontfacekit/web-fonts/MyriadSetPro-Bold/stylesheet.css');
 @import url('fonts/MyriadSetPro-Medium-fontfacekit/stylesheet.css');
 
+.tax-total {
+    display: none !important;
+}
 
 /*ALERTA OUT STOCK*/
 .out-of-stock{
