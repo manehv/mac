@@ -9,7 +9,7 @@
  */
 global $states;
 
-$states['AU'] = array(
+$states['CO'] = array(
 	'ACT' => __( 'Australian Capital Territory', 'woocommerce' ),
 	'NSW' => __( 'New South Wales', 'woocommerce' ),
 	'NT'  => __( 'Northern Territory', 'woocommerce' ),
