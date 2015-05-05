@@ -1123,7 +1123,7 @@ function custom_override_billing_fields( $fields ) {
      );
      
        $fields['billing_postcode'] = array(
-        'label'     => __('Código postal o barrio', 'woocommerce'),
+        'label'     => __('Barrio', 'woocommerce'),
         'placeholder'   => (''),
                                 'required'  => false,
                                 'class'     => array('form-row-last', 'address-field'),
