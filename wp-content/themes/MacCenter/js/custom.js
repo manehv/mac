@@ -1,7 +1,7 @@
 jQuery(document).ready(function($)
 {
 
-        $('.tax-total').remove();
+        
         //OLD Code
         //$.lockfixed("#idSticky",{offset: {top: 120, bottom: 70}});
         //New Code
@@ -104,6 +104,7 @@ jQuery(document).ready(function($)
                 // Trigger change event
                 $qty.trigger( 'change' );
         });     
+        $('.tax-total').remove();
         }, 1000); // Timeout
         if($("#order_comments").length){
                 $("#order_comments").attr("placeholder","");
