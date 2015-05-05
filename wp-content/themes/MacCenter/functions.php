@@ -1227,13 +1227,18 @@ function reorder_woocommerce_fields($fields) {
 
         $fields2['billing_first_name'] = $fields['billing_first_name'];
         $fields2['billing_last_name'] = $fields['billing_last_name'];
-        $fields2['billing_email'] = $fields['billing_email'];
         $fields2['billing_country'] = $fields['billing_country'];
         $fields2['billing_city'] = $fields['billing_city'];
         $fields2['billing_company'] = $fields['billing_company'];
         $fields2['billing_postcode'] = $fields['billing_postcode'];
         $fields2['billing_address_1'] = $fields['billing_address_1'];
         $fields2['billing_mobile_phone'] = $fields['billing_mobile_phone'];
+        $fields2['billing_email'] = array(
+            'label'     => __('E-mail', 'woocommerce'),
+            'placeholder'   => (''),
+            'required'  => false,
+            'class'     => array('form-row-first')
+         );
       
 
 //      $fields2['billing']['billing_first_name'] = $fields['billing']['billing_first_name'];
