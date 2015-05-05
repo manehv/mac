@@ -1,22 +1,119 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
 msgid ""
 msgstr ""
-"Project-Id-Version: \n"
+"Project-Id-Version: Simplr User Registration Form Plus\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-12-24 23:24+0100\n"
-"PO-Revision-Date: 2015-03-25 10:38-0500\n"
-"Last-Translator: 8manos i18n <i18n@8manos.com>\n"
+"PO-Revision-Date: Mon May 04 2015 16:34:03 GMT-0500 (COT)\n"
+"Last-Translator: manuel <groupde@gmail.com>\n"
 "Language-Team: \n"
+"Language: Spanish (Colombia)\n"
+"Plural-Forms: nplurals=2; plural=n != 1\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.7.4\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"Language: es_CO\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Generator: Loco - https://localise.biz/\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: ..\n"
+"X-Poedit-KeywordsList: _:1;gettext:1;dgettext:2;ngettext:1,2;dngettext:2,3;"
+"__:1;_e:1;_c:1;_n:1,2;_n_noop:1,2;_nc:1,2;__ngettext:1,2;__ngettext_noop:1,2;"
+"_x:1,2c;_ex:1,2c;_nx:1,2,4c;_nx_noop:1,2,3c;_n_js:1,2;_nx_js:1,2,3c;"
+"esc_attr__:1;esc_html__:1;esc_attr_e:1;esc_html_e:1;esc_attr_x:1,2c;"
+"esc_html_x:1,2c;comments_number_link:2,3;t:1;st:1;trans:1;transChoice:1,2\n"
+"X-Loco-Target-Locale: es_CO"
+
+#: main_options_page.php:24
+msgid ""
+"Your site is not configured to allow user registrations. To turn on user "
+"registration change the membership setting on the <strong>Settings >> "
+"General</strong> menu."
+msgstr ""
+
+#: simplr_form_functions.php:510
+msgid "You should not register admin users via a public form"
+msgstr ""
+
+#: simplr_form_functions.php:530
+msgid ""
+"The reCAPTCHA wasn't entered correctly. Go back and try it again. (reCAPTCHA "
+"said:"
+msgstr ""
+
+#: simplr_reg_options.php:154
+msgid "Specify the registration user role."
+msgstr ""
+
+#: simplr_reg_options.php:166
+msgid "Thank You page"
+msgstr ""
+
+#: simplr_reg_options.php:167
+msgid "Leave blank to display message on this page."
+msgstr ""
+
+#: simplr_reg_options.php:193
+msgid "Select \"yes\" to allow users to set their password."
+msgstr ""
+
+#: simplr_reg_options.php:195
+msgid "No"
+msgstr ""
+
+#: simplr_reg_options.php:201
+msgid "Custom Fields"
+msgstr ""
+
+#: simplr_reg_page.php:100
+msgid "Registration Forms"
+msgstr ""
+
+#: simplr_reg_page.php:748
+msgid "Field deleted."
+msgstr ""
+
+#: simplr_reg_page.php:758
+msgid "Fields were deleted."
+msgstr ""
+
+#: simplr_reg_page.php:768
+msgid "Your Field was saved."
+msgstr ""
+
+#: simplr_reg_page.php:793
+msgid "Could not activate requested user."
+msgstr ""
+
+#: simplr_reg_page.php:816
+msgid "Emails resent"
+msgstr ""
+
+#: simplr_reg_page.php:832
+msgid "Sorry, We could not find the requested account."
+msgstr ""
+
+#: lib/login.php:69
+msgid "Sorry, that key does not appear to be valid."
+msgstr ""
+
+#: lib/login.php:143
+msgid ""
+"<strong>ERROR</strong>: Cookies are blocked or not supported by your browser."
+" You must <a href='http://www.google.com/cookies.html'>enable cookies</a> to "
+"use WordPress."
+msgstr ""
+
+#: lib/login.php:149
+msgid "User registration is currently not allowed."
+msgstr ""
+
+#: lib/login.php:239
+#, php-format
+msgid "&larr; Back to %s"
+msgstr ""
+
+#: lib/login.php:343
+msgid "Possible reason: your host may have disabled the mail() function..."
+msgstr ""
 
 #: main_options_page.php:8 simplr_reg_page.php:116
 msgid "Settings"
@@ -33,13 +130,6 @@ msgstr "Moderación"
 #: main_options_page.php:12
 msgid "Instructions"
 msgstr "Instrucciones"
-
-#: main_options_page.php:24
-msgid ""
-"Your site is not configured to allow user registrations. To turn on user "
-"registration change the membership setting on the <strong>Settings >> "
-"General</strong> menu."
-msgstr ""
 
 #: simplr_form_functions.php:33
 msgid "The passwords you entered do not match."
@@ -142,16 +232,6 @@ msgstr "Gracias por su registro."
 msgid "You are already registered for this site!!!"
 msgstr "Ya te has registrado en este sitio."
 
-#: simplr_form_functions.php:510
-msgid "You should not register admin users via a public form"
-msgstr ""
-
-#: simplr_form_functions.php:530
-msgid ""
-"The reCAPTCHA wasn't entered correctly. Go back and try it again. (reCAPTCHA "
-"said:"
-msgstr ""
-
 #: simplr_reg_options.php:140 simplr_reg_options.php:143
 msgid "Registration Form"
 msgstr "Formulario de registro"
@@ -164,21 +244,9 @@ msgstr "Opciones"
 msgid "Role"
 msgstr "Rol"
 
-#: simplr_reg_options.php:154
-msgid "Specify the registration user role."
-msgstr ""
-
 #: simplr_reg_options.php:156
 msgid "Select role ..."
 msgstr "Elegir rol ..."
-
-#: simplr_reg_options.php:166
-msgid "Thank You page"
-msgstr ""
-
-#: simplr_reg_options.php:167
-msgid "Leave blank to display message on this page."
-msgstr ""
 
 #: simplr_reg_options.php:170
 msgid "Select"
@@ -204,53 +272,13 @@ msgstr "Notificar a estos emails."
 msgid "Password"
 msgstr "Clave"
 
-#: simplr_reg_options.php:193
-msgid "Select \"yes\" to allow users to set their password."
-msgstr ""
-
-#: simplr_reg_options.php:195
-msgid "No"
-msgstr ""
-
 #: simplr_reg_options.php:196
 msgid "Yes"
 msgstr "Si"
 
-#: simplr_reg_options.php:201
-msgid "Custom Fields"
-msgstr ""
-
-#: simplr_reg_page.php:100
-msgid "Registration Forms"
-msgstr ""
-
 #: simplr_reg_page.php:720 simplr_reg_page.php:737
 msgid "Your settings were saved."
 msgstr "Configuración guardada."
-
-#: simplr_reg_page.php:748
-msgid "Field deleted."
-msgstr ""
-
-#: simplr_reg_page.php:758
-msgid "Fields were deleted."
-msgstr ""
-
-#: simplr_reg_page.php:768
-msgid "Your Field was saved."
-msgstr ""
-
-#: simplr_reg_page.php:793
-msgid "Could not activate requested user."
-msgstr ""
-
-#: simplr_reg_page.php:816
-msgid "Emails resent"
-msgstr ""
-
-#: simplr_reg_page.php:832
-msgid "Sorry, We could not find the requested account."
-msgstr ""
 
 #: simplr_reg_page.php:834
 msgid "Congratulations! Your Account was activated!"
@@ -260,31 +288,15 @@ msgstr "Tu cuenta ha sido activada!"
 msgid ""
 "<strong>ERROR</strong>: This account has not yet been approved by the "
 "moderator"
-msgstr ""
-"<strong>ERROR</strong>: Esta cuenta no ha sido aprobada por un moderador"
-
-#: lib/login.php:69
-msgid "Sorry, that key does not appear to be valid."
-msgstr ""
+msgstr "<strong>ERROR</strong>: Esta cuenta no ha sido aprobada por un moderador"
 
 #: lib/login.php:114
 msgid "You have logged in successfully."
 msgstr "Bienvenido"
 
-#: lib/login.php:143
-msgid ""
-"<strong>ERROR</strong>: Cookies are blocked or not supported by your "
-"browser. You must <a href='http://www.google.com/cookies.html'>enable "
-"cookies</a> to use WordPress."
-msgstr ""
-
 #: lib/login.php:147
 msgid "You are now logged out."
 msgstr "Sesión cerrada"
-
-#: lib/login.php:149
-msgid "User registration is currently not allowed."
-msgstr ""
 
 #: lib/login.php:151
 msgid "Check your e-mail for the confirmation link."
@@ -302,18 +314,12 @@ msgstr "Registro completo. Por favor revisa tu e-mail."
 msgid "Your session has expired. Please log-in again."
 msgstr "Tu sesión ha expirado."
 
-#: lib/login.php:239
-#, php-format
-msgid "&larr; Back to %s"
-msgstr ""
-
 #: lib/login.php:280
 msgid "<strong>ERROR</strong>: Enter a username or e-mail address."
 msgstr "<strong>ERROR</strong>: Ingresa nombre de usuario o email."
 
 #: lib/login.php:285
-msgid ""
-"<strong>ERROR</strong>: There is no user registered with that email address."
+msgid "<strong>ERROR</strong>: There is no user registered with that email address."
 msgstr "<strong>ERROR</strong>: No encontramos un usuario con ese correo."
 
 #: lib/login.php:297
@@ -350,10 +356,6 @@ msgstr "[%s] Reset de clave"
 msgid "The e-mail could not be sent."
 msgstr "El email no pudo ser enviado"
 
-#: lib/login.php:343
-msgid "Possible reason: your host may have disabled the mail() function..."
-msgstr ""
-
 #: lib/login.php:364 lib/login.php:367 lib/login.php:372
 msgid "Invalid key"
 msgstr "Llave inválida"
@@ -366,8 +368,7 @@ msgstr "<strong>ERROR</strong>: Por favor ingresa nombre de usuario."
 msgid ""
 "<strong>ERROR</strong>: This username is invalid because it uses illegal "
 "characters. Please enter a valid username."
-msgstr ""
-"<strong>ERROR</strong>: No uses caracteres extraños en el nombre de usuario."
+msgstr "<strong>ERROR</strong>: No uses caracteres extraños en el nombre de usuario."
 
 #: lib/login.php:412
 msgid ""
@@ -395,8 +396,8 @@ msgid ""
 "<strong>ERROR</strong>: Couldn&#8217;t register you... please contact the <a "
 "href=\"mailto:%s\">webmaster</a> !"
 msgstr ""
-"<strong>ERROR</strong>: Error en el registro, por favof contacta a <a href="
-"\"mailto:%s\">servicio técnico.</a>"
+"<strong>ERROR</strong>: Error en el registro, por favor contacta a <a "
+"href=\"mailto:%s\">servicio técnico.</a>"
 
 #: lib/login.php:469
 msgid "Username or E-mail:"
@@ -441,8 +442,8 @@ msgstr "Indicador de seguridad"
 #: lib/login.php:527
 msgid ""
 "Hint: The password should be at least seven characters long. To make it "
-"stronger, use upper and lower case letters, numbers and symbols like ! \" ? "
-"$ % ^ &amp; )."
+"stronger, use upper and lower case letters, numbers and symbols like ! \" ? $ "
+"% ^ &amp; )."
 msgstr "Tip: La clave debe tener más de 7 letras y números. "
 
 #: lib/login.php:554

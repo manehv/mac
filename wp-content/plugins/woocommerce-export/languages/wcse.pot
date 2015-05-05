@@ -1,0 +1,258 @@
+#wcse
+
+#:automated.php
+msgid "Scheduled Export"
+msgstr ""
+
+#:automated.php
+msgid "Smart Export Scheduled module"
+msgstr ""
+
+#:automated.php
+msgid "The automatic export module will export all orders created between to execution of the task. The first task will be triggered once you published it including all orders between now and the chosen interval."
+msgstr ""
+
+#:automated.php
+msgid "Active scheluded export"
+msgstr ""
+
+#:automated.php automated.php
+msgid "Scheduled id"
+msgstr ""
+
+#:automated.php automated.php automated.php automated.php
+msgid "Recurrence"
+msgstr ""
+
+#:automated.php automated.php
+msgid "Recipients"
+msgstr ""
+
+#:automated.php
+msgid "Next event"
+msgstr ""
+
+#:automated.php automated.php
+msgid "Actions"
+msgstr ""
+
+#:automated.php
+msgid "Next event (GMT Time)"
+msgstr ""
+
+#:automated.php
+msgid "No scheduled export yet"
+msgstr ""
+
+#:automated.php
+msgid "Delete permanently"
+msgstr ""
+
+#:automated.php
+msgid "Create new export"
+msgstr ""
+
+#:automated.php
+msgid "Choose"
+msgstr ""
+
+#:automated.php
+msgid "Email options"
+msgstr ""
+
+#:automated.php
+msgid "Email recipient(s)"
+msgstr ""
+
+#:automated.php
+msgid "Email subject"
+msgstr ""
+
+#:automated.php
+msgid "Email message"
+msgstr ""
+
+#:automated.php index.php
+msgid "CSV file options"
+msgstr ""
+
+#:automated.php index.php
+msgid "Field Separator"
+msgstr ""
+
+#:automated.php index.php
+msgid "Line Breaks"
+msgstr ""
+
+#:automated.php
+msgid "Once Weekly"
+msgstr ""
+
+#:index.php index.php
+msgid "Go to Smart Export"
+msgstr ""
+
+#:index.php
+msgid "Smart export"
+msgstr ""
+
+#:index.php
+msgid "Here are the <strong>order meta</strong> you can add using a filter"
+msgstr ""
+
+#:index.php index.php
+msgid "code example here"
+msgstr ""
+
+#:index.php
+msgid "Here are the <strong>product meta</strong> you can add using a filter"
+msgstr ""
+
+#:index.php
+msgid "Smart export"
+msgstr ""
+
+#:index.php
+msgid "WooCommerce Smart export Plugin"
+msgstr ""
+
+#:index.php
+msgid "To smartly export data from your WooCommerce database, just select the data type and click the export button. <br/> For more informations on options, read the html manual included with the plugin. Thanks for using this Plugin."
+msgstr ""
+
+#:index.php
+msgid "Data Type"
+msgstr ""
+
+#:index.php
+msgid "Would you like to export customers, orders or coupons ?"
+msgstr ""
+
+#:index.php index.php
+msgid "User data"
+msgstr ""
+
+#:index.php
+msgid "User identity"
+msgstr ""
+
+#:index.php
+msgid "Billing informations"
+msgstr ""
+
+#:index.php
+msgid "Shipping informations"
+msgstr ""
+
+#:index.php
+msgid "Sales statistics"
+msgstr ""
+
+#:index.php index.php
+msgid "Order status"
+msgstr ""
+
+#:index.php index.php
+msgid "Coupon description"
+msgstr ""
+
+#:index.php
+msgid "Include coupon description"
+msgstr ""
+
+#:index.php index.php
+msgid "Product display"
+msgstr ""
+
+#:index.php
+msgid "Display products in column rather than in line"
+msgstr ""
+
+#:index.php
+msgid "Optionnals date range"
+msgstr ""
+
+#:index.php
+msgid "Start Date"
+msgstr ""
+
+#:index.php
+msgid "End Date"
+msgstr ""
+
+#:index.php
+msgid "Export Format"
+msgstr ""
+
+#:index.php
+msgid "Default (utf-8)"
+msgstr ""
+
+#:index.php
+msgid "Better Excel Support (utf-16)"
+msgstr ""
+
+#:index.php
+msgid "Chinese Excel Support (gbk)"
+msgstr ""
+
+#:index.php
+msgid "No order to export in that period."
+msgstr ""
+
+#:index.php
+msgid "Complete name (billing)"
+msgstr ""
+
+#:index.php
+msgid "Complete name (shipping)"
+msgstr ""
+
+#:index.php
+msgid "Number of different items"
+msgstr ""
+
+#:index.php
+msgid "Total number of items"
+msgstr ""
+
+#:index.php index.php
+msgid "Used coupons"
+msgstr ""
+
+#:index.php index.php
+msgid "Discount"
+msgstr ""
+
+#:index.php
+msgid "No coupon used in that period."
+msgstr ""
+
+#:index.php
+msgid "Order id"
+msgstr ""
+
+#:index.php
+msgid "Order date"
+msgstr ""
+
+#:index.php
+msgid "Description"
+msgstr ""
+
+#:index.php
+msgid "Orders count"
+msgstr ""
+
+#:index.php
+msgid "Orders total"
+msgstr ""
+
+#:index.php
+msgid "No customer to export in that period."
+msgstr ""
+
+#:index.php
+msgid "Deleted Item"
+msgstr ""
+

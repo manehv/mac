@@ -5,9 +5,9 @@ Contributors: ultimatemember
 Donate link: 
 Tags: access control, author, authors, author profile, comments, community, communities, conditional fields, conditional logic, conditional menus, content protection, custom fields, file uploads, form builder, front-end login, front-end registration, gravatar, hide wp-admin, login, login page, logged-in users, mandrill, member, members, membership, member directory, online users, profile, profiles, profile builder, registration, restriction, restrict content, role creation, role menus, search filters, sign in, sign up, social network, star ratings, toolbar, user, users, user fields, user profile, user-profile, user profiles, user roles
 Requires at least: 4.1
-Tested up to: 4.1.1
+Tested up to: 4.2
 
-Stable Tag: 1.2.6
+Stable Tag: 1.2.9
 
 License: GNU Version 2 or Any Later Version
 
@@ -139,6 +139,30 @@ The plugin works with popular caching plugins by automatically excluding Ultimat
 16. Screenshot 16
 
 == Changelog ==
+
+= 1.2.9: April 29, 2015 =
+
+* New: display pending users count in backend
+* Tweak: improved user deletion process from backend
+* Tweak: tweaked filter for register/login buttons
+* Tweak: disabled registration timebot for admins
+* Fixed: wp-load.php path in image and file upload scripts
+* Fixed: RTL compatibility bugs
+* Fixed: bug with registration and role field
+* Fixed: bug with edit profile and biography length in header
+
+= 1.2.8: April 25, 2015 =
+
+* Fixed: Important WP 4.2 conflict resolved: filtering users in backend
+
+= 1.2.7: April 25, 2015 =
+
+* Tweak: Compatible with WordPress 4.2
+* Tweak: general code tweaks and improvements
+* Tweak: new action hook when user is deleted
+* Tweak: new action/filter hooks for profiles (developers)
+* Tweak: new filter hook for profile privacy option
+* Fixed: permalink issues
 
 = 1.2.6: April 22, 2015 =
 

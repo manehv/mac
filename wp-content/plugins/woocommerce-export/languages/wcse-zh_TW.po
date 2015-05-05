@@ -1,0 +1,233 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Smart export Plugin\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Munny <nazmoonmunny@gmail.com>\n"
+"Language-Team: Themology <info@themology.net>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.5\n"
+
+# wcse
+msgid "Scheduled Export"
+msgstr "定時匯出"
+
+msgid "Smart Export Scheduled module"
+msgstr "快速匯出定時模塊"
+
+msgid ""
+"The automatic export module will export all orders created between to "
+"execution of the task. The first task will be triggered once you published "
+"it including all orders between now and the chosen interval."
+msgstr ""
+"自動匯出模塊會定時執行任務，匯出兩個定時任務間隔間的數據。第一個初始任務會匯"
+"出上線開始到第一個任務執行時的所有數據。"
+
+msgid "Active scheluded export"
+msgstr "啟動定時匯出"
+
+msgid "Scheduled id"
+msgstr "定時任務 id"
+
+msgid "Recurrence"
+msgstr "重複"
+
+msgid "Recipients"
+msgstr "收件人"
+
+msgid "Next event"
+msgstr "下一活動"
+
+msgid "Actions"
+msgstr "動作"
+
+msgid "Next event (GMT Time)"
+msgstr "下一活動 (格林威治標準時間)"
+
+msgid "No scheduled export yet"
+msgstr "還沒有定時的匯出任務"
+
+msgid "Delete permanently"
+msgstr "永久删除"
+
+msgid "Create new export"
+msgstr "建立一個新的匯出"
+
+msgid "Choose"
+msgstr "選擇"
+
+msgid "Email options"
+msgstr "電子郵件選項"
+
+msgid "Email recipient(s)"
+msgstr "郵箱地址"
+
+msgid "Email subject"
+msgstr "郵件主題"
+
+msgid "Email message"
+msgstr "郵件內容"
+
+msgid "CSV file options"
+msgstr "CSV 文件選項"
+
+msgid "Field Separator"
+msgstr "字段分隔符"
+
+msgid "Line Breaks"
+msgstr "換行符"
+
+msgid "Once Weekly"
+msgstr "每週一次"
+
+# wcse
+msgid "Go to Smart Export"
+msgstr "跳至快速匯出頁"
+
+# wcse
+msgid "Smart export"
+msgstr "快速匯出"
+
+msgid "Here are the <strong>order meta</strong> you can add using a filter"
+msgstr "下面是 <strong>order meta</strong> 您可以添加用來篩選"
+
+msgid "code example here"
+msgstr "這裡是代碼示例"
+
+msgid "Here are the <strong>product meta</strong> you can add using a filter"
+msgstr "下面是 <strong>product meta</strong> 您可以添加用來篩選"
+
+# wcse
+msgid "Smart export"
+msgstr "快速匯出"
+
+msgid "WooCommerce Smart export Plugin"
+msgstr "WooCommerce 快速匯出外掛"
+
+msgid ""
+"To smartly export data from your WooCommerce database, just select the data "
+"type and click the export button. <br/> For more informations on options, "
+"read the html manual included with the plugin. Thanks for using this Plugin."
+msgstr ""
+"要快速匯出 WooCommerce 的數據, 只需要選擇匯出數據的類型然後點選匯出按鈕<br/> "
+"要進一步了解相關資訊，可以參閱外掛裡面 html 格式的手冊。感謝您的使用。"
+
+msgid "Data Type"
+msgstr "數據類型"
+
+msgid "Would you like to export customers, orders or coupons ?"
+msgstr "您要匯出的是顧客資料、訂單還是優惠券？"
+
+msgid "User data"
+msgstr "用戶數據"
+
+msgid "User identity"
+msgstr "用戶身份資料"
+
+msgid "Billing informations"
+msgstr "帳單資訊"
+
+msgid "Shipping informations"
+msgstr "郵寄地址資訊"
+
+msgid "Sales statistics"
+msgstr "銷售狀態"
+
+msgid "Order status"
+msgstr "訂單狀態"
+
+msgid "Coupon description"
+msgstr "優惠券的說明"
+
+msgid "Include coupon description"
+msgstr "包含優惠券說明"
+
+msgid "Product display"
+msgstr "產品顯示"
+
+msgid "Display products in column rather than in line"
+msgstr "產品資訊過長則自動換行"
+
+msgid "Optionnals date range"
+msgstr "匯出日期範圍（選擇性）"
+
+msgid "Start Date"
+msgstr "開始日期"
+
+msgid "End Date"
+msgstr "結束日期"
+
+msgid "Export Format"
+msgstr "匯出 csv 語言格式"
+
+msgid "Default (utf-8)"
+msgstr "預設 (utf-8)"
+
+msgid "Better Excel Support (utf-16)"
+msgstr "更好的 Excel 支援 (utf-16)"
+
+msgid "Chinese Excel Support (gbk)"
+msgstr "中文的 Excel 支援 (gbk)"
+
+msgid "No order to export in that period."
+msgstr "當前時間範圍內沒有相關訂單"
+
+msgid "Complete name (billing)"
+msgstr "全名 (帳單資訊)"
+
+msgid "Complete name (shipping)"
+msgstr "全名 (收貨資訊)"
+
+msgid "Number of different items"
+msgstr "不同項數量"
+
+msgid "Total number of items"
+msgstr "項目總數"
+
+msgid "Used coupons"
+msgstr "已使用的優惠券"
+
+msgid "Discount"
+msgstr "折扣"
+
+msgid "No coupon used in that period."
+msgstr "當前時間範圍內沒有已使用的優惠券"
+
+msgid "Order id"
+msgstr "訂單 ID"
+
+msgid "Order date"
+msgstr "訂單日期"
+
+msgid "Description"
+msgstr "描述"
+
+msgid "Orders count"
+msgstr "訂單數量"
+
+msgid "Orders total"
+msgstr "總計"
+
+msgid "No customer to export in that period."
+msgstr "當前時間範圍內沒有任何顧客資訊"
+
+msgid "Deleted Item"
+msgstr "已刪除記錄"
+
+#~ msgid "Chinese"
+#~ msgstr "中文"
+
+#~ msgid "Others"
+#~ msgstr "其他语言"
+
+#~ msgid "Plugin Tab Title"
+#~ msgstr "Plugin Tab Title"
+
+#~ msgid "User Registered"
+#~ msgstr "User Registered"
+
+#~ msgid "Username"
+#~ msgstr "Username"

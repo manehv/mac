@@ -1,0 +1,237 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Smart export Plugin\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: fr_FR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.5\n"
+
+# wcse
+msgid "Scheduled Export"
+msgstr "Export automatique"
+
+msgid "Smart Export Scheduled module"
+msgstr "Export automatisés"
+
+msgid ""
+"The automatic export module will export all orders created between to "
+"execution of the task. The first task will be triggered once you published "
+"it including all orders between now and the chosen interval."
+msgstr ""
+"L'export automatique exporte toutes les commandes crées entre 2 exécutions "
+"de la tâche programmées. Le premier export aura lieu à la création de la "
+"tâche. Il intégrera les commandes crées entre ce moment moins l'interval "
+"choisit. "
+
+# wcse
+msgid "Active scheluded export"
+msgstr "Exports programmés"
+
+# wcse
+msgid "Scheduled id"
+msgstr "Export ID"
+
+msgid "Recurrence"
+msgstr "Récurrence"
+
+msgid "Recipients"
+msgstr "Destinataire(s)"
+
+msgid "Next event"
+msgstr "Prochain événement (GMT)"
+
+msgid "Actions"
+msgstr "Actions"
+
+msgid "Next event (GMT Time)"
+msgstr "Prochain événement (GMT)"
+
+# wcse
+msgid "No scheduled export yet"
+msgstr "Aucun export programmé"
+
+msgid "Delete permanently"
+msgstr "Supprimer définitivement"
+
+msgid "Create new export"
+msgstr "Créer un nouvel export automatique"
+
+msgid "Choose"
+msgstr "Choisir"
+
+msgid "Email options"
+msgstr "Réglages de l'email"
+
+msgid "Email recipient(s)"
+msgstr "Destinataire(s)"
+
+msgid "Email subject"
+msgstr "Sujet de l'email"
+
+msgid "Email message"
+msgstr "Contenu de l'email"
+
+msgid "CSV file options"
+msgstr "Options pour le fichier CSV"
+
+msgid "Field Separator"
+msgstr "Séparateur de champs"
+
+msgid "Line Breaks"
+msgstr "Fin de ligne"
+
+msgid "Once Weekly"
+msgstr "Une fois par semaine"
+
+# wcse
+msgid "Go to Smart Export"
+msgstr "Allez à Smart export"
+
+# wcse
+msgid "Smart export"
+msgstr "Smart export"
+
+msgid "Here are the <strong>order meta</strong> you can add using a filter"
+msgstr ""
+"Voici les <strong>order meta</strong> que vous pouvez utiliser via un filter"
+
+msgid "code example here"
+msgstr "exemple de code ici"
+
+msgid "Here are the <strong>product meta</strong> you can add using a filter"
+msgstr ""
+"Voici les <strong>product meta</strong> que vous pouvez utiliser via un "
+"filter"
+
+# wcse
+msgid "Smart export"
+msgstr "Smart export"
+
+msgid "WooCommerce Smart export Plugin"
+msgstr "WooCommerce Smart export Plugin"
+
+msgid ""
+"To smartly export data from your WooCommerce database, just select the data "
+"type and click the export button. <br/> For more informations on options, "
+"read the html manual included with the plugin. Thanks for using this Plugin."
+msgstr ""
+"Pour exporter rapidement les données de votre site WooCommerce, choisissez "
+"entre commandes et clients puis cliquez sur le bouton exporter. <br/> Pour "
+"plus d'informations sur les options, merci de vous reportez à la notice HTML "
+"fournie avec ce plugin."
+
+msgid "Data Type"
+msgstr "Données à exporter ?"
+
+msgid "Would you like to export customers, orders or coupons ?"
+msgstr "Voulez-vous exporter les commandes, les clients ou les codes promo ?"
+
+msgid "User data"
+msgstr "Données utilisateurs"
+
+msgid "User identity"
+msgstr "Utilisateur"
+
+msgid "Billing informations"
+msgstr "Informations de facturation"
+
+msgid "Shipping informations"
+msgstr "Informations de livraison"
+
+msgid "Sales statistics"
+msgstr "Statistiques de vente"
+
+msgid "Order status"
+msgstr "Statut de la commande"
+
+msgid "Coupon description"
+msgstr "Description du code promo"
+
+msgid "Include coupon description"
+msgstr "Inclure la description des codes promo"
+
+msgid "Product display"
+msgstr "Mise en page des produits"
+
+msgid "Display products in column rather than in line"
+msgstr "Afficher les produits en colonne et non en ligne"
+
+msgid "Optionnals date range"
+msgstr "Options de date"
+
+msgid "Start Date"
+msgstr "Date de début"
+
+msgid "End Date"
+msgstr "Date de fin"
+
+msgid "Export Format"
+msgstr "Encodage"
+
+msgid "Default (utf-8)"
+msgstr "Défaut (utf-8)"
+
+msgid "Better Excel Support (utf-16)"
+msgstr "Meilleur support d'Excel (utf-16)"
+
+msgid "Chinese Excel Support (gbk)"
+msgstr "Excel chinois (gbk)"
+
+msgid "No order to export in that period."
+msgstr "Aucune commande à exporter pour cette période"
+
+msgid "Complete name (billing)"
+msgstr "Nom complet (facturation)"
+
+msgid "Complete name (shipping)"
+msgstr "Nom complet (livraison)"
+
+msgid "Number of different items"
+msgstr "Nombre de produits différents"
+
+msgid "Total number of items"
+msgstr "Nombre total de produits"
+
+msgid "Used coupons"
+msgstr "Codes promos utilisés"
+
+msgid "Discount"
+msgstr "Réduction"
+
+msgid "No coupon used in that period."
+msgstr "Aucun coupon utilisé durant cette période"
+
+msgid "Order id"
+msgstr "ID Commande"
+
+msgid "Order date"
+msgstr "Date de la commande"
+
+msgid "Description"
+msgstr "Description"
+
+msgid "Orders count"
+msgstr "Total commande"
+
+msgid "Orders total"
+msgstr "Total commandé"
+
+msgid "No customer to export in that period."
+msgstr "Aucun client à exporter pour cette période"
+
+msgid "Deleted Item"
+msgstr "Produit supprimé"
+
+#~ msgid "Plugin Tab Title"
+#~ msgstr "Titre"
+
+#~ msgid "User Registered"
+#~ msgstr "Date d'inscription"
+
+#~ msgid "Username"
+#~ msgstr "Login"

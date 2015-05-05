@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Screets Chat X v1.4.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-11-29 04:09+0100\n"
-"PO-Revision-Date: Tue Apr 21 2015 11:36:14 GMT-0500 (COT)\n"
+"PO-Revision-Date: Tue May 05 2015 16:00:43 GMT-0500 (COT)\n"
 "Last-Translator: manuel <groupde@gmail.com>\n"
 "Language-Team: \n"
 "Language: Spanish (Colombia)\n"
@@ -189,7 +189,7 @@ msgstr ""
 # @ cx
 #: ../core/fn.offline.php:216
 msgid "We received your message"
-msgstr ""
+msgstr "Hemos recibido tu mensaje."
 
 # @ cx
 #: ../core/fn.ajax.php:123
@@ -1502,6 +1502,12 @@ msgid "Click to close"
 msgstr ""
 
 # @ cx
+#: ../core/fn.common.php:557
+#, fuzzy
+msgid "Connecting error!"
+msgstr "Error de conexión."
+
+# @ cx
 #: ../screets-cx.php:943 ../core/fn.common.php:69
 msgid "Conectar"
 msgstr "Conectar"
@@ -1562,12 +1568,6 @@ msgstr "por favor espera"
 #: ../core/fn.common.php:556
 msgid "End chat"
 msgstr "Terminar chat"
-
-# @ cx
-#: ../core/fn.common.php:557
-#, fuzzy
-msgid "Connecting error!"
-msgstr "Error de conexión."
 
 # @ cx
 #: ../core/class.logs.php:48
