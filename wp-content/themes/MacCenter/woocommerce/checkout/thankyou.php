@@ -48,7 +48,7 @@ echo '</a>';
 
         <?php else : ?>
 
-                <p class="fakealert tres"><?php echo apply_filters( 'woocommerce_thankyou_order_received_text', __( 'Thank you. Your order has been received.', 'woocommerce' ), $order ); ?></p>
+                <p class="fakealert tres"><pre><?php print_r($order->status); ?></pre><?php echo apply_filters( 'woocommerce_thankyou_order_received_text', __( 'Thank you. Your order has been received.', 'woocommerce' ), $order ); ?></p>
 
                 <ul class="order_details">
                         <li class="order">
