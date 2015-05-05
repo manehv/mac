@@ -11,6 +11,15 @@
     display: none !important;
 }
 
+p.fakealert  {
+    border: medium none;
+    list-style: outside none none;
+    margin: 0px 0px 23px;
+    padding: 32px 45% 32px 36px;
+    background-repeat: no-repeat;
+    background-color: #F0DCDB;
+    color: #941210;
+}
 /*ALERTA OUT STOCK*/
 .out-of-stock{
 	padding: 10px !important;
