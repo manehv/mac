@@ -1081,7 +1081,7 @@ add_filter( 'woocommerce_shipping_fields' , 'custom_override_shipping_fields' );
 
 function custom_override_billing_fields( $fields ) {
   unset($fields['billing_address_2']);
-  unset($fields['billing_email']);
+  // unset($fields['billing_email']);
   unset($fields['billing_phone']);
   unset($fields['billing_state']);
   unset($fields['billing']);
@@ -1123,7 +1123,7 @@ function custom_override_billing_fields( $fields ) {
      );
      
        $fields['billing_postcode'] = array(
-        'label'     => __('Código postal/Zip', 'woocommerce'),
+        'label'     => __('Código postal o barrio', 'woocommerce'),
         'placeholder'   => (''),
                                 'required'  => false,
                                 'class'     => array('form-row-last', 'address-field'),
