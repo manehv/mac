@@ -1227,7 +1227,7 @@ function reorder_woocommerce_fields($fields) {
 
         $fields2['billing_first_name'] = $fields['billing_first_name'];
         $fields2['billing_last_name'] = $fields['billing_last_name'];
-        $fields2['billing_email'] = $fields['billing']['billing_email'];
+        $fields2['billing_email'] = $fields['billing_email'];
         $fields2['billing_country'] = $fields['billing_country'];
         $fields2['billing_city'] = $fields['billing_city'];
         $fields2['billing_company'] = $fields['billing_company'];
