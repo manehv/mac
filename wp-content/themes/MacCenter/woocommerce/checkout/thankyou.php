@@ -79,6 +79,6 @@ echo '</a>';
 
 <?php else : ?>
 
-        <p class="fakealert"><?php echo apply_filters( 'woocommerce_thankyou_order_received_text', __( 'Tu transacción se encuentra en proceso de validación, pronto nos estaremos comunicando contigo', 'woocommerce' ), null ); ?></p>
+        <p class="fakealert cuatro"><?php echo apply_filters( 'woocommerce_thankyou_order_received_text', __( 'Tu transacción se encuentra en proceso de validación, pronto nos estaremos comunicando contigo', 'woocommerce' ), null ); ?></p>
 
 <?php endif; ?>
