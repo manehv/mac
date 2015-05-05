@@ -1,5 +1,7 @@
 jQuery(document).ready(function($)
 {
+
+        $('.tax-total').remove();
         //OLD Code
         //$.lockfixed("#idSticky",{offset: {top: 120, bottom: 70}});
         //New Code
