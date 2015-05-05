@@ -1522,7 +1522,7 @@ if ( ! function_exists( 'woocommerce_order_again_button' ) ) {
 /** Forms ****************************************************************/
 
 if ( ! function_exists( 'woocommerce_form_field' ) ) {
-
+ 
 	/**
 	 * Outputs a checkout/address form field.
 	 *
@@ -1605,7 +1605,9 @@ if ( ! function_exists( 'woocommerce_form_field' ) ) {
 						$field .= '<label class="' . esc_attr( implode( ' ', $args['label_class'] ) ) .'">' . $args['label']  . '</label>';
 					}
 
-					$field .= '<strong>' . current( array_values( $countries ) ) . '</strong>';
+					//$field .= '<strong>' . current( array_values( $countries ) ) . '</strong>';
+
+					$field .= '<input type="text" class="input-text ' . esc_attr( implode( ' ', $args['input_class'] ) ) .'" name="' . esc_attr( $key ) . '" id="' . esc_attr( $args['id'] ) . '" placeholder="' . esc_attr( $args['placeholder'] ) . '" '.$args['maxlength'].' value="' . current( array_values( $countries ) ) . '" ' . implode( ' ', $custom_attributes ) . ' />';
 
 					$field .= '<input type="hidden" name="' . esc_attr( $key ) . '" id="' . esc_attr( $args['id'] ) . '" value="' . current( array_keys($countries ) ) . '" ' . implode( ' ', $custom_attributes ) . ' class="country_to_state" />';
 
