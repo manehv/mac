@@ -104,8 +104,11 @@ jQuery(document).ready(function($)
                 // Trigger change event
                 $qty.trigger( 'change' );
         });     
-        $('.tax-total').remove();
         }, 1000); // Timeout
+        if($(".tax-total").length){
+            console.log( "totals remove ");
+            $('.tax-total').remove();
+        }
         if($("#order_comments").length){
                 $("#order_comments").attr("placeholder","");
         }
