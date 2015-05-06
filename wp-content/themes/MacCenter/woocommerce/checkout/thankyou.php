@@ -49,7 +49,7 @@ echo '</a>';
         <?php else : ?>
 
                 <?php if ( in_array( $order->status, array( 'on-hold' ) ) ){ ?>
-                <p class="fakealert tres"><!--<pre><?php print_r($order->status); ?></pre>--><?php echo apply_filters( 'woocommerce_thankyou_order_received_text', __( 'Tu transacción se encuentra en proceso de validación, pronto nos estaremos comunicando contigo', 'woocommerce' ), $order ); ?></p>
+                <p class="fakealert tres"><!--<pre><?php print_r($order); ?></pre>--><?php echo apply_filters( 'woocommerce_thankyou_order_received_text', __( 'Tu transacción se encuentra en proceso de validación, pronto nos estaremos comunicando contigo', 'woocommerce' ), $order ); ?></p>
 
                 <?php }else{ ?>
                 <p class="fakealert tres"><!--<pre><?php print_r($order->status); ?></pre>--><?php echo apply_filters( 'woocommerce_thankyou_order_received_text', __( 'Thank you. Your order has been received.', 'woocommerce' ), $order ); ?></p>
