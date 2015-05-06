@@ -857,7 +857,7 @@ function init_placetopay_class() {
 			switch ($rc) {
 				case PlacetoPay::P2P_ERROR:
 				case PlacetoPay::P2P_DECLINED:
-					update_post_meta($orderID, '_p2p_status', __((($rc == PlacetoPay::P2P_ERROR) ? 'Failed': 'Rejected'), 'woocommerce-placetopay'));
+					update_post_meta($orderID, '_p2p_status', __((($rc == PlacetoPay::P2P_ERROR) ? 'Fallida': 'Rechazada'), 'woocommerce-placetopay'));
 					$order->update_status('failed', $p2p->getErrorMessage());
 
 					// elimina el registro de la lista de transacciones pendientes
@@ -865,7 +865,7 @@ function init_placetopay_class() {
 					break;
 				case PlacetoPay::P2P_APPROVED:
 				case PlacetoPay::P2P_DUPLICATE:
-					update_post_meta($orderID, '_p2p_status', __('Approved', 'woocommerce-placetopay'));
+					update_post_meta($orderID, '_p2p_status', __('Aprovada', 'woocommerce-placetopay'));
 					$order->add_order_note($p2p->getErrorMessage());
 					$order->payment_complete();
 
