@@ -874,7 +874,7 @@ function init_placetopay_class() {
 					break;
 				case PlacetoPay::P2P_PENDING:
 					if ($order->status !== 'pending') {
-						update_post_meta($orderID, '_p2p_status', __('Pending', 'woocommerce-placetopay'));
+						update_post_meta($orderID, '_p2p_status', __('Pendiente', 'woocommerce-placetopay'));
 						$order->update_status('pending', $p2p->getErrorMessage());
 
 						// actualiza la fecha y hora de la operación pendiente
