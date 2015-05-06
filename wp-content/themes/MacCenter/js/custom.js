@@ -112,4 +112,9 @@ jQuery(document).ready(function($)
         if($("#order_comments").length){
                 $("#order_comments").attr("placeholder","");
         }
+        if( $("td.Estado").length ){
+            if(  $("td.Estado").text() == 'Approved' ){
+                $( '.fakealert' ).text( 'Gracias por tu compra, estamos procesando tu pedido.' ); 
+            }
+        }
 });
