@@ -865,7 +865,7 @@ function init_placetopay_class() {
 					break;
 				case PlacetoPay::P2P_APPROVED:
 				case PlacetoPay::P2P_DUPLICATE:
-					update_post_meta($orderID, '_p2p_status', __('Aprovada', 'woocommerce-placetopay'));
+					update_post_meta($orderID, '_p2p_status', __('Aprobada', 'woocommerce-placetopay'));
 					$order->add_order_note($p2p->getErrorMessage());
 					$order->payment_complete();
 
