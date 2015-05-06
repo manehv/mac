@@ -740,7 +740,7 @@ function init_placetopay_class() {
 							if (($field == '_p2p_platform_amount') || ($field == '_p2p_platform_factor')) {
 								$value = wc_price($value) . ' ' . get_post_meta($order_id, '_p2p_platform_currency', true);
 							}
-							$html .= '<tr><th scope="row">' . $label . '</th><td>' . $value . '</td></tr>';
+							$html .= '<tr><th scope="row">' . $label . '</th><td class="'.$label.'">' . $value . '</td></tr>';
 						}
 					}
 					$html .= '<tr><th scope="row">' . __('IP Address', 'woocommerce-placetopay')
