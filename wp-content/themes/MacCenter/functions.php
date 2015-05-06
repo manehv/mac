@@ -18,6 +18,16 @@ class SimplrExt extends SREG_Form{
 add_shortcode('register', 'sreg_figure1');
 remove_action( 'admin_notices', 'woothemes_updater_notice' );
 
+add_filter( 'woocommerce_email_headers', 'mycustom_headers_filter_function', 10, 2);
+
+function mycustom_headers_filter_function( $headers, $object ) {
+    if ($object == 'customer_completed_order') {
+        $headers .= 'BCC: Nuevo MC <consultas@mac-center.com>' . "\r\n";
+    }
+
+    return $headers;
+}
+
 //add action give it the name of our function to run
 add_action( 'woocommerce_after_shop_loop_item_title', 'wcs_stock_text_shop_page', 25 );
 
