@@ -2672,7 +2672,7 @@ border-bottom-left-radius: 3px;
 text-indent: 0px;
 }
 
-.avia-slideshow-dots{position: relative; z-index: 200; width:100%; bottom:30; text-align: center; left: 0; height:0px;}
+.avia-slideshow-dots{position: relative; z-index: 200; width:100%; bottom:30px !important; text-align: center; left: 0; height:0px;}
 .avia-slideshow-dots a{display: inline-block; height:13.5px; width:13.5px; border-radius: 14px; background: #000; opacity: 0.6; filter:alpha(opacity=60); text-indent: 100px; overflow: hidden; margin:0 10px; padding: 7px;position: relative; bottom: 33px;}
 .avia-slideshow-dots a.active, .avia-slideshow-dots a:hover{opacity: 0.8; filter:alpha(opacity=80); background: #aaaaaa;}
 
