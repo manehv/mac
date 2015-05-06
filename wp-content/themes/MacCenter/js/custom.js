@@ -113,7 +113,7 @@ jQuery(document).ready(function($)
                 $("#order_comments").attr("placeholder","");
         }
         if( $("td.Estado").length ){
-            if(  $("td.Estado").text() == 'Aprovada' ){
+            if(  $("td.Estado").text() == 'Aprobada' ){
                 $( '.fakealert' ).text( 'Gracias por tu compra, estamos procesando tu pedido.' ); 
             }
         }
