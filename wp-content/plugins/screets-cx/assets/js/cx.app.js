@@ -114,7 +114,7 @@
 				no_op: "No hay operadores en linea",
 				no_msg: "No se encontraron mensajes",
 				sending: "Enviando",
-				connecting: "Connecting",
+				connecting: "Conectando",
 				writing: "%s esta escribiendo",
 				please_wait: "Espera por favor",
 				chat_online: "Chat Online",
