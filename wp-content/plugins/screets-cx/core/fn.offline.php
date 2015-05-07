@@ -213,7 +213,7 @@ function cx_send_offline_msg( $to, $site_email, $data ) {
 	if( !empty( $data['email'] ) and !empty( $opts['contact_email_to_visitor'] ) ) {
 		
 		// Set subject
-		$subject = '[' . $opts['site_name'] . '] ' . __( 'We received your message', 'cx' );
+		$subject = '[' . $opts['site_name'] . '] ' . __( 'Hemos recibido su mensaje.', 'cx' );
 
 		$headers = array();
 		$headers[] = 'MIME-Version: 1.0';
