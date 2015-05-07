@@ -68,7 +68,16 @@ function cx_offline_email_head() {
 	global $CX;
 
 	// Header
-	return '<table width="100%" cellspacing="0" cellpadding="0" style="color:#ffffff;font-family:Arial,sans-serif;font-size:14px;background-color:'.$CX->opts['primary_color'].';">'
+	return '<table width="100%" cellspacing="0" cellpadding="0" style="width: auto;
+	height: 50px;
+	background-image: url("http://mc.arbolnaranja.com/wp-content/uploads/2015/05/mac_center-013.png");
+	background-repeat: no-repeat;
+	background-color: black;
+	image-rendering: auto;
+	background-size: contain;
+	border-color: #E0E0E0 !important;
+	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+	background-position: 50px 0px'.$CX->opts['primary_color'].';">'
     	   .'<tr>'
     	   .'<td valign="bottom" style="font-size:15px;font-weight:bold;padding:10px;">' . $CX->opts['site_name'] . '</td>'
     	   .'<td align="right" style="padding:10px;"><a href="http://'. $CX->opts['site_url'] .'" style="color:#ffffff;text-decoration:none;">'. $CX->opts['site_url'] .'</a></td>'
