@@ -392,7 +392,7 @@ function cx_ajax_offline_form( $data ) {
 		throw new Exception( __( 'Something went wrong. Please try again', 'cx' ), 70 );
 
 	// Successfully sent!
-	$r['msg'] = __( 'Successfully sent! Thank you', 'cx' );
+	$r['msg'] = __( 'Enviado con éxito, Gracias!', 'cx' );
 
 	return $r;
 
