@@ -538,7 +538,7 @@ function cx_get_jquery_plug_opts() {
 				'prechat_msg' => cx_sanitize( $opts['prechat_msg'], true ),
 				'welc_msg' => cx_sanitize( $opts['welc_msg'], true ),
 				'waiting' => cx_sanitize( __( 'Waiting', 'cx' ) ),
-				'start_chat' => cx_sanitize( __( 'Start Chat', 'cx' ) ),
+				'start_chat' => cx_sanitize( __( 'Iniciar Chat', 'cx' ) ),
 
 				'offline_body' => cx_sanitize( $opts['offline_body'], true ),
 				'reply_ph' => cx_sanitize( $opts['popup_reply_ph'] ),
@@ -553,7 +553,7 @@ function cx_get_jquery_plug_opts() {
 				'chat_offline' => cx_sanitize( __( 'Chat Offline', 'cx' ) ),
 				'optional' => cx_sanitize( __( 'Optional', 'cx' ) ),
 				'your_msg' => cx_sanitize( __( 'Your message', 'cx' ) ),
-				'end_chat' => cx_sanitize( __( 'End chat', 'cx' ) ),
+				'end_chat' => cx_sanitize( __( 'Terminar Chat', 'cx' ) ),
 				'conn_err' => cx_sanitize( __( 'Connecting error!', 'cx' ) ),
 				'field_empty' => cx_sanitize( __( 'Please fill out all required fields', 'cx' ) ),
 				'invalid_email' => cx_sanitize( __( 'E-mail is invalid', 'cx' ) ),
