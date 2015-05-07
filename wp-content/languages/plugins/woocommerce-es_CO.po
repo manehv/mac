@@ -6510,7 +6510,7 @@ msgstr "Debes haber iniciado sesión para descargar archivos."
 #: includes/class-wc-download-handler.php:136 templates/global/form-login.php:39
 #: templates/myaccount/form-login.php:28 templates/myaccount/form-login.php:47
 msgid "Login"
-msgstr "Identificarse"
+msgstr "Ingresar a mi cuenta"
 
 #: includes/class-wc-download-handler.php:136
 msgid "Log in to Download Files"
