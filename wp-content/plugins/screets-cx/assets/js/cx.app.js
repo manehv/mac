@@ -1113,7 +1113,7 @@
 
 			this.el.append( this.render( 'popup', {
 				box_id 		: this.data.box_id,
-				title 		: this.opts.msg.conectando + '...',
+				title 		: this.opts.msg.connecting + '...',
 				class 		: 'connecting',
 				h_pos 		: this.data.h_pos,
 				v_pos 		: this.data.v_pos,
