@@ -3,25 +3,25 @@ msgstr ""
 "Project-Id-Version: Screets Chat X v1.4.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-11-29 04:09+0100\n"
-"PO-Revision-Date: Tue May 05 2015 16:00:43 GMT-0500 (COT)\n"
-"Last-Translator: manuel <groupde@gmail.com>\n"
+"PO-Revision-Date: 2015-05-07 12:35-0500\n"
+"Last-Translator: 8manos i18n <i18n@8manos.com>\n"
 "Language-Team: \n"
-"Language: Spanish (Colombia)\n"
-"Plural-Forms: nplurals=2; plural=n != 1\n"
+"Language: es_CO\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-SourceCharset: utf-8\n"
-"X-Generator: Loco - https://localise.biz/\n"
-"X-Poedit-KeywordsList: _:1;gettext:1;dgettext:2;ngettext:1,2;dngettext:2,3;"
-"__:1;_e:1;_c:1;_n:1,2;_n_noop:1,2;_nc:1,2;__ngettext:1,2;__ngettext_noop:1,2;"
-"_x:1,2c;_ex:1,2c;_nx:1,2,4c;_nx_noop:1,2,3c;_n_js:1,2;_nx_js:1,2,3c;"
-"esc_attr__:1;esc_html__:1;esc_attr_e:1;esc_html_e:1;esc_attr_x:1,2c;"
-"esc_html_x:1,2c;comments_number_link:2,3;t:1;st:1;trans:1;transChoice:1,2\n"
+"X-Generator: Poedit 1.7.5\n"
+"X-Poedit-KeywordsList: _:1;gettext:1;dgettext:2;ngettext:1,2;dngettext:2,3;__:1;"
+"_e:1;_c:1;_n:1,2;_n_noop:1,2;_nc:1,2;__ngettext:1,2;__ngettext_noop:1,2;_x:1,2c;"
+"_ex:1,2c;_nx:1,2,4c;_nx_noop:1,2,3c;_n_js:1,2;_nx_js:1,2,3c;esc_attr__:1;"
+"esc_html__:1;esc_attr_e:1;esc_html_e:1;esc_attr_x:1,2c;esc_html_x:1,2c;"
+"comments_number_link:2,3;t:1;st:1;trans:1;transChoice:1,2\n"
 "X-Poedit-Basepath: ../\n"
 "X-Textdomain-Support: yes\n"
+"X-Loco-Target-Locale: es_CO\n"
 "X-Poedit-SearchPath-0: .\n"
-"X-Loco-Target-Locale: es_CO"
 
 # @ cx
 #: ../screets-cx.php:172 ../core/fn.common.php:59 ../core/class.options.php:408
@@ -135,8 +135,8 @@ msgstr ""
 # @ cx
 #: ../screets-cx.php:948
 msgid ""
-"If you leave, you will be logged out of chat. However you will be able to "
-"save conversations into your server when you come back to console!"
+"If you leave, you will be logged out of chat. However you will be able to save "
+"conversations into your server when you come back to console!"
 msgstr ""
 
 # @ cx
@@ -388,7 +388,7 @@ msgstr ""
 
 # @ cx
 #: ../core/fn.common.php:554 ../core/options/options.php:631 ..
-#: core/options/options.php:645 ../core/options/options.php:665 ..
+#: core/options/options.php:645 ../core/options/options.php:665
 #: core/options/options.php:679 ../core/options/options.php:693
 msgid "Optional"
 msgstr ""
@@ -416,8 +416,8 @@ msgstr ""
 # @ cx
 #: ../core/fn.common.php:563
 msgid ""
-"Operators do not chat from here, only visitors. If you want to test chat box,"
-" you will want to use two different browsers or computers"
+"Operators do not chat from here, only visitors. If you want to test chat box, "
+"you will want to use two different browsers or computers"
 msgstr ""
 
 # @ cx
@@ -678,8 +678,8 @@ msgstr ""
 #: ../core/options/options.php:112
 #, php-format
 msgid ""
-"<a href='%s' target='_blank'>wp_footer()</a> function has to be located in "
-"your theme"
+"<a href='%s' target='_blank'>wp_footer()</a> function has to be located in your "
+"theme"
 msgstr ""
 
 # @ cx
@@ -731,9 +731,9 @@ msgstr ""
 #: ../core/options/options.php:203
 #, php-format
 msgid ""
-"You can find your <strong>purchase code</strong> under <a href=\"%s\" "
-"target=\"_blank\">Downloads</a> tab in CodeCanyon. <br />Just click \"Download\" "
-"button next to the the plugin."
+"You can find your <strong>purchase code</strong> under <a href=\"%s\" target="
+"\"_blank\">Downloads</a> tab in CodeCanyon. <br />Just click \"Download\" button "
+"next to the the plugin."
 msgstr ""
 
 # @ cx
@@ -970,8 +970,8 @@ msgstr ""
 # @ cx
 #: ../core/options/options.php:495
 msgid ""
-"Sorry! We aren't around right now. Leave a message and we'll get back to you,"
-" asap."
+"Sorry! We aren't around right now. Leave a message and we'll get back to you, "
+"asap."
 msgstr ""
 
 # @ cx
@@ -1046,14 +1046,14 @@ msgstr ""
 
 # @ cx
 #: ../core/options/options.php:630 ../core/options/options.php:644 ..
-#: core/options/options.php:664 ../core/options/options.php:678 ..
+#: core/options/options.php:664 ../core/options/options.php:678
 #: core/options/options.php:692
 msgid "Hidden"
 msgstr ""
 
 # @ cx
 #: ../core/options/options.php:632 ../core/options/options.php:646 ..
-#: core/options/options.php:666 ../core/options/options.php:680 ..
+#: core/options/options.php:666 ../core/options/options.php:680
 #: core/options/options.php:694
 msgid "Required"
 msgstr ""
@@ -1096,8 +1096,8 @@ msgstr ""
 # @ cx
 #: ../core/options/options.php:734
 msgid ""
-"If you have already contact system, you can link button to an existing page "
-"when chat is offline"
+"If you have already contact system, you can link button to an existing page when "
+"chat is offline"
 msgstr ""
 
 # @ cx
@@ -1118,9 +1118,9 @@ msgstr ""
 # @ cx
 #: ../core/options/options.php:763
 msgid ""
-"We received your message and will respond within one business day, likely "
-"much sooner. We will be happy to provide you with a detailed answer as "
-"quickly as we can."
+"We received your message and will respond within one business day, likely much "
+"sooner. We will be happy to provide you with a detailed answer as quickly as we "
+"can."
 msgstr ""
 
 # @ cx
@@ -1160,8 +1160,8 @@ msgstr ""
 # @ cx
 #: ../core/options/options.php:813
 msgid ""
-"Operators have the same capability with this role. It does NOT mean this "
-"role will act like operator"
+"Operators have the same capability with this role. It does NOT mean this role "
+"will act like operator"
 msgstr ""
 
 # @ cx
@@ -1313,9 +1313,9 @@ msgstr ""
 #: ../core/options/options.php:1003
 msgid ""
 "If your server is behind a reverse proxy, you must whitelist the proxy IP "
-"addresses from which WordPress should trust the HTTP_X_FORWARDED_FOR header "
-"in order to properly identify the visitor's IP address. Comma-delimited, e.g."
-" '10.0.1.200,10.0.1.201'"
+"addresses from which WordPress should trust the HTTP_X_FORWARDED_FOR header in "
+"order to properly identify the visitor's IP address. Comma-delimited, e.g. "
+"'10.0.1.200,10.0.1.201'"
 msgstr ""
 
 # @ cx
