@@ -1113,7 +1113,7 @@
 
 			this.el.append( this.render( 'popup', {
 				box_id 		: this.data.box_id,
-				title 		: this.opts.msg.connecting + '...',
+				title 		: this.opts.msg.conectando + '...',
 				class 		: 'connecting',
 				h_pos 		: this.data.h_pos,
 				v_pos 		: this.data.v_pos,
@@ -1127,7 +1127,7 @@
 				radius 		: this.data.radius,
 				radius_h 	: this.data.radius_h,
 				radius_f 	: this.data.radius_f,
-				body 		: this.render( 'connecting', {
+				body 		: this.render( 'conectando', {
 					lead: this.opts.msg.connecting + '...'
 				} )
 			}));
@@ -1705,7 +1705,7 @@
 			var self = this;
 
 			// Turn back to "connecting" popup
-			this.objs.popup_body.html( self.render( 'connecting', {
+			this.objs.popup_body.html( self.render( 'conectando', {
 				lead: this.opts.msg.connecting + '...'
 			}));
 
@@ -2717,7 +2717,7 @@
 				/**
 				 * Connecting popup
 				 */
-				case 'connecting':
+				case 'conectando':
 
 					arr = [
 						'<div class="cx-body"><div class="cx-ntf cx-sending cx-conn">', p.lead, '</div></div>'
