@@ -116,5 +116,8 @@ jQuery(document).ready(function($)
             if(  $("td.Estado").text() == 'Aprobada' ){
                 $( '.fakealert' ).text( 'Gracias por tu compra, estamos procesando tu pedido.' ); 
             }
+            if(  $("td.Estado").text() == 'Rechazada' ){
+                $( '.fakealert' ).text( 'Tu transacción ha sido rechazada.' ); 
+            }
         }
 });
