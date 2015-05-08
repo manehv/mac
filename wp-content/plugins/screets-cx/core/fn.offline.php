@@ -65,7 +65,7 @@ function cx_offline_email_head() {
 global $CX;
 
 // Header
-return '<table width="100%" cellspacing="0" cellpadding="0" style="color:#ffffff;font-family:Arial,sans-serif;font-size:14px;background-color:#000'.$CX->opts['primary_color'].';">'
+return '<table width="100%" cellspacing="0" cellpadding="0" style="color:#ffffff;font-family:Arial,sans-serif;font-size:14px;background-color:#000000'.$CX->opts['primary_color'].';">'
       .'<tr>'
       .'<td valign="bottom" style="font-size:15px;font-weight:bold;padding:10px;">' . $CX->opts['site_name'] . '</td>'
       .'<td align="right" style="padding:10px;"><a href="http://'. $CX->opts['site_url'] .'" style="color:#ffffff;text-decoration:none;">'. $CX->opts['site_url'] .'</a></td>'
