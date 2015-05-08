@@ -65,11 +65,7 @@ function cx_offline_email_head() {
 global $CX;
 
 // Header
-return '<table width="100%" cellspacing="0" cellpadding="0" style="color:#ffffff;font-family:Arial,sans-serif;font-size:14px;background-color:#000000'.$CX->opts['primary_color'].';">'
-      .'<tr>'
-      .'<td valign="bottom" style="font-size:15px;font-weight:bold;padding:10px;">' . $CX->opts['site_name'] . '</td>'
-      .'<td align="right" style="padding:10px;"><a href="http://'. $CX->opts['site_url'] .'" style="color:#ffffff;text-decoration:none;">'. $CX->opts['site_url'] .'</a></td>'
-      .'</tr></table>';
+return '<div style="width: auto;height: 50px;background: url("http://mc.arbolnaranja.com/wp-content/uploads/2015/05/mac_center-01-01.png") #f7f7f7 no-repeat;image-rendering: auto;background-size: contain;border-color: #E0E0E0 !important;-webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);-moz-box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);background-position: 50px 0px ;"></div>';
 
 }
 
