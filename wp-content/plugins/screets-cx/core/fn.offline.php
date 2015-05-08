@@ -61,7 +61,7 @@ return $msg_id;
  *
  * @return	string
  */
-function cx_offline_email_head('myHeader') {
+function cx_offline_email_head() {
 global $CX;
 
 // Header
