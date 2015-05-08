@@ -21,40 +21,37 @@
  */
 function cx_add_offline_msg( $msg_content, $f, $ip_addr ) {
 
-	if( !empty( $f['name'] ) )
-		$title = $f['name'];
+if( !empty( $f['name'] ) )
+$title = $f['name'];
 
-	elseif( !empty( $f['email'] ) )
-		$title = $f['email'];
-	
-	elseif( !empty( $f['phone'] ) )
-		$title = $f['phone'];
+elseif( !empty( $f['email'] ) )
+$title = $f['email'];
+elseif( !empty( $f['phone'] ) )
+$title = $f['phone'];
 
-	else
-		$title = $ip_addr;
+else
+$title = $ip_addr;
 
-	// Prepare post data
-	$data = array(
-		'post_type' 	=> 'cx_offline_msg',
-		'post_title'	=> $title,
-		'post_content' 	=> $msg_content,
-		'post_status'	=> 'publish'
-	);
+// Prepare post data
+$data = array(
+'post_type' => 'cx_offline_msg',
+'post_title'	=> $title,
+'post_content' => $msg_content,
+'post_status'	=> 'publish'
+);
 
-	// Add offline message
-	$msg_id = wp_insert_post( $data );
-	
-	
-	// Include IP address to fields
-	$f['ip_addr'] = $ip_addr;
+// Add offline message
+$msg_id = wp_insert_post( $data );
+// Include IP address to fields
+$f['ip_addr'] = $ip_addr;
 
-	// Add / update message meta
-	foreach( $f as $k => $v ) {
-		if( !empty( $v ) )
-			add_post_meta( $msg_id, $k, $v, true ) || update_post_meta( $msg_id, $k, $v );
-	}
+// Add / update message meta
+foreach( $f as $k => $v ) {
+if( !empty( $v ) )
+add_post_meta( $msg_id, $k, $v, true ) || update_post_meta( $msg_id, $k, $v );
+}
 
-	return $msg_id;
+return $msg_id;
 
 }
 
@@ -64,7 +61,17 @@ function cx_add_offline_msg( $msg_content, $f, $ip_addr ) {
  *
  * @return	string
  */
-<body style="margin:0; padding:0"><div style="width: auto;height: 50px;background: url('http://mc.arbolnaranja.com/wp-content/uploads/2015/05/mac_center-01-01.png') #f7f7f7 no-repeat;image-rendering: auto;background-size: contain;border-color: #E0E0E0 !important;-webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);-moz-box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);background-position: 50px 0px ;"></div>
+function cx_offline_email_head() {
+global $CX;
+
+// Header
+return '<table width="100%" cellspacing="0" cellpadding="0" style="color:#ffffff;font-family:Arial,sans-serif;font-size:14px;background-color:#000'.$CX->opts['primary_color'].';">'
+      .'<tr>'
+      .'<td valign="bottom" style="font-size:15px;font-weight:bold;padding:10px;">' . $CX->opts['site_name'] . '</td>'
+      .'<td align="right" style="padding:10px;"><a href="http://'. $CX->opts['site_url'] .'" style="color:#ffffff;text-decoration:none;">'. $CX->opts['site_url'] .'</a></td>'
+      .'</tr></table>';
+
+}
 
 /**
  * Get email footer
@@ -72,9 +79,9 @@ function cx_add_offline_msg( $msg_content, $f, $ip_addr ) {
  * @return	string
  */
 function cx_offline_email_foot() {
-	global $CX;
+global $CX;
 
-	return '<div style="font-size:13px;padding:30px;border-top:1px solid #ddd;margin-top:30px;">'. htmlspecialchars_decode( $CX->opts['contact_footer'] ) . '</div>';
+return '<div style="font-size:13px;padding:30px;border-top:1px solid #ddd;margin-top:30px;">'. htmlspecialchars_decode( $CX->opts['contact_footer'] ) . '</div>';
 
 }
 
@@ -84,26 +91,25 @@ function cx_offline_email_foot() {
  * @return	bool
  */
 function cx_send_offline_msg( $to, $site_email, $data ) {
-	global $CX;
-	
-	$f = array();	
-	$usr = new CX_User;
-	$opts = $CX->opts;
-	$ip_addr = cx_ip_address();
+global $CX;
+$f = array();
+$usr = new CX_User;
+$opts = $CX->opts;
+$ip_addr = cx_ip_address();
 
-	//
-	// Email template
-	//
-	$msg = $html = '<div style="color:#222222;font-family:Arial,sans-serif;font-size:14px;">';
+//
+// Email template
+//
+$msg = $html = '<div style="color:#222222;font-family:Arial,sans-serif;font-size:14px;">';
 
-	$msg .= cx_offline_email_head();
+$msg .= cx_offline_email_head();
 
    	// Wrapper
    	$msg .= '<div style="border-width:0 1px 1px 1px; border-style: solid; border-color: #ddd;">';
 
    	// Lead message
    	$msg .= '<div style="font-size:15px;padding:30px;line-height:20px;">'
-   		   . htmlspecialchars_decode( $opts['contact_header'] ) . '</div>';
+   	  . htmlspecialchars_decode( $opts['contact_header'] ) . '</div>';
 
    	// Form details
    	$msg .= '<div style="font-size:15px;padding:0 30px 15px 30px;line-height:20px;">';
@@ -115,107 +121,105 @@ function cx_send_offline_msg( $to, $site_email, $data ) {
 
    	// Name field
    	if( !empty( $data['name'] ) ) {
-   		$msg .= '<strong>' . __( 'Name', 'cx' ) . '</strong>: ' . $data['name'] . '<br />';
+   	$msg .= '<strong>' . __( 'Name', 'cx' ) . '</strong>: ' . $data['name'] . '<br />';
    	}
 
    	// Email field
    	if( !empty( $data['name'] ) ) {
-   		$msg .= '<strong>' . __( 'E-mail', 'cx' ) . '</strong>: <a href="'.$data['email'].'">' . $data['email'] . '</a><br />';
+   	$msg .= '<strong>' . __( 'E-mail', 'cx' ) . '</strong>: <a href="'.$data['email'].'">' . $data['email'] . '</a><br />';
    	}
 
    	// Phone field
    	if( !empty( $data['phone'] ) ) {
-   		$msg .= '<strong>' . __( 'Phone', 'cx' ) . '</strong>: ' . $data['phone'] . '<br />';
+   	$msg .= '<strong>' . __( 'Phone', 'cx' ) . '</strong>: ' . $data['phone'] . '<br />';
    	}
 
    	// Message field
-	$msg .= '<strong>' . __( 'Message', 'cx' ) . '</strong>: <br>' . str_replace( "\n",'<br />', htmlspecialchars( stripslashes( $data['msg'] ) ) ) . '<br />';
+$msg .= '<strong>' . __( 'Message', 'cx' ) . '</strong>: <br>' . str_replace( "\n",'<br />', htmlspecialchars( stripslashes( $data['msg'] ) ) ) . '<br />';
 
    	// User additional message
-	$msg .= '<div style="font-size:11px;padding:15px 0;">' . __( 'User information', 'cx' ) . ': <br>' .
-			 	$ip_addr . ' - ' .
-			 	$usr->info( 'os' ) . ', ' . $usr->info( 'browser' ) . ' ' . $usr->info( 'version' ) . '<br>' .
-			 	$_SERVER['HTTP_REFERER'] . '<br>' .
+$msg .= '<div style="font-size:11px;padding:15px 0;">' . __( 'User information', 'cx' ) . ': <br>' .
+$ip_addr . ' - ' .
+$usr->info( 'os' ) . ', ' . $usr->info( 'browser' ) . ' ' . $usr->info( 'version' ) . '<br>' .
+$_SERVER['HTTP_REFERER'] . '<br>' .
 
-			 '</div>';
+'</div>';
 
    	$msg .= '</div>'; // form details
 
 
    	// Footer
-	$msg .= cx_offline_email_foot();
-		
+$msg .= cx_offline_email_foot();
 
-	$msg .= '</div>'; // wrapper
-	$msg .= '</div>';
+$msg .= '</div>'; // wrapper
+$msg .= '</div>';
 
-	// Set subject
-	$subject = '[' . $opts['site_name'] . '] ' . __( 'New offline message', 'cx' );
+// Set subject
+$subject = '[' . $opts['site_name'] . '] ' . __( 'New offline message', 'cx' );
 
-	/**
-	 * Send email to admin emails
-	 */
-	$headers = array();
-	$headers[] = 'MIME-Version: 1.0';
-	$headers[] = 'content-type: text/html';
-	$headers[] = 'charset=utf-8';
+/**
+* Send email to admin emails
+*/
+$headers = array();
+$headers[] = 'MIME-Version: 1.0';
+$headers[] = 'content-type: text/html';
+$headers[] = 'charset=utf-8';
 
-	// From visitor if email given by visitor
-	if( !empty( $data['email'] ) ) {
-		$_name = ( !empty( $data['name'] ) ) ? $data['name'] : $opts['site_name'];
+// From visitor if email given by visitor
+if( !empty( $data['email'] ) ) {
+$_name = ( !empty( $data['name'] ) ) ? $data['name'] : $opts['site_name'];
 
-		$headers[] = 'From: [' . $_name . '] <' . $data['email'] . '>';
+$headers[] = 'From: [' . $_name . '] <' . $data['email'] . '>';
 
-	// From operator if no email given by visitor
-	} else {
-		$headers[] = 'From: [' . $opts['site_name'] . '] <' . $site_email . '>';
-	}
+// From operator if no email given by visitor
+} else {
+$headers[] = 'From: [' . $opts['site_name'] . '] <' . $site_email . '>';
+}
 
-	//
-	// Send email to admins
-	// 
-	if( !wp_mail( $to, $subject, $msg, $headers ) ) {
-		$f['status'] = 'failed';
-	} else
-		$f['status'] = 'succeed';
+//
+// Send email to admins
+// 
+if( !wp_mail( $to, $subject, $msg, $headers ) ) {
+$f['status'] = 'failed';
+} else
+$f['status'] = 'succeed';
 
-	//
-	// Add offline message
-	// 
-	$f['name'] = $data['name'];
-	$f['email'] = $data['email'];
-	$f['os'] = $usr->info('os');
-	$f['browser'] = $usr->info('browser');
-	$f['version'] = $usr->info('version');
-	$f['site_email'] = $site_email;
-	$f['to'] = $to;
+//
+// Add offline message
+// 
+$f['name'] = $data['name'];
+$f['email'] = $data['email'];
+$f['os'] = $usr->info('os');
+$f['browser'] = $usr->info('browser');
+$f['version'] = $usr->info('version');
+$f['site_email'] = $site_email;
+$f['to'] = $to;
 
-	cx_add_offline_msg( $data['msg'], $f, $ip_addr );
+cx_add_offline_msg( $data['msg'], $f, $ip_addr );
 
 
-	// If email sent failed, return false
-	if( $f['status'] == 'failed')
-		return false;
+// If email sent failed, return false
+if( $f['status'] == 'failed')
+return false;
 
-	/**
-	 * Send copy to  the visitor
-	 */
-	if( !empty( $data['email'] ) and !empty( $opts['contact_email_to_visitor'] ) ) {
-		
-		// Set subject
-		$subject = '[' . $opts['site_name'] . '] ' . __( 'Hemos recibido tu mensaje.', 'cx' );
+/**
+* Send copy to  the visitor
+*/
+if( !empty( $data['email'] ) and !empty( $opts['contact_email_to_visitor'] ) ) {
+// Set subject
+$subject = '[' . $opts['site_name'] . '] ' . __( 'Hemos recibido tu mensaje.', 'cx' );
 
-		$headers = array();
-		$headers[] = 'MIME-Version: 1.0';
-		$headers[] = 'content-type: text/html';
-		$headers[] = 'charset=utf-8';
+$headers = array();
+$headers[] = 'MIME-Version: 1.0';
+$headers[] = 'content-type: text/html';
+$headers[] = 'charset=utf-8';
 
-		$to = $data['email'];
+$to = $data['email'];
 
-		// Send email to the visitor
-		wp_mail( $to, $subject, $msg, $headers );
+// Send email to the visitor
+wp_mail( $to, $subject, $msg, $headers );
 
-	}
+}
 
-	return true;
+return true;
 }
