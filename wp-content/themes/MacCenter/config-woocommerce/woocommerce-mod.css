@@ -438,7 +438,10 @@ line-height: 18px;
 font-weight: normal;
 margin:0;
 }
-
+.products .product h3{
+min-height: 40px !important;
+}	
+	
 #top .onsale {
 background: rgba(0, 0, 0, 0.8);
 z-index: 10;
