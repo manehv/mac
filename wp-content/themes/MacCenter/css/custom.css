@@ -7,7 +7,9 @@
 @import url('fonts/MyriadSetPro-Bold-fontfacekit/web-fonts/MyriadSetPro-Bold/stylesheet.css');
 @import url('fonts/MyriadSetPro-Medium-fontfacekit/stylesheet.css');
 
-
+a.remove{
+	visibility: hidden !important;
+}
 .tax-total {
     display: none !important;
 }
