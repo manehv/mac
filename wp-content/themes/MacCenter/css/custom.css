@@ -7,6 +7,12 @@
 @import url('fonts/MyriadSetPro-Bold-fontfacekit/web-fonts/MyriadSetPro-Bold/stylesheet.css');
 @import url('fonts/MyriadSetPro-Medium-fontfacekit/stylesheet.css');
 
+#top .form-row .input-checkbox{display: inline;
+margin: 5px 8px 0px 0px;
+text-align: center;
+vertical-align: middle;
+float: left !important;}
+
 a.remove{
 	visibility: hidden !important;
 }
