@@ -338,17 +338,17 @@ function cx_ajax_offline_form( $data ) {
 	if( $opts['f_name'] == 'req' ) {
 
 		if( empty( $data['name'] ) )
-			throw new Exception( __( 'Please fill out all required fields', 'cx' ), 10 );
+			throw new Exception( __( 'Por favor llena todos los campos', 'cx' ), 10 );
 	}
 
 	// Validate email field
 	if( $opts['f_email'] == 'req' ) {
 
 		if( empty( $data['email'] ) )
-			throw new Exception( __( 'Please fill out all required fields', 'cx' ), 20 );
+			throw new Exception( __( 'Por favor llena todos los campos', 'cx' ), 20 );
 
 		if( !is_email( $data['email'] ) )
-			throw new Exception( __( 'E-mail is invalid', 'cx' ), 30 );
+			throw new Exception( __( 'E-mail no válido', 'cx' ), 30 );
 
 	}
 
@@ -362,7 +362,7 @@ function cx_ajax_offline_form( $data ) {
 
 	// Validate message field
 	if( empty( $data['msg'] ) )
-		throw new Exception( __( 'Please fill out all required fields', 'cx' ), 50 );
+		throw new Exception( __( 'Por favor llena todos los campos', 'cx' ), 50 );
 
 	// Offline emails
 	if( empty( $opts['admin_emails'] ) ) {
@@ -373,7 +373,7 @@ function cx_ajax_offline_form( $data ) {
 		
 		// Warn visitor about the same issue in different way
 		} else {
-			throw new Exception( __( 'Something went wrong. Please try again', 'cx' ), 60 );
+			throw new Exception( __( 'Algo no salio bien, por favor intentalo de nuevo', 'cx' ), 60 );
 		}
 
 	} else {
