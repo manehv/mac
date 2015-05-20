@@ -13,7 +13,17 @@
     border: 1px solid rgba(255, 255, 255, 0.5);
     background-color: rgba(0, 0, 0, 0.2);
 }
-
+#top .avia-slideshow-button {
+    border-radius: 3px;
+    text-transform: none;
+    padding: 12px 16px;
+    display: inline-block;
+    margin-left: 5%;
+    top: 22%;
+    text-decoration: none;
+    font-weight: bold;
+    color: #fff;
+}
 
 #top .form-row .input-checkbox{display: inline;
 margin: 5px 8px 0px 0px;
