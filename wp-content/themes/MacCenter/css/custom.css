@@ -7,6 +7,14 @@
 @import url('fonts/MyriadSetPro-Bold-fontfacekit/web-fonts/MyriadSetPro-Bold/stylesheet.css');
 @import url('fonts/MyriadSetPro-Medium-fontfacekit/stylesheet.css');
 
+#top .avia-slideshow-button.avia-color-light {
+    padding: 10px 26px;
+    color: rgba(255, 255, 255, 1);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+
 #top .form-row .input-checkbox{display: inline;
 margin: 5px 8px 0px 0px;
 text-align: center;
