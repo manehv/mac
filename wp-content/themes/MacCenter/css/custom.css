@@ -6,9 +6,13 @@
 @import url('fonts/open-sans-fontfacekit/web-fonts/opensans_regular/stylesheet.css');*/
 @import url('fonts/MyriadSetPro-Bold-fontfacekit/web-fonts/MyriadSetPro-Bold/stylesheet.css');
 @import url('fonts/MyriadSetPro-Medium-fontfacekit/stylesheet.css');
+
+    
 .slideshow_caption {
     z-index: 100;
-    width: 56% !important;}
+    width: 56% !important;
+    top: 23% !important;
+}
     
 #top .avia-slideshow-button.avia-color-light {
     padding: 10px 26px;
