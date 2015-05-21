@@ -7,6 +7,14 @@
 @import url('fonts/MyriadSetPro-Bold-fontfacekit/web-fonts/MyriadSetPro-Bold/stylesheet.css');
 @import url('fonts/MyriadSetPro-Medium-fontfacekit/stylesheet.css');
 
+.avia-content-slider-active .slide-entry-wrap {
+    position: absolute;
+    top: 0px;
+    visibility: hidden;
+    margin: 0px;
+    height: 503px !important;
+    background-position: center center !important;
+    background-size: contain;}
     
 .slideshow_caption {
     z-index: 100;
