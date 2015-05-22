@@ -3105,7 +3105,7 @@ background-position: center center;
 .avia-fullscreen-slider:hover .avia-slideshow-dots a{opacity: 0.8; filter: alpha(opacity=80);}
 
 
-#top .avia-slideshow-button{border-radius: 3px; text-transform: None; padding:12px 16px; display: inline-block; margin-left:45%; margin-bottom:50px; text-decoration: none; font-weight: bold;}
+#top .avia-slideshow-button{border-radius: 3px; text-transform: None; padding:12px 16px; display: inline-block;  text-decoration: none; font-weight: bold;}
 #top .avia-slideshow-button.avia-color-light{ padding:6px 26px; color:rgba(255,255,255,0.7); border:1px solid rgba(255,255,255,0.5); background-color: rgba(0,0,0,0.2); }
 #top .avia-slideshow-button.avia-color-dark{  padding:6px 26px; color:#000; border:1px solid rgba(0,0,0,0.5); color:rgba(0,0,0,0.6);  border-color: rgba(0,0,0,0.6);  background-color: rgba(255,255,255,0.1);}
 
