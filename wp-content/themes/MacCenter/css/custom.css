@@ -539,7 +539,7 @@ div .av_two_third{margin-left:2%; }
 /*body .column-top-margin{margin-top:10px; }*/
 #top .main_color .checkout .input-text, #top .main_color .checkout .chosen-single{border-radius:2px; font-size:11px; padding:13px; line-height:normal; height:auto; }
 #top input[type="text"]:focus, #top input[type="password"]:focus, #top input[type="email"]:focus, #top input[type="number"]:focus, #top input[type="url"]:focus, #top input[type="tel"]:focus, #top input[type="search"]:focus, #top textarea:focus{box-shadow:0 0 2px 0 rgba(0, 0, 0, 0.2) !important; }
-#top #payment{border-width:2px; width:50%; }
+#top #payment{border-width:2px; width:50%;}
 /*{background-color:#e4e4e4; border:1px solid #777777; color:#777777; border-radius:2px; font-size:11px; padding:12px; }
 {color:#0088cc;}*/
 #top #main ul.order_details{border-width:1px; border-color:#939598; border-radius:8px; }
@@ -1039,6 +1039,7 @@ Mobile Styles
   #simplr-form input[type="submit"] {
   margin-top:45px;}
   #advanced_menu_toggle, #advanced_menu_hide{display:block;}
+ 
 }
 @media only screen and (min-width:768px) and (max-width:980px) {
         .chosen-container {
@@ -1375,4 +1376,45 @@ margin-right: 10px;
 #top input[type="text"] {
 	background-color:transparent !important;
 	box-shadow:none !important;
+}
+.woocommerce-billing-fields p, .woocommerce-shipping-fields p{
+	width:32.33% !important;
+}
+#customer_details {
+    padding-bottom: 0px;
+}
+.woocommerce-checkout-review-order table.shop_table {
+    width: auto;
+}
+#payment .place-order .terms{
+	float:left;
+}
+#top #payment #place_order{
+	float:right;
+}
+.woocommerce-checkout-review-order #payment{
+	width:49% !important; 
+	float:right;
+	margin-top:-120px; }
+@media only screen and (max-width:500px) {
+         #customer_details .form-row.form-row-last {
+    margin-left: 0px !important;
+	}
+	.woocommerce-billing-fields p, .woocommerce-shipping-fields p{
+	width:100% !important;
+	}
+	.woocommerce-checkout-review-order #payment{
+		width:100% !important;
+	margin-top:auto; 
+	}
+}
+@media only screen and (min-width:501px) and (max-width:768px) { 
+	
+	.woocommerce-billing-fields p, .woocommerce-shipping-fields p{
+	width:31.33% !important;
+}
+	.woocommerce-checkout-review-order #payment{
+		width:100% !important;
+	margin-top:auto; 
+	}
 }
