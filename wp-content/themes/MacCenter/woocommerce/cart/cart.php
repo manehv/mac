@@ -133,7 +133,21 @@ echo '</a>';
                 do_action( 'woocommerce_cart_contents' );
                 ?>
                 <tr class="clsCartTotals">
-                <td class="clsCartTotTD" colspan="4"></td>
+                <td class="clsCartTotTD" colspan="4">
+										<?php if ( WC()->cart->coupons_enabled() ) { ?>
+														<div class="coupon">
+																		<br/>		
+																		<label for="coupon_code" ><?php _e( 'Cupon de descuento', 'woocommerce' ); ?>:</label> 
+																		
+																		<input type="text" name="coupon_code" class="input-text" id="coupon_code" value="" placeholder="<?php _e( 'Coupon code', 'woocommerce' ); ?>" /> 
+																		<input type="submit" class="button" name="apply_coupon" value="<?php _e( 'Apply Coupon', 'woocommerce' ); ?>" />
+																						
+																		<?php do_action( 'woocommerce_cart_coupon' ); ?>
+
+														</div>
+										<?php } ?>
+                
+                </td>
                 <td class="clsCartTotTD" colspan="2">
                         <div class="cart-collaterals">
 
@@ -150,15 +164,7 @@ echo '</a>';
                 <tr class="clsActions">
                         <td colspan="6" class="actions">
 
-                                <?php if ( WC()->cart->coupons_enabled() ) { ?>
-                                        <div class="coupon">
-
-                                                <label for="coupon_code"><?php _e( 'Coupon', 'woocommerce' ); ?>:</label> <input type="text" name="coupon_code" class="input-text" id="coupon_code" value="" placeholder="<?php _e( 'Coupon code', 'woocommerce' ); ?>" /> <input type="submit" class="button" name="apply_coupon" value="<?php _e( 'Apply Coupon', 'woocommerce' ); ?>" />
-
-                                                <?php do_action( 'woocommerce_cart_coupon' ); ?>
-
-                                        </div>
-                                <?php } ?>
+                               
 
                                 <input type="submit" class="button" name="update_cart" value="<?php _e( 'Update Cart', 'woocommerce' ); ?>" /><input type="submit" class="checkout-button button alt wc-forward" name="proceed" value="<?php _e( 'Proceed to Checkout', 'woocommerce' ); ?>" />
 
