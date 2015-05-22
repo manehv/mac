@@ -1418,7 +1418,8 @@ margin-right: 10px;
     padding-bottom: 0px;
 }
 .woocommerce-checkout-review-order table.shop_table {
-    width: auto;
+    width: 50%;
+		float:left;
 }
 #payment .place-order .terms{
 	float:left;
@@ -1427,9 +1428,9 @@ margin-right: 10px;
 	float:right;
 }
 .woocommerce-checkout-review-order #payment{
-	width:49% !important; 
-	float:right;
-	margin-top:-120px; }
+	float: left;
+    width: 45% !important;
+	 margin: -120px 2% 2% !important; }
 @media only screen and (max-width:500px) {
          #customer_details .form-row.form-row-last {
     margin-left: 0px !important;
@@ -1439,8 +1440,12 @@ margin-right: 10px;
 	}
 	.woocommerce-checkout-review-order #payment{
 		width:100% !important;
-	margin-top:auto; 
+	margin:0px !important; 
 	}
+	.woocommerce-checkout-review-order table.shop_table {
+    width: 100%;
+		float:left;
+}
 }
 @media only screen and (min-width:501px) and (max-width:768px) { 
 	
@@ -1448,7 +1453,7 @@ margin-right: 10px;
 	width:31.33% !important;
 }
 	.woocommerce-checkout-review-order #payment{
-		width:100% !important;
+		width:45% !important;
 	margin-top:auto; 
 	}
 }

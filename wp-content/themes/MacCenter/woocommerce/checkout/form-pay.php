@@ -14,7 +14,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?>
 <form id="order_review" method="post">
 
-	<table class="shop_table col-lg-6">
+	<table class="shop_table ">
 		<thead>
 			<tr>
 				<th class="product-name"><?php _e( 'Product', 'woocommerce' ); ?></th>
