@@ -1446,6 +1446,9 @@ margin-right: 10px;
     width: 100%;
 		float:left;
 }
+.terms #terms{
+	  margin: -16px 0 0 !important;
+}
 }
 @media only screen and (min-width:501px) and (max-width:768px) { 
 	
@@ -1456,4 +1459,7 @@ margin-right: 10px;
 		width:45% !important;
 	margin-top:auto; 
 	}
+	.terms #terms{
+	  margin: -16px 0 0 !important;
+}
 }
