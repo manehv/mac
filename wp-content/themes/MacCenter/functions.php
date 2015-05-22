@@ -1101,14 +1101,14 @@ function custom_override_billing_fields( $fields ) {
         'label'     => __('Nombre', 'woocommerce'),
         'placeholder'   => (''),
                                 'required'  => true,
-                                'class'     => array('form-row-first')
+                                'class'     => array('form-row-first',' col-lg-4')
      );
 
      $fields['billing_last_name'] = array(
         'label'     => __('Apellido', 'woocommerce'),
         'placeholder'   => (''),
                                 'required'  => true,
-                                'class'     => array('form-row-last')
+                                'class'     => array('form-row-last',' col-lg-4')
      );
 
          $fields['billing_country'] = array(
@@ -1116,28 +1116,28 @@ function custom_override_billing_fields( $fields ) {
         'label'     => __('Country', 'woocommerce'),
         'placeholder'   => (''),
                                 'required'  => true,
-                                'class'     => array('form-row-first', 'address-field', 'update_totals_on_change')
+                                'class'     => array('form-row-last', 'address-field', 'update_totals_on_change',' col-lg-4')
      ); 
 
       $fields['billing_city'] = array(
         'label'     => __('Ciudad/Localidad', 'woocommerce'),
         'placeholder'   => (''),
                                 'required'  => true,
-                                'class'     => array('form-row-last', 'address-field'),
+                                'class'     => array('form-row-first', 'address-field',' col-lg-4'),
                                 'clear'    => false
      );   
       $fields['billing_company'] = array(
         'label'     => __('Departamento', 'woocommerce'),
         'placeholder'   => (''),
                                 'required'  => true,
-                                'class'     => array('form-row-first')
+                                'class'     => array('form-row-last',' col-lg-4')
      );
      
        $fields['billing_postcode'] = array(
         'label'     => __('Barrio', 'woocommerce'),
         'placeholder'   => (''),
                                 'required'  => false,
-                                'class'     => array('form-row-last', 'address-field'),
+                                'class'     => array('form-row-last', 'address-field',' col-lg-4'),
                                 'validate'    => array( 'postcode' ),
                                 'clear'    => false
      );
@@ -1146,14 +1146,14 @@ function custom_override_billing_fields( $fields ) {
         'label'     => __('Dirección Completa', 'woocommerce'),
         'placeholder'   => (''),
                                 'required'  => true,
-                                'class'     => array('form-row-first', 'address-field')
+                                'class'     => array('form-row-first', 'address-field',' col-lg-4')
      );
      
       $fields['billing_mobile_phone'] = array(
         'label'     => __('Celular', 'woocommerce'),
         'placeholder'   => (''),
                                 'required'  => false,
-                                'class'     => array('form-row-last')
+                                'class'     => array('form-row-last',' col-lg-4')
      );
  
   return $fields;
@@ -1170,14 +1170,14 @@ function custom_override_shipping_fields( $fields ) {
         'label'     => __('Nombre', 'woocommerce'),
         'placeholder'   => (''),
                                 'required'  => true,
-                                'class'     => array('form-row-first')
+                                'class'     => array('form-row-first',' col-lg-4','col-xs-12')
      );
 
      $fields['shipping_last_name'] = array(
         'label'     => __('Apellido', 'woocommerce'),
         'placeholder'   => (''),
                                 'required'  => true,
-                                'class'     => array('form-row-last')
+                                'class'     => array('form-row-last',' col-lg-4')
      );
 
          $fields['shipping_country'] = array(
@@ -1185,28 +1185,28 @@ function custom_override_shipping_fields( $fields ) {
         'label'     => __('Country', 'woocommerce'),
         'placeholder'   => (''),
                                 'required'  => true,
-                                'class'     => array('form-row-first', 'address-field', 'update_totals_on_change')
+                                'class'     => array('form-row-last', 'address-field', 'update_totals_on_change',' col-lg-4')
      );
 
       $fields['shipping_city'] = array(
         'label'     => __('Ciudad/Localidad', 'woocommerce'),
         'placeholder'   => (''),
                                 'required'  => true,
-                                'class'     => array('form-row-last', 'address-field'),
+                                'class'     => array('form-row-first', 'address-field',' col-lg-4'),
                                 'clear'    => false
      );
       $fields['shipping_company'] = array(
         'label'     => __('Departamento', 'woocommerce'),
         'placeholder'   => (''),
                                 'required'  => true,
-                                'class'     => array('form-row-first')
+                                'class'     => array('form-row-last',' col-lg-4')
      );
 
        $fields['shipping_postcode'] = array(
         'label'     => __('Código postal/Zip', 'woocommerce'),
         'placeholder'   => (''),
                                 'required'  => false,
-                                'class'     => array('form-row-last', 'address-field'),
+                                'class'     => array('form-row-last', 'address-field',' col-lg-4'),
                                 'validate'    => array( 'postcode' ),
                                 'clear'    => false
      );
@@ -1215,14 +1215,14 @@ function custom_override_shipping_fields( $fields ) {
         'label'     => __('Dirección Completa', 'woocommerce'),
         'placeholder'   => (''),
                                 'required'  => true,
-                                'class'     => array('form-row-first', 'address-field')
+                                'class'     => array('form-row-first', 'address-field',' col-lg-4')
      );
 
       $fields['shipping_mobile_phone'] = array(
         'label'     => __('Celular', 'woocommerce'),
         'placeholder'   => (''),
                                 'required'  => false,
-                                'class'     => array('form-row-last')
+                                'class'     => array('form-row-last',' col-lg-4')
      );
 
   return $fields;
@@ -1248,7 +1248,7 @@ function reorder_woocommerce_fields($fields) {
             'label'     => __('E-mail', 'woocommerce'),
             'placeholder'   => (''),
             'required'  => false,
-            'class'     => array('form-row-first')
+            'class'     => array('form-row-last')
          );
       
 
