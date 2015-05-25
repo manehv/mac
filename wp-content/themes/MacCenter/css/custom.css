@@ -1447,7 +1447,14 @@ margin-right: 10px;
 		float:left;
 }
 .terms #terms{
-	  margin: -16px 0 0 !important;
+	  /*margin: -16px 0 0 !important;*/
+}
+#top #payment .terms {
+    text-align: left !important;
+}
+.terms label{
+	text-align:left !important;
+	/*margin-left:25px;*/
 }
 }
 @media only screen and (min-width:501px) and (max-width:768px) { 
@@ -1460,6 +1467,7 @@ margin-right: 10px;
 	margin-top:auto; 
 	}
 	.terms #terms{
-	  margin: -16px 0 0 !important;
+	 /* margin: -16px 0 0 !important;*/
 }
+
 }
