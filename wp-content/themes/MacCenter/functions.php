@@ -36,8 +36,8 @@ function override_incorrect_username_message( $errors, $redirect_to ) {
     if( isset( $errors->errors['invalid_username'] ) ) {
         $errors->errors['invalid_username'][0] = 'El usuario es incorrecto.';
     }
-    if( isset( $errors->errors['icorrect_password'] ) ) {
-        $errors->errors['icorrect_password'][0] = 'La contraseña es incorrecta.';
+    if( isset( $errors->errors['incorrect_password'] ) ) {
+        $errors->errors['incorrect_password'][0] = 'La contraseña es incorrecta.';
     }
 
     return $errors;
