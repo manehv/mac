@@ -54,6 +54,10 @@ a.remove{
     display: none !important;
 }
 
+.page-id-7116 div .flex_column {
+    z-index: auto;
+}
+
 p.fakealert  {
     border: medium none;
     list-style: outside none none;
