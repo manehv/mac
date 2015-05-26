@@ -110,16 +110,6 @@ function sreg_basic1($atts) {
 
 } //END FUNCTION
 
-add_filter( 'gettext', function( $translation, $text, $domain )
-{
-
-    if ( '<strong>ERROR</strong>: The password you entered for the username <strong>%1$s</strong> is incorrect. <a href="%2$s" title="Password Lost and Found">Lost your password</a>?' !== $text )
-        return $translation;
-
-    return 'Custom password message';
-    
-}, 10, 3 );
-
 function simplr_build_form1($data,$atts) {
         include_once(PLUGIN_DIR.'/lib/form.class.php');
         if(get_option('users_can_register') != '1') { print('Registrations have been disabled');
