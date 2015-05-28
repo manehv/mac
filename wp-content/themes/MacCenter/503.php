@@ -216,7 +216,7 @@
 	<p>contáctanos en <a href='mailto:info@mac-center.com'>info@mac-center.com</a></p>
 </div>
 <div id="contenido"></div>
-<div id="placetopay-footer"><p>Mac Center Colombia S.A.S. | Nit: 900311581 - 7 | Teléfonos: (+57) 1 7449852 - 7432130 - 7425701, Dirección: 14 # 81 - 19, oficina 305, Bogotá D.C. | correo electrónico: consultas@mac-center.com / info@mac-center.com</p>
+<div id="placetopay-footer"><p>Mac Center Colombia S.A.S. | Nit: 900311581 - 7 | Teléfonos: (+57) 1 7449852 - 7432130 - 7425701, Dirección: Cra. 14 # 81 - 19, oficina 305, Bogotá D.C. | correo electrónico: consultas@mac-center.com / info@mac-center.com</p>
 <!--	<img src="/images/customers/PLACETOPAY.png" border="0" alt=""/>-->
 </div>
 </body>
