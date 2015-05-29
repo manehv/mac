@@ -10,8 +10,8 @@
 /*ESTILOS BTN MOVIL*/
 @media only screen and (max-width: 767px) {
   /* Add your Mobile Styles here */
-.slideshow_caption{
-width: 400px;
+.slideshow_inner_caption.slideshow_caption{
+width: 600px;
 height: auto;	
 }
 }
