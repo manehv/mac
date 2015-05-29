@@ -2917,7 +2917,11 @@ overflow: visible;
 
 
 .caption_left .slideshow_caption {left:0; }
-.caption_right .slideshow_caption{ right:0;	}
+/*.caption_right .slideshow_caption{ right:0;	}*/
+caption_right .slideshow_caption {
+    right: 20px;
+    margin-top: 160px;
+}
 .caption_bottom .slideshow_caption {left:0; width:100%; bottom:0; height:auto;}
 #top div .caption_center .slideshow_caption { width: 100%; text-align: center;}
 
