@@ -11,7 +11,7 @@
 /**INICIO ESTILOS MOVILES NUEVOS**/
 /**INICIO ESTILOS MOVILES NUEVOS**/
 /**INICIO ESTILOS MOVILES NUEVOS**/
-
+/*
 .slideshow_align_caption {
     top: 116px;
     vertical-align: middle;
@@ -19,8 +19,8 @@
     width: 340px;
     margin: auto;
 	margin-left: -150px !important;
-}
-/*
+}*/
+
 
 .responsive .av_slideshow_full .container.caption_container {
     margin-left: -20px;
@@ -58,7 +58,7 @@ style="padding: 0px; height: 201px; transition: none 0s ease 0s ; transform: tra
     height: 0px;
     visibility: hidden;
     
-}*/
+}
 /**FIN ESTILOS MOVILES NUEVOS**/
 /**FIN ESTILOS MOVILES NUEVOS**/
 /**FIN ESTILOS MOVILES NUEVOS**/
