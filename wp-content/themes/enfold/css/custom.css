@@ -8,21 +8,10 @@
 @import url('fonts/MyriadSetPro-Medium-fontfacekit/stylesheet.css');
 
 /*ESTILOS BTN MOVIL*/
+/*ESTILOS BTN MOVIL*/
+/*ESTILOS BTN MOVIL*/
 @media only screen and (max-width: 767px) {
-  /* Add your Mobile Styles here */
-.slideshow_align_caption {
-    vertical-align: middle!important;
-    position: relative!important;
-    width: 400px !important;
-    top: 139px !important;
-}
-.slideshow_align_caption {
-    vertical-align: middle;
-    position: relative;
-    width: 400px;
-    top: 100px;
-    margin: auto;
-}
+
 }
 
 
