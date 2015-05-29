@@ -17,7 +17,18 @@
     display: block;
     position: relative;
 }	
- 	
+ #top .avia-slideshow-button {
+    border-radius: 3px;
+    text-transform: none;
+    padding: 12px 16px;
+    display: inline-block;
+    margin-left: 5%;
+    top: 89% !important;
+    text-decoration: none;
+    font-weight: bold;
+    color: #FFF;
+    bottom: inherit !important;
+}	
  }
 /**FINAL ESTILOS MOVILES NUEVOS HORIZONTAL**/
 /**FINAL ESTILOS MOVILES NUEVOS HORIZONTALL**/
