@@ -13,8 +13,15 @@
 .slideshow_align_caption {
     vertical-align: middle!important;
     position: relative!important;
-    width: 340px !important;
+    width: 400px !important;
     top: 139px !important;
+}
+.slideshow_align_caption {
+    vertical-align: middle;
+    position: relative;
+    width: 400px;
+    top: 100px;
+    margin: auto;
 }
 }
 
