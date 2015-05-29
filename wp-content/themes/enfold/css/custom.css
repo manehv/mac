@@ -7,6 +7,16 @@
 @import url('fonts/MyriadSetPro-Bold-fontfacekit/web-fonts/MyriadSetPro-Bold/stylesheet.css');
 @import url('fonts/MyriadSetPro-Medium-fontfacekit/stylesheet.css');
 
+/*ESTILOS BTN MOVIL*/
+@media only screen and (max-width: 767px) {
+  /* Add your Mobile Styles here */
+.slideshow_caption{
+width: 400px;
+height: auto;	
+}
+}
+
+
 #flex_column av_one_fifth {
 	border-bottom: none !important;
 }
