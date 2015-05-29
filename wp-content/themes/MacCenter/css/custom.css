@@ -11,7 +11,7 @@
 /**INICIO ESTILOS MOVILES NUEVOS HORIZONTAL**/
  @media only screen and (min-width: 480px) and (max-width: 767px) {
  .avia-slide-wrap {
-    height: 261px;
+    height: 261px !important;
     z-index: 45 !important;
     overflow-y: visible !important;
     display: block;
