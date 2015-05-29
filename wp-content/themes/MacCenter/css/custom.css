@@ -11,7 +11,7 @@
 /**INICIO ESTILOS MOVILES NUEVOS**/
 /**INICIO ESTILOS MOVILES NUEVOS**/
 /**INICIO ESTILOS MOVILES NUEVOS**/
-/*shordcodes.css: 2902*/
+/*
 .slideshow_align_caption {
     top: 116px;
     vertical-align: middle;
@@ -21,12 +21,12 @@
 	margin-left: -150px !important;
 }
 
-/*shordcodes.css: 3053*/
+
 .responsive .av_slideshow_full .container.caption_container {
     margin-left: -20px;
 }
 
-/*custom.css:25*/
+
 #top .avia-slideshow-button.avia-color-light {
     padding: 5px 6px !important;
     color: #000;
@@ -38,7 +38,7 @@
 .avia-slideshow-inner{
 style="padding: 0px; height: 201px; transition: none 0s ease 0s ; transform: translateZ(0px);"}
 
-/*shordcodes.css:2841*/
+
 .avia-slide-wrap {
     height: 201px;
     z-index: 45 !important;
@@ -47,7 +47,7 @@ style="padding: 0px; height: 201px; transition: none 0s ease 0s ; transform: tra
     position: relative;
 }
 
-/*shordcodes.css:2675*/
+
 .avia-slideshow-dots {
     position: relative;
     z-index: 200;
@@ -56,8 +56,9 @@ style="padding: 0px; height: 201px; transition: none 0s ease 0s ; transform: tra
     text-align: center;
     left: 0px;
     height: 0px;
+    visibility: hidden;
     
-}
+}*/
 /**FIN ESTILOS MOVILES NUEVOS**/
 /**FIN ESTILOS MOVILES NUEVOS**/
 /**FIN ESTILOS MOVILES NUEVOS**/
