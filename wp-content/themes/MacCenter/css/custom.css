@@ -6,11 +6,28 @@
 @import url('fonts/open-sans-fontfacekit/web-fonts/opensans_regular/stylesheet.css');*/
 @import url('fonts/MyriadSetPro-Bold-fontfacekit/web-fonts/MyriadSetPro-Bold/stylesheet.css');
 @import url('fonts/MyriadSetPro-Medium-fontfacekit/stylesheet.css');
+/**INICIO ESTILOS MOVILES NUEVOS HORIZONTAL**/
+/**INICIO ESTILOS MOVILES NUEVOS HORIZONTALL**/
+/**INICIO ESTILOS MOVILES NUEVOS HORIZONTAL**/
+ @media only screen and (min-width: 480px) and (max-width: 767px) {
+ .avia-slide-wrap {
+    height: 261px;
+    z-index: 45 !important;
+    overflow-y: visible !important;
+    display: block;
+    position: relative;
+}	
+ 	
+ }
+/**FINAL ESTILOS MOVILES NUEVOS HORIZONTAL**/
+/**FINAL ESTILOS MOVILES NUEVOS HORIZONTALL**/
+/**FINAL ESTILOS MOVILES NUEVOS HORIZONTAL**/
 
 
-/**INICIO ESTILOS MOVILES NUEVOS**/
-/**INICIO ESTILOS MOVILES NUEVOS**/
-/**INICIO ESTILOS MOVILES NUEVOS**/
+
+/**INICIO ESTILOS MOVILES NUEVOS VERTICAL**/
+/**INICIO ESTILOS MOVILES NUEVOS VERTICAL**/
+/**INICIO ESTILOS MOVILES NUEVOS VERTICAL**/
 /*  #Mobile (Portrait)
 ================================================== */
 /* Note: Design for a width of 320px */
