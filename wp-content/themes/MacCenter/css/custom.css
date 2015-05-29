@@ -43,16 +43,14 @@
 ================================================== */
 /* Note: Design for a width of 320px */
 @media only screen and (max-width: 767px) {
-/*
-.slideshow_align_caption {
-    top: 116px;
-    vertical-align: middle;
-    position: relative;
-    width: 340px;
-    margin: auto;
-	margin-left: -150px !important;
+#top .av_slideshow_full .avia-slideshow-arrows a {
+    margin: -74px 0px 0px;
+    width: 20px;
+    text-align: center;
+    height: 100px;
+    line-height: 22px;
+	
 }
-*/
 .responsive #top .slideshow_caption {
     left: 0px;
     width: 100% !important;
