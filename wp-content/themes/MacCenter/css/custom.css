@@ -423,12 +423,13 @@ font-style: normal;
 /*GLOW BTN AÑADIR A CARRITO*/
 .clsDetails button.single_add_to_cart_button {
 	box-shadow:rgba(255,255,255,0.0) 0 0 0 !important;
-	
 }
 .woocommerce-page .button.single_add_to_cart_button {
 	box-shadow:rgba(255,255,255,0.0) 0 0 0 !important;
 }
-
+.slideshow_inner_caption{
+	margin-top: 27% !important;
+}
 
 /*BK FORMULARIO NEWSLETTER*/
 .ar_main_div_100 .arf_fieldset {
@@ -438,7 +439,6 @@ font-style: normal;
     border-radius: 0px;
     box-shadow: none;
     border: 0px solid #D9D9D9;
-	
 }
 /*STYLE BTN NEWS LETTER*/
 .ar_main_div_100 .arfsubmitbutton .arf_submit_btn {
