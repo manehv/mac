@@ -111,13 +111,7 @@ style="padding: 0px; height: 201px; transition: none 0s ease 0s ; transform: tra
 /**FIN ESTILOS MOVILES NUEVOS**/
 /**FIN ESTILOS MOVILES NUEVOS**/
 /**FIN ESTILOS MOVILES NUEVOS**/
-.slideshow_inner_caption {
-    position: relative;
-    display: table;
-    height: 30px;
-    width: 100%;
-    margin-top: 57% !important;
-}
+
 .avia-content-slider-active .slide-entry-wrap {
     position: absolute;
     top: 0px;
