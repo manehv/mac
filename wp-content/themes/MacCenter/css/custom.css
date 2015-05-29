@@ -6,11 +6,23 @@
 @import url('fonts/open-sans-fontfacekit/web-fonts/opensans_regular/stylesheet.css');*/
 @import url('fonts/MyriadSetPro-Bold-fontfacekit/web-fonts/MyriadSetPro-Bold/stylesheet.css');
 @import url('fonts/MyriadSetPro-Medium-fontfacekit/stylesheet.css');
+/**INICIO ESTILOS IPAD**/
+/**INICIO ESTILOS IPAD**/
+/**INICIO ESTILOS IPAD**/
+ @media only screen and (min-width: 768px) and (max-width: 989px) {
+.avia-slideshow-dots {
+visibility:hidden;
+}
+}
+/**FIN ESTILOS IPAD**/
+/**FIN ESTILOS IPAD**/
+/**FIN ESTILOS IPAD**/
+
+
 /**INICIO ESTILOS MOVILES NUEVOS HORIZONTAL**/
 /**INICIO ESTILOS MOVILES NUEVOS HORIZONTALL**/
 /**INICIO ESTILOS MOVILES NUEVOS HORIZONTAL**/
  @media only screen and (min-width: 480px) and (max-width: 767px) {
- 	
  .responsive #top .slideshow_caption {
     left: 0px;
     width: 100% !important;
