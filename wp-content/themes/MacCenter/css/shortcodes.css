@@ -2957,7 +2957,7 @@ padding:10px 15px;
 #top .avia-caption-content a{text-decoration: underline;}
 #top .avia-caption-content a:hover{text-decoration: none;}
 
-.av_slideshow_full .container.caption_container {
+*/.av_slideshow_full .container.caption_container {
 position: absolute;
 top: 0;
 z-index: 5;
@@ -2965,8 +2965,15 @@ height: 100%;
 left: 50%;
 margin-left: -465px;
 overflow: visible;
+}*/
+.av_slideshow_full .container.caption_container {
+    position: absolute;
+    top: 80%;
+    z-index: 5;
+    height: 30px;
+    left: 50%;
+    overflow: visible;
 }
-
 
 .csstransitions .av_slideshow_full .avia-caption-title{
 
