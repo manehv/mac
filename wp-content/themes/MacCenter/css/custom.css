@@ -100,7 +100,7 @@ style="padding: 0px; height: 201px; transition: none 0s ease 0s ; transform: tra
 
 
 .avia-slide-wrap {
-    height: 173px;	
+    height: 193px;	
    /* height: 201px;*/
     z-index: 45 !important;
     overflow-y: visible !important;
@@ -143,7 +143,7 @@ style="padding: 0px; height: 201px; transition: none 0s ease 0s ; transform: tra
     z-index: 100;
     width: 56% !important;
    /* top: 23% !important;*/
-    top: -51% !important;
+    top: 6% !important;
 }
     
 #top .avia-slideshow-button.avia-color-light {
