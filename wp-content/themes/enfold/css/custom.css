@@ -11,10 +11,10 @@
 @media only screen and (max-width: 767px) {
   /* Add your Mobile Styles here */
 .slideshow_align_caption {
-    vertical-align: middle;
-    position: relative;
-    width: 340px;
-    top: 139px;
+    vertical-align: middle!important;
+    position: relative!important;
+    width: 340px !important;
+    top: 139px !important;
 }
 }
 
