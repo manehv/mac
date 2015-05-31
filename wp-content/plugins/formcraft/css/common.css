@@ -240,10 +240,10 @@
 {
 	content: '\e811';
 }
-.fc-common .emailfield-cover:after
+/*.fc-common .emailfield-cover:after
 {
 	content: '\e801';
-}
+}*/
 .fc-common .bootstrap-timepicker:after
 {
 	content: '\e813';
