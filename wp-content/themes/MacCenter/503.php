@@ -8,9 +8,8 @@
 	<title>Pronto estaremos de vuelta</title>
 	<style type="text/css">
 
-	@import url('http://arbolnaranja.com/e-commerceMC/webfontkit-20150326-230131/stylesheet.css');
-	@import url('fonts/MyriadSetPro-Bold-fontfacekit/web-fonts/MyriadSetPro-Bold/stylesheet.css');
-	@import url('fonts/MyriadSetPro-Medium-fontfacekit/stylesheet.css');
+	/*@import url('http://arbolnaranja.com/e-commerceMC/webfontkit-20150326-230131/stylesheet.css');*/
+	@import url('https://mac-center.com/wp-content/themes/MacCenter/css/fonts/MyriadSetPro-Medium-fontfacekit/stylesheet.css');
 	body {
 		background-color:#fff;
 		font-family: 'myriad_set_promedium',sans-serif !important;
@@ -70,6 +69,7 @@
 	background-color: #F7F7F7 !important;
 	padding-top: 20px;
 	padding-bottom: 20px;
+	
 	font-family: 'myriad_set_promedium', sans-serif !important;
 		  position: fixed;
     clear: both;
