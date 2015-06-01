@@ -63,6 +63,12 @@ visibility:hidden;
 ================================================== */
 /* Note: Design for a width of 320px */
 @media only screen and (max-width: 767px) {
+	
+#CX_popup_0 .cx-widget{
+width: 300px;
+right: 2px !important;
+}	
+
 #top .av_slideshow_full .avia-slideshow-arrows a {
     margin: -74px 0px 0px;
     width: 20px;
