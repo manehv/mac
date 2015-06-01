@@ -9,7 +9,7 @@
 	<style type="text/css">
 
 	/*@import url('http://arbolnaranja.com/e-commerceMC/webfontkit-20150326-230131/stylesheet.css');*/
-	@import url('https://mac-center.com/wp-content/themes/MacCenter/css/fonts/MyriadSetPro-Medium-fontfacekit/stylesheet.css');
+	@import url('css/fonts/MyriadSetPro-Medium-fontfacekit/stylesheet.css');
 	body {
 		background-color:#fff;
 		font-family: 'myriad_set_promedium',sans-serif !important;
