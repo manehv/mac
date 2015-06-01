@@ -73,18 +73,17 @@
     clear: both;
     bottom: 0;
 	}
-	#actualizando {
-    text-align: center;
-    text-transform: none;
-    width: 100%;
-    height: 100px;
-    margin-top: 150px;
-	color:#777777 !important;
-		background-image: url('actualizando-01.png');
-		background-repeat: no-repeat;
-		background-position: center center;
-		background-size:800px auto;
-}
+	h3 { 
+		margin-top:150px;
+		font-family: 'myriad_set_probold';
+		text-align: center;		
+		text-transform: none;
+		color:#777777;
+    	width: auto;
+		font-weight: 100 !important;		
+		font-size: 30px; 
+/*		vertical-align: middle;*/
+	
 	}
 	
 	}
@@ -170,13 +169,12 @@
     text-align: center;
     text-transform: none;
     width: 100%;
-    height: 100px;
+    font-size: 2em;
     margin-top: 150px;
 	color:#777777 !important;
-		background-image: url('actualizando-01.png');
+		background-image: urlimage('actualizando-01.png');
 		background-repeat: no-repeat;
 		background-position: center center;
-		background-size: 300px auto;
 }
 	
 	
@@ -218,7 +216,7 @@
 <div id="placetopay-header"><div class="logoMC"></div></div>
 <br />
 <div id="placetopay-content">
-	<div id="actualizando"></div>
+	<div id=acr>Estamos actualizando nuestros productos para que aproveches<br /> al máximo Cyber Monday. Intenta de nuevo en unos minutos.</h3>
 	<p>contáctanos en <a href='mailto:info@mac-center.com'>info@mac-center.com</a></p>
 </div>
 <div id="contenido"></div>
