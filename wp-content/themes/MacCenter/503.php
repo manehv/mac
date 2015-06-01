@@ -165,16 +165,13 @@
 }
 	
 	
-	#actualizando {
+	h3 {
     text-align: center;
     text-transform: none;
     width: 100%;
     font-size: 2em;
     margin-top: 150px;
 	color:#777777 !important;
-		background-image: urlimage('actualizando-01.png');
-		background-repeat: no-repeat;
-		background-position: center center;
 }
 	
 	
@@ -216,7 +213,7 @@
 <div id="placetopay-header"><div class="logoMC"></div></div>
 <br />
 <div id="placetopay-content">
-	<div id=acr>Estamos actualizando nuestros productos para que aproveches<br /> al máximo Cyber Monday. Intenta de nuevo en unos minutos.</h3>
+	<h3>Estamos actualizando nuestros productos para que aproveches<br /> al máximo Cyber Monday. Intenta de nuevo en unos minutos.</h3>
 	<p>contáctanos en <a href='mailto:info@mac-center.com'>info@mac-center.com</a></p>
 </div>
 <div id="contenido"></div>
