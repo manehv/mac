@@ -515,6 +515,7 @@ box-shadow:none !important;
     position: relative;
     bottom: 20px;
     margin: 0px 10px;
+    border: 1px solid rgba(255, 255, 255, 0.4) !important;
 }
 
 /*ESTILO MENU MOVIL
