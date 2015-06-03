@@ -417,6 +417,15 @@ body .units.alpha {
 ================================================== */
 /* Note: Design for a width of 320px */
 @media only screen and (max-width: 767px) {
+	
+	
+.responsive .av_slideshow_full .container.caption_container {
+    
+    width: 340px;
+    margin-top: 8% !important;
+	
+}
+    
   .responsive #top {
     overflow-x: hidden;
   }

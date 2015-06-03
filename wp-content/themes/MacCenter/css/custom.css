@@ -7,6 +7,136 @@
 @import url('fonts/MyriadSetPro-Bold-fontfacekit/web-fonts/MyriadSetPro-Bold/stylesheet.css');
 @import url('fonts/MyriadSetPro-Medium-fontfacekit/stylesheet.css');
 
+/**INICIO ESTILOS IPAD**/
+/**INICIO ESTILOS IPAD**/
+/**INICIO ESTILOS IPAD**/
+@media only screen and (min-width: 768px) and (max-width: 989px) {
+.avia-slideshow-dots {
+visibility:hidden;
+	}
+}
+/**FIN ESTILOS IPAD**/
+/**FIN ESTILOS IPAD**/
+/**FIN ESTILOS IPAD**/
+
+
+/**INICIO ESTILOS MOVILES NUEVOS HORIZONTAL**/
+/**INICIO ESTILOS MOVILES NUEVOS HORIZONTALL**/
+/**INICIO ESTILOS MOVILES NUEVOS HORIZONTAL**/
+ @media only screen and (min-width: 480px) and (max-width: 767px) {
+ .responsive #top .slideshow_caption {
+    left: 0px;
+    width: 100% !important;
+    padding: 0px;
+    margin-top: 9% !important;
+}
+ .avia-slide-wrap {
+    height: 261px !important;
+    z-index: 45 !important;
+    overflow-y: visible !important;
+    display: block;
+    position: relative;
+}	
+ #top .avia-slideshow-button {
+    border-radius: 3px;
+    text-transform: none;
+    padding: 12px 16px;
+    display: inline-block;
+    margin-left: 5%;
+    top: 89% !important;
+    text-decoration: none;
+    font-weight: bold;
+    color: #FFF;
+    bottom: inherit !important;
+}	
+ }
+/**FINAL ESTILOS MOVILES NUEVOS HORIZONTAL**/
+/**FINAL ESTILOS MOVILES NUEVOS HORIZONTALL**/
+/**FINAL ESTILOS MOVILES NUEVOS HORIZONTAL**/
+
+
+
+/**INICIO ESTILOS MOVILES NUEVOS VERTICAL**/
+/**INICIO ESTILOS MOVILES NUEVOS VERTICAL**/
+/**INICIO ESTILOS MOVILES NUEVOS VERTICAL**/
+/*  #Mobile (Portrait)
+================================================== */
+/* Note: Design for a width of 320px */
+@media only screen and (max-width: 767px) {
+/*ESTILOS VENTANA CHAT EN MOVILES*/	
+#CX_popup_0 .cx-widget{
+width: 300px;
+right: 2px !important;
+}	
+#CX_btn_0.cx-chat-btn cx-online-btn{
+right: 2px !important;	
+}
+#top .av_slideshow_full .avia-slideshow-arrows a {
+    margin: -74px 0px 0px;
+    width: 20px;
+    text-align: center;
+    height: 100px;
+    line-height: 22px;
+}
+.responsive #top .slideshow_caption {
+    left: 0px;
+    width: 100% !important;
+    padding: 0px;
+}
+.responsive .av_slideshow_full .container.caption_container {
+    margin-left: -170px;
+}
+
+.av_slideshow_full .container.caption_container {
+    position: relative;
+    top: 29px;
+    z-index: 5;
+    height: 30px;}
+/*.av_slideshow_full .container.caption_container {
+    position: absolute;
+    top: 129px;
+    z-index: 5;
+    height: 30px;}*/
+
+
+#top .avia-slideshow-button.avia-color-light {
+    padding: 5px 6px !important;
+    color: #000;
+   border: 1.3px solid #5C5C5C;
+    background-color: rgba(255, 255, 255, 0.91);
+}
+
+
+.avia-slideshow-inner{
+style="padding: 0px; height: 201px; transition: none 0s ease 0s ; transform: translateZ(0px);"}
+
+
+.avia-slide-wrap {
+    height: 193px;	
+   /* height: 201px;*/
+    z-index: 45 !important;
+    overflow-y: visible !important;
+    display: block;
+    position: relative;
+}
+
+
+.avia-slideshow-dots {
+    position: relative;
+    z-index: 200;
+    width: 100%;
+    bottom: 30px !important;
+    text-align: center;
+    left: 0px;
+    height: 0px;
+   visibility: hidden;
+	}
+
+}
+/**FIN ESTILOS MOVILES NUEVOS**/
+/**FIN ESTILOS MOVILES NUEVOS**/
+/**FIN ESTILOS MOVILES NUEVOS**/
+
 .avia-content-slider-active .slide-entry-wrap {
     position: absolute;
     top: 0px;
@@ -19,7 +149,8 @@
 .slideshow_caption {
     z-index: 100;
     width: 56% !important;
-    top: 23% !important;
+   /* top: 23% !important;*/
+    top: 6% !important;
 }
     
 #top .avia-slideshow-button.avia-color-light {
@@ -300,12 +431,13 @@ font-style: normal;
 /*GLOW BTN AÑADIR A CARRITO*/
 .clsDetails button.single_add_to_cart_button {
 	box-shadow:rgba(255,255,255,0.0) 0 0 0 !important;
-	
 }
 .woocommerce-page .button.single_add_to_cart_button {
 	box-shadow:rgba(255,255,255,0.0) 0 0 0 !important;
 }
-
+.slideshow_inner_caption{
+	margin-top: 27% !important;
+}
 
 /*BK FORMULARIO NEWSLETTER*/
 .ar_main_div_100 .arf_fieldset {
@@ -315,7 +447,6 @@ font-style: normal;
     border-radius: 0px;
     box-shadow: none;
     border: 0px solid #D9D9D9;
-	
 }
 /*STYLE BTN NEWS LETTER*/
 .ar_main_div_100 .arfsubmitbutton .arf_submit_btn {
@@ -384,6 +515,7 @@ box-shadow:none !important;
     position: relative;
     bottom: 20px;
     margin: 0px 10px;
+    border: 1px solid rgba(255, 255, 255, 0.4) !important;
 }
 
 /*ESTILO MENU MOVIL
@@ -819,8 +951,8 @@ color:#fff !important;
 .page-id-10749 #simplr-form #simpler-reg .simplr-field , .option-field {
     margin:0;
 }
-#simplr-form  .checkbox{width:50% !important;float:left;margin:-2px 0px -7px; top:37px;}
-#simplr-form  .checkbox label{ font-weight: unset !important;float: right; font-size: 10px !important;}
+#simplr-form  .checkbox{width:50% !important;float:left;margin:-7px 0px -7px; top:31px;}
+#simplr-form  .checkbox label{ font-weight: unset !important;float: right; font-size: 11px !important;}
 #simplr-form  .checkbox input[type="checkbox"]{width:12px !important;margin-left:0px }
 .simplr-field {
    padding:0 14px 0 0;
