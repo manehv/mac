@@ -1152,7 +1152,7 @@ function custom_override_billing_fields( $fields ) {
       $fields['billing_mobile_phone'] = array(
         'label'     => __('Celular', 'woocommerce'),
         'placeholder'   => (''),
-                                'required'  => false,
+                                'required'  => true,
                                 'class'     => array('form-row-last',' col-lg-4')
      );
  
