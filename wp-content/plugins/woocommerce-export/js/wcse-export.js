@@ -1,5 +1,6 @@
 /**
  * Main JS file for WooCommerce Smart Export Plugin
+ * Author: THemology
  */
 
 (function ($) {

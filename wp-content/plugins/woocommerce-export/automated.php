@@ -16,7 +16,7 @@ class WooCommerce_Smart_Export_Automated_Class extends WooCommerce_Smart_Export_
 	function __construct()
 	{	
 		$this->hooks();
-		add_action( 'themo_do_cron_hook',array(&$this,'themo_do_cron') );
+		add_action( 'swep_do_cron_hook',array(&$this,'swep_do_cron') );
 		
 		
 	} //__construct
@@ -25,7 +25,7 @@ class WooCommerce_Smart_Export_Automated_Class extends WooCommerce_Smart_Export_
 	{	
 		add_filter( 'woocommerce_reports_charts' , array($this, 'tab' ));
 		add_action( 'admin_init', array( &$this,'options_init') );
-		add_option( 'themo_scheduled_options', '', '', 'no' );
+		add_option( 'swep_scheduled_options', '', '', 'no' );
 		add_filter( 'cron_schedules', array( &$this,'cron_add_weekly') );	
 		
 		//add_action( 'init', array( &$this,'test') );
@@ -34,12 +34,12 @@ class WooCommerce_Smart_Export_Automated_Class extends WooCommerce_Smart_Export_
 
 	public function test()
 	{
-		$this->themo_do_cron('53b2d4c898b0e');
+		$this->swep_do_cron('53b2d4c898b0e');
 	}
 
 	public function options_init()
 	{
-		register_setting( 'themo_scheduled_options_group', 'themo_scheduled_options', array( &$this, 'options_validate' ) );
+		register_setting( 'swep_scheduled_options_group', 'swep_scheduled_options', array( &$this, 'options_validate' ) );
 	} // options_init
 
 	public function options_validate($options)
@@ -70,13 +70,13 @@ class WooCommerce_Smart_Export_Automated_Class extends WooCommerce_Smart_Export_
 
 			// Saving event
 			$eventid = uniqid();
-			$current = get_option('themo_scheduled_options');
+			$current = get_option('swep_scheduled_options');
 			$next = $current;
 			$next[$eventid] = $options; 	
 
 			if(!empty($options['email_settings']['email_to'])) {
 				// Setting Cron
-				wp_schedule_event( time() , $postinterval , 'themo_do_cron_hook', array( $eventid ) );
+				wp_schedule_event( time() , $postinterval , 'swep_do_cron_hook', array( $eventid ) );
 				return $next;
 			}
 			else {
@@ -128,9 +128,9 @@ class WooCommerce_Smart_Export_Automated_Class extends WooCommerce_Smart_Export_
 
 		<div id="poststuff">
 
-		<?php $options = get_option('themo_scheduled_options'); ?>
+		<?php $options = get_option('swep_scheduled_options'); ?>
 		
-		<h2><?php echo __('Active scheluded export','wcse'); ?></h2>
+		<h2><?php echo __('Active scheluded export','wcsewcse'); ?></h2>
 
 		<table class="wp-list-table widefat fixed scheduled-export" cellspacing="0">
 		<thead>
@@ -197,7 +197,7 @@ class WooCommerce_Smart_Export_Automated_Class extends WooCommerce_Smart_Export_
     				echo '<td>'.(isset($settings['email_settings']['email_to'])?implode(', ', $settings['email_settings']['email_to']):'').'</td>';
     				echo '<td>';
     				
-    				printf(__('<code>%s</code>'), date_i18n(get_option( 'date_format' ).' '.get_option( 'time_format' ), wp_next_scheduled( 'themo_do_cron_hook' ,array( $id ) ), false));	
+    				printf(__('<code>%s</code>'), date_i18n(get_option( 'date_format' ).' '.get_option( 'time_format' ), wp_next_scheduled( 'swep_do_cron_hook' ,array( $id ) ), false));	
     			
     				echo '</td>';
     				echo '<td><a href="'.wp_nonce_url( add_query_arg( 'cid', $id, $taburl ) ,'trash-scheduled-export_'.$id ).'">'.__('Delete permanently','wcse').'</a></td>';
@@ -213,7 +213,7 @@ class WooCommerce_Smart_Export_Automated_Class extends WooCommerce_Smart_Export_
 
 		<form id="wcse-form" method="post" action="options.php">
 
-			<?php settings_fields('themo_scheduled_options_group'); ?>
+			<?php settings_fields('swep_scheduled_options_group'); ?>
 			<?php $arecurrence = wp_get_schedules(); ?>
 
 			<div class="postbox">
@@ -223,7 +223,7 @@ class WooCommerce_Smart_Export_Automated_Class extends WooCommerce_Smart_Export_
 					<tr valign="top">
 						<th scope="row"><label><?php _e('Recurrence', 'wcse');?></label></th>
 						<td>
-						<select required="required" name="themo_scheduled_options[cron_settings][interval]">
+						<select required="required" name="swep_scheduled_options[cron_settings][interval]">
 							<option value="" selected="selected"><?php echo __('Choose','wcse'); ?></option>
 							<?php 
 								foreach ($arecurrence as $recurrence => $details) {
@@ -243,15 +243,15 @@ class WooCommerce_Smart_Export_Automated_Class extends WooCommerce_Smart_Export_
 				<table class="form-table" id="wcse-form-table-email-options">
 					<tr valign="top">
 						<th scope="row"><?php _e('Email recipient(s)', 'wcse');?></th>
-						<td><input required="required" type="text" class="text" name="themo_scheduled_options[email_settings][email_to]" value="" /></td>
+						<td><input required="required" type="text" class="text" name="swep_scheduled_options[email_settings][email_to]" value="" /></td>
 					</tr>
 					<tr valign="top">
 						<th scope="row"><?php _e('Email subject', 'wcse');?></th>
-						<td><input required="required" type="text" class="text" name="themo_scheduled_options[email_settings][email_subject]" value="" /></td>
+						<td><input required="required" type="text" class="text" name="swep_scheduled_options[email_settings][email_subject]" value="" /></td>
 					</tr>
 					<tr valign="top">
 						<th scope="row"><?php _e('Email message', 'wcse');?></th>
-						<td><textarea required="required" class="large-text code" name="themo_scheduled_options[email_settings][email_message]"></textarea></td>
+						<td><textarea required="required" class="large-text code" name="swep_scheduled_options[email_settings][email_message]"></textarea></td>
 					</tr>
 
 					
@@ -265,22 +265,22 @@ class WooCommerce_Smart_Export_Automated_Class extends WooCommerce_Smart_Export_
 				<table class="form-table" id="wcse-form-table-file-options">
 					<tr valign="top">
 						<th scope="row"><?php _e('Field Separator', 'wcse');?></th>
-						<td><input type="text" class="small-text" name="themo_scheduled_options[export_settings][wcse_separator]" value="," /></td>
+						<td><input type="text" class="small-text" name="swep_scheduled_options[export_settings][wcse_separator]" value="," /></td>
 					</tr>
 					<tr valign="top">
 						<th scope="row"><?php _e('Line Breaks', 'wcse');?></th>
 						<td>
-							<input type="text" class="small-text" name="themo_scheduled_options[export_settings][wcse_linebreak]" value="\r\n" />
+							<input type="text" class="small-text" name="swep_scheduled_options[export_settings][wcse_linebreak]" value="\r\n" />
 						</td>
 					</tr>
 					
 					<tr valign="top">
 						<th scope="row"><?php _e('Export Format', 'wcse');?></th>
 						<td>
-						<select name="themo_scheduled_options[export_settings][wcse_exportformat]" id="wcse_exportformat">
-								<option value="utf8" <?php if(WPLANG != 'zh_CN') echo 'selected="selected"'; ?> ><?php _e('Default (utf-8)', 'wcse'); ?></option>
+						<select name="swep_scheduled_options[export_settings][wcse_exportformat]" id="wcse_exportformat">
+								<option value="utf8" <?php if(get_locale() != 'zh_CN') echo 'selected="selected"'; ?> ><?php _e('Default (utf-8)', 'wcse'); ?></option>
 								<option value="utf16" ><?php _e('Better Excel Support (utf-16)', 'wcse'); ?></option>
-								<option value="gbk" <?php if(WPLANG == 'zh_CN') echo 'selected="selected"'; ?> ><?php _e('Chinese Excel Support (gbk)', 'wcse'); ?></option>
+								<option value="gbk" <?php if(get_locale() == 'zh_CN') echo 'selected="selected"'; ?> ><?php _e('Chinese Excel Support (gbk)', 'wcse'); ?></option>
 						</select>
 						</td>
 					<tr<
@@ -337,7 +337,7 @@ class WooCommerce_Smart_Export_Automated_Class extends WooCommerce_Smart_Export_
     } //export
 
 
-	public function themo_do_cron($args)
+	public function swep_do_cron($args)
 	{
 		$docron = true;
 		
@@ -369,7 +369,7 @@ class WooCommerce_Smart_Export_Automated_Class extends WooCommerce_Smart_Export_
 			
 
 			// Cron specific data
-			$crontab = get_option('themo_scheduled_options');
+			$crontab = get_option('swep_scheduled_options');
 
 			$cron = $crontab[$args];
 
@@ -396,9 +396,9 @@ class WooCommerce_Smart_Export_Automated_Class extends WooCommerce_Smart_Export_
 			// update cron
 			$cron['cron_settings']['from_date'] = $now;
 			$crontab[$args] = $cron;
-			update_option('themo_scheduled_options', $crontab );
+			update_option('swep_scheduled_options', $crontab );
 		}
-	} //themo_do_cron
+	} //swep_do_cron
 
 
 	public function cron_add_weekly( $schedules )
@@ -416,12 +416,12 @@ class WooCommerce_Smart_Export_Automated_Class extends WooCommerce_Smart_Export_
 	public function delete_scheduled_export($cid)
 	{
 		// Remove the option
-		$crontab = get_option('themo_scheduled_options');
+		$crontab = get_option('swep_scheduled_options');
 		unset($crontab[$cid]);
-		update_option('themo_scheduled_options', $crontab );
+		update_option('swep_scheduled_options', $crontab );
 		
 		// Remove the cron
-		wp_clear_scheduled_hook('themo_do_cron_hook',array($cid));
+		wp_clear_scheduled_hook('swep_do_cron_hook',array($cid));
 		
 	} //delete_scheduled_export
 

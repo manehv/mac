@@ -31,18 +31,6 @@ function mycustom_headers_filter_function( $headers, $object ) {
 //add action give it the name of our function to run
 add_action( 'woocommerce_after_shop_loop_item_title', 'wcs_stock_text_shop_page', 25 );
 
-add_filter( 'wp_login_errors', 'override_incorrect_username_message', 10, 2 );
-function override_incorrect_username_message( $errors, $redirect_to ) {
-    if( isset( $errors->errors['invalid_username'] ) ) {
-        $errors->errors['invalid_username'][0] = 'El usuario es incorrecto.';
-    }
-    if( isset( $errors->errors['incorrect_password'] ) ) {
-        $errors->errors['incorrect_password'][0] = 'La contraseña es incorrecta.';
-    }
-
-    return $errors;
- }
-
 //create our function
 function wcs_stock_text_shop_page() {
     //returns an array with 2 items availability and class for CSS
