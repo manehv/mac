@@ -1148,9 +1148,8 @@ function custom_override_billing_fields( $fields ) {
        $fields['billing_postcode'] = array(
         'label'     => __('Barrio', 'woocommerce'),
         'placeholder'   => (''),
-                                'required'  => false,
+                                'required'  => true,
                                 'class'     => array('form-row-last', 'address-field',' col-lg-4'),
-                                'validate'    => array( 'postcode' ),
                                 'clear'    => false
      );
      
