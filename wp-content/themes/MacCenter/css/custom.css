@@ -1288,6 +1288,7 @@ margin-right: 10px;
 }
 .lost_password a{
         color:#666666;
+        font-size: 1.15em;
 }
 .lost_reset_password .input-text{
         padding:7px !important;
