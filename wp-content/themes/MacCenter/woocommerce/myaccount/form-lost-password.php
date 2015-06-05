@@ -45,7 +45,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
     <p class="form-row">
     <input type="hidden" name="wc_reset_password" value="true" />
-    <input type="submit" class="button btnGradient" name="wc_reset_password" value="<?php echo 'lost_password' == $args['form'] ? __( 'Reset Password', 'woocommerce' ) : __( 'Save', 'woocommerce' ); ?>" /></p>
+    <input type="submit" class="button btnGradient" name="wc_reset_password" value="<?php echo 'lost_password' == $args['form'] ? __( 'Restablecer contraseña', 'woocommerce' ) : __( 'Save', 'woocommerce' ); ?>" /></p>
         <?php wp_nonce_field( $args['form'] ); ?>
 
 </form>
