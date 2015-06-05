@@ -21,7 +21,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
         <?php endif; ?>
 
-        <section class="av_textblock_section" itemscope="itemscope" itemtype="https://schema.org/CreativeWork"><div class="avia_textblock  av_inherit_color" style="font-size:14px; color:#1e99bf; " itemprop="text"><p style="text-align: center;">Recuerda que la información personal suministrada debe corresponder a los datos de la tarjeta de crédito a usar.</p>
+        <section class="av_textblock_section" itemscope="itemscope" itemtype="https://schema.org/CreativeWork"><div class="avia_textblock  av_inherit_color" style="font-size:14px; color:#1e99bf; " itemprop="text"><p style="text-align: center; width: 100%;">Recuerda que la información personal suministrada debe corresponder a los datos de la tarjeta de crédito a usar.</p>
 </div></section>
 
         <?php do_action( 'woocommerce_before_checkout_billing_form', $checkout ); ?>
