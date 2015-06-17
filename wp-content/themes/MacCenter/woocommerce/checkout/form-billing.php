@@ -17,11 +17,11 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
         <?php else : ?>
 
-                <h3><?php _e( 'Billing Details', 'woocommerce' ); ?></h3>
+                <h3>Datos del Tarjetahabiente</h3>
 
         <?php endif; ?>
 
-        <section class="av_textblock_section" itemscope="itemscope" itemtype="https://schema.org/CreativeWork"><div class="avia_textblock  av_inherit_color" style="font-size:14px; color:#1e99bf; " itemprop="text"><p style="text-align: center; width: 100% !important;">Recuerda que la información personal suministrada debe corresponder a los datos de la tarjeta de crédito a usar.</p>
+        <section class="av_textblock_section" itemscope="itemscope" itemtype="https://schema.org/CreativeWork"><div class="avia_textblock  av_inherit_color" style="font-size:14px; color:#1e99bf; " itemprop="text"><p style="text-align: left; width: 100% !important;">Recuerda que la información personal suministrada debe corresponder a los datos de la tarjeta de crédito a usar.</p>
 </div></section>
 
         <?php do_action( 'woocommerce_before_checkout_billing_form', $checkout ); ?>
