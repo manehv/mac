@@ -1123,6 +1123,10 @@ function custom_override_billing_fields( $fields ) {
                                 'class'     => array('form-row-last',' col-lg-4')
      );
 
+     $fields['billing_email'] = array(
+        'required'  => true
+     );
+
          $fields['billing_country'] = array(
                                 'type'     => 'country',
         'label'     => __('Country', 'woocommerce'),
