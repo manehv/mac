@@ -138,7 +138,7 @@ if (have_posts()) :
 
 
                     if ( get_comments_number() != "0" || comments_open() ){
-
+                    comments_popup_script(400, 500);
                     echo "<span class='comment-container minor-meta'>";
                     comments_popup_link(  "0 ".__('Comments','avia_framework'),
                                           "1 ".__('Comment' ,'avia_framework'),
