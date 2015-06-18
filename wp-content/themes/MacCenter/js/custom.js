@@ -120,4 +120,10 @@ jQuery(document).ready(function($)
                 $( '.fakealert' ).text( 'Tu transacción ha sido cancelada.' ); 
             }
         }
+        
+        $("#btncheck").on('click','#createaccount', function(){
+					  checked();
+				});
+        
+        
 });
