@@ -1300,3 +1300,4 @@ function order_fields($fields) {
 //   'label' => __('Standard Shipping (2–7 Days, FREE!) <span>Most items are shipped FREE OF CHARGE within Thailand.</span>'), 
 //   'required' => false,
 // ), $checked );
+		
