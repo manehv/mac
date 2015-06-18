@@ -294,7 +294,7 @@ function retrieve_password() {
 		return $errors;
 
 	if ( !$user_data ) {
-		$errors->add('invalidcombo', __('<strong>ERROR</strong>: Invalid username or e-mail.','simplr-reg'));
+		$errors->add('invalidcombo', __('<strong>ERROR</strong>: Usuario o email no válido.','simplr-reg'));
 		return $errors;
 	}
 

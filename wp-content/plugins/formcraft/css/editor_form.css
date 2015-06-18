@@ -536,7 +536,7 @@
 		letter-spacing: normal;
 		word-spacing: normal;
 		display: block;
-		padding: 4px 0px;
+	/*	padding: 4px 0px;*/
 		height: auto;
 		background: none;
 		list-style: none !important;

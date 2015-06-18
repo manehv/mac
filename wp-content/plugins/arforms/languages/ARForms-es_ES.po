@@ -2391,7 +2391,7 @@ msgstr "Buscar"
 #: core/views/addcontrols.php:4704
 #@ ARForms
 msgid "Reset"
-msgstr "reajustar"
+msgstr "restablecer"
 
 #: core/helpers/armainhelper.php:1847
 #@ ARForms
