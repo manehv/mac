@@ -1092,7 +1092,7 @@ add_filter( 'woocommerce_shipping_fields' , 'custom_override_shipping_fields' );
 
 function custom_override_billing_fields( $fields ) {
   unset($fields['billing_address_2']);
-  // unset($fields['billing_email']);
+  unset($fields['billing_email']);
   unset($fields['billing_phone']);
   unset($fields['billing_state']);
   unset($fields['billing']);
@@ -1134,9 +1134,9 @@ function custom_override_billing_fields( $fields ) {
      );
      
        $fields['billing_postcode'] = array(
-        'label'     => __('Barrio', 'woocommerce'),
+        'label'     => __('Barrio *', 'woocommerce'),
         'placeholder'   => (''),
-                                'required'  => false,
+                                'required'  => true,
                                 'class'     => array('form-row-last', 'address-field',' col-lg-4'),
                                 'validate'    => array( 'postcode' ),
                                 'clear'    => false
@@ -1152,16 +1152,21 @@ function custom_override_billing_fields( $fields ) {
       $fields['billing_mobile_phone'] = array(
         'label'     => __('Celular', 'woocommerce'),
         'placeholder'   => (''),
-                                'required'  => false,
+                                'required'  => true,
                                 'class'     => array('form-row-last',' col-lg-4')
      );
- 
+//      $fields['billing_email'] = array(
+//         'label'     => __('E-mail *', 'woocommerce'),
+//         'placeholder'   => (''),
+//                                 'required'  => true,
+//                                 'class'     => array('form-row-last','address-field',' col-lg-4')
+//      );
   return $fields;
 }
 
 function custom_override_shipping_fields( $fields ) {
   unset($fields['shipping_address_2']);
-  // unset($fields['shipping_email']);
+   unset($fields['shipping_email']);
   unset($fields['shipping_phone']);
   unset($fields['shipping_state']);
   unset($fields['shipping']);
@@ -1203,13 +1208,13 @@ function custom_override_shipping_fields( $fields ) {
      );
 
        $fields['shipping_postcode'] = array(
-        'label'     => __('Código postal/Zip', 'woocommerce'),
+        'label'     => __('Código postal/Zip *', 'woocommerce'),
         'placeholder'   => (''),
-                                'required'  => false,
-                                'class'     => array('form-row-last', 'address-field',' col-lg-4'),
+                                'required'  => true,
+                                'class'     => array('form-row-last', '',' col-lg-4'),
                                 'validate'    => array( 'postcode' ),
                                 'clear'    => false
-     );
+			);
 
       $fields['shipping_address_1'] = array(
         'label'     => __('Dirección Completa', 'woocommerce'),
@@ -1221,7 +1226,7 @@ function custom_override_shipping_fields( $fields ) {
       $fields['shipping_mobile_phone'] = array(
         'label'     => __('Celular', 'woocommerce'),
         'placeholder'   => (''),
-                                'required'  => false,
+                                'required'  => true,
                                 'class'     => array('form-row-last',' col-lg-4')
      );
 
@@ -1285,5 +1290,13 @@ function order_fields($fields) {
     return $fields2;
 
 }
-
-
+//echo '<div "><a></a></div>'
+// if()
+// $checked = $checkout->get_value( 'my_checkbox1' ) ? $checkout->get_value( 'my_checkbox1' ) : 1;
+// 
+// woocommerce_form_field( 'my_checkbox1', array( 
+//   'type' => 'checkbox', 
+//   'class' => array('input-checkbox'), 
+//   'label' => __('Standard Shipping (2–7 Days, FREE!) <span>Most items are shipped FREE OF CHARGE within Thailand.</span>'), 
+//   'required' => false,
+// ), $checked );
