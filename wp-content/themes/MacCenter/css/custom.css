@@ -1608,3 +1608,26 @@ margin-right: 10px;
 }
 
 }
+#ship-to-different-address #ship-to-different-address-checkbox{
+  position: absolute;
+  left: -9999px;
+}
+/*style the label like a button */
+#ship-to-different-address .input-checkbox + label {
+  font-family: Ariel, sans-serif;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: normal;
+  padding: 6px 10px;
+  background: #efefef;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+	width: 25%;
+}
+/* style the label/button active state*/
+/* (only applied when the checkbox is 'checked' */
+#ship-to-different-address .input-checkbox:checked + label {
+  background: #656565;
+  color: #ffffff;
+  border: 1px solid #888888;
+}
