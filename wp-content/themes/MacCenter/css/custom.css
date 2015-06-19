@@ -1635,7 +1635,7 @@ margin-right: 10px;
     font-size: 14px;
     font-weight: normal;
     padding: 2px 10px;
-    width: 21%;
+    display:inline-block;
 }
 /* style the label/button active state*/
 /* (only applied when the checkbox is 'checked' */
