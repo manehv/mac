@@ -1593,6 +1593,9 @@ margin-right: 10px;
 	text-align:left !important;
 	/*margin-left:25px;*/
 }
+#ship-to-different-address .input-checkbox + label {
+	width: auto !important;
+}
 }
 @media only screen and (min-width:501px) and (max-width:768px) { 
 	
@@ -1619,15 +1622,16 @@ margin-right: 10px;
   font-size: 14px;
   font-weight: normal;
   padding: 6px 10px;
-  background: #efefef;
-  border: 1px solid #cccccc;
+  background: #777777;
+  border: 1px solid #555555;
+	color:#ffffff;
   border-radius: 4px;
 	width: 25%;
 }
 /* style the label/button active state*/
 /* (only applied when the checkbox is 'checked' */
-#ship-to-different-address .input-checkbox:checked + label {
-  background: #656565;
+#ship-to-different-address .input-checkbox:checked + label, #ship-to-different-address .checkbox:hover {
+  background: #0088cc;
   color: #ffffff;
-  border: 1px solid #888888;
+  border: 1px solid #0066aa;
 }
