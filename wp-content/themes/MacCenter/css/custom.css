@@ -502,6 +502,16 @@ box-shadow:none !important;
 }*/
 
 /*AJUSTE DOTS SLIDER PRINCIPAL*/
+.avia-slideshow-dots {
+    position: relative;
+    z-index: 200;
+    width: 100%;
+    bottom: 30px !important;
+    text-align: center;
+    left: 0px;
+    height: 0px;
+    display: none !important;
+}
 .avia-slideshow-dots a {
     display: inline-block;
     height: 5px;
