@@ -1091,6 +1091,7 @@ add_filter( 'woocommerce_billing_fields' , 'custom_override_billing_fields' );
 add_filter( 'woocommerce_shipping_fields' , 'custom_override_shipping_fields' );
 
 function custom_override_billing_fields( $fields ) {
+  
   unset($fields['billing_address_2']);
   unset($fields['billing_email']);
   unset($fields['billing_phone']);
@@ -1161,6 +1162,7 @@ function custom_override_billing_fields( $fields ) {
 //                                 'required'  => true,
 //                                 'class'     => array('form-row-last','address-field',' col-lg-4')
 //      );
+  //print_r($fields);
   return $fields;
 }
 
@@ -1250,7 +1252,7 @@ function reorder_woocommerce_fields($fields) {
         $fields2['billing_address_1'] = $fields['billing_address_1'];
         $fields2['billing_mobile_phone'] = $fields['billing_mobile_phone'];
         $fields2['billing_email'] = array(
-            'label'     => __('E-mail', 'woocommerce'),
+            'label'     => __('E-mail *', 'woocommerce'),
             'placeholder'   => (''),
             'required'  => false,
             'class'     => array('form-row-last')
