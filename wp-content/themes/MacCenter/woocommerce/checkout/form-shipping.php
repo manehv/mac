@@ -35,7 +35,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 <h2 id="ship-to-different-address" class="checkbox-button">
     <input id="ship-to-different-address-checkbox" class="input-checkbox <?php checked( $ship_to_different_address, 1 ); ?>" type="checkbox" name="ship_to_different_address" value="1"/>
     <label for="ship-to-different-address-checkbox" class="checkbox">
-      Ship to a different address?
+      Envíar a dirección diferente
     </label>
 </h2>
 		<div class="shipping_address">

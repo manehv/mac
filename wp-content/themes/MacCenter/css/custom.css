@@ -1627,16 +1627,15 @@ margin-right: 10px;
 }
 /*style the label like a button */
 #ship-to-different-address .input-checkbox + label {
-  font-family: Ariel, sans-serif;
-  cursor: pointer;
-  font-size: 14px;
-  font-weight: normal;
-  padding: 6px 10px;
-  background: #777777;
-  border: 1px solid #555555;
-	color:#ffffff;
-  border-radius: 4px;
-	width: 25%;
+  background: #bdbec0 none repeat scroll 0 0;
+    border: 1px solid #bdbec0;
+    border-radius: 4px;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: normal;
+    padding: 2px 10px;
+    width: 21%;
 }
 /* style the label/button active state*/
 /* (only applied when the checkbox is 'checked' */
