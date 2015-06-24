@@ -1087,6 +1087,9 @@ function custom_override_checkout_fields( $fields ) {
   return $fields;  
 } 
 add_filter( 'woocommerce_checkout_fields' , 'custom_override_checkout_fields' ); */
+global $wpdb;
+$result = $wpdb->get_results ( "SELECT state FROM `states` group by state" );   
+   //print_r($result);
 add_filter( 'woocommerce_billing_fields' , 'custom_override_billing_fields' );
 add_filter( 'woocommerce_shipping_fields' , 'custom_override_shipping_fields' );
 
@@ -1124,12 +1127,34 @@ function custom_override_billing_fields( $fields ) {
                                 'required'  => true,
                                 'class'     => array('form-row-first', 'address-field', 'update_totals_on_change',' col-lg-4')
      ); 
+				 $fields['billing_departamento'] = array(
+        'label'     => __('Departamento', 'woocommerce'),
+        'placeholder'   => (''),
+                                'required'  => true,
+																	'type' => 'select',
+                                'class'     => array('form-row-last', 'address-field', 'update_totals_on_change',' col-lg-4'),
+                                'options'   => array(
+																									'eat-meat' => __('I eat maet', 'woocommerce' ),
+																									'not-meat' => __('Meat is gross', 'woocommerce' )
+																									)
+     );
+        $fields['billing_municipio'] = array(
+        'label'     => __('Municipio', 'woocommerce'),
+        'placeholder'   => (''),
+                                'required'  => true,
+                                'type' => 'select',
+                                'class'     => array('form-row-last', 'address-field', 'update_totals_on_change',' col-lg-4'),
+                                'options'     => array(
+																									'eat-meat' => __('I eat maet', 'woocommerce' ),
+																									'not-meat' => __('Meat is gross', 'woocommerce' )
+																									)
+     );
 
       $fields['billing_city'] = array(
         'label'     => __('Ciudad/Localidad', 'woocommerce'),
         'placeholder'   => (''),
                                 'required'  => true,
-                                'class'     => array('form-row-last', 'address-field',' col-lg-4'),
+                                'class'     => array('form-row-first', 'address-field',' col-lg-4'),
                                 'clear'    => false
      );   
       $fields['billing_company'] = array(
@@ -1143,7 +1168,7 @@ function custom_override_billing_fields( $fields ) {
         'label'     => __('Barrio *', 'woocommerce'),
         'placeholder'   => (''),
                                 'required'  => true,
-                                'class'     => array('form-row-first', 'address-field',' col-lg-4'),
+                                'class'     => array('form-row-last', 'address-field',' col-lg-4'),
                                 'validate'    => array( 'postcode' ),
                                 'clear'    => false
      );
@@ -1152,7 +1177,7 @@ function custom_override_billing_fields( $fields ) {
         'label'     => __('Dirección Completa', 'woocommerce'),
         'placeholder'   => (''),
                                 'required'  => true,
-                                'class'     => array('form-row-last', 'address-field',' col-lg-4')
+                                'class'     => array('form-row-first', 'address-field',' col-lg-4')
      );
      
       $fields['billing_mobile_phone'] = array(
@@ -1170,6 +1195,7 @@ function custom_override_billing_fields( $fields ) {
   return $fields;
 }
 
+        
 function custom_override_shipping_fields( $fields ) {
   unset($fields['shipping_address_2']);
    unset($fields['shipping_email']);
@@ -1204,12 +1230,34 @@ function custom_override_shipping_fields( $fields ) {
                                 'required'  => true,
                                 'class'     => array('form-row-first', 'address-field', 'update_totals_on_change',' col-lg-4')
      );
+         $fields['shipping_departamento'] = array(
+        'label'     => __('Departamento', 'woocommerce'),
+        'placeholder'   => (''),
+                                'required'  => true,
+                                'type' => 'select',
+                                'class'     => array('form-row-last', 'address-field', 'update_totals_on_change',' col-lg-4'),
+                                'options'     => array(
+																									'eat-meat' => __('I eat maet', 'woocommerce' ),
+																									'not-meat' => __('Meat is gross', 'woocommerce' )
+																									)
+     );
+        $fields['shipping_municipio'] = array(
+        'label'     => __('Municipio', 'woocommerce'),
+        'placeholder'   => (''),
+                                'required'  => true,
+                                'type' => 'select',
+                                'class'     => array('form-row-last', 'address-field', 'update_totals_on_change',' col-lg-4'),
+                                'options'     => array(
+																									'eat-meat' => __('I eat maet', 'woocommerce' ),
+																									'not-meat' => __('Meat is gross', 'woocommerce' )
+																									)
+     );
 
       $fields['shipping_city'] = array(
         'label'     => __('Ciudad/Localidad', 'woocommerce'),
         'placeholder'   => (''),
                                 'required'  => true,
-                                'class'     => array('form-row-last', 'address-field',' col-lg-4'),
+                                'class'     => array('form-row-first', 'address-field',' col-lg-4'),
                                 'clear'    => false
      );
       $fields['shipping_company'] = array(
@@ -1223,7 +1271,7 @@ function custom_override_shipping_fields( $fields ) {
         'label'     => __('Código postal/Zip *', 'woocommerce'),
         'placeholder'   => (''),
                                 'required'  => true,
-                                'class'     => array('form-row-first', '',' col-lg-4'),
+                                'class'     => array('form-row-last', '',' col-lg-4'),
                                 'validate'    => array( 'postcode' ),
                                 'clear'    => false
 			);
@@ -1232,7 +1280,7 @@ function custom_override_shipping_fields( $fields ) {
         'label'     => __('Dirección Completa', 'woocommerce'),
         'placeholder'   => (''),
                                 'required'  => true,
-                                'class'     => array('form-row-last', 'address-field',' col-lg-4')
+                                'class'     => array('form-row-first', 'address-field',' col-lg-4')
      );
 
       $fields['shipping_mobile_phone'] = array(
@@ -1257,6 +1305,8 @@ function reorder_woocommerce_fields($fields) {
         $fields2['billing_last_name'] = $fields['billing_last_name'];
         $fields2['billing_Cédula'] = $fields['billing_Cédula'];
         $fields2['billing_country'] = $fields['billing_country'];
+        $fields2['billing_departamento'] = $fields['billing_departamento'];
+        $fields2['billing_municipio'] = $fields['billing_municipio'];
         $fields2['billing_city'] = $fields['billing_city'];
         $fields2['billing_company'] = $fields['billing_company'];
         $fields2['billing_postcode'] = $fields['billing_postcode'];
@@ -1266,7 +1316,7 @@ function reorder_woocommerce_fields($fields) {
             'label'     => __('E-mail', 'woocommerce'),
             'placeholder'   => (''),
             'required'  => false,
-            'class'     => array('form-row-first')
+            'class'     => array('form-row-last')
          );
       
 
@@ -1296,6 +1346,8 @@ function order_fields($fields) {
         $fields2['shipping_last_name'] = $fields['shipping_last_name'];
          $fields2['shipping_Cédula'] = $fields['shipping_Cédula'];
         $fields2['shipping_country'] = $fields['shipping_country'];
+        $fields2['shipping_departamento'] = $fields['shipping_departamento'];
+        $fields2['shipping_municipio'] = $fields['shipping_municipio'];
         $fields2['shipping_city'] = $fields['shipping_city'];
         $fields2['shipping_company'] = $fields['shipping_company'];
         $fields2['shipping_postcode'] = $fields['shipping_postcode'];
