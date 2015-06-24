@@ -26,13 +26,10 @@ if (isset($_POST['submit'])) {
 
 	    }
 
-	 
-
 	    //Import uploaded file to Database
 
 	    $handle = fopen($_FILES['filename']['tmp_name'], "r");
-
-			//echo "<table>\n<tr><th>zip</th><th>City</th><th>State Code</th><th>State Name</th></tr>";
+			
 			$i=0;
 	    while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
 					 $i++;
@@ -40,15 +37,10 @@ if (isset($_POST['submit'])) {
 	        $import="INSERT into state_city(zip,city,state_code,state_name) values('$data[0]','$data[1]','$data[2]','$data[3]')";
 
 	        mysql_query($import) or die(mysql_error());
-
 	    }
-
 	    fclose($handle);
-
-	    print "Import done";
-
+	    echo "Import done";
 	    //view upload form
-
 	}else { ?>
 	
 			<hr>
