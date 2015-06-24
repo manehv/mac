@@ -1045,7 +1045,7 @@ letter specing:0.3;
 	border-top-right-radius:6px;
 /*	max-height: 107px !important;*/
 }
-.arfdropdown-menu open{
+.arfdropdown-menu .open{
 	max-height: 107px !important;
 	
 }
