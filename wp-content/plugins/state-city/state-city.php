@@ -9,9 +9,9 @@ Domain Path: /languages/
 Version: 0.1.0
 */
  
-error_reporting(E_ALL ^ E_NOTICE ^ E_STRICT);
-ini_set('display_errors', 1);
-ini_set('display_startup_error', 1);
+//error_reporting(E_ALL ^ E_NOTICE ^ E_STRICT);
+//ini_set('display_errors', 1);
+//ini_set('display_startup_error', 1);
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 global $wpdb;
@@ -49,15 +49,15 @@ class States_Cities{
 
   	States_Cities::renderTable1();
 	}
-	/*
+	
 	//This will be used for saving cities
 	public function saveCities($data){
 		global $wpdb;							
-		
-		$sql = $wpdb->prepare("select count(*) from  ".$wpdb->prefix."cities where state_code ='%d' and city = '%s'", $data[iSTATECODE], $data[iCITY]);
+//		print_r($data);
+		$sql = $wpdb->prepare("select count(*) from  ".$wpdb->prefix."cities where state_id ='%d' and city = '%s'", array($data[iSTATECODE], $data[iCITY]));
 		$state = $wpdb->get_results ($sql);
 		
-		if($wpdb->num_rows() == 0 ){
+		if($wpdb->num_rows == 0 ){
 			$rs = $wpdb->insert( $wpdb->prefix . "cities" , 
 																		 array('zip' => $data[iZIP] 
 																					,'city'=> $data[iCITY]
@@ -66,7 +66,7 @@ class States_Cities{
 																		array('%d','%s','%d'));
 		}
 	}
-	*/
+	
 	//This will be used for saving States
 	public function saveStates($data){
 		global $wpdb;
@@ -96,9 +96,7 @@ class States_Cities{
 	
 	public function parseCSV(){
 		global $wpdb;	
-		echo "test"; 
-		die;
-		/*
+
 		if (isset($_POST['submit'])) {
 			if (is_uploaded_file($_FILES['filename']['tmp_name'])):
 					//Import uploaded file to Database
@@ -108,8 +106,8 @@ class States_Cities{
 					while (($data = fgetcsv($handle)) !== FALSE):
 							$i++;
 								if($i==1) continue;
-							$id = saveStates($data);
-							saveCities($data);
+							$id = self::saveStates($data);
+							self::saveCities($data);
 					endwhile;
 					fclose($handle);
 					if (is_uploaded_file($_FILES['filename']['tmp_name'])) {
@@ -117,7 +115,7 @@ class States_Cities{
 					}
 			endif;	//if file uploaded properly
 		}
-		*/
+
 	}
 		
 	// Showing all the states and Cities
@@ -146,7 +144,9 @@ class States_Cities{
 
 	//Rendering Table
 	public function renderTable1(){ 
-
+		if($_POST['submit'] != ""){
+			self::parseCSV();
+		}
 	?>
 		
 			<div  class="wrap">
@@ -186,8 +186,15 @@ class States_Cities{
 
 		}
 	} // Class
+	
+	add_action( 'importcsv', 'parseCSV' );	
 	$ob = new States_Cities ;
-	add_action( 'admin_post_importcsv', array( 'States_Cities','parseCSV' ) );	
+	
+	function parseCSV(){
+		echo "Manish ";
+		die;
+		$ob->parseCSV();
+	}
 }// If 
 
 
