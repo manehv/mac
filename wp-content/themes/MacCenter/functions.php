@@ -1195,7 +1195,7 @@ function custom_override_billing_fields( $fields ) {
         'label'     => __('Barrio *', 'woocommerce'),
         'placeholder'   => (''),
                                 'required'  => true,
-                                'class'     => array('form-row-last', 'address-field',' col-lg-4'),
+                                'class'     => array('form-row-first', 'address-field',' col-lg-4'),
                                 'validate'    => array( 'postcode' ),
                                 'clear'    => false
      );
@@ -1204,7 +1204,7 @@ function custom_override_billing_fields( $fields ) {
         'label'     => __('Dirección Completa', 'woocommerce'),
         'placeholder'   => (''),
                                 'required'  => true,
-                                'class'     => array('form-row-first', 'address-field',' col-lg-4')
+                                'class'     => array('form-row-last', 'address-field',' col-lg-4')
      );
      
       $fields['billing_mobile_phone'] = array(
@@ -1294,7 +1294,7 @@ function custom_override_shipping_fields( $fields ) {
         'label'     => __('Código postal/Zip *', 'woocommerce'),
         'placeholder'   => (''),
                                 'required'  => true,
-                                'class'     => array('form-row-last', '',' col-lg-4'),
+                                'class'     => array('form-row-first', '',' col-lg-4'),
                                 'validate'    => array( 'postcode' ),
                                 'clear'    => false
 			);
@@ -1303,7 +1303,7 @@ function custom_override_shipping_fields( $fields ) {
         'label'     => __('Dirección Completa', 'woocommerce'),
         'placeholder'   => (''),
                                 'required'  => true,
-                                'class'     => array('form-row-first', 'address-field',' col-lg-4')
+                                'class'     => array('form-row-last', 'address-field',' col-lg-4')
      );
 
       $fields['shipping_mobile_phone'] = array(
@@ -1338,7 +1338,7 @@ function reorder_woocommerce_fields($fields) {
             'label'     => __('E-mail *', 'woocommerce'),
             'placeholder'   => (''),
             'required'  => false,
-            'class'     => array('form-row-last')
+            'class'     => array('form-row-first')
          );
       
 
