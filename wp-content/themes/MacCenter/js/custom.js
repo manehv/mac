@@ -125,7 +125,7 @@ jQuery(document).ready(function($)
 					  checked();
 				});
 
-   $('#billing_departamento').on('change',function(){
+   $('#billing_company').on('change',function(){
      state= $(this).val();
 		 
 		 $.ajax({
@@ -134,9 +134,9 @@ jQuery(document).ready(function($)
               dataType:"json",
     				  data:'action=cities_ajax_call&state='+state,
 					    success: function(data) {
-							$('#billing_municipio').empty();
+							$('#billing_city').empty();
 								$.each(data.cities, function(index, value) {
-									$("#billing_municipio").append($('<option>').html(value)) ;
+									$("#billing_city").append($('<option>').html(value)) ;
 								});
  							}
 							
@@ -145,9 +145,9 @@ jQuery(document).ready(function($)
 	})
 
 
-	  $('#shipping_departamento').on('change',function(){
+	  $('#shipping_company').on('change',function(){
      state= $(this).val();
-		 $('#shipping_municipio').empty();
+		 $('#shipping_city').empty();
 		 $.ajax({
               url: "/mac/wp-admin/admin-ajax.php",
               type: "POST",
@@ -157,7 +157,7 @@ jQuery(document).ready(function($)
 					    success: function(data) {
              
 							$.each(data.cities, function(index, value) {
-               $("#shipping_municipio").append($('<option>').html(value)) ;
+               $("#shipping_city").append($('<option>').html(value)) ;
               });
 						}
 
