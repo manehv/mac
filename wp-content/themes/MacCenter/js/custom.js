@@ -124,6 +124,46 @@ jQuery(document).ready(function($)
         $("#btncheck").on('click','#createaccount', function(){
 					  checked();
 				});
-        
+
+   $('#billing_company').on('change',function(){
+     state= $(this).val();
+		 
+		 $.ajax({
+              url: "/mac/wp-admin/admin-ajax.php",
+              type: "POST",
+              dataType:"json",
+    				  data:'action=cities_ajax_call&state='+state,
+					    success: function(data) {
+							$('#billing_city').empty();
+								$.each(data.cities, function(index, value) {
+									$("#billing_city").append($('<option>').html(value)) ;
+								});
+ 							}
+							
+     })
+		 
+	})
+
+
+	  $('#shipping_company').on('change',function(){
+     state= $(this).val();
+		 $('#shipping_city').empty();
+		 $.ajax({
+              url: "/mac/wp-admin/admin-ajax.php",
+              type: "POST",
+              dataType:"json",
+    				  data:'action=cities_ajax_call&state='+state,
+
+					    success: function(data) {
+             
+							$.each(data.cities, function(index, value) {
+               $("#shipping_city").append($('<option>').html(value)) ;
+              });
+						}
+
+     })
+
+	})
+				
         
 });
