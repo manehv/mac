@@ -129,7 +129,7 @@ jQuery(document).ready(function($)
      state= $(this).val();
 		 
 		 $.ajax({
-              url: "/mac/wp-admin/admin-ajax.php",
+              url: "/wp-admin/admin-ajax.php",
               type: "POST",
               dataType:"json",
     				  data:'action=cities_ajax_call&state='+state,
