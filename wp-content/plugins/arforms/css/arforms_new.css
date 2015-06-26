@@ -1043,6 +1043,11 @@ letter specing:0.3;
 	border-bottom-right-radius:0px;
 	border-top-left-radius:6px;
 	border-top-right-radius:6px;
+/*	max-height: 107px !important;*/
+}
+.arfdropdown-menu .open{
+	max-height: 107px !important;
+	
 }
 .wrap .btn-group.dropup.open .arfdropdown-menu .dropdown-menu.inner {
 	border-top:none;
