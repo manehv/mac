@@ -16,6 +16,7 @@ function my_menu_pages(){
 }
 
  function import_state_city_menu_page() { 
+	global $wpdb;
     wp_enqueue_script('media-upload');  // For WP media uploader
 		wp_enqueue_script('thickbox');  // For WP media uploader
 		wp_enqueue_script('jquery-ui-tabs');  // For admin panel page tabs
@@ -34,51 +35,33 @@ function my_menu_pages(){
         </ul>
 	<div id="tabs-1">
 	<?php
-//	if (isset($_POST['submit'])) {
+	if (isset($_POST['submit'])) {
 
-				if (is_uploaded_file($_FILES['filename']['tmp_name'])) {
-
-						//echo "<h2>" . "File ". $_FILES['filename']['name'] ." uploaded successfully." . "</h2>";
-
-						//echo "<h3>Displaying contents:</h3>";
-
-						//readfile($_FILES['filename']['tmp_name']);
-
-				}
-
-				//Import uploaded file to Database
-				$select=mysql_query( "select c.zip,c.city,c.state_id, s.state_name from city c , state s  
-																				where c.state_id=s.state_code order by state_name,city " );
-		if(mysql_num_rows($select)==FALSE){
-				$handle = fopen($_FILES['filename']['tmp_name'], "r");
-				
-				$i=0;
-				while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
-						$i++;
-							if($i==1) continue;
-						//$import="INSERT into state_city(zip,city,state_code,state_name) values('$data[0]','$data[1]','$data[2]','$data[3]')";
-												
-						//mysql_query($import) or die(mysql_error());
-						mysql_query("START TRANSACTION");
-						$a1 = mysql_query("INSERT INTO city(zip,city,state_id) VALUES('$data[0]','$data[1]','$data[2]')");
-						$a2 = mysql_query("INSERT INTO state (state_code,state_name) VALUES('$data[2]','$data[3]')");
-						if ($a1 && $a2) {
-								mysql_query("COMMIT");
-						} else {        
-								mysql_query("ROLLBACK");
+		if (is_uploaded_file($_FILES['filename']['tmp_name'])):
+					//Import uploaded file to Database
+					$handle = fopen($_FILES['filename']['tmp_name'], "r");
+					
+					$i=0;
+					while (($data = fgetcsv($handle, 1000, ",")) !== FALSE):
+							$i++;
+								if($i==1) continue;
+							global $wpdb;							
+							$state = $wpdb->get_results ( "select state_name  from  state where state_name='".$data[3]."' " );
+							$city = $wpdb->get_results ( "select zip , city from  city where zip='".$data[0]."' and city='".$data[1]."'" );
+							if(count($state)==0){			
+							$a2 = $wpdb->query("INSERT INTO state (state_code,state_name) VALUES('".$data[2]."','".$data[3]."')");
+							}
+							if(count($city)==0){							
+							$a1 =$wpdb->query("INSERT INTO city(zip,city,state_id) VALUES('".$data[0]."','".$data[1]."','".$data[2]."')");
+							}
+					endwhile;
+					fclose($handle);
+						if (is_uploaded_file($_FILES['filename']['tmp_name'])) {
+									echo "<h2>" . "File ". $_FILES['filename']['name'] ." uploaded successfully." . "</h2>";
 						}
-				}
-				fclose($handle);
-							if (is_uploaded_file($_FILES['filename']['tmp_name'])) {
-					echo "<h2>" . "File ". $_FILES['filename']['name'] ." uploaded successfully." . "</h2>";
-					}
-			} else
-			{
-			//echo "Table is already Contained Data";
-			}
-				
-				//view upload form
-		//}else { ?>
+			endif;	//if file uploaded properly
+			
+		}else { ?>
 		
 				
 				<br/>
@@ -91,7 +74,7 @@ function my_menu_pages(){
 				<input type='submit' class='button-primary' name='submit' value='Upload'>
 				
 				</form>
-	<?php //} ?>
+	<?php } ?>
 	</div> <!--tab-1-->
 	<div id="tabs-2">
 		<h2>State City Table</h2>
@@ -116,14 +99,23 @@ function my_menu_pages(){
 				return $rows;
 		}
 		class My_List_Table extends WP_List_Table {
+						
 			function column_cb( $item ) {
+			$array = get_state_city_data();
+			foreach($array as $key=>$value){
+			//$zip=$key;
+			}
+			//$zip=reset($array);
+			//print_r($zip);
 					return sprintf(
-						'<input type="checkbox" name="bulk-delete[]" value="%s" />', $item['ID']
+						'<input type="checkbox" name="bulk-delete[]" value="'.$zip['zip'].'" />', 
+						$this->_args['singular'], 
+						$item['ID']
 							);
 			}
 			function get_columns(){
 					$columns = array(
-						'cb'      => '<input type="checkbox" name="bulk-delete[]" value="" />',
+						'cb'           => '<input type="checkbox" />',
 						'zip' => 'Zip',
 						'city'    => 'City',
 						'state_code' => 'State Code',
@@ -131,6 +123,7 @@ function my_menu_pages(){
 					);
 					return $columns;
 			}
+			
 			function prepare_items() {
 					$columns = $this->get_columns();
 					$hidden = array();
@@ -139,45 +132,28 @@ function my_menu_pages(){
 					$per_page = 50;
 					$current_page = $this->get_pagenum();
 					$total_items = count(get_state_city_data());
-
 					// only ncessary because we have sample data
 					$this->found_data = array_slice(get_state_city_data(),(($current_page-1)*$per_page),$per_page);
-					//$myListTable->search_box('search', 'search_id');
 					$this->set_pagination_args( array(
 								'total_items' => $total_items,                  //WE have to calculate the total number of items
 								'per_page'    => $per_page                     //WE have to determine how many items to show on a page
 					) );
 					$this->process_bulk_action();
+					?>
+					<form method="post">
+					<input type="hidden" name="page" value="my_list_test" />
+					<?php $this->search_box('search', 'search_id'); ?>
+					</form>
+					<?php
 					$this->items = $this->found_data;
 			}	
-			public function process_bulk_action() {
- 
-					//Detect when a bulk action is being triggered...
-					if ( 'delete' === $this->current_action() ) {				
-						// In our file that handles the request, verify the nonce.
-						$nonce = esc_attr( $_REQUEST['_wpnonce'] );
-				
-						if ( ! wp_verify_nonce( $nonce, 'sp_delete_customer' ) ) {
-							die( 'Go get a life script kiddies' );
-						}
-						else {
-							self::delete_customer( absint( $_GET['customer'] ) );				
-							wp_redirect( esc_url( add_query_arg() ) );
-							exit;
-						}				
-					}				
-					// If the delete bulk action is triggered
-					if ( ( isset( $_POST['action'] ) && $_POST['action'] == 'bulk-delete' )
-							|| ( isset( $_POST['action2'] ) && $_POST['action2'] == 'bulk-delete' )
-					) {				
-						$delete_ids = esc_sql( $_POST['bulk-delete'] );				
-						// loop over the array of record IDs and delete them
-						foreach ( $delete_ids as $id ) {
-							self::delete_customer( $id );				
-						}				
-						wp_redirect( esc_url( add_query_arg() ) );
-						exit;
-					}
+			function process_bulk_action() {        
+      
+        if( 'delete'===$this->current_action() ) {
+           foreach($_GET['bulk-delete'] as $id) {                             
+                multiple_delete($id);
+            }
+        }        
 			}
 			function column_default( $item, $column_name ) {
 					switch( $column_name ) { 
