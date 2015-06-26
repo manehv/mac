@@ -1113,7 +1113,7 @@ function city_ajax_shipping() {
    $city[$val->city]=$val->city;
 	}
 	echo json_encode(array('cities' => $city));
-	die;
+	wp_die();
 	//echo '<option value="-1" selected="selected">Selected.</option>'.$option;
   //return json_encode($city) ;
 }
