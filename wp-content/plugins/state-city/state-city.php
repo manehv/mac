@@ -1,6 +1,12 @@
 <?php 
 /*
-Plugin Name: State City Dropdown
+Plugin Name: States Cities
+Plugin URI: http://8manos.com/
+Description: This will be used to show states and cities
+Author: Manish R
+Text Domain: States Cities
+Domain Path: /languages/
+Version: 0.1.0
 */
  
 	
