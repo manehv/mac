@@ -54,14 +54,14 @@ class States_Cities{
 	public function saveCities($data){
 		global $wpdb;							
 //		print_r($data);
-		$sql = $wpdb->prepare("select count(*) from  ".$wpdb->prefix."cities where state_id ='%d' and city = '%s'", array($data[iSTATECODE], $data[iCITY]));
+		$sql = $wpdb->prepare("select * from  ".$wpdb->prefix."cities where state_id ='%d' and city = '%s'", array($data[self::iSTATECODE], $data[self::iCITY]));
 		$state = $wpdb->get_results ($sql);
 		
 		if($wpdb->num_rows == 0 ){
 			$rs = $wpdb->insert( $wpdb->prefix . "cities" , 
-																		 array('zip' => $data[iZIP] 
-																					,'city'=> $data[iCITY]
-																					,'state_id'=> $data[iSTATECODE]
+																		 array('zip' => $data[self::iZIP] 
+																					,'city'=> $data[self::iCITY]
+																					,'state_id'=> $data[self::iSTATECODE]
 																					),
 																		array('%d','%s','%d'));
 		}
@@ -70,25 +70,28 @@ class States_Cities{
 	//This will be used for saving States
 	public function saveStates($data){
 		global $wpdb;
+		 $sql = $wpdb->prepare("select state_code, state_name  from  ". $wpdb->prefix ."states where state_name='%s' ", array($data[self::iSTATE]));
 		
-		$sql = $wpdb->prepare("select state_code, state_name  from  ". $wpdb->prefix ."states where state_name='%s'", $data[iSTATE]);
-
 		$state = $wpdb->get_results($sql);
+		$wpdb->num_rows ;
 		
+		//print_r($data);
+		//die;
 		if($wpdb->num_rows == 0 ){
-		
-			$rs = $wpdb->insert( $wpdb->prefix . "states" , array('state_code' => $data[iSTATECODE] 
-																					,'state_name'=> $data[iSTATE]),
+			//echo $sql . "<br>";
+			
+			$rs = $wpdb->insert( $wpdb->prefix . "states" , array('state_code' => $data[self::iSTATECODE] 
+																					,'state_name'=> $data[self::iSTATE]),
 																		array('%d','%s'));
 		
 			return $wpdb->insert_id;
 		} else{
-			
+			/*
 			foreach ($state as $s){
 				$stateCode = $s->state_code ;
 				break ;
 			}
-			
+			*/
 			return $stateCode ; 
 		}
 	
@@ -107,6 +110,9 @@ class States_Cities{
 							$i++;
 								if($i==1) continue;
 							$id = self::saveStates($data);
+								//print_r($data);
+								//continue ;
+							
 							self::saveCities($data);
 					endwhile;
 					fclose($handle);
