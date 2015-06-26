@@ -2878,7 +2878,8 @@ margin-top: 0px;}
 
 .slideshow_caption{
 z-index: 100;
-width:42%;
+/*CAMBIO*/
+/*width:42%;*/
 position: absolute;
 bottom: 0;
 top:auto;
