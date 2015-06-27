@@ -10,6 +10,8 @@ Version: 0.1.0
 */
  
 error_reporting(E_ALL ^ E_NOTICE ^ E_STRICT);
+ini_set('display_startup_error',1);
+
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 global $wpdb;
@@ -74,20 +76,30 @@ class States_Cities extends WP_List_Table {
 		$this->items = $data;
 		/*
 			//Explicitly written within function
-			function usort_reorder($a,$b){
-					$orderby = (!empty($_REQUEST['orderby'])) ? $_REQUEST['orderby'] : 'title'; //If no sort, default to title
-					$order = (!empty($_REQUEST['order'])) ? $_REQUEST['order'] : 'asc'; //If no order, default to asc
-					$result = strcmp($a[$orderby], $b[$orderby]); //Determine sort order
-					return ($order==='asc') ? $result : -$result; //Send final sort direction to usort
-			}
+			function usort_reorder($a,$b){
+
+					$orderby = (!empty($_REQUEST['orderby'])) ? $_REQUEST['orderby'] : 'title'; //If no sort, default to title
+
+					$order = (!empty($_REQUEST['order'])) ? $_REQUEST['order'] : 'asc'; //If no order, default to asc
+
+					$result = strcmp($a[$orderby], $b[$orderby]); //Determine sort order
+
+					return ($order==='asc') ? $result : -$result; //Send final sort direction to usort
+
+			}
+
 			usort($data, 'usort_reorder');		
 			
 		$current_page = $this->get_pagenum();
 		$total_items = $this->getCountData();
-		$this->set_pagination_args( array(
-				'total_items' => $total_items,                  //WE have to calculate the total number of items
-				'per_page'    => $per_page,                     //WE have to determine how many items to show on a page
-				'total_pages' => ceil($total_items/$per_page)   //WE have to calculate the total number of pages
+		$this->set_pagination_args( array(
+
+				'total_items' => $total_items,                  //WE have to calculate the total number of items
+
+				'per_page'    => $per_page,                     //WE have to determine how many items to show on a page
+
+				'total_pages' => ceil($total_items/$per_page)   //WE have to calculate the total number of pages
+
 		) );		
 		*/
 	}
@@ -116,19 +128,31 @@ class States_Cities extends WP_List_Table {
 							return print_r($item,true); //Show the whole array for troubleshooting purposes
 			}
 	}	
-    function get_bulk_actions() {
-        $actions = array(
-            'delete'    => 'Delete'
-        );
-        return $actions;
+    function get_bulk_actions() {
+
+        $actions = array(
+
+            'delete'    => 'Delete'
+
+        );
+
+        return $actions;
+
     }	
-    function process_bulk_action() {
-        
-        //Detect when a bulk action is being triggered...
-        if( 'delete'===$this->current_action() ) {
-            wp_die('Items deleted (or they would be if we had items to delete)!');
-        }
-        
+    function process_bulk_action() {
+
+        
+
+        //Detect when a bulk action is being triggered...
+
+        if( 'delete'===$this->current_action() ) {
+
+            wp_die('Items deleted (or they would be if we had items to delete)!');
+
+        }
+
+        
+
     }    
 	function get_sortable_columns() {
 		$sortable_columns = array(
