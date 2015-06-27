@@ -135,6 +135,7 @@ style="padding: 0px; height: 201px; transition: none 0s ease 0s ; transform: tra
     height: 0px;
    visibility: hidden;
 	}
+	
 
 }
 /**FIN ESTILOS MOVILES NUEVOS**/
@@ -194,13 +195,13 @@ a.remove{
 }
 
 p.fakealert  {
-    border: medium none;
-    list-style: outside none none;
-    margin: 0px 0px 23px;
-    padding: 32px 45% 32px 36px;
+     background-color: #e7e8e9;
     background-repeat: no-repeat;
-    background-color: #F0DCDB;
-    color: #941210;
+    border-radius: 25px;
+    color: #05afee;
+    list-style: outside none none;
+    padding: 30px 0 30px 30px;
+		margin:0px;
 }
 /*ALERTA OUT STOCK*/
 .out-of-stock{
@@ -1672,4 +1673,20 @@ color:#8D8F92;
 }
 .edit-act-form{
 	margin-top:50px;
+}
+.woocommerce-checkout .checkout ul.woocommerce-error{
+margin: 0 25% ;
+    width: 50% ;
+}
+.woocommerce-checkout .checkout .back-image{
+	margin-right: 30%;
+}
+@media only screen and (max-width: 360px) {
+	.woocommerce-checkout .checkout ul.woocommerce-error{
+	 margin: auto;
+    width: auto;
+	}
+}
+.back-image:nth-of-type(1) ~ .back-image{ 
+	display:none;
 }
