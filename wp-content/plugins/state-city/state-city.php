@@ -13,7 +13,7 @@ error_reporting(E_ALL ^ E_NOTICE ^ E_STRICT);
 ini_set('display_startup_error',1);
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
-/*
+
 global $wpdb;
 
 //add_action('admin_menu', array('States_Cities', 'my_menu_pages'));
@@ -31,6 +31,14 @@ class States_Cities extends WP_List_Table {
 	const iSTATE = 3 ;
 	public function __construct(){
 		global $status, $page;
+		$this->per_page = 30 ;
+		//Set parent defaults
+		parent::__construct( array(
+				'singular'  => 'city',     //singular name of the listed records
+				'plural'    => 'cities',    //plural name of the listed records
+				'ajax'      => false        //does this table support ajax?
+		) );
+		
 		add_action('admin_menu', array(&$this, 'my_menu_pages'));
 	// Install plugin
 		register_activation_hook( __FILE__, array( $this, 'activate' ) );
@@ -56,11 +64,11 @@ class States_Cities extends WP_List_Table {
 	}
 	public function get_columns(){
 		$columns = array(
-			'cb'        => '<input type="checkbox" />', //Render a checkbox instead of text
-			'zip' => 'Zip',
+			'cb'        => '<input type="checkbox" name="bulk[]" />', //Render a checkbox instead of text
 			'city'    => 'City',
-			'stateCode'      => 'State Code',
-			'state'      => 'State Name'
+			'zip' => 'Zip',
+			'state'      => 'State Name',
+			'stateCode'      => 'State Code'
 		);
 		return $columns;
 	}	
@@ -84,7 +92,7 @@ class States_Cities extends WP_List_Table {
 			}
 
 			usort($data, 'usort_reorder');		
-			
+		$per_page = $this->per_page ;	
 		$current_page = $this->get_pagenum();
 		$total_items = $this->getCountData();
 		$this->set_pagination_args( array(
@@ -101,8 +109,6 @@ class States_Cities extends WP_List_Table {
 																				".$wpdb->prefix."states s  
 																				where c.state_id=s.state_code ";
 		$cnt = $wpdb->get_var($sql);
-		print_r($cnt);
-		echo "<br>";
 		if($cnt == null) $cnt = 0 ;
 		
 		return $cnt ; 
@@ -120,26 +126,23 @@ class States_Cities extends WP_List_Table {
 			}
 	}	
     function get_bulk_actions() {
-
         $actions = array(
-
             'delete'    => 'Delete'
-
         );
-
         return $actions;
-
     }	
     function process_bulk_action() {
-
-        
-
         //Detect when a bulk action is being triggered...
-
         if( 'delete'===$this->current_action() ) {
-
+						if(is_array($_GET['city'])){
+							foreach($_GET['city'] as $val){
+								$this->bulkDelete($val);
+							}
+						}else{
+							$this->bulkDelete($_GET['city']);
+						}
+						
             wp_die('Items deleted (or they would be if we had items to delete)!');
-
         }
 
         
@@ -154,19 +157,18 @@ class States_Cities extends WP_List_Table {
 		);
 		return $sortable_columns;
 	}
-*/	
-    function column_title($item){
+    function column_city($item){
         
         //Build row actions
         $actions = array(
-            'edit'      => sprintf('<a href="?page=%s&action=%s&movie=%s">Edit</a>',$_REQUEST['page'],'edit',$item['ID']),
-            'delete'    => sprintf('<a href="?page=%s&action=%s&movie=%s">Delete</a>',$_REQUEST['page'],'delete',$item['ID']),
+            'edit'      => sprintf('<a href="?page=%s&action=%s&city=%s">Edit</a>',$_REQUEST['page'],'edit',$item['id']),
+            'delete'    => sprintf('<a href="?page=%s&action=%s&city=%s">Delete</a>',$_REQUEST['page'],'delete',$item['id']),
         );
         
         //Return the title contents
         return sprintf('%1$s <span style="color:silver">(id:%2$s)</span>%3$s',
-            /*$1%s*/ $item['title'],
-            /*$2%s*/ $item['ID'],
+            /*$1%s*/ $item['city'],
+            /*$2%s*/ $item['id'],
             /*$3%s*/ $this->row_actions($actions)
         );
     }
@@ -174,11 +176,9 @@ class States_Cities extends WP_List_Table {
         return sprintf(
             '<input type="checkbox" name="%1$s[]" value="%2$s" />',
             /*$1%s*/ $this->_args['singular'],  //Let's simply repurpose the table's singular label ("movie")
-            /*$2%s*/ $item['ID']                //The value of the checkbox should be the record's id
+            /*$2%s*/ $item['id']                //The value of the checkbox should be the record's id
         );
-    } 
-    
-/*    
+    }    
 	//This will be used for saving cities
 	public function saveCities($data){
 		global $wpdb;							
@@ -215,6 +215,12 @@ class States_Cities extends WP_List_Table {
 		
 			return $wpdb->insert_id;
 		} else{
+			/*
+			foreach ($state as $s){
+				$stateCode = $s->state_code ;
+				break ;
+			}
+			*/
 			return $stateCode ; 
 		}
 	
@@ -251,9 +257,13 @@ class States_Cities extends WP_List_Table {
 	public function listData(){
 			global $wpdb;
 			$rows = array();
-			$result = $wpdb->get_results ( "select c.id, c.zip,c.city,c.state_id, s.state_name from ".$wpdb->prefix."cities c , 
+			$current_page = $this->get_pagenum();
+			$offset = $this->per_page * ($current_page -1) ;
+			$sql = $wpdb->prepare("select c.id, c.zip,c.city,c.state_id, s.state_name from ".$wpdb->prefix."cities c , 
 																				".$wpdb->prefix."states s  
-																				where c.state_id=s.state_code order by state_name,city limit 0,100 " );
+																				where c.state_id=s.state_code order by state_name,city limit %d, %d" , 
+																				array( $offset ,  $this->per_page ));
+			$result = $wpdb->get_results ($sql );
 				foreach($result as $val){
 					$rows[] = array(
 					'id' => $val->id,
@@ -267,12 +277,12 @@ class States_Cities extends WP_List_Table {
 	}
 	
 	//used for bluck delete
-	public function bulkDelete(){
+	public function bulkDelete($id){
 		global $wpdb;
 			$wpdb->delete(
 				"{$wpdb->prefix}cities",
-				[ 'ID' => $id ],
-				[ '%d' ]
+				array('id' => $id ),
+				array('%d')
 			);	
 	}
   public function showListStates(){
@@ -281,9 +291,14 @@ class States_Cities extends WP_List_Table {
 		$this->display();
   }	
   public function showListCity(){
-		//$ob1 = new States_Cities() ;
+		echo '<h2>List of Cities</h2>';
+		echo '<form id="movies-filter" method="get">'; ?>
+            <!-- For plugins, we also need to ensure that the form posts back to our current page -->
+            <input type="hidden" name="page" value="<?php echo $_REQUEST['page'] ?>" />		
+    <?php
 		$this->prepare_items(); 
 		$this->display();
+		echo '</form>';
   }
 	//Rendering Table
 	public function renderTable1(){ 
