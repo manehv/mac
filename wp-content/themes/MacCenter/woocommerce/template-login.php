@@ -11,7 +11,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	
 <?php do_action( 'woocommerce_before_customer_login_form' ); ?>
 <div class="col-lg-offset-3 col-lg-6 col-xs-12 col-sm-6 clearfix" id="customer_login">
-					<div class="clearfix text-center login-error" >
+					<div class="clearfix col-lg-offset-2 col-lg-8 login-error" >
 					<?php wc_print_notices(); ?>
 					</div>
         <div>
