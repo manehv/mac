@@ -31,6 +31,15 @@ class States_Cities extends WP_List_Table {
 	const iSTATE = 3 ;
 	public function __construct(){
 		global $status, $page;
+		$this->per_page = 30 ;
+		//Set parent defaults
+
+		parent::__construct( array(
+				'singular'  => 'city',     //singular name of the listed records
+				'plural'    => 'cities',    //plural name of the listed records
+				'ajax'      => false        //does this table support ajax?
+		) );
+		
 		add_action('admin_menu', array(&$this, 'my_menu_pages'));
 	// Install plugin
 		register_activation_hook( __FILE__, array( $this, 'activate' ) );
@@ -56,11 +65,11 @@ class States_Cities extends WP_List_Table {
 	}
 	public function get_columns(){
 		$columns = array(
-			'cb'        => '<input type="checkbox" />', //Render a checkbox instead of text
-			'zip' => 'Zip',
+			'cb'        => '<input type="checkbox" name="bulk[]" />', //Render a checkbox instead of text
 			'city'    => 'City',
-			'stateCode'   => 'State Code',
-			'state'   => 'State Name'
+			'zip' => 'Zip',
+			'state'      => 'State Name',
+			'stateCode'      => 'State Code'
 		);
 		return $columns;
 	}	
@@ -85,18 +94,17 @@ class States_Cities extends WP_List_Table {
 		$data = $this->get_customers($per_page, $current_page) ;
 		$this->items = $data;
 	
-			//Explicitly written within function
-// 	function usort_reorder($a,$b){
-// 			$orderby = (!empty($_REQUEST['orderby'])) ? $_REQUEST['orderby'] : 'title'; //If no sort, default to title
-// 			$order = (!empty($_REQUEST['order'])) ? $_REQUEST['order'] : 'asc'; //If no order, default to asc
-// 			$result = strcmp($a[$orderby], $b[$orderby]); //Determine sort order
-// 			return ($order==='asc') ? $result : -$result; //Send final sort direction to usort
-// 	}
+		$per_page = $this->per_page ;	
+		$current_page = $this->get_pagenum();
+		$total_items = $this->getCountData();
+		$this->set_pagination_args( array(
+				'total_items' => $total_items,                  //WE have to calculate the total number of items
+				'per_page'    => $per_page,                     //WE have to determine how many items to show on a page
+				'total_pages' => ceil($total_items/$per_page)   //WE have to calculate the total number of pages
+		) );		
+	
+	}
 
-	//usort($data, 'usort_reorder');
-
-			//$current_page = $this->get_pagenum();
-}
 	//Find Total Records
 	function getCountData(){
 		global $wpdb ;
@@ -104,8 +112,6 @@ class States_Cities extends WP_List_Table {
 																				".$wpdb->prefix."states s  
 																				where c.state_id=s.state_code ";
 		$cnt = $wpdb->get_var($sql);
-		print_r($cnt);
-		echo "<br>";
 		if($cnt == null) $cnt = 0 ;
 		
 		return $cnt ; 
@@ -123,26 +129,23 @@ class States_Cities extends WP_List_Table {
 			}
 	}	
     function get_bulk_actions() {
-
         $actions = array(
-
             'delete'    => 'Delete'
-
         );
-
         return $actions;
-
     }	
     function process_bulk_action() {
-
-        
-
         //Detect when a bulk action is being triggered...
-
         if( 'delete'===$this->current_action() ) {
-
+						if(is_array($_GET['city'])){
+							foreach($_GET['city'] as $val){
+								$this->bulkDelete($val);
+							}
+						}else{
+							$this->bulkDelete($_GET['city']);
+						}
+						
             wp_die('Items deleted (or they would be if we had items to delete)!');
-
         }
 
         
@@ -158,18 +161,17 @@ class States_Cities extends WP_List_Table {
 		return $sortable_columns;
 	}
 
-    function column_title($item){
-        
+	function column_city($item){
         //Build row actions
         $actions = array(
-            'edit'      => sprintf('<a href="?page=%s&action=%s&movie=%s">Edit</a>',$_REQUEST['page'],'edit',$item['ID']),
-            'delete'    => sprintf('<a href="?page=%s&action=%s&movie=%s">Delete</a>',$_REQUEST['page'],'delete',$item['ID']),
+            'edit'      => sprintf('<a href="?page=%s&action=%s&city=%s">Edit</a>',$_REQUEST['page'],'edit',$item['id']),
+            'delete'    => sprintf('<a href="?page=%s&action=%s&city=%s">Delete</a>',$_REQUEST['page'],'delete',$item['id']),
         );
         
         //Return the title contents
         return sprintf('%1$s <span style="color:silver">(id:%2$s)</span>%3$s',
-            /*$1%s*/ $item['title'],
-            /*$2%s*/ $item['ID'],
+            /*$1%s*/ $item['city'],
+            /*$2%s*/ $item['id'],
             /*$3%s*/ $this->row_actions($actions)
         );
     }
@@ -177,11 +179,9 @@ class States_Cities extends WP_List_Table {
         return sprintf(
             '<input type="checkbox" name="%1$s[]" value="%2$s" />',
             /*$1%s*/ $this->_args['singular'],  //Let's simply repurpose the table's singular label ("movie")
-            /*$2%s*/ $item['ID']                //The value of the checkbox should be the record's id
+            /*$2%s*/ $item['id']                //The value of the checkbox should be the record's id
         );
-    } 
-    
-   
+    }    
 	//This will be used for saving cities
 	public function saveCities($data){
 		global $wpdb;							
@@ -202,7 +202,8 @@ class States_Cities extends WP_List_Table {
 	//This will be used for saving States
 	public function saveStates($data){
 		global $wpdb;
-		 $sql = $wpdb->prepare("select state_code, state_name  from  ". $wpdb->prefix ."states where state_name='%s' ", array($data[self::iSTATE]));
+		 $sql = $wpdb->prepare("select state_code, state_name  from  ". $wpdb->prefix .
+		 "states where state_name='%s' ", array($data[self::iSTATE]));
 		
 		$state = $wpdb->get_results($sql);
 		$wpdb->num_rows ;
@@ -218,6 +219,12 @@ class States_Cities extends WP_List_Table {
 		
 			return $wpdb->insert_id;
 		} else{
+			/*
+			foreach ($state as $s){
+				$stateCode = $s->state_code ;
+				break ;
+			}
+			*/
 			return $stateCode ; 
 		}
 	
@@ -251,44 +258,22 @@ class States_Cities extends WP_List_Table {
 	}
 		
 	// Showing all the states and Cities
-// 	public function listData(){
-// 			global $wpdb;
-// 			$rows = array();
-// 			$result = $wpdb->get_results ( "select c.id, c.zip,c.city,c.state_id, s.state_name from ".$wpdb->prefix."cities c , 
-// 																				".$wpdb->prefix."states s  
-// 																				where c.state_id=s.state_code order by state_name,city limit 0,10 " );
-// 				foreach($result as $val){
-// 					$rows[] = array(
-// 					'id' => $val->id,
-// 					'zip' => $val->zip,
-// 					'city' =>$val->city,
-// 					'stateCode' => $val->state_id,
-// 					'state'=> $val->state_name ,
-// 					);
-// 				}
-// 				return $rows;	
-// 	}
+  public static function listData( $per_page = 20, $page_number = 1 ) {
+		global $wpdb;
+		$sql =$wpdb->prepare("select c.id, c.zip,c.city,c.state_id, s.state_name from ".$wpdb->prefix."cities c ,
+																					".$wpdb->prefix."states s where c.state_id=s.state_code
+																					order by "  ;
+		if ( ! empty( $_REQUEST['orderby'] ) ) {
+			$sql .= ' ORDER BY ' . esc_sql( $_REQUEST['orderby'] );
+			$sql .= ! empty( $_REQUEST['order'] ) ? ' ' . esc_sql( $_REQUEST['order'] ) : ' ASC';
+		}
 
-  public static function get_customers( $per_page = 20, $page_number = 1 ) {
+		$sql .= " LIMIT $per_page";
+		$sql .= ' OFFSET ' . ( $page_number - 1 ) * $per_page;
 
-  global $wpdb;
+		$result = $wpdb->get_results( $sql);
 
-  $sql = "select c.id, c.zip,c.city,c.state_id, s.state_name from ".$wpdb->prefix."cities c ,
- 																				".$wpdb->prefix."states s where c.state_id=s.state_code"  ;
-
-  if ( ! empty( $_REQUEST['orderby'] ) ) {
-    $sql .= ' ORDER BY ' . esc_sql( $_REQUEST['orderby'] );
-    $sql .= ! empty( $_REQUEST['order'] ) ? ' ' . esc_sql( $_REQUEST['order'] ) : ' ASC';
-   }
-
-  $sql .= " LIMIT $per_page";
-
-  $sql .= ' OFFSET ' . ( $page_number - 1 ) * $per_page;
-
-
-  $result = $wpdb->get_results( $sql);
-
- foreach($result as $val){
+		foreach($result as $val){
 					$rows[] = array(
 					'id' => $val->id,
 					'zip' => $val->zip,
@@ -303,11 +288,11 @@ class States_Cities extends WP_List_Table {
 
 	
 	//used for bluck delete
-	public function bulkDelete(){
+	public function bulkDelete($id){
 		global $wpdb;
 			$wpdb->delete(
 				"{$wpdb->prefix}cities",
-				array( 'ID' => $id ),
+				array('id' => $id ),
 				array('%d')
 			);	
 	}
@@ -317,9 +302,15 @@ class States_Cities extends WP_List_Table {
 		$this->display();
   }	
   public function showListCity(){
-		//$ob1 = new States_Cities() ;
+		echo '<h2>List of Cities</h2>';
+		echo '<form id="movies-filter" method="get">'; ?>
+            <!-- For plugins, we also need to ensure that the form posts back to our current page -->
+
+            <input type="hidden" name="page" value="<?php echo $_REQUEST['page'] ?>" />		
+    <?php
 		$this->prepare_items(); 
 		$this->display();
+		echo '</form>';
   }
 	//Rendering Table
 	public function renderTable1(){ 
