@@ -11,8 +11,11 @@ if ( ! defined( 'ABSPATH' ) ) {
         exit; // Exit if accessed directly
 }
 global $woocommerce;
-wc_print_notices();
-
+?>
+<div class="col-lg-offset-3 col-lg-6 offset-right col-xs-12 col-sm-6 clearfix" >
+<?php wc_print_notices(); ?>
+</div>
+<?php
 do_action( 'woocommerce_before_cart' ); ?>
 <?php 
 // Hard coded
@@ -22,7 +25,7 @@ echo '<a href="'. $url .'" class="pull-right checkout-button button alt wc-forwa
 echo '</a>';
 ?>
 
-<div class="clsTopImg">
+<div class="clsTopImg clearfix">
         <span>Resumen de orden</span>
         <span>Comprar</span>
         <span>Recibo</span>
