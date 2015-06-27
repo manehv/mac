@@ -135,6 +135,7 @@ style="padding: 0px; height: 201px; transition: none 0s ease 0s ; transform: tra
     height: 0px;
    visibility: hidden;
 	}
+	
 
 }
 /**FIN ESTILOS MOVILES NUEVOS**/
@@ -1672,4 +1673,17 @@ color:#8D8F92;
 }
 .edit-act-form{
 	margin-top:50px;
+}
+.woocommerce-checkout ul.woocommerce-error{
+margin: 0 25% ;
+    width: 50% ;
+}
+.woocommerce-checkout .back-image{
+	margin-right: 30%;
+}
+@media only screen and (max-width: 320px) {
+	.woocommerce-checkout ul.woocommerce-error{
+	 margin: auto;
+    width: auto;
+	}
 }
