@@ -339,7 +339,7 @@ class States_Cities extends WP_List_Table {
 		$import_state_city	=	add_menu_page('States Cities', 'States Cities', 'manage_options', 
 		'states_cities', array(&$this, 'init') );
 		add_submenu_page('states_cities', 'List of Cities', 'List of Cities', 'manage_options', 'list_cities', array( new States_Cities(), 'showListCity'));
-		add_submenu_page('states_cities', 'List of States', 'List of States', 'manage_options', 'list_states', array( new States_Cities(),'showListState'));
+		//add_submenu_page('states_cities', 'List of States', 'List of States', 'manage_options', 'list_states', array( new States_Cities(),'showListState'));
 	}
 
 	
