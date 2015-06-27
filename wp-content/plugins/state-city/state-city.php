@@ -13,7 +13,7 @@ error_reporting(E_ALL ^ E_NOTICE ^ E_STRICT);
 ini_set('display_startup_error',1);
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
-/*
+
 global $wpdb;
 
 //add_action('admin_menu', array('States_Cities', 'my_menu_pages'));
@@ -31,6 +31,7 @@ class States_Cities extends WP_List_Table {
 	const iSTATE = 3 ;
 	public function __construct(){
 		global $status, $page;
+		$this->per_page = 30 ;
 		add_action('admin_menu', array(&$this, 'my_menu_pages'));
 	// Install plugin
 		register_activation_hook( __FILE__, array( $this, 'activate' ) );
@@ -84,7 +85,7 @@ class States_Cities extends WP_List_Table {
 			}
 
 			usort($data, 'usort_reorder');		
-			
+		$per_page = $this->per_page ;	
 		$current_page = $this->get_pagenum();
 		$total_items = $this->getCountData();
 		$this->set_pagination_args( array(
@@ -101,8 +102,6 @@ class States_Cities extends WP_List_Table {
 																				".$wpdb->prefix."states s  
 																				where c.state_id=s.state_code ";
 		$cnt = $wpdb->get_var($sql);
-		print_r($cnt);
-		echo "<br>";
 		if($cnt == null) $cnt = 0 ;
 		
 		return $cnt ; 
@@ -154,7 +153,6 @@ class States_Cities extends WP_List_Table {
 		);
 		return $sortable_columns;
 	}
-*/	
     function column_title($item){
         
         //Build row actions
@@ -176,9 +174,7 @@ class States_Cities extends WP_List_Table {
             /*$1%s*/ $this->_args['singular'],  //Let's simply repurpose the table's singular label ("movie")
             /*$2%s*/ $item['ID']                //The value of the checkbox should be the record's id
         );
-    } 
-    
-/*    
+    }    
 	//This will be used for saving cities
 	public function saveCities($data){
 		global $wpdb;							
@@ -215,6 +211,12 @@ class States_Cities extends WP_List_Table {
 		
 			return $wpdb->insert_id;
 		} else{
+			/*
+			foreach ($state as $s){
+				$stateCode = $s->state_code ;
+				break ;
+			}
+			*/
 			return $stateCode ; 
 		}
 	
@@ -251,9 +253,13 @@ class States_Cities extends WP_List_Table {
 	public function listData(){
 			global $wpdb;
 			$rows = array();
-			$result = $wpdb->get_results ( "select c.id, c.zip,c.city,c.state_id, s.state_name from ".$wpdb->prefix."cities c , 
+			$current_page = $this->get_pagenum();
+			$offset = $this->per_page * ($current_page -1) ;
+			$sql = $wpdb->prepare("select c.id, c.zip,c.city,c.state_id, s.state_name from ".$wpdb->prefix."cities c , 
 																				".$wpdb->prefix."states s  
-																				where c.state_id=s.state_code order by state_name,city limit 0,100 " );
+																				where c.state_id=s.state_code order by state_name,city limit %d, %d" , 
+																				array( $offset ,  $this->per_page ));
+			$result = $wpdb->get_results ($sql );
 				foreach($result as $val){
 					$rows[] = array(
 					'id' => $val->id,
@@ -281,7 +287,7 @@ class States_Cities extends WP_List_Table {
 		$this->display();
   }	
   public function showListCity(){
-		//$ob1 = new States_Cities() ;
+		echo '<h2>List of Cities</h2>';
 		$this->prepare_items(); 
 		$this->display();
   }
