@@ -205,7 +205,7 @@ class States_Cities extends WP_List_Table {
 	function column_state_name($item){
 		//Build row actions
 		$actions = array(
-				'edit'      => sprintf('<a href="?page=%s&action=%s&state=%s">Edit</a>',$_REQUEST['page'],'edit',$item['id']),
+			//	'edit'      => sprintf('<a href="?page=%s&action=%s&state=%s">Edit</a>',$_REQUEST['page'],'edit',$item['id']),
 				'delete'    => sprintf('<a href="?page=%s&action=%s&state=%s">Delete</a>',$_REQUEST['page'],'delete',$item['id']),
 		);
 		
@@ -222,7 +222,7 @@ class States_Cities extends WP_List_Table {
 
         //Build row actions
         $actions = array(
-            'edit'      => sprintf('<a href="?page=%s&action=%s&city=%s">Edit</a>',$_REQUEST['page'],'edit',$item['id']),
+         //	   'edit'      => sprintf('<a href="?page=%s&action=%s&city=%s">Edit</a>',$_REQUEST['page'],'edit',$item['id']),
             'delete'    => sprintf('<a href="?page=%s&action=%s&city=%s">Delete</a>',$_REQUEST['page'],'delete',$item['id']),
         );
 
@@ -441,6 +441,9 @@ class States_Cities extends WP_List_Table {
 				<label> Select File to import:<br /></label>
 				<input size='50' type='file' name='filename'><br /><br />
 				<input type='submit' class='button-primary' name='submit' value='Upload'>
+				<p>Just for example you my download this sample file 
+					<a href="<?php echo plugins_url( 'import.csv', __FILE__ ); ?>" >CSV File</a> 
+					</p>
 				</form>
 			</div> <!--wrap-->
 	<?php }
