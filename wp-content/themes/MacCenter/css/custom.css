@@ -1648,3 +1648,28 @@ margin-right: 10px;
   color: #ffffff;
   border: 1px solid #0066aa;
 }
+ul.woocommerce-error {
+    background-color: #E7E8E9;
+    background-repeat: no-repeat;
+    border: medium none;
+    color: #05AFEE;
+/*     list-style: outside none none; */
+    margin: 0 0 0;
+    padding: 30px 0 30px 30px;
+		border-radius:25px;
+}
+.back-image{
+	background: rgba(0, 0, 0, 0) url("../images/cone1.png") no-repeat scroll right bottom;
+  height: 30px;
+    margin-right: 30px;
+    width: 100%;
+}
+ul.woocommerce-error a{
+color:#8D8F92;
+}
+.offset-right{
+	margin-right:25%;
+}
+.edit-act-form{
+	margin-top:50px;
+}
