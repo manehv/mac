@@ -12,9 +12,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 ?>
 <div class="col-lg-12 ">
-<?php wc_print_notices(); ?>
+
 
 <form method="post" class="lost_reset_password">
+			<div class="col-lg-offset-2 col-lg-8">
+			<?php wc_print_notices(); ?>
+			</div>
         <h2>Recuperar contraseña</h2>
         <hr/>
         <?php if( 'lost_password' == $args['form'] ) : ?>
