@@ -13,7 +13,7 @@ error_reporting(E_ALL ^ E_NOTICE ^ E_STRICT);
 ini_set('display_startup_error',1);
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
-/*
+
 global $wpdb;
 
 //add_action('admin_menu', array('States_Cities', 'my_menu_pages'));
@@ -59,8 +59,8 @@ class States_Cities extends WP_List_Table {
 			'cb'        => '<input type="checkbox" />', //Render a checkbox instead of text
 			'zip' => 'Zip',
 			'city'    => 'City',
-			'stateCode'      => 'State Code',
-			'state'      => 'State Name'
+			'stateCode'   => 'State Code',
+			'state'   => 'State Name'
 		);
 		return $columns;
 	}	
@@ -71,29 +71,32 @@ class States_Cities extends WP_List_Table {
 		$hidden = array();
 		$sortable = $this->get_sortable_columns();
 		$this->process_bulk_action();
+
+		$per_page = $this->	get_items_per_page('customers_per_page', 20 );
+    $current_page = $this->get_pagenum();
+    $total_items = $this->getCountData();
+    $this->set_pagination_args( array(
+			'total_items' => $total_items,                  //WE have to calculate the total number of items
+			'per_page'    => $per_page,                     //WE have to determine how many items to show on a page
+			//'total_pages' => ceil($total_items/$per_page)   //WE have to calculate the total number of pages
+     ) );
+    
 		$this->_column_headers = array($columns, $hidden, $sortable);
-		$data = $this->listData() ;
+		$data = $this->get_customers($per_page, $current_page) ;
 		$this->items = $data;
 	
 			//Explicitly written within function
-			function usort_reorder($a,$b){
-					$orderby = (!empty($_REQUEST['orderby'])) ? $_REQUEST['orderby'] : 'title'; //If no sort, default to title
-					$order = (!empty($_REQUEST['order'])) ? $_REQUEST['order'] : 'asc'; //If no order, default to asc
-					$result = strcmp($a[$orderby], $b[$orderby]); //Determine sort order
-					return ($order==='asc') ? $result : -$result; //Send final sort direction to usort
-			}
+// 	function usort_reorder($a,$b){
+// 			$orderby = (!empty($_REQUEST['orderby'])) ? $_REQUEST['orderby'] : 'title'; //If no sort, default to title
+// 			$order = (!empty($_REQUEST['order'])) ? $_REQUEST['order'] : 'asc'; //If no order, default to asc
+// 			$result = strcmp($a[$orderby], $b[$orderby]); //Determine sort order
+// 			return ($order==='asc') ? $result : -$result; //Send final sort direction to usort
+// 	}
 
-			usort($data, 'usort_reorder');		
-			
-		$current_page = $this->get_pagenum();
-		$total_items = $this->getCountData();
-		$this->set_pagination_args( array(
-				'total_items' => $total_items,                  //WE have to calculate the total number of items
-				'per_page'    => $per_page,                     //WE have to determine how many items to show on a page
-				'total_pages' => ceil($total_items/$per_page)   //WE have to calculate the total number of pages
-		) );		
-	
-	}
+	//usort($data, 'usort_reorder');
+
+			//$current_page = $this->get_pagenum();
+}
 	//Find Total Records
 	function getCountData(){
 		global $wpdb ;
@@ -149,12 +152,12 @@ class States_Cities extends WP_List_Table {
 		$sortable_columns = array(
 			'zip'  => array('zip',false),
 			'city' => array('city',false),
-			'stateCode'   => array('stateCode',false),
-			'state'   => array('state',false)
+			'stateCode'  => array('stateCode',false),
+			'state' => array('state',false)
 		);
 		return $sortable_columns;
 	}
-*/	
+
     function column_title($item){
         
         //Build row actions
@@ -178,7 +181,7 @@ class States_Cities extends WP_List_Table {
         );
     } 
     
-/*    
+   
 	//This will be used for saving cities
 	public function saveCities($data){
 		global $wpdb;							
@@ -248,13 +251,44 @@ class States_Cities extends WP_List_Table {
 	}
 		
 	// Showing all the states and Cities
-	public function listData(){
-			global $wpdb;
-			$rows = array();
-			$result = $wpdb->get_results ( "select c.id, c.zip,c.city,c.state_id, s.state_name from ".$wpdb->prefix."cities c , 
-																				".$wpdb->prefix."states s  
-																				where c.state_id=s.state_code order by state_name,city limit 0,100 " );
-				foreach($result as $val){
+// 	public function listData(){
+// 			global $wpdb;
+// 			$rows = array();
+// 			$result = $wpdb->get_results ( "select c.id, c.zip,c.city,c.state_id, s.state_name from ".$wpdb->prefix."cities c , 
+// 																				".$wpdb->prefix."states s  
+// 																				where c.state_id=s.state_code order by state_name,city limit 0,10 " );
+// 				foreach($result as $val){
+// 					$rows[] = array(
+// 					'id' => $val->id,
+// 					'zip' => $val->zip,
+// 					'city' =>$val->city,
+// 					'stateCode' => $val->state_id,
+// 					'state'=> $val->state_name ,
+// 					);
+// 				}
+// 				return $rows;	
+// 	}
+
+  public static function get_customers( $per_page = 20, $page_number = 1 ) {
+
+  global $wpdb;
+
+  $sql = "select c.id, c.zip,c.city,c.state_id, s.state_name from ".$wpdb->prefix."cities c ,
+ 																				".$wpdb->prefix."states s where c.state_id=s.state_code"  ;
+
+  if ( ! empty( $_REQUEST['orderby'] ) ) {
+    $sql .= ' ORDER BY ' . esc_sql( $_REQUEST['orderby'] );
+    $sql .= ! empty( $_REQUEST['order'] ) ? ' ' . esc_sql( $_REQUEST['order'] ) : ' ASC';
+   }
+
+  $sql .= " LIMIT $per_page";
+
+  $sql .= ' OFFSET ' . ( $page_number - 1 ) * $per_page;
+
+
+  $result = $wpdb->get_results( $sql);
+
+ foreach($result as $val){
 					$rows[] = array(
 					'id' => $val->id,
 					'zip' => $val->zip,
@@ -263,16 +297,18 @@ class States_Cities extends WP_List_Table {
 					'state'=> $val->state_name ,
 					);
 				}
-				return $rows;	
-	}
+		return $rows;
+}
+ 
+
 	
 	//used for bluck delete
 	public function bulkDelete(){
 		global $wpdb;
 			$wpdb->delete(
 				"{$wpdb->prefix}cities",
-				[ 'ID' => $id ],
-				[ '%d' ]
+				array( 'ID' => $id ),
+				array('%d')
 			);	
 	}
   public function showListStates(){
@@ -314,6 +350,7 @@ class States_Cities extends WP_List_Table {
 					  $ob1 = new States_Cities() ;
 						$ob1->prepare_items(); 
 						$ob1->display();
+						$ob1->pagination($additional_loop->max_num_pages);
 					?>
 				</div>
 			</div> <!--wrap-->
