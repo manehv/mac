@@ -9,9 +9,7 @@ Domain Path: /languages/
 Version: 0.1.0
 */
  
-//error_reporting(E_ALL ^ E_NOTICE ^ E_STRICT);
-//ini_set('display_errors', 1);
-//ini_set('display_startup_error', 1);
+error_reporting(E_ALL ^ E_NOTICE ^ E_STRICT);
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 global $wpdb;
@@ -30,6 +28,7 @@ class States_Cities extends WP_List_Table {
 	const iSTATECODE = 2 ;
 	const iSTATE = 3 ;
 	public function __construct(){
+		global $status, $page;
 		add_action('admin_menu', array(&$this, 'my_menu_pages'));
 	// Install plugin
 		register_activation_hook( __FILE__, array( $this, 'activate' ) );
@@ -64,11 +63,46 @@ class States_Cities extends WP_List_Table {
 		return $columns;
 	}	
 	public function prepare_items() {
+		global $wpdb;
+		
 		$columns = $this->get_columns();
 		$hidden = array();
 		$sortable = $this->get_sortable_columns();
+		$this->process_bulk_action();
 		$this->_column_headers = array($columns, $hidden, $sortable);
-		$this->items = $this->listData();
+		$data = $this->listData() ;
+		$this->items = $data;
+		/*
+			//Explicitly written within function
+			function usort_reorder($a,$b){
+					$orderby = (!empty($_REQUEST['orderby'])) ? $_REQUEST['orderby'] : 'title'; //If no sort, default to title
+					$order = (!empty($_REQUEST['order'])) ? $_REQUEST['order'] : 'asc'; //If no order, default to asc
+					$result = strcmp($a[$orderby], $b[$orderby]); //Determine sort order
+					return ($order==='asc') ? $result : -$result; //Send final sort direction to usort
+			}
+			usort($data, 'usort_reorder');		
+			
+		$current_page = $this->get_pagenum();
+		$total_items = $this->getCountData();
+		$this->set_pagination_args( array(
+				'total_items' => $total_items,                  //WE have to calculate the total number of items
+				'per_page'    => $per_page,                     //WE have to determine how many items to show on a page
+				'total_pages' => ceil($total_items/$per_page)   //WE have to calculate the total number of pages
+		) );		
+		*/
+	}
+	//Find Total Records
+	function getCountData(){
+		global $wpdb ;
+		$sql = "select count(*) from ".$wpdb->prefix."cities c , 
+																				".$wpdb->prefix."states s  
+																				where c.state_id=s.state_code ";
+		$cnt = $wpdb->get_var($sql);
+		print_r($cnt);
+		echo "<br>";
+		if($cnt == null) $cnt = 0 ;
+		
+		return $cnt ; 
 	}
 	//This will be used to display column name
 	function column_default($item, $column_name){
@@ -82,7 +116,20 @@ class States_Cities extends WP_List_Table {
 							return print_r($item,true); //Show the whole array for troubleshooting purposes
 			}
 	}	
-	
+    function get_bulk_actions() {
+        $actions = array(
+            'delete'    => 'Delete'
+        );
+        return $actions;
+    }	
+    function process_bulk_action() {
+        
+        //Detect when a bulk action is being triggered...
+        if( 'delete'===$this->current_action() ) {
+            wp_die('Items deleted (or they would be if we had items to delete)!');
+        }
+        
+    }    
 	function get_sortable_columns() {
 		$sortable_columns = array(
 			'zip'  => array('zip',false),
@@ -192,11 +239,12 @@ class States_Cities extends WP_List_Table {
 	public function listData(){
 			global $wpdb;
 			$rows = array();
-			$result = $wpdb->get_results ( "select c.zip,c.city,c.state_id, s.state_name from ".$wpdb->prefix."cities c , 
+			$result = $wpdb->get_results ( "select c.id, c.zip,c.city,c.state_id, s.state_name from ".$wpdb->prefix."cities c , 
 																				".$wpdb->prefix."states s  
-																				where c.state_id=s.state_code order by state_name,city " );
+																				where c.state_id=s.state_code order by state_name,city limit 0,100 " );
 				foreach($result as $val){
 					$rows[] = array(
+					'id' => $val->id,
 					'zip' => $val->zip,
 					'city' =>$val->city,
 					'stateCode' => $val->state_id,
@@ -215,7 +263,12 @@ class States_Cities extends WP_List_Table {
 				[ '%d' ]
 			);	
 	}
-  public function showList(){
+  public function showListStates(){
+		//$ob1 = new States_Cities() ;
+		$this->prepare_items(); 
+		$this->display();
+  }	
+  public function showListCity(){
 		//$ob1 = new States_Cities() ;
 		$this->prepare_items(); 
 		$this->display();
@@ -258,7 +311,8 @@ class States_Cities extends WP_List_Table {
 	function my_menu_pages(){
 		$import_state_city	=	add_menu_page('States Cities', 'States Cities', 'manage_options', 
 		'states_cities', array(&$this, 'init') );
-		add_submenu_page('states_cities', 'List of Cities', 'List of Cities', 'manage_options', 'list_cities', array( new States_Cities(), 'showList'));
+		add_submenu_page('states_cities', 'List of Cities', 'List of Cities', 'manage_options', 'list_cities', array( new States_Cities(), 'showListCity'));
+		add_submenu_page('states_cities', 'List of States', 'List of States', 'manage_options', 'list_states', array( new States_Cities(),'showListState'));
 	}
 
 	
