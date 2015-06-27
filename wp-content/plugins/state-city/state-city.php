@@ -1,4 +1,4 @@
-<?php 
+<?php
 /*
 Plugin Name: States Cities
 Plugin URI: http://8manos.com/
@@ -8,7 +8,7 @@ Text Domain: States Cities
 Domain Path: /languages/
 Version: 0.1.0
 */
- 
+
 error_reporting(E_ALL ^ E_NOTICE ^ E_STRICT);
 ini_set('display_startup_error',1);
 
@@ -32,13 +32,14 @@ class States_Cities extends WP_List_Table {
 	public function __construct(){
 		global $status, $page;
 		$this->per_page = 30 ;
-		//Set parent defaults
+		//Set parent defaults
+
 		parent::__construct( array(
 				'singular'  => 'city',     //singular name of the listed records
 				'plural'    => 'cities',    //plural name of the listed records
 				'ajax'      => false        //does this table support ajax?
 		) );
-		
+
 		add_action('admin_menu', array(&$this, 'my_menu_pages'));
 
 	// Install plugin
@@ -59,7 +60,7 @@ class States_Cities extends WP_List_Table {
 		wp_enqueue_script('jquery-ui-tabs');  // For admin panel page tabs
 		wp_enqueue_script('jquery-ui-dialog');  // For admin panel popup alerts
   	wp_enqueue_script( 'import_state_city', plugins_url( '/state-city.js', __FILE__ ), array('jquery') );
-  	wp_enqueue_style('import_state_city', plugins_url( '/state-city.css', __FILE__ )); 			
+  	wp_enqueue_style('import_state_city', plugins_url( '/state-city.css', __FILE__ ));
 
   	$this->renderTable1();
 	}
@@ -92,7 +93,6 @@ class States_Cities extends WP_List_Table {
 		$this->_column_headers = array($columns, $hidden, $sortable);
 		$data = $this->listDataStates() ;
 		$this->items = $data;
-				
 		$per_page = $this->per_page ;	
 		$current_page = $this->get_pagenum();
 		$total_items = $this->getCountDataState();
@@ -100,12 +100,11 @@ class States_Cities extends WP_List_Table {
 				'total_items' => $total_items,                  //WE have to calculate the total number of items
 				'per_page'    => $per_page,                     //WE have to determine how many items to show on a page
 				'total_pages' => ceil($total_items/$per_page)   //WE have to calculate the total number of pages
-		) );		
-	
+		) );
 	}
 	public function prepare_items() {
 		global $wpdb;
-		
+
 		$columns = $this->get_columns();
 		$hidden = array();
 		$sortable = $this->get_sortable_columns();
@@ -113,9 +112,6 @@ class States_Cities extends WP_List_Table {
 		$this->_column_headers = array($columns, $hidden, $sortable);
 		$data = $this->listData() ;
 		$this->items = $data;
-	
-
-			
 		$per_page = $this->per_page ;	
 		$current_page = $this->get_pagenum();
 		$total_items = $this->getCountData();
@@ -123,27 +119,28 @@ class States_Cities extends WP_List_Table {
 				'total_items' => $total_items,                  //WE have to calculate the total number of items
 				'per_page'    => $per_page,                     //WE have to determine how many items to show on a page
 				'total_pages' => ceil($total_items/$per_page)   //WE have to calculate the total number of pages
-		) );		
-	
+		) );
+
 	}
 	function getCountDataState(){
 		global $wpdb ;
 		$sql = "select count(*) from ".$wpdb->prefix."states s ";
 		$cnt = $wpdb->get_var($sql);
 		if($cnt == null) $cnt = 0 ;
-		return $cnt ; 
-	
+		return $cnt ;
+
 	}
+
 	//Find Total Records
 	function getCountData(){
 		global $wpdb ;
-		$sql = "select count(*) from ".$wpdb->prefix."cities c , 
-																				".$wpdb->prefix."states s  
+		$sql = "select count(*) from ".$wpdb->prefix."cities c ,
+																				".$wpdb->prefix."states s
 																				where c.state_id=s.state_code ";
 		$cnt = $wpdb->get_var($sql);
 		if($cnt == null) $cnt = 0 ;
-		
-		return $cnt ; 
+
+		return $cnt ;
 	}
 	//This will be used to display column name
 	function column_default($item, $column_name){
@@ -158,13 +155,13 @@ class States_Cities extends WP_List_Table {
 					default:
 							return print_r($item,true); //Show the whole array for troubleshooting purposes
 			}
-	}	
+	}
     function get_bulk_actions() {
         $actions = array(
             'delete'    => 'Delete'
         );
         return $actions;
-    }	
+    }
     function process_bulk_action() {
         //Detect when a bulk action is being triggered...
         if( 'delete'===$this->current_action() ) {
@@ -185,9 +182,9 @@ class States_Cities extends WP_List_Table {
             //wp_die('Items deleted (or they would be if we had items to delete)!');
         }
 
-        
 
-    }    
+
+    }
 	function get_sortable_columns() {
 		$sortable_columns = array(
 			'zip'  => array('zip',false),
@@ -204,6 +201,7 @@ class States_Cities extends WP_List_Table {
 		);
 		return $sortable_columns;
 	}
+
 	function column_state_name($item){
 		//Build row actions
 		$actions = array(
@@ -219,14 +217,15 @@ class States_Cities extends WP_List_Table {
 		);
 	
 	}
+
     function column_city($item){
-        
+
         //Build row actions
         $actions = array(
             'edit'      => sprintf('<a href="?page=%s&action=%s&city=%s">Edit</a>',$_REQUEST['page'],'edit',$item['id']),
             'delete'    => sprintf('<a href="?page=%s&action=%s&city=%s">Delete</a>',$_REQUEST['page'],'delete',$item['id']),
         );
-        
+
         //Return the title contents
         return sprintf('%1$s <span style="color:silver">(id:%2$s)</span>%3$s',
             /*$1%s*/ $item['city'],
@@ -246,42 +245,41 @@ class States_Cities extends WP_List_Table {
             /*$1%s*/ $key ,  //Let's simply repurpose the table's singular label ("movie")
             /*$2%s*/ $item['id']                //The value of the checkbox should be the record's id
         );
-    }    
-   
+    }
 	//This will be used for saving cities
 	public function saveCities($data){
-		global $wpdb;							
+		global $wpdb;
 //		print_r($data);
 		$sql = $wpdb->prepare("select * from  ".$wpdb->prefix."cities where state_id ='%d' and city = '%s'", array($data[self::iSTATECODE], $data[self::iCITY]));
 		$state = $wpdb->get_results ($sql);
-		
+
 		if($wpdb->num_rows == 0 ){
-			$rs = $wpdb->insert( $wpdb->prefix . "cities" , 
-																		 array('zip' => $data[self::iZIP] 
+			$rs = $wpdb->insert( $wpdb->prefix . "cities" ,
+																		 array('zip' => $data[self::iZIP]
 																					,'city'=> $data[self::iCITY]
 																					,'state_id'=> $data[self::iSTATECODE]
 																					),
 																		array('%d','%s','%d'));
 		}
 	}
-	
+
 	//This will be used for saving States
 	public function saveStates($data){
 		global $wpdb;
 		 $sql = $wpdb->prepare("select state_code, state_name  from  ". $wpdb->prefix ."states where state_name='%s' ", array($data[self::iSTATE]));
-		
+
 		$state = $wpdb->get_results($sql);
 		$wpdb->num_rows ;
-		
+
 		//print_r($data);
 		//die;
 		if($wpdb->num_rows == 0 ){
 			//echo $sql . "<br>";
-			
-			$rs = $wpdb->insert( $wpdb->prefix . "states" , array('state_code' => $data[self::iSTATECODE] 
+
+			$rs = $wpdb->insert( $wpdb->prefix . "states" , array('state_code' => $data[self::iSTATECODE]
 																					,'state_name'=> $data[self::iSTATE]),
 																		array('%d','%s'));
-		
+
 			return $wpdb->insert_id;
 		} else{
 			/*
@@ -290,19 +288,19 @@ class States_Cities extends WP_List_Table {
 				break ;
 			}
 			*/
-			return $stateCode ; 
+			return $stateCode ;
 		}
-	
+
 	}
-	
+
 	public function parseCSV(){
-		global $wpdb;	
+		global $wpdb;
 
 		if (isset($_POST['submit'])) {
 			if (is_uploaded_file($_FILES['filename']['tmp_name'])):
 					//Import uploaded file to Database
 					$handle = fopen($_FILES['filename']['tmp_name'], "r");
-					
+
 					$i=0;
 					while (($data = fgetcsv($handle)) !== FALSE):
 							$i++;
@@ -310,25 +308,25 @@ class States_Cities extends WP_List_Table {
 							$id = self::saveStates($data);
 								//print_r($data);
 								//continue ;
-							
+
 							self::saveCities($data);
 					endwhile;
 					fclose($handle);
-					if (is_uploaded_file($_FILES['filename']['tmp_name'])) {
-								echo "<h2>" . "File ". $_FILES['filename']['name'] ." uploaded successfully." . "</h2>";
-					}
+					echo "<div class='updated'><p>File \"". $_FILES['filename']['name'] ."\" Imported for cities & states.</p></div>";
+
+					
 			endif;	//if file uploaded properly
 		}
 
 	}
-		
+
 	// Showing all the states and Cities
 	public function listData(){
 			global $wpdb;
 			$rows = array();
 			$current_page = $this->get_pagenum();
 			$offset = $this->per_page * ($current_page -1) ;
-			if(array_key_exists($_REQUEST['orderby'], $this->get_sortable_columns()) == true || 
+			if(array_key_exists($_REQUEST['orderby'], $this->get_sortable_columns()) == true ||
 				$_REQUEST['orderby'] == ""){
 				$orderby = (!empty($_REQUEST['orderby'])) ? $_REQUEST['orderby'] : 'city'; //If no sort, default to title
 			}
@@ -349,7 +347,7 @@ class States_Cities extends WP_List_Table {
 					'state_name'=> $val->state_name ,
 					);
 				}
-				return $rows;	
+				return $rows;
 	}
 
 	// Showing all the states and Cities
@@ -388,7 +386,7 @@ class States_Cities extends WP_List_Table {
 				"{$wpdb->prefix}cities",
 				array('id' => $id ),
 				array('%d')
-			);	
+			);
 	}
 	public function bulkDeleteState($id){
 		global $wpdb;
@@ -411,7 +409,7 @@ class States_Cities extends WP_List_Table {
   public function showListStates(){
 		echo '<h2>List of States</h2>';
 		echo '<form id="movies-filter" method="get">'; ?>
-            <!-- For plugins, we also need to ensure that the form posts back to our current page -->
+            <!-- For plugins, we also need to ensure that the form posts back to our current page -->
             <input type="hidden" name="page" value="<?php echo $_REQUEST['page'] ?>" />		
     <?php
 		$this->prepare_items_forState(); 
@@ -421,50 +419,34 @@ class States_Cities extends WP_List_Table {
   public function showListCity(){
 		echo '<h2>List of Cities</h2>';
 		echo '<form id="movies-filter" method="get">'; ?>
-            <!-- For plugins, we also need to ensure that the form posts back to our current page -->
-            <input type="hidden" name="page" value="<?php echo $_REQUEST['page'] ?>" />		
+            <!-- For plugins, we also need to ensure that the form posts back to our current page -->
+
+            <input type="hidden" name="page" value="<?php echo $_REQUEST['page'] ?>" />
     <?php
-		$this->prepare_items(); 
+		$this->prepare_items();
 		$this->display();
 		echo '</form>';
   }
 	//Rendering Table
-	public function renderTable1(){ 
+	public function renderTable1(){
 		if($_POST['submit'] != ""){
 			self::parseCSV();
 		}
 	?>
-		
+
 			<div  class="wrap">
 			<h2><?php _e('Import State City',''); ?></h2>
-			<div id="tabs" class="tabs">
-								<ul>
-									<li><a class="nav-tab" href="#tabs-1"><?php _e('Upload',''); ?></a></li>
-									<li><a class="nav-tab" href="#tabs-2"><?php _e('Report',''); ?></a></li>
-							</ul>
-				<div id="tabs-1">	
-					<br/>
-						<form enctype='multipart/form-data'  method='post'>
-						<input type='hidden' name='action' value="importcsv">
-						<label> Select File to import:<br /></label>
-						<input size='50' type='file' name='filename'><br /><br />
-						<input type='submit' class='button-primary' name='submit' value='Upload'>
-					</form>					
-				</div>
-				<div id="tabs-2">
-					<h2>State City Table</h2>		
-					<?php 
-					  $ob1 = new States_Cities() ;
-						$ob1->prepare_items(); 
-						$ob1->display();
-					?>
-				</div>
+				<form enctype='multipart/form-data'  method='post'>
+				<input type='hidden' name='action' value="importcsv">
+				<label> Select File to import:<br /></label>
+				<input size='50' type='file' name='filename'><br /><br />
+				<input type='submit' class='button-primary' name='submit' value='Upload'>
+				</form>
 			</div> <!--wrap-->
 	<?php }
-	
+
 	//Form Menu
 	function my_menu_pages(){
-		
 		add_menu_page('states_cities', 'Import Cities', 'manage_options', 'states_cities', array(&$this, 'init') );
 		add_submenu_page('states_cities', 'List of Cities', 'List of Cities', 'manage_options', 'list_cities', array( new States_Cities(), 'showListCity'));
 		add_submenu_page('states_cities', 'List of States', 'List of States', 'manage_options', 'list_states', array( new States_Cities(),'showListStates'));
