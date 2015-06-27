@@ -45,16 +45,17 @@ echo '</a>';
                         <a href="<?php echo esc_url( wc_get_page_permalink( 'myaccount' ) ); ?>" class="button pay"><?php _e( 'My Account', 'woocommerce' ); ?></a>
                         <?php endif; ?>
                 </p>
-
+									
         <?php else : ?>
+								<div class="col-lg-offset-3 col-lg-6 offset-right col-sm-offset-3 col-sm-6 col-xs-12">
+									<?php if ( in_array( $order->status, array( 'on-hold' ) ) ){ ?>
+									<p class="fakealert tres"><!--<pre><?php print_r($order); ?></pre>--><?php echo apply_filters( 'woocommerce_thankyou_order_received_text', __( 'Tu transacción se encuentra en proceso de validación, pronto nos estaremos comunicando contigo', 'woocommerce' ), $order ); ?></p>
 
-                <?php if ( in_array( $order->status, array( 'on-hold' ) ) ){ ?>
-                <p class="fakealert tres"><!--<pre><?php print_r($order); ?></pre>--><?php echo apply_filters( 'woocommerce_thankyou_order_received_text', __( 'Tu transacción se encuentra en proceso de validación, pronto nos estaremos comunicando contigo', 'woocommerce' ), $order ); ?></p>
-
-                <?php }else{ ?>
-                <p class="fakealert tres"><!--<pre><?php print_r($order->status); ?></pre>--><?php echo apply_filters( 'woocommerce_thankyou_order_received_text', __( 'Thank you. Your order has been received.', 'woocommerce' ), $order ); ?></p>
-                <?php } ?>
-                
+									<?php }else{ ?>
+									<p class="fakealert tres"><!--<pre><?php print_r($order->status); ?></pre>--><?php echo apply_filters( 'woocommerce_thankyou_order_received_text', __( 'Thank you. Your order has been received.', 'woocommerce' ), $order ); ?></p>
+									<?php } ?>
+									<div class="back-image pull-right"></div>
+                </div>
                 <ul class="order_details">
                         <li class="order">
                                 <?php _e( 'Order Number:', 'woocommerce' ); ?>
