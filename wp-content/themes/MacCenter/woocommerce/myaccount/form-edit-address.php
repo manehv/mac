@@ -21,9 +21,6 @@ $page_title = ( $load_address === 'billing' ) ? __( 'Billing Address', 'woocomme
 get_currentuserinfo();
 ?>
 
-
-<?php wc_print_notices(); ?>
-
 <?php if ( ! $load_address ) : ?>
 
         <?php wc_get_template( 'myaccount/my-address.php' ); ?>
@@ -31,6 +28,9 @@ get_currentuserinfo();
 <?php else : ?>
 
         <form method="post">
+        <div class="">
+				<?php wc_print_notices(); ?>
+				</div>
                 <br>
                 <h3><?php echo apply_filters( 'woocommerce_my_account_edit_address_title', $page_title ); ?></h3>
                 <br>
