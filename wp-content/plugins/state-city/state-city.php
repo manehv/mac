@@ -13,7 +13,7 @@ error_reporting(E_ALL ^ E_NOTICE ^ E_STRICT);
 ini_set('display_startup_error',1);
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
-
+/*
 global $wpdb;
 
 //add_action('admin_menu', array('States_Cities', 'my_menu_pages'));
@@ -74,18 +74,13 @@ class States_Cities extends WP_List_Table {
 		$this->_column_headers = array($columns, $hidden, $sortable);
 		$data = $this->listData() ;
 		$this->items = $data;
-		/*
+	
 			//Explicitly written within function
 			function usort_reorder($a,$b){
-
 					$orderby = (!empty($_REQUEST['orderby'])) ? $_REQUEST['orderby'] : 'title'; //If no sort, default to title
-
 					$order = (!empty($_REQUEST['order'])) ? $_REQUEST['order'] : 'asc'; //If no order, default to asc
-
 					$result = strcmp($a[$orderby], $b[$orderby]); //Determine sort order
-
 					return ($order==='asc') ? $result : -$result; //Send final sort direction to usort
-
 			}
 
 			usort($data, 'usort_reorder');		
@@ -93,15 +88,11 @@ class States_Cities extends WP_List_Table {
 		$current_page = $this->get_pagenum();
 		$total_items = $this->getCountData();
 		$this->set_pagination_args( array(
-
 				'total_items' => $total_items,                  //WE have to calculate the total number of items
-
 				'per_page'    => $per_page,                     //WE have to determine how many items to show on a page
-
 				'total_pages' => ceil($total_items/$per_page)   //WE have to calculate the total number of pages
-
 		) );		
-		*/
+	
 	}
 	//Find Total Records
 	function getCountData(){
@@ -163,6 +154,7 @@ class States_Cities extends WP_List_Table {
 		);
 		return $sortable_columns;
 	}
+*/	
     function column_title($item){
         
         //Build row actions
@@ -184,7 +176,9 @@ class States_Cities extends WP_List_Table {
             /*$1%s*/ $this->_args['singular'],  //Let's simply repurpose the table's singular label ("movie")
             /*$2%s*/ $item['ID']                //The value of the checkbox should be the record's id
         );
-    }    
+    } 
+    
+/*    
 	//This will be used for saving cities
 	public function saveCities($data){
 		global $wpdb;							
@@ -221,12 +215,6 @@ class States_Cities extends WP_List_Table {
 		
 			return $wpdb->insert_id;
 		} else{
-			/*
-			foreach ($state as $s){
-				$stateCode = $s->state_code ;
-				break ;
-			}
-			*/
 			return $stateCode ; 
 		}
 	
