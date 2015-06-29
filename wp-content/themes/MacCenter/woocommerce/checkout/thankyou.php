@@ -29,17 +29,21 @@ echo '</a>';
                 <img src="<?php echo get_template_directory_uri(); ?>/images/cart-line3.svg" />
         </div>
         <?php if ( in_array( $order->status, array( 'failed' ) ) || in_array( $order->status, array( 'rejected' ) ) || in_array( $order->status, array( 'cancelled' ) ) || in_array( $order->status, array( 'failed' ) ) || in_array( $order->status, array( 'canceled' ) ) ) : ?>
-
-                <p class="fakealert cero"><?php _e( 'Unfortunately your order cannot be processed as the originating bank/merchant has declined your transaction.', 'woocommerce' ); ?></p>
-
-                <p class="fakealert uno"><?php
-                        if ( is_user_logged_in() )
-                                _e( 'Please attempt your purchase again or go to your account page.', 'woocommerce' );
-                        else
-                                _e( 'Please attempt your purchase again.', 'woocommerce' );
-                ?></p>
-
-                <p class="fakealert dos">
+									
+								<div class="col-lg-offset-3 col-lg-6 offset-right col-sm-offset-3 col-sm-6 col-xs-12">	
+									<p class="fakealert cero"><?php _e( 'Unfortunately your order cannot be processed as the originating bank/merchant has declined your transaction.', 'woocommerce' ); ?></p>
+										<div class="back-image pull-right"></div>
+								</div>	
+								<div class="col-lg-offset-3 col-lg-6 offset-right col-sm-offset-3 col-sm-6 col-xs-12">	
+									<p class="fakealert uno"><?php
+													if ( is_user_logged_in() )
+																	_e( 'Please attempt your purchase again or go to your account page.', 'woocommerce' );
+													else
+																	_e( 'Please attempt your purchase again.', 'woocommerce' );
+									?></p>
+									<div class="back-image pull-right"></div>
+								</div>
+                <p class=" dos">
                         <a href="<?php echo esc_url( $order->get_checkout_payment_url() ); ?>" class="button pay"><?php _e( 'Pay', 'woocommerce' ) ?></a>
                         <?php if ( is_user_logged_in() ) : ?>
                         <a href="<?php echo esc_url( wc_get_page_permalink( 'myaccount' ) ); ?>" class="button pay"><?php _e( 'My Account', 'woocommerce' ); ?></a>
@@ -84,7 +88,8 @@ echo '</a>';
         <?php do_action( 'woocommerce_thankyou', $order->id ); ?>
 
 <?php else : ?>
-
-        <p class="fakealert cuatro"><?php echo apply_filters( 'woocommerce_thankyou_order_received_text', __( 'Tu transacción se encuentra en proceso de validación, pronto nos estaremos comunicando contigo', 'woocommerce' ), null ); ?></p>
-
+				<div class="col-lg-offset-3 col-lg-6 offset-right col-sm-offset-3 col-sm-6 col-xs-12">
+					<p class="fakealert cuatro"><?php echo apply_filters( 'woocommerce_thankyou_order_received_text', __( 'Tu transacción se encuentra en proceso de validación, pronto nos estaremos comunicando contigo', 'woocommerce' ), null ); ?></p>
+					<div class="back-image pull-right"></div>
+         </div>
 <?php endif; ?>
