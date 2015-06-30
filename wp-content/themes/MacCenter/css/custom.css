@@ -7,7 +7,7 @@
 @import url('fonts/MyriadSetPro-Bold-fontfacekit/web-fonts/MyriadSetPro-Bold/stylesheet.css');
 @import url('fonts/MyriadSetPro-Medium-fontfacekit/stylesheet.css');
 
-#foot .footer_color{
+.footer_color #foot{
 border-top: 1px solid #EAEAEA !important;	
 }
 #foot{
