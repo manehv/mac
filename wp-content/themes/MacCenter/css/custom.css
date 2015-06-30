@@ -517,6 +517,15 @@ box-shadow:none !important;
     overflow-y:hidden;
 }*/
 
+/*AJUSTE MOSTRAR BTNS HOMEBOX*/
+#top .avia-smallarrow-slider .avia-slideshow-dots {
+    position: relative;
+    width: 100%;
+    left: 0px;
+    bottom: 0px;
+    margin-top: 10px;
+    display: block;
+}
 /*AJUSTE DOTS SLIDER PRINCIPAL*/
 .avia-slideshow-dots {
     position: relative;
@@ -526,7 +535,7 @@ box-shadow:none !important;
     text-align: center;
     left: 0px;
     height: 0px;
-    display: block;
+    display: none;
 }
 .avia-slideshow-dots a {
     display: inline-block;
