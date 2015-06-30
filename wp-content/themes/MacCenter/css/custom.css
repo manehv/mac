@@ -7,10 +7,7 @@
 @import url('fonts/MyriadSetPro-Bold-fontfacekit/web-fonts/MyriadSetPro-Bold/stylesheet.css');
 @import url('fonts/MyriadSetPro-Medium-fontfacekit/stylesheet.css');
 
-.avia-slideshow-arrows .avia-slideshow-controls.avia-slideshow-dots{
-	display: none !important;
-	
-}
+
 /*ESTILO MASONRI BLOG*/
 .main_color .av-masonry {
     background-color: #666666 !important;
