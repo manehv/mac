@@ -9,6 +9,8 @@
 .fc-common .emailfield-cover:after {
 	    content: none !important;
 }
+body .units.alpha {
+    width: 73%;}
 /*ESTILOS BTN MOVIL*/
 /*ESTILOS BTN MOVIL*/
 /*ESTILOS BTN MOVIL*/
