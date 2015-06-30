@@ -6,6 +6,10 @@
 @import url('fonts/open-sans-fontfacekit/web-fonts/opensans_regular/stylesheet.css');*/
 @import url('fonts/MyriadSetPro-Bold-fontfacekit/web-fonts/MyriadSetPro-Bold/stylesheet.css');
 @import url('fonts/MyriadSetPro-Medium-fontfacekit/stylesheet.css');
+
+#foot .footer_color{
+border-top: 1px solid #EAEAEA !important;	
+}
 #foot{
 	border-top: 1px solid #EAEAEA !important;
 }
