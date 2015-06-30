@@ -526,7 +526,7 @@ box-shadow:none !important;
     text-align: center;
     left: 0px;
     height: 0px;
-    display: none !important;
+    display: block;
 }
 .avia-slideshow-dots a {
     display: inline-block;
