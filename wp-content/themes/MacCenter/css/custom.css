@@ -6,16 +6,7 @@
 @import url('fonts/open-sans-fontfacekit/web-fonts/opensans_regular/stylesheet.css');*/
 @import url('fonts/MyriadSetPro-Bold-fontfacekit/web-fonts/MyriadSetPro-Bold/stylesheet.css');
 @import url('fonts/MyriadSetPro-Medium-fontfacekit/stylesheet.css');
-.avia-slideshow .avia-slideshow-1  .av-control-default .avia-slideshow-extra_large .av_slideshow_full   .avia-slide-slider .avia-slideshow-dots {
-position: relative;
-z-index: 200;
-width: 100%;
-bottom: 30px !important;
-text-align: center;
-left: 0px;
-height: 0px;
-display: none !important;
-}
+
 
 /*ESTILO MASONRI BLOG*/
 .main_color .av-masonry {
