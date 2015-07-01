@@ -7,9 +7,9 @@
 @import url('fonts/MyriadSetPro-Bold-fontfacekit/web-fonts/MyriadSetPro-Bold/stylesheet.css');
 @import url('fonts/MyriadSetPro-Medium-fontfacekit/stylesheet.css');
 /*AJUSTE BTN LETF TIRADO A LA DERECHA*/
-.caption_left.slideshow_caption{
-margin-left:72% !important;
-margin-top:-50px !important;
+.caption_left .slideshow_caption {
+left:72% !important;
+top:-50px !important;
 }
 .footer_color #foot{
 border-top: 1px solid #EAEAEA !important;	
