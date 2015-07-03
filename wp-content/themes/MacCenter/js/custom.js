@@ -149,7 +149,7 @@ jQuery(document).ready(function($)
      state= $(this).val();
 		 $('#shipping_city').empty();
 		 $.ajax({
-              url: "/mac/wp-admin/admin-ajax.php",
+              url: "/wp-admin/admin-ajax.php",
               type: "POST",
               dataType:"json",
     				  data:'action=cities_ajax_call&state='+state,
@@ -157,9 +157,9 @@ jQuery(document).ready(function($)
 					    success: function(data) {
              
 							$.each(data.cities, function(index, value) {
-               $("#shipping_city").append($('<option>').html(value)) ;
+                            $("#shipping_city").append($('<option>').html(value)) ;
               });
-						}
+		  }
 
      })
 
