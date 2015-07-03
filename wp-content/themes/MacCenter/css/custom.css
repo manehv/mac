@@ -6,6 +6,18 @@
 @import url('fonts/open-sans-fontfacekit/web-fonts/opensans_regular/stylesheet.css');*/
 @import url('fonts/MyriadSetPro-Bold-fontfacekit/web-fonts/MyriadSetPro-Bold/stylesheet.css');
 @import url('fonts/MyriadSetPro-Medium-fontfacekit/stylesheet.css');
+/*AJUSTE BTN LETF TIRADO A LA DERECHA*/
+.caption_left .slideshow_caption {
+left:72% !important;
+top:-50px !important;
+}
+.footer_color #foot{
+border-top: 1px solid #EAEAEA !important;	
+}
+#foot{
+	border-top: 1px solid #EAEAEA !important;
+}
+
 /*ESTILO MASONRI BLOG*/
 .main_color .av-masonry {
     background-color: #666666 !important;
@@ -506,6 +518,15 @@ box-shadow:none !important;
     overflow-y:hidden;
 }*/
 
+/*AJUSTE MOSTRAR BTNS HOMEBOX*/
+#top .avia-smallarrow-slider .avia-slideshow-dots {
+    position: relative;
+    width: 100%;
+    left: 0px;
+    bottom: 0px;
+    margin-top: 10px;
+    display: block;
+}
 /*AJUSTE DOTS SLIDER PRINCIPAL*/
 .avia-slideshow-dots {
     position: relative;
@@ -515,7 +536,7 @@ box-shadow:none !important;
     text-align: center;
     left: 0px;
     height: 0px;
-    display: none !important;
+    display: none;
 }
 .avia-slideshow-dots a {
     display: inline-block;
