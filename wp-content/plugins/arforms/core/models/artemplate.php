@@ -60,6 +60,8 @@
 
 				$use_saved = true; 
 				
+                                $arfssl = (is_ssl()) ? 1 : 0;
+                                
 				$filename = FORMPATH .'/core/css_create_main.php';
 				
 				$wp_upload_dir 	= wp_upload_dir();
@@ -157,6 +159,8 @@
 
 				$use_saved = true; 
 				
+                                $arfssl = (is_ssl()) ? 1 : 0;
+                                
 				$filename = FORMPATH .'/core/css_create_main.php';
 				
 				$wp_upload_dir 	= wp_upload_dir();
@@ -313,6 +317,8 @@
 
 				$use_saved = true; 
 				
+                                $arfssl = (is_ssl()) ? 1 : 0;
+                                
 				$filename = FORMPATH .'/core/css_create_main.php';
 				
 				$wp_upload_dir 	= wp_upload_dir();
@@ -451,6 +457,8 @@
 
 				$use_saved = true; 
 				
+                                $arfssl = (is_ssl()) ? 1 : 0;
+                                
 				$filename = FORMPATH .'/core/css_create_main.php';
 				
 				$wp_upload_dir 	= wp_upload_dir();
@@ -581,6 +589,8 @@
 
 				$use_saved = true; 
 				
+                                $arfssl = (is_ssl()) ? 1 : 0;
+                                
 				$filename = FORMPATH .'/core/css_create_main.php';
 				
 				$wp_upload_dir 	= wp_upload_dir();
@@ -782,6 +792,8 @@
 
 				$use_saved = true; 
 				
+                                $arfssl = (is_ssl()) ? 1 : 0;
+                                
 				$filename = FORMPATH .'/core/css_create_main.php';
 				
 				$wp_upload_dir 	= wp_upload_dir();
@@ -982,6 +994,8 @@
 
 				$use_saved = true;
 				
+                                $arfssl = (is_ssl()) ? 1 : 0;
+                                
 				$filename = FORMPATH .'/core/css_create_main.php';
 				
 				$wp_upload_dir 	= wp_upload_dir();

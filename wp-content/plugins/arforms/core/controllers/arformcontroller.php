@@ -2,7 +2,7 @@
 /*
 Plugin Name: ARForms
 Description: Exclusive Wordpress Form Builder Plugin With Seven Most Popular E-Mail Marketing Tools Integration
-Version: 2.7
+Version: 2.7.3
 Plugin URI: http://www.arformsplugin.com/
 Author: Repute InfoSystems
 Author URI: http://reputeinfosystems.com/
@@ -56,8 +56,6 @@ class arformcontroller{
 		add_action('wp_ajax_arf_delete_file', array(&$this, 'arf_delete_file') ); //for delete
 		
 		add_action('wp_ajax_nopriv_arf_delete_file', array(&$this, 'arf_delete_file') ); //for delete
-		
-        //add_filter('media_buttons_context', array(&$this, 'insert_form_button'));
 		
 		add_action('media_buttons',array(&$this,'insert_form_button'),20);
 		
@@ -762,9 +760,7 @@ class arformcontroller{
 
 		global $arfform, $wpdb, $MdlDb, $armainhelper, $arsettingcontroller;
 		
-		/*$_REQUEST['nforms'] = str_replace('[AND]','&',stripslashes_deep($_REQUEST['nforms']) );
-		$_REQUEST['nforms'] = str_replace('[PLUS]','+',stripslashes_deep($_REQUEST['nforms']) );*/
-		$str = stripslashes_deep($_REQUEST['form']);
+		$str = stripslashes_deep($_REQUEST['filtered_form']);
 		$str = json_decode( $str, true );
 		
         $errors = ( isset($is_preview) and $is_preview == 'preview' ) ? array() : $arfform->validate($str);
@@ -792,7 +788,8 @@ class arformcontroller{
 			
 			$_POST = $str;
 			$_REQUEST = $str;
-						
+			
+                        
 			if($ref_formid > 0)
 				$record = $arfform->update( $str['id'], $_REQUEST,'', 1);
 			else
@@ -921,8 +918,10 @@ class arformcontroller{
 						
 						$saving = true;
 					
+                                                $arfssl = (is_ssl()) ? 1 : 0;
+                                                
 						$filename = FORMPATH .'/core/css_create_main.php';
-						
+                                                
 						$wp_upload_dir 	= wp_upload_dir();
 						
 						$target_path 	= $wp_upload_dir['basedir'].'/arforms/maincss';
@@ -1000,6 +999,7 @@ class arformcontroller{
 						
 			}else {
 					
+                            
 					if($is_preview=="none")
 					{
 						$updatestat = $wpdb->query( $wpdb->prepare("update ".$wpdb->prefix."arf_forms set status = 'published',checksavestatus='1' where id = %d", $str['id']) );
@@ -1060,7 +1060,9 @@ class arformcontroller{
 							$new_values[$k] = $v;
 						
 						$saving = true;
-					
+                                                
+                                                $arfssl = (is_ssl()) ? 1 : 0;
+                                                
 						$filename = FORMPATH .'/core/css_create_main.php';
 						
 						$wp_upload_dir 	= wp_upload_dir();
@@ -2587,7 +2589,7 @@ jQuery(document).ready(function($){
 	}
 	
 	function arfformsavealloptions(){
-		$str = stripslashes_deep($_REQUEST['form']);
+		$str = stripslashes_deep($_REQUEST['filtered_form']);
 		$str = json_decode( $str, true );
 		
 		global $wpdb;
@@ -2603,12 +2605,12 @@ jQuery(document).ready(function($){
 			echo 'deleted';
 			exit();
 		}
-		
 	
 		$res = $wpdb->get_results( $wpdb->prepare("SELECT status FROM ".$wpdb->prefix."arf_forms WHERE id = %d", $form), 'ARRAY_A');
-		if( $res )
-			$res = $res[0];
-		if($str['form_preview']=="none")		
+		if( $res ){
+                    $res = $res[0];
+                }
+		if(isset($str['form_preview']) && $str['form_preview']=="none")		
 		{
 			$this->update('none');
 		}
@@ -4122,11 +4124,6 @@ jQuery(document).ready(function($){
                                     
                                     <div class="sltstandard1" style=" <?php echo $field_width_opt; ?>">
                                     
-                                    <?php /*?><select name="arffiu" onchange="change_date_format();" id="arffieldunit" style="width:53px;" data-width='53px'>
-                                            <option value="px" <?php selected($newarr['field_width_unit'], 'px') ?>><?php _e('px', 'ARForms') ?></option>
-                                            <option value="%" <?php selected($newarr['field_width_unit'], '%') ?>><?php _e('%', 'ARForms') ?></option>
-                                    </select><?php */?>
-                                    
                                     <input id="arffieldunit" name="arffiu" value="<?php echo $newarr['field_width_unit'];?>" type="hidden" onchange="change_date_format();" >
                                         <dl class="arf_selectbox" data-name="arffiu" data-id="arffieldunit" style="width:53px;">
                                           <dt><span><?php echo $newarr['field_width_unit'];?></span>
@@ -4219,51 +4216,6 @@ jQuery(document).ready(function($){
             
                                                 <div class="lblsubheading" style=" <?php echo $font_family_lbl; ?>"><?php _e('Family', 'ARForms') ?></div>
                                                 
-                                                <?php /*?><div class="sltstandard2" style=" <?php echo $font_family_opt; ?>">
-                                                <select name="arfcbfs" id="arfcheckboxfontsetting" style="width:200px;" data-width='200px' data-size="15" onchange="Changefontsettinghtml('inputfontsettingpopup','arfcheckboxfontsetting','arfcheckboxweightsetting','arffieldfontsizesetting');">
-                                                    <optgroup label="Default Fonts">
-                                                        <option value="Arial" <?php selected($newarr['check_font'], 'Arial') ?>>Arial</option>
-                            
-                                                        <option value="Helvetica" <?php selected($newarr['check_font'], 'Helvetica') ?>>Helvetica</option>
-                                                        
-                                                        <option value="sans-serif" <?php selected($newarr['check_font'], 'sans-serif') ?>>sans-serif</option>
-                                                        
-                                                        <option value="Lucida Grande" <?php selected($newarr['check_font'], 'Lucida Grande') ?>>Lucida Grande</option>
-                                                        
-                                                        <option value="Lucida Sans Unicode" <?php selected($newarr['check_font'], 'Lucida Sans Unicode') ?>>Lucida Sans Unicode</option>
-                                                        
-                                                        <option value="Tahoma" <?php selected($newarr['check_font'], 'Tahoma') ?>>Tahoma</option>
-                                                        
-                                                        <option value="Times New Roman" <?php selected($newarr['check_font'], 'Times New Roman') ?>>Times New Roman</option>
-                                                
-                                                        <option value="Courier New" <?php selected($newarr['check_font'], 'Courier New') ?>>Courier New</option>
-                                                
-                                                        <option value="Verdana" <?php selected($newarr['check_font'], 'Verdana') ?>>Verdana</option>
-                                                
-                                                        <option value="Geneva" <?php selected($newarr['check_font'], 'Geneva') ?>>Geneva</option>
-                                                        
-                                                        <option value="Courier" <?php selected($newarr['check_font'], 'Courier') ?>>Courier</option>
-                                                        
-                                                        <option value="Monospace" <?php selected($newarr['check_font'], 'Monospace') ?>>Monospace</option>
-                                                        
-                                                        <option value="Times" <?php selected($newarr['check_font'], 'Times') ?>>Times</option>
-                                                        
-                                                    </optgroup>
-                                                    <optgroup label="Google Fonts">
-                                                        <?php
-                                                            if(count($get_googlefonts_data)>0) {
-                                                                foreach($get_googlefonts_data as $goglefontsfamily)
-                                                                {
-                                                                    echo "<option value='".$goglefontsfamily."' ".selected($newarr['check_font'], $goglefontsfamily)." >".$goglefontsfamily."</option>";
-                                                                }
-                                                            }
-                                                        ?>
-                                                    </optgroup>
-                                                    
-                                                </select>
-                                                
-                                                </div><?php */?>
-                                                
                                                 
                                                 <div class="sltstandard2" style=" <?php echo $font_family_opt; ?>">
                                                   <input id="arfcheckboxfontsetting" name="arfcbfs" value="<?php echo $newarr['check_font'];?>" type="hidden" onchange="Changefontsettinghtml('inputfontsettingpopup','arfcheckboxfontsetting','arfcheckboxweightsetting','arffieldfontsizesetting');">
@@ -4316,22 +4268,6 @@ jQuery(document).ready(function($){
 											?>
             									<div class="lblsubheading" style=" <?php echo $font_style_lbl; ?>"><?php _e('Style', 'ARForms') ?></div>
                             
-                                                <?php /*?><div class="sltstandard1" style=" <?php echo $font_style_opt; ?>">
-                                                
-                                                <select name="arfcbws" id="arfcheckboxweightsetting" style="width:100px;" data-width='100px' onchange="Changefontsettinghtml('inputfontsettingpopup','arfcheckboxfontsetting','arfcheckboxweightsetting','arffieldfontsizesetting');">
-            
-            
-                                                    <option value="normal" <?php selected($newarr['check_weight'], 'normal') ?>><?php _e('normal', 'ARForms') ?></option>
-                        
-                                                    <option value="bold" <?php selected($newarr['check_weight'], 'bold') ?>><?php _e('bold', 'ARForms') ?></option>
-                                                    
-                                                    <option value="italic" <?php selected($newarr['check_weight'], 'italic') ?>><?php _e('italic', 'ARForms') ?></option>
-                        
-                                                </select>
-                                                
-                                                </div><?php */?>
-                                                
-                                                
                                                 <div class="sltstandard1" style=" <?php echo $font_style_opt; ?>">
                                                   <input id="arfcheckboxweightsetting" name="arfcbws" value="<?php echo $newarr['check_weight'];?>" type="hidden" onchange="Changefontsettinghtml('inputfontsettingpopup','arfcheckboxfontsetting','arfcheckboxweightsetting','arffieldfontsizesetting');">
                                                   <dl class="arf_selectbox" data-name="arfcbws" data-id="arfcheckboxweightsetting" style="width:80px;">
@@ -4371,18 +4307,6 @@ jQuery(document).ready(function($){
             									<div class="lblsubheading" style=" <?php echo $font_size_lbl; ?>"><?php _e('Size', 'ARForms') ?></div>
                                                 <div style=" <?php echo $font_size_opt_wrap; ?>">
                                                     <div class="sltstandard1" style=" <?php echo $font_style_opt; ?>">
-                                                    
-                                                    <?php /*?><select name="arfffss" id="arffieldfontsizesetting" style="width:100px;" data-width='100px' data-size='15' onchange="Changefontsettinghtml('inputfontsettingpopup','arfcheckboxfontsetting','arfcheckboxweightsetting','arffieldfontsizesetting');">	
-															<?php for($i = 8; $i <= 20; $i ++ ) { ?>
-                                                            <option value="<?php echo $i?>" <?php selected($newarr['field_font_size'], $i) ?>><?php _e($i, 'ARForms') ?></option>
-                                                            <?php } ?>
-                                                            <?php for($i = 22; $i <= 28; $i=$i+2 ) { ?>
-                                                            <option value="<?php echo $i?>" <?php selected($newarr['field_font_size'], $i) ?>><?php _e($i, 'ARForms') ?></option>
-                                                            <?php } ?>
-                                                            <?php for($i = 32; $i <= 40; $i=$i+4 ) { ?>
-                                                            <option value="<?php echo $i?>" <?php selected($newarr['field_font_size'], $i) ?>><?php _e($i, 'ARForms') ?></option>
-                                                            <?php } ?>
-                                                    </select><?php */?>
                                                     
                                                     <input id="arffieldfontsizesetting" name="arfffss" value="<?php echo $newarr['field_font_size'];?>" type="hidden" onchange="Changefontsettinghtml('inputfontsettingpopup','arfcheckboxfontsetting','arfcheckboxweightsetting','arffieldfontsizesetting');">
                                                     <dl class="arf_selectbox" data-name="arfffss" data-id="arffieldfontsizesetting" style="width:80px;">
@@ -4915,23 +4839,6 @@ jQuery(document).ready(function($){
             
                                 <div class="sltstandard1" style=" <?php echo $calender_theme_opt; ?>">
                                 
-                                <?php /*?><select name="arffths" style="line-height:1;width:142px;" data-width='142px'>
-            
-            
-                                    <?php 
-            
-            							$jquery_themes = $armainhelper->jquery_themes();
-                                        foreach($jquery_themes as $theme_name => $theme_title){  ?>
-            
-            
-                                    <option value="<?php echo $theme_name ?>" id="theme_<?php echo $theme_name ?>" <?php selected($theme_name, $newarr['arfcalthemename']) ?>><?php echo $theme_title ?></option> 
-            
-            
-                                    <?php } ?>
-            
-            
-                                </select><?php */?>
-                                
 								<?php
 									$jquery_themes = $armainhelper->jquery_themes();
 								?>
@@ -4994,18 +4901,6 @@ jQuery(document).ready(function($){
                                  ?>
                                  <div class="sltstandard1" style="float:left;">
                                 
-                                <?php /*?><select name="arffdaf" onchange="change_date_format_new();" id="frm_date_format" style="width:142px;" data-width='142px'>
-            
-            
-                                    <option value="mm/dd/yy" <?php selected($newarr['date_format'], 'mm/dd/yy') ?>><?php echo date('m/d/Y', current_time('timestamp'));?></option>
-            
-                                    <option value="M d, yy" <?php selected($newarr['date_format'], 'M d, yy') ?>><?php echo date('M d, Y', current_time('timestamp'));?></option>
-                                    
-                                    <option value="MM d, yy" <?php selected($newarr['date_format'], 'MM d, yy') ?>><?php echo date('F d, Y', current_time('timestamp'));?></option>
-            
-            
-                                </select><?php */?>
-                                
                                 <?php 
 								$arf_selbx_dt_format = "";
                                 if($newarr['date_format']=='MM d, yy')
@@ -5039,18 +4934,6 @@ jQuery(document).ready(function($){
                                   <?php } else if( $wp_format_date == 'd/m/Y' ) { ?>
                                 
                                 <div class="sltstandard1" style="float:left;">
-                                
-                                <?php /*?><select name="arffdaf" id="frm_date_format" onchange="change_date_format_new();" style="width:142px;" data-width='142px'>
-            
-            
-                                    <option value="dd/mm/yy" <?php selected($newarr['date_format'], 'dd/mm/yy') ?>><?php echo date('d/m/Y', current_time('timestamp'));?></option>
-            
-                                    <option value="d M, yy" <?php selected($newarr['date_format'], 'd M, yy') ?>><?php echo date('d M, Y', current_time('timestamp'));?></option>
-                                    
-                                    <option value="d MM, yy" <?php selected($newarr['date_format'], 'd MM, yy') ?>><?php echo date('d F, Y', current_time('timestamp'));?></option>
-            
-            
-                                </select><?php */?>
                                 
                                 <?php 
 								$arf_selbx_dt_format = "";
@@ -5086,18 +4969,6 @@ jQuery(document).ready(function($){
                                 
                                 <div class="sltstandard1" style="float:left;">
                                 
-                                <?php /*?><select name="arffdaf" id="frm_date_format" onchange="change_date_format_new();" style="width:142px;" data-width='142px'>
-            
-            
-                                    <option value="yy/mm/dd" <?php selected($newarr['date_format'], 'yy/mm/dd') ?>><?php echo date('Y/m/d', current_time('timestamp'));?></option>
-            
-                                    <option value="yy, M d" <?php selected($newarr['date_format'], 'yy, M d') ?>><?php echo date('Y, M d', current_time('timestamp'));?></option>
-                                    
-                                    <option value="yy, MM d" <?php selected($newarr['date_format'], 'yy, MM d') ?>><?php echo date('Y, F d', current_time('timestamp'));?></option>
-            
-            
-                                </select><?php */?>
-                                
                                 <?php 
 								$arf_selbx_dt_format = "";
                                 if($newarr['date_format']=='yy, MM d')
@@ -5131,22 +5002,6 @@ jQuery(document).ready(function($){
                                   <?php } else { ?>
                                 
                                 <div class="sltstandard1" style="float:left;">
-                                
-                                <?php /*?><select name="arffdaf" id="frm_date_format" onchange="change_date_format_new();" style="width:142px;" data-width='142px'>
-            
-            
-                                    <option value="dd/mm/yy" <?php selected($newarr['date_format'], 'dd/mm/yy') ?>><?php echo date('d/m/Y', current_time('timestamp'));?></option>
-            
-                                    <option value="mm/dd/yy" <?php selected($newarr['date_format'], 'mm/dd/yy') ?>><?php echo date('m/d/Y', current_time('timestamp'));?></option>
-                                    
-                                    <option value="yy/mm/dd" <?php selected($newarr['date_format'], 'yy/mm/dd') ?>><?php echo date('Y/m/d', current_time('timestamp'));?></option>
-                                    
-                                    <option value="M d, yy" <?php selected($newarr['date_format'], 'M d, yy') ?>><?php echo date('M d, Y', current_time('timestamp'));?></option>
-                                    
-                                    <option value="MM d, yy" <?php selected($newarr['date_format'], 'MM d, yy') ?>><?php echo date('F d, Y', current_time('timestamp'));?></option>
-            
-            
-                                </select><?php */?>
                                 
                                 <?php 
 								$arf_selbx_dt_format = "";
@@ -5213,23 +5068,6 @@ jQuery(document).ready(function($){
                             	<label class="lblsubheading sublblheading" style=" <?php echo $check_radio_style_lbl; ?>"><?php _e('Style', 'ARForms') ?></label>
                             	<div class="sltstandard1" style="float:left;">
                                 
-                                    <?php /*?><select name="arfcksn" id="frm_check_radio_style" data-size="4" onchange="arf_change_check_radio(); ShowColorSelect(this.value);" style="width:142px;" data-width='142px'>
-            
-                                    <option value="minimal" <?php selected($newarr['arfcheckradiostyle'], 'minimal') ?>>Minimal</option>
-            
-                                    <option value="flat" <?php selected($newarr['arfcheckradiostyle'], 'flat') ?>>Flat</option>
-                                    
-                                    <option value="square" <?php selected($newarr['arfcheckradiostyle'], 'square') ?>>Square</option>
-                                    
-                                    <option value="futurico" <?php selected($newarr['arfcheckradiostyle'], 'futurico') ?>>Futurico</option>
-                                    
-                                    <option value="polaris" <?php selected($newarr['arfcheckradiostyle'], 'polaris') ?>>Polaris</option>
-                                    
-                                    <option value="none" <?php selected($newarr['arfcheckradiostyle'], 'none') ?>>(None)</option>
-            
-                                </select><?php */?>
-            
-            						
                                     <input id="frm_check_radio_style" name="arfcksn" value="<?php echo $newarr['arfcheckradiostyle'];?>" type="hidden" onchange="arf_change_check_radio(); ShowColorSelect(this.value);">
                                     <dl class="arf_selectbox" data-name="arfcksn" data-id="frm_check_radio_style" style="width:122px;">
                                       <dt><span><?php echo ucwords($newarr['arfcheckradiostyle']);?></span>
@@ -5253,20 +5091,6 @@ jQuery(document).ready(function($){
                             <div class="clearfix subfield" id="check_radio_main_color" <?php if($newarr['arfcheckradiostyle']!="none"  && $newarr['arfcheckradiostyle']!="polaris" && $newarr['arfcheckradiostyle']!="futurico"){?> style="display:block;margin-top:10px;" <?php }else{ echo "style='display:none;margin-top:10px;'"; }?>>
                             	<label class="lblsubheading sublblheading" style=" <?php echo $check_radio_style_lbl; ?>"><?php _e('Color', 'ARForms') ?></label>
                             	<div class="sltstandard1" style="float:left;">
-                                
-                                <?php /*?><select name="arfcksc" id="frm_check_radio_style_color" onchange="arf_change_check_radio();" data-size="4" style="width:142px;" data-width='142px'>
-            						<option value="default" <?php selected($newarr['arfcheckradiocolor'], 'default') ?>>Default</option>
-                                    <option value="aero" <?php selected($newarr['arfcheckradiocolor'], 'aero') ?>>Aero</option>
-                                    <option value="blue" <?php selected($newarr['arfcheckradiocolor'], 'blue') ?>>Blue</option>
-                                    <option value="green" <?php selected($newarr['arfcheckradiocolor'], 'green') ?>>Green</option>
-                                    <option value="grey" <?php selected($newarr['arfcheckradiocolor'], 'grey') ?>>Grey</option>
-                                    <option value="orange" <?php selected($newarr['arfcheckradiocolor'], 'orange') ?>>Orange</option>
-                                    <option value="pink" <?php selected($newarr['arfcheckradiocolor'], 'pink') ?>>Pink</option>
-                                    <option value="purple" <?php selected($newarr['arfcheckradiocolor'], 'purple') ?>>Purple</option>
-                                    <option value="red" <?php selected($newarr['arfcheckradiocolor'], 'red') ?>>Red</option>
-                                    <option value="yellow" <?php selected($newarr['arfcheckradiocolor'], 'yellow') ?>>Yellow</option>
-            
-                                </select><?php */?>
                                 
                                 <input id="frm_check_radio_style_color" name="arfcksc" value="<?php echo $newarr['arfcheckradiocolor'];?>" type="hidden" onchange="arf_change_check_radio();">
                                 <dl class="arf_selectbox" data-name="arfcksc" data-id="frm_check_radio_style_color" style="width:122px;">
@@ -5443,49 +5267,6 @@ jQuery(document).ready(function($){
                                                 
                                                 <div class="sltstandard2" style=" <?php echo $submit_font_family_opt; ?>">
                                                 
-                                                <?php /*?><select name="arfsff" id="arfsubmitfontfamily" style="width:200px;" data-width='200px' data-size="15" onchange="Changefontsettinghtml('submitfontsettingpopup','arfsubmitfontfamily','arfsubmitbuttonweightsetting','arfsubmitbuttonfontsizesetting');">
-                                                    <optgroup label="Default Fonts">
-                                                        <option value="Arial" <?php selected($newarr['arfsubmitfontfamily'], 'Arial') ?>>Arial</option>
-                                        
-                                                        <option value="Helvetica" <?php selected($newarr['arfsubmitfontfamily'], 'Helvetica') ?>>Helvetica</option>
-                                                        
-                                                        <option value="sans-serif" <?php selected($newarr['arfsubmitfontfamily'], 'sans-serif') ?>>sans-serif</option>
-                                                        
-                                                        <option value="Lucida Grande" <?php selected($newarr['arfsubmitfontfamily'], 'Lucida Grande') ?>>Lucida Grande</option>
-                                                        
-                                                        <option value="Lucida Sans Unicode" <?php selected($newarr['arfsubmitfontfamily'], 'Lucida Sans Unicode') ?>>Lucida Sans Unicode</option>
-                                                        
-                                                        <option value="Tahoma" <?php selected($newarr['arfsubmitfontfamily'], 'Tahoma') ?>>Tahoma</option>
-                                                        
-                                                        <option value="Times New Roman" <?php selected($newarr['arfsubmitfontfamily'], 'Times New Roman') ?>>Times New Roman</option>
-                                                        
-                                                        <option value="Courier New" <?php selected($newarr['arfsubmitfontfamily'], 'Courier New') ?>>Courier New</option>
-                                                        
-                                                        <option value="Verdana" <?php selected($newarr['arfsubmitfontfamily'], 'Verdana') ?>>Verdana</option>
-                                                        
-                                                        <option value="Geneva" <?php selected($newarr['arfsubmitfontfamily'], 'Geneva') ?>>Geneva</option>
-                                                        
-                                                        <option value="Courier" <?php selected($newarr['arfsubmitfontfamily'], 'Courier') ?>>Courier</option>
-                                                                
-                                                        <option value="Monospace" <?php selected($newarr['arfsubmitfontfamily'], 'Monospace') ?>>Monospace</option>
-                                                                
-                                                        <option value="Times" <?php selected($newarr['arfsubmitfontfamily'], 'Times') ?>>Times</option>
-                
-                                                    </optgroup>
-                                                    <optgroup label="Google Fonts">
-                                                        <?php
-                                                            if(count($get_googlefonts_data)>0) {
-                                                                foreach($get_googlefonts_data as $goglefontsfamily)
-                                                                {
-                                                                    echo "<option value='".$goglefontsfamily."' ".selected($newarr['arfsubmitfontfamily'], $goglefontsfamily)." >".$goglefontsfamily."</option>";
-                                                                }
-                                                            }
-                                                        ?>
-                                                    </optgroup>
-                                                    
-                                                </select><?php */?>
-                                                
-                                                
                                                 <input id="arfsubmitfontfamily" name="arfsff" value="<?php echo $newarr['arfsubmitfontfamily'];?>" type="hidden" onchange="Changefontsettinghtml('submitfontsettingpopup','arfsubmitfontfamily','arfsubmitbuttonweightsetting','arfsubmitbuttonfontsizesetting');">
                                                 <dl class="arf_selectbox" data-name="arfsff" data-id="arfsubmitfontfamily" style="width:180px;">
                                                   <dt><span><?php echo $newarr['arfsubmitfontfamily'];?></span>
@@ -5544,16 +5325,6 @@ jQuery(document).ready(function($){
                             
                                                 <div class="sltstandard1" style=" <?php echo $submit_btn_font_btn; ?>">
                                                 
-                                                <?php /*?><select name="arfsbwes" id="arfsubmitbuttonweightsetting" style="width:100px;" data-width='100px' onchange="Changefontsettinghtml('submitfontsettingpopup','arfsubmitfontfamily','arfsubmitbuttonweightsetting','arfsubmitbuttonfontsizesetting');">
-            
-                                                    <option value="normal" <?php selected($newarr['arfsubmitweightsetting'], 'normal') ?>><?php _e('normal', 'ARForms') ?></option>
-                    
-                                                    <option value="bold" <?php selected($newarr['arfsubmitweightsetting'], 'bold') ?>><?php _e('bold', 'ARForms') ?></option>
-                                                    
-                                                    <option value="italic" <?php selected($newarr['arfsubmitweightsetting'], 'italic') ?>><?php _e('italic', 'ARForms') ?></option>
-                            
-                                                </select><?php */?>
-                                                
                                                 <input id="arfsubmitbuttonweightsetting" name="arfsbwes" value="<?php echo $newarr['arfsubmitweightsetting'];?>" type="hidden" onchange="Changefontsettinghtml('submitfontsettingpopup','arfsubmitfontfamily','arfsubmitbuttonweightsetting','arfsubmitbuttonfontsizesetting');">
                                                 <dl class="arf_selectbox" data-name="arfsbwes" data-id="arfsubmitbuttonweightsetting" style="width:80px;">
                                                   <dt><span><?php echo __($newarr['arfsubmitweightsetting'], 'ARForms');?></span>
@@ -5592,18 +5363,6 @@ jQuery(document).ready(function($){
                                                 <div style="margin-left:70px; margin-bottom:10px;">
                                                     <div class="sltstandard1" style=" <?php echo $submit_font_size_opt; ?>">
                                                     
-                                                    <?php /*?><select name="arfsbfss" id="arfsubmitbuttonfontsizesetting" style="width:100px;" data-width='100px' data-size='15' onchange="Changefontsettinghtml('submitfontsettingpopup','arfsubmitfontfamily','arfsubmitbuttonweightsetting','arfsubmitbuttonfontsizesetting');">	
-														<?php for($i = 8; $i <= 20; $i ++ ) { ?>
-                                                        <option value="<?php echo $i?>" <?php selected($newarr['arfsubmitbuttonfontsizesetting'], $i) ?>><?php _e($i, 'ARForms') ?></option>
-                                                        <?php } ?>
-                                                        <?php for($i = 22; $i <= 28; $i=$i+2 ) { ?>
-                                                        <option value="<?php echo $i?>" <?php selected($newarr['arfsubmitbuttonfontsizesetting'], $i) ?>><?php _e($i, 'ARForms') ?></option>
-                                                        <?php } ?>
-                                                        <?php for($i = 32; $i <= 40; $i=$i+4 ) { ?>
-                                                        <option value="<?php echo $i?>" <?php selected($newarr['arfsubmitbuttonfontsizesetting'], $i) ?>><?php _e($i, 'ARForms') ?></option>
-                                                        <?php } ?>
-                                                </select><?php */?>
-                                                
                                                 <input id="arfsubmitbuttonfontsizesetting" name="arfsbfss" value="<?php echo $newarr['arfsubmitbuttonfontsizesetting'];?>" type="hidden" onchange="Changefontsettinghtml('submitfontsettingpopup','arfsubmitfontfamily','arfsubmitbuttonweightsetting','arfsubmitbuttonfontsizesetting');">
                                                 <dl class="arf_selectbox" data-name="arfsbfss" data-id="arfsubmitbuttonfontsizesetting" style="width:80px;">
                                                   <dt><span><?php echo $newarr['arfsubmitbuttonfontsizesetting'];?></span>
@@ -6217,45 +5976,6 @@ jQuery(document).ready(function($){
                                                 <div class="lblsubheading" style=" <?php echo $validation_font_family_lbl; ?>"><?php _e('Family', 'ARForms') ?></div>
                                                 
                                                 <div class="sltstandard2" style=" <?php echo $validation_font_family_opt; ?>">
-                                                <?php /*?><select name="arfmefs" id="arfmainerrorfontsetting" style="width:200px;" data-width='200px' data-size='15' onchange="Changefontsettinghtml('errorfontsettingpopup','arfmainerrorfontsetting','','arfmainerrorfontsizesetting');">
-                                                    <optgroup label="Default Fonts">
-                                                        <option value="Arial" <?php selected($newarr['error_font'], 'Arial') ?>>Arial</option>
-                            
-                                                        <option value="Helvetica" <?php selected($newarr['error_font'], 'Helvetica') ?>>Helvetica</option>
-                                                        
-                                                        <option value="sans-serif" <?php selected($newarr['error_font'], 'sans-serif') ?>>sans-serif</option>
-                                                        
-                                                        <option value="Lucida Grande" <?php selected($newarr['error_font'], 'Lucida Grande') ?>>Lucida Grande</option>
-                                                        
-                                                        <option value="Lucida Sans Unicode" <?php selected($newarr['error_font'], 'Lucida Sans Unicode') ?>>Lucida Sans Unicode</option>
-                                                        
-                                                        <option value="Tahoma" <?php selected($newarr['error_font'], 'Tahoma') ?>>Tahoma</option>
-                                                        
-                                                        <option value="Times New Roman" <?php selected($newarr['error_font'], 'Times New Roman') ?>>Times New Roman</option>
-                                                        
-                                                        <option value="Courier New" <?php selected($newarr['error_font'], 'Courier New') ?>>Courier New</option>
-                                                        
-                                                        <option value="Verdana" <?php selected($newarr['error_font'], 'Verdana') ?>>Verdana</option>
-                                                        
-                                                        <option value="Geneva" <?php selected($newarr['error_font'], 'Geneva') ?>>Geneva</option>
-                                                                
-                                                        <option value="Courier" <?php selected($newarr['error_font'], 'Courier') ?>>Courier</option>
-                                                                
-                                                        <option value="Monospace" <?php selected($newarr['error_font'], 'Monospace') ?>>Monospace</option>
-                                                                
-                                                        <option value="Times" <?php selected($newarr['error_font'], 'Times') ?>>Times</option>
-                                                    </optgroup>
-                                                    <optgroup label="Google Fonts">
-                                                        <?php
-                                                            if(count($get_googlefonts_data)>0) {
-                                                                foreach($get_googlefonts_data as $goglefontsfamily)
-                                                                {
-                                                                    echo "<option value='".$goglefontsfamily."' ".selected($newarr['error_font'], $goglefontsfamily)." >".$goglefontsfamily."</option>";
-                                                                }
-                                                            }
-                                                        ?>
-                                                    </optgroup>
-                                                </select><?php */?>
                                                 
                                                 <input id="arfmainerrorfontsetting" name="arfmefs" value="<?php echo $newarr['error_font'];?>" type="hidden" onchange="Changefontsettinghtml('errorfontsettingpopup','arfmainerrorfontsetting','','arfmainerrorfontsizesetting');">
                                                 <dl class="arf_selectbox" data-name="arfmefs" data-id="arfmainerrorfontsetting" style="width:180px;">
@@ -6317,17 +6037,6 @@ jQuery(document).ready(function($){
                                                 <div style="margin-left:70px; margin-bottom:10px;">
                                                     <div class="sltstandard1" style=" <?php echo $validation_font_size_opt; ?>">
                                                     
-                                                    <?php /*?><select name="arfmefss" id="arfmainerrorfontsizesetting" style="width:100px;" data-width='100px' data-size='10' onchange="Changefontsettinghtml('errorfontsettingpopup','arfmainerrorfontsetting','','arfmainerrorfontsizesetting');">	
-														   <?php for($i = 8; $i <= 20; $i ++ ) { ?>
-                                                            <option value="<?php echo $i?>" <?php selected($newarr['arffontsizesetting'], $i) ?>><?php _e($i, 'ARForms') ?></option>
-                                                            <?php } ?>
-                                                            <?php for($i = 22; $i <= 28; $i=$i+2 ) { ?>
-                                                            <option value="<?php echo $i?>" <?php selected($newarr['arffontsizesetting'], $i) ?>><?php _e($i, 'ARForms') ?></option>
-                                                            <?php } ?>
-                                                            <?php for($i = 32; $i <= 40; $i=$i+4 ) { ?>
-                                                            <option value="<?php echo $i?>" <?php selected($newarr['arffontsizesetting'], $i) ?>><?php _e($i, 'ARForms') ?></option>
-                                                            <?php } ?>
-                                                    </select><?php */?>
                                                     
                                                     <input id="arfmainerrorfontsizesetting" name="arfmefss" value="<?php echo $newarr['arffontsizesetting'];?>" type="hidden" onchange="Changefontsettinghtml('errorfontsettingpopup','arfmainerrorfontsetting','','arfmainerrorfontsizesetting');">
                                                     <dl class="arf_selectbox" data-name="arfmefss" data-id="arfmainerrorfontsizesetting" style="width:80px;">
@@ -6907,14 +6616,6 @@ jQuery(document).ready(function($){
 				}	
 			})
 			
-			/*jQuery(".toggle-btn:not('.noscript') input[type=radio], .toggle-btn-large:not('.noscript') input[type=radio], .toggle-btn-color:not('.noscript') input[type=radio], .toggle-btn-pos:not('.noscript') input[type=radio]").change(function() {
-				if( jQuery(this).attr("name") ) {
-					jQuery(this).parent().addClass("success").siblings().removeClass("success")
-				} else {
-					jQuery(this).parent().toggleClass("success");
-				}
-			});*/
-			
 			jQuery(".toggle-btn input[type=radio]").change(function() {
 				if( jQuery(this).attr("name") ) {
 					jQuery(this).parent().addClass("success").siblings().removeClass("success");
@@ -7329,6 +7030,24 @@ jQuery(document).ready(function($){
 					{
 						$form_css_arr = @unserialize($val);
 						
+						if( !isset($form_css_arr['prefix_suffix_bg_color']) || $form_css_arr['prefix_suffix_bg_color'] == '' )
+							$form_css_arr['prefix_suffix_bg_color'] = '#e7e8ec';
+						
+						if( !isset($form_css_arr['prefix_suffix_icon_color']) || $form_css_arr['prefix_suffix_icon_color'] == '' )
+							$form_css_arr['prefix_suffix_icon_color'] = '#808080';
+						
+						if( !isset($form_css_arr['arfsectionpaddingsetting_1']) || $form_css_arr['arfsectionpaddingsetting_1'] == '' )
+							$form_css_arr['arfsectionpaddingsetting_1'] = '15';
+						
+						if( !isset($form_css_arr['arfsectionpaddingsetting_2']) || $form_css_arr['arfsectionpaddingsetting_2'] == '' )
+							$form_css_arr['arfsectionpaddingsetting_2'] = '10';
+							
+						if( !isset($form_css_arr['arfsectionpaddingsetting_3']) || $form_css_arr['arfsectionpaddingsetting_3'] == '' )
+							$form_css_arr['arfsectionpaddingsetting_3'] = '15';
+						
+						if( !isset($form_css_arr['arfsectionpaddingsetting_4']) || $form_css_arr['arfsectionpaddingsetting_4'] == '' )
+							$form_css_arr['arfsectionpaddingsetting_4'] = '10';
+						
 						foreach($form_css_arr as $form_css_key=>$form_css_val)
 						{
 							if($form_css_key == 'submit_bg_img')
@@ -7552,6 +7271,8 @@ jQuery(document).ready(function($){
 					
 					$use_saved = true; 
 					
+                                        $arfssl = (is_ssl()) ? 1 : 0;
+                                        
 					$filename = FORMPATH .'/core/css_create_main.php';
 					
 					$wp_upload_dir 	= wp_upload_dir();

@@ -2407,16 +2407,16 @@ foreach ($attachments as $attachment) {
                                                                                     $cntr = 0;
                                                                                     $lists_new = @maybe_unserialize($res7[0]['list_data']);
 
-                                                                                    if (count($lists_new) > 0 && is_array($lists_new)) {
+                                                                                    if (count($lists_new) > 0 && is_array($list_new)) {
 
-                                                                                        foreach ($lists_new as $key=>$list) {
-                                                                                            if ($res7[0]['responder_list'] == $list[$key]['id'] || $cntr == 0) {
+                                                                                        foreach ($lists_new as $list) {
+                                                                                            if ($res7[0]['responder_list'] == $list['id'] || $cntr == 0) {
                                                                                                 //echo '<option selected="selected" value="'.$list['id'].'">'.$list['name'].'</option>';
-                                                                                                $selected_list_id = $list[$key]['id'];
-                                                                                                $selected_list_label = $list[$key]['name'];
+                                                                                                $selected_list_id = $list['id'];
+                                                                                                $selected_list_label = $list['name'];
                                                                                             }
                                                                                             //echo '<option value="'.$list['id'].'">'.$list['name'].'</option>';	
-                                                                                            $responder_list_option .= '<li class="arf_selectbox_option" data-value="' . $list[$key]['id'] . '" data-label="' . $list[$key]['name'] . '">' . $list[$key]['name'] . '</li>';
+                                                                                            $responder_list_option .= '<li class="arf_selectbox_option" data-value="' . $list['id'] . '" data-label="' . $list['name'] . '">' . $list['name'] . '</li>';
                                                                                             $cntr++;
                                                                                         }
                                                                                     }
@@ -2450,9 +2450,9 @@ foreach ($attachments as $attachment) {
                                                                                     $cntr = 0;
                                                                                     $lists_new = @maybe_unserialize($res7[0]['list_data']);
 
-                                                                                    if (count($lists_new) > 0 && is_array($lists_new)) {
+                                                                                    if (count($lists_new) > 0 && is_array($list_new)) {
 
-                                                                                        foreach ($lists_new as $key=>$list) {
+                                                                                        foreach ($lists_new as $list) {
                                                                                             if ($constant_contact_arr['type_val'] == $list['id']) {
                                                                                                 $selected_list_id = $list['id'];
                                                                                                 $selected_list_label = $list['name'];

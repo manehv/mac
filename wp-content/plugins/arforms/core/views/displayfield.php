@@ -2,7 +2,7 @@
 /*
 Plugin Name: ARForms
 Description: Exclusive Wordpress Form Builder Plugin With Seven Most Popular E-Mail Marketing Tools Integration
-Version: 2.7
+Version: 2.7.3
 Plugin URI: http://www.arformsplugin.com/
 Author: Repute InfoSystems
 Author URI: http://reputeinfosystems.com/
@@ -50,7 +50,7 @@ if (in_array($field['type'], array('website', 'phone', 'date', 'email', 'url', '
 
 <?php }else if($field['type'] == 'time'){ ?>
 
-<div  style="float:left" id="field_default_hour_<?php echo $field['field_key'] ?>" >
+<div  style="float:left" id="field_default_hour_<?php echo $field['field_key'] ?>" class="arf_field_default_time_element">
 <select name="field_options[default_hour_<?php echo $field['id'] ?>]" id="field_<?php echo $field['field_key'] ?>" >
 	<?php 
 	for($i=0; $i<=$field['clock']; $i++) {?>
@@ -60,7 +60,7 @@ if (in_array($field['type'], array('website', 'phone', 'date', 'email', 'url', '
 <br /> <div class="howto">&nbsp;(HH)</div>
 </div>
 
-<div style="float:left">
+    <div style="float:left" class="arf_field_default_time_element">
 <select name="field_options[default_minutes_<?php echo $field['id'] ?>]" id="field_<?php echo $field['field_key'] ?>" >
 	<?php for($j=0; $j<=59; $j++) {?>
     <option value="<?php echo $j;?>" <?php if($j == $field['default_minutes']) { echo "selected=selected";} ?>><?php echo $j; ?></option>

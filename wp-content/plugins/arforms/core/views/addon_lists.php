@@ -90,7 +90,6 @@ margin:0px !important;
                 	<?php
 						global $arsettingcontroller;
 						$arsettingcontroller->addons_page();
-						//echo file_get_contents( 'http://192.168.0.8/udit/Dimple/addons_listing/addon_list.php' );
 					?>
                 </div>
             </div>

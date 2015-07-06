@@ -2,7 +2,7 @@
 /*
 Plugin Name: ARForms
 Description: Exclusive Wordpress Form Builder Plugin With Seven Most Popular E-Mail Marketing Tools Integration
-Version: 2.7
+Version: 2.7.3
 Plugin URI: http://www.arformsplugin.com/
 Author: Repute InfoSystems
 Author URI: http://reputeinfosystems.com/
@@ -20,13 +20,6 @@ $('select[name^="item_meta"], textarea[name^="item_meta"]').css('float','left');
 
 
 $('input[name^="item_meta"]').not(':radio, :checkbox').css('float','left');
-/*
-try {
-	$(".frm-bulk-select-class").selectpicker();
-}
-catch(err) {
-	// Handle error(s) here
-}*/
 
 $("#arfmainfieldid_<?php echo $field['id']; ?> .arfoptioneditorfield, #arfmainfieldid_<?php echo $field['id']; ?> .arfoptioneditorfield_key").editInPlace({
 
@@ -76,18 +69,6 @@ default_text:"(<?php _e('Click here to add optional description or instructions'
 
 
 });
-
-
-<?php /*?>$("#arfmainfieldid_<?php echo $field['id']; ?> img.helptip[title]").hover(
-
-
-function(){frm_title=$(this).attr('title');$('#frm_tooltip').html(frm_title).fadeIn('fast');}, 
-
-
-function(){$('#frm_tooltip').fadeOut('fast');$(this).attr('title',frm_title);}
-
-
-);<?php */?>
 
 });
 
@@ -197,23 +178,25 @@ jQuery('#arfmainfieldid_<?php echo $field['id']; ?> .arf_coloroption_sub:not(.ar
     onBeforeShow:function(){
         var fid 	= jQuery(this).find('.arfhex').attr('data-fid');
         var color 	= jQuery('#'+fid).val();
-		if( jQuery(this).attr('data-cls') == 'arf_clr_disable'){
-			jQuery('.arf_clr_disable .arfhex').css('background',color);
-		}
-            color	= color.replace('#','');
+        var did = fid.replace('arf_divider_bg_color_','');
+            if( jQuery(this).attr('data-cls') == 'arf_clr_disable'){
+                    jQuery('.arf_clr_disable .arfhex').css('background',color);
+            }
+        color	= color.replace('#','');
         jQuery(this).colpickSetColor(color, true);
     },
     onChange:function(hsb,hex,rgb,el,bySetColor) {
-		if( jQuery(el).attr('data-cls') == 'arf_clr_disable'){
-			jQuery('.arf_clr_disable').css('background','#'+hex);
-		}
-
+        
         jQuery(el).find('.arfhex').css('background','#'+hex);
         if(!bySetColor){ jQuery(el).val(hex); }
         var fid = jQuery(el).find('.arfhex').attr('data-fid');
         if( fid ){
             jQuery('#'+fid).val('#'+hex);
-		}
+        }
+        var did = fid.replace('arf_divider_bg_color_','');
+        if( jQuery(el).attr('data-cls') == 'arf_clr_disable'){
+            jQuery('#arf_divider_bg_color_disabled_'+did+'.arf_clr_disable .arfhex').css('background','#'+hex);
+        }
     }
 });
 <?php } ?>

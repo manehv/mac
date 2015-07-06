@@ -539,12 +539,12 @@ table.ui-datepicker-calendar tr td { border:none !important; }
 
 .arform_bottom_fixed_main_block_top {display:inline-block;	top:0%; position:fixed; right:5%; z-index:9999;}
 .arform_bottom_fixed_block_top {float:right; display:inline-block; padding:10px 13px 0 13px; text-align:center;
-min-width:50px; right:0%; position:static;background:#93979d;border:none; border-top:0px; border-bottom-right-radius:3px; border-bottom-left-radius:3px; margin-right:15px; font-size:14px; color:#ffffff; height:25px; font-weight:bold; }
+min-width:50px; right:0%; position:static;/*background:#93979d;*/border:none; border-top:0px; border-bottom-right-radius:3px; border-bottom-left-radius:3px; margin-right:15px; font-size:14px; color:#ffffff; height:25px; font-weight:bold; }
 .arform_bottom_fixed_form_block_top { background:none; border:none; border-bottom-right-radius:3px; border-bottom-left-radius:3px; min-width:280px; display:none; border-top:0px;}
 
 .arform_bottom_fixed_main_block_bottom {display:inline-block;	bottom:0%; position:fixed; right:5%; z-index:9999;}
 .arform_bottom_fixed_block_bottom {float:right; display:inline-block; padding:10px 13px 0 13px; text-align:center;
-min-width:50px; right:0%; top:-29px; position:static;background:#1bbae1;border:none; border-bottom:0px; border-top-right-radius:3px; border-top-left-radius:3px; margin-right:15px;  font-size:14px; height:25px; color:#ffffff; font-weight:bold; }
+min-width:50px; right:0%; top:-29px; position:static;/*background:#1bbae1;*/border:none; border-bottom:0px; border-top-right-radius:3px; border-top-left-radius:3px; margin-right:15px;  font-size:14px; height:25px; color:#ffffff; font-weight:bold; }
 .arform_bottom_fixed_form_block_bottom { background:none; border:none; border-top-right-radius:3px; border-top-left-radius:3px; min-width:280px; display:none; border-bottom:0px; } 
 .arf_content_another_page { background:#FFFFFF; }
 .arf_form .formtitle_style { line-height:normal; } 
@@ -880,9 +880,23 @@ min-width:50px; right:35px; top:25px; position:relative;background:#1bbae1;borde
 	border-collapse:separate;
 	float:left;
 	max-width:100%;
+        table-layout:fixed;
 }
+/* CSS Hack for Safari */
+::i-block-chrome, .arf_prefix_suffix_wrapper{
+    table-layout: auto;
+}
+
+@media (min-width:290px) and (max-width:480px){
+    ::i-block-chrome, .arf_prefix_suffix_wrapper{
+        table-layout: fixed;
+    }
+}
+/* CSS Hack for Safari */
+
 .arf_prefix_suffix_wrapper .arf_prefix, .arf_prefix_suffix_wrapper .arf_suffix{
 	cursor:default;
+        box-sizing:content-box !important;
 }
 
 .arf_fieldset .dropdown-toggle:after{

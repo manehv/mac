@@ -2,7 +2,7 @@
 /*
 Plugin Name: ARForms
 Description: Exclusive Wordpress Form Builder Plugin With Seven Most Popular E-Mail Marketing Tools Integration
-Version: 2.7
+Version: 2.7.3
 Plugin URI: http://www.arformsplugin.com/
 Author: Repute InfoSystems
 Author URI: http://reputeinfosystems.com/
@@ -40,18 +40,22 @@ class arformhelper{
 
     function setup_edit_variables($values){
 
+        $values['id'] = isset($values['id']) ? $values['id'] : '';
 
         global $arfform, $style_settings, $arformhelper, $armainhelper;
 
 
         $record = $arfform->getOne($values['id']);
-
-
+        
+        if( isset($record ) ){
+        
         foreach (array('is_loggedin' => $record->is_loggedin, 'can_edit' => $record->can_edit) as $var => $default)
 
 
             $values[$var] = $armainhelper->get_param($var, $default);
-
+        
+        
+        }
 
         foreach ($arformhelper->get_default_options() as $opt => $default){
 
@@ -644,7 +648,7 @@ class arformhelper{
 				
         $tagregexp = '';
 				 
-        preg_match_all("/\[(if )?($tagregexp)\b(.*?)(?:(\/))?\](?:(.+?)\[\/\2\])?/s", $content, $matches, PREG_PATTERN_ORDER);	
+        preg_match_all("/\[(if )?($tagregexp)(.*?)(?:(\/))?\](?:(.+?)\[\/\2\])?/s", $content, $matches, PREG_PATTERN_ORDER);	
 		
 		if( $matches and $matches[3] )
 		{
@@ -667,6 +671,7 @@ class arformhelper{
 						if(count($is_checkbox)>0)
 						{
 							$field_id = $is_checkbox[0];
+							$is_checkbox[1] = isset( $is_checkbox[1] ) ? $is_checkbox[1] : '';
 							$option_id = $is_checkbox[1];
 						}
 						else
@@ -735,7 +740,7 @@ class arformhelper{
 				
         $tagregexp = '';
 				 
-        preg_match_all("/\[(if )?($tagregexp)\b(.*?)(?:(\/))?\](?:(.+?)\[\/\2\])?/s", $content, $matches, PREG_PATTERN_ORDER);	
+        preg_match_all("/\[(if )?($tagregexp)(.*?)(?:(\/))?\](?:(.+?)\[\/\2\])?/s", $content, $matches, PREG_PATTERN_ORDER);	
 		
 		if( $matches and $matches[3] )
 		{
@@ -759,6 +764,7 @@ class arformhelper{
 						if(count($is_checkbox)>0)
 						{
 							$field_id = $is_checkbox[0];
+							$is_checkbox[1] = isset( $is_checkbox[1] ) ? $is_checkbox[1] : '';
 							$option_id = $is_checkbox[1];
 						}
 						else

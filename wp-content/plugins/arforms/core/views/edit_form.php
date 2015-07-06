@@ -2,7 +2,7 @@
 /*
 Plugin Name: ARForms
 Description: Exclusive Wordpress Form Builder Plugin With Seven Most Popular E-Mail Marketing Tools Integration
-Version: 2.7
+Version: 2.7.3
 Plugin URI: http://www.arformsplugin.com/
 Author: Repute InfoSystems
 Author URI: http://reputeinfosystems.com/
@@ -214,9 +214,9 @@ $submit_buttonwidth = $newarr['arfsubmitbuttonwidthsetting'] ? $newarr['arfsubmi
 						?>
 						<div id="arf_cl_rule_arfsubmit<?php echo '_'.$rule_i; ?>" class="cl_rules">
 							<input type="hidden" name="rule_array_arfsubmit[]" value="<?php echo $rule_i; ?>" />
-							<div class="sltstandard" style="float:none; display:inline;"><?php echo $arfieldhelper->arf_cl_field_menu($form->id, 'arf_cl_field_arfsubmit_'.$rule_i, 'arf_cl_field_arfsubmit_'.$rule_i, $rule['field_id']); ?></div>
+							<div class="sltstandard" style="float:none; display:inline-block;margin-right:10px;"><?php echo $arfieldhelper->arf_cl_field_menu($form->id, 'arf_cl_field_arfsubmit_'.$rule_i, 'arf_cl_field_arfsubmit_'.$rule_i, $rule['field_id']); ?></div>
 							&nbsp;
-							<div class="sltstandard" style="float:none; display:inline;"><?php echo $arfieldhelper->arf_cl_rule_menu('arf_cl_op_arfsubmit_'.$rule_i, 'arf_cl_op_arfsubmit_'.$rule_i, $rule['operator']); ?></div>
+							<div class="sltstandard" style="float:none; display:inline-block;margin-right:10px;"><?php echo $arfieldhelper->arf_cl_rule_menu('arf_cl_op_arfsubmit_'.$rule_i, 'arf_cl_op_arfsubmit_'.$rule_i, $rule['operator']); ?></div>
 							&nbsp;
 							<input type="text" name="cl_rule_value_arfsubmit<?php echo '_'.$rule_i; ?>" id="cl_rule_value_arfsubmit<?php echo '_'.$rule_i; ?>" class="txtstandardnew" value='<?php echo esc_attr($rule['value']); ?>' />
 							&nbsp;

@@ -26,12 +26,26 @@
 		$formdata_h_value = explode("value='",$formdata_h);
 		$formdata_h_value_f = strpos($formdata_h_value[1],"'");
 		$formdata_h_value_f1 = substr($formdata_h_value[1], 0, $formdata_h_value_f);
-		
+
 		$fields[$formdata_h_name_f1] = $formdata_h_value_f1;
+		
 	}
+		
 	$fields["email"] = $email;
-	$fields["name"] = $fname." ".$lname;
 	
+	foreach( $fields as $f ){
+		$found = preg_match_all( '/\(awf_(.*?)\)/',$f,$patt);
+		if( $found > 0 ){
+			
+			$fields["name (awf_first)"] = $fname;
+			$fields["name (awf_last)"] = $lname;
+		}
+	}
+	
+	if( !isset( $fields["name (awf_first)"] ) ){
+		$fields["name"] = $fname.' '.$lname;
+	}
+		
 	$get_urlexp = @explode("action='",$formdata);	
 	$get_url_pos = @strpos($get_urlexp[1],"'");		
 	

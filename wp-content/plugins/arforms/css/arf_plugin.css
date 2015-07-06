@@ -1572,7 +1572,7 @@ tr.no-items {
 	margin:0;
 }
 .row-actions {
-	visibility:visible;
+	visibility:visible !important;
 }
 ul.arfmainformnavigation li.tab-unselected {
 	width:217px;

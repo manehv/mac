@@ -41,20 +41,6 @@ jQuery(".sltstandard select").selectpicker();
 	$('select[name^="item_meta"], textarea[name^="item_meta"]').css('float','left');
 	$('input[name^="item_meta"]').not(':radio, :checkbox').css('float','left');
 
-
-
-/*$("img.helptip[title]").hover(
-
-
-function(){frm_title=$(this).attr('title');$('#frm_tooltip').html(frm_title).fadeIn('fast');}, 
-
-
-function(){$('#frm_tooltip').fadeOut('fast');$(this).attr('title',frm_title);}
-
-
-);*/
-
-
 	jQuery('.html_field_description').on('blur', function(){
 		var $elm = jQuery(this);
 		var input = $elm[0];
@@ -157,22 +143,25 @@ jQuery('.arf_coloroption_sub:not(.arf_clr_disable)').colpick({
     submit:0,
     onBeforeShow:function(){
         var fid 	= jQuery(this).find('.arfhex').attr('data-fid');
+        var did = fid.replace('arf_divider_bg_color_','');
         var color 	= jQuery('#'+fid).val();
-		if( jQuery(this).attr('data-cls') == 'arf_clr_disable'){
-			jQuery('.arf_clr_disable').css('background',color);
-		}
-            color	= color.replace('#','');
+            if( jQuery(this).attr('data-cls') == 'arf_clr_disable'){
+                jQuery('#arf_divider_bg_color_disabled_'+did+'.arf_clr_disable .arfhex').css('background',color);
+            }
+        color = color.replace('#','');
         jQuery(this).colpickSetColor(color, true);
     },
     onChange:function(hsb,hex,rgb,el,bySetColor) {
-		if( jQuery(el).attr('data-cls') == 'arf_clr_disable'){
-			jQuery('.arf_clr_disable .arfhex').css('background','#'+hex);
-		}
+
         jQuery(el).find('.arfhex').css('background','#'+hex);
         if(!bySetColor) jQuery(el).val(hex);
         var fid = jQuery(el).find('.arfhex').attr('data-fid');
         if( fid )
             jQuery('#'+fid).val('#'+hex);
+        var did = fid.replace('arf_divider_bg_color_','');
+        if( jQuery(el).attr('data-cls') == 'arf_clr_disable'){
+            jQuery('#arf_divider_bg_color_disabled_'+did+'.arf_clr_disable .arfhex').css('background','#'+hex);
+        }
     }
 });
 

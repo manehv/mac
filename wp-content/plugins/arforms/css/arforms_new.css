@@ -1043,11 +1043,6 @@ letter specing:0.3;
 	border-bottom-right-radius:0px;
 	border-top-left-radius:6px;
 	border-top-right-radius:6px;
-/*	max-height: 107px !important;*/
-}
-.arfdropdown-menu .open{
-	max-height: 107px !important;
-	
 }
 .wrap .btn-group.dropup.open .arfdropdown-menu .dropdown-menu.inner {
 	border-top:none;
@@ -4724,4 +4719,14 @@ input.arf_both_pre_suffix{
 
 .arf_editor_prefix_suffix_wrapper.arf_editor_colorpicker{
 	width:170px;
+}
+.arf_success_message_show_time.txtstandardnew
+{
+   width: 50px !important;
+}
+.arf_success_message_show_time_wrapper,.arf_success_message_show_time_inner
+{
+    color:#333333;
+    font-size:14px;
+    font-family:'aileron_regular', Arial, Helvetica, Verdana, sans-serif; 
 }

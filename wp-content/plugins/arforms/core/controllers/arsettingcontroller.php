@@ -2,7 +2,7 @@
 /*
 Plugin Name: ARForms
 Description: Exclusive Wordpress Form Builder Plugin With Seven Most Popular E-Mail Marketing Tools Integration
-Version: 2.7
+Version: 2.7.3
 Plugin URI: http://www.arformsplugin.com/
 Author: Repute InfoSystems
 Author URI: http://reputeinfosystems.com/
@@ -54,7 +54,9 @@ class arsettingcontroller{
 	
 	function arfreqlicdeact()
 	{
-		$plugres = arformcontroller::arfdeactivatelicense();
+            global $arformcontroller;
+            
+            $plugres = $arformcontroller->arfdeactivatelicense();
 		
 		if(isset($plugres) && $plugres!= "" )
 		{
@@ -72,14 +74,16 @@ class arsettingcontroller{
 	
 	function arfreqlicdeactuninst()
 	{
-		$plugres = arformcontroller::arfdeactivatelicense();
+		global $arformcontroller;
+                $plugres = $arformcontroller->arfdeactivatelicense();
 		
 		return;
 	}
 	
 	function arfreqact()
 	{
-		$plugres = arformcontroller::arfverifypurchasecode();
+                global $arformcontroller;
+		$plugres = $arformcontroller->arfverifypurchasecode();
 		
 		if(isset($plugres) && $plugres!= "")
 		{
@@ -107,8 +111,10 @@ class arsettingcontroller{
 	{
 		$siteinfo = array();
 		
-		$siteinfo[] = arnotifymodel::sitename();
-		$siteinfo[] = arformmodel::sitedesc();
+                global $arnotifymodel,$arfform;
+                
+		$siteinfo[] = $arnotifymodel->sitename();
+		$siteinfo[] = $arfform->sitedesc();
 		$siteinfo[] = home_url();
 		$siteinfo[] = get_bloginfo('admin_email');
 		$siteinfo[] = $_SERVER['SERVER_ADDR'];
@@ -130,10 +136,11 @@ class arsettingcontroller{
     }
 	
 	function route(){
-
+                
+                global $arsettingcontroller;
 		if(isset($_REQUEST['page']) && $_REQUEST['page'] == 'ARForms-import-export')
 		{
-			return arsettingcontroller::import_export_form();
+			return $arsettingcontroller->import_export_form();
 		} else if( isset( $_REQUEST['page'] ) && $_REQUEST['page'] == 'ARForms-addons' ){
 			
 			if( file_exists( VIEWS_PATH.'/addon_lists.php' ) ){
@@ -145,21 +152,23 @@ class arsettingcontroller{
         	$action = isset($_REQUEST['arfaction']) ? 'arfaction' : 'action';
 	
 			
-			$cur_tab = @isset($_REQUEST['arfcurrenttab']) ? $_REQUEST['arfcurrenttab'] : '';
+			global $armainhelper,$arsettingcontroller;
+                        
+                        $cur_tab = @isset($_REQUEST['arfcurrenttab']) ? $_REQUEST['arfcurrenttab'] : '';
 			 
-			$action = armainhelper::get_param($action);
+			$action = $armainhelper->get_param($action);
 	
 	
 			if($action == 'process-form')
 	
 	
-				return arsettingcontroller::process_form($cur_tab);
+				return $arsettingcontroller->process_form($cur_tab);
 	
 	
 			else
 	
 	
-				return arsettingcontroller::display_form();
+				return $arsettingcontroller->display_form();
 		}
 
     }
@@ -174,9 +183,10 @@ class arsettingcontroller{
 	function display_form(){
 
 
-      global $arfsettings, $arfajaxurl, $wpdb, $arfform;
+      global $arfsettings, $arfajaxurl, $wpdb, $arfform,$armainhelper;
+      
 
-      $arfroles = armainhelper::frm_capabilities();
+      $arfroles = $armainhelper->frm_capabilities();
 
 
       
@@ -321,6 +331,7 @@ class arsettingcontroller{
 			$multisiteenv = "Single Site";
 		
 		$addon_listing = 1;
+		
 								
 		$bloginformation[] = $arnotifymodel->sitename();
 		$bloginformation[] = $arfform->sitedesc();
@@ -394,7 +405,7 @@ class arsettingcontroller{
 
 	  
 
-
+	$_REQUEST['infusionsoft_api'] = isset( $_REQUEST['infusionsoft_api'] ) ? $_REQUEST['infusionsoft_api'] : '';
 	$wpdb->update($wpdb->prefix."arf_autoresponder", array('responder_api_key' => @$_REQUEST['infusionsoft_api'] ), array('responder_id' => '2'));	
 
 	if($_REQUEST['aweber_type'] == 1) {
@@ -547,6 +558,8 @@ class arsettingcontroller{
 			
         $arfsettings->store($cur_tab);
 		
+		$message_notRquireFeild = '';
+		
 		if($cur_tab == 'general_settings')
 		{
 	        $message = __('General setting changes saved successfully.', 'ARForms');		
@@ -569,8 +582,8 @@ class arsettingcontroller{
 		
       }
 
-
-      $arfroles = armainhelper::frm_capabilities();
+      global $armainhelper;
+      $arfroles = $armainhelper->frm_capabilities();
 
 
       $sections = apply_filters('arfaddsettingssection', array());
@@ -605,18 +618,20 @@ class arsettingcontroller{
 
     function head(){
 
-		if( isset($_REQUEST['page']) && $_REQUEST['page'] != '' && $_REQUEST['page'] != "ARForms-settings" )
+		global $armainhelper;
+                
+                if( isset($_REQUEST['page']) && $_REQUEST['page'] != '' && $_REQUEST['page'] != "ARForms-settings" )
         	$js_file  = ARFURL . '/js/jquery/jquery-ui-themepicker.js';
 
 		$uicss = ARFURL.'/css/ui-all/ui.all.css';
 
 		wp_register_style('ui-css',$uicss);
-		armainhelper::load_styles(array('ui-css'));
+                $armainhelper->load_styles(array('ui-css'));
 		
 		$customcss = ARFSCRIPTURL.'&amp;controller=settings';
 
 		wp_register_style('custom-css',$customcss);
-		armainhelper::load_styles(array('custom-css'));
+		$armainhelper->load_styles(array('custom-css'));
 		
       ?>
       <?php

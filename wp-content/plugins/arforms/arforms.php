@@ -3,7 +3,7 @@
 /*
 Plugin Name: ARForms
 Description: Exclusive Wordpress Form Builder Plugin With Seven Most Popular E-Mail Marketing Tools Integration
-Version: 2.7
+Version: 2.7.3
 Plugin URI: http://www.arformsplugin.com/
 Author: Repute InfoSystems
 Author URI: http://reputeinfosystems.com/
@@ -61,8 +61,8 @@ if (!defined ('IS_WPMU')){
 }
 
 global $arfversion, $arfdbversion, $arfadvanceerrcolor;
-$arfversion = '2.7';
-$arfdbversion = '2.7';
+$arfversion = '2.7.3';
+$arfdbversion = '2.7.3';
 
 global $arfajaxurl;
 $arfajaxurl = admin_url('admin-ajax.php');
