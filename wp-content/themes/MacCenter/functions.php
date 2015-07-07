@@ -1281,7 +1281,7 @@ function custom_override_shipping_fields( $fields ) {
         'placeholder'   => (''),
                                 'required'  => true,
                                  'type' => 'select',
-                                'class'     => array('form-row-first', 'address-field',' col-lg-4'),
+                                'class'     => array('form-row-last', 'address-field',' col-lg-4'),
                                 'clear'    => false,
                                  'options'     => array(
 																									'select' => __('select', 'woocommerce' ),
@@ -1290,20 +1290,20 @@ function custom_override_shipping_fields( $fields ) {
      );
                    
 
-       $fields['shipping_postcode'] = array(
-        'label'     => __('Código postal/Zip *', 'woocommerce'),
-        'placeholder'   => (''),
-                                'required'  => true,
-                                'class'     => array('form-row-first', '',' col-lg-4'),
-                                'validate'    => array( 'postcode' ),
-                                'clear'    => false
-			);
+//        $fields['shipping_postcode'] = array(
+//         'label'     => __('Código postal/Zip *', 'woocommerce'),
+//         'placeholder'   => (''),
+//                                 'required'  => true,
+//                                 'class'     => array('form-row-first', '',' col-lg-4'),
+//                                 'validate'    => array( 'postcode' ),
+//                                 'clear'    => false
+// 			);
 
       $fields['shipping_address_1'] = array(
         'label'     => __('Dirección Completa', 'woocommerce'),
         'placeholder'   => (''),
                                 'required'  => true,
-                                'class'     => array('form-row-last', 'address-field',' col-lg-4')
+                                'class'     => array('form-row-first', 'address-field',' col-lg-4')
      );
 
       $fields['shipping_mobile_phone'] = array(
@@ -1371,7 +1371,7 @@ function order_fields($fields) {
       //  $fields2['shipping_state'] = $fields['shipping_state'];
         $fields2['shipping_company'] = $fields['shipping_company'];
         $fields2['shipping_city'] = $fields['shipping_city'];
-        $fields2['shipping_postcode'] = $fields['shipping_postcode'];
+        //$fields2['shipping_postcode'] = $fields['shipping_postcode'];
         $fields2['shipping_address_1'] = $fields['shipping_address_1'];
         $fields2['shipping_mobile_phone'] = $fields['shipping_mobile_phone'];
     return $fields2;
