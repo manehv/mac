@@ -127,13 +127,14 @@ jQuery(document).ready(function($)
 
    $('#billing_company').on('change',function(){
      state= $(this).val();
-		 
+		 $("#billing_city_field").after("<div class='loading col-lg-offset-8 col-sm-offset-8'><span>Cargando...</span></div>");
 		 $.ajax({
               url: "/wp-admin/admin-ajax.php",
               type: "POST",
               dataType:"json",
     				  data:'action=cities_ajax_call&state='+state,
 					    success: function(data) {
+							$('.loading').remove();	
 							$('#billing_city').empty();
 								$.each(data.cities, function(index, value) {
 									$("#billing_city").append($('<option>').html(value)) ;
@@ -147,6 +148,7 @@ jQuery(document).ready(function($)
 
 	  $('#shipping_company').on('change',function(){
      state= $(this).val();
+		  $("#shipping_city_field").after("<div class='loading col-lg-offset-8 col-sm-offset-8'><span>Cargando...</span></div>");
 		 $('#shipping_city').empty();
 		 $.ajax({
               url: "/wp-admin/admin-ajax.php",
@@ -155,7 +157,7 @@ jQuery(document).ready(function($)
     				  data:'action=cities_ajax_call&state='+state,
 
 					    success: function(data) {
-             
+             $('.loading').remove();
 							$.each(data.cities, function(index, value) {
                             $("#shipping_city").append($('<option>').html(value)) ;
               });
