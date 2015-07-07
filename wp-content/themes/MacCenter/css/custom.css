@@ -214,6 +214,7 @@ p.fakealert  {
     list-style: outside none none;
     padding: 30px 0 30px 30px;
 		margin:0px;
+		font-size:15px;
 }
 /*ALERTA OUT STOCK*/
 .out-of-stock{
@@ -1679,6 +1680,7 @@ ul.woocommerce-error {
     margin: 0 0 0;
     padding: 30px 0 30px 30px;
 		border-radius:25px;
+		font-size:15px;
 }
 .back-image{
 	background: rgba(0, 0, 0, 0) url("../images/cone1.png") no-repeat scroll right bottom;
@@ -1711,3 +1713,7 @@ margin: 0 25% ;
 .back-image:nth-of-type(1) ~ .back-image{ 
 	display:none;
 }
+.loading span{
+	margin-left:5px;	
+}
+.loading{margin-top:-15px;}
