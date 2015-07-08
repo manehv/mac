@@ -1106,9 +1106,9 @@ function city_ajax_shipping() {
 	global $wpdb;
 	$c=$_POST['state'];
 	$sql = "select distinct c.city from wp_states s , wp_cities c where c.state_id = s.state_code
-					and state_name = '".$c."'";
+					and state_name = '".$c."' order by city";
  $cities = $wpdb->get_results ($sql);
- $cities = array_reverse($cities);
+ //$cities = array_reverse($cities);
 
  foreach($cities as $val){
    $city[$val->city]=$val->city;
