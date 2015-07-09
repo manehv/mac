@@ -7,8 +7,15 @@ function doAjaxImport(formData)
 		data: formData,
 		success: function(data)
 		{ 
-			console.log(data);
-			var newFormData = JSON.parse(data);
+			try { 
+				console.log (data);
+				var newFormData = JSON.parse(data); 
+			} 
+			catch (err) {
+				jQuery('#import_log').prepend('<div>'+ data +'</div>');
+				jQuery('#import_log').prepend('<p><h2>Something went wrong. The stack trace is printed below</h2></p>');
+			}
+
 			if (newFormData.done !=1)
 			{								
 				if (newFormData.log && newFormData.log.length > 0) {
@@ -19,7 +26,7 @@ function doAjaxImport(formData)
 				doAjaxImport(newFormData);
 			}
 			else
-			{
+			{	
 				if (newFormData.log && newFormData.log.length > 0) {
 					jQuery.each(newFormData.log, function( index, value ) {
 						jQuery('#import_log').prepend('<p> '+value+' </p>');
@@ -30,7 +37,7 @@ function doAjaxImport(formData)
 		},
 		error: function(data)
 		{
-		console.log(data);
+			console.log(data);
 			alert(strings.error);
 		}
 	});
