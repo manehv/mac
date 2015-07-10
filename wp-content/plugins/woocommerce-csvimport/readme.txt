@@ -1,9 +1,9 @@
 === Woocommerce CSV importer ===
 Contributors: Allaerd
 Tags: Woocommerce, commerce, e-commerce, ecommerce, inventory, stock, products, import, csv, multiple images, upload
-Requires at least: 4.0.0
-Tested up to: 4.2
-Stable tag: 3.0.0
+Requires at least: 3.7.0
+Tested up to: 4.0
+Stable tag: 2.2.2
 Donate link: http://allaerd.org
 License: GPLv2 or later 
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -12,7 +12,7 @@ Import products into woocommerce.
 
 == Description ==
 
-Import and manage products in Woocommerce. Upload your CSV file, create your header and import. The import plugin uses AJAX to import the products. No more timeouts on big files. This plugin is tested to 10.000+ products.
+Import and manage products in Woocommerce. Upload your csv file, create your custom header and import. The import plugin uses AJAX to import the products. No more timeouts on big files. This plugin is tested to 10.000+ products.
 
 First step is to look at your settings, select the right field separator and take a look at the other settings as well. 
 
@@ -26,7 +26,6 @@ When you have mapped the right fields, it is time to import!
 2. Import attributes
 3. Import custom fields
 4. Import premium
-5. import taxonomies
 
 You can find them at [allaerd.org](http://allaerd.org/shop)
 
@@ -79,6 +78,10 @@ Change the number of rows to process at the same time. You might have run into t
 
 and the other fields? They are in the several cool [add-on's](http://allaerd.org/shop).
 
+= Max number of files in a directory = 
+
+If you have a FAT32 filesystem you can run into troubles when you are trying to put more than 15.000+ files in a directory!
+
 == Screenshots ==
 
 1. Upload a CSV and create a header
@@ -91,33 +94,13 @@ and the other fields? They are in the several cool [add-on's](http://allaerd.org
 2. Activate the plugin through the 'Plugins' menu in WordPress
 
 == Upgrade Notice ==
-Version 3.+  is mayor release. Please make a backup first before you upgrade! And be sure to upgrade you add-ons to version 3+.
 
-
-== Roadmap ==
-
-* schedule option
-* sorting of headers
-* add-ons versions will be visible in add-ons part and upgrade notices
-* export options
-* support for xls, xml, feeds
+Version 2.+  is mayor release..... Please make a backup first before you upgrade! 
 
 == Changelog ==
 
-= 3.0.0 =
-* multiple headers
-* speed optimisation
-* complete rebuild of plugin, hooks and filters
-* settings part
-* documentation part
-* add-on part
-* special chars allowed in url for images. (htmlspecialchars added to parse url)
-
-= 2.2.3 =
-* redirect to header tab if no header is present
-
 = 2.2.2 = 
-* changes the shipping class import a bit more to be more inline with categories
+* changes the shipping class a bit more to be more inline with categories *
 
 = 2.2.1 = 
 * fixed bug if shipping class was empty or contained spaces
@@ -128,6 +111,7 @@ Version 3.+  is mayor release. Please make a backup first before you upgrade! An
 * solved a bug when spaces or %20 where in filenames of urls. Added sanitize_file_name and url_decode to to clean the name.
 * solved the header preview, showed row 2 3 times
 * add add-on section and preparations for version control
+
 
 = 2.1.0 =
 * fixed an issue when images have the same name and are stored in the same location. The image was overridden instead of appending -X to the filename
@@ -301,7 +285,7 @@ This is a mayor revision of the plugin. A lot of small and larger bugfixes are d
 
 = 0.5 =
 * categories can now have children. In the category column you can now do like this: cat1->subcat1->subsubcat1|cat2->subcat2|cat3
-* added an option in the settings page to select a field separator
+* added an option in the settings page to select a field seperator
 * made a function to check the options on init
 
 = 0.4.1 =

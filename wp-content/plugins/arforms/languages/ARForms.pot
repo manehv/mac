@@ -1,0 +1,5803 @@
+# Loco Gettext template
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ARForms v2.7.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"POT-Revision-Date: Tue Jul 07 2015 08:56:44 GMT-0500 (COT)\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: admin <testrepute123@gmail.com>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Generator: Loco - https://localise.biz/\n"
+"X-Poedit-Language: English\n"
+"X-Poedit-Country: UNITED STATES\n"
+"X-Poedit-KeywordsList: _:1;gettext:1;dgettext:2;ngettext:1,2;dngettext:2,3;"
+"__:1;_e:1;_c:1;_n:1,2;_n_noop:1,2;_nc:1,2;__ngettext:1,2;__ngettext_noop:1,2;"
+"_x:1,2c;_ex:1,2c;_nx:1,2,4c;_nx_noop:1,2,3c;_n_js:1,2;_nx_js:1,2,3c;"
+"esc_attr__:1;esc_html__:1;esc_attr_e:1;esc_html_e:1;esc_attr_x:1,2c;"
+"esc_html_x:1,2c;comments_number_link:2,3;t:1;st:1;trans:1;transChoice:1,2\n"
+"X-Poedit-Basepath: ../\n"
+"X-Poedit-Bookmarks: \n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Textdomain-Support: yes"
+
+#: core/controllers/arfieldcontroller.php:794
+msgid "Option Label"
+msgstr ""
+
+#: core/controllers/arfieldcontroller.php:797
+msgid "Saved Value"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:3601
+msgid "English/Western"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:3601
+msgid "Afrikaans"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:3602
+msgid "Albanian"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:3602
+msgid "Arabic"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:3603
+msgid "Armenian"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:3603
+msgid "Azerbaijani"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:3604
+msgid "Basque"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:3604
+msgid "Bosnian"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:3605
+msgid "Bulgarian"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:3605
+msgid "Catalan"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:3606
+msgid "Chinese Hong Kong"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:3606
+msgid "Chinese Simplified"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:3607
+msgid "Chinese Traditional"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:3607
+msgid "Croatian"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:3608
+msgid "Czech"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:3608
+msgid "Danish"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:3609
+#: core/views/settings_form.php:502
+msgid "Dutch"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:3609
+msgid "English/UK"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:3610
+msgid "Esperanto"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:3610
+msgid "Estonian"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:3611
+msgid "Faroese"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:3611
+msgid "Farsi/Persian"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:3612
+msgid "Finnish"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:3612
+#: core/views/settings_form.php:502
+msgid "French"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:3613
+msgid "French/Swiss"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:3613
+#: core/views/settings_form.php:502
+msgid "German"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:3614
+msgid "Greek"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:3614
+msgid "Hebrew"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:3615
+msgid "Hungarian"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:3615
+msgid "Icelandic"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:3616
+msgid "Italian"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:3616
+msgid "Japanese"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:3617
+msgid "Korean"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:3617
+msgid "Latvian"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:3618
+msgid "Lithuanian"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:3618
+msgid "Malaysian"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:3619
+msgid "Norwegian"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:3619
+msgid "Polish"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:3620
+msgid "Portuguese/Brazilian"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:3620
+msgid "Romanian"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:3621
+#: core/views/settings_form.php:502
+msgid "Russian"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:3621
+#: core/helpers/arfieldhelper.php:3622
+msgid "Serbian"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:3622
+msgid "Slovak"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:3623
+msgid "Slovenian"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:3623
+#: core/views/settings_form.php:502
+msgid "Spanish"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:3624
+msgid "Swedish"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:3624
+msgid "Tamil"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:3625
+msgid "Thai"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:3625
+#: core/views/settings_form.php:502
+msgid "Turkish"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:3626
+msgid "Vietnamese"
+msgstr ""
+
+#: core/controllers/arformcontroller.php:135
+#: core/controllers/arrecordcontroller.php:961
+#: core/controllers/arrecordcontroller.php:2615
+#: core/controllers/arrecordcontroller.php:2726
+msgid "Please select one or more records."
+msgstr ""
+
+#: core/controllers/arformcontroller.php:171
+#: core/controllers/arformcontroller.php:2578
+msgid "Record is deleted successfully."
+msgstr ""
+
+#: core/controllers/arformcontroller.php:219
+msgid "Forms"
+msgstr ""
+
+#: core/controllers/arformcontroller.php:219
+#: core/views/list.php:440
+msgid "Manage Forms"
+msgstr ""
+
+#: core/controllers/arformcontroller.php:221
+#: core/controllers/arformcontroller.php:2354
+#: core/views/list.php:465
+msgid "Add New Form"
+msgstr ""
+
+#: core/controllers/arformcontroller.php:1145
+msgid "Form is successfully updated"
+msgstr ""
+
+#: core/controllers/arformcontroller.php:1326
+msgid "There is a problem creating new template."
+msgstr ""
+
+#: core/controllers/arformcontroller.php:1553
+msgid "Form is Successfully Deleted"
+msgstr ""
+
+#: core/controllers/arformcontroller.php:1568
+msgid "Add ARForms Form"
+msgstr ""
+
+#: core/controllers/arformcontroller.php:1857
+msgid "Form is Successfully Updated"
+msgstr ""
+
+#: core/controllers/arformcontroller.php:1876
+msgid "Template is Successfully Updated"
+msgstr ""
+
+#: core/controllers/arformcontroller.php:1885
+msgid "That template cannot be edited"
+msgstr ""
+
+#: core/controllers/arformcontroller.php:2072
+#: core/controllers/arformcontroller.php:2464
+#: core/controllers/arrecordcontroller.php:3015
+#: core/controllers/arrecordcontroller.php:3450
+#: core/controllers/arrecordcontroller.php:3456
+#: core/views/list.php:14
+#: core/views/list.php:576
+#: core/views/view_records.php:107
+#: core/views/view_records.php:854
+#: core/views/view_records.php:858
+msgid "Delete"
+msgstr ""
+
+#: core/controllers/arformcontroller.php:2361
+#: core/controllers/arformcontroller.php:2513
+#: core/controllers/arrecordcontroller.php:3362
+#: core/controllers/arrecordcontroller.php:3489
+#: core/views/list.php:472
+#: core/views/list.php:629
+#: core/views/view_records.php:770
+#: core/views/view_records.php:898
+msgid "Bulk Actions"
+msgstr ""
+
+#: core/controllers/arformcontroller.php:2451
+#: core/views/list.php:562
+msgid "Export To CSV"
+msgstr ""
+
+#: core/views/list.php:659
+msgid "Are you sure you want to delete this form?"
+msgstr ""
+
+#: core/views/list.php:661
+#: core/views/list.php:672
+#: core/views/newfield.php:267
+#: core/views/view_records.php:1025
+#: core/views/view_records.php:1036
+msgid "Okay"
+msgstr ""
+
+#: core/views/edit.php:992
+#: core/views/list.php:662
+#: core/views/list.php:673
+#: core/views/newfield.php:268
+#: core/views/view_records.php:1026
+#: core/views/view_records.php:1037
+msgid "Cancel"
+msgstr ""
+
+#: core/controllers/arformcontroller.php:2692
+#: core/views/addcontrols.php:540
+msgid "Form Width"
+msgstr ""
+
+#: core/controllers/arformcontroller.php:2721
+#: core/controllers/arformcontroller.php:2919
+#: core/controllers/arformcontroller.php:2942
+#: core/controllers/arformcontroller.php:3066
+#: core/controllers/arformcontroller.php:3288
+#: core/controllers/arformcontroller.php:3323
+#: core/controllers/arformcontroller.php:3637
+#: core/controllers/arformcontroller.php:3757
+#: core/controllers/arformcontroller.php:3957
+#: core/controllers/arformcontroller.php:4040
+#: core/controllers/arformcontroller.php:4134
+#: core/controllers/arformcontroller.php:4339
+#: core/controllers/arformcontroller.php:4608
+#: core/controllers/arformcontroller.php:4631
+#: core/controllers/arformcontroller.php:4719
+#: core/controllers/arformcontroller.php:4750
+#: core/controllers/arformcontroller.php:4771
+#: core/controllers/arformcontroller.php:5387
+#: core/controllers/arformcontroller.php:5422
+#: core/controllers/arformcontroller.php:5441
+#: core/controllers/arformcontroller.php:5718
+#: core/controllers/arformcontroller.php:5742
+#: core/controllers/arformcontroller.php:5863
+#: core/controllers/arformcontroller.php:6063
+#: core/helpers/arfieldhelper.php:4471
+#: core/vc/class_vc_extend.php:702
+#: core/vc/class_vc_extend.php:703
+#: core/views/addcontrols.php:569
+#: core/views/addcontrols.php:767
+#: core/views/addcontrols.php:790
+#: core/views/addcontrols.php:914
+#: core/views/addcontrols.php:1135
+#: core/views/addcontrols.php:1170
+#: core/views/addcontrols.php:1484
+#: core/views/addcontrols.php:1602
+#: core/views/addcontrols.php:1802
+#: core/views/addcontrols.php:1886
+#: core/views/addcontrols.php:1980
+#: core/views/addcontrols.php:2184
+#: core/views/addcontrols.php:2453
+#: core/views/addcontrols.php:2476
+#: core/views/addcontrols.php:2564
+#: core/views/addcontrols.php:2595
+#: core/views/addcontrols.php:2616
+#: core/views/addcontrols.php:3233
+#: core/views/addcontrols.php:3268
+#: core/views/addcontrols.php:3287
+#: core/views/addcontrols.php:3564
+#: core/views/addcontrols.php:3588
+#: core/views/addcontrols.php:3709
+#: core/views/addcontrols.php:3908
+#: core/views/insert_form_popup.php:719
+#: core/views/insert_form_popup.php:720
+#: core/widgets/ARFwidgetForm.php:99
+#: core/widgets/ARFwidgetForm.php:103
+msgid "px"
+msgstr ""
+
+#: core/controllers/arformcontroller.php:2722
+#: core/controllers/arformcontroller.php:4135
+#: core/views/addcontrols.php:570
+#: core/views/addcontrols.php:1981
+msgid "%"
+msgstr ""
+
+#: core/controllers/arformcontroller.php:6084
+#: core/views/addcontrols.php:3929
+msgid "BG Color"
+msgstr ""
+
+#: core/controllers/arformcontroller.php:3173
+#: core/controllers/arformcontroller.php:3724
+#: core/views/addcontrols.php:1021
+#: core/views/addcontrols.php:1569
+msgid "Text Align"
+msgstr ""
+
+#: core/controllers/arformcontroller.php:4162
+#: core/views/addcontrols.php:2008
+msgid "Text Direction"
+msgstr ""
+
+#: core/controllers/arformcontroller.php:3059
+#: core/views/addcontrols.php:907
+msgid "Padding"
+msgstr ""
+
+#: core/controllers/arformcontroller.php:2884
+#: core/views/addcontrols.php:732
+msgid "Form Border"
+msgstr ""
+
+#: core/controllers/arformcontroller.php:2967
+#: core/controllers/arformcontroller.php:4484
+#: core/controllers/arformcontroller.php:4559
+#: core/controllers/arformcontroller.php:5778
+#: core/controllers/arformcontroller.php:6126
+#: core/controllers/arformcontroller.php:6296
+#: core/views/addcontrols.php:815
+#: core/views/addcontrols.php:2329
+#: core/views/addcontrols.php:2404
+#: core/views/addcontrols.php:3624
+#: core/views/addcontrols.php:3971
+#: core/views/addcontrols.php:4141
+msgid "Border Color"
+msgstr ""
+
+#: core/controllers/arformcontroller.php:2915
+#: core/controllers/arformcontroller.php:3264
+#: core/controllers/arformcontroller.php:3932
+#: core/controllers/arformcontroller.php:4013
+#: core/controllers/arformcontroller.php:4307
+#: core/controllers/arformcontroller.php:4604
+#: core/controllers/arformcontroller.php:5362
+#: core/controllers/arformcontroller.php:5714
+#: core/controllers/arformcontroller.php:6036
+#: core/helpers/arfieldhelper.php:4809
+#: core/views/addcontrols.php:763
+#: core/views/addcontrols.php:1112
+#: core/views/addcontrols.php:1777
+#: core/views/addcontrols.php:1858
+#: core/views/addcontrols.php:2152
+#: core/views/addcontrols.php:2449
+#: core/views/addcontrols.php:3208
+#: core/views/addcontrols.php:3560
+#: core/views/addcontrols.php:3882
+msgid "Size"
+msgstr ""
+
+#: core/controllers/arformcontroller.php:2938
+#: core/controllers/arformcontroller.php:4627
+#: core/controllers/arformcontroller.php:5738
+#: core/views/addcontrols.php:786
+#: core/views/addcontrols.php:2472
+#: core/views/addcontrols.php:3584
+msgid "Radius"
+msgstr ""
+
+#: core/controllers/arformcontroller.php:3139
+#: core/views/addcontrols.php:987
+msgid "Form Title"
+msgstr ""
+
+#: core/controllers/arformcontroller.php:4650
+#: core/controllers/arformcontroller.php:5092
+#: core/models/arfieldmodel.php:167
+#: core/views/addcontrols.php:2495
+#: core/views/addcontrols.php:2938
+msgid "Color"
+msgstr ""
+
+#: core/controllers/arformcontroller.php:3242
+#: core/controllers/arformcontroller.php:3894
+#: core/controllers/arformcontroller.php:4269
+#: core/controllers/arformcontroller.php:4678
+#: core/controllers/arformcontroller.php:5068
+#: core/controllers/arformcontroller.php:5324
+#: core/helpers/arfieldhelper.php:4657
+#: core/helpers/arfieldhelper.php:4732
+#: core/views/addcontrols.php:1090
+#: core/views/addcontrols.php:1739
+#: core/views/addcontrols.php:2114
+#: core/views/addcontrols.php:2523
+#: core/views/addcontrols.php:2914
+#: core/views/addcontrols.php:3170
+msgid "Style"
+msgstr ""
+
+#: core/controllers/arformcontroller.php:3252
+#: core/controllers/arformcontroller.php:3904
+#: core/controllers/arformcontroller.php:4279
+#: core/controllers/arformcontroller.php:5335
+#: core/helpers/arfieldhelper.php:4499
+#: core/views/addcontrols.php:1100
+#: core/views/addcontrols.php:1749
+#: core/views/addcontrols.php:2124
+#: core/views/addcontrols.php:3181
+msgid "normal"
+msgstr ""
+
+#: core/controllers/arformcontroller.php:3253
+#: core/controllers/arformcontroller.php:3905
+#: core/controllers/arformcontroller.php:4280
+#: core/controllers/arformcontroller.php:5336
+#: core/helpers/arfieldhelper.php:4500
+#: core/views/addcontrols.php:1101
+#: core/views/addcontrols.php:1750
+#: core/views/addcontrols.php:2125
+#: core/views/addcontrols.php:3182
+msgid "bold"
+msgstr ""
+
+#: core/controllers/arformcontroller.php:3254
+#: core/controllers/arformcontroller.php:3906
+#: core/controllers/arformcontroller.php:4281
+#: core/controllers/arformcontroller.php:5337
+#: core/helpers/arfieldhelper.php:4501
+#: core/views/addcontrols.php:1102
+#: core/views/addcontrols.php:1751
+#: core/views/addcontrols.php:2126
+#: core/views/addcontrols.php:3183
+msgid "italic"
+msgstr ""
+
+#: core/views/newfield.php:90
+msgid "30"
+msgstr ""
+
+#: core/controllers/arformcontroller.php:3708
+#: core/views/addcontrols.php:1553
+msgid "Label Position"
+msgstr ""
+
+#: core/controllers/arformcontroller.php:3751
+#: core/views/addcontrols.php:1596
+msgid "Label Width"
+msgstr ""
+
+#: core/controllers/arformcontroller.php:3979
+#: core/views/addcontrols.php:1824
+msgid "Hide Labels"
+msgstr ""
+
+#: core/controllers/arformcontroller.php:3183
+#: core/controllers/arformcontroller.php:3811
+#: core/controllers/arformcontroller.php:4190
+#: core/controllers/arformcontroller.php:5238
+#: core/controllers/arformcontroller.php:5950
+#: core/views/addcontrols.php:1031
+#: core/views/addcontrols.php:1656
+#: core/views/addcontrols.php:2036
+#: core/views/addcontrols.php:3084
+#: core/views/addcontrols.php:3796
+msgid "Font Settings"
+msgstr ""
+
+#: core/controllers/arformcontroller.php:3202
+#: core/controllers/arformcontroller.php:3838
+#: core/controllers/arformcontroller.php:4217
+#: core/controllers/arformcontroller.php:5266
+#: core/controllers/arformcontroller.php:5976
+#: core/views/addcontrols.php:1050
+#: core/views/addcontrols.php:1683
+#: core/views/addcontrols.php:2063
+#: core/views/addcontrols.php:3112
+#: core/views/addcontrols.php:3822
+msgid "Family"
+msgstr ""
+
+#: core/controllers/arformcontroller.php:4006
+#: core/views/addcontrols.php:1851
+msgid "Field description settings"
+msgstr ""
+
+#: core/controllers/arformcontroller.php:4118
+#: core/views/addcontrols.php:1964
+msgid "Field Width"
+msgstr ""
+
+#: core/controllers/arformcontroller.php:4716
+#: core/views/addcontrols.php:2561
+msgid "Field Spacing"
+msgstr ""
+
+#: core/controllers/arformcontroller.php:4375
+#: core/views/addcontrols.php:2220
+msgid "Text color"
+msgstr ""
+
+#: core/controllers/arformcontroller.php:4597
+#: core/controllers/arformcontroller.php:5704
+#: core/views/addcontrols.php:2442
+#: core/views/addcontrols.php:3550
+msgid "Border Settings"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:529
+msgid "Radio Buttons"
+msgstr ""
+
+#: core/controllers/arformcontroller.php:5418
+#: core/views/addcontrols.php:3264
+msgid "Button Width"
+msgstr ""
+
+#: core/controllers/arformcontroller.php:5437
+#: core/views/addcontrols.php:3283
+msgid " Button Height"
+msgstr ""
+
+#: core/controllers/arformcontroller.php:3316
+#: core/controllers/arformcontroller.php:5856
+#: core/views/addcontrols.php:1163
+#: core/views/addcontrols.php:3702
+msgid "Margin"
+msgstr ""
+
+#: core/controllers/arformcontroller.php:3450
+#: core/controllers/arformcontroller.php:3778
+#: core/controllers/arformcontroller.php:5498
+#: core/controllers/arformcontroller.php:6107
+#: core/controllers/arformcontroller.php:6328
+#: core/views/addcontrols.php:1297
+#: core/views/addcontrols.php:1623
+#: core/views/addcontrols.php:3344
+#: core/views/addcontrols.php:3952
+#: core/views/addcontrols.php:4173
+#: core/widgets/ARFwidgetForm.php:94
+msgid "Text Color"
+msgstr ""
+
+#: core/controllers/arformcontroller.php:2895
+#: core/controllers/arformcontroller.php:3027
+#: core/controllers/arformcontroller.php:5817
+#: core/views/addcontrols.php:743
+#: core/views/addcontrols.php:875
+#: core/views/addcontrols.php:3663
+msgid "Shadow"
+msgstr ""
+
+#: core/controllers/arformcontroller.php:6076
+#: core/views/addcontrols.php:3921
+msgid "Error Settings"
+msgstr ""
+
+#: core/controllers/arformcontroller.php:2673
+#: core/views/addcontrols.php:521
+msgid "Form Settings"
+msgstr ""
+
+#: core/controllers/arformcontroller.php:2892
+#: core/controllers/arformcontroller.php:6168
+#: core/views/addcontrols.php:740
+#: core/views/addcontrols.php:4013
+msgid "Type"
+msgstr ""
+
+#: core/controllers/arformcontroller.php:3681
+#: core/views/addcontrols.php:1526
+msgid "Label Settings"
+msgstr ""
+
+#: core/controllers/arformcontroller.php:2748
+#: core/controllers/arformcontroller.php:4057
+#: core/views/addcontrols.php:596
+#: core/views/addcontrols.php:1903
+msgid "Align"
+msgstr ""
+
+#: core/controllers/arformcontroller.php:4089
+#: core/views/addcontrols.php:1935
+msgid "Input Field Settings"
+msgstr ""
+
+#: core/controllers/arformcontroller.php:4444
+#: core/views/addcontrols.php:2289
+msgid "Active State"
+msgstr ""
+
+#: core/controllers/arformcontroller.php:4520
+#: core/views/addcontrols.php:2365
+msgid "Error State"
+msgstr ""
+
+#: core/controllers/arformcontroller.php:4838
+#: core/views/addcontrols.php:2683
+msgid "Theme"
+msgstr ""
+
+#: core/controllers/arformcontroller.php:5187
+#: core/views/addcontrols.php:3033
+msgid "Submit Button Settings"
+msgstr ""
+
+#: core/controllers/arformcontroller.php:2371
+#: core/controllers/arformcontroller.php:2523
+#: core/controllers/arrecordcontroller.php:3372
+#: core/controllers/arrecordcontroller.php:3499
+#: core/views/list.php:482
+#: core/views/list.php:639
+#: core/views/newfield.php:505
+#: core/views/newfield.php:621
+#: core/views/view_records.php:779
+#: core/views/view_records.php:908
+msgid "Apply"
+msgstr ""
+
+#: core/controllers/maincontroller.php:679
+#: core/controllers/maincontroller_07may2015.php:679
+#: core/views/edit.php:942
+#: core/views/edit.php:961
+#: core/views/edit_form.php:152
+msgid "Settings"
+msgstr ""
+
+#: core/controllers/maincontroller.php:1218
+#: core/controllers/maincontroller_07may2015.php:1218
+msgid "Type-in or bookmark"
+msgstr ""
+
+#: core/controllers/arrecordcontroller.php:91
+#: core/controllers/arrecordcontroller.php:99
+#: core/controllers/arrecordcontroller.php:1082
+#: core/controllers/arrecordcontroller.php:1089
+msgid "Please select a valid form"
+msgstr ""
+
+#: core/controllers/arrecordcontroller.php:104
+#: core/controllers/arrecordcontroller.php:1094
+msgid "This form is currently not active, please try again later."
+msgstr ""
+
+#: core/controllers/arrecordcontroller.php:457
+#: core/views/view_records.php:666
+msgid "Form Entries"
+msgstr ""
+
+#: core/controllers/arrecordcontroller.php:797
+msgid "Entry is Successfully Created"
+msgstr ""
+
+#: core/controllers/arrecordcontroller.php:844
+msgid "Entry is Successfully Deleted"
+msgstr ""
+
+#: core/controllers/arrecordcontroller.php:895
+msgid "Entries were Successfully Destroyed"
+msgstr ""
+
+#: core/controllers/arrecordcontroller.php:904
+msgid "No entries were specified"
+msgstr ""
+
+#: core/controllers/arrecordcontroller.php:1039
+#: core/controllers/arrecordcontroller.php:2696
+msgid "No form is found"
+msgstr ""
+
+#: core/controllers/arrecordcontroller.php:1379
+#: core/views/formsubmission.php:260
+#: core/views/view-modal.php:617
+msgid "Please wait while you are redirected."
+msgstr ""
+
+#: core/views/footer.php:1415
+msgid "Loading..."
+msgstr ""
+
+#: core/controllers/arrecordcontroller.php:2428
+msgid "Your entry is successfully deleted"
+msgstr ""
+
+#: core/controllers/arrecordcontroller.php:2389
+msgid "There is an error deleting that entry"
+msgstr ""
+
+#: core/controllers/arrecordcontroller.php:2488
+msgid "No one! You do not have permission"
+msgstr ""
+
+#: core/controllers/arrecordcontroller.php:2647
+msgid "Entries deleted successfully"
+msgstr ""
+
+#: core/controllers/arrecordcontroller.php:3017
+#: core/views/view_records.php:109
+msgid "Export to CSV"
+msgstr ""
+
+#: core/controllers/arrecordcontroller.php:3298
+#: core/views/graph.php:213
+#: core/views/view_records.php:707
+msgid "Select Form"
+msgstr ""
+
+#: core/views/view_records.php:1023
+msgid "Are you sure you want to delete this entry?"
+msgstr ""
+
+#: core/controllers/arrecordcontroller.php:3663
+msgid "Created at"
+msgstr ""
+
+#: core/controllers/arrecordcontroller.php:3698
+msgid "Entry deleted successfully"
+msgstr ""
+
+#: core/controllers/arsettingcontroller.php:125
+#: core/views/settings_form.php:95
+msgid "Global Settings"
+msgstr ""
+
+#: core/controllers/arsettingcontroller.php:559
+msgid "General setting changes saved successfully."
+msgstr ""
+
+#: core/controllers/arsettingcontroller.php:567
+msgid "Settings Saved."
+msgstr ""
+
+#: core/views/edit.php:1202
+#: core/views/edit.php:1215
+#: core/views/edit.php:3000
+#: core/views/edit.php:3013
+msgid "Select Field"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:526
+msgid "Single Line Text"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:528
+msgid "Checkboxes"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:561
+msgid "Email Address"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:567
+msgid "Website/URL"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:531
+msgid "File Upload"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:563
+#: core/models/arfieldmodel.php:57
+msgid "Number"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:564
+msgid "Phone Number"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:565
+#: core/models/arfieldmodel.php:79
+msgid "Date"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:566
+#: core/models/arfieldmodel.php:91
+msgid "Time"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:568
+#: core/helpers/arfieldhelper.php:5360
+msgid "Image URL"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:569
+msgid "Hidden Field"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:570
+#: core/models/arfieldmodel.php:133
+#: core/views/settings_form.php:1216
+msgid "Password"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:571
+#: core/models/arfieldmodel.php:142
+msgid "HTML"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:573
+msgid "Page Break"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:574
+msgid "Star Rating"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:778
+msgid "Checkbox 1"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:778
+msgid "Checkbox 2"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:782
+msgid "Radio 1"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:782
+msgid "Radio 2"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:786
+msgid "Select 1"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:1331
+msgid "Untitled"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:1335
+msgid "This field is invalid"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:2109
+msgid "Select a value to insert into the box below"
+msgstr ""
+
+#: core/helpers/arformhelper.php:387
+msgid "Untitled Form"
+msgstr ""
+
+#: core/helpers/armainhelper.php:385
+msgid "is invalid"
+msgstr ""
+
+#: core/helpers/armainhelper.php:688
+msgid "Afghanistan"
+msgstr ""
+
+#: core/helpers/armainhelper.php:688
+msgid "Albania"
+msgstr ""
+
+#: core/helpers/armainhelper.php:688
+msgid "Algeria"
+msgstr ""
+
+#: core/helpers/armainhelper.php:691
+msgid "American Samoa"
+msgstr ""
+
+#: core/helpers/armainhelper.php:691
+msgid "Andorra"
+msgstr ""
+
+#: core/helpers/armainhelper.php:691
+msgid "Angola"
+msgstr ""
+
+#: core/helpers/armainhelper.php:694
+msgid "Anguilla"
+msgstr ""
+
+#: core/helpers/armainhelper.php:694
+msgid "Antarctica"
+msgstr ""
+
+#: core/helpers/armainhelper.php:694
+msgid "Antigua and Barbuda"
+msgstr ""
+
+#: core/helpers/armainhelper.php:697
+msgid "Argentina"
+msgstr ""
+
+#: core/helpers/armainhelper.php:697
+msgid "Armenia"
+msgstr ""
+
+#: core/helpers/armainhelper.php:697
+msgid "Aruba"
+msgstr ""
+
+#: core/helpers/armainhelper.php:700
+msgid "Australia"
+msgstr ""
+
+#: core/helpers/armainhelper.php:700
+msgid "Austria"
+msgstr ""
+
+#: core/helpers/armainhelper.php:700
+msgid "Azerbaijan"
+msgstr ""
+
+#: core/helpers/armainhelper.php:703
+msgid "Bahamas"
+msgstr ""
+
+#: core/helpers/armainhelper.php:703
+msgid "Bahrain"
+msgstr ""
+
+#: core/helpers/armainhelper.php:703
+msgid "Bangladesh"
+msgstr ""
+
+#: core/helpers/armainhelper.php:706
+msgid "Barbados"
+msgstr ""
+
+#: core/helpers/armainhelper.php:706
+msgid "Belarus"
+msgstr ""
+
+#: core/helpers/armainhelper.php:706
+msgid "Belgium"
+msgstr ""
+
+#: core/helpers/armainhelper.php:709
+msgid "Belize"
+msgstr ""
+
+#: core/helpers/armainhelper.php:709
+msgid "Benin"
+msgstr ""
+
+#: core/helpers/armainhelper.php:709
+msgid "Bermuda"
+msgstr ""
+
+#: core/helpers/armainhelper.php:712
+msgid "Bhutan"
+msgstr ""
+
+#: core/helpers/armainhelper.php:712
+msgid "Bolivia"
+msgstr ""
+
+#: core/helpers/armainhelper.php:712
+msgid "Bosnia and Herzegovina"
+msgstr ""
+
+#: core/helpers/armainhelper.php:715
+msgid "Botswana"
+msgstr ""
+
+#: core/helpers/armainhelper.php:715
+msgid "Brazil"
+msgstr ""
+
+#: core/helpers/armainhelper.php:715
+msgid "Brunei"
+msgstr ""
+
+#: core/helpers/armainhelper.php:718
+msgid "Bulgaria"
+msgstr ""
+
+#: core/helpers/armainhelper.php:718
+msgid "Burkina Faso"
+msgstr ""
+
+#: core/helpers/armainhelper.php:718
+msgid "Burundi"
+msgstr ""
+
+#: core/helpers/armainhelper.php:721
+msgid "Cambodia"
+msgstr ""
+
+#: core/helpers/armainhelper.php:721
+msgid "Cameroon"
+msgstr ""
+
+#: core/helpers/armainhelper.php:721
+msgid "Canada"
+msgstr ""
+
+#: core/helpers/armainhelper.php:724
+msgid "Cape Verde"
+msgstr ""
+
+#: core/helpers/armainhelper.php:724
+msgid "Cayman Islands"
+msgstr ""
+
+#: core/helpers/armainhelper.php:724
+msgid "Central African Republic"
+msgstr ""
+
+#: core/helpers/armainhelper.php:727
+msgid "Chad"
+msgstr ""
+
+#: core/helpers/armainhelper.php:727
+msgid "Chile"
+msgstr ""
+
+#: core/helpers/armainhelper.php:727
+msgid "China"
+msgstr ""
+
+#: core/helpers/armainhelper.php:730
+msgid "Colombia"
+msgstr ""
+
+#: core/helpers/armainhelper.php:730
+msgid "Comoros"
+msgstr ""
+
+#: core/helpers/armainhelper.php:730
+msgid "Congo"
+msgstr ""
+
+#: core/helpers/armainhelper.php:733
+msgid "Costa Rica"
+msgstr ""
+
+#: core/helpers/armainhelper.php:733
+msgid "Croatia"
+msgstr ""
+
+#: core/helpers/armainhelper.php:736
+msgid "Cuba"
+msgstr ""
+
+#: core/helpers/armainhelper.php:736
+msgid "Cyprus"
+msgstr ""
+
+#: core/helpers/armainhelper.php:736
+msgid "Czech Republic"
+msgstr ""
+
+#: core/helpers/armainhelper.php:739
+msgid "Denmark"
+msgstr ""
+
+#: core/helpers/armainhelper.php:739
+msgid "Djibouti"
+msgstr ""
+
+#: core/helpers/armainhelper.php:739
+msgid "Dominica"
+msgstr ""
+
+#: core/helpers/armainhelper.php:742
+msgid "Dominican Republic"
+msgstr ""
+
+#: core/helpers/armainhelper.php:742
+msgid "East Timor"
+msgstr ""
+
+#: core/helpers/armainhelper.php:742
+msgid "Ecuador"
+msgstr ""
+
+#: core/helpers/armainhelper.php:745
+msgid "Egypt"
+msgstr ""
+
+#: core/helpers/armainhelper.php:745
+msgid "El Salvador"
+msgstr ""
+
+#: core/helpers/armainhelper.php:745
+msgid "Equatorial Guinea"
+msgstr ""
+
+#: core/helpers/armainhelper.php:748
+msgid "Eritrea"
+msgstr ""
+
+#: core/helpers/armainhelper.php:748
+msgid "Estonia"
+msgstr ""
+
+#: core/helpers/armainhelper.php:748
+msgid "Ethiopia"
+msgstr ""
+
+#: core/helpers/armainhelper.php:751
+msgid "Fiji"
+msgstr ""
+
+#: core/helpers/armainhelper.php:751
+msgid "Finland"
+msgstr ""
+
+#: core/helpers/armainhelper.php:751
+msgid "France"
+msgstr ""
+
+#: core/helpers/armainhelper.php:754
+msgid "French Guiana"
+msgstr ""
+
+#: core/helpers/armainhelper.php:754
+msgid "French Polynesia"
+msgstr ""
+
+#: core/helpers/armainhelper.php:754
+msgid "Gabon"
+msgstr ""
+
+#: core/helpers/armainhelper.php:757
+msgid "Gambia"
+msgstr ""
+
+#: core/helpers/armainhelper.php:757
+msgid "Georgia"
+msgstr ""
+
+#: core/helpers/armainhelper.php:757
+msgid "Germany"
+msgstr ""
+
+#: core/helpers/armainhelper.php:760
+msgid "Ghana"
+msgstr ""
+
+#: core/helpers/armainhelper.php:760
+msgid "Gibraltar"
+msgstr ""
+
+#: core/helpers/armainhelper.php:760
+msgid "Greece"
+msgstr ""
+
+#: core/helpers/armainhelper.php:763
+msgid "Greenland"
+msgstr ""
+
+#: core/helpers/armainhelper.php:763
+msgid "Grenada"
+msgstr ""
+
+#: core/helpers/armainhelper.php:763
+msgid "Guam"
+msgstr ""
+
+#: core/helpers/armainhelper.php:766
+msgid "Guatemala"
+msgstr ""
+
+#: core/helpers/armainhelper.php:766
+msgid "Guinea"
+msgstr ""
+
+#: core/helpers/armainhelper.php:766
+msgid "Guinea-Bissau"
+msgstr ""
+
+#: core/helpers/armainhelper.php:769
+msgid "Guyana"
+msgstr ""
+
+#: core/helpers/armainhelper.php:769
+msgid "Haiti"
+msgstr ""
+
+#: core/helpers/armainhelper.php:769
+msgid "Honduras"
+msgstr ""
+
+#: core/helpers/armainhelper.php:772
+msgid "Hong Kong"
+msgstr ""
+
+#: core/helpers/armainhelper.php:772
+msgid "Hungary"
+msgstr ""
+
+#: core/helpers/armainhelper.php:772
+msgid "Iceland"
+msgstr ""
+
+#: core/helpers/armainhelper.php:775
+msgid "India"
+msgstr ""
+
+#: core/helpers/armainhelper.php:775
+msgid "Indonesia"
+msgstr ""
+
+#: core/helpers/armainhelper.php:775
+msgid "Iran"
+msgstr ""
+
+#: core/helpers/armainhelper.php:778
+msgid "Iraq"
+msgstr ""
+
+#: core/helpers/armainhelper.php:778
+msgid "Ireland"
+msgstr ""
+
+#: core/helpers/armainhelper.php:778
+msgid "Israel"
+msgstr ""
+
+#: core/helpers/armainhelper.php:781
+msgid "Italy"
+msgstr ""
+
+#: core/helpers/armainhelper.php:781
+msgid "Jamaica"
+msgstr ""
+
+#: core/helpers/armainhelper.php:781
+msgid "Japan"
+msgstr ""
+
+#: core/helpers/armainhelper.php:784
+msgid "Jordan"
+msgstr ""
+
+#: core/helpers/armainhelper.php:784
+msgid "Kazakhstan"
+msgstr ""
+
+#: core/helpers/armainhelper.php:784
+msgid "Kenya"
+msgstr ""
+
+#: core/helpers/armainhelper.php:787
+msgid "Kiribati"
+msgstr ""
+
+#: core/helpers/armainhelper.php:787
+msgid "North Korea"
+msgstr ""
+
+#: core/helpers/armainhelper.php:787
+msgid "South Korea"
+msgstr ""
+
+#: core/helpers/armainhelper.php:790
+msgid "Kuwait"
+msgstr ""
+
+#: core/helpers/armainhelper.php:790
+msgid "Kyrgyzstan"
+msgstr ""
+
+#: core/helpers/armainhelper.php:790
+msgid "Laos"
+msgstr ""
+
+#: core/helpers/armainhelper.php:793
+msgid "Latvia"
+msgstr ""
+
+#: core/helpers/armainhelper.php:793
+msgid "Lebanon"
+msgstr ""
+
+#: core/helpers/armainhelper.php:793
+msgid "Lesotho"
+msgstr ""
+
+#: core/helpers/armainhelper.php:796
+msgid "Liberia"
+msgstr ""
+
+#: core/helpers/armainhelper.php:796
+msgid "Libya"
+msgstr ""
+
+#: core/helpers/armainhelper.php:796
+msgid "Liechtenstein"
+msgstr ""
+
+#: core/helpers/armainhelper.php:799
+msgid "Lithuania"
+msgstr ""
+
+#: core/helpers/armainhelper.php:799
+msgid "Luxembourg"
+msgstr ""
+
+#: core/helpers/armainhelper.php:799
+msgid "Macedonia"
+msgstr ""
+
+#: core/helpers/armainhelper.php:802
+msgid "Madagascar"
+msgstr ""
+
+#: core/helpers/armainhelper.php:802
+msgid "Malawi"
+msgstr ""
+
+#: core/helpers/armainhelper.php:802
+msgid "Malaysia"
+msgstr ""
+
+#: core/helpers/armainhelper.php:805
+msgid "Maldives"
+msgstr ""
+
+#: core/helpers/armainhelper.php:805
+msgid "Mali"
+msgstr ""
+
+#: core/helpers/armainhelper.php:805
+msgid "Malta"
+msgstr ""
+
+#: core/helpers/armainhelper.php:808
+msgid "Marshall Islands"
+msgstr ""
+
+#: core/helpers/armainhelper.php:808
+msgid "Mauritania"
+msgstr ""
+
+#: core/helpers/armainhelper.php:808
+msgid "Mauritius"
+msgstr ""
+
+#: core/helpers/armainhelper.php:811
+msgid "Mexico"
+msgstr ""
+
+#: core/helpers/armainhelper.php:811
+msgid "Micronesia"
+msgstr ""
+
+#: core/helpers/armainhelper.php:811
+msgid "Moldova"
+msgstr ""
+
+#: core/helpers/armainhelper.php:814
+msgid "Monaco"
+msgstr ""
+
+#: core/helpers/armainhelper.php:814
+msgid "Mongolia"
+msgstr ""
+
+#: core/helpers/armainhelper.php:814
+msgid "Montenegro"
+msgstr ""
+
+#: core/helpers/armainhelper.php:817
+msgid "Montserrat"
+msgstr ""
+
+#: core/helpers/armainhelper.php:817
+msgid "Morocco"
+msgstr ""
+
+#: core/helpers/armainhelper.php:817
+msgid "Mozambique"
+msgstr ""
+
+#: core/helpers/armainhelper.php:820
+msgid "Myanmar"
+msgstr ""
+
+#: core/helpers/armainhelper.php:820
+msgid "Namibia"
+msgstr ""
+
+#: core/helpers/armainhelper.php:820
+msgid "Nauru"
+msgstr ""
+
+#: core/helpers/armainhelper.php:823
+msgid "Nepal"
+msgstr ""
+
+#: core/helpers/armainhelper.php:823
+msgid "Netherlands"
+msgstr ""
+
+#: core/helpers/armainhelper.php:823
+msgid "New Zealand"
+msgstr ""
+
+#: core/helpers/armainhelper.php:826
+msgid "Nicaragua"
+msgstr ""
+
+#: core/helpers/armainhelper.php:826
+msgid "Niger"
+msgstr ""
+
+#: core/helpers/armainhelper.php:826
+msgid "Nigeria"
+msgstr ""
+
+#: core/helpers/armainhelper.php:829
+msgid "Norway"
+msgstr ""
+
+#: core/helpers/armainhelper.php:829
+msgid "Northern Mariana Islands"
+msgstr ""
+
+#: core/helpers/armainhelper.php:829
+msgid "Oman"
+msgstr ""
+
+#: core/helpers/armainhelper.php:832
+msgid "Pakistan"
+msgstr ""
+
+#: core/helpers/armainhelper.php:832
+msgid "Palau"
+msgstr ""
+
+#: core/helpers/armainhelper.php:832
+msgid "Palestine"
+msgstr ""
+
+#: core/helpers/armainhelper.php:835
+msgid "Panama"
+msgstr ""
+
+#: core/helpers/armainhelper.php:835
+msgid "Papua New Guinea"
+msgstr ""
+
+#: core/helpers/armainhelper.php:835
+msgid "Paraguay"
+msgstr ""
+
+#: core/helpers/armainhelper.php:838
+msgid "Peru"
+msgstr ""
+
+#: core/helpers/armainhelper.php:838
+msgid "Philippines"
+msgstr ""
+
+#: core/helpers/armainhelper.php:838
+msgid "Poland"
+msgstr ""
+
+#: core/helpers/armainhelper.php:841
+msgid "Portugal"
+msgstr ""
+
+#: core/helpers/armainhelper.php:841
+msgid "Puerto Rico"
+msgstr ""
+
+#: core/helpers/armainhelper.php:841
+msgid "Qatar"
+msgstr ""
+
+#: core/helpers/armainhelper.php:844
+msgid "Romania"
+msgstr ""
+
+#: core/helpers/armainhelper.php:844
+msgid "Russia"
+msgstr ""
+
+#: core/helpers/armainhelper.php:844
+msgid "Rwanda"
+msgstr ""
+
+#: core/helpers/armainhelper.php:847
+msgid "Saint Kitts and Nevis"
+msgstr ""
+
+#: core/helpers/armainhelper.php:847
+msgid "Saint Lucia"
+msgstr ""
+
+#: core/helpers/armainhelper.php:850
+msgid "Saint Vincent and the Grenadines"
+msgstr ""
+
+#: core/helpers/armainhelper.php:850
+msgid "Samoa"
+msgstr ""
+
+#: core/helpers/armainhelper.php:853
+msgid "San Marino"
+msgstr ""
+
+#: core/helpers/armainhelper.php:853
+msgid "Sao Tome and Principe"
+msgstr ""
+
+#: core/helpers/armainhelper.php:853
+msgid "Saudi Arabia"
+msgstr ""
+
+#: core/helpers/armainhelper.php:856
+msgid "Senegal"
+msgstr ""
+
+#: core/helpers/armainhelper.php:856
+msgid "Serbia and Montenegro"
+msgstr ""
+
+#: core/helpers/armainhelper.php:856
+msgid "Seychelles"
+msgstr ""
+
+#: core/helpers/armainhelper.php:859
+msgid "Sierra Leone"
+msgstr ""
+
+#: core/helpers/armainhelper.php:859
+msgid "Singapore"
+msgstr ""
+
+#: core/helpers/armainhelper.php:859
+msgid "Slovakia"
+msgstr ""
+
+#: core/helpers/armainhelper.php:862
+msgid "Slovenia"
+msgstr ""
+
+#: core/helpers/armainhelper.php:862
+msgid "Solomon Islands"
+msgstr ""
+
+#: core/helpers/armainhelper.php:862
+msgid "Somalia"
+msgstr ""
+
+#: core/helpers/armainhelper.php:865
+msgid "South Africa"
+msgstr ""
+
+#: core/helpers/armainhelper.php:865
+msgid "Spain"
+msgstr ""
+
+#: core/helpers/armainhelper.php:865
+msgid "Sri Lanka"
+msgstr ""
+
+#: core/helpers/armainhelper.php:868
+msgid "Sudan"
+msgstr ""
+
+#: core/helpers/armainhelper.php:868
+msgid "Suriname"
+msgstr ""
+
+#: core/helpers/armainhelper.php:868
+msgid "Swaziland"
+msgstr ""
+
+#: core/helpers/armainhelper.php:871
+msgid "Sweden"
+msgstr ""
+
+#: core/helpers/armainhelper.php:871
+msgid "Switzerland"
+msgstr ""
+
+#: core/helpers/armainhelper.php:871
+msgid "Syria"
+msgstr ""
+
+#: core/helpers/armainhelper.php:874
+msgid "Taiwan"
+msgstr ""
+
+#: core/helpers/armainhelper.php:874
+msgid "Tajikistan"
+msgstr ""
+
+#: core/helpers/armainhelper.php:874
+msgid "Tanzania"
+msgstr ""
+
+#: core/helpers/armainhelper.php:877
+msgid "Thailand"
+msgstr ""
+
+#: core/helpers/armainhelper.php:877
+msgid "Togo"
+msgstr ""
+
+#: core/helpers/armainhelper.php:877
+msgid "Tonga"
+msgstr ""
+
+#: core/helpers/armainhelper.php:880
+msgid "Trinidad and Tobago"
+msgstr ""
+
+#: core/helpers/armainhelper.php:880
+msgid "Tunisia"
+msgstr ""
+
+#: core/helpers/armainhelper.php:880
+msgid "Turkey"
+msgstr ""
+
+#: core/helpers/armainhelper.php:883
+msgid "Turkmenistan"
+msgstr ""
+
+#: core/helpers/armainhelper.php:883
+msgid "Tuvalu"
+msgstr ""
+
+#: core/helpers/armainhelper.php:883
+msgid "Uganda"
+msgstr ""
+
+#: core/helpers/armainhelper.php:886
+msgid "Ukraine"
+msgstr ""
+
+#: core/helpers/armainhelper.php:886
+msgid "United Arab Emirates"
+msgstr ""
+
+#: core/helpers/armainhelper.php:886
+msgid "United Kingdom"
+msgstr ""
+
+#: core/helpers/armainhelper.php:889
+msgid "United States"
+msgstr ""
+
+#: core/helpers/armainhelper.php:889
+msgid "Uruguay"
+msgstr ""
+
+#: core/helpers/armainhelper.php:889
+msgid "Uzbekistan"
+msgstr ""
+
+#: core/helpers/armainhelper.php:892
+msgid "Vanuatu"
+msgstr ""
+
+#: core/helpers/armainhelper.php:892
+msgid "Vatican City"
+msgstr ""
+
+#: core/helpers/armainhelper.php:892
+msgid "Venezuela"
+msgstr ""
+
+#: core/helpers/armainhelper.php:895
+msgid "Vietnam"
+msgstr ""
+
+#: core/helpers/armainhelper.php:895
+msgid "Virgin Islands, British"
+msgstr ""
+
+#: core/helpers/armainhelper.php:898
+msgid "Virgin Islands, U.S."
+msgstr ""
+
+#: core/helpers/armainhelper.php:898
+msgid "Yemen"
+msgstr ""
+
+#: core/helpers/armainhelper.php:898
+msgid "Zambia"
+msgstr ""
+
+#: core/helpers/armainhelper.php:901
+msgid "Zimbabwe"
+msgstr ""
+
+#: core/controllers/arrecordcontroller.php:3387
+#: core/views/view_records.php:793
+msgid "Entry creation date"
+msgstr ""
+
+#: core/controllers/arformcontroller.php:2499
+#: core/controllers/arrecordcontroller.php:3345
+#: core/views/list.php:614
+#: core/views/view_records.php:753
+msgid "Search"
+msgstr ""
+
+#: core/controllers/arformcontroller.php:6366
+#: core/views/addcontrols.php:4211
+msgid "Reset"
+msgstr ""
+
+#: core/helpers/armainhelper.php:1822
+msgid "at"
+msgstr ""
+
+#: core/helpers/armainhelper.php:1979
+msgid "year"
+msgstr ""
+
+#: core/helpers/armainhelper.php:1979
+msgid "years"
+msgstr ""
+
+#: core/helpers/armainhelper.php:1982
+msgid "month"
+msgstr ""
+
+#: core/helpers/armainhelper.php:1982
+msgid "months"
+msgstr ""
+
+#: core/helpers/armainhelper.php:1985
+msgid "week"
+msgstr ""
+
+#: core/helpers/armainhelper.php:1985
+msgid "weeks"
+msgstr ""
+
+#: core/helpers/armainhelper.php:1988
+msgid "day"
+msgstr ""
+
+#: core/helpers/armainhelper.php:1988
+msgid "days"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:4228
+#: core/helpers/armainhelper.php:1991
+msgid "hour"
+msgstr ""
+
+#: core/helpers/armainhelper.php:1991
+msgid "hours"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:4296
+#: core/helpers/armainhelper.php:1994
+msgid "minute"
+msgstr ""
+
+#: core/helpers/armainhelper.php:1994
+msgid "minutes"
+msgstr ""
+
+#: core/helpers/armainhelper.php:1997
+msgid "second"
+msgstr ""
+
+#: core/helpers/armainhelper.php:1997
+#: core/helpers/armainhelper.php:2033
+#: core/views/settings_form.php:816
+msgid "seconds"
+msgstr ""
+
+#: core/helpers/armainhelper.php:2199
+msgid "View Forms and Templates"
+msgstr ""
+
+#: core/helpers/armainhelper.php:2202
+msgid "Add/Edit Forms and Templates"
+msgstr ""
+
+#: core/helpers/armainhelper.php:2205
+msgid "Delete Forms and Templates"
+msgstr ""
+
+#: core/helpers/armainhelper.php:2208
+#: core/helpers/armainhelper.php:2211
+msgid "Access this Settings Page"
+msgstr ""
+
+#: core/helpers/armainhelper.php:2218
+msgid "View Entries from Admin Area"
+msgstr ""
+
+#: core/helpers/armainhelper.php:2221
+msgid "Add Entries from Admin Area"
+msgstr ""
+
+#: core/helpers/armainhelper.php:2224
+msgid "Edit Entries from Admin Area"
+msgstr ""
+
+#: core/helpers/armainhelper.php:2227
+msgid "Delete Entries from Admin Area"
+msgstr ""
+
+#: core/helpers/armainhelper.php:2230
+msgid "View Reports"
+msgstr ""
+
+#: core/helpers/armainhelper.php:2233
+msgid "Add/Edit Custom Displays"
+msgstr ""
+
+#: core/helpers/arupload_media.php:24
+msgid "The uploaded file exceeds the upload_max_filesize directive in php.ini."
+msgstr ""
+
+#: core/helpers/arupload_media.php:25
+msgid ""
+"The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in "
+"the HTML form."
+msgstr ""
+
+#: core/helpers/arupload_media.php:26
+msgid "The uploaded file was only partially uploaded."
+msgstr ""
+
+#: core/helpers/arupload_media.php:27
+msgid "No file was uploaded."
+msgstr ""
+
+#: core/helpers/arupload_media.php:29
+msgid "Missing a temporary folder."
+msgstr ""
+
+#: core/helpers/arupload_media.php:30
+msgid "Failed to write file to disk."
+msgstr ""
+
+#: core/helpers/arupload_media.php:31
+msgid "File upload stopped by extension."
+msgstr ""
+
+#: core/helpers/arupload_media.php:44
+msgid "Invalid form submission."
+msgstr ""
+
+#: core/helpers/arupload_media.php:51
+msgid "File is empty. Please upload something more substantial."
+msgstr ""
+
+#: core/helpers/arupload_media.php:53
+msgid ""
+"File is empty. Please upload something more substantial. This error could "
+"also be caused by uploads being disabled in your php.ini or by post_max_size "
+"being defined as smaller than upload_max_filesize in php.ini."
+msgstr ""
+
+#: core/helpers/arupload_media.php:58
+msgid "Specified file failed upload test."
+msgstr ""
+
+#: core/helpers/arupload_media.php:69
+#: core/helpers/arupload_media.php:81
+#: core/helpers/arupload_media.php:84
+#: core/views/common.php:113
+msgid "Sorry, this file type is not permitted for security reasons."
+msgstr ""
+
+#: core/helpers/arupload_media.php:97
+#, php-format
+msgid "The uploaded file could not be moved to %s."
+msgstr ""
+
+#: core/models/arfieldmodel.php:103
+msgid "Phone"
+msgstr ""
+
+#: core/models/arfieldmodel.php:115
+#: core/models/artemplate.php:389
+#: core/views/upgrade_latest_data.php:929
+msgid "Website"
+msgstr ""
+
+#: core/models/arfieldmodel.php:124
+#: core/models/artemplate.php:380
+#: core/models/artemplate.php:1058
+#: core/views/upgrade_latest_data.php:920
+#: core/views/upgrade_latest_data.php:1395
+msgid "Email"
+msgstr ""
+
+#: core/models/arfieldmodel.php:151
+msgid "Heading"
+msgstr ""
+
+#: core/models/arfieldmodel.php:180
+msgid "Page"
+msgstr ""
+
+#: core/models/arformmodel.php:234
+msgid "User ID"
+msgstr ""
+
+#: core/models/arformmodel.php:253
+#: core/models/arformmodel.php:268
+msgid "Please insert a message for your auto responder."
+msgstr ""
+
+#: core/models/arformmodel.php:259
+msgid "That is not a valid reply-to email address for your auto responder."
+msgstr ""
+
+#: core/models/arnotifymodel.php:68
+#, php-format
+msgid "%1$s form has been submitted on %2$s."
+msgstr ""
+
+#: core/controllers/arrecordcontroller.php:3389
+#: core/views/view_records.php:795
+msgid "IP Address"
+msgstr ""
+
+#: core/models/arnotifymodel.php:124
+#: core/models/arnotifymodel.php:1183
+#, php-format
+msgid "%2$s Tu registro enviado para %1$s  "
+msgstr ""
+
+#: core/models/arsettingmodel.php:79
+msgid "You have already submitted that form"
+msgstr ""
+
+#: core/models/arsettingmodel.php:100
+msgid "Form is successfully submitted. Thank you!"
+msgstr ""
+
+#: core/models/arsettingmodel.php:103
+#: core/views/edit.php:1086
+#: core/views/edit.php:1096
+#: core/views/edit.php:1106
+#: core/views/edit.php:1437
+#: core/views/edit.php:1709
+#: core/views/settings_form.php:297
+#: core/views/settings_form.php:335
+#: core/views/settings_form.php:547
+#: core/views/settings_form.php:570
+#: core/views/settings_form.php:595
+#: core/views/settings_form.php:619
+#: core/views/settings_form.php:640
+#: core/views/settings_form.php:666
+#: core/views/settings_form.php:684
+#: core/views/settings_form.php:868
+#: core/views/settings_form.php:877
+#: core/views/settings_form.php:1020
+#: core/views/settings_form.php:1111
+#: core/views/settings_form.php:1199
+#: core/views/settings_form.php:1209
+#: core/views/settings_form.php:1223
+#: core/views/settings_form.php:1307
+#: core/views/settings_form.php:1322
+msgid "This field cannot be blank."
+msgstr ""
+
+#: core/models/arsettingmodel.php:106
+msgid "This value must be unique."
+msgstr ""
+
+#: core/models/arsettingmodel.php:109
+msgid "Problem in submission. Errors are marked below."
+msgstr ""
+
+#: core/controllers/arrecordcontroller.php:3323
+#: core/models/arsettingmodel.php:115
+#: core/views/view_records.php:732
+msgid "Submit"
+msgstr ""
+
+#: core/models/arsettingmodel.php:118
+msgid "You do not have permission to view this form."
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:1283
+#: core/models/arsettingmodel.php:230
+msgid "The reCAPTCHA was not entered correctly"
+msgstr ""
+
+#: core/models/arstylemodel.php:837
+msgid "Your submission was successfully saved."
+msgstr ""
+
+#: core/models/arstylemodel.php:840
+msgid "Update"
+msgstr ""
+
+#: core/models/artemplate.php:282
+msgid "Contact Us"
+msgstr ""
+
+#: core/models/artemplate.php:283
+msgid ""
+"We would like to hear from you. Please send us a message by filling out the "
+"form below and we will get back with you shortly."
+msgstr ""
+
+#: core/models/artemplate.php:382
+#: core/views/upgrade_latest_data.php:922
+msgid "Please enter a valid email address"
+msgstr ""
+
+#: core/models/artemplate.php:390
+#: core/views/upgrade_latest_data.php:930
+msgid "Please enter a valid website"
+msgstr ""
+
+#: core/models/artemplate.php:397
+#: core/views/edit.php:1234
+#: core/views/edit.php:1593
+#: core/views/upgrade_latest_data.php:937
+msgid "Subject"
+msgstr ""
+
+#: core/models/artemplate.php:405
+#: core/views/edit.php:1371
+#: core/views/upgrade_latest_data.php:945
+msgid "Message"
+msgstr ""
+
+#: core/models/artemplate.php:413
+#: core/views/upgrade_latest_data.php:953
+msgid "Captcha"
+msgstr ""
+
+#: core/controllers/arformcontroller.php:2489
+#: core/views/edit.php:994
+#: core/views/list.php:601
+msgid "Preview"
+msgstr ""
+
+#: core/controllers/arformcontroller.php:5209
+#: core/views/addcontrols.php:3055
+msgid "Submit align"
+msgstr ""
+
+#: core/controllers/arformcontroller.php:5213
+#: core/views/addcontrols.php:3059
+msgid "Fixed"
+msgstr ""
+
+#: core/views/addfieldjs.php:27
+#: core/views/addoptionjs.php:17
+#: core/views/addoptionjs.php:26
+msgid "(Blank)"
+msgstr ""
+
+#: core/views/addfieldjs.php:68
+msgid "Click here to add optional description or instructions"
+msgstr ""
+
+#: core/views/displayfield.php:48
+msgid "Note: This field will not show in the form. Enter the value to be hidden."
+msgstr ""
+
+#: core/vc/class_vc_extend.php:569
+#: core/views/edit_form.php:40
+#: core/views/insert_form_popup.php:631
+#: core/views/new-selection-modal.php:28
+msgid "Please enter form name"
+msgstr ""
+
+#: core/views/edit.php:990
+#: core/views/edit.php:3264
+msgid "Save"
+msgstr ""
+
+#: core/views/export_data.php:98
+#: core/views/export_data.php:230
+msgid "Timestamp"
+msgstr ""
+
+#: core/views/edit.php:1102
+msgid "Use Content from Page"
+msgstr ""
+
+#: core/views/footer.php:52
+msgid "(Click here to add description or instructions)"
+msgstr ""
+
+#: core/controllers/arrecordcontroller.php:3386
+#: core/views/view_records.php:792
+msgid "Entry Key"
+msgstr ""
+
+#: core/views/settings_form.php:653
+msgid "Email Settings"
+msgstr ""
+
+#: core/views/settings_form.php:125
+msgid "General Settings"
+msgstr ""
+
+#: core/views/edit.php:2022
+#: core/views/edit.php:2036
+msgid "Aweber"
+msgstr ""
+
+#: core/views/edit.php:1866
+#: core/views/edit.php:1880
+msgid "Mailchimp"
+msgstr ""
+
+#: core/views/edit.php:2540
+#: core/views/edit.php:2554
+msgid "Getresponse"
+msgstr ""
+
+#: core/views/edit.php:2213
+#: core/views/edit.php:2227
+msgid "Icontact"
+msgstr ""
+
+#: core/views/edit.php:2376
+#: core/views/edit.php:2390
+msgid "Constant Contact"
+msgstr ""
+
+#: core/views/edit.php:2699
+#: core/views/edit.php:2717
+msgid "GVO"
+msgstr ""
+
+#: core/views/edit.php:2772
+#: core/views/edit.php:2790
+msgid "eBizac"
+msgstr ""
+
+#: core/views/edit.php:2967
+msgid "Email field mapping"
+msgstr ""
+
+#: core/views/edit.php:1446
+msgid "Send an automatic response to admin after submitting the form"
+msgstr ""
+
+#: core/controllers/arformcontroller.php:2381
+#: core/views/list.php:492
+msgid "Name"
+msgstr ""
+
+#: core/views/edit.php:1069
+msgid "Display a Message"
+msgstr ""
+
+#: core/views/edit.php:1071
+#: core/views/edit.php:1092
+msgid "Redirect to URL"
+msgstr ""
+
+#: core/views/edit.php:1073
+msgid "Display content from another page"
+msgstr ""
+
+#: core/views/edit.php:1082
+msgid "Confirmation Message"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:3805
+msgid "Alignment"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:3827
+#: core/helpers/arfieldhelper.php:3834
+#: core/helpers/arfieldhelper.php:3840
+msgid "Multiple Rows"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:3825
+#: core/helpers/arfieldhelper.php:3832
+#: core/helpers/arfieldhelper.php:3841
+msgid "Single Row"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:3857
+#: core/views/newfield.php:452
+#: core/views/newfield.php:563
+msgid "Use separate values"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:3860
+#: core/views/newfield.php:452
+#: core/views/newfield.php:563
+msgid ""
+"Add a separate value to use for calculations, email routing, saving to the "
+"database, and many other uses. The option values are saved while the option "
+"labels are shown in the form."
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:4120
+msgid "Calendar Localization"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:4184
+msgid "Year Range"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:4185
+msgid "Start Year"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:4185
+msgid "End Year"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:4193
+msgid "Clock Settings"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:3873
+msgid "Allowed file types"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:3874
+msgid "All types"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:4110
+msgid "Number Range"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:4111
+msgid "minimum"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:4111
+msgid "maximum"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:4309
+#: core/vc/class_vc_extend.php:80
+msgid "Content"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:4717
+msgid "Range"
+msgstr ""
+
+#: core/controllers/arrecordcontroller.php:3326
+#: core/vc/class_vc_extend.php:570
+#: core/views/insert_form_popup.php:46
+#: core/views/view_records.php:735
+msgid "Please select a form"
+msgstr ""
+
+#: core/views/insert_form_popup.php:114
+msgid "Please select a custom display"
+msgstr ""
+
+#: core/views/insert_form_popup.php:746
+msgid "Add to page"
+msgstr ""
+
+#: core/views/new-selection-modal.php:63
+#: core/views/settings_form.php:885
+msgid "Continue"
+msgstr ""
+
+#: core/views/newfield.php:35
+msgid "Countries"
+msgstr ""
+
+#: core/views/newfield.php:40
+msgid "U.S. States"
+msgstr ""
+
+#: core/views/newfield.php:43
+msgid "U.S. State Abbreviations"
+msgstr ""
+
+#: core/views/newfield.php:49
+msgid "Age Group"
+msgstr ""
+
+#: core/views/newfield.php:52
+msgid "Under 18"
+msgstr ""
+
+#: core/views/newfield.php:52
+msgid "18-24"
+msgstr ""
+
+#: core/views/newfield.php:52
+msgid "25-34"
+msgstr ""
+
+#: core/views/newfield.php:55
+msgid "35-44"
+msgstr ""
+
+#: core/views/newfield.php:55
+msgid "45-54"
+msgstr ""
+
+#: core/views/newfield.php:55
+msgid "55-64"
+msgstr ""
+
+#: core/views/newfield.php:58
+msgid "65 or Above"
+msgstr ""
+
+#: core/views/newfield.php:58
+msgid "Prefer Not to Answer"
+msgstr ""
+
+#: core/views/newfield.php:67
+msgid "Satisfaction"
+msgstr ""
+
+#: core/views/newfield.php:70
+msgid "Very Satisfied"
+msgstr ""
+
+#: core/views/newfield.php:70
+msgid "Satisfied"
+msgstr ""
+
+#: core/views/newfield.php:70
+msgid "Neutral"
+msgstr ""
+
+#: core/views/newfield.php:73
+msgid "Unsatisfied"
+msgstr ""
+
+#: core/views/newfield.php:73
+msgid "Very Unsatisfied"
+msgstr ""
+
+#: core/views/newfield.php:73
+msgid "N/A"
+msgstr ""
+
+#: core/views/newfield.php:79
+msgid "Days"
+msgstr ""
+
+#: core/controllers/arformcontroller.php:3600
+#: core/views/addcontrols.php:1447
+#: core/views/newfield.php:82
+msgid "1"
+msgstr ""
+
+#: core/views/newfield.php:82
+msgid "2"
+msgstr ""
+
+#: core/views/newfield.php:82
+msgid "3"
+msgstr ""
+
+#: core/views/newfield.php:82
+msgid "4"
+msgstr ""
+
+#: core/views/newfield.php:82
+msgid "5"
+msgstr ""
+
+#: core/views/newfield.php:82
+msgid "6"
+msgstr ""
+
+#: core/views/newfield.php:84
+msgid "7"
+msgstr ""
+
+#: core/views/newfield.php:84
+msgid "8"
+msgstr ""
+
+#: core/views/newfield.php:84
+msgid "9"
+msgstr ""
+
+#: core/views/newfield.php:84
+msgid "10"
+msgstr ""
+
+#: core/views/newfield.php:84
+msgid "11"
+msgstr ""
+
+#: core/views/newfield.php:84
+msgid "12"
+msgstr ""
+
+#: core/views/newfield.php:86
+msgid "13"
+msgstr ""
+
+#: core/views/newfield.php:86
+msgid "14"
+msgstr ""
+
+#: core/views/newfield.php:86
+msgid "15"
+msgstr ""
+
+#: core/views/newfield.php:86
+msgid "16"
+msgstr ""
+
+#: core/views/newfield.php:86
+msgid "17"
+msgstr ""
+
+#: core/views/newfield.php:86
+msgid "18"
+msgstr ""
+
+#: core/views/newfield.php:88
+msgid "19"
+msgstr ""
+
+#: core/views/newfield.php:88
+msgid "20"
+msgstr ""
+
+#: core/views/newfield.php:88
+msgid "21"
+msgstr ""
+
+#: core/views/newfield.php:88
+msgid "22"
+msgstr ""
+
+#: core/views/newfield.php:88
+msgid "23"
+msgstr ""
+
+#: core/views/newfield.php:88
+msgid "24"
+msgstr ""
+
+#: core/views/newfield.php:90
+msgid "25"
+msgstr ""
+
+#: core/views/newfield.php:90
+msgid "26"
+msgstr ""
+
+#: core/views/newfield.php:90
+msgid "27"
+msgstr ""
+
+#: core/views/newfield.php:90
+msgid "28"
+msgstr ""
+
+#: core/views/newfield.php:90
+msgid "29"
+msgstr ""
+
+#: core/views/newfield.php:92
+msgid "31"
+msgstr ""
+
+#: core/views/newfield.php:98
+msgid "Week Days"
+msgstr ""
+
+#: core/views/newfield.php:101
+msgid "Sunday"
+msgstr ""
+
+#: core/views/newfield.php:101
+msgid "Monday"
+msgstr ""
+
+#: core/views/newfield.php:101
+msgid "Tuesday"
+msgstr ""
+
+#: core/views/newfield.php:104
+msgid "Wednesday"
+msgstr ""
+
+#: core/views/newfield.php:104
+msgid "Friday"
+msgstr ""
+
+#: core/views/newfield.php:107
+msgid "Saturday"
+msgstr ""
+
+#: core/views/newfield.php:113
+msgid "Months"
+msgstr ""
+
+#: core/views/newfield.php:116
+msgid "January"
+msgstr ""
+
+#: core/views/newfield.php:116
+msgid "February"
+msgstr ""
+
+#: core/views/newfield.php:116
+msgid "March"
+msgstr ""
+
+#: core/views/newfield.php:116
+msgid "April"
+msgstr ""
+
+#: core/views/newfield.php:118
+msgid "May"
+msgstr ""
+
+#: core/views/newfield.php:118
+msgid "June"
+msgstr ""
+
+#: core/views/newfield.php:118
+msgid "July"
+msgstr ""
+
+#: core/views/newfield.php:118
+msgid "August"
+msgstr ""
+
+#: core/views/newfield.php:118
+msgid "September"
+msgstr ""
+
+#: core/views/newfield.php:120
+msgid "October"
+msgstr ""
+
+#: core/views/newfield.php:120
+msgid "November"
+msgstr ""
+
+#: core/views/newfield.php:120
+msgid "December"
+msgstr ""
+
+#: core/views/newfield.php:135
+msgid "Years"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:5540
+#: core/views/newfield.php:140
+#: core/views/newfield.php:1046
+msgid "Prefix"
+msgstr ""
+
+#: core/views/newfield.php:143
+msgid "Mr"
+msgstr ""
+
+#: core/views/newfield.php:143
+msgid "Mrs"
+msgstr ""
+
+#: core/views/newfield.php:143
+msgid "Ms"
+msgstr ""
+
+#: core/views/newfield.php:143
+msgid "Miss"
+msgstr ""
+
+#: core/views/newfield.php:145
+msgid "Sr"
+msgstr ""
+
+#: core/views/newfield.php:325
+msgid "Delete Field"
+msgstr ""
+
+#: core/views/newfield.php:265
+msgid "Are you sure you want to delete this field?"
+msgstr ""
+
+#: core/views/newfield.php:469
+#: core/views/newfield.php:587
+msgid "Add an Option"
+msgstr ""
+
+#: core/views/newfield.php:474
+#: core/views/newfield.php:594
+msgid "Preset Field Choices"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:3697
+msgid "Message for blank field"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:3712
+msgid "automatic width"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:3726
+msgid "Number of rows"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:3965
+msgid "Message for invalid submission"
+msgstr ""
+
+#: core/views/edit.php:1136
+msgid "Send an automatic response to users after submitting the form"
+msgstr ""
+
+#: core/views/edit.php:1161
+msgid "Select field to send mail"
+msgstr ""
+
+#: core/views/edit.php:1223
+msgid ""
+"Please map desired email field from the list of fields used in your form. "
+"And system will send response email to this address."
+msgstr ""
+
+#: core/views/settings_form.php:391
+msgid "RECAPTCHA Configuration"
+msgstr ""
+
+#: core/views/settings_form.php:419
+msgid "Public Key"
+msgstr ""
+
+#: core/views/settings_form.php:437
+msgid "Private Key"
+msgstr ""
+
+#: core/views/settings_form.php:461
+msgid "reCAPTCHA Theme"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:4786
+#: core/views/settings_form.php:472
+msgid "Red"
+msgstr ""
+
+#: core/views/settings_form.php:472
+msgid "White"
+msgstr ""
+
+#: core/views/settings_form.php:472
+msgid "Black Glass"
+msgstr ""
+
+#: core/views/settings_form.php:472
+msgid "Clean"
+msgstr ""
+
+#: core/views/settings_form.php:492
+msgid "reCAPTCHA Language"
+msgstr ""
+
+#: core/views/settings_form.php:502
+msgid "English"
+msgstr ""
+
+#: core/views/settings_form.php:502
+msgid "Portuguese"
+msgstr ""
+
+#: core/views/settings_form.php:535
+msgid "Default Messages On Form"
+msgstr ""
+
+#: core/views/settings_form.php:540
+msgid "Blank Field"
+msgstr ""
+
+#: core/views/settings_form.php:545
+msgid "Message will be displayed when required fields is left blank."
+msgstr ""
+
+#: core/views/settings_form.php:561
+msgid "Incorrect Field"
+msgstr ""
+
+#: core/views/settings_form.php:568
+msgid "Message will be displayed when incorrect data is inserted of missing."
+msgstr ""
+
+#: core/views/settings_form.php:586
+#: core/views/settings_form.php:803
+msgid "Success Message"
+msgstr ""
+
+#: core/views/settings_form.php:592
+msgid "Default message displayed after form is submitted."
+msgstr ""
+
+#: core/views/settings_form.php:610
+msgid "Submission Failed Message"
+msgstr ""
+
+#: core/views/settings_form.php:616
+msgid "Message will be displayed when form is submitted but Duplicate entry exists."
+msgstr ""
+
+#: core/views/settings_form.php:634
+msgid "Default Submit Button"
+msgstr ""
+
+#: core/views/settings_form.php:742
+msgid "Other Settings"
+msgstr ""
+
+#: core/views/settings_form.php:751
+msgid "Rebranding"
+msgstr ""
+
+#: core/views/settings_form.php:757
+msgid "Remove rebranding link"
+msgstr ""
+
+#: core/views/settings_form.php:786
+msgid "Form Submission Method"
+msgstr ""
+
+#: core/views/settings_form.php:865
+msgid "Enter consumer key"
+msgstr ""
+
+#: core/views/settings_form.php:874
+msgid "Enter consumer secret"
+msgstr ""
+
+#: core/views/settings_form.php:891
+msgid "Webform code from Aweber"
+msgstr ""
+
+#: core/views/settings_form.php:1012
+#: core/views/settings_form.php:1101
+#: core/views/settings_form.php:1304
+msgid "API Key"
+msgstr ""
+
+#: core/views/settings_form.php:1017
+#: core/views/settings_form.php:1108
+#: core/views/settings_form.php:1220
+#: core/views/settings_form.php:1319
+msgid "Verified"
+msgstr ""
+
+#: core/views/settings_form.php:1018
+#: core/views/settings_form.php:1109
+#: core/views/settings_form.php:1221
+#: core/views/settings_form.php:1320
+msgid "Not Verified"
+msgstr ""
+
+#: core/views/settings_form.php:1027
+msgid "List ID"
+msgstr ""
+
+#: core/views/settings_form.php:1061
+msgid "Webform code from Mailchimp"
+msgstr ""
+
+#: core/views/settings_form.php:1120
+msgid "Campaign Name"
+msgstr ""
+
+#: core/views/settings_form.php:1156
+msgid "Webform code from Getresponse"
+msgstr ""
+
+#: core/views/settings_form.php:1196
+msgid "APP ID"
+msgstr ""
+
+#: core/views/settings_form.php:1206
+msgid "Username"
+msgstr ""
+
+#: core/views/settings_form.php:1230
+#: core/views/settings_form.php:1328
+msgid "List Name"
+msgstr ""
+
+#: core/views/settings_form.php:1265
+msgid "Webform code from Icontact"
+msgstr ""
+
+#: core/views/settings_form.php:1313
+msgid "Access Token"
+msgstr ""
+
+#: core/views/settings_form.php:1363
+msgid "Webform code from Constant Contact"
+msgstr ""
+
+#: core/views/settings_form.php:1398
+msgid "Webform code from GVO Campaign"
+msgstr ""
+
+#: core/views/settings_form.php:1433
+msgid "Webform code from eBizac"
+msgstr ""
+
+#: core/views/settings_form.php:1485
+msgid "Save Changes"
+msgstr ""
+
+#: core/views/view_records.php:676
+msgid "Entries List"
+msgstr ""
+
+#: core/views/view_records.php:677
+msgid "Analytics"
+msgstr ""
+
+#: core/views/view_records.php:928
+msgid "All Forms"
+msgstr ""
+
+#: core/widgets/ARFwidgetForm.php:14
+msgid "Display Form of ARForms"
+msgstr ""
+
+#: core/widgets/ARFwidgetForm.php:15
+msgid "ARForms Form"
+msgstr ""
+
+#: core/widgets/ARFwidgetForm.php:35
+msgid "Title"
+msgstr ""
+
+#: core/widgets/ARFwidgetForm.php:38
+msgid "Form"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:3626
+msgid "Ukrainian"
+msgstr ""
+
+#: core/controllers/arformcontroller.php:2380
+#: core/controllers/arrecordcontroller.php:3382
+#: core/views/list.php:491
+#: core/views/view_records.php:788
+msgid "ID"
+msgstr ""
+
+#: core/controllers/arformcontroller.php:2382
+#: core/views/list.php:493
+msgid "Key"
+msgstr ""
+
+#: core/controllers/arformcontroller.php:2383
+#: core/controllers/arformcontroller.php:2414
+#: core/views/graph_ajax.php:230
+#: core/views/graph_ajax.php:372
+#: core/views/graph_ajax.php:634
+#: core/views/list.php:494
+#: core/views/list.php:525
+msgid "Entries"
+msgstr ""
+
+#: core/controllers/arformcontroller.php:2384
+#: core/views/list.php:495
+msgid "Shortcodes"
+msgstr ""
+
+#: core/controllers/arformcontroller.php:2385
+#: core/views/list.php:496
+msgid "Create Date"
+msgstr ""
+
+#: core/controllers/arformcontroller.php:2386
+#: core/controllers/arrecordcontroller.php:3391
+#: core/views/list.php:497
+#: core/views/view_records.php:797
+msgid "Action"
+msgstr ""
+
+#: core/controllers/arformcontroller.php:2439
+#: core/views/list.php:550
+msgid "Edit Form"
+msgstr ""
+
+#: core/controllers/arformcontroller.php:2447
+#: core/views/list.php:558
+msgid "Form Entry"
+msgstr ""
+
+#: core/controllers/arformcontroller.php:2449
+#: core/views/list.php:560
+msgid "Duplicate Form"
+msgstr ""
+
+#: core/controllers/arformcontroller.php:4166
+#: core/views/addcontrols.php:2012
+msgid "Left to Right"
+msgstr ""
+
+#: core/controllers/arformcontroller.php:4166
+#: core/views/addcontrols.php:2012
+msgid "Right to Left"
+msgstr ""
+
+#: core/controllers/arformcontroller.php:2895
+#: core/views/addcontrols.php:743
+msgid "Flat"
+msgstr ""
+
+#: core/controllers/arformcontroller.php:2762
+#: core/controllers/arformcontroller.php:3065
+#: core/controllers/arformcontroller.php:3177
+#: core/controllers/arformcontroller.php:3322
+#: core/controllers/arformcontroller.php:3636
+#: core/controllers/arformcontroller.php:3712
+#: core/controllers/arformcontroller.php:3729
+#: core/controllers/arformcontroller.php:4061
+#: core/controllers/arformcontroller.php:5862
+#: core/controllers/arformcontroller.php:6227
+#: core/helpers/arfieldhelper.php:5378
+#: core/vc/class_vc_extend.php:647
+#: core/vc/class_vc_extend.php:665
+#: core/vc/class_vc_extend.php:733
+#: core/views/addcontrols.php:610
+#: core/views/addcontrols.php:913
+#: core/views/addcontrols.php:1025
+#: core/views/addcontrols.php:1169
+#: core/views/addcontrols.php:1483
+#: core/views/addcontrols.php:1557
+#: core/views/addcontrols.php:1574
+#: core/views/addcontrols.php:1907
+#: core/views/addcontrols.php:3708
+#: core/views/addcontrols.php:4072
+#: core/views/insert_form_popup.php:670
+#: core/views/insert_form_popup.php:682
+#: core/widgets/ARFwidgetForm.php:68
+#: core/widgets/ARFwidgetForm.php:75
+msgid "Left"
+msgstr ""
+
+#: core/controllers/arformcontroller.php:2762
+#: core/controllers/arformcontroller.php:3063
+#: core/controllers/arformcontroller.php:3177
+#: core/controllers/arformcontroller.php:3320
+#: core/controllers/arformcontroller.php:3634
+#: core/controllers/arformcontroller.php:3712
+#: core/controllers/arformcontroller.php:3729
+#: core/controllers/arformcontroller.php:4061
+#: core/controllers/arformcontroller.php:5860
+#: core/controllers/arformcontroller.php:6228
+#: core/vc/class_vc_extend.php:648
+#: core/vc/class_vc_extend.php:666
+#: core/vc/class_vc_extend.php:734
+#: core/views/addcontrols.php:610
+#: core/views/addcontrols.php:911
+#: core/views/addcontrols.php:1025
+#: core/views/addcontrols.php:1167
+#: core/views/addcontrols.php:1481
+#: core/views/addcontrols.php:1557
+#: core/views/addcontrols.php:1574
+#: core/views/addcontrols.php:1907
+#: core/views/addcontrols.php:3706
+#: core/views/addcontrols.php:4073
+#: core/views/insert_form_popup.php:671
+#: core/views/insert_form_popup.php:683
+#: core/widgets/ARFwidgetForm.php:69
+#: core/widgets/ARFwidgetForm.php:76
+msgid "Right"
+msgstr ""
+
+#: core/controllers/arformcontroller.php:4893
+#: core/views/addcontrols.php:2738
+msgid "Date Format"
+msgstr ""
+
+#: core/controllers/arrecordcontroller.php:3297
+#: core/views/view_records.php:706
+#: core/views/view_records.php:926
+msgid "Select form"
+msgstr ""
+
+#: core/controllers/arrecordcontroller.php:3315
+#: core/views/view_records.php:724
+msgid "Select date From"
+msgstr ""
+
+#: core/controllers/arrecordcontroller.php:3317
+#: core/views/view_records.php:726
+msgid "To"
+msgstr ""
+
+#: core/controllers/arrecordcontroller.php:3315
+#: core/views/view_records.php:724
+msgid "optional"
+msgstr ""
+
+#: core/controllers/arrecordcontroller.php:3388
+#: core/views/view_records.php:794
+msgid "Browser Name"
+msgstr ""
+
+#: core/controllers/arrecordcontroller.php:3390
+#: core/views/view_records.php:796
+msgid "Country"
+msgstr ""
+
+#: core/controllers/arrecordcontroller.php:3431
+#: core/controllers/arrecordcontroller.php:3435
+#: core/views/view_records.php:835
+#: core/views/view_records.php:839
+msgid "View Entry"
+msgstr ""
+
+#: core/controllers/arrecordcontroller.php:3472
+#: core/views/view_records.php:874
+msgid "Close"
+msgstr ""
+
+#: core/views/form.php:666
+msgid "Powered by"
+msgstr ""
+
+#: core/views/edit.php:1900
+#: core/views/edit.php:1945
+#: core/views/edit.php:2062
+#: core/views/edit.php:2115
+#: core/views/edit.php:2248
+#: core/views/edit.php:2289
+#: core/views/edit.php:2411
+#: core/views/edit.php:2454
+msgid "LIST NAME"
+msgstr ""
+
+#: core/models/artemplate.php:1040
+#: core/views/upgrade_latest_data.php:1377
+msgid "First Name"
+msgstr ""
+
+#: core/views/edit.php:1463
+msgid "Admin Email"
+msgstr ""
+
+#: core/views/edit.php:3311
+msgid ""
+"Please use any of the following shortcode to add form into post / page / "
+"widget"
+msgstr ""
+
+#: core/views/graph_ajax.php:372
+msgid "Day"
+msgstr ""
+
+#: core/views/graph_ajax.php:230
+#: core/views/graph_ajax.php:372
+#: core/views/graph_ajax.php:634
+msgid "Views"
+msgstr ""
+
+#: core/views/import_export_form.php:184
+#: core/views/list.php:706
+#: core/views/settings_form.php:1506
+#: core/views/view_records.php:1015
+msgid "Documentation"
+msgstr ""
+
+#: core/views/import_export_form.php:186
+#: core/views/list.php:706
+#: core/views/settings_form.php:1506
+#: core/views/view_records.php:1015
+msgid "Support"
+msgstr ""
+
+#: core/views/newfield.php:104
+msgid "Thursday"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:3789
+msgid "Columns"
+msgstr ""
+
+#: core/views/settings_form.php:403
+msgid ""
+"reCAPTCHA requires an API key, consisting of a \"public\" and a \"private\" key. "
+"You can sign up for a"
+msgstr ""
+
+#: core/views/settings_form.php:403
+msgid "free reCAPTCHA key"
+msgstr ""
+
+#: core/views/settings_form.php:792
+msgid "Ajax based submission"
+msgstr ""
+
+#: core/views/settings_form.php:793
+msgid "Normal submission"
+msgstr ""
+
+#: core/views/settings_form.php:968
+#: core/views/settings_form.php:1049
+#: core/views/settings_form.php:1143
+#: core/views/settings_form.php:1252
+#: core/views/settings_form.php:1351
+msgid "Refresh List"
+msgstr ""
+
+#: core/views/settings_form.php:970
+#: core/views/settings_form.php:1051
+#: core/views/settings_form.php:1145
+#: core/views/settings_form.php:1254
+#: core/views/settings_form.php:1353
+msgid "Delete Configuration"
+msgstr ""
+
+#: core/views/settings_form.php:1015
+#: core/views/settings_form.php:1106
+#: core/views/settings_form.php:1219
+#: core/views/settings_form.php:1317
+msgid "Verify"
+msgstr ""
+
+#: core/controllers/arformcontroller.php:5418
+#: core/controllers/arformcontroller.php:5437
+#: core/views/addcontrols.php:3264
+#: core/views/addcontrols.php:3283
+msgid "Optional"
+msgstr ""
+
+#: core/controllers/arformcontroller.php:5424
+#: core/controllers/arformcontroller.php:5443
+#: core/views/addcontrols.php:3270
+#: core/views/addcontrols.php:3289
+msgid "If not provided anything it will be auto"
+msgstr ""
+
+#: core/vc/class_vc_extend.php:578
+#: core/views/insert_form_popup.php:634
+msgid "How you want to include this form into page?"
+msgstr ""
+
+#: core/vc/class_vc_extend.php:588
+#: core/views/insert_form_popup.php:635
+#: core/widgets/ARFwidgetForm.php:45
+msgid "Internal"
+msgstr ""
+
+#: core/vc/class_vc_extend.php:598
+#: core/views/insert_form_popup.php:637
+#: core/widgets/ARFwidgetForm.php:47
+msgid "External popup window"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:4311
+msgid "Embedded tags for youtube, map etc are supported."
+msgstr ""
+
+#: core/views/edit.php:1808
+msgid "Email Marketers"
+msgstr ""
+
+#: core/controllers/arformcontroller.php:2498
+#: core/controllers/arrecordcontroller.php:3344
+#: core/views/list.php:613
+#: core/views/view_records.php:752
+msgid "Show / Hide columns"
+msgstr ""
+
+#: core/controllers/arformcontroller.php:2500
+#: core/controllers/arrecordcontroller.php:3346
+#: core/views/list.php:615
+#: core/views/view_records.php:754
+msgid "entries"
+msgstr ""
+
+#: core/controllers/arformcontroller.php:2501
+#: core/controllers/arrecordcontroller.php:3347
+#: core/views/list.php:616
+#: core/views/newfield.php:946
+#: core/views/newfield.php:947
+#: core/views/newfield.php:951
+#: core/views/view_records.php:755
+msgid "Show"
+msgstr ""
+
+#: core/controllers/arformcontroller.php:2502
+#: core/controllers/arrecordcontroller.php:3348
+#: core/views/list.php:617
+#: core/views/view_records.php:756
+msgid "Showing"
+msgstr ""
+
+#: core/controllers/arformcontroller.php:2503
+#: core/controllers/arrecordcontroller.php:3349
+#: core/views/list.php:618
+#: core/views/view_records.php:757
+msgid "to"
+msgstr ""
+
+#: core/controllers/arformcontroller.php:2504
+#: core/controllers/arrecordcontroller.php:3350
+#: core/views/form.php:160
+#: core/views/list.php:619
+#: core/views/newfield.php:437
+#: core/views/view_records.php:758
+msgid "of"
+msgstr ""
+
+#: core/controllers/arformcontroller.php:2505
+#: core/controllers/arrecordcontroller.php:3351
+#: core/views/list.php:620
+#: core/views/view_records.php:759
+msgid "No matching records found"
+msgstr ""
+
+#: core/controllers/arformcontroller.php:2506
+#: core/controllers/arrecordcontroller.php:3352
+#: core/views/list.php:621
+#: core/views/view_records.php:760
+msgid "No data available in table"
+msgstr ""
+
+#: core/controllers/arformcontroller.php:2507
+#: core/controllers/arrecordcontroller.php:3353
+#: core/views/list.php:622
+#: core/views/view_records.php:761
+msgid "filtered from"
+msgstr ""
+
+#: core/controllers/arformcontroller.php:2508
+#: core/controllers/arrecordcontroller.php:3354
+#: core/views/list.php:623
+#: core/views/view_records.php:762
+msgid "total"
+msgstr ""
+
+#: core/views/settings_form.php:134
+msgid "Email Marketing Tools"
+msgstr ""
+
+#: core/views/view_records.php:941
+#: core/views/view_records.php:942
+msgid "Yearly"
+msgstr ""
+
+#: core/views/view_records.php:946
+#: core/views/view_records.php:947
+msgid "Monthly"
+msgstr ""
+
+#: core/views/view_records.php:951
+#: core/views/view_records.php:952
+msgid "Daily"
+msgstr ""
+
+#: core/controllers/arformcontroller.php:5064
+#: core/views/addcontrols.php:2910
+msgid "Checkbox & Radio Style"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:4565
+#: core/helpers/arfieldhelper.php:4578
+msgid "First Page Label"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:4609
+msgid "Previous Button Text"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:4631
+msgid "Next Button Text"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:4683
+#: core/helpers/arfieldhelper.php:4690
+#: core/helpers/arfieldhelper.php:4698
+msgid "Wizard"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:4681
+#: core/helpers/arfieldhelper.php:4688
+#: core/helpers/arfieldhelper.php:4699
+msgid "Survey"
+msgstr ""
+
+#: core/controllers/arformcontroller.php:5463
+#: core/vc/class_vc_extend.php:685
+#: core/views/addcontrols.php:3309
+#: core/views/insert_form_popup.php:702
+msgid "Text"
+msgstr ""
+
+#: core/vc/class_vc_extend.php:606
+#: core/views/insert_form_popup.php:642
+msgid "Link Type?"
+msgstr ""
+
+#: core/vc/class_vc_extend.php:617
+#: core/views/insert_form_popup.php:646
+#: core/widgets/ARFwidgetForm.php:56
+msgid "Link"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:3998
+#: core/vc/class_vc_extend.php:618
+#: core/views/insert_form_popup.php:647
+#: core/widgets/ARFwidgetForm.php:57
+msgid "Button"
+msgstr ""
+
+#: core/views/settings_form.php:909
+msgid "AWEBER LIST"
+msgstr ""
+
+#: core/views/edit.php:3331
+msgid ""
+"Note : Possible argument for type argument 1.) type=\"link\"  2.) "
+"type=\"button\"."
+msgstr ""
+
+#: core/views/edit.php:3332
+msgid ": You can adjust height and width of modal box"
+msgstr ""
+
+#: core/views/inputelements.php:246
+msgid "Please select"
+msgstr ""
+
+#: core/widgets/ARFwidgetForm.php:99
+msgid "Height :"
+msgstr ""
+
+#: core/widgets/ARFwidgetForm.php:103
+msgid "Width :"
+msgstr ""
+
+#: core/views/edit.php:1226
+msgid ""
+"Select <strong>Single Line Text field</strong> or <strong>Email "
+"field</strong> to send autoresponse email to that address. First you need to "
+"create that field in form itself."
+msgstr ""
+
+#: core/controllers/arformcontroller.php:4798
+#: core/views/addcontrols.php:2643
+msgid "Field Transparency"
+msgstr ""
+
+#: core/views/edit.php:3356
+msgid "Please use any of the following shortcode to add form into template"
+msgstr ""
+
+#: core/views/list.php:16
+msgid "This form is already deleted."
+msgstr ""
+
+#: core/views/edit.php:1292
+#: core/views/settings_form.php:659
+msgid "From/Replyto Name"
+msgstr ""
+
+#: core/views/edit.php:1523
+#: core/views/settings_form.php:677
+msgid "From/Replyto Email"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:562
+msgid "CAPTCHA"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:1285
+msgid "Email is invalid"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:1287
+msgid "File is invalid"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:1291
+msgid "Phone is invalid"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:1293
+msgid "Image is invalid"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:1295
+msgid "Date is invalid"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:1297
+msgid "Website is invalid"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:2810
+#: core/views/footer.php:62
+msgid "equals"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:2811
+#: core/views/footer.php:63
+msgid "not equals"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:2812
+#: core/views/footer.php:64
+msgid "greater than"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:2813
+#: core/views/footer.php:65
+msgid "less than"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:2814
+#: core/views/footer.php:66
+msgid "contains"
+msgstr ""
+
+#: core/models/arsettingmodel.php:112
+msgid "We're sorry. Form is not submitted successfully."
+msgstr ""
+
+#: core/models/arsettingmodel.php:121
+msgid "You do not have permission to perform this action"
+msgstr ""
+
+#: core/views/edit.php:1313
+msgid "From/Reply to Email"
+msgstr ""
+
+#: core/views/edit.php:3047
+#: core/views/edit.php:3084
+msgid "Form outer wrapper"
+msgstr ""
+
+#: core/views/edit.php:3048
+#: core/views/edit.php:3090
+msgid "Form inner wrapper"
+msgstr ""
+
+#: core/views/edit.php:3049
+#: core/views/edit.php:3096
+msgid "Form title"
+msgstr ""
+
+#: core/views/edit.php:3050
+#: core/views/edit.php:3102
+msgid "Form description"
+msgstr ""
+
+#: core/views/edit.php:3055
+#: core/views/edit.php:3138
+msgid "Submit button"
+msgstr ""
+
+#: core/views/edit.php:3058
+#: core/views/edit.php:3156
+msgid "Success message"
+msgstr ""
+
+#: core/views/newfield.php:747
+msgid "Basic Options"
+msgstr ""
+
+#: core/views/edit_form.php:171
+#: core/views/newfield.php:749
+msgid "Conditional Law"
+msgstr ""
+
+#: core/views/edit.php:1044
+#: core/views/edit.php:3040
+#: core/views/newfield.php:853
+msgid "Custom CSS"
+msgstr ""
+
+#: core/views/newfield.php:865
+#: core/widgets/ARFwidgetForm.php:50
+msgid "Label"
+msgstr ""
+
+#: core/views/newfield.php:866
+msgid "Input element"
+msgstr ""
+
+#: core/views/edit_form.php:184
+#: core/views/newfield.php:930
+msgid "Enable Conditional Law"
+msgstr ""
+
+#: core/views/newfield.php:946
+#: core/views/newfield.php:947
+#: core/views/newfield.php:952
+msgid "Hide"
+msgstr ""
+
+#: core/views/newfield.php:959
+msgid "this field if"
+msgstr ""
+
+#: core/views/edit_form.php:197
+#: core/views/newfield.php:969
+#: core/views/newfield.php:970
+#: core/views/newfield.php:974
+msgid "All"
+msgstr ""
+
+#: core/views/edit_form.php:198
+#: core/views/newfield.php:969
+#: core/views/newfield.php:970
+#: core/views/newfield.php:975
+msgid "Any"
+msgstr ""
+
+#: core/views/edit_form.php:200
+#: core/views/newfield.php:982
+msgid "of the following match:"
+msgstr ""
+
+#: core/views/settings_form.php:827
+msgid "Form Global CSS"
+msgstr ""
+
+#: core/controllers/arformcontroller.php:2925
+#: core/controllers/arformcontroller.php:2948
+#: core/controllers/arformcontroller.php:4615
+#: core/controllers/arformcontroller.php:4638
+#: core/controllers/arformcontroller.php:4758
+#: core/controllers/arformcontroller.php:4779
+#: core/controllers/arformcontroller.php:5725
+#: core/controllers/arformcontroller.php:5749
+#: core/views/addcontrols.php:773
+#: core/views/addcontrols.php:796
+#: core/views/addcontrols.php:2460
+#: core/views/addcontrols.php:2483
+#: core/views/addcontrols.php:2603
+#: core/views/addcontrols.php:2624
+#: core/views/addcontrols.php:3571
+#: core/views/addcontrols.php:3595
+msgid "0 px"
+msgstr ""
+
+#: core/controllers/arformcontroller.php:2926
+#: core/controllers/arformcontroller.php:4639
+#: core/controllers/arformcontroller.php:5750
+#: core/views/addcontrols.php:774
+#: core/views/addcontrols.php:2484
+#: core/views/addcontrols.php:3596
+msgid "50 px"
+msgstr ""
+
+#: core/controllers/arformcontroller.php:2949
+#: core/views/addcontrols.php:797
+msgid "100 px"
+msgstr ""
+
+#: core/controllers/arformcontroller.php:4616
+#: core/controllers/arformcontroller.php:5726
+#: core/views/addcontrols.php:2461
+#: core/views/addcontrols.php:3572
+msgid "20 px"
+msgstr ""
+
+#: core/controllers/arformcontroller.php:7518
+msgid "Form Imported Successfully"
+msgstr ""
+
+#: core/controllers/arformcontroller.php:7522
+msgid "File is not proper."
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:527
+msgid "Multiline Text"
+msgstr ""
+
+#: core/views/edit.php:3342
+msgid ""
+"Note : Possible argument for position argument 1.) position=\"left\"  2.) "
+"position=\"right\"."
+msgstr ""
+
+#: core/views/edit.php:3353
+msgid ""
+"Note : Possible argument for position argument 1.) position=\"top\"  2.) "
+"position=\"bottom\"."
+msgstr ""
+
+#: core/views/common.php:1119
+#: core/views/common.php:1603
+#: core/views/formfields.php:469
+msgid "No file selected"
+msgstr ""
+
+#: core/views/edit.php:3051
+#: core/views/edit.php:3108
+msgid "Field wrapper"
+msgstr ""
+
+#: core/views/edit.php:3052
+#: core/views/edit.php:3114
+msgid "Field label"
+msgstr ""
+
+#: core/views/edit.php:3053
+#: core/views/edit.php:3120
+msgid "Input elements"
+msgstr ""
+
+#: core/views/edit.php:3054
+#: core/views/edit.php:3132
+msgid "Submit wrapper"
+msgstr ""
+
+#: core/views/edit.php:3056
+#: core/views/edit.php:3144
+msgid "Next button"
+msgstr ""
+
+#: core/views/edit.php:3057
+#: core/views/edit.php:3150
+msgid "Previous button"
+msgstr ""
+
+#: core/views/edit.php:3060
+#: core/views/edit.php:3126
+msgid "Page break"
+msgstr ""
+
+#: core/views/edit.php:3084
+#: core/views/edit.php:3090
+#: core/views/edit.php:3096
+#: core/views/edit.php:3102
+#: core/views/edit.php:3108
+#: core/views/edit.php:3114
+#: core/views/edit.php:3120
+#: core/views/edit.php:3126
+#: core/views/edit.php:3132
+#: core/views/edit.php:3138
+#: core/views/edit.php:3144
+#: core/views/edit.php:3150
+#: core/views/edit.php:3156
+#: core/views/edit.php:3162
+#: core/views/edit.php:3168
+#: core/views/edit.php:3174
+#: core/views/edit.php:3179
+#: core/views/edit.php:3184
+#: core/views/edit.php:3189
+#: core/views/edit.php:3194
+#: core/views/import_export_form.php:140
+msgid "Remove"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:3874
+msgid "Specify types"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:4039
+msgid "Upload button text"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:4050
+msgid "Remove Button text"
+msgstr ""
+
+#: core/controllers/arformcontroller.php:2827
+#: core/controllers/arformcontroller.php:2854
+#: core/controllers/arformcontroller.php:5611
+#: core/controllers/arformcontroller.php:5633
+#: core/controllers/arformcontroller.php:5652
+#: core/controllers/arformcontroller.php:5674
+#: core/controllers/arsettingcontroller.php:991
+#: core/controllers/arsettingcontroller.php:1035
+#: core/controllers/arsettingcontroller.php:1088
+#: core/views/addcontrols.php:675
+#: core/views/addcontrols.php:702
+#: core/views/addcontrols.php:3457
+#: core/views/addcontrols.php:3479
+#: core/views/addcontrols.php:3498
+#: core/views/addcontrols.php:3520
+#: core/views/import_export_form.php:134
+msgid "Upload"
+msgstr ""
+
+#: core/views/import_export_form.php:170
+msgid "Import"
+msgstr ""
+
+#: core/views/import_export_form.php:102
+msgid "Export"
+msgstr ""
+
+#: core/vc/class_vc_extend.php:619
+#: core/views/insert_form_popup.php:648
+#: core/widgets/ARFwidgetForm.php:58
+msgid "Sticky"
+msgstr ""
+
+#: core/vc/class_vc_extend.php:620
+#: core/views/insert_form_popup.php:649
+#: core/widgets/ARFwidgetForm.php:59
+msgid "Fly"
+msgstr ""
+
+#: core/vc/class_vc_extend.php:635
+#: core/vc/class_vc_extend.php:655
+#: core/views/insert_form_popup.php:664
+#: core/views/insert_form_popup.php:678
+#: core/widgets/ARFwidgetForm.php:64
+#: core/widgets/ARFwidgetForm.php:73
+msgid "Link Position?"
+msgstr ""
+
+#: core/controllers/arformcontroller.php:3062
+#: core/controllers/arformcontroller.php:3319
+#: core/controllers/arformcontroller.php:3633
+#: core/controllers/arformcontroller.php:3712
+#: core/controllers/arformcontroller.php:5859
+#: core/controllers/arformcontroller.php:6225
+#: core/helpers/arfieldhelper.php:5391
+#: core/vc/class_vc_extend.php:645
+#: core/vc/class_vc_extend.php:731
+#: core/views/addcontrols.php:910
+#: core/views/addcontrols.php:1166
+#: core/views/addcontrols.php:1480
+#: core/views/addcontrols.php:1557
+#: core/views/addcontrols.php:3705
+#: core/views/addcontrols.php:4070
+#: core/views/insert_form_popup.php:668
+#: core/widgets/ARFwidgetForm.php:66
+msgid "Top"
+msgstr ""
+
+#: core/controllers/arformcontroller.php:3064
+#: core/controllers/arformcontroller.php:3321
+#: core/controllers/arformcontroller.php:3635
+#: core/controllers/arformcontroller.php:5861
+#: core/controllers/arformcontroller.php:6226
+#: core/vc/class_vc_extend.php:646
+#: core/vc/class_vc_extend.php:732
+#: core/views/addcontrols.php:912
+#: core/views/addcontrols.php:1168
+#: core/views/addcontrols.php:1482
+#: core/views/addcontrols.php:3707
+#: core/views/addcontrols.php:4071
+#: core/views/insert_form_popup.php:669
+#: core/widgets/ARFwidgetForm.php:67
+msgid "Bottom"
+msgstr ""
+
+#: core/views/newfield.php:860
+#: core/views/newfield.php:864
+msgid "Wrapper"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:3681
+msgid "Required field"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:3754
+msgid "Clear Default Text on Focus"
+msgstr ""
+
+#: core/views/newfield.php:867
+msgid "Description"
+msgstr ""
+
+#: core/views/edit_form.php:206
+#: core/views/newfield.php:988
+msgid "Add New Law"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:4320
+#: core/views/edit.php:1259
+#: core/views/edit.php:1330
+#: core/views/edit.php:1415
+#: core/views/edit.php:1492
+#: core/views/edit.php:1552
+#: core/views/edit.php:1622
+#: core/views/edit.php:1695
+msgid "Add Field"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:3975
+msgid "Attach file with email"
+msgstr ""
+
+#: core/widgets/ARFwidgetForm.php:44
+msgid "Form Type"
+msgstr ""
+
+#: core/widgets/ARFwidgetForm.php:54
+msgid "Link Type ?"
+msgstr ""
+
+#: core/controllers/arformcontroller.php:3599
+#: core/views/addcontrols.php:1446
+msgid "0"
+msgstr ""
+
+#: core/controllers/arsettingcontroller.php:127
+msgid "Import Export"
+msgstr ""
+
+#: core/controllers/arsettingcontroller.php:127
+msgid "Import / Export"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:530
+msgid "Dropdown"
+msgstr ""
+
+#: core/views/edit.php:3062
+#: core/views/edit.php:3174
+msgid "Modal"
+msgstr ""
+
+#: core/views/import_export_form.php:20
+msgid "Import / Export Forms"
+msgstr ""
+
+#: core/views/import_export_form.php:28
+msgid "Form Imported Successfully."
+msgstr ""
+
+#: core/views/import_export_form.php:59
+#: core/views/import_export_form.php:74
+msgid "Export Form(s)"
+msgstr ""
+
+#: core/views/import_export_form.php:59
+#: core/views/import_export_form.php:80
+msgid "Export Entries"
+msgstr ""
+
+#: core/views/import_export_form.php:88
+msgid "Please Select Form(s)"
+msgstr ""
+
+#: core/views/import_export_form.php:94
+msgid "Please Select Form"
+msgstr ""
+
+#: core/views/import_export_form.php:115
+msgid "Import Form(s)"
+msgstr ""
+
+#: core/views/import_export_form.php:142
+msgid "Please select valid file"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:4357
+msgid "Font Family"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:4434
+msgid "Font Size"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:4482
+msgid "Font Style"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:3771
+msgid "Validate default value"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:572
+msgid "Section"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:2815
+#: core/views/footer.php:67
+msgid "not contains"
+msgstr ""
+
+#: core/views/addfieldjs.php:53
+#: core/views/footer.php:54
+msgid "(Blank Section)"
+msgstr ""
+
+#: core/views/import_export_form.php:143
+msgid "Please select file"
+msgstr ""
+
+#: core/views/inputelements.php:420
+msgid "Can't read the above security code?"
+msgstr ""
+
+#: core/views/inputelements.php:420
+msgid "Refresh"
+msgstr ""
+
+#: core/views/settings_form.php:237
+#: core/views/settings_form.php:276
+msgid "Product License"
+msgstr ""
+
+#: core/views/settings_form.php:246
+msgid "License Status"
+msgstr ""
+
+#: core/views/settings_form.php:253
+msgid "Deactivate License"
+msgstr ""
+
+#: core/views/settings_form.php:291
+msgid "Customer Name"
+msgstr ""
+
+#: core/views/settings_form.php:311
+msgid "Customer Email"
+msgstr ""
+
+#: core/views/settings_form.php:347
+msgid "Domain Name"
+msgstr ""
+
+#: core/views/edit.php:3233
+msgid "You can enter classes not directly properties."
+msgstr ""
+
+#: core/views/settings_form.php:373
+msgid "License Activated Successfully."
+msgstr ""
+
+#: core/views/settings_form.php:259
+msgid "License Deactivated Successfully."
+msgstr ""
+
+#: core/controllers/arformcontroller.php:6869
+msgid "There is any error while uncompressing zip."
+msgstr ""
+
+#: core/controllers/arformcontroller.php:6874
+#: core/controllers/arformcontroller.php:6880
+msgid "Please upload only zip files."
+msgstr ""
+
+#: core/views/import_export_form.php:124
+msgid "Please upload zip file exported from ARForms plugin."
+msgstr ""
+
+#: core/controllers/arformcontroller.php:2794
+#: core/controllers/arformcontroller.php:4451
+#: core/controllers/arformcontroller.php:4527
+#: core/controllers/arformcontroller.php:6178
+#: core/controllers/arformcontroller.php:6261
+#: core/helpers/arfieldhelper.php:4521
+#: core/views/addcontrols.php:642
+#: core/views/addcontrols.php:2296
+#: core/views/addcontrols.php:2372
+#: core/views/addcontrols.php:4023
+#: core/views/addcontrols.php:4106
+#: core/widgets/ARFwidgetForm.php:85
+msgid "Background Color"
+msgstr ""
+
+#: core/views/edit.php:3059
+#: core/views/edit.php:3162
+msgid "Validation (Error)"
+msgstr ""
+
+#: core/views/formsubmission.php:102
+msgid "Success"
+msgstr ""
+
+#: core/views/edit.php:3061
+#: core/views/edit.php:3168
+msgid "Fly / Sticky Button"
+msgstr ""
+
+#: core/views/settings_form.php:280
+msgid ""
+"A valid license key entitles you to support and enables automatic upgrades. "
+"Also you can remove Rebradning link only after activate your license. A "
+"license key only be used for one installation of WordPress at a time."
+msgstr ""
+
+#: core/views/settings_form.php:328
+msgid "Purchase Code"
+msgstr ""
+
+#: core/views/newfield.php:664
+msgid ""
+"Please setup public and private key in Global Settings otherwise recaptcha "
+"will not appear"
+msgstr ""
+
+#: core/views/graph_ajax.php:230
+msgid "Month"
+msgstr ""
+
+#: core/views/graph_ajax.php:634
+msgid "Hour"
+msgstr ""
+
+#: core/views/newfield.php:321
+msgid "Move"
+msgstr ""
+
+#: core/controllers/arformcontroller.php:2762
+#: core/controllers/arformcontroller.php:3177
+#: core/controllers/arformcontroller.php:4061
+#: core/views/addcontrols.php:610
+#: core/views/addcontrols.php:1025
+#: core/views/addcontrols.php:1907
+msgid "Center"
+msgstr ""
+
+#: core/controllers/arformcontroller.php:2787
+#: core/views/addcontrols.php:635
+msgid "Form Background"
+msgstr ""
+
+#: core/controllers/arformcontroller.php:2824
+#: core/controllers/arformcontroller.php:5608
+#: core/views/addcontrols.php:672
+#: core/views/addcontrols.php:3454
+msgid "Background Image"
+msgstr ""
+
+#: core/controllers/arformcontroller.php:2985
+#: core/controllers/arformcontroller.php:5786
+#: core/views/addcontrols.php:833
+#: core/views/addcontrols.php:3632
+msgid "Line"
+msgstr ""
+
+#: core/controllers/arformcontroller.php:3145
+#: core/controllers/arformcontroller.php:3549
+#: core/views/addcontrols.php:993
+#: core/views/addcontrols.php:1396
+msgid "Title Color"
+msgstr ""
+
+#: core/controllers/arformcontroller.php:6171
+#: core/views/addcontrols.php:4016
+msgid "Normal"
+msgstr ""
+
+#: core/controllers/arformcontroller.php:3397
+#: core/views/addcontrols.php:1244
+msgid "Page Break Tab Background Color"
+msgstr ""
+
+#: core/controllers/arformcontroller.php:3403
+#: core/views/addcontrols.php:1250
+msgid "Active"
+msgstr ""
+
+#: core/controllers/arformcontroller.php:3419
+#: core/views/addcontrols.php:1266
+msgid "Inactive"
+msgstr ""
+
+#: core/controllers/arformcontroller.php:4368
+#: core/views/addcontrols.php:2213
+msgid "Normal State"
+msgstr ""
+
+#: core/controllers/arformcontroller.php:4409
+#: core/views/addcontrols.php:2254
+msgid "Background color"
+msgstr ""
+
+#: core/controllers/arformcontroller.php:4691
+#: core/views/addcontrols.php:2536
+msgid "Solid"
+msgstr ""
+
+#: core/controllers/arformcontroller.php:4693
+#: core/views/addcontrols.php:2538
+msgid "Dotted"
+msgstr ""
+
+#: core/controllers/arformcontroller.php:4695
+#: core/views/addcontrols.php:2540
+msgid "Dashed"
+msgstr ""
+
+#: core/controllers/arformcontroller.php:4739
+#: core/views/addcontrols.php:2584
+msgid "Field Inner Spacing"
+msgstr ""
+
+#: core/controllers/arformcontroller.php:4746
+#: core/views/addcontrols.php:2591
+msgid "Vertical"
+msgstr ""
+
+#: core/controllers/arformcontroller.php:4759
+#: core/controllers/arformcontroller.php:4780
+#: core/views/addcontrols.php:2604
+#: core/views/addcontrols.php:2625
+msgid "25 px"
+msgstr ""
+
+#: core/controllers/arformcontroller.php:4767
+#: core/views/addcontrols.php:2612
+msgid "Horizontal"
+msgstr ""
+
+#: core/controllers/arformcontroller.php:4820
+#: core/views/addcontrols.php:2665
+msgid "Calendar Style"
+msgstr ""
+
+#: core/controllers/arformcontroller.php:5213
+#: core/views/addcontrols.php:3059
+msgid "Auto"
+msgstr ""
+
+#: core/controllers/arformcontroller.php:3518
+#: core/controllers/arformcontroller.php:5142
+#: core/controllers/arformcontroller.php:5532
+#: core/vc/class_vc_extend.php:676
+#: core/views/addcontrols.php:1365
+#: core/views/addcontrols.php:2988
+#: core/views/addcontrols.php:3378
+#: core/views/insert_form_popup.php:693
+msgid "Background"
+msgstr ""
+
+#: core/controllers/arformcontroller.php:5539
+#: core/views/addcontrols.php:3385
+msgid "Default Color"
+msgstr ""
+
+#: core/controllers/arformcontroller.php:5573
+#: core/views/addcontrols.php:3419
+msgid "Hover Color"
+msgstr ""
+
+#: core/controllers/arformcontroller.php:5922
+#: core/views/addcontrols.php:3768
+msgid "Validation Style Settings"
+msgstr ""
+
+#: core/controllers/arformcontroller.php:6162
+#: core/views/addcontrols.php:4007
+msgid "Validation error settings"
+msgstr ""
+
+#: core/controllers/arformcontroller.php:6171
+#: core/views/addcontrols.php:4016
+msgid "Advance"
+msgstr ""
+
+#: core/controllers/arformcontroller.php:6222
+#: core/views/addcontrols.php:4067
+msgid "Position"
+msgstr ""
+
+#: core/controllers/arformcontroller.php:6252
+#: core/views/addcontrols.php:4097
+msgid "Success Message Settings"
+msgstr ""
+
+#: core/controllers/arrecordcontroller.php:3465
+#: core/views/view_records.php:867
+msgid "VIEW ENTRY"
+msgstr ""
+
+#: core/controllers/maincontroller.php:188
+#: core/controllers/maincontroller.php:271
+#: core/controllers/maincontroller_07may2015.php:188
+#: core/controllers/maincontroller_07may2015.php:271
+msgid "Contact us"
+msgstr ""
+
+#: core/controllers/maincontroller.php:190
+#: core/controllers/maincontroller.php:273
+#: core/controllers/maincontroller_07may2015.php:190
+#: core/controllers/maincontroller_07may2015.php:273
+msgid "Feedback Form"
+msgstr ""
+
+#: core/controllers/maincontroller.php:192
+#: core/controllers/maincontroller.php:275
+#: core/controllers/maincontroller_07may2015.php:192
+#: core/controllers/maincontroller_07may2015.php:275
+msgid "Registration Form"
+msgstr ""
+
+#: core/controllers/maincontroller.php:191
+#: core/controllers/maincontroller.php:274
+#: core/controllers/maincontroller_07may2015.php:191
+#: core/controllers/maincontroller_07may2015.php:274
+msgid "RSVP Form"
+msgstr ""
+
+#: core/controllers/maincontroller.php:189
+#: core/controllers/maincontroller.php:272
+#: core/controllers/maincontroller_07may2015.php:189
+#: core/controllers/maincontroller_07may2015.php:272
+msgid "Subscription Form"
+msgstr ""
+
+#: core/controllers/maincontroller.php:193
+#: core/controllers/maincontroller.php:276
+#: core/controllers/maincontroller_07may2015.php:193
+#: core/controllers/maincontroller_07may2015.php:276
+msgid "Survey Form"
+msgstr ""
+
+#: core/models/artemplate.php:928
+#: core/views/upgrade_latest_data.php:1263
+msgid "Job Application Form"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:575
+msgid "Like button"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:576
+msgid "Slider"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:1268
+#: core/helpers/arfieldhelper.php:4917
+#: core/views/upgrade_latest_data.php:690
+msgid "Like"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:1268
+#: core/helpers/arfieldhelper.php:4928
+#: core/views/upgrade_latest_data.php:691
+msgid "Dislike"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:1272
+#: core/helpers/arfieldhelper.php:5290
+#: core/views/upgrade_latest_data.php:703
+msgid "Confirm Password does not match with password"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:1273
+#: core/helpers/arfieldhelper.php:5189
+#: core/helpers/arfieldhelper.php:5198
+#: core/views/upgrade_latest_data.php:706
+msgid "Confirm Password"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:3743
+msgid "Field custom width"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:3986
+msgid "Upload color"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:4008
+msgid "Font"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:4020
+msgid "Upload font color"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:4062
+msgid "Select captcha"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:4876
+msgid "Like Title"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:4892
+msgid "Dislike Title"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:4907
+msgid "Active color"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:4939
+msgid "Handle type"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:4961
+#: core/helpers/arfieldhelper.php:4976
+msgid "Round"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:4959
+#: core/helpers/arfieldhelper.php:4977
+msgid "Square"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:4957
+#: core/helpers/arfieldhelper.php:4978
+msgid "Triangle"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:4995
+#: core/views/form.php:160
+msgid "Step"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:5008
+msgid "Default value"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:5021
+msgid "Track BG color"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:5031
+msgid "Left side"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:5040
+msgid "Right side"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:5051
+msgid "Handle color"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:5072
+msgid "Placeholder Text"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:5085
+msgid "Field Description"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:5098
+msgid "Label Name"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:5113
+msgid "Phone Number Format"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:5179
+msgid "Password Strength Meter"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:5201
+msgid "Confirm Password Label"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:5293
+msgid "Message for invalid Password"
+msgstr ""
+
+#: core/helpers/arformhelper.php:244
+#: core/helpers/arformhelper.php:549
+#: core/models/arnotifymodel.php:676
+#: core/views/upgrade_latest_data.php:459
+msgid "Form submitted on"
+msgstr ""
+
+#: core/models/artemplate.php:1049
+#: core/views/upgrade_latest_data.php:1386
+msgid "Last name"
+msgstr ""
+
+#: core/models/artemplate.php:1067
+#: core/views/upgrade_latest_data.php:1404
+msgid "Contact No"
+msgstr ""
+
+#: core/models/artemplate.php:1076
+#: core/views/upgrade_latest_data.php:1413
+msgid "Address"
+msgstr ""
+
+#: core/models/artemplate.php:1085
+#: core/views/upgrade_latest_data.php:1422
+msgid "Position apply for?"
+msgstr ""
+
+#: core/models/artemplate.php:1088
+#: core/views/upgrade_latest_data.php:1425
+msgid "Developer"
+msgstr ""
+
+#: core/models/artemplate.php:1088
+#: core/views/upgrade_latest_data.php:1425
+msgid "Manager"
+msgstr ""
+
+#: core/models/artemplate.php:1088
+#: core/views/upgrade_latest_data.php:1425
+msgid "Clerk"
+msgstr ""
+
+#: core/models/artemplate.php:1088
+#: core/views/upgrade_latest_data.php:1425
+msgid "Representative"
+msgstr ""
+
+#: core/models/artemplate.php:1094
+#: core/views/upgrade_latest_data.php:1431
+msgid "Are you applying for?"
+msgstr ""
+
+#: core/models/artemplate.php:1097
+#: core/views/upgrade_latest_data.php:1434
+msgid "Full Time"
+msgstr ""
+
+#: core/models/artemplate.php:1097
+#: core/views/upgrade_latest_data.php:1434
+msgid "Part Time"
+msgstr ""
+
+#: core/models/artemplate.php:1103
+#: core/views/upgrade_latest_data.php:1440
+msgid "Education and Experience Details"
+msgstr ""
+
+#: core/models/artemplate.php:1114
+#: core/views/upgrade_latest_data.php:1451
+msgid "Diploma / Degree Name"
+msgstr ""
+
+#: core/models/artemplate.php:1122
+#: core/views/upgrade_latest_data.php:1459
+msgid "College / University Name"
+msgstr ""
+
+#: core/models/artemplate.php:1130
+#: core/views/upgrade_latest_data.php:1467
+msgid "Graduation Year"
+msgstr ""
+
+#: core/models/artemplate.php:1138
+#: core/views/upgrade_latest_data.php:1475
+msgid "Percentage"
+msgstr ""
+
+#: core/models/artemplate.php:1146
+#: core/views/upgrade_latest_data.php:1483
+msgid "Skills & Qualification"
+msgstr ""
+
+#: core/models/artemplate.php:1163
+#: core/views/upgrade_latest_data.php:1500
+msgid "Fresher / Experienced"
+msgstr ""
+
+#: core/models/artemplate.php:1165
+#: core/views/upgrade_latest_data.php:1502
+msgid "Fresher"
+msgstr ""
+
+#: core/models/artemplate.php:1165
+#: core/models/artemplate.php:1182
+#: core/models/artemplate.php:1206
+#: core/models/artemplate.php:1230
+#: core/views/upgrade_latest_data.php:1502
+#: core/views/upgrade_latest_data.php:1519
+#: core/views/upgrade_latest_data.php:1543
+#: core/views/upgrade_latest_data.php:1567
+msgid "Experienced"
+msgstr ""
+
+#: core/models/artemplate.php:1155
+#: core/views/upgrade_latest_data.php:1492
+msgid "Desired Salary"
+msgstr ""
+
+#: core/models/artemplate.php:1173
+#: core/views/upgrade_latest_data.php:1510
+msgid "Experience"
+msgstr ""
+
+#: core/models/artemplate.php:1174
+#: core/views/upgrade_latest_data.php:1511
+msgid "(e.g. 3 months, 2 years etc)"
+msgstr ""
+
+#: core/models/artemplate.php:1198
+#: core/views/upgrade_latest_data.php:1535
+msgid "Current Salary"
+msgstr ""
+
+#: core/models/artemplate.php:1222
+#: core/views/upgrade_latest_data.php:1559
+msgid "Current Company Detail"
+msgstr ""
+
+#: core/models/artemplate.php:1246
+#: core/views/upgrade_latest_data.php:1583
+msgid "Upload Resume"
+msgstr ""
+
+#: core/views/addcontrols.php:92
+msgid "Basic Form Elements"
+msgstr ""
+
+#: core/views/addcontrols.php:310
+msgid "Advanced Form Elements"
+msgstr ""
+
+#: core/views/common.php:117
+#: core/views/formfields.php:303
+msgid "Strength indicator"
+msgstr ""
+
+#: core/views/common.php:119
+msgid "Short"
+msgstr ""
+
+#: core/views/common.php:121
+msgid "Bad"
+msgstr ""
+
+#: core/views/common.php:123
+msgid "Good"
+msgstr ""
+
+#: core/views/common.php:125
+msgid "Strong"
+msgstr ""
+
+#: core/views/displayfield.php:110
+msgid "Note: Set your custom html content"
+msgstr ""
+
+#: core/views/edit.php:946
+#: core/views/edit.php:957
+msgid "Field Editor"
+msgstr ""
+
+#: core/views/edit.php:944
+#: core/views/edit.php:959
+msgid "Styling"
+msgstr ""
+
+#: core/views/edit.php:940
+#: core/views/edit.php:963
+msgid "Add To Site"
+msgstr ""
+
+#: core/views/edit.php:1035
+#: core/views/edit.php:1060
+msgid "On Submit"
+msgstr ""
+
+#: core/views/edit.php:1038
+msgid "Auto response email"
+msgstr ""
+
+#: core/views/edit.php:1041
+msgid "Email marketers"
+msgstr ""
+
+#: core/views/edit.php:1124
+msgid "Auto Response Email"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:4336
+#: core/views/edit.php:1273
+#: core/views/edit.php:1345
+#: core/views/edit.php:1430
+#: core/views/edit.php:1507
+#: core/views/edit.php:1567
+#: core/views/edit.php:1637
+#: core/views/edit.php:1702
+msgid "Fields"
+msgstr ""
+
+#: core/views/edit.php:1645
+msgid "This will be replaced with form name."
+msgstr ""
+
+#: core/views/edit.php:1646
+msgid "This will be replaced with name of site."
+msgstr ""
+
+#: core/views/edit.php:2837
+msgid "First name mapping"
+msgstr ""
+
+#: core/views/edit.php:2838
+msgid "Last name mapping"
+msgstr ""
+
+#: core/views/edit.php:2876
+#: core/views/edit.php:2889
+msgid "Select First Name"
+msgstr ""
+
+#: core/views/edit.php:2933
+#: core/views/edit.php:2946
+msgid "Select Last Name"
+msgstr ""
+
+#: core/views/edit.php:3077
+msgid "Custom Styling Properties"
+msgstr ""
+
+#: core/views/edit.php:3228
+msgid "Other CSS"
+msgstr ""
+
+#: core/views/edit.php:3263
+msgid "Have you saved your form already ?"
+msgstr ""
+
+#: core/views/edit.php:3265
+msgid "You should save your latest changes before publishing form to the page."
+msgstr ""
+
+#: core/views/edit.php:3270
+msgid "Ways to publish your form"
+msgstr ""
+
+#: core/views/edit.php:3272
+msgid "Follow these steps to add the form into page:"
+msgstr ""
+
+#: core/views/edit.php:3276
+msgid "Selecting"
+msgstr ""
+
+#: core/views/edit.php:3276
+msgid "LINK TYPE"
+msgstr ""
+
+#: core/views/edit.php:3276
+msgid "in the popup box:"
+msgstr ""
+
+#: core/views/edit.php:3280
+msgid "Insert form into widget:"
+msgstr ""
+
+#: core/views/edit.php:3310
+msgid "SHORTCODES"
+msgstr ""
+
+#: core/views/edit.php:3313
+#: core/views/edit.php:3358
+msgid "Normal View"
+msgstr ""
+
+#: core/views/edit.php:3323
+#: core/views/edit.php:3367
+msgid "Pop-up View"
+msgstr ""
+
+#: core/views/edit.php:3334
+#: core/views/edit.php:3376
+msgid "Fly View"
+msgstr ""
+
+#: core/views/edit.php:3345
+#: core/views/edit.php:3385
+msgid "Sticky view"
+msgstr ""
+
+#: core/views/edit.php:3458
+#: core/views/list.php:681
+msgid "Computer View"
+msgstr ""
+
+#: core/views/edit.php:3459
+#: core/views/list.php:682
+msgid "Tablet View"
+msgstr ""
+
+#: core/views/edit.php:3460
+#: core/views/list.php:683
+msgid "Mobile View"
+msgstr ""
+
+#: core/views/import_export_form.php:131
+msgid "Please Select File :"
+msgstr ""
+
+#: core/vc/class_vc_extend.php:559
+#: core/views/insert_form_popup.php:621
+msgid "ADD ARFORMS FORM"
+msgstr ""
+
+#: core/vc/class_vc_extend.php:621
+#: core/views/insert_form_popup.php:650
+#: core/widgets/ARFwidgetForm.php:60
+msgid "On Page Load"
+msgstr ""
+
+#: core/views/like_field.php:13
+msgid "Reset default value"
+msgstr ""
+
+#: core/views/list.php:658
+#: core/views/list.php:669
+msgid "DELETE FORM"
+msgstr ""
+
+#: core/views/list.php:670
+msgid "Are you sure you want to delete this form(s)?"
+msgstr ""
+
+#: core/views/new-selection-modal.php:23
+msgid "NEW FORM"
+msgstr ""
+
+#: core/views/new-selection-modal.php:27
+msgid "Form Name"
+msgstr ""
+
+#: core/views/new-selection-modal.php:30
+msgid "Form Description"
+msgstr ""
+
+#: core/views/new-selection-modal.php:33
+msgid "Template"
+msgstr ""
+
+#: core/views/new-selection-modal.php:39
+msgid "Blank Form"
+msgstr ""
+
+#: core/views/newfield.php:264
+msgid "DELETE FIELD"
+msgstr ""
+
+#: core/views/newfield.php:282
+msgid "Click to mark as"
+msgstr ""
+
+#: core/views/newfield.php:282
+msgid "compulsory field."
+msgstr ""
+
+#: core/views/newfield.php:317
+msgid "Duplicate"
+msgstr ""
+
+#: core/views/newfield.php:437
+msgid "options shown. Click \"Edit options\" Button to view all"
+msgstr ""
+
+#: core/views/newfield.php:439
+#: core/views/newfield.php:448
+#: core/views/newfield.php:550
+#: core/views/newfield.php:559
+msgid "Edit Options"
+msgstr ""
+
+#: core/views/newfield.php:488
+#: core/views/newfield.php:493
+#: core/views/newfield.php:607
+#: core/views/newfield.php:612
+msgid "Select"
+msgstr ""
+
+#: core/views/newfield.php:507
+#: core/views/newfield.php:623
+msgid "Saving"
+msgstr ""
+
+#: core/views/newfield.php:312
+#: core/views/newfield.php:739
+msgid "Field Options"
+msgstr ""
+
+#: core/views/newfield.php:748
+msgid "CSS Property"
+msgstr ""
+
+#: core/views/settings_form.php:856
+#: core/views/settings_form.php:1004
+#: core/views/settings_form.php:1092
+#: core/views/settings_form.php:1188
+#: core/views/settings_form.php:1296
+msgid "Using API"
+msgstr ""
+
+#: core/views/settings_form.php:857
+#: core/views/settings_form.php:1005
+#: core/views/settings_form.php:1093
+#: core/views/settings_form.php:1189
+#: core/views/settings_form.php:1297
+#: core/views/settings_form.php:1391
+#: core/views/settings_form.php:1426
+msgid "Using Web-form"
+msgstr ""
+
+#: core/views/view_records.php:1022
+#: core/views/view_records.php:1033
+msgid "DELETE ENTRY"
+msgstr ""
+
+#: core/views/view_records.php:1034
+msgid "Are you sure you want to delete this entries?"
+msgstr ""
+
+#: core/controllers/maincontroller.php:194
+#: core/controllers/maincontroller.php:277
+#: core/controllers/maincontroller_07may2015.php:194
+#: core/controllers/maincontroller_07may2015.php:277
+msgid "Job Application"
+msgstr ""
+
+#: core/views/edit_form.php:247
+#: core/views/newfield.php:512
+#: core/views/newfield.php:629
+#: core/views/newfield.php:1030
+#: core/views/newfield.php:1109
+msgid "Done"
+msgstr ""
+
+#: core/controllers/arformcontroller.php:3113
+#: core/views/addcontrols.php:961
+msgid "Form title & description"
+msgstr ""
+
+#: core/controllers/arsettingcontroller.php:563
+msgid "Email Marketing Tools setting saved successfully."
+msgstr ""
+
+#: core/vc/class_vc_extend.php:565
+#: core/views/insert_form_popup.php:627
+msgid "Select a form to insert into page"
+msgstr ""
+
+#: core/views/edit_form.php:151
+msgid "Edit Text"
+msgstr ""
+
+#: core/views/edit_form.php:165
+msgid "Submit Button Options"
+msgstr ""
+
+#: core/views/edit_form.php:191
+#: core/views/edit_form.php:196
+#: core/views/footer.php:68
+#: core/views/newfield.php:937
+#: core/views/newfield.php:960
+msgid "Please add one or more rules"
+msgstr ""
+
+#: core/views/edit_form.php:192
+msgid "Enable"
+msgstr ""
+
+#: core/views/edit_form.php:193
+msgid "Disable"
+msgstr ""
+
+#: core/views/edit_form.php:195
+msgid "this button if"
+msgstr ""
+
+#: core/views/newfield.php:155
+msgid "Telephone Country Codes"
+msgstr ""
+
+#: core/controllers/arformcontroller.php:3496
+#: core/views/addcontrols.php:1343
+msgid "Survey Bar Colors"
+msgstr ""
+
+#: core/controllers/arformcontroller.php:3502
+#: core/views/addcontrols.php:1349
+msgid "Bar Color"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:577
+msgid "Color Picker"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:578
+#: core/models/arfieldmodel.php:161
+msgid "Image"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:3873
+msgid ""
+"Here 'All Types' means all the file types supported by your wordpress "
+"installation."
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:4312
+msgid "Enable Running Total"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:4318
+msgid "For Running Total you need to add formula inside"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:4331
+msgid "Validate Formula"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:5179
+msgid ""
+"Strength Indicator will be indicate password as a strong, only when password "
+"contains alpha numeric value and special characters."
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:5310
+msgid "Colorpicker Type"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:5330
+#: core/helpers/arfieldhelper.php:5345
+msgid "Advanced"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:5328
+#: core/helpers/arfieldhelper.php:5346
+msgid "Basic"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:5404
+#: core/vc/class_vc_extend.php:702
+#: core/views/insert_form_popup.php:719
+msgid "Height"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:5417
+#: core/vc/class_vc_extend.php:703
+#: core/views/insert_form_popup.php:720
+msgid "Width"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:5432
+msgid "Horizontal Center"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:5435
+msgid "No"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:5435
+msgid "Yes"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:5447
+msgid "Default Value"
+msgstr ""
+
+#: core/helpers/arformhelper.php:206
+#: core/helpers/arformhelper.php:545
+msgid "Thank you for subscription with us. We will contact you soon."
+msgstr ""
+
+#: core/views/footer.php:50
+msgid "(Click here to add text)"
+msgstr ""
+
+#: core/views/newfield.php:739
+msgid "Field ID"
+msgstr ""
+
+#: core/views/settings_form.php:691
+msgid "Send Email SMTP"
+msgstr ""
+
+#: core/views/settings_form.php:693
+msgid "Wordpress Server"
+msgstr ""
+
+#: core/views/settings_form.php:694
+msgid "SMTP Server"
+msgstr ""
+
+#: core/views/settings_form.php:699
+msgid "SMTP Host"
+msgstr ""
+
+#: core/views/settings_form.php:706
+msgid "SMTP Port"
+msgstr ""
+
+#: core/views/settings_form.php:713
+msgid "SMTP Username"
+msgstr ""
+
+#: core/views/settings_form.php:720
+msgid "SMTP Encription"
+msgstr ""
+
+#: core/views/settings_form.php:722
+msgid "None"
+msgstr ""
+
+#: core/views/settings_form.php:723
+msgid "SSL"
+msgstr ""
+
+#: core/views/settings_form.php:724
+msgid "TLS"
+msgstr ""
+
+#: core/views/settings_form.php:729
+msgid "SMTP Password"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:5461
+msgid "Show Year/Month Dropdown"
+msgstr ""
+
+#: core/views/edit.php:1868
+#: core/views/edit.php:1882
+msgid ""
+"&nbsp;&nbsp;&nbsp;(Please Activate your license to configure Mailchip with "
+"this form.)"
+msgstr ""
+
+#: core/views/edit.php:2024
+#: core/views/edit.php:2038
+msgid ""
+"&nbsp;&nbsp;&nbsp;(Please Activate your license to configure Aweber with "
+"this form.)"
+msgstr ""
+
+#: core/views/edit.php:2215
+#: core/views/edit.php:2229
+msgid ""
+"&nbsp;&nbsp;&nbsp;(Please Activate your license to configure Icontact with "
+"this form.)"
+msgstr ""
+
+#: core/views/edit.php:2378
+#: core/views/edit.php:2392
+msgid ""
+"&nbsp;&nbsp;&nbsp;(Please Activate your license to configure Constant "
+"Contact with this form.)"
+msgstr ""
+
+#: core/views/edit.php:2542
+#: core/views/edit.php:2556
+msgid ""
+"&nbsp;&nbsp;&nbsp;(Please Activate your license to configure Getresponse "
+"with this form.)"
+msgstr ""
+
+#: core/views/edit.php:2701
+#: core/views/edit.php:2719
+msgid ""
+"&nbsp;&nbsp;&nbsp;(Please Activate your license to configure GVO with this "
+"form.)"
+msgstr ""
+
+#: core/views/edit.php:2774
+#: core/views/edit.php:2792
+msgid ""
+"&nbsp;&nbsp;&nbsp;(Please Activate your license to configure eBizac with "
+"this form.)"
+msgstr ""
+
+#: core/views/form.php:683
+msgid "&nbsp;&nbsp;"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:3707
+msgid "Field Size ( Characters) "
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:3726
+msgid "Maximum"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:3729
+msgid "Minimum"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:4112
+msgid "(Give 0 (Zero) value for unlimited maximum range)"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:5364
+msgid "Add File"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:5495
+msgid "Minimum Length"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:5506
+msgid "Message for minimum length"
+msgstr ""
+
+#: core/views/edit_form.php:73
+msgid "Choose File"
+msgstr ""
+
+#: core/vc/class_vc_extend.php:628
+#: core/views/insert_form_popup.php:657
+msgid "Caption :"
+msgstr ""
+
+#: core/vc/class_vc_extend.php:699
+#: core/views/insert_form_popup.php:716
+msgid "Size :"
+msgstr ""
+
+#: core/vc/class_vc_extend.php:708
+#: core/views/insert_form_popup.php:726
+msgid "Button angle :"
+msgstr ""
+
+#: core/widgets/ARFwidgetForm.php:106
+msgid "Button Angle"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:1289
+msgid "Number is out of range"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:5478
+msgid "Confirm Password Placeholder"
+msgstr ""
+
+#: core/controllers/arformcontroller.php:3247
+#: core/controllers/arformcontroller.php:3248
+#: core/views/addcontrols.php:1095
+#: core/views/addcontrols.php:1096
+msgid "check_weight_form_title"
+msgstr ""
+
+#: core/controllers/arformcontroller.php:3586
+#: core/views/addcontrols.php:1433
+msgid "Window Opacity"
+msgstr ""
+
+#: core/controllers/arformcontroller.php:3899
+#: core/controllers/arformcontroller.php:3900
+#: core/views/addcontrols.php:1744
+#: core/views/addcontrols.php:1745
+msgid "weight"
+msgstr ""
+
+#: core/controllers/arformcontroller.php:4274
+#: core/controllers/arformcontroller.php:4275
+#: core/views/addcontrols.php:2119
+#: core/views/addcontrols.php:2120
+msgid "check_weight"
+msgstr ""
+
+#: core/controllers/arformcontroller.php:5139
+#: core/views/addcontrols.php:2985
+msgid "Prefix & Suffix Style"
+msgstr ""
+
+#: core/controllers/arformcontroller.php:5157
+#: core/views/addcontrols.php:3003
+msgid "Icon Color"
+msgstr ""
+
+#: core/controllers/arformcontroller.php:5330
+#: core/controllers/arformcontroller.php:5331
+#: core/views/addcontrols.php:3176
+#: core/views/addcontrols.php:3177
+msgid "arfsubmitweightsetting"
+msgstr ""
+
+#: core/controllers/arformcontroller.php:5649
+#: core/views/addcontrols.php:3495
+msgid "Background Hover Image"
+msgstr ""
+
+#: core/controllers/arsettingcontroller.php:129
+msgid "Addons"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:1277
+#: core/helpers/arfieldhelper.php:5222
+#: core/helpers/arfieldhelper.php:5229
+msgid "Confirm Email"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:1277
+#: core/helpers/arfieldhelper.php:5247
+msgid "Confirm Email does not match with email"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:4494
+#: core/helpers/arfieldhelper.php:4495
+msgid "arf_divider_font_style"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:4784
+msgid "Yellow"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:4787
+msgid "Orange"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:4788
+msgid "Blue"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:4789
+msgid "Green"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:4790
+msgid "Black"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:4847
+msgid "Big"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:4849
+msgid "Small"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:5232
+msgid "Confirm Email Label"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:5250
+msgid "Message for invalid Email"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:5266
+msgid "Confirm Email Placeholder"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:5516
+msgid "Add Icon (Bootstrap Style)"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:5528
+#: core/helpers/arfieldhelper.php:5552
+#: core/views/arf_font_awesome.php:1
+#: core/views/arf_font_awesome.php:4
+msgid "No Icon"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:5533
+#: core/helpers/arfieldhelper.php:5558
+msgid "Change Icon"
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:5564
+#: core/views/newfield.php:1047
+msgid "Suffix"
+msgstr ""
+
+#: core/helpers/arformhelper.php:218
+#: core/helpers/arformhelper.php:547
+msgid "[ARF_form_all_values]"
+msgstr ""
+
+#: core/vc/class_vc_extend.php:77
+msgid "ARForms"
+msgstr ""
+
+#: core/vc/class_vc_extend.php:78
+msgid "Exclusive Wordpress Form Builder Plugin"
+msgstr ""
+
+#: core/vc/class_vc_extend.php:93
+#: core/vc/class_vc_extend.php:101
+#: core/vc/class_vc_extend.php:109
+#: core/vc/class_vc_extend.php:117
+#: core/vc/class_vc_extend.php:125
+#: core/vc/class_vc_extend.php:133
+#: core/vc/class_vc_extend.php:141
+#: core/vc/class_vc_extend.php:149
+#: core/vc/class_vc_extend.php:157
+#: core/vc/class_vc_extend.php:165
+msgid "&nbsp;"
+msgstr ""
+
+#: core/views/addon_lists.php:87
+msgid "ARForms Add-Ons"
+msgstr ""
+
+#: core/views/arf_font_awesome.php:7
+msgid "File Type Icons"
+msgstr ""
+
+#: core/views/arf_font_awesome.php:26
+msgid "Spinner Icons"
+msgstr ""
+
+#: core/views/arf_font_awesome.php:35
+msgid "Form Control Icons"
+msgstr ""
+
+#: core/views/arf_font_awesome.php:50
+msgid "Payment Icons"
+msgstr ""
+
+#: core/views/arf_font_awesome.php:64
+msgid "Chart Icons"
+msgstr ""
+
+#: core/views/arf_font_awesome.php:73
+msgid "Currency Icons"
+msgstr ""
+
+#: core/views/arf_font_awesome.php:89
+msgid "Text Editor Icons"
+msgstr ""
+
+#: core/views/arf_font_awesome.php:133
+msgid "Directional icons"
+msgstr ""
+
+#: core/views/arf_font_awesome.php:186
+msgid "Video Player icons"
+msgstr ""
+
+#: core/views/arf_font_awesome.php:206
+msgid "Brand Icons"
+msgstr ""
+
+#: core/views/arf_font_awesome.php:309
+msgid "Medical icons"
+msgstr ""
+
+#: core/views/arf_font_awesome.php:322
+msgid "Transportation Icons"
+msgstr ""
+
+#: core/views/arf_font_awesome.php:341
+msgid "Gender Icons"
+msgstr ""
+
+#: core/views/arf_font_awesome.php:359
+msgid "General icons"
+msgstr ""
+
+#: core/views/edit.php:273
+#: core/views/edit.php:395
+#: core/views/edit.php:715
+msgid "Ajax error while saving form"
+msgstr ""
+
+#: core/views/edit.php:1405
+#: core/views/edit.php:1685
+msgid "This will be replaced with form's all fields & labels."
+msgstr ""
+
+#: core/views/edit.php:1406
+#: core/views/edit.php:1686
+msgid "This will be replaced with entry referer."
+msgstr ""
+
+#: core/views/edit.php:1407
+#: core/views/edit.php:1687
+msgid "This will be replaced with entry added time."
+msgstr ""
+
+#: core/views/edit.php:1408
+#: core/views/edit.php:1688
+msgid "This will be replaced with IP Address."
+msgstr ""
+
+#: core/views/edit.php:1409
+#: core/views/edit.php:1689
+msgid "This will be replaced with user browser name."
+msgstr ""
+
+#: core/views/edit.php:1410
+#: core/views/edit.php:1690
+msgid "This will be replaced with Entry ID."
+msgstr ""
+
+#: core/views/edit.php:1660
+msgid "Admin Message"
+msgstr ""
+
+#: core/views/edit.php:3040
+msgid ""
+"( Click on cloud buttons given below to copy your relevant css properties. "
+"Apply properties directly. Do not define class )"
+msgstr ""
+
+#: core/views/edit.php:3063
+#: core/views/edit.php:3179
+msgid "Link (Popup)"
+msgstr ""
+
+#: core/views/edit.php:3064
+#: core/views/edit.php:3189
+msgid "Button (Popup)"
+msgstr ""
+
+#: core/views/edit.php:3065
+#: core/views/edit.php:3184
+msgid "Link Hover (Popup)"
+msgstr ""
+
+#: core/views/edit.php:3066
+#: core/views/edit.php:3194
+msgid "Button Hover (Popup)"
+msgstr ""
+
+#: core/views/edit.php:3472
+msgid "Choose Icon"
+msgstr ""
+
+#: core/views/footer.php:15
+msgid "Page Label"
+msgstr ""
+
+#: core/views/footer.php:16
+msgid "Second Page Label"
+msgstr ""
+
+#: core/views/footer.php:17
+msgid "First"
+msgstr ""
+
+#: core/views/footer.php:17
+msgid "Second"
+msgstr ""
+
+#: core/views/footer.php:18
+msgid "Third"
+msgstr ""
+
+#: core/views/footer.php:18
+msgid "Fourth"
+msgstr ""
+
+#: core/views/footer.php:19
+msgid "Fifth"
+msgstr ""
+
+#: core/views/footer.php:19
+msgid "Sixth"
+msgstr ""
+
+#: core/views/footer.php:20
+msgid "Seventh"
+msgstr ""
+
+#: core/views/footer.php:20
+msgid "Eighth"
+msgstr ""
+
+#: core/views/footer.php:21
+msgid "Ninth"
+msgstr ""
+
+#: core/views/footer.php:21
+msgid "Tenth"
+msgstr ""
+
+#: core/views/footer.php:23
+msgid "Eleventh"
+msgstr ""
+
+#: core/views/footer.php:23
+msgid "Twelfth"
+msgstr ""
+
+#: core/views/footer.php:24
+msgid "Thirteenth"
+msgstr ""
+
+#: core/views/footer.php:24
+msgid "Fourteenth"
+msgstr ""
+
+#: core/views/footer.php:25
+msgid "Fifteenth"
+msgstr ""
+
+#: core/views/footer.php:25
+msgid "Sixteenth"
+msgstr ""
+
+#: core/views/footer.php:26
+msgid "Seventeenth"
+msgstr ""
+
+#: core/views/footer.php:26
+msgid "Eighteenth"
+msgstr ""
+
+#: core/views/footer.php:27
+msgid "Nineteenth"
+msgstr ""
+
+#: core/views/footer.php:27
+msgid "Twentieth"
+msgstr ""
+
+#: core/views/footer.php:29
+msgid "Twenty First"
+msgstr ""
+
+#: core/views/footer.php:29
+msgid "Twenty Second"
+msgstr ""
+
+#: core/views/footer.php:30
+msgid "Twenty Third"
+msgstr ""
+
+#: core/views/footer.php:30
+msgid "Twenty Fourth"
+msgstr ""
+
+#: core/views/footer.php:31
+msgid "Twenty Fifth"
+msgstr ""
+
+#: core/views/footer.php:31
+msgid "Twenty Sixth"
+msgstr ""
+
+#: core/views/footer.php:32
+msgid "Twenty Seventh"
+msgstr ""
+
+#: core/views/footer.php:32
+msgid "Twenty Eighth"
+msgstr ""
+
+#: core/views/footer.php:33
+msgid "Twenty Ninth"
+msgstr ""
+
+#: core/views/footer.php:33
+msgid "Thirtieth"
+msgstr ""
+
+#: core/views/footer.php:35
+msgid "Thirty First"
+msgstr ""
+
+#: core/views/footer.php:35
+msgid "Thirty Second"
+msgstr ""
+
+#: core/views/footer.php:36
+msgid "Thirty Third"
+msgstr ""
+
+#: core/views/footer.php:36
+msgid "Thirty Fourth"
+msgstr ""
+
+#: core/views/footer.php:37
+msgid "Thirty Fifth"
+msgstr ""
+
+#: core/views/footer.php:37
+msgid "Thirty Sixth"
+msgstr ""
+
+#: core/views/footer.php:38
+msgid "Thirty Seventh"
+msgstr ""
+
+#: core/views/footer.php:38
+msgid "Thirty Eighth"
+msgstr ""
+
+#: core/views/footer.php:39
+msgid "Thirty Ninth"
+msgstr ""
+
+#: core/views/footer.php:39
+msgid "Fortieth"
+msgstr ""
+
+#: core/views/footer.php:41
+msgid "Forty First"
+msgstr ""
+
+#: core/views/footer.php:41
+msgid "Forty Second"
+msgstr ""
+
+#: core/views/footer.php:42
+msgid "Forty Third"
+msgstr ""
+
+#: core/views/footer.php:42
+msgid "Forty Fourth"
+msgstr ""
+
+#: core/views/footer.php:43
+msgid "Forty Fifth"
+msgstr ""
+
+#: core/views/footer.php:43
+msgid "Forty Sixth"
+msgstr ""
+
+#: core/views/footer.php:44
+msgid "Forty Seventh"
+msgstr ""
+
+#: core/views/footer.php:44
+msgid "Forty Eighth"
+msgstr ""
+
+#: core/views/footer.php:45
+msgid "Forty Ninth"
+msgstr ""
+
+#: core/views/footer.php:45
+msgid "Fiftieth"
+msgstr ""
+
+#: core/views/import_export_form.php:39
+msgid "Please Enable Zip extension on your server."
+msgstr ""
+
+#: core/views/newfield.php:849
+msgid "CSS Custom Property"
+msgstr ""
+
+#: core/views/newfield.php:875
+#: core/views/newfield.php:876
+msgid "Icon"
+msgstr ""
+
+#: core/views/newfield.php:922
+msgid ""
+"Set conditional logic to show / hide this field by applying rules which will "
+"depend on the user's input. You can add as many conditions as you needed to "
+"match your criteria."
+msgstr ""
+
+#: core/views/newfield.php:1039
+msgid "Select Prefix / Suffix"
+msgstr ""
+
+#: core/views/settings_form.php:255
+msgid "Remove License"
+msgstr ""
+
+#: core/views/settings_form.php:258
+msgid "There is some error while processing your request"
+msgstr ""
+
+#: core/views/settings_form.php:370
+msgid "Activate License"
+msgstr ""
+
+#: core/controllers/arformcontroller.php:3630
+#: core/views/addcontrols.php:1477
+msgid "Section Padding"
+msgstr ""
+
+#: core/controllers/arsettingcontroller.php:367
+msgid "Add-On listing is currently unavailable. Please try again later."
+msgstr ""
+
+#: core/helpers/arfieldhelper.php:4548
+msgid "Inherit"
+msgstr ""
+
+#: core/views/addon_lists.php:88
+msgid "Add more features to ARForms using Add-Ons"
+msgstr ""
+
+#: core/views/newfield.php:850
+msgid ""
+"Click on cloud buttons given below to copy your relevant css properties. "
+"Apply properties directly. Do not define class."
+msgstr ""
+
+#: core/views/settings_form.php:770
+msgid "Affiliate Code"
+msgstr ""
+
+#: core/vc/class_vc_extend.php:673
+#: core/views/insert_form_popup.php:690
+msgid "Colors :"
+msgstr ""
+
+#: core/views/settings_form.php:814
+msgid "Hide success message after"
+msgstr ""
+
+#: core/views/settings_form.php:817
+msgid "Note : 0 ( zero ) means it will never hide success message"
+msgstr ""
