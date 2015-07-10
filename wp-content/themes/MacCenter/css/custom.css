@@ -6,7 +6,23 @@
 @import url('fonts/open-sans-fontfacekit/web-fonts/opensans_regular/stylesheet.css');*/
 @import url('fonts/MyriadSetPro-Bold-fontfacekit/web-fonts/MyriadSetPro-Bold/stylesheet.css');
 @import url('fonts/MyriadSetPro-Medium-fontfacekit/stylesheet.css');
+/*AJUSTE BTN LETF TIRADO A LA DERECHA*/
+.caption_left .slideshow_caption {
+left:72% !important;
+top:-50px !important;
+}
+.footer_color #foot{
+border-top: 1px solid #EAEAEA !important;	
+}
+#foot{
+	border-top: 1px solid #EAEAEA !important;
+}
 
+/*ESTILO MASONRI BLOG*/
+.main_color .av-masonry {
+    background-color: #666666 !important;
+   /* border: 1px solid #E2E2E2!important;*/
+}
 /**INICIO ESTILOS IPAD**/
 /**INICIO ESTILOS IPAD**/
 /**INICIO ESTILOS IPAD**/
@@ -131,6 +147,7 @@ style="padding: 0px; height: 201px; transition: none 0s ease 0s ; transform: tra
     height: 0px;
    visibility: hidden;
 	}
+	
 
 }
 /**FIN ESTILOS MOVILES NUEVOS**/
@@ -148,8 +165,8 @@ style="padding: 0px; height: 201px; transition: none 0s ease 0s ; transform: tra
     
 .slideshow_caption {
     z-index: 100;
+    /*CAMBIO*/
     width: 56% !important;
-   /* top: 23% !important;*/
     top: 6% !important;
 }
     
@@ -164,7 +181,7 @@ style="padding: 0px; height: 201px; transition: none 0s ease 0s ; transform: tra
     text-transform: none;
     padding: 12px 16px;
     display: inline-block;
-    margin-left: 5%;
+    margin-left: 3%;
     top: 30%!important;
     text-decoration: none;
     font-weight: bold;
@@ -190,13 +207,14 @@ a.remove{
 }
 
 p.fakealert  {
-    border: medium none;
-    list-style: outside none none;
-    margin: 0px 0px 23px;
-    padding: 32px 45% 32px 36px;
+     background-color: #e7e8e9;
     background-repeat: no-repeat;
-    background-color: #F0DCDB;
-    color: #941210;
+    border-radius: 25px;
+    color: #05afee;
+    list-style: outside none none;
+    padding: 30px 0 30px 30px;
+		margin:0px;
+		font-size:15px;
 }
 /*ALERTA OUT STOCK*/
 .out-of-stock{
@@ -501,7 +519,26 @@ box-shadow:none !important;
     overflow-y:hidden;
 }*/
 
+/*AJUSTE MOSTRAR BTNS HOMEBOX*/
+#top .avia-smallarrow-slider .avia-slideshow-dots {
+    position: relative;
+    width: 100%;
+    left: 0px;
+    bottom: 0px;
+    margin-top: 10px;
+    display: block;
+}
 /*AJUSTE DOTS SLIDER PRINCIPAL*/
+.avia-slideshow-dots {
+    position: relative;
+    z-index: 200;
+    width: 100%;
+    bottom: 30px !important;
+    text-align: center;
+    left: 0px;
+    height: 0px;
+    display: none;
+}
 .avia-slideshow-dots a {
     display: inline-block;
     height: 5px;
@@ -1593,6 +1630,9 @@ margin-right: 10px;
 	text-align:left !important;
 	/*margin-left:25px;*/
 }
+#ship-to-different-address .input-checkbox + label {
+	width: auto !important;
+}
 }
 @media only screen and (min-width:501px) and (max-width:768px) { 
 	
@@ -1608,3 +1648,72 @@ margin-right: 10px;
 }
 
 }
+#ship-to-different-address #ship-to-different-address-checkbox{
+  position: absolute;
+  left: -9999px;
+}
+/*style the label like a button */
+#ship-to-different-address .input-checkbox + label {
+  background: #bdbec0 none repeat scroll 0 0;
+    border: 1px solid #bdbec0;
+    border-radius: 4px;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: normal;
+    padding: 2px 10px;
+    display:inline-block;
+}
+/* style the label/button active state*/
+/* (only applied when the checkbox is 'checked' */
+#ship-to-different-address .input-checkbox:checked + label, #ship-to-different-address .checkbox:hover {
+  background: #0088cc;
+  color: #ffffff;
+  border: 1px solid #0066aa;
+}
+ul.woocommerce-error {
+    background-color: #E7E8E9;
+    background-repeat: no-repeat;
+    border: medium none;
+    color: #05AFEE;
+/*     list-style: outside none none; */
+    margin: 0 0 0;
+    padding: 30px 0 30px 30px;
+		border-radius:25px;
+		font-size:15px;
+}
+.back-image{
+	background: rgba(0, 0, 0, 0) url("../images/cone1.png") no-repeat scroll right bottom;
+  height: 30px;
+    margin-right: 30px;
+    width: 100%;
+}
+ul.woocommerce-error a{
+color:#8D8F92;
+}
+.offset-right{
+	margin-right:25%;
+}
+.edit-act-form{
+	margin-top:50px;
+}
+.woocommerce-checkout .checkout ul.woocommerce-error{
+margin: 0 25% ;
+    width: 50% ;
+}
+.woocommerce-checkout .checkout .back-image{
+	margin-right: 30%;
+}
+@media only screen and (max-width: 360px) {
+	.woocommerce-checkout .checkout ul.woocommerce-error{
+	 margin: auto;
+    width: auto;
+	}
+}
+.back-image:nth-of-type(1) ~ .back-image{ 
+	display:none;
+}
+.loading span{
+	margin-left:5px;	
+}
+.loading{margin-top:-15px;}

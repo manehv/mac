@@ -33,7 +33,7 @@ body.rtl .wrap .widget-inside .sublblheading {
 }
 
 body.rtl .wrap .widget-inside.arf_style_validation_err{
-	padding:5px 10px 5px 5px !important;
+	padding:5px 14px 5px 10px !important;
 }
 
 body.rtl #taxonomy-linkcategory .rightside .arffield_odd
@@ -182,7 +182,7 @@ body.rtl .arfaddtosite_sidebar
 {
 	background:#EEF0F5 !important;
     height: 100% !important;
-    position: fixed !important;
+/*    position: fixed !important;*/
     left: 0 !important;
     width: 330px !important;
 	padding:20px 0 0 10px !important;
@@ -1185,9 +1185,11 @@ body.rtl #arfmainNav li:hover {
 body.rtl #arfmainNav li.secondmenu:hover div.arf_fixer_img,
 body.rtl #arfmainNav .secondmenu.current div.arf_fixer_img {
 	background-image:url(../images/navigation_menu/navLastDoneBtn_rtl.png);
+        margin-right: -20px;
 }
 body.rtl #arfmainNav li.thriddmenu:hover div.arf_fixer_img {
 	background-image:url(../images/navigation_menu/navLastDoneBtn_rtl.png);
+        margin-right: -20px;
 }
 body.rtl .lastimageli { width:20px !important; float:left; margin-left:-4px; height:51px; background-image:url(../images/navigation_menu/last-simple_rtl.png); }
 body.rtl .lastimageli:hover { background-image:url(../images/navigation_menu/last-hover_rtl.png); }
@@ -1200,6 +1202,7 @@ body.rtl #arfmainNav li.lastDone:hover {
 }
 body.rtl #arfmainNav li.mainNavNoBg.done:hover div.arf_fixer_img {
 	background-image:url(../images/navigation_menu/navLastDoneBtn_rtl.png);
+        margin-right: -20px;
 }
 body.rtl #arfmainNav li.nextdone:hover .arf_fixer_img {
 	background-image:url(../images/navigation_menu/navDoneBtn-white_rtl.png) !important;
@@ -1563,3 +1566,124 @@ body.rtl .arf_formbox_hover { margin-right: -23px; }
 body.rtl .arf_form .arf_info { direction:ltr; }
 body.rtl .arf_form .arf_submit_btn { direction:ltr; }
 body.rtl #arf_message_success .msg-detail { text-align: right !important; }
+body.rtl .allfields .arf_editor_prefix_suffix_wrapper input.arf_prefix_suffix{ float: left !important;width: 100% !important;max-width: 100% !important;}
+body.rtl .arf_editor_prefix_suffix_wrapper {
+    border-collapse: separate;
+    display: table;
+    float: right;
+    max-width: 90%;
+    position: relative;
+}
+body.rtl .arf_editor_prefix,body.rtl .arf_editor_suffix
+{
+    float: none !important;
+    top :0 !important;
+}
+body.rtl .arf_editor_prefix
+{
+    
+    border-bottom-right-radius: 3px !important;
+    border-top-right-radius: 3px !important;
+    border-bottom-left-radius: 0px !important;
+    border-top-left-radius: 0px !important;
+    border: 1px solid #e1e1e1;
+    left: auto;
+    right: 0;
+    
+}
+body.rtl .arf_editor_suffix
+{
+    border-bottom-left-radius: 3px !important;
+    border-top-left-radius: 3px !important;
+    border-bottom-right-radius: 0px !important;
+    border-top-right-radius: 0px !important;
+    border: 1px solid #e1e1e1;
+    left: auto;
+    right: -2px;
+    
+}
+body.rtl .arf_prefix_suffix
+{
+    margin-top: 0 !important;
+    padding: 0 10px !important;
+
+}
+body.rtl .arf1columns .arf_editor_prefix_suffix_wrapper
+{
+    max-width: 70% !important;
+}
+body.rtl div.widget .widget-inside
+{
+    max-width: 326px;
+}
+body.rtl #postbox-container-1 .arffieldlist_style
+{
+    margin-right: 24px !important;
+    left: 0;
+}
+body.rtl #new_fields li.edit_field_type_break .arf_fieldiconbox .field-icon
+{
+    margin-top: -15px;
+}
+body.rtl .arf_form_other_css_wrapper
+{
+    float: right;
+    width: auto;
+}
+body.rtl .arf_form_other_css_wrapper .lblsubtitle
+{
+    float: right !important;
+}
+body.rtl .show-field-options.arfmodal .arf_selectbox dt
+{
+    float: left;
+}
+
+body.rtl .arf_field_default_time_element
+{
+    float: right !important;
+}
+body.rtl .edit_field_type_time .allfields
+{
+    float: right;
+}
+body.rtl .field_css .arf_form_custom_css_block .lblsubtitle
+{
+    float: right !important; 
+    direction: ltr;
+}
+body.rtl .emailattachwidth .fieldoptions_field_style td
+{
+    float: left;
+}
+body.rtl .show-field-options.arfmodal .arf_selectbox dd
+{
+    float: left;
+    margin: 5px 0 0 16px;
+    position: relative;
+    text-align: right;
+    width: 100%;
+}
+body.rtl .show-field-options.arfmodal .arf_selectbox dd ul
+{
+    padding: 0 0 0 14px !important;
+}
+body.rtl .show-field-options.arfmodal .arf_selectbox dd ul li
+{
+    padding: 4px 15px 4px 7px;
+}
+body.rtl .arfeditorsubmitdiv .arfsubmiteditpencil
+{
+    float: right;
+    margin-right: 15px;
+    margin-top: 12px;
+}
+body.rtl .arfeditorsubmitdiv .arfsubmitsettingpencil
+{
+    float: right;
+}
+body.rtl .arf_runnigtotal_block .main_field_modal .arfaddfieldmodal 
+{
+    left: auto !important;
+    right: 285px !important;
+}

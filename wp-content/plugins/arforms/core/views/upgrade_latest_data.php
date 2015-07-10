@@ -2,7 +2,7 @@
 /*
 Plugin Name: ARForms
 Description: Exclusive Wordpress Form Builder Plugin With Seven Most Popular E-Mail Marketing Tools Integration
-Version: 2.7
+Version: 2.7.3
 Plugin URI: http://www.arformsplugin.com/
 Author: Repute InfoSystems
 Author URI: http://reputeinfosystems.com/
@@ -99,7 +99,9 @@ if(version_compare($newdbversion, '1.0', '>') || version_compare($newdbversion, 
 	
 		foreach($cssoptions as $k => $v)
 			$new_values[$k] = $v;
-	
+                
+                $arfssl = (is_ssl()) ? 1 : 0;
+                
 		$filename = FORMPATH .'/core/css_create_main.php';
 	
 		if(is_file($filename)) 
@@ -175,6 +177,7 @@ if(version_compare($newdbversion, '1.0', '>') || version_compare($newdbversion, 
 	
 				$saving = true;
 				$use_saved = true;
+                                $arfssl = (is_ssl()) ? 1 : 0;
 				$filename = FORMPATH .'/core/css_create_main.php';
 				$temp_css_file = $warn = "/* WARNING: Any changes made to this file will be lost when your ARForms settings are updated */";
 				$temp_css_file .= "\n";
@@ -412,7 +415,7 @@ if(version_compare($newdbversion, '1.0', '>') || version_compare($newdbversion, 
 	
 		foreach($cssoptions as $k => $v)
 			$new_values[$k] = $v;
-	
+                $arfssl = (is_ssl()) ? 1 : 0;
 		$filename = FORMPATH .'/core/css_create_main.php';
 	
 		if(is_file($filename)) 
@@ -469,6 +472,7 @@ if(version_compare($newdbversion, '1.0', '>') || version_compare($newdbversion, 
 	
 				$saving = true;
 				$use_saved = true;
+                                $arfssl = (is_ssl()) ? 1 : 0;
 				$filename = FORMPATH .'/core/css_create_main.php';
 				$temp_css_file = $warn = "/* WARNING: Any changes made to this file will be lost when your ARForms settings are updated */";
 				$temp_css_file .= "\n";
@@ -523,7 +527,9 @@ if(version_compare($newdbversion, '1.0', '>') || version_compare($newdbversion, 
 	
 		foreach($cssoptions as $k => $v)
 			$new_values[$k] = $v;
-	
+                
+                $arfssl = (is_ssl()) ? 1 : 0;
+                
 		$filename = FORMPATH .'/core/css_create_main.php';
 	
 		if(is_file($filename)) 
@@ -657,6 +663,7 @@ if(version_compare($newdbversion, '1.0', '>') || version_compare($newdbversion, 
 	
 				$saving = true;
 				$use_saved = true;
+                                $arfssl = (is_ssl()) ? 1 : 0;
 				$filename = FORMPATH .'/core/css_create_main.php';
 				$temp_css_file = $warn = "/* WARNING: Any changes made to this file will be lost when your ARForms settings are updated */";
 				$temp_css_file .= "\n";
@@ -772,6 +779,7 @@ if(version_compare($newdbversion, '1.0', '>') || version_compare($newdbversion, 
 				$query_results = $wpdb->query($wpdb->prepare("update ".$MdlDb->forms." set form_css = '%s' where id = '%d'", $new_values1, $form_id) );
 	
 					$use_saved = true; 
+                                        $arfssl = (is_ssl()) ? 1 : 0;
 					$filename = FORMPATH .'/core/css_create_main.php';
 					$wp_upload_dir 	= wp_upload_dir();
 					$target_path 	= $wp_upload_dir['basedir'].'/arforms/maincss';
@@ -871,6 +879,7 @@ if(version_compare($newdbversion, '1.0', '>') || version_compare($newdbversion, 
 				$query_results = $wpdb->query($wpdb->prepare("update ".$MdlDb->forms." set form_css = '%s' where id = '%d'", $new_values1, $form_id) );
 	
 					$use_saved = true; 
+                                        $arfssl = (is_ssl()) ? 1 : 0;
 					$filename = FORMPATH .'/core/css_create_main.php';
 					$wp_upload_dir 	= wp_upload_dir();
 					$target_path 	= $wp_upload_dir['basedir'].'/arforms/maincss';
@@ -989,6 +998,7 @@ if(version_compare($newdbversion, '1.0', '>') || version_compare($newdbversion, 
 				$query_results = $wpdb->query($wpdb->prepare("update ".$MdlDb->forms." set form_css = '%s' where id = '%d'", $new_values1, $form_id) );
 	
 					$use_saved = true; 
+                                        $arfssl = (is_ssl()) ? 1 : 0;
 					$filename = FORMPATH .'/core/css_create_main.php';
 					$wp_upload_dir 	= wp_upload_dir();
 					$target_path 	= $wp_upload_dir['basedir'].'/arforms/maincss';
@@ -1133,6 +1143,7 @@ if(version_compare($newdbversion, '1.0', '>') || version_compare($newdbversion, 
 				$query_results = $wpdb->query($wpdb->prepare("update ".$MdlDb->forms." set form_css = '%s' where id = '%d'", $new_values1, $form_id) );
 	
 					$use_saved = true; 
+                                        $arfssl = (is_ssl()) ? 1 : 0;
 					$filename = FORMPATH .'/core/css_create_main.php';
 					$wp_upload_dir 	= wp_upload_dir();
 					$target_path 	= $wp_upload_dir['basedir'].'/arforms/maincss';
@@ -1321,7 +1332,7 @@ if(version_compare($newdbversion, '1.0', '>') || version_compare($newdbversion, 
 			$query_results = $wpdb->query($wpdb->prepare("update ".$MdlDb->forms." set form_css = '%s' where id = '%d'", $new_values1, $form_id) );
 
 				$use_saved = true;
-				
+				$arfssl = (is_ssl()) ? 1 : 0;
 				$filename = FORMPATH .'/core/css_create_main.php';
 				
 				$wp_upload_dir 	= wp_upload_dir();
@@ -1604,6 +1615,7 @@ if(version_compare($newdbversion, '1.0', '>') || version_compare($newdbversion, 
 	
 				$saving = true;
 				$use_saved = true;
+                                $arfssl = (is_ssl()) ? 1 : 0;
 				$filename = FORMPATH .'/core/css_create_main.php';
 				$temp_css_file = $warn = "/* WARNING: Any changes made to this file will be lost when your ARForms settings are updated */";
 				$temp_css_file .= "\n";
@@ -1647,6 +1659,7 @@ if(version_compare($newdbversion, '1.0', '>') || version_compare($newdbversion, 
 	
 				$saving = true;
 				$use_saved = true;
+                                $arfssl = (is_ssl()) ? 1 : 0;
 				$filename = FORMPATH .'/core/css_create_main.php';
 				$temp_css_file = $warn = "/* WARNING: Any changes made to this file will be lost when your ARForms settings are updated */";
 				$temp_css_file .= "\n";
@@ -1686,7 +1699,7 @@ if(version_compare($newdbversion, '1.0', '>') || version_compare($newdbversion, 
 	
 		foreach($cssoptions as $k => $v)
 			$new_values[$k] = $v;
-	
+                $arfssl = (is_ssl()) ? 1 : 0;
 		$filename = FORMPATH .'/core/css_create_main.php';
 	
 		if(is_file($filename)) 
@@ -1734,6 +1747,7 @@ if(version_compare($newdbversion, '1.0', '>') || version_compare($newdbversion, 
 	
 				$saving = true;
 				$use_saved = true;
+                                $arfssl = (is_ssl()) ? 1 : 0;
 				$filename = FORMPATH .'/core/css_create_main.php';
 				$temp_css_file = $warn = "/* WARNING: Any changes made to this file will be lost when your ARForms settings are updated */";
 				$temp_css_file .= "\n";
@@ -1775,7 +1789,9 @@ if(version_compare($newdbversion, '1.0', '>') || version_compare($newdbversion, 
 		
 		foreach($cssoptions as $k => $v)
 			$new_values[$k] = $v;
-			
+		
+                $arfssl = (is_ssl()) ? 1 : 0;
+                
 		$filename = FORMPATH .'/core/css_create_main.php';
 			
 		if(is_file($filename)) 
@@ -1831,6 +1847,7 @@ if(version_compare($newdbversion, '1.0', '>') || version_compare($newdbversion, 
 	
 				$saving = true;
 				$use_saved = true;
+                                $arfssl = (is_ssl()) ? 1 : 0;
 				$filename = FORMPATH .'/core/css_create_main.php';
 				$temp_css_file = $warn = "/* WARNING: Any changes made to this file will be lost when your ARForms settings are updated */";
 				$temp_css_file .= "\n";
@@ -1914,7 +1931,7 @@ if(version_compare($newdbversion, '1.0', '>') || version_compare($newdbversion, 
 		
 		foreach($cssoptions as $k => $v)
 			$new_values[$k] = $v;
-			
+		$arfssl = (is_ssl()) ? 1 : 0;
 		$filename = FORMPATH .'/core/css_create_main.php';
 			
 		if(is_file($filename)) 
@@ -1985,6 +2002,7 @@ if(version_compare($newdbversion, '1.0', '>') || version_compare($newdbversion, 
 	
 				$saving = true;
 				$use_saved = true;
+                                $arfssl = (is_ssl()) ? 1 : 0;
 				$filename = FORMPATH .'/core/css_create_main.php';
 				$temp_css_file = $warn = "/* WARNING: Any changes made to this file will be lost when your ARForms settings are updated */";
 				$temp_css_file .= "\n";
@@ -2005,9 +2023,9 @@ if(version_compare($newdbversion, '1.0', '>') || version_compare($newdbversion, 
 		}
 	}
 		
-	update_option('arf_db_version','2.7');
+	update_option('arf_db_version','2.7.3');
 	
 	global $newdbversion;
-	$newdbversion = '2.7';
+	$newdbversion = '2.7.3';
 }
 ?>

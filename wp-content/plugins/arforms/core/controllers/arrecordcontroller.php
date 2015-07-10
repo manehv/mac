@@ -2,7 +2,7 @@
 /*
 Plugin Name: ARForms
 Description: Exclusive Wordpress Form Builder Plugin With Seven Most Popular E-Mail Marketing Tools Integration
-Version: 2.7
+Version: 2.7.3
 Plugin URI: http://www.arformsplugin.com/
 Author: Repute InfoSystems
 Author URI: http://reputeinfosystems.com/
@@ -325,7 +325,7 @@ class arrecordcontroller{
 
             return;
 
-
+        $_SESSION['arf_recaptcha_allowed_'.$_POST['form_id']] = isset($_SESSION['arf_recaptcha_allowed_'.$_POST['form_id']]) ? $_SESSION['arf_recaptcha_allowed_'.$_POST['form_id']] : '';
             
 
         if( $errors == '' && $_SESSION['arf_recaptcha_allowed_'.$_POST['form_id']]=="" )
@@ -365,7 +365,7 @@ class arrecordcontroller{
 			
 			$arf_errors = apply_filters('arf_validate_form_outside_errors', $arf_errors, $form_id, $values, $arf_form_data);	// for form validate filter
 			
-			if( $arf_errors['arf_form_data'] )
+			if( isset($arf_errors['arf_form_data']) and $arf_errors['arf_form_data'] )
 			{	
 				$arf_form_data = array_merge($arf_form_data, $arf_errors['arf_form_data']);
 			}
@@ -380,7 +380,7 @@ class arrecordcontroller{
 			// For outsite validation form end
 		}
 				
-        if( empty($errors) && count($arf_errors) == 0){
+        if( empty($errors) && @count($arf_errors) == 0){
 
 
             $_POST['arfentrycookie'] = 1;
@@ -1062,7 +1062,7 @@ class arrecordcontroller{
 
     }
 
-	function show_form_popup($id='', $key='', $title=false, $description=false, $desc = '' , $type = 'link', $modal_height='540', $modal_width='800', $position='left', $btn_angle='0'){
+	function show_form_popup($id='', $key='', $title=false, $description=false, $desc = '' , $type = 'link', $modal_height='540', $modal_width='800', $position='left', $btn_angle='0', $bgcolor = '', $txtcolor = ''){
 
 
         global $arfform, $user_ID, $arfsettings, $post, $wpdb, $armainhelper, $arrecordcontroller;
@@ -1077,7 +1077,7 @@ class arrecordcontroller{
 		
         $res = $wpdb->get_results( $wpdb->prepare( "SELECT is_enable FROM ".$wpdb->prefix."arf_forms WHERE id = %d", $id ), 'ARRAY_A' );
 		
-		if( (@$form->is_template or @$form->status == 'draft') )
+		if( ( isset( $form )  and !empty( $form ) ) and ( @$form->is_template or @$form->status == 'draft') )
 		{
 			return __('Please select a valid form', 'ARForms');
 		}
@@ -1131,33 +1131,59 @@ class arrecordcontroller{
         }else    
 
                 
-            return $arrecordcontroller->get_form_popup(VIEWS_PATH.'/view-modal.php', $form, $title, $description, $desc , $type, $modal_height, $modal_width, $position, $btn_angle);
+            return $arrecordcontroller->get_form_popup(VIEWS_PATH.'/view-modal.php', $form, $title, $description, $desc , $type, $modal_height, $modal_width, $position, $btn_angle, $bgcolor,$txtcolor);
 
 
     }
 	
-	function get_form_popup($filename, $form, $title, $description, $desc , $type, $modal_height, $modal_width, $position, $btn_angle) {
+	function get_form_popup($filename, $form, $title, $description, $desc , $type, $modal_height, $modal_width, $position, $btn_angle,  $bgcolor,$txtcolor) {
 
-		wp_print_styles('arfbootstrap-css');
-		wp_print_styles('arfdisplaycss');
-		wp_print_scripts('jquery-validation');	
-		wp_print_scripts('arfbootstrap-js');
+        wp_print_styles('arfbootstrap-css');
+        wp_print_styles('arfdisplaycss');
+        wp_print_scripts('jquery-validation');	
+        wp_print_scripts('arfbootstrap-js');
 		
         if (is_file($filename)) {
 
-
+            $contents = '';
             ob_start();
-
-
+            
+            if( $bgcolor == ''){
+            
+                if( $type == 'fly' ){
+                
+                    $bgcolor = ($position == 'left') ? '#2d6dae' : '#8ccf7a';
+                    
+                } else if( $type == 'sticky'){
+                    
+                    $bgcolor = ( in_array($position,array('right','bottom','left'))) ? '#1bbae1' : '#93979d';
+                    
+                }
+            
+            }
+            
+            if( $txtcolor == '')
+                $txtcolor = '#ffffff';
+            
+            
+            
+            $contents .= "<style type='text/css'>";
+                $contents .= "#arf-popup-form-{$form->id} .arf_fly_sticky_btn{";
+                    $contents .= "background:{$bgcolor};";
+                    $contents .= "color:{$txtcolor};";
+                $contents .= "}";
+            $contents .= "</style>";
+            
             include $filename;
 
 
-            $contents = ob_get_contents();
+            $contents .= ob_get_contents();
 
 
             ob_end_clean();
 
-			return $contents;
+	
+            return $contents;
            
 
         }
@@ -1529,7 +1555,7 @@ class arrecordcontroller{
 
             $page_count = $db_record->getPageCount($arfpagesize, $record_count);
 			
-            $items = $db_record->getPage($current_page, $arfpagesize, $item_vars['where_clause'], $item_vars['order_by']);
+            $items = $db_record->getPage('','', $item_vars['where_clause'], $item_vars['order_by']);
 
             $page_last_record = $armainhelper->getLastRecordNum($record_count, $current_page, $arfpagesize);
 
@@ -1983,7 +2009,7 @@ class arrecordcontroller{
         $saved_value = (isset($atts['saved_value']) and $atts['saved_value']) ? true : false;
 
 
-        if(!in_array($field->type, array('radio', 'checkbox', 'radio', 'select')) or !isset($field->field_options['separate_value']) or !$field->field_options['separate_value'] or $saved_value)
+        if(!in_array($field->type, array( 'checkbox')) or !isset($field->field_options['separate_value']) or !$field->field_options['separate_value'] or $saved_value)
 
 
             return $value;
@@ -2216,122 +2242,7 @@ class arrecordcontroller{
 
     }
 
-    function entry_delete_link($atts){
-
-
-        global $arfeditingentry, $post, $arfforms_loaded, $armainhelper, $arrecordcontroller, $armainhelper;
-
-
-        extract(shortcode_atts(array(
-
-
-            'id' => $arfeditingentry, 'label' => 'Delete', 
-
-
-            'confirm' => __('Are you sure you want to delete that entry?', 'ARForms'), 
-
-
-            'class' => '', 'page_id' => (($post) ? $post->ID : 0), 'html_id' => false, 'prefix' => ''
-
-
-        ), $atts));
-
-
-
-        $arfforms_loaded[] = true;
-
-
-        $link = '';
-
-
-        $entry_id = ($id and is_numeric($id)) ? $id : (is_admin() ? $armainhelper->get_param('id', false) : $armainhelper->get_param('entry', false));
-
-
-        if($entry_id and !empty($entry_id)){
-
-
-            if(empty($prefix)){
-
-
-                $action = $armainhelper->get_param('arfaction');
-
-
-                if($action == 'destroy'){
-
-
-                    $entry_key = $armainhelper->get_param('entry');
-
-
-                    if(is_numeric($entry_key) and $entry_key == $entry_id){
-
-
-                        $link = $arrecordcontroller->ajax_destroy(false, false, false);
-
-
-                        if(!empty($link)){
-
-
-                            $new_link = '<div class="frm_message">'. $link .'</div>';
-
-
-                            if($link == __('Your entry is successfully deleted', 'ARForms'))    
-
-
-                                return $new_link;
-
-
-                            else
-
-
-                                $link = $new_link;
-
-
-                                
-
-
-                            unset($new_link);
-
-
-                        }
-
-
-                    }
-
-
-                }
-
-
-                    
-
-
-                $link .= "<a href='". add_query_arg(array('arfaction' => 'destroy', 'entry' => $entry_id), get_permalink($page_id)) ."' class='$class' onclick='return confirm(\"". $confirm ."\")'>$label</a>\n";
-
-
-            }else{
-
-
-                if(!$html_id)
-
-
-                    $html_id = "arfdelete_{$entry_id}";
-
-
-              
-
-
-                $link = "<a href='javascript:arfremoveformentry($entry_id,\"". ARFSCRIPTURL."\",\"$prefix\")' class='arfdelete_link $class' id='$html_id' onclick='return confirm(\"". $confirm ."\")'>$label</a>\n";
-
-
-            }
-
-
-        }
-
-
-        return $link;
-
-
-    }
+   
 
     function ajax_create(){
 
@@ -4082,7 +3993,7 @@ function ChangeID(id)
 		}
 		
 		// Next get the name of the useragent yes seperately and for good reason
-		if(@preg_match('/MSIE/i',$u_agent) && !@preg_match('/Opera/i',$u_agent)) 
+		if(@preg_match('/MSIE/i',$u_agent)  && !@preg_match('/Opera/i',$u_agent)) 
 		{ 
 			$bname = 'Internet Explorer'; 
 			$ub = "MSIE"; 
@@ -4111,12 +4022,16 @@ function ChangeID(id)
 		{ 
 			$bname = 'Netscape'; 
 			$ub = "Netscape"; 
-		} 
-		
+		} elseif( @preg_match( '/Trident/', $u_agent ) ){
+                        $bname = 'Internet Explorer';
+                        $ub = "rv";
+                }
+		//echo $u_agent;
 		// finally get the correct version number
 		$known = array('Version', $ub, 'other');
 		$pattern = '#(?<browser>' . join('|', $known) .
-		')[/ ]+(?<version>[0-9.|a-zA-Z.]*)#';
+		')[/ |:]+(?<version>[0-9.|a-zA-Z.]*)#';
+                
 		if (!@preg_match_all($pattern, $u_agent, $matches)) {
 			// we have no matching number just continue
 		}

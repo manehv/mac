@@ -4720,3 +4720,13 @@ input.arf_both_pre_suffix{
 .arf_editor_prefix_suffix_wrapper.arf_editor_colorpicker{
 	width:170px;
 }
+.arf_success_message_show_time.txtstandardnew
+{
+   width: 50px !important;
+}
+.arf_success_message_show_time_wrapper,.arf_success_message_show_time_inner
+{
+    color:#333333;
+    font-size:14px;
+    font-family:'aileron_regular', Arial, Helvetica, Verdana, sans-serif; 
+}

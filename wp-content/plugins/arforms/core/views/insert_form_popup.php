@@ -2,7 +2,7 @@
 /*
 Plugin Name: ARForms
 Description: Exclusive Wordpress Form Builder Plugin With Seven Most Popular E-Mail Marketing Tools Integration
-Version: 2.7
+Version: 2.7.3
 Plugin URI: http://www.arformsplugin.com/
 Author: Repute InfoSystems
 Author URI: http://reputeinfosystems.com/
@@ -20,7 +20,7 @@ global $armainhelper, $arformhelper;
 			
 		var modalheight = jQuery(window).height();
 		var top_height 	= Number(modalheight) / 2;
-			top_height 	= top_height - 180;
+			top_height 	= top_height - 280;
 		
 		jQuery('#arfinsertform').css({left:left_width+'px', top:top_height+'px'});		
 	}
@@ -31,9 +31,9 @@ global $armainhelper, $arformhelper;
 		var top_height 	= Number(modalheight) / 2;
 		
 		if(myval == "fly"){
-			jQuery('#arfinsertform').css('top',(top_height-230)+'px');
+			jQuery('#arfinsertform').css('top',(top_height-280)+'px');
 		}else{
-			jQuery('#arfinsertform').css('top',(top_height-180)+'px');
+			jQuery('#arfinsertform').css('top',(top_height-280)+'px');
 		}
 	}
 
@@ -68,7 +68,13 @@ global $armainhelper, $arformhelper;
 				var modal_height = jQuery('#modal_height').val();
 				
 				var modal_width = jQuery('#modal_width').val(); 
-					
+                                
+                                var bgcolor = jQuery('#arf_modal_btn_bg_color').val();
+                                
+                                var txtcolor = jQuery('#arf_modal_btn_txt_color').val();
+				
+                                
+                                
 				if( shrt_type == 'normal' )
 				{
 					setTimeout(function(){
@@ -80,11 +86,11 @@ global $armainhelper, $arformhelper;
 					setTimeout(function(){	
 						var caption	= jQuery('#short_caption').val();
 						if(link_type == 'sticky')
-							window.send_to_editor(" [ARForms_popup id="+form_id+" desc='"+caption+"' type='"+link_type+"' position='"+link_position+"' height='"+modal_height+"' width='"+modal_width+"' ]");
+							window.send_to_editor(" [ARForms_popup id="+form_id+" desc='"+caption+"' type='"+link_type+"' position='"+link_position+"' height='"+modal_height+"' width='"+modal_width+"' bgcolor='"+bgcolor+"' txtcolor='"+txtcolor+"' ]");
 						else if(link_type == 'fly')
 						{
 							var button_angle = jQuery('#button_angle').val();
-							window.send_to_editor(" [ARForms_popup id="+form_id+" desc='"+caption+"' type='"+link_type+"' position='"+link_position_fly+"' height='"+modal_height+"' width='"+modal_width+"' angle='"+button_angle+"']");
+							window.send_to_editor(" [ARForms_popup id="+form_id+" desc='"+caption+"' type='"+link_type+"' position='"+link_position_fly+"' height='"+modal_height+"' width='"+modal_width+"' angle='"+button_angle+"' bgcolor='"+bgcolor+"' txtcolor='"+txtcolor+"']");
 						}
 						else if(link_type == 'onload'){
 							window.send_to_editor(" [ARForms_popup id="+form_id+" type='"+link_type+"' position='"+link_position_fly+"' height='"+modal_height+"' width='"+modal_width+"']");
@@ -149,24 +155,35 @@ jQuery(".sltmodal select").selectpicker();
 	
 	jQuery('#link_type').change(function(){
 		var show_link_type = jQuery('#link_type').val();
-		//alert(show_link_type);		
+		//alert(show_link_type);
+                var tid = jQuery('#arf_btn_txtcolor .arf_coloroption.arfhex').attr('data-fid');
+                jQuery('#'+tid).val('#ffffff');
 		if(show_link_type == 'sticky')
 		{
 			jQuery('#is_sticky').slideDown();
 			jQuery('#is_fly').slideUp();
 			jQuery('#button_angle_div').slideUp();
-		}
+                        jQuery('#arfmodalbuttonstyles').slideDown();
+                        jQuery("#arf_btn_bgcolor .arf_coloroption.arfhex").css('background','#93979d');
+                        var fid = jQuery('#arf_btn_bgcolor .arf_coloroption.arfhex').attr('data-fid');
+                        jQuery('#'+fid).val('#93979d');
+                }
 		else if(show_link_type == 'fly')
 		{
 			jQuery('#is_fly').slideDown();
 			jQuery('#is_sticky').slideUp();
 			jQuery('#button_angle_div').slideDown();
+                        jQuery('#arfmodalbuttonstyles').slideDown();
+                        jQuery("#arf_btn_bgcolor .arf_coloroption.arfhex").css('background','#2d6dae');
+                        var fid = jQuery('#arf_btn_bgcolor .arf_coloroption.arfhex').attr('data-fid');
+                        jQuery('#'+fid).val('#2d6dae');
 		}
 		else
 		{
 			jQuery('#is_sticky').slideUp();
 			jQuery('#is_fly').slideUp();
-			jQuery('#button_angle_div').slideUp();	
+			jQuery('#button_angle_div').slideUp();
+                        jQuery('#arfmodalbuttonstyles').slideUp();
 		}
 		if( show_link_type == 'onload' ){
 			jQuery('#shortcode_caption').slideUp();
@@ -174,7 +191,26 @@ jQuery(".sltmodal select").selectpicker();
 			jQuery('#shortcode_caption').slideDown();
 		}
 	});
-	
+        
+        jQuery('#link_position_fly').change(function(){
+            var position = jQuery(this).val();
+            
+            var color = (position == 'left') ? '#2d6dae' : '#8ccf7a';
+            
+            jQuery("#arf_btn_bgcolor .arf_coloroption.arfhex").css('background',color);
+            var fid = jQuery('#arf_btn_bgcolor .arf_coloroption.arfhex').attr('data-fid');
+            jQuery('#'+fid).val(color);
+            
+        });
+        
+        jQuery('#link_position').change(function(){
+           var position = jQuery(this).val();
+           var color = (['left','right','bottom'].indexOf(position) > -1) ? '#1bbae1' : '#93979d';
+           
+           jQuery("#arf_btn_bgcolor .arf_coloroption.arfhex").css('background',color);
+           var fid = jQuery('#arf_btn_bgcolor .arf_coloroption.arfhex').attr('data-fid');
+           jQuery('#'+fid).val(color);
+        });
 });	
 function changeflybutton()
 {
@@ -206,6 +242,15 @@ $armainhelper->load_scripts(array('arfbootstrap-js'));
 
 wp_register_script('arfbootstrap-select-js',ARFURL.'/bootstrap/js/bootstrap-select.js');
 $armainhelper->load_scripts(array('arfbootstrap-select-js'));
+
+wp_register_script('arforms_colpick-js',ARFURL.'/js/colpick.js');
+$armainhelper->load_scripts(array('arforms_colpick-js'));
+
+wp_register_style('arforms_colpick-css',ARFURL.'/css/colpick.css');
+$armainhelper->load_styles(array('arforms_colpick-css'));
+
+wp_register_script('arf-themepicker-js',ARFURL.'/js/jquery/jquery-ui-themepicker.js');
+$armainhelper->load_scripts(array('arf-themepicker-js'));
 
 ?>
 <style type="text/css">
@@ -528,6 +573,44 @@ body.rtl .arfmodal .bootstrap-select.btn-group .arfbtn .caret
 body.rtl .arfmodal .btn-group.open .arfdropdown-menu {
 	text-align:right;
 }
+.arf_coloroption_sub{
+    border: 4px solid #dcdfe4;
+    border-radius: 2px;
+    cursor: pointer;
+    height: 22px;
+    width: 47px;
+    margin-left:22px;
+    margin-top:5px;
+}
+
+.arf_coloroption{
+    cursor: pointer;
+    height: 22px;
+    width: 47px;
+}
+
+.arf_coloroption_subarrow_bg{
+    background: none repeat scroll 0 0 #dcdfe4;
+    height: 8px;
+    margin-left: 39px;
+    margin-top: -8px;
+    text-align: center;
+    vertical-align: middle;
+    width: 8px;
+}
+
+.arf_coloroption_subarrow{
+    background: <?php echo "url(".ARFURL."/images/colpickarrow.png) no-repeat center center"; ?>;
+    height: 3px;
+    padding-left: 5px;
+    padding-top: 6px;
+    width: 5px;
+}
+
+.colpick_hex{
+    z-index:99999;
+    top:-30px;
+}
 </style>        
 
 <div id="arfinsertform" style="display:none;"  class="arfmodal hide fade">
@@ -582,7 +665,7 @@ body.rtl .arfmodal .btn-group.open .arfdropdown-menu {
           	<div class="arfmodalfield_right">
                 <div class="sltmodal" style="float:none; font-size:15px;<?php if( is_rtl() ){ echo 'text-align:right;'; }else{ echo 'text-align:left;'; }?>">
                     <select name="link_position" id="link_position" data-width="150px">
-                		<option value="top" selected="selected"><?php _e('Top','ARForms');?></option>
+                	<option value="top" selected="selected"><?php _e('Top','ARForms');?></option>
                     	<option value="bottom"><?php _e('Bottom','ARForms');?></option>
                         <option value="left" ><?php _e('Left','ARForms');?></option>
                     	<option value="right"><?php _e('Right','ARForms');?></option>
@@ -602,6 +685,32 @@ body.rtl .arfmodal .btn-group.open .arfdropdown-menu {
                 </div>
           	</div>          
         </div>
+         
+         <div class="arfmodalfields" id="arfmodalbuttonstyles" style="display:none;">
+             <div class="arfmodalfield_left" style='vertical-align:middle;'><?php _e('Colors :','ARForms'); ?></div>
+             <div class="arfmodalfield_right">
+                 <div style="display:inline">
+                     <div class="height_setting" style="display:inline;float:left;width:140px;"><div style="margin-top: 0px;padding-left: 10px;"><?php _e('Background','ARForms');?></div>
+                        <div style="display: inline-block;" id="arf_btn_bgcolor" class="arf_coloroption_sub">
+                            <div data-fid="arf_modal_btn_bg_color" class="arf_coloroption arfhex"></div>
+                            <div class="arf_coloroption_subarrow_bg">
+                                <div class="arf_coloroption_subarrow"></div>
+                            </div>
+                        </div>
+                        <input type="hidden" name="arf_modal_btn_bg_color" id="arf_modal_btn_bg_color" class="txtmodal1" />
+                     </div>
+                     <div class="height_setting" style="display:inline;float:left;width:140px;"><div style="margin-top: 4px;padding-left: 30px;"><?php _e('Text','ARForms');?></div>
+                         <div style="display: inline-block;" id="arf_btn_txtcolor" class="arf_coloroption_sub">
+                            <div style="background:#ffffff;" data-fid="arf_modal_btn_txt_color" class="arf_coloroption arfhex"></div>
+                            <div class="arf_coloroption_subarrow_bg">
+                                <div class="arf_coloroption_subarrow"></div>
+                            </div>
+                        </div>
+                        <input type="hidden" name="arf_modal_btn_txt_color" id="arf_modal_btn_txt_color" class="txtmodal1" />
+                     </div>
+                 </div>
+             </div>
+         </div>
         
         <div class="arfmodalfields"> 	
      		<div class="arfmodalfield_left" style="vertical-align: middle;"><?php _e('Size :', 'ARForms'); ?></div>

@@ -2,7 +2,7 @@
 /*
 Plugin Name: ARForms
 Description: Exclusive Wordpress Form Builder Plugin With Seven Most Popular E-Mail Marketing Tools Integration
-Version: 2.7
+Version: 2.7.3
 Plugin URI: http://www.arformsplugin.com/
 Author: Repute InfoSystems
 Author URI: http://reputeinfosystems.com/
@@ -56,7 +56,8 @@ class arsettingmodel{
 	var $smtp_username;
 	var $smtp_password;
 	var $smtp_encryption;
-	
+	var $affiliate_code;
+    var $arf_success_message_show_time;
     function arsettingmodel(){
 
 
@@ -146,6 +147,11 @@ class arsettingmodel{
 			'smtp_password' => '',
 			
 			'smtp_encryption' => 'none',
+			
+			'affiliate_code' => 'reputeinfosystems',
+            
+            'arf_success_message_show_time' => 3,
+			
 
         );
 
@@ -404,7 +410,9 @@ class arsettingmodel{
 
 
         }
-
+        
+        $this->arf_success_message_show_time = isset($params['arf_success_message_show_time'])?$params['arf_success_message_show_time']:3;
+         
         $this->jquery_css = isset($params['arfmainjquerycss']) ? $params['arfmainjquerycss'] : 0;
 
 
@@ -416,7 +424,8 @@ class arsettingmodel{
 		
 		$this->brand = isset($params['arfmainformbrand']) ? $params['arfmainformbrand'] : 0;
 
-
+		$this->affiliate_code = isset($params['affiliate_code']) ? $params['affiliate_code'] : 'reputeinfosystems';
+		
 
         $arfroles = $armainhelper->frm_capabilities();
 

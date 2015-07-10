@@ -2,9 +2,9 @@
 
 /**
  * Plugin Name: WooCommerce Smart Export
- * Pugin URI:	http://themology.net/product/woocomerce-smart-export
+ * Pugin URI:	https://wordpress.org/plugins/woocommerce-export/
  * Description: Adds new tabs in your WooCommerce reports option page to export all your customers, orders and coupon usage in a CSV file ; and to schedule the imports.
- * Version: 1.0.0
+ * Version: 1.1.0
  * Author: Themology
  * Author URI: http://www.themology.net
  * License: GPL V2.0
@@ -39,11 +39,14 @@ class WooCommerce_Smart_Export_Plugin
 	protected $included_order_keys = array();
 	protected $included_order_default_product_keys = array();
 	protected $included_order_product_keys = array();
+	protected $included_order_product_taxonomies = array();
 
 	protected $included_user_identity_keys = array();
 	protected $included_billing_information_keys = array();
 	protected $included_shipping_information_keys = array();
 	protected $status_for_user_activity = array();
+
+	protected $data_to_repeat = array();
 	
 	protected $woocommerce_version;
 	protected $products_in_columns;
@@ -86,8 +89,11 @@ class WooCommerce_Smart_Export_Plugin
 		
 		$this->included_order_default_product_keys = $this->wcse_included_order_default_product_keys();
 		$this->included_order_product_keys = $this->wcse_included_order_product_keys();
+		$this->included_order_product_taxonomies = $this->wcse_included_order_product_taxonomies();
 		
 		$this->status_for_user_activity = $this->wcse_status_for_user_activity();
+
+		$this->data_to_repeat = $this->swep_data_to_repeat();
 		$this->errors = array();
 	}
 
@@ -97,7 +103,7 @@ class WooCommerce_Smart_Export_Plugin
 	}
     
     /*
-     * Smart link to product settings
+     * Quick link to product settings
      */
 	public function action_links( $links, $file )
 	{
@@ -132,22 +138,47 @@ class WooCommerce_Smart_Export_Plugin
         if( 'woocommerce_page_woocommerce_reports' != $hook and 'woocommerce_page_wc-reports' != $hook and 'wc-reports' != substr($hook, -10)) return;
             
         
-        $screen->add_help_tab( array(
-		    'id'	=> 'themo_add_help',
-		    'title'	=> __( 'Smart export', 'wcse' ),
-		    'content'	=>
-
-		    	'<p>' . __( 'Here are the <strong>order meta</strong> you can add using a filter', 'wcse' ).' (<a target="_blank" href="http://pastebin.com/Thw5MGWN">'.__('code example here', 'wcse' ).'</a>) :' . '</p>' .
+       
+        
+        $content = '<p>' . __( 'Here are the <strong>order meta</strong> you can add using a filter', 'wcse' ).' (<a target="_blank" href="http://pastebin.com/itLY3VAb">'.__('code example here', 'wcse' ).'</a>) :' . '</p>' .
 				
 				'<code>'.implode('</code> <code>', $this->getDistinctOrderMeta()) .'</code>' .
 				
-		    	'<p>' . __( 'Here are the <strong>product meta</strong> you can add using a filter', 'wcse' ).' (<a target="_blank" href="http://pastebin.com/FGZJxHgA">'.__('code example here', 'wcse' ).'</a>) :' . '</p>' .
+		    	'<p>' . __( 'Here are the <strong>product meta</strong> you can add using a filter', 'wcse' ).' (<a target="_blank" href="http://pastebin.com/nEs8RNu0">'.__('code example here', 'wcse' ).'</a>) :' . '</p>' .
 		    	
-		    	'<code>'.implode('</code> <code>', $this->getDistinctPostMeta()).'</code>'
+		    	'<code>'.implode('</code> <code>', $this->getDistinctPostMeta()).'</code>';
+		    	
+		if(function_exists('wc_get_order_statuses'))    	
+		{
+			$content .= '<p>' . __( 'Here are the <strong>taxonomies</strong> you can add using a filter', 'wcse' ).' (<a target="_blank" href="http://pastebin.com/VGar98Wx">'.__('code example here', 'wcse' ).'</a>) :' . '</p>' .
 			
-		) );
+			'<code>'.implode('</code> <code>', $this->getDistinctTaxonomies()).'</code>';
+			
+		}
+		    	
+		
+        $screen->add_help_tab( array(
+		    'id'	=> 'wcse_add_help',
+		    'title'	=> __( 'Smart export', 'wcse' ),
+		    'content'	=> $content
+			
+		));
 	
 	}
+	
+	
+	public function getDistinctTaxonomies()
+	{
+		$taxos = get_taxonomies(array('object_type' => array('product') ));
+		$taxos2 = array();
+		foreach($taxos as $taxo)
+		{
+			if(substr($taxo, 0, 3) != 'pa_')
+				$taxos2[] = $taxo;
+		}
+		return $taxos2;
+	}
+	
 	
 	public function getDistinctOrderMeta()
 	{
@@ -168,23 +199,64 @@ class WooCommerce_Smart_Export_Plugin
 	   		}
 	   		
 	   		$query = '
-	   	select distinct(meta_key) from '.$wpdb->prefix.'postmeta, '.$wpdb->prefix.'posts where ID = post_id and (post_type = "shop_order") and post_status in ("'.implode('","', $statuses).'")';
+	   	select meta_key, meta_value from '.$wpdb->prefix.'postmeta, '.$wpdb->prefix.'posts where ID = post_id and (post_type = "shop_order") and post_status in ("'.implode('","', $statuses).'")';
 	   	}
 
-		$results = $wpdb->get_col($query);
+		$results = $wpdb->get_results($query);
+		$keys = array();
 		
-		return $results;
+		foreach($results as $data)
+		{
+			$val = maybe_unserialize($data->meta_value);
+			
+			if(is_array($val))
+			{
+				foreach($val as $k=>$v)
+					$keys[] = $data->meta_key.'|'.$k;
+			}
+			else
+				$keys[] = $data->meta_key;
+		}
+		
+		
+		sort($keys);
+		$keys = array_unique($keys);
+		
+		return $keys;
 	}
 	
 	public function getDistinctPostMeta()
 	{
 		global $wpdb;
 	   	$query = '
-	   	select distinct(meta_key) from '.$wpdb->prefix.'postmeta, '.$wpdb->prefix.'posts where ID = post_id and (post_type = "product" or post_type = "product_variation") and post_status = "publish"';
+	   	select meta_key, meta_value from '.$wpdb->prefix.'postmeta, '.$wpdb->prefix.'posts where ID = post_id and (post_type = "product" or post_type = "product_variation") and post_status = "publish"
+	   	
+	   	UNION 
+	   	
+	   	select meta_key, meta_value from '.$wpdb->prefix.'woocommerce_order_itemmeta
+	   	
+	   	';
 
-		$results = $wpdb->get_col($query);
+		$results = $wpdb->get_results($query);
+		$keys = array();
 		
-		return $results;
+		foreach($results as $data)
+		{
+			$val = maybe_unserialize($data->meta_value);
+			
+			if(is_array($val))
+			{
+				foreach($val as $k=>$v)
+					$keys[] = $data->meta_key.'|'.$k;
+			}
+			else
+				$keys[] = $data->meta_key;
+		}
+		
+		sort($keys);
+		$keys = array_unique($keys);
+		
+		return $keys;
 	}
 
 	public function tab( $charts )
@@ -195,7 +267,7 @@ class WooCommerce_Smart_Export_Plugin
 				'overview' => array(
 					
 					'title'       => __('WooCommerce Smart Export Plugin', 'wcse'),
-					'description' => __('To smartly export data from your WooCommerce database, just select the data type and click the export button. <br/> For more informations on options, read usage instruction. Thanks for using this Plugin.', 'wcse'),
+					'description' => __('To smartly export data from your WooCommerce database, just select the data type and click the export button. <br/> For more informations on options, read tplugin FAQ. Thanks for using this Plugin.', 'wcse'),
 					'hide_title'  => true,
 					'function'    => array($this, 'panel')
 				),
@@ -348,7 +420,7 @@ class WooCommerce_Smart_Export_Plugin
 							
 								<label for="wcse-status-product-display">
 								<input name="wcse_product_display" type="checkbox" id="wcse-status-product-display" value="columns">
-								<?php _e('Display products in column rather than in line', 'wcse');?>
+								<?php _e('Display each product (order item) in its own row.', 'wcse');?>
 							</label><br>
 							
 					</fieldset>
@@ -392,9 +464,9 @@ class WooCommerce_Smart_Export_Plugin
 					<th scope="row"><?php _e('Export Format', 'wcse');?></th>
 					<td>
 					<select name="wcse_exportformat" id="wcse_exportformat">
-							<option value="utf8" <?php if(WPLANG != 'zh_CN') echo 'selected="selected"'; ?> ><?php _e('Default (utf-8)', 'wcse'); ?></option>
+							<option value="utf8" <?php if(get_locale() != 'zh_CN') echo 'selected="selected"'; ?> ><?php _e('Default (utf-8)', 'wcse'); ?></option>
 							<option value="utf16" ><?php _e('Better Excel Support (utf-16)', 'wcse'); ?></option>
-							<option value="gbk" <?php if(WPLANG == 'zh_CN') echo 'selected="selected"'; ?> ><?php _e('Chinese Excel Support (gbk)', 'wcse'); ?></option>
+							<option value="gbk" <?php if(get_locale() == 'zh_CN') echo 'selected="selected"'; ?> ><?php _e('Chinese Excel Support (gbk)', 'wcse'); ?></option>
 					</select>
 					</td>
 				</tr>
@@ -421,6 +493,17 @@ class WooCommerce_Smart_Export_Plugin
 
 		return apply_filters('wcse_status_for_user_activity_filter', $keys);
 	}
+
+
+	public function swep_data_to_repeat()
+	{
+		$keys = array();
+
+		return apply_filters('swep_data_to_repeat', $keys);
+	}
+
+
+	
 	
 	/*
 	 * Define the keys for orders informations to export
@@ -478,6 +561,13 @@ class WooCommerce_Smart_Export_Plugin
 		$keys = array();
 		return apply_filters('wcse_included_order_product_keys_filter', $keys);
 	}
+
+	public function wcse_included_order_product_taxonomies()
+	{
+		$keys = array();
+		return apply_filters('wcse_included_order_product_taxonomies_filter', $keys);
+	}
+
 
     
 	public function wcse_included_user_identity_keys()
@@ -572,7 +662,7 @@ class WooCommerce_Smart_Export_Plugin
         
         if(!function_exists('wc_get_order_statuses'))
         {
-			$customer_orders = new WP_Query( array(
+			$args = array(
 					'posts_per_page' => -1,
 					'post_type'   => 'shop_order',
 					'post_status' => 'publish',
@@ -594,12 +684,11 @@ class WooCommerce_Smart_Export_Plugin
 								 'terms' => $this->export_settings['wcse_status']
 							)
 					)
-				)
-			);
+				);
         }
         else
         {
-        	$customer_orders = new WP_Query( array(
+        	$args = array(
 					'posts_per_page' => -1,
 					'post_type'   => 'shop_order',
 					'post_status' => $this->export_settings['wcse_status'],
@@ -612,13 +701,18 @@ class WooCommerce_Smart_Export_Plugin
 										'inclusive' => true,
 									),
 							),
-				)
-			);
+				);
+				
+        	
         }
         
+        $args = apply_filters('swep_order_query_args', $args);
+        
+        $customer_orders = new WP_Query( $args );
         
         $customer_orders = $customer_orders->get_posts();
         
+        $customer_orders = apply_filters('swep_customer_orders', $customer_orders);
         
         $total_orders = (int) sizeof($customer_orders);
         
@@ -680,31 +774,45 @@ class WooCommerce_Smart_Export_Plugin
             				if($key == 'order_tax_detail' and count($different_taxes) > 1)
             				{
             					foreach($different_taxes as $taxslug=>$taxname)
-            						$csv.='"'.$this->escape($taxname).'"'.$sep;
-            						$nb_cols_before_products += count($different_taxes)-1;
+            					{
+            						$filter = str_replace(' ', '_', 'swep_column_name_'.$taxname);
+            						$csv.='"'.$this->escape(apply_filters($filter, $taxname)).'"'.$sep;
+            					}
+            					$nb_cols_before_products += count($different_taxes)-1;
             				}
             				elseif($key != 'order_tax_detail')
             				{
             				    if($key == 'billing_complete_name' or $key == 'shipping_complete_name')
             					{
             					   if($key == 'billing_complete_name')
-            					       $csv.='"'.$this->escape(__('Complete name (billing)', 'wcse').$key2).'"'.$sep;
+            					       $csv.='"'.$this->escape(apply_filters('swep_column_name_billing_complete_name', __('Complete name (billing)', 'wcse'))).'"'.$sep;
             					   if($key == 'shipping_complete_name')
-            					       $csv.='"'.$this->escape(__('Complete name (shipping)', 'wcse').$key2).'"'.$sep;
+            					       $csv.='"'.$this->escape(apply_filters('swep_column_name_shipping_complete_name', __('Complete name (shipping)', 'wcse'))).'"'.$sep;
             					}
+            					elseif($key=='multiple_shipping')
+								{
+									$max_pack = $this->getMaxPack($customer_orders);
+									for($i=0; $i<$max_pack; $i++)
+									{
+										$csv.='"'.$this->escape(apply_filters('swep_column_name_shipping_complete_name', 'Items', $i)).'"'.$sep;
+										
+										$csv.='"'.$this->escape(apply_filters('swep_column_name_shipping_complete_name', 'Shipping address', $i)).'"'.$sep;
+									}
+								}
             					elseif(substr($key, 0, 12) == '_custom_key_')
             					{
-            						$csv.='"'.$this->escape(__(str_replace(array('_custom_key_', '_'), array('', ' '), $key), 'woocommerce').$key2).'"'.$sep;
+            						$custom_key = str_replace(array('_custom_key_', '_'), array('', ' '),$key);
+            						$csv.='"'.$this->escape( apply_filters('swep_column_name_'.$custom_key, __($custom_key, 'woocommerce'))).'"'.$sep;
             					}
             					else
             					{
-            				
+            					    $filter = str_replace(' ', '_', 'swep_column_name_'.$key);
                 					$key = ucwords(str_replace('_', ' ', $key));
                 					$key2 = '';
                 					if(strpos($key, 'Billing')!== false)
                 					{
                 						$key = str_replace('Billing', '', $key);
-                						$key2 = ' ('.__('Billing', 'woocommerce').')';
+                						$key2 = ' ('.__('Billing', 'wcse').')';
                 					}
                 					if(strpos($key, 'Shipping')!== false)
                 					{
@@ -712,7 +820,21 @@ class WooCommerce_Smart_Export_Plugin
                 						$key2 = ' ('.__('Shipping', 'woocommerce').')';
                 					}
                 					
-                					$csv.='"'.$this->escape(__(trim($key), 'woocommerce').$key2).'"'.$sep;
+                					if(trim($key) == 'Order Date')
+                						$key = __('Order Date', 'wcse');
+                						
+                					elseif(trim($key) == 'Payment Method Title')
+                						$key = __('Payment Method Title', 'wcse');
+                						
+                					elseif(trim($key) == 'Order  Tax')
+                						$key = __('Order Tax', 'wcse');
+                						
+                					elseif(trim($key) == 'Completed Date')
+                						$key = __('Completed Date', 'wcse');
+                					else
+                						$key = __(trim($key), 'woocommerce');
+                						
+                					$csv.='"'.$this->escape(apply_filters($filter, $key.$key2)).'"'.$sep;
             					
             					}
             				}
@@ -725,11 +847,11 @@ class WooCommerce_Smart_Export_Plugin
         			
         			if(in_array('number_of_different_items', $this->included_order_keys))
         			{
-        			    $csv.='"'.$this->escape(__('Number of different items', 'wcse')).'"'.$sep;
+        			    $csv.='"'.$this->escape(apply_filters('swep_column_name_number_of_different_items',__('Number of different items', 'wcse'))).'"'.$sep;
         			}
         			if(in_array('total_number_of_items', $this->included_order_keys))
         			{
-                        $csv.='"'.$this->escape(__('Total number of items', 'wcse')).'"'.$sep;
+                        $csv.='"'.$this->escape(apply_filters('swep_column_name_total_number_of_items',__('Total number of items', 'wcse'))).'"'.$sep;
         			}
         			
         			if(!$this->products_in_columns) //products in line
@@ -746,20 +868,32 @@ class WooCommerce_Smart_Export_Plugin
         				        if($pdt_key == 'quantity')
         				            $label = __('Quantity', 'woocommerce');
         				        if($pdt_key == 'line_price_without_taxes')
-        				            $label = __('Line price (without taxes)', 'woocommerce');
+        				            $label = __('Line price (without taxes)', 'wcse');
         				        if($pdt_key == 'line_price_with_taxes')
-        				            $label = __('Line price (including taxes)', 'woocommerce');
+        				            $label = __('Line price (including taxes)', 'wcse');
         				        
-        				        $csv.='"'.$this->escape($label).' #'.($i+1).'"'.$sep;
+        				        $csv.='"'.$this->escape(apply_filters('swep_column_name_product_'.$pdt_key,  $label.' #'.($i+1), $i)).'"'.$sep;
         				    
         				    }
         					
         					//header for custom product informations
         					foreach ($this->included_order_product_keys as $pdt_key)
         					{
-        						$csv.='"'.$this->escape($pdt_key).' #'.($i+1).'"'.$sep;
+        						$csv.='"'.$this->escape(apply_filters('swep_column_name_product_'.$pdt_key,  $pdt_key.' #'.($i+1), $i)).'"'.$sep;
         					
         					}
+        					
+        					foreach ($this->included_order_product_taxonomies as $taxo_key)
+        					{
+        						$taxo = get_taxonomies(array('name'=> $taxo_key), 'objects');
+        						$taxo_name = $taxo_key;
+        						
+        						if(isset($taxo[$taxo_key]) and isset($taxo[$taxo_key]->label) and $taxo[$taxo_key]->label)
+        							$taxo_name = $taxo[$taxo_key]->label;
+        						$csv.='"'.$this->escape(apply_filters('swep_column_name_product_'.$taxo_key,  $taxo_name.' #'.($i+1), $i)).'"'.$sep;
+        					
+        					}
+        					
         				}
         			}
         			else //products in column
@@ -774,25 +908,37 @@ class WooCommerce_Smart_Export_Plugin
         			        if($pdt_key == 'quantity')
         			            $label = __('Quantity', 'woocommerce');
         			        if($pdt_key == 'line_price_without_taxes')
-        			            $label = __('Line price (without taxes)', 'woocommerce');
+        			            $label = __('Line price (without taxes)', 'wcse');
         			        if($pdt_key == 'line_price_with_taxes')
-        			            $label = __('Line price (including taxes)', 'woocommerce');
+        			            $label = __('Line price (including taxes)', 'wcse');
         			        
-        			        $csv.='"'.$this->escape($label).'"'.$sep;
+        			        $csv.='"'.$this->escape(apply_filters('swep_column_name_product_'.$pdt_key,  $label)).'"'.$sep;
         			    
         			    }
         				
         				//header for custom product informations  
         				foreach ($this->included_order_product_keys as $pdt_key)
         				{
-        					$csv.='"'.$this->escape($pdt_key).'"'.$sep;
+        					$csv.='"'.$this->escape(apply_filters('swep_column_name_product_'.$pdt_key,  $pdt_key)).'"'.$sep;
         				
         				}
+        				
+        				foreach ($this->included_order_product_taxonomies as $taxo_key)
+						{
+							$taxo = get_taxonomies(array('name'=> $taxo_key), 'objects');
+							$taxo_name = $taxo_key;
+							
+							if(isset($taxo[$taxo_key]) and isset($taxo[$taxo_key]->label) and $taxo[$taxo_key]->label)
+								$taxo_name = $taxo[$taxo_key]->label;
+							$csv.='"'.$this->escape(apply_filters('swep_column_name_product_'.$taxo_key,  $taxo_name)).'"'.$sep;
+						
+						}
+        					
         			}
                     
                     if(in_array('used_coupons', $this->included_order_keys))
         			{
-                        $csv.='"'.$this->escape(__('Used coupons', 'wcse')).'"'.$sep;
+                        $csv.='"'.$this->escape(apply_filters('swep_column_name_used_coupons', __('Used coupons', 'wcse'))).'"'.$sep;
                     }
                     
                     if(in_array('coupon_name', $this->included_order_keys) or in_array('coupon_discount', $this->included_order_keys))
@@ -800,9 +946,9 @@ class WooCommerce_Smart_Export_Plugin
             			for($i=0; $i<$max_coupons; $i++)
             			{
                             if(in_array('coupon_name', $this->included_order_keys))
-            				    $csv.='"'.$this->escape(__('Coupon', 'woocommerce')).' #'.($i+1).'"'.$sep;
+            				    $csv.='"'.$this->escape(apply_filters('swep_column_name_coupon_name', __('Coupon', 'woocommerce').' #'.($i+1), $i)).'"'.$sep;
             				if(in_array('coupon_discount', $this->included_order_keys))
-            				    $csv.='"'.$this->escape(__('Discount', 'wcse')).' #'.($i+1).'"'.$sep;
+            				    $csv.='"'.$this->escape(apply_filters('swep_column_name_coupon_discount', __('Discount', 'wcse').' #'.($i+1), $i)).'"'.$sep;
             			}
         			}
         			
@@ -810,11 +956,31 @@ class WooCommerce_Smart_Export_Plugin
         
         		}
         			
-        		
+        		$cols_before_products = array();
         		foreach ($this->included_order_keys as $key) {
-        		
+        			
+
         			if(isset($order->$key))
-        				$csv.='"'.$this->escape($order->$key).'"'.$sep;
+        			{
+        				if($key == 'customer_note')
+        				{
+        					$note = $this->escape($order->$key);
+        					if(apply_filters('swep_remove_line_breaks_in_customer_note', true))
+        					{
+        						$note = str_replace(array("\r\n", "\r", "\n"), ' ', $note);
+        					}
+        					$csv.='"'.$note.'"'.$sep;
+        				}
+        				elseif($key == 'order_total')
+        					$csv.='"'.$this->escape(apply_filters('swep_order_total_format', $order->$key)).'"'.$sep;
+        				else
+        					$csv.='"'.$this->escape($order->$key).'"'.$sep;
+
+        				if(in_array($key, $this->data_to_repeat))
+        					$cols_before_products[]=$this->escape($order->$key);
+        				else
+        					$cols_before_products[]='';
+        			}
         			else
         			{
         				if($key == 'order_tax_detail' and count($different_taxes) > 1)
@@ -823,24 +989,77 @@ class WooCommerce_Smart_Export_Plugin
         					{
         						$tax = $this->getSumTaxes($order->id, $taxslug);
         						$csv.='"'.$this->escape($tax).'"'.$sep;
+
+        						if(in_array('order_tax_detail', $this->data_to_repeat))
+		        					$cols_before_products[]=$this->escape($this->escape($tax));
+		        				else
+		        					$cols_before_products[]='';
         					}
         				
         				}
         				elseif($key == 'shipping_method_title')
         				{
         					$csv.='"'.$this->escape($order->get_shipping_method()).'"'.$sep;
+
+        					if(in_array('shipping_method_title', $this->data_to_repeat))
+	        					$cols_before_products[]=$this->escape($order->get_shipping_method());
+	        				else
+	        					$cols_before_products[]='';
         				}
         				elseif($key == 'shipping_complete_name')
         				{
-                            $csv.='"'.$order->shipping_first_name.' '.$order->shipping_last_name.'"'.$sep;
+                            $csv.='"'.$this->escape($order->shipping_first_name.' '.$order->shipping_last_name).'"'.$sep;
+
+                            if(in_array('shipping_complete_name', $this->data_to_repeat))
+	        					$cols_before_products[]=$this->escape($order->shipping_first_name.' '.$order->shipping_last_name);
+	        				else
+	        					$cols_before_products[]='';
         				}
         				elseif($key == 'billing_complete_name')
         				{
-                            $csv.='"'.$order->billing_first_name.' '.$order->billing_last_name.'"'.$sep;
+                            $csv.='"'.$this->escape($order->billing_first_name.' '.$order->billing_last_name).'"'.$sep;
+        				
+
+                            if(in_array('billing_complete_name', $this->data_to_repeat))
+	        					$cols_before_products[]=$this->escape($order->billing_first_name.' '.$order->billing_last_name);
+	        				else
+	        					$cols_before_products[]='';
         				}
         				elseif(substr($key, 0, 12) == '_custom_key_')
         				{
-                            $csv.='"'.apply_filters('wcse_order'.$key, '', $order).'"'.$sep;
+        					$val = apply_filters('wcse_order'.$key, '', $order);
+                            $csv.='"'.$this->escape($val).'"'.$sep;
+
+                            if(in_array($key, $this->data_to_repeat))
+	        					$cols_before_products[]=$this->escape($val);
+	        				else
+	        					$cols_before_products[]='';
+        				}
+        				elseif(strpos($key, '|') !== false)
+        				{
+        					$data = explode('|', $key);
+							$array_key = $data[1];
+							$key = $data[0];
+							
+							$order->$key = maybe_unserialize($order->$key);
+							if(isset($order->$key))
+							{
+								$ok = $order->$key;
+								if(isset($ok[$array_key]))
+									$csv.='"'.$this->escape($ok[$array_key]).'"'.$sep;
+								else
+									$csv.='""'.$sep;
+
+								if((in_array($key, $this->data_to_repeat)) and (isset($ok[$array_key])))
+		        					$cols_before_products[]=$this->escape($ok[$array_key]);
+		        				else
+		        					$cols_before_products[]='';
+							}
+							else
+							{
+								$csv.='""'.$sep;
+								$cols_before_products[]='';
+							}
         				}
         				elseif($key == 'status')
         				{
@@ -853,8 +1072,45 @@ class WooCommerce_Smart_Export_Plugin
         							$st = $order->post_status;
         						
         						$csv.='"'.$st.'"'.$sep;
+
+        						if(in_array($key, $this->data_to_repeat))
+        							$cols_before_products[]=$st;
+        						else
+        							$cols_before_products[] = '';
         					}
                             
+        				}
+        				elseif($key == 'multiple_shipping' )
+        				{
+        					$packages = get_post_meta($order->id, '_wcms_packages', true);
+        					global $woocommerce;
+        					$data = '';
+        					
+        					$nb_pack = 0;
+        					foreach($packages as $pack)
+        					{
+        						$nb_pack++;
+								$pdts = $pack['contents'];
+								$data = '';
+                				foreach ( $pdts as $i => $pdt )
+                    			{
+									$data .= get_the_title($pdt['data']->id) .' x '. $pdt['quantity']."\r";
+									
+        						}
+        						$csv.='"'.$data.'"'.$sep;
+        						$cols_before_products[] = '';
+        						
+        						$data = $woocommerce->countries->get_formatted_address( $pack['full_address'] );
+        						$data = str_replace(array('<br />', '<br/>', '<br>'), "\r", $data);
+        						$csv.='"'.$data.'"'.$sep;
+        						$cols_before_products[] = '';
+        					}
+        					
+        					for($i=$nb_pack; $i<$max_pack; $i++)
+        					{
+        						$csv.='""'.$sep.'""'.$sep;
+        					}
+        					
         				}
         				elseif($key != 'order_tax_detail' and $key != 'number_of_different_items' and 
             			     $key != 'total_number_of_items' and
@@ -864,6 +1120,7 @@ class WooCommerce_Smart_Export_Plugin
                         )
         				{
         					$csv.='""'.$sep;
+        					$cols_before_products[] = '';
         				}
         			}	
         		}
@@ -875,6 +1132,11 @@ class WooCommerce_Smart_Export_Plugin
         		if(in_array('number_of_different_items', $this->included_order_keys))
                 {
                     $csv.='"'.$this->escape(count($items)).'"'.$sep;
+
+                    if(in_array('number_of_different_items', $this->data_to_repeat))
+    					$cols_before_products[]=$this->escape(count($items));
+    				else
+    					$cols_before_products[]='';
         		}
         		
         		if(in_array('total_number_of_items', $this->included_order_keys))
@@ -885,6 +1147,11 @@ class WooCommerce_Smart_Export_Plugin
             			$item_counts += $item['qty'];
             		}
             		$csv.='"'.$this->escape($item_counts).'"'.$sep;
+
+            		if(in_array('total_number_of_items', $this->data_to_repeat))
+    					$cols_before_products[]=$this->escape($item_counts);
+    				else
+    					$cols_before_products[]='';
         		}
         		
         		$items = array_values($items);
@@ -936,8 +1203,8 @@ class WooCommerce_Smart_Export_Plugin
                         
         				$csv.=$lb;
         				
-        				for($j=0; $j<$nb_cols_before_products; $j++)
-        					$csv.= '""'.$sep;							
+        				for($j=0; $j<count($cols_before_products); $j++)
+        						$csv.= '"'.$cols_before_products[$j].'"'.$sep;						
         				
         				if(isset($items[$i]))
         					$csv.=$this->infosProduit($order, $items[$i], $sep);
@@ -1155,7 +1422,7 @@ class WooCommerce_Smart_Export_Plugin
 							if(strpos($key, 'Billing')!== false)
 							{
 								$key = str_replace('Billing', '', $key);
-								$key2 = ' ('.__('Billing', 'woocommerce').')';
+								$key2 = ' ('.__('Billing', 'wcse').')';
 							}
 							if(strpos($key, 'Shipping')!== false)
 							{
@@ -1180,7 +1447,7 @@ class WooCommerce_Smart_Export_Plugin
 							if(strpos($key, 'Billing')!== false)
 							{
 								$key = str_replace('Billing', '', $key);
-								$key2 = ' ('.__('Billing', 'woocommerce').')';
+								$key2 = ' ('.__('Billing', 'wcse').')';
 							}
 						
 							
@@ -1303,9 +1570,9 @@ class WooCommerce_Smart_Export_Plugin
 				    if($pdt_key == 'quantity')
 				        $value = $item['qty'];
 				    if($pdt_key == 'line_price_without_taxes')
-				        $value = $order->get_line_total($item, false);
+				        $value = apply_filters('swep_line_price_without_taxes_format', $order->get_line_total($item, false));
 				    if($pdt_key == 'line_price_with_taxes')
-				        $value = $order->get_line_total($item, true);
+				        $value = apply_filters('swep_line_total_format', $order->get_line_total($item, true));
 				    
 				    $csv.='"'.$this->escape($value).'"'.$sep;
 				}
@@ -1314,17 +1581,53 @@ class WooCommerce_Smart_Export_Plugin
 				foreach ($this->included_order_product_keys as $pdt_key)
 				{
 					$pm = '';
+					
+					if(strpos($pdt_key, '|') !== false)
+					{
+						$data = explode('|', $pdt_key);
+						$array_key = $data[1];
+						$pdt_key = $data[0];
+					}
+					
 					if($product instanceof WC_Product_Variation)
 					{
 						$pm = get_post_meta($product->variation_id, $pdt_key, true);
 					}
 					if(!$pm)
 						$pm = get_post_meta($product->id, $pdt_key, true);
-					
+				
 					if(!$pm)
 						$pm = $this->getItemMeta(str_replace('attribute_', '', $pdt_key), $item);
+					
+					if(is_array($pm) and isset($array_key))
+					{
+						if(isset($pm[$array_key]))
+						{
+							$pm = $pm[$array_key];
+						}
 		
+					} 
+					
+					if(!$pm)
+					{
+						if(substr($pdt_key, 0, 12) == '_custom_key_')
+        				{
+                            $pm=apply_filters('wcse_product'.$pdt_key, '', $order, $item);
+        				}
+					}
+					
+					
 					$csv.='"'.$this->escape($pm).'"'.$sep;
+				}
+				
+				foreach ($this->included_order_product_taxonomies as $taxo_key)
+				{
+					$pm = wp_get_post_terms($product->id, $taxo_key, array('fields'=>'names'));
+					
+					if(is_array($pm))
+						$csv.='"'.$this->escape(implode(', ', $pm)).'"'.$sep;
+					else
+						$csv.='""'.$sep;
 				}
 			}
 			else //product does not exists anymore
@@ -1339,15 +1642,19 @@ class WooCommerce_Smart_Export_Plugin
 				    if($pdt_key == 'quantity')
 				        $value = $item['qty'];
 				    if($pdt_key == 'line_price_without_taxes')
-				        $value = $order->get_line_total($item, false);
+				        $value = apply_filters('swep_line_price_without_taxes_format', $order->get_line_total($item, false));
 				    if($pdt_key == 'line_price_with_taxes')
-				        $value = $order->get_line_total($item, true);
+				        $value = apply_filters('swep_line_total_format', $order->get_line_total($item, true));
 				        
                     $csv.='"'.$this->escape($value).'"'.$sep;
                 }
 
 				// custom product informations => empty
 				foreach ($this->included_order_product_keys as $pdt_key)
+					$csv.='""'.$sep;
+					
+				// custom taxo informations => empty
+				foreach ($this->included_order_product_taxonomies as $pdt_key)
 					$csv.='""'.$sep;
 			}
 		}
@@ -1401,6 +1708,20 @@ class WooCommerce_Smart_Export_Plugin
 		
 	} //export
 	
+	private function getMaxPack($post_orders)
+	{
+		$max = 0;
+		foreach($post_orders as $post)
+		{
+			$packs = get_post_meta($post->ID, '_wcms_packages', true);
+			
+			$nb = count($packs);
+			if($nb>$max)
+				$max=$nb;
+		}
+		
+		return $nb;
+	}
 	
 	/**
 	 * Add wcse_total_orderered and wcse_nb_order to each user
@@ -1432,10 +1753,10 @@ class WooCommerce_Smart_Export_Plugin
     			ORDER BY total desc) as tmp
     		';
     		
-    		$results = $wpdb->get_results($query);
+    		$res = $wpdb->get_var($query);
     
-    		if(isset($results[0]))
-    			return $results[0]->total;
+    		if($res)
+    			return $res;
     		else
     			return 0;
         }
@@ -1724,16 +2045,16 @@ class WooCommerce_Smart_Export_Plugin
     public static function deactivation()
     {
 		// All crons
-		$crontab = get_option('themo_scheduled_options');
+		$crontab = get_option('swep_scheduled_options');
 		
 		if(!empty($crontab)){
 			foreach ($crontab as $cid => $settings) {
 				// Remove the cron
-				wp_clear_scheduled_hook('themo_do_cron_hook',array($cid));
+				wp_clear_scheduled_hook('swep_do_cron_hook',array($cid));
 			}
 		}	
 		
-		delete_option('themo_scheduled_options');
+		delete_option('swep_scheduled_options');
 
     } //deactivation
 
@@ -1743,8 +2064,9 @@ include('automated.php');
 
 
 } //if
-
-function WooCommerce_Simple_Quick_Export_Plugin_Loader() {
+	
+	
+function WooCommerce_Simple_Smart_Export_Plugin_Loader() {
 	if( class_exists('Woocommerce') ){
 		if(is_admin()){
 			$WooCommerce_Smart_Export_Plugin = new WooCommerce_Smart_Export_Plugin();
@@ -1754,4 +2076,4 @@ function WooCommerce_Simple_Quick_Export_Plugin_Loader() {
 	}
 }
 
-add_action( 'plugins_loaded' , 'WooCommerce_Simple_Quick_Export_Plugin_Loader');
+add_action( 'plugins_loaded' , 'WooCommerce_Simple_Smart_Export_Plugin_Loader');

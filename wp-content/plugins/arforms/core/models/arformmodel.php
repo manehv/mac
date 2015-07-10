@@ -2,7 +2,7 @@
 /*
 Plugin Name: ARForms
 Description: Exclusive Wordpress Form Builder Plugin With Seven Most Popular E-Mail Marketing Tools Integration
-Version: 2.7
+Version: 2.7.3
 Plugin URI: http://www.arformsplugin.com/
 Author: Repute InfoSystems
 Author URI: http://reputeinfosystems.com/
@@ -13,7 +13,7 @@ class arformmodel{
 
   function arformmodel() {
   
-   		add_filter('arfformoptionsbeforeupdateform', array(&$this, 'update_options'), 10, 2);
+   	add_filter('arfformoptionsbeforeupdateform', array(&$this, 'update_options'), 10, 2);
 
         add_filter('arfupdatefieldtoptions', array(&$this, 'arfupdatefieldtoptions'), 10, 3);
 
@@ -592,7 +592,26 @@ function sitedesc()
 								$coditional_logic_new = maybe_serialize($coditional_logic);
 								$wpdb->update($MdlDb->fields, array('conditional_logic'=> $coditional_logic_new), array('id'=>$new_field->id));
 							}
-							
+							                                                        
+                                                        $arf_field_options = maybe_unserialize( $new_field->field_options );
+                                                        
+                                                        if( count($arf_field_options) > 0 ){
+                                                            $new_field_options = array();
+                                                            foreach($arf_field_options as $key_field_options => $value_field_options){
+                                                                    $new_field_options[$key_field_options] = @str_replace('[ENTERKEY]', '<br/>',$value_field_options); 			
+                                                            }									
+                                                            global $MdlDb, $wpdb;
+
+                                                            // for running total field id change
+                                                            if( $new_field->type == 'html' )
+                                                            {										
+                                                                    $newdescription  = $arformhelper->replace_field_shortcode_import($new_field->description, $original_id, $field_new_id);	
+                                                                    $wpdb->update($MdlDb->fields, array('description'=> $newdescription), array('id'=>$new_field->id));
+                                                            }
+                                                            $new_field_options = maybe_serialize($new_field_options);									
+                                                            $wpdb->update($MdlDb->fields, array('field_options'=> $new_field_options), array('id'=>$new_field->id));
+                                                        }
+                                                        
 						}
 						
 					}
@@ -1383,6 +1402,8 @@ function sitedesc()
 				
 				global $arsettingcontroller;
 				
+                                $arfssl = (is_ssl()) ? 1 : 0;
+                                
 				$filename = FORMPATH .'/core/css_create_main.php';
 				
 				$wp_upload_dir 	= wp_upload_dir();

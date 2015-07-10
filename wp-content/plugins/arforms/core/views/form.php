@@ -2,7 +2,7 @@
 /*
 Plugin Name: ARForms
 Description: Exclusive Wordpress Form Builder Plugin With Seven Most Popular E-Mail Marketing Tools Integration
-Version: 2.7
+Version: 2.7.3
 Plugin URI: http://www.arformsplugin.com/
 Author: Repute InfoSystems
 Author URI: http://reputeinfosystems.com/
@@ -21,7 +21,7 @@ if(isset($values['custom_style']) and $values['custom_style']) $arfloadcss = tru
 
 
 global $arforms_loaded;
-$is_loaded_normal = ($arforms_loaded[$form->id]) ? true : false; 
+$is_loaded_normal = ( $arforms_loaded[$form->id]) ? true : false; 
 
 if(!$arfcssloaded and $arfloadcss){
 
@@ -654,9 +654,16 @@ $arfoptions = get_option( "arf_options" );
 
 $remove_status = ($arfoptions->brand);
 
+$my_aff_code = "";
+
+if( ! isset($arfoptions->affiliate_code) || $arfoptions->affiliate_code == "")
+	$my_aff_code = "reputeinfosystems";
+else
+	$my_aff_code = $arfoptions->affiliate_code;
+
 if($remove_status==0) { 
 
-?><div id="brand-div" class="brand-div <?php echo $_SESSION['label_position'];?>_container" style="margin-top:20px; font-size:12px !important; display:block !important;"><?php _e('Powered by','ARForms');?>&nbsp;<a href="http://codecanyon.net/item/arforms-exclusive-wordpress-form-builder-plugin/6023165?ref=reputeinfosystems" target="_blank" style="margin:20px 0;">ARForms</a><?php   $licact = 0;
+?><div id="brand-div" class="brand-div <?php echo $_SESSION['label_position'];?>_container" style="margin-top:20px; font-size:12px !important; display:block !important;"><?php _e('Powered by','ARForms');?>&nbsp;<a href="http://codecanyon.net/item/arforms-exclusive-wordpress-form-builder-plugin/6023165?ref=<?php echo $my_aff_code;?>" target="_blank" style="margin:20px 0;">ARForms</a><?php   $licact = 0;
 				
 				$licact = 0;
 				global $arformsplugin;

@@ -2,15 +2,18 @@
 /*
 Plugin Name: ARForms
 Description: Exclusive Wordpress Form Builder Plugin With Seven Most Popular E-Mail Marketing Tools Integration
-Version: 2.7
+Version: 2.7.3
 Plugin URI: http://www.arformsplugin.com/
 Author: Repute InfoSystems
 Author URI: http://reputeinfosystems.com/
 Text Domain: ARForms
 */
+
+global $arrecordhelper,$maincontroller,$arfieldhelper,$armainhelper;
+
 if(!isset($_REQUEST['bulk_export']) && @$_REQUEST['bulk_export']!='yes')
 {
-	maincontroller::arfafterinstall();
+	$maincontroller->arfafterinstall();
 	global $style_settings;
 	
 	$form_id = $all_form_id;
@@ -23,7 +26,7 @@ if(!isset($_REQUEST['bulk_export']) && @$_REQUEST['bulk_export']!='yes')
 	$form_cols = $arffield->getAll("fi.type not in ('divider', 'captcha', 'break', 'html', 'imagecontrol') and fi.form_id=".$form->id, 'field_order ASC');
 
 
-	$entry_id = armainhelper::get_param('entry_id', false);
+	$entry_id = $armainhelper->get_param('entry_id', false);
 
 
 	$where_clause = "it.form_id=". (int)$form_id;
@@ -93,7 +96,7 @@ if(!isset($_REQUEST['bulk_export']) && @$_REQUEST['bulk_export']!='yes')
 @header('Pragma: no-cache');
 
 foreach ($form_cols as $col)
-	echo '"'. arrecordhelper::encode_value(strip_tags($col->name), $charset, $to_encoding) .'",';
+	echo '"'. $arrecordhelper->encode_value(strip_tags($col->name), $charset, $to_encoding) .'",';
 
 echo '"'. __('Timestamp', 'ARForms') .'","IP","ID","Key","Country","Browser"'."\n";
 foreach($entries as $entry){
@@ -109,7 +112,7 @@ foreach ($form_cols as $col){
    if ($col->type == 'file'){
 		$field_value = str_replace('thumbs/', '', wp_get_attachment_url($field_value) );
 	}else if ($col->type == 'date'){
-		$field_value = arfieldhelper::get_date($field_value, $wp_date_format);
+		$field_value = $arfieldhelper->get_date($field_value, $wp_date_format);
 	}else{
 		$checked_values = maybe_unserialize($field_value);
 		$checked_values = apply_filters('arfcsvvalue', $checked_values, array('field' => $col));
@@ -118,7 +121,7 @@ foreach ($form_cols as $col){
 		}else{
 			$field_value = $checked_values;
 		}
-		$field_value = arrecordhelper::encode_value($field_value, $charset, $to_encoding);
+		$field_value = $arrecordhelper->encode_value($field_value, $charset, $to_encoding);
 		$field_value = str_replace('"', '""', stripslashes($field_value));  
 	}
 	$field_value = str_replace(array("\r\n", "\r", "\n"), ' <br />', $field_value);
@@ -159,7 +162,7 @@ foreach($form_id_arr as $form_id)
 	$form_cols = $arffield->getAll("fi.type not in ('divider', 'captcha', 'break', 'html', 'imagecontrol') and fi.form_id=".$form->id, 'field_order ASC');
 
 
-	$entry_id = armainhelper::get_param('entry_id', false);
+	$entry_id = $armainhelper->get_param('entry_id', false);
 
 
 	$where_clause = "it.form_id=". (int)$form_id;
@@ -225,7 +228,7 @@ foreach($form_id_arr as $form_id)
 
 	foreach ($form_cols as $col)
 	
-		@$list .= arrecordhelper::encode_value(strip_tags($col->name), $charset, $to_encoding).',';
+		@$list .= $arrecordhelper->encode_value(strip_tags($col->name), $charset, $to_encoding).',';
 
 		@$list .= __('Timestamp', 'ARForms') .',IP,ID,Key,Country,Browser <br>';
 
@@ -267,7 +270,7 @@ foreach($form_id_arr as $form_id)
 			}else if ($col->type == 'date'){
 	
 	
-				$field_value = arfieldhelper::get_date($field_value, $wp_date_format);
+				$field_value = $arfieldhelper->get_date($field_value, $wp_date_format);
 	
 	
 			}else{
@@ -302,7 +305,7 @@ foreach($form_id_arr as $form_id)
 				
 	
 	
-				$field_value = arrecordhelper::encode_value($field_value, $charset, $to_encoding);
+                                    $field_value = $arrecordhelper->encode_value($field_value, $charset, $to_encoding);
 	
 	
 				$field_value = str_replace('"', '""', stripslashes($field_value));  
@@ -420,7 +423,7 @@ function Create_zip($source, $destination, $destinationdir)
 	foreach($filename as $file1)
 	{
 
-		unlink($destinationdir.$file1);
+		@unlink($destinationdir.$file1);
 
 	}
 }

@@ -2,7 +2,7 @@
 /*
 Plugin Name: ARForms
 Description: Exclusive Wordpress Form Builder Plugin With Seven Most Popular E-Mail Marketing Tools Integration
-Version: 2.7
+Version: 2.7.3
 Plugin URI: http://www.arformsplugin.com/
 Author: Repute InfoSystems
 Author URI: http://reputeinfosystems.com/
@@ -280,10 +280,11 @@ $hiddencontent = '<input type="hidden" name="arf_browser_name" id="arf_browser_n
 	<input type="hidden" name="imagename_'.$form->id.'" id="imagename_'.$form->id.'" value="" />
 	<input type="hidden" name="upload_field_id_'.$form->id.'" id="upload_field_id_'.$form->id.'" value="" />
 	<input type="hidden" name="editor_loaded" id="editor_loaded" value="0" />
-	<input type="hidden" name="form_key_'.$form->id.'" id="form_key_'.$form->id.'" value="'.$form->form_key.'" />';
-	$hiddencontent = $arformcontroller->arf_remove_br( $hiddencontent );
+	<input type="hidden" name="form_key_'.$form->id.'" id="form_key_'.$form->id.'" value="'.$form->form_key.'" />
+	<input type="hidden" name="arf_success_message_show_time_'.$form->id.'" id="arf_success_message_show_time_'.$form->id.'" value="'.$arfsettings->arf_success_message_show_time.'" />';
+        $hiddencontent = $arformcontroller->arf_remove_br( $hiddencontent );
 	echo $hiddencontent;
-$preview = $preview ? 1 : 0;
+        @$preview = $preview ? 1 : 0;
 $hiddencontent = '<input type="hidden" name="is_form_preview_'.$form->id.'" id="is_form_preview_'.$form->id.'" value="'.( $preview ? 1 : 0 ).'" />
 	<input type="hidden" name="arf_validate_outside_'.$form->id.'" id="arf_validate_outside_'.$form->id.'" data-validate="'.( ( apply_filters('arf_validateform_outside', false, $form) ) ? 1 : 0 ).'" value="'.( ( apply_filters('arf_validateform_outside', false, $form) ) ? 1 : 0).'" />
 	<input type="hidden" name="arf_is_validate_outside_'.$form->id.'" id="arf_is_validate_outside_'.$form->id.'" data-validate="'.( ( apply_filters('arf_is_validateform_outside', false, $form) ) ? 1 : 0 ).'" value="'.( ( apply_filters('arf_is_validateform_outside', false, $form) ) ? 1 : 0 ).'" />

@@ -2,7 +2,7 @@
 /*
 Plugin Name: ARForms
 Description: Exclusive Wordpress Form Builder Plugin With Seven Most Popular E-Mail Marketing Tools Integration
-Version: 2.7
+Version: 2.7.3
 Plugin URI: http://www.arformsplugin.com/
 Author: Repute InfoSystems
 Author URI: http://reputeinfosystems.com/
@@ -214,6 +214,7 @@ border-bottom:1px solid #E3E4E7 !important;
 				$setact = 0;
 				global $arformsplugin;
 				$setact = $arformcontroller->$arformsplugin();
+			
 				
 				if($setact == 1)
 				{ ?>
@@ -350,7 +351,7 @@ border-bottom:1px solid #E3E4E7 !important;
                 
 
         				 <td>					
-                    <span id="license_link"><button type="button" id="verify-purchase-code" name="continue" style="width:150px; border:0px; color:#FFFFFF; height:40px; border-radius:3px;" class="greensavebtn"><?php _e('Activate License', 'ARForms'); ?></button></span>
+                    <span id="license_link"><button type="button" id="verify-purchase-code" name="continue" style="width:150px; border:0px; color:#FFFFFF; height:40px; border-radius:3px;" class="greensavebtn"><?php _e('Activate License', 'ARForms'); ?></button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://help.market.envato.com/hc/en-us/articles/202822600-Where-can-I-find-my-Purchase-Code-" target="_blank" title="Get Your Purchase Code">Where can I find my Purchase Code?</a></span>
                     <span id="license_loader" style="display:none;"><img src="<?php echo ARFURL.'/images/loading_299_1.gif';?>" height="15" /></span>   		
                     <span id="license_error" class="frm_not_verify_li" style="display:none;">&nbsp;</span>
                     <span id="license_success" class="frm_verify_li"  style="display:none;"><?php _e('License Activated Successfully.', 'ARForms'); ?></span>
@@ -746,6 +747,20 @@ border-bottom:1px solid #E3E4E7 !important;
 
 
 </tr>
+
+<tr>
+
+
+	<td class="tdclass" valign="top" style="padding-left:30px;"><label class="lblsubtitle"><?php _e('Affiliate Code', 'ARForms'); ?></label> </td>
+
+
+	<td valign="top" style="padding-bottom:10px;">
+		<input type="text" class="txtstandardnew" id="affiliate_code" name="affiliate_code" value="<?php echo $arfsettings->affiliate_code;?>" style="width:400px;">
+	</td>
+
+
+</tr>
+
 <?php } else { ?>
 <input type="hidden" name="arfmainformbrand" value="0"  />
 <?php } ?>
@@ -758,8 +773,32 @@ border-bottom:1px solid #E3E4E7 !important;
 	<td valign="top" style="padding-bottom:10px;">
 
 
-		<input type="radio" class="rdostandard" id="ajax_base_sbmt" <?php if($arfsettings->form_submit_type == 1) {echo 'checked="checked"';}else{echo '';} ?> name="arfmainformsubmittype" value="1" style="margin-top:3px;"/><label class="lblsubtitle" for="ajax_base_sbmt"><span class="lblsubtitle_span"></span><div class="api_lable"><?php _e('Ajax based submission','ARForms');?></div></label>&nbsp; &nbsp; 
-                        <input type="radio" class="rdostandard" id="normal_form_sbmt" <?php if($arfsettings->form_submit_type == 0) echo 'checked="checked"'; ?> name="arfmainformsubmittype" value="0" style="margin-top:3px;"/><label class="lblsubtitle" for="normal_form_sbmt"><span class="lblsubtitle_span"></span><div class="api_lable"><?php _e('Normal submission','ARForms');?></div></label>&nbsp; &nbsp;
+            <input type="radio" class="rdostandard" onchange="arf_change_form_submission_type(this);" id="ajax_base_sbmt" <?php if($arfsettings->form_submit_type == 1) {echo 'checked="checked"';}else{echo '';} ?> name="arfmainformsubmittype" value="1" style="margin-top:3px;"/><label class="lblsubtitle" for="ajax_base_sbmt"><span class="lblsubtitle_span"></span><div class="api_lable"><?php _e('Ajax based submission','ARForms');?></div></label>&nbsp; &nbsp; 
+                        <input type="radio" onchange="arf_change_form_submission_type(this);" class="rdostandard" id="normal_form_sbmt" <?php if($arfsettings->form_submit_type == 0) echo 'checked="checked"'; ?> name="arfmainformsubmittype" value="0" style="margin-top:3px;"/><label class="lblsubtitle" for="normal_form_sbmt"><span class="lblsubtitle_span"></span><div class="api_lable"><?php _e('Normal submission','ARForms');?></div></label>&nbsp; &nbsp;
+
+
+	</td>
+
+
+</tr>
+<tr class="arf_success_message_show_time_wrapper" <?php if($arfsettings->form_submit_type == 0) {echo 'style="display: none"';}?> >
+
+
+	<td class="tdclass" valign="top" style="padding-left:30px;"><label class="lblsubtitle"><?php _e('Success Message', 'ARForms'); ?></label> </td>
+
+
+	<td valign="top" style="padding-bottom:10px;">
+            <?php
+          
+            if(!(isset($arfsettings->arf_success_message_show_time) && $arfsettings->arf_success_message_show_time>=0))
+            {
+               $arfsettings->arf_success_message_show_time = 3; 
+            }
+            ?>
+            <div class="arf_success_message_show_time_inner"><?php _e('Hide success message after', 'ARForms'); ?>
+                <input type="text" name="arf_success_message_show_time" onkeydown="arfvalidatenumber_admin(this,event);" maxlength="3" value="<?php echo esc_attr($arfsettings->arf_success_message_show_time) ?>" class="arf_success_message_show_time txtstandardnew"/>
+                <?php _e('seconds', 'ARForms'); ?></div>
+            <div class="arf_success_message_show_time_inner">( <?php _e('Note : 0 ( zero ) means it will never hide success message', 'ARForms'); ?> )</div>
 
 
 	</td>

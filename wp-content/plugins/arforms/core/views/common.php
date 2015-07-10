@@ -2,7 +2,7 @@
 /*
 Plugin Name: ARForms
 Description: Exclusive Wordpress Form Builder Plugin With Seven Most Popular E-Mail Marketing Tools Integration
-Version: 2.7
+Version: 2.7.3
 Plugin URI: http://www.arformsplugin.com/
 Author: Repute InfoSystems
 Author URI: http://reputeinfosystems.com/
@@ -947,8 +947,12 @@ $('.arfshowmainform').not('.arfpagebreakform').find("input,select,textarea").not
 											reset_like_field(object); //reset like field
 											reset_slider_field(object);
 											reset_running_total(object);
-											reset_colorpicker(object);
-											 							
+											reset_colorpicker(object);	
+
+											if( typeof reset_preview_out_side == 'function' ){
+												reset_preview_out_side('<?php echo json_encode(array('id'=> $form->id, 'form_key' => $form->form_key)); ?>',object);
+											}
+ 							
 											if(typeof(__ARFSTRRNTH_INDICATOR)!='undefined'){
 												var strenth_indicator = __ARFSTRRNTH_INDICATOR;
 											}else{
@@ -992,8 +996,27 @@ $('.arfshowmainform').not('.arfpagebreakform').find("input,select,textarea").not
 										} else {
 											jQuery(object).find('.arf_submit_btn').toggleClass('data-loading');	
 										} 
+                                                                                arf_success_message_show_time = jQuery(object).find('#arf_success_message_show_time_'+break_form_id).val();
+                                                                       
+                                                                                if(!arf_success_message_show_time>0)
+                                                                                {
+                                                                                    arf_success_message_show_time=3;
+                                                                                }
+                                                                                //console.log(arf_success_message_show_time);
+                                                                                if(arf_success_message_show_time!=0)
+                                                                                {
+
+                                                                                    arf_success_message_show_time= arf_success_message_show_time*1000;
+
+                                                                                    setTimeout(function () {
+                                                                                        jQuery('#form_success_'+break_form_id).hide("slow");
+                                                                                    }, arf_success_message_show_time);
+
+                                                                                }
 									},3000);		 		
-									setTimeout(function(){jQuery('#form_success_'+break_form_id).hide("slow");},6000);
+									//setTimeout(function(){jQuery('#form_success_'+break_form_id).hide("slow");},6000);
+                                                                        
+                                                                        
 								}	
 							//for recaptcha end
 						}
@@ -1065,6 +1088,10 @@ $('.arfshowmainform').not('.arfpagebreakform').find("input,select,textarea").not
 										reset_running_total(object);
 										reset_colorpicker(object);
 										
+										if( typeof reset_preview_out_side == 'function' ){
+												reset_preview_out_side('<?php echo json_encode(array('id'=> $form->id, 'form_key' => $form->form_key)); ?>',object);
+										}										
+										
 										if(typeof(__ARFSTRRNTH_INDICATOR)!='undefined'){
 											var strenth_indicator = __ARFSTRRNTH_INDICATOR;
 										}else{
@@ -1118,9 +1145,24 @@ $('.arfshowmainform').not('.arfpagebreakform').find("input,select,textarea").not
 									} else {
 										jQuery(object).find('.arf_submit_btn').toggleClass('data-loading');	
 									} 
+                                                                        arf_success_message_show_time = jQuery(object).find('#arf_success_message_show_time_'+break_form_id).val();
+                                                                        if(!arf_success_message_show_time>0)
+                                                                        {
+                                                                            arf_success_message_show_time=3;
+                                                                        }
+                                                                        if(arf_success_message_show_time!=0)
+                                                                        {
+                                                                            arf_success_message_show_time= arf_success_message_show_time*1000;
+                                                                            //console.log(arf_success_message_show_time);
+                                                                            setTimeout(function () {
+                                                                                jQuery('#form_success_'+break_form_id).hide("slow");
+                                                                            }, arf_success_message_show_time);
+
+                                                                        }
 											
 									},3000);		 	 
-									setTimeout(function(){jQuery('#form_success_'+break_form_id).hide("slow");},6000);
+									//setTimeout(function(){jQuery('#form_success_'+break_form_id).hide("slow");},6000);
+                                                                        
 									
 								} 
 									
@@ -1413,6 +1455,10 @@ $('.arfpagebreakform').find("input,select,textarea").not("[type=submit],div[id='
 														reset_slider_field(object);
 														reset_running_total(object);
 														reset_colorpicker(object);
+														
+														if( typeof reset_preview_out_side == 'function' ){
+															reset_preview_out_side('<?php echo json_encode(array('id'=> $form->id, 'form_key' => $form->form_key)); ?>',object);
+														}
 																																						
 														if(typeof(__ARFSTRRNTH_INDICATOR)!='undefined'){
 															var strenth_indicator = __ARFSTRRNTH_INDICATOR;
@@ -1536,6 +1582,10 @@ $('.arfpagebreakform').find("input,select,textarea").not("[type=submit],div[id='
 														reset_slider_field(object);
 														reset_running_total(object);
 														reset_colorpicker(object);
+														
+														if( typeof reset_preview_out_side == 'function' ){
+															reset_preview_out_side('<?php echo json_encode(array('id'=> $form->id, 'form_key' => $form->form_key)); ?>',object);
+														}	
 														
 														if(typeof(__ARFSTRRNTH_INDICATOR)!='undefined'){
 															var strenth_indicator = __ARFSTRRNTH_INDICATOR;
@@ -2059,24 +2109,6 @@ if( count($arf_password_loaded) > 0 ){
 }
 
 ?>
-/*jQuery(document).ready(function($){
-
-$('.arf_like_btn, .arf_dislike_btn').not('.field_edit').each(function(){
-		var title = jQuery(this).attr('data-title');
-		if( title !== undefined ){
-			jQuery(this).popover({
-				html: true,
-				trigger: 'hover',
-				placement: 'top',
-				content: title,
-				title: '',
-				animation: false
-			});
-			//jQuery(this).popover('show');
-		}
-	})
-
-});*/
 <?php 		
 // action for load js externally
 do_action('arf_after_footer_loaded');

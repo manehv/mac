@@ -1,7 +1,7 @@
 	<div class="font_awesome_title <?php echo $is_rtl; ?>"><?php _e('No Icon', 'ARForms'); ?></div>
     
     <div class="fa_subcontent <?php echo $is_rtl; ?>">
-    	<div class="arf_fainsideimge" id="" title="None"></div>
+    	<div class="arf_fainsideimge" id="" title="None" no_icon_text="<?php _e('No Icon', 'ARForms'); ?>"></div>
     </div>
     
 	<div class="font_awesome_title <?php echo $is_rtl; ?>"><?php _e('File Type Icons', 'ARForms'); ?></div>

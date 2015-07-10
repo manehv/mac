@@ -269,7 +269,7 @@ jQuery(document).ready(function($){
 
 
 jQuery(document).ready(function(){
-
+        
 	if( jQuery.isFunction( jQuery().colpick ) )
 	{
 		jQuery('.arf_coloroption_sub:not(.arf_clr_disable)').colpick({
@@ -278,17 +278,16 @@ jQuery(document).ready(function(){
 			onBeforeShow:function(){
 				var fid 	= jQuery(this).find('.arfhex').attr('data-fid');
 				var color 	= jQuery('#'+fid).val();
+                                 var did = fid.replace('arf_divider_bg_color_','');
 				if( jQuery(this).attr('data-cls') == 'arf_clr_disable'){
-					jQuery('.arf_clr_disable .arfhex').css('background',color);
+                                    jQuery('#arf_divider_bg_color_disabled_'+did+'.arf_clr_disable .arfhex').css('background',color);
 				}
 				var	new_color= color.replace('#','');
 				if( new_color )
 					jQuery(this).colpickSetColor(new_color);
 			},
 			onChange:function(hsb,hex,rgb,el,bySetColor) {
-				if( jQuery(el).attr('data-cls') == 'arf_clr_disable'){
-					jQuery('.arf_clr_disable .arfhex').css('background','#'+hex);
-				}
+                                
 				if(typeof arf_set_on_chnage_color_value_in_out_site == 'function'){
 					arf_set_on_chnage_color_value_in_out_site(hsb,hex,rgb,el,bySetColor);	
 				}
@@ -298,6 +297,10 @@ jQuery(document).ready(function(){
 				var fid = jQuery(el).find('.arfhex').attr('data-fid');
 				if( fid )
 					jQuery('#'+fid).val('#'+hex);
+                                var did = fid.replace('arf_divider_bg_color_','');
+                                if( jQuery(el).attr('data-cls') == 'arf_clr_disable'){
+                                    jQuery('#arf_divider_bg_color_disabled_'+did+'.arf_clr_disable .arfhex').css('background','#'+hex);
+                                }
 			}
 		});
 		

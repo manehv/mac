@@ -1,4 +1,5 @@
 <?php
+error_reporting(E_ALL ^ E_NOTICE);
 
 define("PLUGIN_DIR", ABSPATH . 'wp-content/plugins/simplr-registration-form' );
 include_once(PLUGIN_DIR.'/lib/form.class.php');
@@ -30,18 +31,6 @@ function mycustom_headers_filter_function( $headers, $object ) {
 
 //add action give it the name of our function to run
 add_action( 'woocommerce_after_shop_loop_item_title', 'wcs_stock_text_shop_page', 25 );
-
-add_filter( 'wp_login_errors', 'override_incorrect_username_message', 10, 2 );
-function override_incorrect_username_message( $errors, $redirect_to ) {
-    if( isset( $errors->errors['invalid_username'] ) ) {
-        $errors->errors['invalid_username'][0] = 'El usuario es incorrecto.';
-    }
-    if( isset( $errors->errors['incorrect_password'] ) ) {
-        $errors->errors['incorrect_password'][0] = 'La contraseña es incorrecta.';
-    }
-
-    return $errors;
- }
 
 //create our function
 function wcs_stock_text_shop_page() {
@@ -1099,17 +1088,54 @@ function custom_override_checkout_fields( $fields ) {
   return $fields;  
 } 
 add_filter( 'woocommerce_checkout_fields' , 'custom_override_checkout_fields' ); */
+
+
 add_filter( 'woocommerce_billing_fields' , 'custom_override_billing_fields' );
 add_filter( 'woocommerce_shipping_fields' , 'custom_override_shipping_fields' );
 
+function getstate(){
+global $wpdb;
+$result = $wpdb->get_results ( "SELECT distinct state_name FROM wp_states order by state_name" );
+ foreach($result as $val){
+   $states[$val->state_name] = $val->state_name ;
+ }
+ return $states ;
+}
+
+function city_ajax_shipping() {
+	global $wpdb;
+	$c=$_POST['state'];
+	$sql = "select distinct c.city from wp_states s , wp_cities c where c.state_id = s.state_code
+					and state_name = '".$c."' order by city";
+ $cities = $wpdb->get_results ($sql);
+ //$cities = array_reverse($cities);
+
+ foreach($cities as $val){
+   $city[$val->city]=$val->city;
+	}
+	echo json_encode(array('cities' => $city));
+	wp_die();
+	//echo '<option value="-1" selected="selected">Selected.</option>'.$option;
+  //return json_encode($city) ;
+}
+add_action('wp_ajax_cities_ajax_call', 'city_ajax_shipping');
+add_action('wp_ajax_nopriv_cities_ajax_call', 'city_ajax_shipping');
+
+
+
 function custom_override_billing_fields( $fields ) {
+  
   unset($fields['billing_address_2']);
-  // unset($fields['billing_email']);
+  unset($fields['billing_email']);
   unset($fields['billing_phone']);
   unset($fields['billing_state']);
   unset($fields['billing']);
+ 
 
+
+  
    $fields['billing_first_name'] = array(
+      
         'label'     => __('Nombre', 'woocommerce'),
         'placeholder'   => (''),
                                 'required'  => true,
@@ -1122,38 +1148,56 @@ function custom_override_billing_fields( $fields ) {
                                 'required'  => true,
                                 'class'     => array('form-row-last',' col-lg-4')
      );
-
-     $fields['billing_email'] = array(
-        'required'  => true
+      $fields['billing_Cédula'] = array(
+        'label'     => __('Cédula', 'woocommerce'),
+        'placeholder'   => (''),
+                                'required'  => true,
+                                'class'     => array('form-row-last',' col-lg-4')
      );
 
          $fields['billing_country'] = array(
-                                'type'     => 'country',
+        'type'     => 'country',
         'label'     => __('Country', 'woocommerce'),
         'placeholder'   => (''),
                                 'required'  => true,
-                                'class'     => array('form-row-last', 'address-field', 'update_totals_on_change',' col-lg-4')
+                                'class'     => array('form-row-first', 'address-field', 'update_totals_on_change',' col-lg-4')
      ); 
+    
+				$fields['billing_company'] = array(
+                               'label'     => __('Departamento', 'woocommerce'),
+                                'placeholder'   => ('select state'),
+                                'required'  => true,
+																  'type' => 'select',
+                                'class'  => array('form-row-last', 'address-field','update_totals_on_change',' col-lg-4'),
+                                'options' => getstate(),
+     );
+
 
       $fields['billing_city'] = array(
         'label'     => __('Ciudad/Localidad', 'woocommerce'),
         'placeholder'   => (''),
                                 'required'  => true,
-                                'class'     => array('form-row-first', 'address-field',' col-lg-4'),
-                                'clear'    => false
+                                'type' => 'select',
+                                'class'     => array( 'form-row-last','address-field',' col-lg-4'),
+                                'clear'    => false,
+                                'options' => array(
+                                 'select'=>__('select','woocomemrce'),
+                                )
+
      );   
-      $fields['billing_company'] = array(
+/*//       $fields['billing_company'] = array(
         'label'     => __('Departamento', 'woocommerce'),
         'placeholder'   => (''),
                                 'required'  => true,
                                 'class'     => array('form-row-last',' col-lg-4')
      );
-     
+   */  
        $fields['billing_postcode'] = array(
-        'label'     => __('Barrio', 'woocommerce'),
+        'label'     => __('Barrio *', 'woocommerce'),
         'placeholder'   => (''),
                                 'required'  => true,
-                                'class'     => array('form-row-last', 'address-field',' col-lg-4'),
+                                'class'     => array('form-row-first', 'address-field',' col-lg-4'),
+                                'validate'    => array( 'postcode' ),
                                 'clear'    => false
      );
      
@@ -1161,7 +1205,7 @@ function custom_override_billing_fields( $fields ) {
         'label'     => __('Dirección Completa', 'woocommerce'),
         'placeholder'   => (''),
                                 'required'  => true,
-                                'class'     => array('form-row-first', 'address-field',' col-lg-4')
+                                'class'     => array('form-row-last', 'address-field',' col-lg-4')
      );
      
       $fields['billing_mobile_phone'] = array(
@@ -1170,13 +1214,20 @@ function custom_override_billing_fields( $fields ) {
                                 'required'  => true,
                                 'class'     => array('form-row-last',' col-lg-4')
      );
- 
+//      $fields['billing_email'] = array(
+//         'label'     => __('E-mail *', 'woocommerce'),
+//         'placeholder'   => (''),
+//                                 'required'  => true,
+//                                 'class'     => array('form-row-last','address-field',' col-lg-4')
+//      );
+  //print_r($fields);
   return $fields;
 }
 
+        
 function custom_override_shipping_fields( $fields ) {
   unset($fields['shipping_address_2']);
-  // unset($fields['shipping_email']);
+  unset($fields['shipping_email']);
   unset($fields['shipping_phone']);
   unset($fields['shipping_state']);
   unset($fields['shipping']);
@@ -1194,37 +1245,60 @@ function custom_override_shipping_fields( $fields ) {
                                 'required'  => true,
                                 'class'     => array('form-row-last',' col-lg-4')
      );
+      $fields['shipping_Cédula'] = array(
+        'label'     => __('Cédula', 'woocommerce'),
+        'placeholder'   => (''),
+                                'required'  => true,
+                                'class'     => array('form-row-last',' col-lg-4')
+     );
 
          $fields['shipping_country'] = array(
                                 'type'     => 'country',
         'label'     => __('Country', 'woocommerce'),
         'placeholder'   => (''),
                                 'required'  => true,
-                                'class'     => array('form-row-last', 'address-field', 'update_totals_on_change',' col-lg-4')
+                                'class'     => array('form-row-first', 'address-field', 'update_totals_on_change',' col-lg-4')
      );
+//          $fields['shipping_state'] = array(
+//         'label'     => __('Departamento', 'woocommerce'),
+//         'placeholder'   => (''),
+//                                 'required'  => true,
+//                                 'type' => 'select',
+//                                 'class'     => array('form-row-last', 'address-field', 'update_totals_on_change',' col-lg-4'),
+//                                  'options'   => getstate(),
+//      );
+
+    $fields['shipping_company'] = array(
+        'label'     => __('Departamento', 'woocommerce'),
+        'placeholder'   => (''),
+                                'required'  => true,
+                                 'type' => 'select',
+                                 'class'  => array('form-row-last', 'address-field','update_totals_on_change',' col-lg-4'),
+                                 'options' => getstate(),
+     );   
 
       $fields['shipping_city'] = array(
         'label'     => __('Ciudad/Localidad', 'woocommerce'),
         'placeholder'   => (''),
                                 'required'  => true,
-                                'class'     => array('form-row-first', 'address-field',' col-lg-4'),
-                                'clear'    => false
-     );
-      $fields['shipping_company'] = array(
-        'label'     => __('Departamento', 'woocommerce'),
-        'placeholder'   => (''),
-                                'required'  => true,
-                                'class'     => array('form-row-last',' col-lg-4')
-     );
-
-       $fields['shipping_postcode'] = array(
-        'label'     => __('Código postal/Zip', 'woocommerce'),
-        'placeholder'   => (''),
-                                'required'  => false,
+                                 'type' => 'select',
                                 'class'     => array('form-row-last', 'address-field',' col-lg-4'),
-                                'validate'    => array( 'postcode' ),
-                                'clear'    => false
+                                'clear'    => false,
+                                 'options'     => array(
+																									'select' => __('select', 'woocommerce' ),
+																									)
+
      );
+                   
+
+//        $fields['shipping_postcode'] = array(
+//         'label'     => __('Código postal/Zip *', 'woocommerce'),
+//         'placeholder'   => (''),
+//                                 'required'  => true,
+//                                 'class'     => array('form-row-first', '',' col-lg-4'),
+//                                 'validate'    => array( 'postcode' ),
+//                                 'clear'    => false
+// 			);
 
       $fields['shipping_address_1'] = array(
         'label'     => __('Dirección Completa', 'woocommerce'),
@@ -1236,7 +1310,7 @@ function custom_override_shipping_fields( $fields ) {
       $fields['shipping_mobile_phone'] = array(
         'label'     => __('Celular', 'woocommerce'),
         'placeholder'   => (''),
-                                'required'  => false,
+                                'required'  => true,
                                 'class'     => array('form-row-last',' col-lg-4')
      );
 
@@ -1253,17 +1327,19 @@ function reorder_woocommerce_fields($fields) {
 
         $fields2['billing_first_name'] = $fields['billing_first_name'];
         $fields2['billing_last_name'] = $fields['billing_last_name'];
+        $fields2['billing_Cédula'] = $fields['billing_Cédula'];
         $fields2['billing_country'] = $fields['billing_country'];
-        $fields2['billing_city'] = $fields['billing_city'];
+        // $fields2['billing_state'] = $fields['billing_state'];
         $fields2['billing_company'] = $fields['billing_company'];
+        $fields2['billing_city'] = $fields['billing_city'];
         $fields2['billing_postcode'] = $fields['billing_postcode'];
         $fields2['billing_address_1'] = $fields['billing_address_1'];
         $fields2['billing_mobile_phone'] = $fields['billing_mobile_phone'];
         $fields2['billing_email'] = array(
-            'label'     => __('E-mail', 'woocommerce'),
+            'label'     => __('E-mail *', 'woocommerce'),
             'placeholder'   => (''),
             'required'  => false,
-            'class'     => array('form-row-last')
+            'class'     => array('form-row-first')
          );
       
 
@@ -1289,16 +1365,47 @@ add_filter("woocommerce_shipping_fields", "order_fields");
 
 function order_fields($fields) {
 
-    $fields2['shipping_first_name'] = $fields['shipping_first_name'];
+        $fields2['shipping_first_name'] = $fields['shipping_first_name'];
         $fields2['shipping_last_name'] = $fields['shipping_last_name'];
+        $fields2['shipping_Cédula'] = $fields['shipping_Cédula'];
         $fields2['shipping_country'] = $fields['shipping_country'];
-        $fields2['shipping_city'] = $fields['shipping_city'];
+      //  $fields2['shipping_state'] = $fields['shipping_state'];
         $fields2['shipping_company'] = $fields['shipping_company'];
-        $fields2['shipping_postcode'] = $fields['shipping_postcode'];
+        $fields2['shipping_city'] = $fields['shipping_city'];
+        //$fields2['shipping_postcode'] = $fields['shipping_postcode'];
         $fields2['shipping_address_1'] = $fields['shipping_address_1'];
         $fields2['shipping_mobile_phone'] = $fields['shipping_mobile_phone'];
     return $fields2;
 
 }
+//echo '<div "><a></a></div>'
+// if()
+// $checked = $checkout->get_value( 'my_checkbox1' ) ? $checkout->get_value( 'my_checkbox1' ) : 1;
+// 
+// woocommerce_form_field( 'my_checkbox1', array( 
+//   'type' => 'checkbox', 
+//   'class' => array('input-checkbox'), 
+//   'label' => __('Standard Shipping (2–7 Days, FREE!) <span>Most items are shipped FREE OF CHARGE within Thailand.</span>'), 
+//   'required' => false,
+// ), $checked );
+		
+add_action( 'woocommerce_checkout_update_order_meta', 'my_custom_checkout_field_update_order_meta' );
+ 
+function my_custom_checkout_field_update_order_meta( $order_id ) {
+    if ( ! empty( $_POST['billing_Cédula'] ) ) {
+        update_post_meta( $order_id, 'billing_Cédula', sanitize_text_field( $_POST['billing_Cédula'] ) );
+    }
+    if ( ! empty( $_POST['shipping_Cédula'] ) ) {
+        update_post_meta( $order_id, 'shipping_Cédula', sanitize_text_field( $_POST['shipping_Cédula'] ) );
+    }
+}
 
+ add_action('woocommerce_admin_order_data_after_billing_address', 'my_custom_billing_fields_display_admin_order_meta', 10, 1);
+  function my_custom_billing_fields_display_admin_order_meta($order) {
+  echo '<p><strong>' . __('Billing Cédula') . ':</strong><br> ' . get_post_meta($order->id, '_billing_Cédula', true) . '</p>';
+  }
 
+ add_action('woocommerce_admin_order_data_after_shipping_address', 'my_custom_shipping_fields_display_admin_order_meta', 10, 1);
+  function my_custom_shipping_fields_display_admin_order_meta($order) {
+echo '<p><strong>' . __('Shipping Cédula') . ':</strong><br> ' . get_post_meta($order->id, '_shipping_Cédula', true) . '</p>';
+}

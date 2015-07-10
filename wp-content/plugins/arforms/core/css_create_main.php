@@ -636,7 +636,7 @@ if($error_font == "Other")
 
 if($newfont!="Arial" && $newfont!="Helvetica" && $newfont!="sans-serif" && $newfont!="Lucida Grande" && $newfont!="Lucida Sans Unicode" && $newfont!="Tahoma" && $newfont!="Times New Roman" && $newfont!="Courier New" && $newfont!="Verdana" && $newfont!="Geneva" && $newfont!="Courier" && $newfont!="Monospace" && $newfont!="Times" && $newfont!="")		
 {
-	if( is_ssl() )
+	if( is_ssl() or $arfssl == 1)
 		$googlefontbaseurl = "https://fonts.googleapis.com/css?family=";
 	else
 		$googlefontbaseurl = "http://fonts.googleapis.com/css?family=";	
@@ -645,7 +645,7 @@ if($newfont!="Arial" && $newfont!="Helvetica" && $newfont!="sans-serif" && $newf
 
 if($newfontother!="Arial" && $newfontother!="Helvetica" && $newfontother!="sans-serif" && $newfontother!="Lucida Grande" && $newfontother!="Lucida Sans Unicode" && $newfontother!="Tahoma" && $newfontother!="Times New Roman" && $newfontother!="Courier New" && $newfontother!="Verdana" && $newfontother!="Geneva" && $newfontother!="Courier" && $newfontother!="Monospace" && $newfontother!="Times" && $newfontother!="")
 {
-	if( is_ssl() )
+	if( is_ssl()  or $arfssl == 1)
 		$googlefontbaseurl = "https://fonts.googleapis.com/css?family=";
 	else
 		$googlefontbaseurl = "http://fonts.googleapis.com/css?family=";	
@@ -654,7 +654,7 @@ if($newfontother!="Arial" && $newfontother!="Helvetica" && $newfontother!="sans-
 
 if($newerror_font!="Arial" && $newerror_font!="Helvetica" && $newerror_font!="sans-serif" && $newerror_font!="Lucida Grande" && $newerror_font!="Lucida Sans Unicode" && $newerror_font!="Tahoma" && $newerror_font!="Times New Roman" && $newerror_font!="Courier New" && $newerror_font!="Verdana" && $newerror_font!="Geneva" && $newerror_font!="Courier" && $newerror_font!="Monospace" && $newerror_font!="Times" && $newerror_font!="")
 {	
-	if( is_ssl() )
+	if( is_ssl()  or $arfssl == 1)
 		$googlefontbaseurl = "https://fonts.googleapis.com/css?family=";
 	else
 		$googlefontbaseurl = "http://fonts.googleapis.com/css?family=";	
@@ -663,7 +663,7 @@ if($newerror_font!="Arial" && $newerror_font!="Helvetica" && $newerror_font!="sa
 
 if($arfsubmitfontfamily!="Arial" && $arfsubmitfontfamily!="Helvetica" && $arfsubmitfontfamily!="sans-serif" && $arfsubmitfontfamily!="Lucida Grande" && $arfsubmitfontfamily!="Lucida Sans Unicode" && $arfsubmitfontfamily!="Tahoma" && $arfsubmitfontfamily!="Times New Roman" && $arfsubmitfontfamily!="Courier New" && $arfsubmitfontfamily!="Verdana" && $arfsubmitfontfamily!="Geneva" && $arfsubmitfontfamily!="Courier" && $arfsubmitfontfamily!="Monospace" && $arfsubmitfontfamily!="Times" && $arfsubmitfontfamily!="")		
 {
-	if( is_ssl() )
+	if( is_ssl()  or $arfssl == 1)
 		$googlefontbaseurl = "https://fonts.googleapis.com/css?family=";
 	else
 		$googlefontbaseurl = "http://fonts.googleapis.com/css?family=";	
@@ -673,7 +673,7 @@ if($arfsubmitfontfamily!="Arial" && $arfsubmitfontfamily!="Helvetica" && $arfsub
 
 if($arf_title_font_family!="Arial" && $arf_title_font_family!="Helvetica" && $arf_title_font_family!="sans-serif" && $arf_title_font_family!="Lucida Grande" && $arf_title_font_family!="Lucida Sans Unicode" && $arf_title_font_family!="Tahoma" && $arf_title_font_family!="Times New Roman" && $arf_title_font_family!="Courier New" && $arf_title_font_family!="Verdana" && $arf_title_font_family!="Geneva" && $arf_title_font_family!="Courier" && $arf_title_font_family!="Monospace" && $arf_title_font_family!="Times" && $arf_title_font_family!="")		
 {
-	if( is_ssl() )
+	if( is_ssl()  or $arfssl == 1)
 		$googlefontbaseurl = "https://fonts.googleapis.com/css?family=";
 	else
 		$googlefontbaseurl = "http://fonts.googleapis.com/css?family=";	
@@ -711,7 +711,7 @@ background-repeat: no-repeat;
 
 .ar_main_div_<?php echo $form_id;?> .arfmainformfield.arf_column{clear:none;float:left;margin-right:20px;}
 
-.ar_main_div_<?php echo $form_id;?> p.description, .ar_main_div_<?php echo $form_id;?> div.description, .ar_main_div_<?php echo $form_id;?> div.arf_field_description, .ar_main_div_<?php echo $form_id;?> .help-block{margin:0;padding:0;font-family:<?php echo stripslashes($description_font) ?>;font-size:<?php echo $description_font_size ?>;color:<?php echo $description_color ?>;text-align:<?php echo $description_align ?>;font-style:<?php echo $description_style ?>;max-width:100%;width:<?php echo ($field_width == '') ? 'auto' : $field_width ?>; line-height: 20px;}
+.ar_main_div_<?php echo $form_id;?> p.description, .ar_main_div_<?php echo $form_id;?> div.description, .ar_main_div_<?php echo $form_id;?> div.arf_field_description, .ar_main_div_<?php echo $form_id;?> .help-block{margin:2px 0px 0px 0px;padding:0;font-family:<?php echo stripslashes($description_font) ?>;font-size:<?php echo $description_font_size ?>;color:<?php echo $description_color ?>;text-align:<?php echo $description_align ?>;font-style:<?php echo $description_style ?>;max-width:100%;width:<?php echo ($field_width == '') ? 'auto' : $field_width ?>; line-height: 20px;}
 
 .ar_main_div_<?php echo $form_id;?> .left_container p.description, .ar_main_div_<?php echo $form_id;?> .left_container div.description, .ar_main_div_<?php echo $form_id;?> .left_container div.arf_field_description, .ar_main_div_<?php echo $form_id;?> .left_container .help-block{margin-left:<?php echo $label_margin ?>px;}
 

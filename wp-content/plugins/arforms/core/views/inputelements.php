@@ -2,7 +2,7 @@
 /*
 Plugin Name: ARForms
 Description: Exclusive Wordpress Form Builder Plugin With Seven Most Popular E-Mail Marketing Tools Integration
-Version: 2.7
+Version: 2.7.3
 Plugin URI: http://www.arformsplugin.com/
 Author: Repute InfoSystems
 Author URI: http://reputeinfosystems.com/
@@ -297,10 +297,17 @@ if($field['size']!=1)
 				$checked = ($armainhelper->check_selected($checked_values, $field_val)) ? ' checked="checked"' : '';
 	
 				?><div class="arf_checkbox_style" id="frm_checkbox_<?php echo $field['id']?>-<?php echo $opt_key ?>"><?php 
-				if(!isset($atts) or !isset($atts['label']) or $atts['label']){ 
-				?><label for="field_<?php echo $field['id']?>-<?php echo $opt_key ?>"><input type="checkbox" name="<?php echo $field_name ?>[]" id="field_<?php echo $field['id']?>-<?php echo $opt_key ?>" value="<?php echo esc_attr($field_val); ?>" <?php echo $checked ?> <?php do_action('arffieldinputhtml', $field) ?> <?php if($k==0){?><?php if(isset($field['required']) and $field['required']){ echo 'data-validation-minchecked-minchecked="1" data-validation-minchecked-message="'.esc_attr($field['blank']).'"'; }?><?php }?> <?php echo $arfieldhelper->get_onchage_func($field); ?> style=" <?php echo $inline_css_without_style; ?>" /><?php echo $opt ?></label><?php 
+				if(!isset($atts) or !isset($atts['label']) or $atts['label']){
+                                    $_REQUEST['arfaction'] = ( isset( $_REQUEST['arfaction'] ) ) ? $_REQUEST['arfaction']  : "";
+				?><label for="field_<?php echo $field['id']?>-<?php echo $opt_key ?>"><input type="checkbox" name="<?php echo $field_name ?>[]" id="field_<?php echo $field['id']?>-<?php echo $opt_key ?>" value="<?php echo esc_attr($field_val); ?>" <?php echo $checked ?> <?php do_action('arffieldinputhtml', $field) ?> <?php if($k==0){?><?php if(isset($field['required']) and $field['required']){ echo 'data-validation-minchecked-minchecked="1" data-validation-minchecked-message="'.esc_attr($field['blank']).'"'; }?><?php } echo (@$_REQUEST['arfaction'] == 'preview') ? $arfieldhelper->get_onchage_func($field) : '';?> style=" <?php echo $inline_css_without_style; ?>" /><?php echo $opt ?></label>
+                          <?php
+                                if( @$_REQUEST['arfaction'] != 'preview' and $arfieldhelper->get_onchage_func($field) != ''){
+                                        
+                                   ?>
+                                    <script type="text/javascript">jQuery(document).ready(function(){jQuery('#field_<?php echo $field['id']?>-<?php echo $opt_key ?>').on('ifChanged', function(event){<?php echo trim(substr(trim(str_replace('onchange="','',$arfieldhelper->get_onchage_func($field))),0,-1)); ?> });});</script>
+                                    <?php 
+                                    }
 				}
-	
 	 		?></div><?php	
 		   $k++; } 
        	}

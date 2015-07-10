@@ -1,12 +1,9 @@
 <?php
 
-function loadMyScripts3(){
 add_action('wp_enqueue_scripts', 'layerslider_enqueue_content_res');
 add_action('admin_enqueue_scripts', 'layerslider_enqueue_admin_res');
 add_action('admin_enqueue_scripts', 'ls_load_google_fonts');
 add_action('wp_enqueue_scripts', 'ls_load_google_fonts');
-}
-add_action( 'wp_enqueue_scripts','loadMyScripts3' );
 
 function layerslider_enqueue_content_res() {
 

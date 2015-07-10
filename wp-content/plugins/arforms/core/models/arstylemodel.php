@@ -1110,7 +1110,8 @@ class arstylemodel{
 			$new_values[$k] = $v;
 		
 
-
+        $arfssl = (is_ssl()) ? 1 : 0;
+        
         $filename = FORMPATH .'/core/css_create_main.php';
 		
 

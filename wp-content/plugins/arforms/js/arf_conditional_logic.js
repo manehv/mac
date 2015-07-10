@@ -1,86 +1,96 @@
 //---------- for conditional logic ----------//
-function arf_rule_apply(form_key, field_id, dep_array){
-	
-	var object = jQuery('#form_'+form_key);
-	for( key in dep_array ) {
-		
-		var f_id = dep_array[key];
-		
-		var f_type = window['arf_cl'][form_key][f_id]['field_type'];
-		
-		var page_no = window['arf_cl'][form_key][f_id]['page'];
-			
-		var get_display = window['arf_cl'][form_key][f_id]['display'];
-		
-		var get_if_cond = window['arf_cl'][form_key][f_id]['if_cond'];
-		
-		var get_rules 	= window['arf_cl'][form_key][f_id]['rules'];
-		
-		var rule_cout   = get_rules.length;
-		
-		var matched = 0;
-		
-		jQuery.each(get_rules, function(index,element){
-			var rule_field_id 	= get_rules[index]['field_id'];
-			var rule_field_type	= get_rules[index]['field_type'];
-			var rule_operator 	= get_rules[index]['operator'];
-			var rule_value 		= get_rules[index]['value'];
-			if( calculate_rule(rule_field_id, rule_field_type, rule_operator, rule_value) ){
-				matched++;
-			}
-		});
-		
-		if( ( get_if_cond == 'all' && rule_cout == matched ) || ( get_if_cond == 'any' && matched > 0 ) ){
-			apply_rule_on_field(object, f_id, get_display, f_type, page_no);
-		} else {
-			apply_default_field(object, f_id, get_display, f_type, page_no);
-		}
-	}
-	
-	setTimeout(function(){
-			jQuery('div.arfmodal').not('#maincontainerdiv div.arfmodal, #arfformsettingpage div.arfmodal').each(function(){
-				var screenwidth = jQuery(window).width();
-				var windowHeight = jQuery(window).height()- Number(60);
-				var windowHeightOrg = jQuery(window).height();
-				var actualheight = jQuery(this).find('.arf_fieldset').height();
-				
-				if( screenwidth <= 770){
-					if(windowHeight > actualheight){
-						jQuery(this).find('.arf_fieldset').css('height',windowHeightOrg+'px');
-						jQuery(this).find('.arf_fieldset').css('min-height','100%');
-					}else{
-						jQuery(this).find('.arf_fieldset').css('height','auto');
-					}	
-				}				
-			});
-			
-			jQuery('div.arform_right_fly_form_block_right_main').each(function(){
-				var screenwidth = jQuery(window).width();
-				var windowHeight = jQuery(window).height()- Number(60) ;
-				var actualheight = jQuery(this).find('.arf_fieldset').height();
-				
-				if( screenwidth <= 770 ){
-					if( windowHeight > actualheight ){
-						jQuery(this).find('.arf_fieldset').css('height',windowHeight+'px');
-					} else {
-						jQuery(this).find('.arf_fieldset').css('height','auto');
-					}	
-				}
-			});
-			
-			jQuery('div.arform_left_fly_form_block_left_main').each(function(){
-				var screenwidth = jQuery(window).width();
-				var windowHeight = jQuery(window).height()- Number(60) ;
-				var actualheight = jQuery(this).find('.arf_fieldset').height();
-				if( screenwidth <= 770 ){
-					if( windowHeight > actualheight ){
-						jQuery(this).find('.arf_fieldset').css('height',windowHeight+'px');
-					} else {
-						jQuery(this).find('.arf_fieldset').css('height','auto');
-					}	
-				}
-			});
-		},500);		
+function arf_rule_apply(form_key, field_id, dep_array) {
+
+    var object = jQuery('#form_' + form_key);
+    var counter = 1;
+    var total_rule = dep_array.length;
+    
+    for (mykey in dep_array) {
+
+        if (counter > total_rule) {
+            //console.log("INSIDE");
+            return false;
+        }
+
+        var f_id = dep_array[mykey];
+
+        var f_type = window['arf_cl'][form_key][f_id]['field_type'];
+
+        var page_no = window['arf_cl'][form_key][f_id]['page'];
+
+        var get_display = window['arf_cl'][form_key][f_id]['display'];
+
+        var get_if_cond = window['arf_cl'][form_key][f_id]['if_cond'];
+
+        var get_rules = window['arf_cl'][form_key][f_id]['rules'];
+
+        var rule_cout = get_rules.length;
+
+        var matched = 0;
+
+        jQuery.each(get_rules, function (index, element) {
+            var rule_field_id = get_rules[index]['field_id'];
+            var rule_field_type = get_rules[index]['field_type'];
+            var rule_operator = get_rules[index]['operator'];
+            var rule_value = get_rules[index]['value'];
+            if (calculate_rule(rule_field_id, rule_field_type, rule_operator, rule_value)) {
+                matched++;
+            }
+        });
+
+        if ((get_if_cond == 'all' && rule_cout == matched) || (get_if_cond == 'any' && matched > 0)) {
+            apply_rule_on_field(object, f_id, get_display, f_type, page_no);
+        } else {
+            apply_default_field(object, f_id, get_display, f_type, page_no);
+        }
+        counter++;
+
+    }
+
+    setTimeout(function () {
+        jQuery('div.arfmodal').not('#maincontainerdiv div.arfmodal, #arfformsettingpage div.arfmodal').each(function () {
+            var screenwidth = jQuery(window).width();
+            var windowHeight = jQuery(window).height() - Number(60);
+            var windowHeightOrg = jQuery(window).height();
+            var actualheight = jQuery(this).find('.arf_fieldset').height();
+
+            if (screenwidth <= 770) {
+                if (windowHeight > actualheight) {
+                    jQuery(this).find('.arf_fieldset').css('height', windowHeightOrg + 'px');
+                    jQuery(this).find('.arf_fieldset').css('min-height', '100%');
+                } else {
+                    jQuery(this).find('.arf_fieldset').css('height', 'auto');
+                }
+            }
+        });
+
+        jQuery('div.arform_right_fly_form_block_right_main').each(function () {
+            var screenwidth = jQuery(window).width();
+            var windowHeight = jQuery(window).height() - Number(60);
+            var actualheight = jQuery(this).find('.arf_fieldset').height();
+
+            if (screenwidth <= 770) {
+                if (windowHeight > actualheight) {
+                    jQuery(this).find('.arf_fieldset').css('height', windowHeight + 'px');
+                } else {
+                    jQuery(this).find('.arf_fieldset').css('height', 'auto');
+                }
+            }
+        });
+
+        jQuery('div.arform_left_fly_form_block_left_main').each(function () {
+            var screenwidth = jQuery(window).width();
+            var windowHeight = jQuery(window).height() - Number(60);
+            var actualheight = jQuery(this).find('.arf_fieldset').height();
+            if (screenwidth <= 770) {
+                if (windowHeight > actualheight) {
+                    jQuery(this).find('.arf_fieldset').css('height', windowHeight + 'px');
+                } else {
+                    jQuery(this).find('.arf_fieldset').css('height', 'auto');
+                }
+            }
+        });
+    }, 500);
 }
 
 function calculate_rule(rule_field_id, rule_field_type, rule_operator, rule_value){
@@ -511,7 +521,7 @@ function apply_default_field(object, f_id, get_display, f_type, page_no){
 		var data_hide = jQuery('#get_hidden_pages_'+form_id).val();
 		
 		page_no  = page_no ? page_no : 1;
-		page_nav = parseInt(page_no) + 1
+		page_nav = parseInt(page_no) + 1;
 		
 		if( get_display == 'hide' ) {
 			
@@ -670,7 +680,7 @@ function apply_default_field(object, f_id, get_display, f_type, page_no){
 				jQuery(object).find('#page_last').show();
 				jQuery(object).find('#page_last .arf_submit_div').show();
 				jQuery(object).find('#submit_form_'+form_id).val('0');
-			
+				arf_clear_page_break_fields( 'page_'+(parseInt(current_pages)+1), form_id );
 			} else {
 			 	
 				if( total_pages == page_page_no && page_page_no == current_pages ){					
@@ -717,6 +727,7 @@ function apply_default_field(object, f_id, get_display, f_type, page_no){
 					
 					
 				}
+				arf_clear_page_break_fields( 'page_'+(parseInt(current_pages)+1), form_id);
 			}
 			//for first page
 			
@@ -789,7 +800,8 @@ function apply_default_field(object, f_id, get_display, f_type, page_no){
 			} else if( get_display == 'hide' ) {
 				jQuery(object).find('#heading_'+f_id).slideDown('slow');
 			}
-		
+                        var form_id = jQuery(object).find('input[name="form_id"]').val();
+			arf_clear_page_break_fields( 'heading_'+f_id, form_id);
 		} else {
 			
 			if( get_display == 'show' ) {
@@ -1570,4 +1582,21 @@ function arf_change_pagenavigation(object, current_page_number, total_page_numbe
 	var to_width = ( 100 / total_page_number );
 		to_width = to_width.toFixed(3);
 	jQuery(object).find('.arf_wizard .page_break_nav').css('width', to_width+'%');
+}
+
+function arf_clear_page_break_fields( page_id, form_id ){
+	
+    jQuery('.ar_main_div_'+form_id).find('#'+page_id).find('input[type="file"]').each(function(){
+        jQuery(this).val('');
+        jQuery(this).attr('file-valid','true');
+        var field_id = jQuery(this).attr('id');
+        field_id = field_id.replace('field_','');
+        jQuery('#file_name_'+field_id).html('');
+        if( jQuery(this).parents('.controls').next().hasClass('popover') ){
+            jQuery(this).parents('.controls').next().hide();
+        }
+        
+        jQuery('#remove_'+field_id).trigger('click');
+
+    });
 }

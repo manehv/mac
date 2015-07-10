@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Simplr User Registration Form Plus\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-12-24 23:24+0100\n"
-"PO-Revision-Date: Mon May 04 2015 16:34:03 GMT-0500 (COT)\n"
+"PO-Revision-Date: Mon Jun 01 2015 12:41:34 GMT-0500 (COT)\n"
 "Last-Translator: manuel <groupde@gmail.com>\n"
 "Language-Team: \n"
 "Language: Spanish (Colombia)\n"
@@ -173,11 +173,11 @@ msgstr " es un campo obligatorio."
 
 #: simplr_form_functions.php:237
 msgid " Please check your email for confirmation."
-msgstr "Revisa tu email para confirmación."
+msgstr "Recibirás un correo de confirmación, revisa tu bandeja de spam."
 
 #: simplr_form_functions.php:239
 msgid "Your Registration was successful."
-msgstr "Registro exitoso."
+msgstr "Registro exitoso. "
 
 #: simplr_form_functions.php:257
 msgid "A new user registered for"

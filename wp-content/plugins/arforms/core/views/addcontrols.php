@@ -2,7 +2,7 @@
 /*
 Plugin Name: ARForms
 Description: Exclusive Wordpress Form Builder Plugin With Seven Most Popular E-Mail Marketing Tools Integration
-Version: 2.7
+Version: 2.7.3
 Plugin URI: http://www.arformsplugin.com/
 Author: Repute InfoSystems
 Author URI: http://reputeinfosystems.com/
@@ -558,15 +558,6 @@ function delete_form_bg_img(){
                                 <div class=" <?php echo $floating_class_1; ?>" style=" <?php echo $frm_width_drpdwn_val;?>">
                                     <input type="text" name="arffw" style=" <?php echo $frm_width_txtbx_css; ?>" class="txtxbox_widget" value="<?php echo esc_attr($newarr['arfmainformwidth']) ?>"/> 
                                     
-                                    <?php /*?><div class="sltstandard1" style="float:left;padding-left:5px;">
-                                    	<select name="arffu" id="arfformunit" class="demo-default" onchange="change_style_unit(this.value);" style="width:53px;" data-width='53px'>
-                                        	<option value="px" <?php selected($newarr['form_width_unit'], 'px') ?>><?php _e('px', 'ARForms') ?></option>
-                                            <option value="%" <?php selected($newarr['form_width_unit'], '%') ?>><?php _e('%', 'ARForms') ?></option>
-										</select> 
-                                    </div><?php */?>
-                                    
-                                    
-                                    
                                     <div class="sltstandard1" style="float:left;padding-left:5px;">
                                         <input id="arffu" name="arffu" value="<?php echo $newarr['form_width_unit'];?>" type="hidden" onchange="change_style_unit(this.value);">
                                         <dl class="arf_selectbox" data-name="arffu" data-id="arffu" style="width:53px;">
@@ -1058,54 +1049,6 @@ function delete_form_bg_img(){
             
                                                 <div class="lblsubheading" style="width:50px; padding-left:10px; padding-top:7px; height:20px; float:left;"><?php _e('Family', 'ARForms') ?></div>
                                                 
-                                                <?php /*?><div class="sltstandard2" style="float:right; margin-left:70px;  margin-bottom:10px; position:absolute;">
-                                                <?php $get_googlefonts_data = $arformcontroller->get_arf_google_fonts(); ?>
-                                                <select name="arftff" id="arftitlefontsetting" style="width:200px;" data-width='200px' data-size='15' onchange="Changefontsettinghtml('titlefontsettingpopup','arftitlefontsetting','arfformtitleweightsetting','arfformtitlefontsizesetting');">	
-                                                    <optgroup label="Default Fonts">
-                                                        <option value="Arial" <?php selected($newarr['arftitlefontfamily'], 'Arial') ?>>Arial</option>
-                                        
-                                                        <option value="Helvetica" <?php selected($newarr['arftitlefontfamily'], 'Helvetica') ?>>Helvetica</option>
-                                                        
-                                                        <option value="sans-serif" <?php selected($newarr['arftitlefontfamily'], 'sans-serif') ?>>sans-serif</option>
-                                                        
-                                                        <option value="Lucida Grande" <?php selected($newarr['arftitlefontfamily'], 'Lucida Grande') ?>>Lucida Grande</option>
-                                                        
-                                                        <option value="Lucida Sans Unicode" <?php selected($newarr['arftitlefontfamily'], 'Lucida Sans Unicode') ?>>Lucida Sans Unicode</option>
-                                                        
-                                                        <option value="Tahoma" <?php selected($newarr['arftitlefontfamily'], 'Tahoma') ?>>Tahoma</option>
-                                                        
-                                                        <option value="Times New Roman" <?php selected($newarr['arftitlefontfamily'], 'Times New Roman') ?>>Times New Roman</option>
-                                                        
-                                                        <option value="Courier New" <?php selected($newarr['arftitlefontfamily'], 'Courier New') ?>>Courier New</option>
-                                                        
-                                                        <option value="Verdana" <?php selected($newarr['arftitlefontfamily'], 'Verdana') ?>>Verdana</option>
-                                                        
-                                                        <option value="Geneva" <?php selected($newarr['arftitlefontfamily'], 'Geneva') ?>>Geneva</option>
-                                                        
-                                                        <option value="Courier" <?php selected($newarr['arftitlefontfamily'], 'Courier') ?>>Courier</option>
-                                                                
-                                                        <option value="Monospace" <?php selected($newarr['arftitlefontfamily'], 'Monospace') ?>>Monospace</option>
-                                                                
-                                                        <option value="Times" <?php selected($newarr['arftitlefontfamily'], 'Times') ?>>Times</option>
-
-                
-                                                    </optgroup>
-                                                    <optgroup label="Google Fonts">
-                                                        <?php
-                                                            if(count($get_googlefonts_data)>0) {
-                                                                foreach($get_googlefonts_data as $goglefontsfamily)
-                                                                {
-                                                                    echo "<option value='".$goglefontsfamily."' ".selected($newarr['arftitlefontfamily'], $goglefontsfamily)." >".$goglefontsfamily."</option>";
-                                                                }
-                                                            }
-                                                        ?>
-                                                    </optgroup>
-                                                </select>
-                                                
-                                                </div><?php */?>
-                                                
-                                                
-                                                
                                                 <div class="sltstandard2" style="float:right; margin-left:70px;  margin-bottom:10px; position:absolute;">
 												  <?php $get_googlefonts_data = $arformcontroller->get_arf_google_fonts(); ?>
                                                   <input id="arftitlefontsetting" name="arftff" value="<?php echo $newarr['arftitlefontfamily'];?>" type="hidden" onChange="Changefontsettinghtml('titlefontsettingpopup','arftitlefontsetting','arfformtitleweightsetting','arfformtitlefontsizesetting');">
@@ -1146,22 +1089,6 @@ function delete_form_bg_img(){
                                         	<div class="field-group clearfix subfield" style="margin-top:10px;">
             									<div class="lblsubheading" style="width:50px; padding-left:10px; padding-top:7px; height:20px; float:left;"><?php _e('Style', 'ARForms') ?></div>
                             
-                                                <?php /*?><div class="sltstandard1" style="float:right; margin-left:70px; margin-bottom:10px; position:absolute;">
-                                                
-                                                <select name="arfftws" id="arfformtitleweightsetting" style="width:100px;" data-width='100px' onchange="Changefontsettinghtml('titlefontsettingpopup','arftitlefontsetting','arfformtitleweightsetting','arfformtitlefontsizesetting');">
-                            
-                            
-                                                    <option value="normal" <?php selected($newarr['check_weight_form_title'], 'normal') ?>><?php _e('normal', 'ARForms');?></option>
-                            
-                            
-                                                    <option value="bold" <?php selected($newarr['check_weight_form_title'], 'bold') ?>><?php _e('bold', 'ARForms');?></option>
-                                                    
-                                                    <option value="italic" <?php selected($newarr['check_weight_form_title'], 'italic') ?>><?php _e('italic', 'ARForms');?></option>
-                            
-                                                </select>
-                                                
-                                                </div><?php */?>
-                                                
                                                 <div class="sltstandard1" style="float:right; margin-left:70px; margin-bottom:10px; position:absolute;">
                                                   <input id="arfformtitleweightsetting" name="arfftws" value="<?php echo $newarr['check_weight_form_title'];?>" type="hidden" onchange="Changefontsettinghtml('titlefontsettingpopup','arftitlefontsetting','arfformtitleweightsetting','arfformtitlefontsizesetting');">
                                                   <dl class="arf_selectbox" data-name="arfftws" data-id="arfformtitleweightsetting" style="width:80px;">
@@ -1184,46 +1111,6 @@ function delete_form_bg_img(){
                                             <div class="field-group clearfix subfield" style="margin-top:10px;">
             									<div class="lblsubheading" style="width:50px; padding-left:10px; padding-top:7px; height:20px; float:left;"><?php _e('Size', 'ARForms') ?></div>
                                                 <div style="margin-left:70px; margin-bottom:10px;">
-                                                    <?php /*?><div class="sltstandard1" style="float:left; position:absolute;">
-                                                    
-                                                    <select name="arfftfss" id="arfformtitlefontsizesetting" style="width:100px;" data-width='100px' data-size='15' onchange="Changefontsettinghtml('titlefontsettingpopup','arftitlefontsetting','arfformtitleweightsetting','arfformtitlefontsizesetting');">
-                                                        <?php for($i = 8; $i <= 20; $i ++ ) { ?>
-                                                        <option value="<?php echo $i?>" <?php selected($newarr['form_title_font_size'], $i) ?>><?php _e($i, 'ARForms') ?></option>
-                                                        <?php } ?>
-                                                        <?php for($i = 22; $i <= 28; $i=$i+2 ) { ?>
-                                                        <option value="<?php echo $i?>" <?php selected($newarr['form_title_font_size'], $i) ?>><?php _e($i, 'ARForms') ?></option>
-                                                        <?php } ?>
-                                                        <?php for($i = 32; $i <= 40; $i=$i+4 ) { ?>
-                                                        <option value="<?php echo $i?>" <?php selected($newarr['form_title_font_size'], $i) ?>><?php _e($i, 'ARForms') ?></option>
-                                                        <?php } ?>
-                                                    </select>
-                                                    
-                                                    </div><?php */?>
-                                                    
-                                                    <?php /*?><div class="sltstandard1" style="float:left; position:absolute;">
-                                                      <input id="arfformtitlefontsizesetting" name="arfftfss" value="<?php echo $newarr['form_title_font_size'];?>" type="hidden" onchange="Changefontsettinghtml('titlefontsettingpopup','arftitlefontsetting','arfformtitleweightsetting','arfformtitlefontsizesetting');">
-                                                      <dl class="arf_selectbox" data-name="arfftfss" data-id="arfformtitlefontsizesetting" style="width:80px;">
-                                                        <dt><span><?php echo $newarr['form_title_font_size'];?></span>
-                                                          <input value="<?php echo $newarr['form_title_font_size'];?>" style="display:none;width:68px;" class="arf_autocomplete" type="text">
-                                                          <i class="fa fa-caret-down fa-lg"></i></dt>
-                                                        <dd>
-                                                          <ul style="display: none;" data-id="arfformtitlefontsizesetting">
-                                                            <?php for($i = 8; $i <= 20; $i ++ ) { ?>
-                                                            <li class="arf_selectbox_option" data-value="<?php echo $i?>" data-label="<?php echo $i?>"><?php _e($i, 'ARForms'); ?></li>
-                                                            <?php } ?>
-                                                            <?php for($i = 22; $i <= 28; $i=$i+2 ) { ?>
-                                                            <li class="arf_selectbox_option" data-value="<?php echo $i?>" data-label="<?php echo $i?>"><?php _e($i, 'ARForms'); ?></li>
-                                                            <?php } ?>
-                                                            <?php for($i = 32; $i <= 40; $i=$i+4 ) { ?>
-                                                            <li class="arf_selectbox_option" data-value="<?php echo $i?>" data-label="<?php echo $i?>"><?php _e($i, 'ARForms'); ?></li>
-                                                            <?php } ?>
-                                                            
-                                                          </ul>
-                                                        </dd>
-                                                      </dl>
-                                                    </div><?php */?>
-                                                    
-                                                    
                                                     <div class="sltstandard1" style="float:left; position:absolute;">
                                                       <input id="arfformtitlefontsizesetting" name="arfftfss" value="<?php echo $newarr['form_title_font_size'];?>" type="hidden" onchange="Changefontsettinghtml('titlefontsettingpopup','arftitlefontsetting','arfformtitleweightsetting','arfformtitlefontsizesetting');">
                                                       <dl class="arf_selectbox" data-name="arfftfss" data-id="arfformtitlefontsizesetting" style="width:80px;">
@@ -1795,52 +1682,6 @@ function delete_form_bg_img(){
 												?>
                                                 <div class="lblsubheading" style=" <?php echo $font_family_lbl; ?>"><?php _e('Family', 'ARForms') ?></div>
                                                 
-                                                <?php /*?><div class="sltstandard2" style=" <?php echo $font_family_opt; ?>">
-                                                <?php $get_googlefonts_data = $arformcontroller->get_arf_google_fonts(); ?>
-                                                <select name="arfmfs" id="arfmainfontsetting" style="width:200px;" data-width='200px' data-size='15' onchange="Changefontsettinghtml('labelfontsettingpopup','arfmainfontsetting','arfmainfontweightsetting','arffontsizesetting');">	
-                                                    <optgroup label="Default Fonts">
-                                                        <option value="Arial" <?php selected($newarr['font'], 'Arial') ?>>Arial</option>
-                                        
-                                                        <option value="Helvetica" <?php selected($newarr['font'], 'Helvetica') ?>>Helvetica</option>
-                                                        
-                                                        <option value="sans-serif" <?php selected($newarr['font'], 'sans-serif') ?>>sans-serif</option>
-                                                        
-                                                        <option value="Lucida Grande" <?php selected($newarr['font'], 'Lucida Grande') ?>>Lucida Grande</option>
-                                                        
-                                                        <option value="Lucida Sans Unicode" <?php selected($newarr['font'], 'Lucida Sans Unicode') ?>>Lucida Sans Unicode</option>
-                                                        
-                                                        <option value="Tahoma" <?php selected($newarr['font'], 'Tahoma') ?>>Tahoma</option>
-                                                        
-                                                        <option value="Times New Roman" <?php selected($newarr['font'], 'Times New Roman') ?>>Times New Roman</option>
-                                                        
-                                                        <option value="Courier New" <?php selected($newarr['font'], 'Courier New') ?>>Courier New</option>
-                                                        
-                                                        <option value="Verdana" <?php selected($newarr['font'], 'Verdana') ?>>Verdana</option>
-                                                        
-                                                        <option value="Geneva" <?php selected($newarr['font'], 'Geneva') ?>>Geneva</option>
-                                                        
-                                                        <option value="Courier" <?php selected($newarr['font'], 'Courier') ?>>Courier</option>
-                                                                
-                                                        <option value="Monospace" <?php selected($newarr['font'], 'Monospace') ?>>Monospace</option>
-                                                                
-                                                        <option value="Times" <?php selected($newarr['font'], 'Times') ?>>Times</option>
-
-                
-                                                    </optgroup>
-                                                    <optgroup label="Google Fonts">
-                                                        <?php
-                                                            if(count($get_googlefonts_data)>0) {
-                                                                foreach($get_googlefonts_data as $goglefontsfamily)
-                                                                {
-                                                                    echo "<option value='".$goglefontsfamily."' ".selected($newarr['font'], $goglefontsfamily)." >".$goglefontsfamily."</option>";
-                                                                }
-                                                            }
-                                                        ?>
-                                                    </optgroup>
-                                                </select>
-                                                
-                                                </div><?php */?>
-                                                
                                                 <div class="sltstandard2" style=" <?php echo $font_family_opt; ?>">
 												  <?php $get_googlefonts_data = $arformcontroller->get_arf_google_fonts(); ?>
                                                   <input id="arfmainfontsetting" name="arfmfs" value="<?php echo $newarr['font'];?>" type="hidden" onchange="Changefontsettinghtml('labelfontsettingpopup','arfmainfontsetting','arfmainfontweightsetting','arffontsizesetting');">
@@ -1896,22 +1737,6 @@ function delete_form_bg_img(){
 													}
 												?>
             									<div class="lblsubheading" style=" <?php echo $font_style_lbl; ?>"><?php _e('Style', 'ARForms') ?></div>
-                            
-                                                <?php /*?><div class="sltstandard1" style=" <?php echo $font_style_opt; ?>">
-                                                
-                                                <select name="arfmfws" id="arfmainfontweightsetting" style="width:100px;" data-width='100px' onchange="Changefontsettinghtml('labelfontsettingpopup','arfmainfontsetting','arfmainfontweightsetting','arffontsizesetting');">
-                            
-                            
-                                                    <option value="normal" <?php selected($newarr['weight'], 'normal') ?>><?php _e('normal', 'ARForms');?></option>
-                            
-                            
-                                                    <option value="bold" <?php selected($newarr['weight'], 'bold') ?>><?php _e('bold', 'ARForms');?></option>
-                                                    
-                                                    <option value="italic" <?php selected($newarr['weight'], 'italic') ?>><?php _e('italic', 'ARForms');?></option>
-                            
-                                                </select>
-                                                
-                                                </div><?php */?>
                                                 
                                                 <div class="sltstandard1" style=" <?php echo $font_style_opt; ?>">
                                                   <input id="arfmainfontweightsetting" name="arfmfws" value="<?php echo $newarr['weight'];?>" type="hidden" onChange="Changefontsettinghtml('labelfontsettingpopup','arfmainfontsetting','arfmainfontweightsetting','arffontsizesetting');">
@@ -1952,18 +1777,6 @@ function delete_form_bg_img(){
             									<div class="lblsubheading" style=" <?php echo $font_size_lbl; ?>"><?php _e('Size', 'ARForms') ?></div>
                                                 <div style=" <?php echo $font_size_opt_main; ?>">
                                                     <div class="sltstandard1" style=" <?php echo $font_size_opt; ?>">
-                                                    
-                                                    <?php /*?><select name="arffss" id="arffontsizesetting" style="width:100px;" data-width='100px' data-size='15' onchange="Changefontsettinghtml('labelfontsettingpopup','arfmainfontsetting','arfmainfontweightsetting','arffontsizesetting');">
-                                                        <?php for($i = 8; $i <= 20; $i ++ ) { ?>
-                                                        <option value="<?php echo $i?>" <?php selected($newarr['font_size'], $i) ?>><?php _e($i, 'ARForms') ?></option>
-                                                        <?php } ?>
-                                                        <?php for($i = 22; $i <= 28; $i=$i+2 ) { ?>
-                                                        <option value="<?php echo $i?>" <?php selected($newarr['font_size'], $i) ?>><?php _e($i, 'ARForms') ?></option>
-                                                        <?php } ?>
-                                                        <?php for($i = 32; $i <= 40; $i=$i+4 ) { ?>
-                                                        <option value="<?php echo $i?>" <?php selected($newarr['font_size'], $i) ?>><?php _e($i, 'ARForms') ?></option>
-                                                        <?php } ?>
-                                                    </select><?php */?>
                                                     
                                                       <input id="arffontsizesetting" name="arffss" value="<?php echo $newarr['font_size'];?>" type="hidden" onChange="Changefontsettinghtml('labelfontsettingpopup','arfmainfontsetting','arfmainfontweightsetting','arffontsizesetting');">
                                                       <dl class="arf_selectbox" data-name="arffss" data-id="arffontsizesetting" style="width:80px;">
@@ -2047,18 +1860,6 @@ function delete_form_bg_img(){
                                 <div class="arf_float_left" style=" <?php echo $field_desc_size_css; ?>">
                                                     
                                 <div class="sltstandard1" style=" <?php echo $field_desc_size_opt; ?>">
-                                
-                                <?php /*?><select name="arfdfss" id="arfdescfontsizesetting" style="width:142px;" data-width='142px' data-size='10'>	
-                                        <?php for($i = 8; $i <= 20; $i ++ ) { ?>
-                                        <option value="<?php echo $i?>" <?php selected($newarr['arfdescfontsizesetting'], $i) ?>><?php _e($i, 'ARForms') ?></option>
-                                        <?php } ?>
-                                        <?php for($i = 22; $i <= 28; $i=$i+2 ) { ?>
-                                        <option value="<?php echo $i?>" <?php selected($newarr['arfdescfontsizesetting'], $i) ?>><?php _e($i, 'ARForms') ?></option>
-                                        <?php } ?>
-                                        <?php for($i = 32; $i <= 40; $i=$i+4 ) { ?>
-                                        <option value="<?php echo $i?>" <?php selected($newarr['arfdescfontsizesetting'], $i) ?>><?php _e($i, 'ARForms') ?></option>
-                                        <?php } ?>
-                                </select><?php */?>
                                 
                                 
                                 <input id="arfdescfontsizesetting" name="arfdfss" value="<?php echo $newarr['arfdescfontsizesetting'];?>" type="hidden">
@@ -2169,11 +1970,6 @@ function delete_form_bg_img(){
                                     
                                     <div class="sltstandard1" style=" <?php echo $field_width_opt; ?>">
                                     
-                                    <?php /*?><select name="arffiu" onchange="change_date_format();" id="arffieldunit" style="width:53px;" data-width='53px'>
-                                            <option value="px" <?php selected($newarr['field_width_unit'], 'px') ?>><?php _e('px', 'ARForms') ?></option>
-                                            <option value="%" <?php selected($newarr['field_width_unit'], '%') ?>><?php _e('%', 'ARForms') ?></option>
-                                    </select><?php */?>
-                                    
                                     <input id="arffieldunit" name="arffiu" value="<?php echo $newarr['field_width_unit'];?>" type="hidden" onchange="change_date_format();" >
                                         <dl class="arf_selectbox" data-name="arffiu" data-id="arffieldunit" style="width:53px;">
                                           <dt><span><?php echo $newarr['field_width_unit'];?></span>
@@ -2266,52 +2062,6 @@ function delete_form_bg_img(){
             
                                                 <div class="lblsubheading" style=" <?php echo $font_family_lbl; ?>"><?php _e('Family', 'ARForms') ?></div>
                                                 
-                                                <?php /*?><div class="sltstandard2" style=" <?php echo $font_family_opt; ?>">
-                                                <select name="arfcbfs" id="arfcheckboxfontsetting" style="width:200px;" data-width='200px' data-size="15" onchange="Changefontsettinghtml('inputfontsettingpopup','arfcheckboxfontsetting','arfcheckboxweightsetting','arffieldfontsizesetting');">
-                                                    <optgroup label="Default Fonts">
-                                                        <option value="Arial" <?php selected($newarr['check_font'], 'Arial') ?>>Arial</option>
-                            
-                                                        <option value="Helvetica" <?php selected($newarr['check_font'], 'Helvetica') ?>>Helvetica</option>
-                                                        
-                                                        <option value="sans-serif" <?php selected($newarr['check_font'], 'sans-serif') ?>>sans-serif</option>
-                                                        
-                                                        <option value="Lucida Grande" <?php selected($newarr['check_font'], 'Lucida Grande') ?>>Lucida Grande</option>
-                                                        
-                                                        <option value="Lucida Sans Unicode" <?php selected($newarr['check_font'], 'Lucida Sans Unicode') ?>>Lucida Sans Unicode</option>
-                                                        
-                                                        <option value="Tahoma" <?php selected($newarr['check_font'], 'Tahoma') ?>>Tahoma</option>
-                                                        
-                                                        <option value="Times New Roman" <?php selected($newarr['check_font'], 'Times New Roman') ?>>Times New Roman</option>
-                                                
-                                                        <option value="Courier New" <?php selected($newarr['check_font'], 'Courier New') ?>>Courier New</option>
-                                                
-                                                        <option value="Verdana" <?php selected($newarr['check_font'], 'Verdana') ?>>Verdana</option>
-                                                
-                                                        <option value="Geneva" <?php selected($newarr['check_font'], 'Geneva') ?>>Geneva</option>
-                                                        
-                                                        <option value="Courier" <?php selected($newarr['check_font'], 'Courier') ?>>Courier</option>
-                                                        
-                                                        <option value="Monospace" <?php selected($newarr['check_font'], 'Monospace') ?>>Monospace</option>
-                                                        
-                                                        <option value="Times" <?php selected($newarr['check_font'], 'Times') ?>>Times</option>
-                                                        
-                                                    </optgroup>
-                                                    <optgroup label="Google Fonts">
-                                                        <?php
-                                                            if(count($get_googlefonts_data)>0) {
-                                                                foreach($get_googlefonts_data as $goglefontsfamily)
-                                                                {
-                                                                    echo "<option value='".$goglefontsfamily."' ".selected($newarr['check_font'], $goglefontsfamily)." >".$goglefontsfamily."</option>";
-                                                                }
-                                                            }
-                                                        ?>
-                                                    </optgroup>
-                                                    
-                                                </select>
-                                                
-                                                </div><?php */?>
-                                                
-                                                
                                                 <div class="sltstandard2" style=" <?php echo $font_family_opt; ?>">
                                                   <input id="arfcheckboxfontsetting" name="arfcbfs" value="<?php echo $newarr['check_font'];?>" type="hidden" onchange="Changefontsettinghtml('inputfontsettingpopup','arfcheckboxfontsetting','arfcheckboxweightsetting','arffieldfontsizesetting');">
                                                   <dl class="arf_selectbox" data-name="arfcbfs" data-id="arfcheckboxfontsetting" style="width:180px;">
@@ -2363,22 +2113,6 @@ function delete_form_bg_img(){
 											?>
             									<div class="lblsubheading" style=" <?php echo $font_style_lbl; ?>"><?php _e('Style', 'ARForms') ?></div>
                             
-                                                <?php /*?><div class="sltstandard1" style=" <?php echo $font_style_opt; ?>">
-                                                
-                                                <select name="arfcbws" id="arfcheckboxweightsetting" style="width:100px;" data-width='100px' onchange="Changefontsettinghtml('inputfontsettingpopup','arfcheckboxfontsetting','arfcheckboxweightsetting','arffieldfontsizesetting');">
-            
-            
-                                                    <option value="normal" <?php selected($newarr['check_weight'], 'normal') ?>><?php _e('normal', 'ARForms') ?></option>
-                        
-                                                    <option value="bold" <?php selected($newarr['check_weight'], 'bold') ?>><?php _e('bold', 'ARForms') ?></option>
-                                                    
-                                                    <option value="italic" <?php selected($newarr['check_weight'], 'italic') ?>><?php _e('italic', 'ARForms') ?></option>
-                        
-                                                </select>
-                                                
-                                                </div><?php */?>
-                                                
-                                                
                                                 <div class="sltstandard1" style=" <?php echo $font_style_opt; ?>">
                                                   <input id="arfcheckboxweightsetting" name="arfcbws" value="<?php echo $newarr['check_weight'];?>" type="hidden" onchange="Changefontsettinghtml('inputfontsettingpopup','arfcheckboxfontsetting','arfcheckboxweightsetting','arffieldfontsizesetting');">
                                                   <dl class="arf_selectbox" data-name="arfcbws" data-id="arfcheckboxweightsetting" style="width:80px;">
@@ -2418,18 +2152,6 @@ function delete_form_bg_img(){
             									<div class="lblsubheading" style=" <?php echo $font_size_lbl; ?>"><?php _e('Size', 'ARForms') ?></div>
                                                 <div style=" <?php echo $font_size_opt_wrap; ?>">
                                                     <div class="sltstandard1" style=" <?php echo $font_style_opt; ?>">
-                                                    
-                                                    <?php /*?><select name="arfffss" id="arffieldfontsizesetting" style="width:100px;" data-width='100px' data-size='15' onchange="Changefontsettinghtml('inputfontsettingpopup','arfcheckboxfontsetting','arfcheckboxweightsetting','arffieldfontsizesetting');">	
-															<?php for($i = 8; $i <= 20; $i ++ ) { ?>
-                                                            <option value="<?php echo $i?>" <?php selected($newarr['field_font_size'], $i) ?>><?php _e($i, 'ARForms') ?></option>
-                                                            <?php } ?>
-                                                            <?php for($i = 22; $i <= 28; $i=$i+2 ) { ?>
-                                                            <option value="<?php echo $i?>" <?php selected($newarr['field_font_size'], $i) ?>><?php _e($i, 'ARForms') ?></option>
-                                                            <?php } ?>
-                                                            <?php for($i = 32; $i <= 40; $i=$i+4 ) { ?>
-                                                            <option value="<?php echo $i?>" <?php selected($newarr['field_font_size'], $i) ?>><?php _e($i, 'ARForms') ?></option>
-                                                            <?php } ?>
-                                                    </select><?php */?>
                                                     
                                                     <input id="arffieldfontsizesetting" name="arfffss" value="<?php echo $newarr['field_font_size'];?>" type="hidden" onchange="Changefontsettinghtml('inputfontsettingpopup','arfcheckboxfontsetting','arfcheckboxweightsetting','arffieldfontsizesetting');">
                                                     <dl class="arf_selectbox" data-name="arfffss" data-id="arffieldfontsizesetting" style="width:80px;">
@@ -2962,24 +2684,7 @@ function delete_form_bg_img(){
             
                                 <div class="sltstandard1" style=" <?php echo $calender_theme_opt; ?>">
                                 
-                                <?php /*?><select name="arffths" style="line-height:1;width:142px;" data-width='142px'>
-            
-            
-                                    <?php 
-            
-            							$jquery_themes = $armainhelper->jquery_themes();
-                                        foreach($jquery_themes as $theme_name => $theme_title){  ?>
-            
-            
-                                    <option value="<?php echo $theme_name ?>" id="theme_<?php echo $theme_name ?>" <?php selected($theme_name, $newarr['arfcalthemename']) ?>><?php echo $theme_title ?></option> 
-            
-            
-                                    <?php } ?>
-            
-            
-                                </select><?php */?>
-                                
-								<?php
+                               <?php
 									$jquery_themes = $armainhelper->jquery_themes();
 								?>
                                 <input id="arfformsthemesettingselbx" name="arffths" value="<?php if($newarr['arfcalthemename']!="" && $newarr['arfcalthemename']!="default_theme_jquery-ui") { echo $newarr['arfcalthemename']; } else { echo "default_theme"; }?>" type="hidden" >
@@ -3041,17 +2746,6 @@ function delete_form_bg_img(){
                                  ?>
                                  <div class="sltstandard1" style="float:left;">
                                 
-                                <?php /*?><select name="arffdaf" onchange="change_date_format_new();" id="frm_date_format" style="width:142px;" data-width='142px'>
-            
-            
-                                    <option value="mm/dd/yy" <?php selected($newarr['date_format'], 'mm/dd/yy') ?>><?php echo date('m/d/Y', current_time('timestamp'));?></option>
-            
-                                    <option value="M d, yy" <?php selected($newarr['date_format'], 'M d, yy') ?>><?php echo date('M d, Y', current_time('timestamp'));?></option>
-                                    
-                                    <option value="MM d, yy" <?php selected($newarr['date_format'], 'MM d, yy') ?>><?php echo date('F d, Y', current_time('timestamp'));?></option>
-            
-            
-                                </select><?php */?>
                                 
                                 <?php 
 								$arf_selbx_dt_format = "";
@@ -3087,18 +2781,6 @@ function delete_form_bg_img(){
                                 
                                 <div class="sltstandard1" style="float:left;">
                                 
-                                <?php /*?><select name="arffdaf" id="frm_date_format" onchange="change_date_format_new();" style="width:142px;" data-width='142px'>
-            
-            
-                                    <option value="dd/mm/yy" <?php selected($newarr['date_format'], 'dd/mm/yy') ?>><?php echo date('d/m/Y', current_time('timestamp'));?></option>
-            
-                                    <option value="d M, yy" <?php selected($newarr['date_format'], 'd M, yy') ?>><?php echo date('d M, Y', current_time('timestamp'));?></option>
-                                    
-                                    <option value="d MM, yy" <?php selected($newarr['date_format'], 'd MM, yy') ?>><?php echo date('d F, Y', current_time('timestamp'));?></option>
-            
-            
-                                </select><?php */?>
-                                
                                 <?php 
 								$arf_selbx_dt_format = "";
                                 if($newarr['date_format']=='d MM, yy')
@@ -3133,18 +2815,6 @@ function delete_form_bg_img(){
                                 
                                 <div class="sltstandard1" style="float:left;">
                                 
-                                <?php /*?><select name="arffdaf" id="frm_date_format" onchange="change_date_format_new();" style="width:142px;" data-width='142px'>
-            
-            
-                                    <option value="yy/mm/dd" <?php selected($newarr['date_format'], 'yy/mm/dd') ?>><?php echo date('Y/m/d', current_time('timestamp'));?></option>
-            
-                                    <option value="yy, M d" <?php selected($newarr['date_format'], 'yy, M d') ?>><?php echo date('Y, M d', current_time('timestamp'));?></option>
-                                    
-                                    <option value="yy, MM d" <?php selected($newarr['date_format'], 'yy, MM d') ?>><?php echo date('Y, F d', current_time('timestamp'));?></option>
-            
-            
-                                </select><?php */?>
-                                
                                 <?php 
 								$arf_selbx_dt_format = "";
                                 if($newarr['date_format']=='yy, MM d')
@@ -3178,22 +2848,6 @@ function delete_form_bg_img(){
                                   <?php } else { ?>
                                 
                                 <div class="sltstandard1" style="float:left;">
-                                
-                                <?php /*?><select name="arffdaf" id="frm_date_format" onchange="change_date_format_new();" style="width:142px;" data-width='142px'>
-            
-            
-                                    <option value="dd/mm/yy" <?php selected($newarr['date_format'], 'dd/mm/yy') ?>><?php echo date('d/m/Y', current_time('timestamp'));?></option>
-            
-                                    <option value="mm/dd/yy" <?php selected($newarr['date_format'], 'mm/dd/yy') ?>><?php echo date('m/d/Y', current_time('timestamp'));?></option>
-                                    
-                                    <option value="yy/mm/dd" <?php selected($newarr['date_format'], 'yy/mm/dd') ?>><?php echo date('Y/m/d', current_time('timestamp'));?></option>
-                                    
-                                    <option value="M d, yy" <?php selected($newarr['date_format'], 'M d, yy') ?>><?php echo date('M d, Y', current_time('timestamp'));?></option>
-                                    
-                                    <option value="MM d, yy" <?php selected($newarr['date_format'], 'MM d, yy') ?>><?php echo date('F d, Y', current_time('timestamp'));?></option>
-            
-            
-                                </select><?php */?>
                                 
                                 <?php 
 								$arf_selbx_dt_format = "";
@@ -3259,24 +2913,7 @@ function delete_form_bg_img(){
                             <div class="clearfix subfield" id="frm_check_radio_style_div">
                             	<label class="lblsubheading sublblheading" style=" <?php echo $check_radio_style_lbl; ?>"><?php _e('Style', 'ARForms') ?></label>
                             	<div class="sltstandard1" style="float:left;">
-                                
-                                    <?php /*?><select name="arfcksn" id="frm_check_radio_style" data-size="4" onchange="arf_change_check_radio(); ShowColorSelect(this.value);" style="width:142px;" data-width='142px'>
-            
-                                    <option value="minimal" <?php selected($newarr['arfcheckradiostyle'], 'minimal') ?>>Minimal</option>
-            
-                                    <option value="flat" <?php selected($newarr['arfcheckradiostyle'], 'flat') ?>>Flat</option>
-                                    
-                                    <option value="square" <?php selected($newarr['arfcheckradiostyle'], 'square') ?>>Square</option>
-                                    
-                                    <option value="futurico" <?php selected($newarr['arfcheckradiostyle'], 'futurico') ?>>Futurico</option>
-                                    
-                                    <option value="polaris" <?php selected($newarr['arfcheckradiostyle'], 'polaris') ?>>Polaris</option>
-                                    
-                                    <option value="none" <?php selected($newarr['arfcheckradiostyle'], 'none') ?>>(None)</option>
-            
-                                </select><?php */?>
-            
-            						
+                                	
                                     <input id="frm_check_radio_style" name="arfcksn" value="<?php echo $newarr['arfcheckradiostyle'];?>" type="hidden" onchange="arf_change_check_radio(); ShowColorSelect(this.value);">
                                     <dl class="arf_selectbox" data-name="arfcksn" data-id="frm_check_radio_style" style="width:122px;">
                                       <dt><span><?php echo ucwords($newarr['arfcheckradiostyle']);?></span>
@@ -3300,20 +2937,6 @@ function delete_form_bg_img(){
                             <div class="clearfix subfield" id="check_radio_main_color" <?php if($newarr['arfcheckradiostyle']!="none"  && $newarr['arfcheckradiostyle']!="polaris" && $newarr['arfcheckradiostyle']!="futurico"){?> style="display:block;margin-top:10px;" <?php }else{ echo "style='display:none;margin-top:10px;'"; }?>>
                             	<label class="lblsubheading sublblheading" style=" <?php echo $check_radio_style_lbl; ?>"><?php _e('Color', 'ARForms') ?></label>
                             	<div class="sltstandard1" style="float:left;">
-                                
-                                <?php /*?><select name="arfcksc" id="frm_check_radio_style_color" onchange="arf_change_check_radio();" data-size="4" style="width:142px;" data-width='142px'>
-            						<option value="default" <?php selected($newarr['arfcheckradiocolor'], 'default') ?>>Default</option>
-                                    <option value="aero" <?php selected($newarr['arfcheckradiocolor'], 'aero') ?>>Aero</option>
-                                    <option value="blue" <?php selected($newarr['arfcheckradiocolor'], 'blue') ?>>Blue</option>
-                                    <option value="green" <?php selected($newarr['arfcheckradiocolor'], 'green') ?>>Green</option>
-                                    <option value="grey" <?php selected($newarr['arfcheckradiocolor'], 'grey') ?>>Grey</option>
-                                    <option value="orange" <?php selected($newarr['arfcheckradiocolor'], 'orange') ?>>Orange</option>
-                                    <option value="pink" <?php selected($newarr['arfcheckradiocolor'], 'pink') ?>>Pink</option>
-                                    <option value="purple" <?php selected($newarr['arfcheckradiocolor'], 'purple') ?>>Purple</option>
-                                    <option value="red" <?php selected($newarr['arfcheckradiocolor'], 'red') ?>>Red</option>
-                                    <option value="yellow" <?php selected($newarr['arfcheckradiocolor'], 'yellow') ?>>Yellow</option>
-            
-                                </select><?php */?>
                                 
                                 <input id="frm_check_radio_style_color" name="arfcksc" value="<?php echo $newarr['arfcheckradiocolor'];?>" type="hidden" onchange="arf_change_check_radio();">
                                 <dl class="arf_selectbox" data-name="arfcksc" data-id="frm_check_radio_style_color" style="width:122px;">
@@ -3490,49 +3113,6 @@ function delete_form_bg_img(){
                                                 
                                                 <div class="sltstandard2" style=" <?php echo $submit_font_family_opt; ?>">
                                                 
-                                                <?php /*?><select name="arfsff" id="arfsubmitfontfamily" style="width:200px;" data-width='200px' data-size="15" onchange="Changefontsettinghtml('submitfontsettingpopup','arfsubmitfontfamily','arfsubmitbuttonweightsetting','arfsubmitbuttonfontsizesetting');">
-                                                    <optgroup label="Default Fonts">
-                                                        <option value="Arial" <?php selected($newarr['arfsubmitfontfamily'], 'Arial') ?>>Arial</option>
-                                        
-                                                        <option value="Helvetica" <?php selected($newarr['arfsubmitfontfamily'], 'Helvetica') ?>>Helvetica</option>
-                                                        
-                                                        <option value="sans-serif" <?php selected($newarr['arfsubmitfontfamily'], 'sans-serif') ?>>sans-serif</option>
-                                                        
-                                                        <option value="Lucida Grande" <?php selected($newarr['arfsubmitfontfamily'], 'Lucida Grande') ?>>Lucida Grande</option>
-                                                        
-                                                        <option value="Lucida Sans Unicode" <?php selected($newarr['arfsubmitfontfamily'], 'Lucida Sans Unicode') ?>>Lucida Sans Unicode</option>
-                                                        
-                                                        <option value="Tahoma" <?php selected($newarr['arfsubmitfontfamily'], 'Tahoma') ?>>Tahoma</option>
-                                                        
-                                                        <option value="Times New Roman" <?php selected($newarr['arfsubmitfontfamily'], 'Times New Roman') ?>>Times New Roman</option>
-                                                        
-                                                        <option value="Courier New" <?php selected($newarr['arfsubmitfontfamily'], 'Courier New') ?>>Courier New</option>
-                                                        
-                                                        <option value="Verdana" <?php selected($newarr['arfsubmitfontfamily'], 'Verdana') ?>>Verdana</option>
-                                                        
-                                                        <option value="Geneva" <?php selected($newarr['arfsubmitfontfamily'], 'Geneva') ?>>Geneva</option>
-                                                        
-                                                        <option value="Courier" <?php selected($newarr['arfsubmitfontfamily'], 'Courier') ?>>Courier</option>
-                                                                
-                                                        <option value="Monospace" <?php selected($newarr['arfsubmitfontfamily'], 'Monospace') ?>>Monospace</option>
-                                                                
-                                                        <option value="Times" <?php selected($newarr['arfsubmitfontfamily'], 'Times') ?>>Times</option>
-                
-                                                    </optgroup>
-                                                    <optgroup label="Google Fonts">
-                                                        <?php
-                                                            if(count($get_googlefonts_data)>0) {
-                                                                foreach($get_googlefonts_data as $goglefontsfamily)
-                                                                {
-                                                                    echo "<option value='".$goglefontsfamily."' ".selected($newarr['arfsubmitfontfamily'], $goglefontsfamily)." >".$goglefontsfamily."</option>";
-                                                                }
-                                                            }
-                                                        ?>
-                                                    </optgroup>
-                                                    
-                                                </select><?php */?>
-                                                
-                                                
                                                 <input id="arfsubmitfontfamily" name="arfsff" value="<?php echo $newarr['arfsubmitfontfamily'];?>" type="hidden" onchange="Changefontsettinghtml('submitfontsettingpopup','arfsubmitfontfamily','arfsubmitbuttonweightsetting','arfsubmitbuttonfontsizesetting');">
                                                 <dl class="arf_selectbox" data-name="arfsff" data-id="arfsubmitfontfamily" style="width:180px;">
                                                   <dt><span><?php echo $newarr['arfsubmitfontfamily'];?></span>
@@ -3591,16 +3171,6 @@ function delete_form_bg_img(){
                             
                                                 <div class="sltstandard1" style=" <?php echo $submit_btn_font_btn; ?>">
                                                 
-                                                <?php /*?><select name="arfsbwes" id="arfsubmitbuttonweightsetting" style="width:100px;" data-width='100px' onchange="Changefontsettinghtml('submitfontsettingpopup','arfsubmitfontfamily','arfsubmitbuttonweightsetting','arfsubmitbuttonfontsizesetting');">
-            
-                                                    <option value="normal" <?php selected($newarr['arfsubmitweightsetting'], 'normal') ?>><?php _e('normal', 'ARForms') ?></option>
-                    
-                                                    <option value="bold" <?php selected($newarr['arfsubmitweightsetting'], 'bold') ?>><?php _e('bold', 'ARForms') ?></option>
-                                                    
-                                                    <option value="italic" <?php selected($newarr['arfsubmitweightsetting'], 'italic') ?>><?php _e('italic', 'ARForms') ?></option>
-                            
-                                                </select><?php */?>
-                                                
                                                 <input id="arfsubmitbuttonweightsetting" name="arfsbwes" value="<?php echo $newarr['arfsubmitweightsetting'];?>" type="hidden" onchange="Changefontsettinghtml('submitfontsettingpopup','arfsubmitfontfamily','arfsubmitbuttonweightsetting','arfsubmitbuttonfontsizesetting');">
                                                 <dl class="arf_selectbox" data-name="arfsbwes" data-id="arfsubmitbuttonweightsetting" style="width:80px;">
                                                   <dt><span><?php echo __($newarr['arfsubmitweightsetting'], 'ARForms');?></span>
@@ -3638,19 +3208,7 @@ function delete_form_bg_img(){
             									<div class="lblsubheading" style=" <?php echo $submit_font_size_lbl; ?>"><?php _e('Size', 'ARForms') ?></div>
                                                 <div style="margin-left:70px; margin-bottom:10px;">
                                                     <div class="sltstandard1" style=" <?php echo $submit_font_size_opt; ?>">
-                                                    
-                                                    <?php /*?><select name="arfsbfss" id="arfsubmitbuttonfontsizesetting" style="width:100px;" data-width='100px' data-size='15' onchange="Changefontsettinghtml('submitfontsettingpopup','arfsubmitfontfamily','arfsubmitbuttonweightsetting','arfsubmitbuttonfontsizesetting');">	
-														<?php for($i = 8; $i <= 20; $i ++ ) { ?>
-                                                        <option value="<?php echo $i?>" <?php selected($newarr['arfsubmitbuttonfontsizesetting'], $i) ?>><?php _e($i, 'ARForms') ?></option>
-                                                        <?php } ?>
-                                                        <?php for($i = 22; $i <= 28; $i=$i+2 ) { ?>
-                                                        <option value="<?php echo $i?>" <?php selected($newarr['arfsubmitbuttonfontsizesetting'], $i) ?>><?php _e($i, 'ARForms') ?></option>
-                                                        <?php } ?>
-                                                        <?php for($i = 32; $i <= 40; $i=$i+4 ) { ?>
-                                                        <option value="<?php echo $i?>" <?php selected($newarr['arfsubmitbuttonfontsizesetting'], $i) ?>><?php _e($i, 'ARForms') ?></option>
-                                                        <?php } ?>
-                                                </select><?php */?>
-                                                
+                                                   
                                                 <input id="arfsubmitbuttonfontsizesetting" name="arfsbfss" value="<?php echo $newarr['arfsubmitbuttonfontsizesetting'];?>" type="hidden" onchange="Changefontsettinghtml('submitfontsettingpopup','arfsubmitfontfamily','arfsubmitbuttonweightsetting','arfsubmitbuttonfontsizesetting');">
                                                 <dl class="arf_selectbox" data-name="arfsbfss" data-id="arfsubmitbuttonfontsizesetting" style="width:80px;">
                                                   <dt><span><?php echo $newarr['arfsubmitbuttonfontsizesetting'];?></span>
@@ -4264,45 +3822,6 @@ function delete_form_bg_img(){
                                                 <div class="lblsubheading" style=" <?php echo $validation_font_family_lbl; ?>"><?php _e('Family', 'ARForms') ?></div>
                                                 
                                                 <div class="sltstandard2" style=" <?php echo $validation_font_family_opt; ?>">
-                                                <?php /*?><select name="arfmefs" id="arfmainerrorfontsetting" style="width:200px;" data-width='200px' data-size='15' onchange="Changefontsettinghtml('errorfontsettingpopup','arfmainerrorfontsetting','','arfmainerrorfontsizesetting');">
-                                                    <optgroup label="Default Fonts">
-                                                        <option value="Arial" <?php selected($newarr['error_font'], 'Arial') ?>>Arial</option>
-                            
-                                                        <option value="Helvetica" <?php selected($newarr['error_font'], 'Helvetica') ?>>Helvetica</option>
-                                                        
-                                                        <option value="sans-serif" <?php selected($newarr['error_font'], 'sans-serif') ?>>sans-serif</option>
-                                                        
-                                                        <option value="Lucida Grande" <?php selected($newarr['error_font'], 'Lucida Grande') ?>>Lucida Grande</option>
-                                                        
-                                                        <option value="Lucida Sans Unicode" <?php selected($newarr['error_font'], 'Lucida Sans Unicode') ?>>Lucida Sans Unicode</option>
-                                                        
-                                                        <option value="Tahoma" <?php selected($newarr['error_font'], 'Tahoma') ?>>Tahoma</option>
-                                                        
-                                                        <option value="Times New Roman" <?php selected($newarr['error_font'], 'Times New Roman') ?>>Times New Roman</option>
-                                                        
-                                                        <option value="Courier New" <?php selected($newarr['error_font'], 'Courier New') ?>>Courier New</option>
-                                                        
-                                                        <option value="Verdana" <?php selected($newarr['error_font'], 'Verdana') ?>>Verdana</option>
-                                                        
-                                                        <option value="Geneva" <?php selected($newarr['error_font'], 'Geneva') ?>>Geneva</option>
-                                                                
-                                                        <option value="Courier" <?php selected($newarr['error_font'], 'Courier') ?>>Courier</option>
-                                                                
-                                                        <option value="Monospace" <?php selected($newarr['error_font'], 'Monospace') ?>>Monospace</option>
-                                                                
-                                                        <option value="Times" <?php selected($newarr['error_font'], 'Times') ?>>Times</option>
-                                                    </optgroup>
-                                                    <optgroup label="Google Fonts">
-                                                        <?php
-                                                            if(count($get_googlefonts_data)>0) {
-                                                                foreach($get_googlefonts_data as $goglefontsfamily)
-                                                                {
-                                                                    echo "<option value='".$goglefontsfamily."' ".selected($newarr['error_font'], $goglefontsfamily)." >".$goglefontsfamily."</option>";
-                                                                }
-                                                            }
-                                                        ?>
-                                                    </optgroup>
-                                                </select><?php */?>
                                                 
                                                 <input id="arfmainerrorfontsetting" name="arfmefs" value="<?php echo $newarr['error_font'];?>" type="hidden" onchange="Changefontsettinghtml('errorfontsettingpopup','arfmainerrorfontsetting','','arfmainerrorfontsizesetting');">
                                                 <dl class="arf_selectbox" data-name="arfmefs" data-id="arfmainerrorfontsetting" style="width:180px;">
@@ -4363,18 +3882,6 @@ function delete_form_bg_img(){
             									<div class="lblsubheading" style=" <?php echo $validation_font_size_lbl; ?>"><?php _e('Size', 'ARForms') ?></div>
                                                 <div style="margin-left:70px; margin-bottom:10px;">
                                                     <div class="sltstandard1" style=" <?php echo $validation_font_size_opt; ?>">
-                                                    
-                                                    <?php /*?><select name="arfmefss" id="arfmainerrorfontsizesetting" style="width:100px;" data-width='100px' data-size='10' onchange="Changefontsettinghtml('errorfontsettingpopup','arfmainerrorfontsetting','','arfmainerrorfontsizesetting');">	
-														   <?php for($i = 8; $i <= 20; $i ++ ) { ?>
-                                                            <option value="<?php echo $i?>" <?php selected($newarr['arffontsizesetting'], $i) ?>><?php _e($i, 'ARForms') ?></option>
-                                                            <?php } ?>
-                                                            <?php for($i = 22; $i <= 28; $i=$i+2 ) { ?>
-                                                            <option value="<?php echo $i?>" <?php selected($newarr['arffontsizesetting'], $i) ?>><?php _e($i, 'ARForms') ?></option>
-                                                            <?php } ?>
-                                                            <?php for($i = 32; $i <= 40; $i=$i+4 ) { ?>
-                                                            <option value="<?php echo $i?>" <?php selected($newarr['arffontsizesetting'], $i) ?>><?php _e($i, 'ARForms') ?></option>
-                                                            <?php } ?>
-                                                    </select><?php */?>
                                                     
                                                     <input id="arfmainerrorfontsizesetting" name="arfmefss" value="<?php echo $newarr['arffontsizesetting'];?>" type="hidden" onchange="Changefontsettinghtml('errorfontsettingpopup','arfmainerrorfontsetting','','arfmainerrorfontsizesetting');">
                                                     <dl class="arf_selectbox" data-name="arfmefss" data-id="arfmainerrorfontsizesetting" style="width:80px;">

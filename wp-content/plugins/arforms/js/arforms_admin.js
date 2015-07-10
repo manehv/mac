@@ -731,13 +731,17 @@ function addnewfrmfield(form_id,field_type)
 {
 	var pg_break_pre_first = jQuery("#page_break_first_pre_btn_txt").val();
 	var pg_break_next_first = jQuery("#page_break_first_next_btn_txt").val();
-			
-	jQuery.ajax({type:"POST",url:ajaxurl,data:"action=arfinsertnewfield&form_id="+form_id+"&field="+field_type+"&pg_break_pre_first="+pg_break_pre_first+"&pg_break_next_first="+pg_break_next_first,
+	var pg_break_first_select = jQuery("#page_break_first_select").val();
+	
+	jQuery.ajax({type:"POST",url:ajaxurl,data:"action=arfinsertnewfield&form_id="+form_id+"&field="+field_type+"&pg_break_pre_first="+pg_break_pre_first+"&pg_break_next_first="+pg_break_next_first+"&pg_break_first_select="+pg_break_first_select,
 	
 	success:function(msg){jQuery('#new_fields').append(msg); jQuery('#new_fields li:last .arfeditorfieldopt_label').click(); CheckFieldPos('0','0');
-	
-	update_cl_field_menu();	
+	if( field_type == 'break' ){
+		checkpage_breakpos();
+	}
+	update_cl_field_menu();
 	arf_update_name_dropdown();
+	
 	jQuery(".sltstandard select").selectpicker();
 }
 
@@ -1143,6 +1147,7 @@ function arfaddcodefornewfield(element,variable)
 
 function arfaddnewcontentforfield(content_box,variable, start_pos)
 {
+    
 	if( start_pos == 0 )
 	{
 		jQuery('#'+content_box).val( jQuery('#'+content_box).val()+variable );	
@@ -2076,7 +2081,15 @@ function global_form_validate(){
 		} else {
 			jQuery('#frm_reply_to').css('border-color', '#BCCBDA');
 			jQuery('#frm_reply_to_error').css('display', 'none');	
-		}	
+		}
+                
+                if( jQuery('.arf_success_message_show_time').val() =='' || !(parseInt(jQuery('.arf_success_message_show_time').val())>=0)) {
+			jQuery('.arf_success_message_show_time').css('border-color', '#ff0000');
+ 			i++;
+		} else {
+			jQuery('.arf_success_message_show_time').css('border-color', '#BCCBDA');
+			
+		}
 		if(i > 0){
 			return false;
 		} else {
@@ -3525,6 +3538,7 @@ function arf_change_name_dropdown(field_id){
 	var fields_list_admin_from_email = '';
 	var fields_list_addtotal = '';
 	var fields_list_admin_to_email = '';
+        var fields_list_admin_to_email_subject = '';
 	
 	jQuery('.arfmainformfield').each(function(j){
 		if( jQuery(this).is(':visible') ) {
@@ -3536,12 +3550,18 @@ function arf_change_name_dropdown(field_id){
 				name = jQuery('#field_'+id+' input').val();
 			}
 			var type = jQuery('#field_type_'+id).val();
+                        
 			if(type != 'divider' && type != 'break' && type != 'captcha' && type != 'html' && type != 'imagecontrol' ) {
 				
-				fields_list_subject += '<div class="modal_field_val" id="arfmodalfieldval_'+f_id+'" onclick="arfaddcodefornewfield(\'ar_email_subject\',\''+f_id+'\')">'+name+'</div>';
 				fields_list_addtotal += '<div class="modal_field_val" id="arfmodalfieldval_'+f_id+'" onclick="arfaddtotalfield(this,\''+f_id+'\',\'\')">'+name+'</div>';
+
 			} 
 			
+                        if( type !='divider' && type !='break' && type != 'captcha' && type != 'html' && type !='imagecontrol' && type != 'file' && type != 'like'){
+                            fields_list_admin_to_email_subject += '<div class="modal_field_val" id="arfmodalfieldval_'+f_id+'" onclick="arfaddcodefornewfield(\'admin_email_subject\',\''+f_id+'\')">'+name+'</div>';
+                            fields_list_subject += '<div class="modal_field_val" id="arfmodalfieldval_'+f_id+'" onclick="arfaddcodefornewfield(\'ar_email_subject\',\''+f_id+'\')">'+name+'</div>';
+                        }
+                        
 			if(type != 'divider' && type != 'break' && type != 'captcha' && type != 'imagecontrol' ) {
 				fields_list_message += '<div class="modal_field_val" id="arfmodalfieldval_'+f_id+'" onclick="arfaddcodefornewfield(\'ar_email_message\',\''+f_id+'\')">'+name+'</div>';
 				fields_list_admin_message += '<div class="modal_field_val" id="arfmodalfieldval_'+f_id+'" onclick="arfaddcodefornewfield(\'ar_admin_email_message\',\''+f_id+'\')">'+name+'</div>';
@@ -3553,6 +3573,7 @@ function arf_change_name_dropdown(field_id){
 				fields_list_admin_from_email += '<div class="modal_field_val" id="arfmodalfieldval_'+f_id+'" onclick="arfaddcodefornewfield(\'ar_admin_from_email\',\''+f_id+'\')">'+name+'</div>';
 				
 				fields_list_admin_to_email += '<div class="modal_field_val" id="arfmodalfieldval_'+f_id+'" onclick="arfaddcodefornewfield(\'options_admin_reply_to_notification\',\''+f_id+'\'">'+name+'</div>';
+                                
 			}
 		}
 	});
@@ -3563,6 +3584,7 @@ function arf_change_name_dropdown(field_id){
 	jQuery('#add_field_user_email .arfmodal-body_email').html(fields_list_user_from_email);
 	jQuery('#add_field_admin_email .arfmodal-body_email').html(fields_list_admin_from_email);
 	jQuery('#add_field_admin_email_to .arfmodal-body_email').html(fields_list_admin_to_email);
+        jQuery('#add_field_admin_email_subject .arfmodal-body_email').html(fields_list_admin_to_email_subject);
 	jQuery('.arftotalfielddropdown .arfmodal-body_p').html(fields_list_addtotal);
 	
 }
@@ -3640,6 +3662,7 @@ function arf_update_name_dropdown(){
 	var fields_list_admin_from_email = '';
 	var fields_list_addtotal = '';
 	var fields_list_admin_to_email = '';
+        var fields_list_admin_to_email_subject = '';
 	
 	jQuery('.arfmainformfield').each(function(j){
 		if( jQuery(this).is(':visible') ) {
@@ -3705,12 +3728,20 @@ function arf_update_name_dropdown(){
 					fields_list_addtotal += '<div class="modal_field_val" id="arfmodalfieldval_'+f_id+'" onclick="arfaddtotalfield(this,\''+f_id+'\',\'\')">'+name.substring(0,40)+'</div>';
 				}
 				
-				fields_list_subject += '<div class="modal_field_val" id="arfmodalfieldval_'+f_id+'" onclick="arfaddcodefornewfield(\'ar_email_subject\',\''+f_id+'\')">'+name+'</div>';
+				//fields_list_subject += '<div class="modal_field_val" id="arfmodalfieldval_'+f_id+'" onclick="arfaddcodefornewfield(\'ar_email_subject\',\''+f_id+'\')">'+name+'</div>';
+                               // fields_list_admin_to_email_subject += '<div class="modal_field_val" id="arfmodalfieldval_'+f_id+'" onclick="arfaddcodefornewfield(\'admin_email_subject\',\''+f_id+'\')">'+name+'</div>';
+
 			} 
 			
+                        if( type !='divider' && type !='break' && type != 'captcha' && type != 'html' && type !='imagecontrol' && type != 'file' && type != 'like'){
+                            fields_list_admin_to_email_subject += '<div class="modal_field_val" id="arfmodalfieldval_'+f_id+'" onclick="arfaddcodefornewfield(\'admin_email_subject\',\''+f_id+'\')">'+name+'</div>';
+                            fields_list_subject += '<div class="modal_field_val" id="arfmodalfieldval_'+f_id+'" onclick="arfaddcodefornewfield(\'ar_email_subject\',\''+f_id+'\')">'+name+'</div>';
+                        }
+                        
 			if(type != 'divider' && type != 'break' && type != 'captcha' && type != 'imagecontrol' ) {
 				fields_list_message += '<div class="modal_field_val" id="arfmodalfieldval_'+f_id+'" onclick="arfaddcodefornewfield(\'ar_email_message\',\''+f_id+'\')">'+name+'</div>';
 				fields_list_admin_message += '<div class="modal_field_val" id="arfmodalfieldval_'+f_id+'" onclick="arfaddcodefornewfield(\'ar_admin_email_message\',\''+f_id+'\')">'+name+'</div>';
+                                
 			} 
 			
 			
@@ -3720,6 +3751,7 @@ function arf_update_name_dropdown(){
 				fields_list_admin_from_email += '<div class="modal_field_val" id="arfmodalfieldval_'+f_id+'" onclick="arfaddcodefornewfield(\'ar_admin_from_email\',\''+f_id+'\')">'+name+'</div>';
 				
 				fields_list_admin_to_email += '<div class="modal_field_val" id="arfmodalfieldval_'+f_id+'" onclick="arfaddcodefornewfield(\'options_admin_reply_to_notification\',\''+f_id+'\')">'+name+'</div>';
+                                
 			}
 			
 		}
@@ -3731,6 +3763,7 @@ function arf_update_name_dropdown(){
 	jQuery('#add_field_user_email .arfmodal-body_email').html(fields_list_user_from_email);
 	jQuery('#add_field_admin_email .arfmodal-body_email').html(fields_list_admin_from_email);
 	jQuery('#add_field_admin_email_to .arfmodal-body_email').html(fields_list_admin_to_email);
+        jQuery('#add_field_admin_email_subject .arfmodal-body_email').html(fields_list_admin_to_email_subject);
 	jQuery('.arftotalfielddropdown .arfmodal-body_p').html(fields_list_addtotal);
 }
 
@@ -3764,6 +3797,7 @@ function arf_delete_name_dropdown(field_id, f_id){
 	var fields_list_admin_from_email = '';
 	var fields_list_addtotal = '';
 	var fields_list_admin_to_email = '';
+        var fields_list_admin_to_email_subject = '';
 	
 	jQuery('.arfmainformfield').not('#arfmainfieldid_'+field_id).each(function(j){
 		if( jQuery(this).is(':visible') ) {
@@ -3777,10 +3811,17 @@ function arf_delete_name_dropdown(field_id, f_id){
 			var type = jQuery('#field_type_'+id).val();
 			if(type != 'divider' && type != 'break' && type != 'captcha' && type != 'html' && type != 'imagecontrol' ) {
 				
-				fields_list_subject += '<div class="modal_field_val" id="arfmodalfieldval_'+f_id+'" onclick="arfaddcodefornewfield(\'ar_email_subject\',\''+f_id+'\')">'+name+'</div>';
+				//fields_list_subject += '<div class="modal_field_val" id="arfmodalfieldval_'+f_id+'" onclick="arfaddcodefornewfield(\'ar_email_subject\',\''+f_id+'\')">'+name+'</div>';
 				
 				fields_list_addtotal += '<div class="modal_field_val"  id="arfmodalfieldval_'+f_id+'" onclick="arfaddtotalfield(this,\''+f_id+'\',\'\')">'+name+'</div>';
-			} 
+                                
+                                //fields_list_admin_to_email_subject += '<div class="modal_field_val" id="arfmodalfieldval_'+f_id+'" onclick="arfaddcodefornewfield(\'admin_email_subject\',\''+f_id+'\')">'+name+'</div>';
+                        }
+                        
+                        if( type !='divider' && type !='break' && type != 'captcha' && type != 'html' && type !='imagecontrol' && type != 'file' && type != 'like'){
+                            fields_list_admin_to_email_subject += '<div class="modal_field_val" id="arfmodalfieldval_'+f_id+'" onclick="arfaddcodefornewfield(\'admin_email_subject\',\''+f_id+'\')">'+name+'</div>';
+                            fields_list_subject += '<div class="modal_field_val" id="arfmodalfieldval_'+f_id+'" onclick="arfaddcodefornewfield(\'ar_email_subject\',\''+f_id+'\')">'+name+'</div>';
+                        }
 			
 			if(type != 'divider' && type != 'break' && type != 'captcha' && type != 'imagecontrol' ) {
 				fields_list_message += '<div class="modal_field_val"  id="arfmodalfieldval_'+f_id+'" onclick="arfaddcodefornewfield(\'ar_email_message\',\''+f_id+'\')">'+name+'</div>';
@@ -3793,6 +3834,7 @@ function arf_delete_name_dropdown(field_id, f_id){
 				fields_list_admin_from_email += '<div class="modal_field_val" id="arfmodalfieldval_'+f_id+'" onclick="arfaddcodefornewfield(\'ar_admin_from_email\',\''+f_id+'\')">'+name+'</div>';
 				
 				fields_list_admin_to_email += '<div class="modal_field_val" id="arfmodalfieldval_'+f_id+'" onclick="arfaddcodefornewfield(\'options_admin_reply_to_notification\',\''+f_id+'\')">'+name+'</div>';
+
 			}
 		}
 	});
@@ -3803,6 +3845,7 @@ function arf_delete_name_dropdown(field_id, f_id){
 	jQuery('#add_field_user_email .arfmodal-body_email').html(fields_list_user_from_email);
 	jQuery('#add_field_admin_email .arfmodal-body_email').html(fields_list_admin_from_email);
 	jQuery('#add_field_admin_email_to .arfmodal-body_email').html(fields_list_admin_to_email);
+        jQuery('#add_field_admin_email_subject .arfmodal-body_email').html(fields_list_admin_to_email_subject);
 	jQuery('.arftotalfielddropdown .arfmodal-body_p').html(fields_list_addtotal);
 }
 
@@ -3815,8 +3858,9 @@ function arfduplicatefield(form_id,field_type, duplicate_id, old_field_id)
 	}	
 	var pg_break_pre_first = jQuery("#page_break_first_pre_btn_txt").val();
 	var pg_break_next_first = jQuery("#page_break_first_next_btn_txt").val();
-			
-	jQuery.ajax({type:"POST",url:ajaxurl,data:"action=arfinsertnewfield&form_id="+form_id+"&field="+field_type+"&pg_break_pre_first="+pg_break_pre_first+"&pg_break_next_first="+pg_break_next_first+"&field_duplicate_id="+duplicate_id,	
+	var pg_break_first_select = jQuery("#page_break_first_select").val();
+	
+	jQuery.ajax({type:"POST",url:ajaxurl,data:"action=arfinsertnewfield&form_id="+form_id+"&field="+field_type+"&pg_break_pre_first="+pg_break_pre_first+"&pg_break_next_first="+pg_break_next_first+"&field_duplicate_id="+duplicate_id+"&pg_break_first_select="+pg_break_first_select,
 		success:function(msg){
 			jQuery('#new_fields').append(msg); 
 			jQuery('#new_fields li:last .arfeditorfieldopt_label').click(); 			
@@ -4053,7 +4097,7 @@ function arfgetformpreview()
 	mysack.setVar( "action", "arfformsavealloptions" );
 	mysack.setVar( "form_id", form_id );
 	//mysack.setVar( "form_preview",form_preview );
-	mysack.setVar( "form", jsondata );
+	mysack.setVar( "filtered_form", jsondata );
 	mysack.onError = function() { alert('<?php echo esc_js(__("Ajax error while saving form", "ARForms")) ?>' )};
 	mysack.onCompletion = loaded_ajax_DoShow3;
 	mysack.runAJAX();
@@ -5284,11 +5328,13 @@ function arfvalidateregex( field_id )
 	var data2	= data1.split('</arftotal>');
 	var regexp	= data2[0] ? data2[0] : '';
 	
-	var regex = /\[(if )?()\b(.*?)(?:(\/))?\](?:(.+?)\[\/\2\])?/;
+	var regex = /\[(if )?()(.*?)(?:(\/))?\](?:(.+?)\[\/\2\])?/;
+        
 	var matches;
 	
 	while(matches = regex.exec(regexp)) {
-		regexp = regexp.replace(matches[0], 1);
+            
+            regexp = regexp.replace(matches[0], 1);
 	}
 	
 	regexp = regexp.replace(/(\n|\r\n)/g, '');
@@ -5361,6 +5407,7 @@ function CheckAdminAutomaticResponseEnableDisable()
 		jQuery('#add_field_admin_message_but').removeAttr('disabled');
 		jQuery("#add_field_admin_email_but_to").removeAttr('disabled');
 		jQuery('#add_field_admin_email_but').removeAttr('disabled');
+                jQuery('#add_field_admin_email_but_subject').removeAttr('disabled');
 	}else {
 		jQuery('#options_admin_reply_to_notification').attr('disabled', 'disabled');
 		jQuery('#ar_admin_from_email').attr('disabled', 'disabled');
@@ -5370,9 +5417,10 @@ function CheckAdminAutomaticResponseEnableDisable()
 		jQuery('#add_field_admin_message_but').attr('disabled', 'disabled');
 		jQuery("#add_field_admin_email_but_to").attr('disabled','disabled');
 		jQuery('#add_field_admin_email_but').attr('disabled', 'disabled');
-		
+		jQuery('#add_field_admin_email_but_subject').attr('disabled','disabled');
 		close_add_field_subject('add_field_admin_email');
 		close_add_field_subject('add_field_admin_message');
+                close_add_field_subject('add_field_admin_email_subject');
 	}
 }
 
@@ -5739,6 +5787,7 @@ jQuery.fn.FilterFormData = function(){
 	var frmsa = formarray;
 	
 	var p = 0;
+	
 	for( var key in frmsa ){
 		var k = frmsa[key].name;
 		var v = frmsa[key].value;
@@ -5746,17 +5795,23 @@ jQuery.fn.FilterFormData = function(){
 		if( k.search(/(.*?)\[(.*?)\]/) != -1 ){
 			var x = k.replace(/(.*?)\[(.*?)\]/,'$2');
 			var m = k.replace(/(.*?)\[(.*?)\]/,'$1');
-			fields[m] = {};
-			
+			if( m.search(/(.*?)\[(.*?)\]/) != -1 ){
+				var m = m.replace(/(.*?)\[(.*?)\]/,'$1');
+				fields[m] = {};
+			} else {
+				fields[m] = {};
+			}
 			if( x == '' ){
 				fields[m][p] = {};
 				p++;
 			} else {
-				fields[m][x] = {};
+				fields[m][x] = {};			
 			}
 		}
 	}
+
 	var p = 0;
+	var z = 0;
 	for( var key in frmsa ){
 		var k = frmsa[key].name;
 		var v = frmsa[key].value;
@@ -5764,11 +5819,28 @@ jQuery.fn.FilterFormData = function(){
 		if( k.search(/(.*?)\[(.*?)\]/) != -1 ){
 			var x = k.replace(/(.*?)\[(.*?)\]/,'$2');
 			var m = k.replace(/(.*?)\[(.*?)\]/,'$1');
+			if( m.search(/(.*?)\[(.*?)\]/) != -1 ){
+				var m = m.replace(/(.*?)\[(.*?)\]/,'$1');
+				
+			}
+			if( fields[m] == null )
+					fields[m] = {};
 			if( x == '' ){
 				fields[m][p] = v;
 				p++;
 			} else {
-				fields[m][x] = v;
+				if( x.search( /(.*?)\[(.*?)\]/ ) != -1 ){
+					x = x.replace( /(.*?)\[(.*?)\]/ , '$1' );
+					if( fields[m][x] == null ){
+						fields[m][x] = {};
+						var z = 0;
+					}
+					
+					fields[m][x][z] = v;
+					z++;
+				} else {
+					fields[m][x] = v;
+				}
 			}
 			
 		} else {
@@ -5856,7 +5928,8 @@ jQuery(document).on('click','.arf_fainsideimge',function(e){
 	var ftype = jQuery('#arf_edit_suffix_'+fid).attr('data-field_type');
 	if( html == '' ){
 		jQuery("#arf_"+field+"_icon_"+fid).val('');
-		jQuery("#arf_select_"+field+"_"+fid).html('No Icon');
+		//jQuery("#arf_select_"+field+"_"+fid).html('No Icon');
+                jQuery("#arf_select_"+field+"_"+fid).html(jQuery(this).attr("no_icon_text"));
 		jQuery("#arf_remove_"+field+"_"+fid).hide();
 		jQuery("#enable_arf_"+field+"_"+fid).val(0);
 		
@@ -5943,7 +6016,7 @@ function add_editor_prefix_suffix( field_id, ftype ){
 }
 
 jQuery(document).on('focusin','.arf_editor_prefix_suffix_wrapper input',function(e){
-	console.log( jQuery(this) );
+	
 	var cls = 'get_focused';
 	var fid = jQuery(this).attr('id');
 	fid = fid.replace('itemmeta_','');
@@ -5961,12 +6034,170 @@ jQuery(document).on('focusout','.arf_editor_prefix_suffix_wrapper input',functio
 
 function changearfsectionbgtype( field_id,is_checked ){
 
-	jQuery('.arf_clr_disable').hide();
+	//jQuery('.arf_clr_disable').hide();
+        var obj = jQuery('#arf_divider_inherit_bg_'+field_id).parent();
 	if( is_checked ){
-		jQuery('.arf_clr_disable').css('display','inline-block');
-		jQuery('.arf_coloroption_sub[data-cls="arf_clr_disable"]').hide();
+		obj.find('.arf_clr_disable').css('display','inline-block');
+		obj.find('.arf_coloroption_sub[data-cls="arf_clr_disable"]').hide();
 	} else {
-		jQuery('.arf_clr_disable').hide();
-		jQuery('.arf_coloroption_sub[data-cls="arf_clr_disable"]').show();
+		obj.find('.arf_clr_disable').hide();
+		obj.find('.arf_coloroption_sub[data-cls="arf_clr_disable"]').show();
 	}
 }
+function arf_change_form_submission_type($this)
+{
+	if( jQuery($this).val() == '1' )
+	{
+		jQuery('.arf_success_message_show_time_wrapper').show();	
+	}
+	else
+	{
+		jQuery('.arf_success_message_show_time_wrapper').hide();			
+	}
+}
+function arfvalidatenumber_admin(field, event)
+{
+    var nVer = navigator.appVersion;
+    var nAgt = navigator.userAgent;
+    var browserName = navigator.appName;
+    var fullVersion = '' + parseFloat(navigator.appVersion);
+    var majorVersion = parseInt(navigator.appVersion, 10);
+    var nameOffset, verOffset, ix;
+
+    // In Opera 15+, the true version is after "OPR/" 
+    if ((verOffset = nAgt.indexOf("OPR/")) != -1) {
+        browserName = "Opera";
+    }
+    // In older Opera, the true version is after "Opera" or after "Version"
+    else if ((verOffset = nAgt.indexOf("Opera")) != -1) {
+        browserName = "Opera";
+    }
+    // In MSIE, the true version is after "MSIE" in userAgent
+    else if ((verOffset = nAgt.indexOf("MSIE")) != -1) {
+        browserName = "Microsoft Internet Explorer";
+        browserName = "Netscape";
+        fullVersion = nAgt.substring(verOffset + 5);
+    }
+    // In Chrome, the true version is after "Chrome" 
+    else if ((verOffset = nAgt.indexOf("Chrome")) != -1) {
+        browserName = "Chrome";
+    }
+    // In Safari, the true version is after "Safari" or after "Version" 
+    else if ((verOffset = nAgt.indexOf("Safari")) != -1) {
+        browserName = "Safari";
+    }
+    // In Firefox, the true version is after "Firefox" 
+    else if ((verOffset = nAgt.indexOf("Firefox")) != -1) {
+        browserName = "Firefox";
+    }
+
+    // In most other browsers, "name/version" is at the end of userAgent 
+    else if ((nameOffset = nAgt.lastIndexOf(' ') + 1) <
+            (verOffset = nAgt.lastIndexOf('/')))
+    {
+        browserName = nAgt.substring(nameOffset, verOffset);
+        if (browserName.toLowerCase() == browserName.toUpperCase()) {
+            browserName = navigator.appName;
+        }
+    }
+
+    if (browserName == "Chrome" || browserName == "Safari" || browserName == "Opera")
+    {
+        if (event.keyCode == 46 || event.keyCode == 8 || event.keyCode == 9 || event.keyCode == 27 || event.keyCode == 13 || event.keyCode == 116 || event.keyCode == 107 || event.keyCode == 109 || event.keyCode == 110 ||
+                (event.keyCode == 190 && event.shiftKey == false) ||
+                (event.keyCode == 61 && event.shiftKey == true) ||
+                (event.keyCode == 173 && event.shiftKey == false) ||
+                (event.keyCode == 189 && event.shiftKey == false) ||
+                (event.keyCode == 187 && event.shiftKey == true) ||
+                // Allow: Ctrl+A
+                        (event.keyCode == 65 && event.ctrlKey === true) ||
+                        // Allow: Ctrl+C
+                                (event.keyCode == 67 && event.ctrlKey === true) ||
+                                // Allow: Ctrl+C
+                                        (event.keyCode == 88 && event.ctrlKey === true) ||
+                                        // Allow: home, end, left, right
+                                                (event.keyCode >= 35 && event.keyCode <= 39)) {
+                                    // let it happen, don't do anything
+                                    return;
+                                } else {
+                                    // Ensure that it is a number and stop the keypress
+                                    if (event.shiftKey || (event.keyCode < 48 || event.keyCode > 57) && (event.keyCode < 96 || event.keyCode > 105)) {
+                                        event.preventDefault();
+                                    }
+                                }
+                            }
+                            else if (browserName == "Firefox")
+                            {
+                                if (event.keyCode == 46 || event.keyCode == 8 || event.keyCode == 9 || event.keyCode == 27 || event.keyCode == 13 || event.keyCode == 116 || event.keyCode == 107 || event.keyCode == 109 || event.keyCode == 110 || event.keyCode == 189 ||
+                                        (event.keyCode == 190 && event.shiftKey == false) ||
+                                        (event.keyCode == 61 && event.shiftKey == true) ||
+                                        (event.keyCode == 173 && event.shiftKey == false) ||
+                                        (event.keyCode == 187 && event.shiftKey == true) ||
+                                        // Allow: Ctrl+A
+                                                (event.keyCode == 65 && event.ctrlKey === true) ||
+                                                // Allow: Ctrl+C
+                                                        (event.keyCode == 67 && event.ctrlKey === true) ||
+                                                        // Allow: Ctrl+C
+                                                                (event.keyCode == 88 && event.ctrlKey === true) ||
+                                                                // Allow: home, end, left, right
+                                                                        (event.keyCode >= 35 && event.keyCode <= 39)) {
+                                                            // let it happen, don't do anything
+                                                            return;
+                                                        } else {
+                                                            // Ensure that it is a number and stop the keypress
+                                                            if (event.shiftKey || (event.keyCode < 48 || event.keyCode > 57) && (event.keyCode < 96 || event.keyCode > 105)) {
+                                                                event.preventDefault();
+                                                            }
+                                                        }
+                                                    }
+                                                    else if (browserName == "Microsoft Internet Explorer" || browserName == "Netscape")
+                                                    {
+                                                        if (event.keyCode == 46 || event.keyCode == 8 || event.keyCode == 9 || event.keyCode == 27 || event.keyCode == 13 || event.keyCode == 116 || event.keyCode == 107 || event.keyCode == 109 || event.keyCode == 110 ||
+                                                                (event.keyCode == 190 && event.shiftKey == false) ||
+                                                                (event.keyCode == 61 && event.shiftKey == true) ||
+                                                                (event.keyCode == 173 && event.shiftKey == false) ||
+                                                                (event.keyCode == 187 && event.shiftKey == true) ||
+                                                                (event.keyCode == 189 && event.shiftKey == false) ||
+                                                                // Allow: Ctrl+A
+                                                                        (event.keyCode == 65 && event.ctrlKey === true) ||
+                                                                        // Allow: Ctrl+C
+                                                                                (event.keyCode == 67 && event.ctrlKey === true) ||
+                                                                                // Allow: Ctrl+C
+                                                                                        (event.keyCode == 88 && event.ctrlKey === true) ||
+                                                                                        // Allow: home, end, left, right
+                                                                                                (event.keyCode >= 35 && event.keyCode <= 39)) {
+                                                                                    // let it happen, don't do anything
+                                                                                    return;
+                                                                                } else {
+                                                                                    // Ensure that it is a number and stop the keypress
+                                                                                    if (event.shiftKey || (event.keyCode < 48 || event.keyCode > 57) && (event.keyCode < 96 || event.keyCode > 105)) {
+                                                                                        event.preventDefault ? event.preventDefault() : event.returnValue = false;
+                                                                                        //event.preventDefault();
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                            else
+                                                                            {
+                                                                                if (event.keyCode == 46 || event.keyCode == 8 || event.keyCode == 9 || event.keyCode == 27 || event.keyCode == 13 || event.keyCode == 116 || event.keyCode == 107 || event.keyCode == 109 || event.keyCode == 110 || event.keyCode == 187 ||
+                                                                                        (event.keyCode == 190 && event.shiftKey == false) ||
+                                                                                        (event.keyCode == 61 && event.shiftKey == true) ||
+                                                                                        (event.keyCode == 173 && event.shiftKey == false) ||
+                                                                                        (event.keyCode == 189 && event.shiftKey == true) ||
+                                                                                        // Allow: Ctrl+A
+                                                                                                (event.keyCode == 65 && event.ctrlKey === true) ||
+                                                                                                // Allow: Ctrl+C
+                                                                                                        (event.keyCode == 67 && event.ctrlKey === true) ||
+                                                                                                        // Allow: Ctrl+C
+                                                                                                                (event.keyCode == 88 && event.ctrlKey === true) ||
+                                                                                                                // Allow: home, end, left, right
+                                                                                                                        (event.keyCode >= 35 && event.keyCode <= 39)) {
+                                                                                                            // let it happen, don't do anything
+                                                                                                            return;
+                                                                                                        } else {
+                                                                                                            // Ensure that it is a number and stop the keypress
+                                                                                                            if (event.shiftKey || (event.keyCode < 48 || event.keyCode > 57) && (event.keyCode < 96 || event.keyCode > 105)) {
+                                                                                                                event.preventDefault();
+                                                                                                            }
+                                                                                                        }
+                                                                                                    }
+                                                                                                }
