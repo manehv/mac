@@ -6,16 +6,7 @@
 @import url('fonts/open-sans-fontfacekit/web-fonts/opensans_regular/stylesheet.css');*/
 @import url('fonts/MyriadSetPro-Bold-fontfacekit/web-fonts/MyriadSetPro-Bold/stylesheet.css');
 @import url('fonts/MyriadSetPro-Medium-fontfacekit/stylesheet.css');
-/*OCULTAR AUTOR EN POST*/
-span .text-sep text-sep-cat{
-display: none;
-}
-span .blog-author minor-meta{
-display: none !important;
-}
-span .entry-author-link{
-display: none;
-}
+
 
 /*AJUSTE BTN LETF TIRADO A LA DERECHA*/
 .caption_left .slideshow_caption {
