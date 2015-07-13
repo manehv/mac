@@ -11,7 +11,7 @@ span .text-sep text-sep-cat{
 display: none;
 }
 span .blog-author minor-meta{
-display: none;
+display: none !important;
 }
 span .entry-author-link{
 display: none;
