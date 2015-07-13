@@ -10,7 +10,7 @@
 span .text-sep text-sep-cat{
 display: none;
 }
-span .minor-meta{
+span .blog-author minor-meta{
 display: none !important;
 }
 span .entry-author-link{
