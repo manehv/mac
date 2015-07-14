@@ -9,8 +9,8 @@ Domain Path: /languages/
 Version: 0.1.0
 */
 
-error_reporting(E_ALL ^ E_NOTICE ^ E_STRICT);
-ini_set('display_startup_error',1);
+//error_reporting(E_ALL ^ E_NOTICE ^ E_STRICT);
+//ini_set('display_startup_error',1);
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
