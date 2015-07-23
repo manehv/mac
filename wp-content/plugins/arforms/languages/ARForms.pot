@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: ARForms v2.7.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"POT-Revision-Date: Tue Jul 07 2015 08:56:44 GMT-0500 (COT)\n"
+"POT-Revision-Date: Fri Jul 17 2015 16:08:39 GMT-0500 (COT)\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: admin <testrepute123@gmail.com>\n"
 "Language-Team: \n"
@@ -2031,6 +2031,7 @@ msgstr ""
 
 #: core/models/arnotifymodel.php:68
 #, php-format
+msgctxt "%1$s enviado en %2$s."
 msgid "%1$s form has been submitted on %2$s."
 msgstr ""
 
@@ -4471,6 +4472,7 @@ msgstr ""
 #: core/helpers/arformhelper.php:549
 #: core/models/arnotifymodel.php:676
 #: core/views/upgrade_latest_data.php:459
+msgctxt "Enviado de"
 msgid "Form submitted on"
 msgstr ""
 
