@@ -1,23 +1,29 @@
+# Loco Gettext template
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PlaceHolder\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-01-28 13:52+0100\n"
-"PO-Revision-Date: 2015-01-28 13:54+0100\n"
+"POT-Revision-Date: Mon Jul 13 2015 16:27:58 GMT-0500 (COT)\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Kriesi <support@kriesi.at>\n"
 "Language-Team: \n"
-"Language: en_US\n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Poedit 1.6.9\n"
 "X-Poedit-SourceCharset: utf-8\n"
-"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;"
-"_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2\n"
+"X-Generator: Loco - https://localise.biz/\n"
+"X-Poedit-KeywordsList: _:1;gettext:1;dgettext:2;ngettext:1,2;dngettext:2,3;"
+"__:1;_e:1;_c:1;_n:1,2;_n_noop:1,2;_nc:1,2;__ngettext:1,2;__ngettext_noop:1,2;"
+"_x:1,2c;_ex:1,2c;_nx:1,2,4c;_nx_noop:1,2,3c;_n_js:1,2;_nx_js:1,2,3c;"
+"esc_attr__:1;esc_html__:1;esc_attr_e:1;esc_html_e:1;esc_attr_x:1,2c;"
+"esc_html_x:1,2c;comments_number_link:2,3;t:1;st:1;trans:1;transChoice:1,2\n"
 "X-Poedit-Basepath: ../\n"
 "X-Textdomain-Support: yes\n"
-"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPath-0: ."
 
 # @ avia_framework
 #: 404.php:10
@@ -31,8 +37,7 @@ msgstr ""
 
 # @ avia_framework
 #: comments.php:17
-msgid ""
-"This post is password protected. Enter the password to view any comments."
+msgid "This post is password protected. Enter the password to view any comments."
 msgstr ""
 
 # @ avia_framework
@@ -790,8 +795,8 @@ msgstr ""
 
 #: config-layerslider/LayerSlider/config/defaults.php:887
 msgid ""
-"The transition duration in milliseconds when the layer enters into the "
-"slide. A second equals to 1000 milliseconds."
+"The transition duration in milliseconds when the layer enters into the slide."
+" A second equals to 1000 milliseconds."
 msgstr ""
 
 # @ LayerSlider
@@ -935,8 +940,8 @@ msgstr ""
 
 #: config-layerslider/LayerSlider/config/defaults.php:954
 msgid ""
-"Skews the layer along the Y (vertical) axis from the given angle to 0 "
-"degree. Negative values are allowed for reverse direction."
+"Skews the layer along the Y (vertical) axis from the given angle to 0 degree."
+" Negative values are allowed for reverse direction."
 msgstr ""
 
 #: config-layerslider/LayerSlider/config/defaults.php:959
@@ -967,9 +972,9 @@ msgstr ""
 msgid ""
 "This option allows you to modify the origin for transformations of the layer "
 "according to its position. The three values represent the X, Y and Z axis in "
-"3D space. OriginX can be left, center, right, a number or a percentage "
-"value. OriginY can be top, center, bottom, a number or a percentage value. "
-"OriginZ can be a number and corresponds the depth in 3D space."
+"3D space. OriginX can be left, center, right, a number or a percentage value."
+" OriginY can be top, center, bottom, a number or a percentage value. OriginZ "
+"can be a number and corresponds the depth in 3D space."
 msgstr ""
 
 #: config-layerslider/LayerSlider/config/defaults.php:986
@@ -1050,9 +1055,9 @@ msgstr ""
 
 #: config-layerslider/LayerSlider/config/defaults.php:1101
 msgid ""
-"Applies a parallax effect on layers when you move your mouse over the "
-"slider. Higher values make the layer more sensitive to mouse move. Negative "
-"values are allowed."
+"Applies a parallax effect on layers when you move your mouse over the slider."
+" Higher values make the layer more sensitive to mouse move. Negative values "
+"are allowed."
 msgstr ""
 
 # @ LayerSlider
@@ -1287,8 +1292,7 @@ msgstr ""
 
 # @ LayerSlider
 #: config-layerslider/LayerSlider/config/defaults.php:1350
-msgid ""
-"The line height of your text. The default setting is 'normal'. Example: 22px"
+msgid "The line height of your text. The default setting is 'normal'. Example: 22px"
 msgstr ""
 
 # @ LayerSlider
@@ -1472,8 +1476,8 @@ msgstr ""
 #: config-layerslider/LayerSlider/views/skin_editor.php:85
 msgid ""
 "You need to make this file writable in order to save your changes. See the "
-"<a href=\"http://codex.wordpress.org/Changing_File_Permissions\" target="
-"\"_blank\">Codex</a> for more information."
+"<a href=\"http://codex.wordpress.org/Changing_File_Permissions\" "
+"target=\"_blank\">Codex</a> for more information."
 msgstr ""
 
 # @ LayerSlider
@@ -1578,8 +1582,7 @@ msgstr ""
 # @ LayerSlider
 #: config-layerslider/LayerSlider/views/slider_edit.php:290
 #: config-layerslider/LayerSlider/views/slider_edit_sample.php:55
-msgid ""
-"You can select your desired slide transitions by clicking on this button."
+msgid "You can select your desired slide transitions by clicking on this button."
 msgstr ""
 
 #: config-layerslider/LayerSlider/views/slider_edit.php:299
@@ -1785,9 +1788,8 @@ msgstr ""
 #: config-layerslider/LayerSlider/views/slider_edit_sample.php:211
 msgid ""
 "Type here the contents of your layer. You can use any HTML codes in this "
-"field to insert content others then text. This field is also shortcode-"
-"aware, so you can insert content from other plugins as well as video embed "
-"codes."
+"field to insert content others then text. This field is also shortcode-aware,"
+" so you can insert content from other plugins as well as video embed codes."
 msgstr ""
 
 #: config-layerslider/LayerSlider/views/slider_edit.php:474
@@ -2415,9 +2417,8 @@ msgstr ""
 msgid ""
 "To receive automatic updates, you need to enter your item purchase code. "
 "Click on the Download button next to LayerSlider WP on your CodeCanyon "
-"downloads page and choose the &quot;License certificate & purchase "
-"code&quot; option. This will download a text file that contains your "
-"purchase code."
+"downloads page and choose the &quot;License certificate & purchase code&quot;"
+" option. This will download a text file that contains your purchase code."
 msgstr ""
 
 #: config-layerslider/LayerSlider/views/slider_list.php:470
@@ -3077,9 +3078,9 @@ msgstr ""
 
 #: config-layerslider/LayerSlider/views/transition_builder.php:1070
 msgid ""
-"Before you can save your changes, you need to make your \"/wp-content/uploads"
-"\" folder writable. See the <a href=\"http://codex.wordpress.org/"
-"Changing_File_Permissions\" target=\"_blank\">Codex</a>"
+"Before you can save your changes, you need to make your \"/wp-"
+"content/uploads\" folder writable. See the <a href=\"http://codex.wordpress."
+"org/Changing_File_Permissions\" target=\"_blank\">Codex</a>"
 msgstr ""
 
 # @ LayerSlider
@@ -3502,8 +3503,7 @@ msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/blog.php:126
-msgid ""
-"Set the preview image size automatically based on column or layout width"
+msgid "Set the preview image size automatically based on column or layout width"
 msgstr ""
 
 # @ avia_framework
@@ -3576,8 +3576,7 @@ msgstr ""
 #: config-templatebuilder/avia-shortcodes/product_list.php:80
 #: config-templatebuilder/avia-shortcodes/productslider.php:82
 #: config-templatebuilder/avia-shortcodes/slideshow_accordion.php:80
-msgid ""
-"Do not allow duplicate posts on the entire page (set offset automatically)"
+msgid "Do not allow duplicate posts on the entire page (set offset automatically)"
 msgstr ""
 
 # @ avia_framework
@@ -4392,8 +4391,7 @@ msgstr ""
 #: config-templatebuilder/avia-shortcodes/slideshow_fullsize.php:111
 #: config-templatebuilder/avia-shortcodes/team.php:75
 #: config-templatebuilder/avia-shortcodes/testimonials.php:71
-msgid ""
-"Either upload a new, or choose an existing image from your media library"
+msgid "Either upload a new, or choose an existing image from your media library"
 msgstr ""
 
 # @ avia_framework
@@ -4434,8 +4432,7 @@ msgid "No Link"
 msgstr ""
 
 #: config-templatebuilder/avia-shortcodes/catalogue.php:84
-msgid ""
-"Open bigger version of Thumbnail Image in lightbox (image needs to be set)"
+msgid "Open bigger version of Thumbnail Image in lightbox (image needs to be set)"
 msgstr ""
 
 # @ avia_framework
@@ -4824,8 +4821,8 @@ msgstr ""
 
 #: config-templatebuilder/avia-shortcodes/codeblock.php:26
 msgid ""
-"Add text or code to your website without any formatting or text "
-"optimization. Can be used for HTML/CSS/Javascript"
+"Add text or code to your website without any formatting or text optimization."
+" Can be used for HTML/CSS/Javascript"
 msgstr ""
 
 #: config-templatebuilder/avia-shortcodes/codeblock.php:42
@@ -4871,8 +4868,7 @@ msgid "Disable Shortcode Processing"
 msgstr ""
 
 #: config-templatebuilder/avia-shortcodes/codeblock.php:74
-msgid ""
-"Check if you want to disable the shortcode processing for this code block"
+msgid "Check if you want to disable the shortcode processing for this code block"
 msgstr ""
 
 #: config-templatebuilder/avia-shortcodes/codeblock.php:80
@@ -4880,8 +4876,7 @@ msgid "Deactivate schema.org markup"
 msgstr ""
 
 #: config-templatebuilder/avia-shortcodes/codeblock.php:81
-msgid ""
-"Output the code without any additional wrapper elements. (not recommended)"
+msgid "Output the code without any additional wrapper elements. (not recommended)"
 msgstr ""
 
 # @ avia_framework
@@ -4971,8 +4966,7 @@ msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/contact.php:65
-msgid ""
-"Here you can add, remove and edit the form Elements of your contact form."
+msgid "Here you can add, remove and edit the form Elements of your contact form."
 msgstr ""
 
 # @ avia_framework
@@ -5070,8 +5064,7 @@ msgid "Example: Option 1, Option 2, Option 3"
 msgstr ""
 
 #: config-templatebuilder/avia-shortcodes/contact.php:111
-msgid ""
-"Note: If you want to use a coma in the option text you can escape it with \\,"
+msgid "Note: If you want to use a coma in the option text you can escape it with \\,"
 msgstr ""
 
 #: config-templatebuilder/avia-shortcodes/contact.php:119
@@ -6046,8 +6039,7 @@ msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/gallery.php:120
-msgid ""
-"Activate animation on page load (might be preferable on large galleries)"
+msgid "Activate animation on page load (might be preferable on large galleries)"
 msgstr ""
 
 #: config-templatebuilder/avia-shortcodes/google_maps.php:19
@@ -6080,8 +6072,7 @@ msgstr ""
 
 #: config-templatebuilder/avia-shortcodes/google_maps.php:68
 #: config-templatebuilder/avia-shortcodes/image_hotspots.php:51
-msgid ""
-"Here you can add, remove and edit the map locations for your Google Map."
+msgid "Here you can add, remove and edit the map locations for your Google Map."
 msgstr ""
 
 #: config-templatebuilder/avia-shortcodes/google_maps.php:71
@@ -6172,8 +6163,8 @@ msgstr ""
 
 #: config-templatebuilder/avia-shortcodes/google_maps.php:134
 msgid ""
-"You can either define a fixed height in pixel like '300px' or enter a width/"
-"height ratio like 16:9"
+"You can either define a fixed height in pixel like '300px' or enter a "
+"width/height ratio like 16:9"
 msgstr ""
 
 #: config-templatebuilder/avia-shortcodes/google_maps.php:141
@@ -7800,8 +7791,7 @@ msgid "Display Neither"
 msgstr ""
 
 #: config-templatebuilder/avia-shortcodes/masonry_entries.php:192
-msgid ""
-"You can choose whether to always display Title and Excerpt or only on hover"
+msgid "You can choose whether to always display Title and Excerpt or only on hover"
 msgstr ""
 
 #: config-templatebuilder/avia-shortcodes/masonry_entries.php:198
@@ -7868,8 +7858,8 @@ msgstr ""
 msgid ""
 "Perfect Automatic Masonry: Display a grid where most images get the same "
 "size, only very wide images get twice the width and very high images get "
-"twice the height. To qualify for \"very wide\" or \"very high\" the image "
-"must have a aspect ratio of 16:9 or higher"
+"twice the height. To qualify for \"very wide\" or \"very high\" the image must "
+"have a aspect ratio of 16:9 or higher"
 msgstr ""
 
 #: config-templatebuilder/avia-shortcodes/masonry_gallery.php:119
@@ -7897,8 +7887,7 @@ msgid "Element Title and Caption"
 msgstr ""
 
 #: config-templatebuilder/avia-shortcodes/masonry_gallery.php:146
-msgid ""
-"You can choose whether to always display Title and Caption or only on hover"
+msgid "You can choose whether to always display Title and Caption or only on hover"
 msgstr ""
 
 #: config-templatebuilder/avia-shortcodes/masonry_gallery.php:157
@@ -7967,8 +7956,7 @@ msgid "Sticky Submenu"
 msgstr ""
 
 #: config-templatebuilder/avia-shortcodes/menu.php:76
-msgid ""
-"If checked the menu will stick at the top of the page once it touches it"
+msgid "If checked the menu will stick at the top of the page once it touches it"
 msgstr ""
 
 #: config-templatebuilder/avia-shortcodes/menu.php:82
@@ -7984,8 +7972,7 @@ msgid "Display full menu (works best if you only got a few menu items)"
 msgstr ""
 
 #: config-templatebuilder/avia-shortcodes/menu.php:88
-msgid ""
-"Display a button to open menu (works best for menus with a lot of menu items)"
+msgid "Display a button to open menu (works best for menus with a lot of menu items)"
 msgstr ""
 
 #: config-templatebuilder/avia-shortcodes/menu.php:93
@@ -8302,8 +8289,7 @@ msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/portfolio.php:115
-msgid ""
-"(Note: Images will be scaled to fit for the amount of columns chosen above)"
+msgid "(Note: Images will be scaled to fit for the amount of columns chosen above)"
 msgstr ""
 
 # @ avia_framework
@@ -8347,8 +8333,8 @@ msgstr ""
 msgid ""
 "Select which post types should be used. Note that your taxonomy will be "
 "ignored if you do not select an assign post type.\n"
-"\t\t\t\t\t\t                      If yo don't select post type all "
-"registered post types will be used"
+"						                      If yo don't select post type all registered post "
+"types will be used"
 msgstr ""
 
 # @ avia_framework
@@ -8662,8 +8648,7 @@ msgid "Progress Bar Animation enabled?"
 msgstr ""
 
 #: config-templatebuilder/avia-shortcodes/progressbar.php:124
-msgid ""
-"Chose if you want to enable the continuous animation of the progress bar"
+msgid "Chose if you want to enable the continuous animation of the progress bar"
 msgstr ""
 
 # @ avia_framework
@@ -8695,8 +8680,7 @@ msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/promobox.php:56
-msgid ""
-"Do you want to display a Call to Action Button on the right side of the box?"
+msgid "Do you want to display a Call to Action Button on the right side of the box?"
 msgstr ""
 
 #: config-templatebuilder/avia-shortcodes/promobox.php:214
@@ -9168,8 +9152,7 @@ msgstr ""
 #: config-templatebuilder/avia-shortcodes/slideshow.php:243
 #: config-templatebuilder/avia-shortcodes/slideshow_fullscreen.php:508
 #: config-templatebuilder/avia-shortcodes/slideshow_fullsize.php:505
-msgid ""
-"Check if you want to disable autorotation when this last slide is displayed"
+msgid "Check if you want to disable autorotation when this last slide is displayed"
 msgstr ""
 
 #: config-templatebuilder/avia-shortcodes/slideshow.php:259
@@ -9631,8 +9614,7 @@ msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-shortcodes/table.php:90
-msgid ""
-"Add a short caption to the table so visitors know what the data is about"
+msgid "Add a short caption to the table so visitors know what the data is about"
 msgstr ""
 
 #: config-templatebuilder/avia-shortcodes/table.php:98
@@ -10251,8 +10233,7 @@ msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-template-builder/config/javascript_strings.php:6
-msgid ""
-"It seems your are no longer logged in. Please reload the page and try again"
+msgid "It seems your are no longer logged in. Please reload the page and try again"
 msgstr ""
 
 # @ avia_framework
@@ -10489,8 +10470,7 @@ msgstr ""
 
 # @ avia_framework
 #: config-templatebuilder/avia-template-builder/config/meta.php:94
-msgid ""
-"Display Images as either gallery, slideshow or as a list below each other"
+msgid "Display Images as either gallery, slideshow or as a list below each other"
 msgstr ""
 
 # @ avia_framework
@@ -10803,57 +10783,67 @@ msgid "Expand"
 msgstr ""
 
 # @ avia_framework
-#: config-templatebuilder/avia-template-builder/php/save-buildertemplate.class.php:49
+#: config-templatebuilder/avia-template-builder/php/save-buildertemplate.class.
+#: php:49
 msgid "No Templates saved yet"
 msgstr ""
 
 # @ avia_framework
-#: config-templatebuilder/avia-template-builder/php/save-buildertemplate.class.php:61
+#: config-templatebuilder/avia-template-builder/php/save-buildertemplate.class.
+#: php:61
 msgid "Templates"
 msgstr ""
 
 # @ avia_framework
-#: config-templatebuilder/avia-template-builder/php/save-buildertemplate.class.php:63
+#: config-templatebuilder/avia-template-builder/php/save-buildertemplate.class.
+#: php:63
 msgid "Save Entry as Template"
 msgstr ""
 
 # @ avia_framework
-#: config-templatebuilder/avia-template-builder/php/save-buildertemplate.class.php:65
+#: config-templatebuilder/avia-template-builder/php/save-buildertemplate.class.
+#: php:65
 msgid "Load Template"
 msgstr ""
 
 # @ avia_framework
-#: config-templatebuilder/avia-template-builder/php/save-buildertemplate.class.php:116
+#: config-templatebuilder/avia-template-builder/php/save-buildertemplate.class.
+#: php:116
 msgid ""
 "Template name already in use. Please delete the template with this name "
 "first or choose a different name"
 msgstr ""
 
 # @ avia_framework
-#: config-templatebuilder/avia-template-builder/php/shortcode-template.class.php:454
+#: config-templatebuilder/avia-template-builder/php/shortcode-template.class.php:
+#: 454
 msgid "Custom Css Class"
 msgstr ""
 
 # @ avia_framework
-#: config-templatebuilder/avia-template-builder/php/shortcode-template.class.php:455
+#: config-templatebuilder/avia-template-builder/php/shortcode-template.class.php:
+#: 455
 msgid ""
 "Add a custom css class for the element here. Make sure to only use allowed "
 "characters (latin characters, underscores, dashes and numbers)"
 msgstr ""
 
 # @ avia_framework
-#: config-templatebuilder/avia-template-builder/php/shortcode-template.class.php:501
+#: config-templatebuilder/avia-template-builder/php/shortcode-template.class.php:
+#: 501
 #: framework/php/class-htmlhelper.php:1560
 msgid "Edit Element"
 msgstr ""
 
 # @ avia_framework
-#: config-templatebuilder/avia-template-builder/php/shortcode-template.class.php:505
+#: config-templatebuilder/avia-template-builder/php/shortcode-template.class.php:
+#: 505
 msgid "Delete Element"
 msgstr ""
 
 # @ avia_framework
-#: config-templatebuilder/avia-template-builder/php/shortcode-template.class.php:506
+#: config-templatebuilder/avia-template-builder/php/shortcode-template.class.php:
+#: 506
 msgid "Clone Element"
 msgstr ""
 
@@ -11314,8 +11304,7 @@ msgstr ""
 
 # @ woothemes
 #: config-woocommerce/admin-import.php:304
-msgid ""
-"This is where you can add new coupons that customers can use in your store."
+msgid "This is where you can add new coupons that customers can use in your store."
 msgstr ""
 
 # @ avia_framework
@@ -11716,8 +11705,7 @@ msgstr ""
 
 # @ avia_framework
 #: framework/php/class-framework-widgets.php:1290
-msgid ""
-"Too many requests at once, please refresh the page to complete geocoding"
+msgid "Too many requests at once, please refresh the page to complete geocoding"
 msgstr ""
 
 # @ avia_framework
@@ -11917,9 +11905,9 @@ msgid ""
 "Contact the administrator of this site for help on getting the plugin "
 "installed."
 msgid_plural ""
-"Sorry, but you do not have the correct permissions to install the %s "
-"plugins. Contact the administrator of this site for help on getting the "
-"plugins installed."
+"Sorry, but you do not have the correct permissions to install the %s plugins."
+" Contact the administrator of this site for help on getting the plugins "
+"installed."
 msgstr[0] ""
 msgstr[1] ""
 
@@ -11943,9 +11931,9 @@ msgstr[1] ""
 #: framework/php/class-tgm-plugin-activation.php:173
 #, php-format
 msgid ""
-"Sorry, but you do not have the correct permissions to activate the %s "
-"plugin. Contact the administrator of this site for help on getting the "
-"plugin activated."
+"Sorry, but you do not have the correct permissions to activate the %s plugin."
+" Contact the administrator of this site for help on getting the plugin "
+"activated."
 msgid_plural ""
 "Sorry, but you do not have the correct permissions to activate the %s "
 "plugins. Contact the administrator of this site for help on getting the "
@@ -12390,8 +12378,7 @@ msgstr ""
 #: framework/php/wordpress-importer/parsers.php:72
 #: framework/php/wordpress-importer/parsers.php:262
 #: framework/php/wordpress-importer/parsers.php:452
-msgid ""
-"This does not appear to be a WXR file, missing/invalid WXR version number"
+msgid "This does not appear to be a WXR file, missing/invalid WXR version number"
 msgstr ""
 
 # @ wordpress-importer
@@ -12457,8 +12444,8 @@ msgstr ""
 msgid ""
 "To make it easier for you to edit and save the imported content, you may "
 "want to reassign the author of the imported item to an existing user of this "
-"site. For example, you may want to import all the entries as <code>admin</"
-"code>s entries."
+"site. For example, you may want to import all the entries as "
+"<code>admin</code>s entries."
 msgstr ""
 
 # @ wordpress-importer
@@ -12765,8 +12752,7 @@ msgid "Use stretched or boxed layout?"
 msgstr ""
 
 #: includes/admin/register-admin-options.php:153
-msgid ""
-"The stretched layout expands from the left side of the viewport to the right."
+msgid "The stretched layout expands from the left side of the viewport to the right."
 msgstr ""
 
 #: includes/admin/register-admin-options.php:160
@@ -12923,9 +12909,8 @@ msgstr ""
 #: includes/admin/register-admin-options.php:360
 msgid ""
 "We have detected that you are using a Child Theme. That's Great!. If you "
-"want to, we can import the settings of your Parent theme to your Child "
-"theme. Please be aware that this will overwrite your current child theme "
-"settings."
+"want to, we can import the settings of your Parent theme to your Child theme."
+" Please be aware that this will overwrite your current child theme settings."
 msgstr ""
 
 #: includes/admin/register-admin-options.php:369
@@ -13417,8 +13402,7 @@ msgid "Page Sidebar navigation"
 msgstr ""
 
 #: includes/admin/register-admin-options.php:1104
-msgid ""
-"Display a sidebar navigation for all nested subpages of a page automatically?"
+msgid "Display a sidebar navigation for all nested subpages of a page automatically?"
 msgstr ""
 
 #: includes/admin/register-admin-options.php:1109
@@ -13434,8 +13418,7 @@ msgid "Create new Sidebar Widget Areas"
 msgstr ""
 
 #: includes/admin/register-admin-options.php:1115
-msgid ""
-"The theme supports the creation of custom widget areas. Simply open your"
+msgid "The theme supports the creation of custom widget areas. Simply open your"
 msgstr ""
 
 #: includes/admin/register-admin-options.php:1115
@@ -13677,8 +13660,7 @@ msgid "Transparency menu color"
 msgstr ""
 
 #: includes/admin/register-admin-options.php:1437
-msgid ""
-"Menu color for transparent header (Leave empty to use the default color)"
+msgid "Menu color for transparent header (Leave empty to use the default color)"
 msgstr ""
 
 #: includes/admin/register-admin-options.php:1445
@@ -14357,6 +14339,7 @@ msgid "Share by Mail"
 msgstr ""
 
 #: includes/helper-social-media.php:217
+msgctxt "Comparte este post  "
 msgid "Share this entry"
 msgstr ""
 
@@ -14436,8 +14419,7 @@ msgstr ""
 
 # @ avia_framework
 #: includes/loop-search.php:130
-msgid ""
-"You might want to consider some of our suggestions to get better results:"
+msgid "You might want to consider some of our suggestions to get better results:"
 msgstr ""
 
 # @ avia_framework
