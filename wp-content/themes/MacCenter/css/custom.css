@@ -6,6 +6,14 @@
 @import url('fonts/open-sans-fontfacekit/web-fonts/opensans_regular/stylesheet.css');*/
 @import url('fonts/MyriadSetPro-Bold-fontfacekit/web-fonts/MyriadSetPro-Bold/stylesheet.css');
 @import url('fonts/MyriadSetPro-Medium-fontfacekit/stylesheet.css');
+
+
+#welcome h2{
+	color:#828282;
+	font-family: arial, sans-serif;
+	font-size:45px;
+}
+
 /*AJUSTE BTN LETF TIRADO A LA DERECHA*/
 .caption_left .slideshow_caption {
 left:72% !important;
@@ -20,7 +28,7 @@ border-top: 1px solid #EAEAEA !important;
 
 /*ESTILO MASONRI BLOG*/
 .main_color .av-masonry {
-    background-color: #666666 !important;
+    background-color: #f5f5f5 !important;
    /* border: 1px solid #E2E2E2!important;*/
 }
 /**INICIO ESTILOS IPAD**/

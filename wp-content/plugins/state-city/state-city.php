@@ -9,8 +9,8 @@ Domain Path: /languages/
 Version: 0.1.0
 */
 
-error_reporting(E_ALL ^ E_NOTICE ^ E_STRICT);
-ini_set('display_startup_error',1);
+//error_reporting(E_ALL ^ E_NOTICE ^ E_STRICT);
+//ini_set('display_startup_error',1);
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
@@ -19,8 +19,10 @@ global $wpdb;
 //add_action('admin_menu', array('States_Cities', 'my_menu_pages'));
 //add_action('admin_init', array('States_Cities', 'init'));
 
+require_once( ABSPATH . 'wp-admin/includes/template.php' );
+
 if( ! class_exists( 'WP_List_Table' ) ) {
-    require_once( ABSPATH . 'wp-admin/includes/class-wp-list-table.php' );
+	require_once( ABSPATH . 'wp-admin/includes/class-wp-list-table.php' );
 }
 
 if(!class_exists('States_Cities')){

@@ -1,0 +1,91 @@
+/*-------------------------------------------------------------------------------------------*/
+/* PCF Form */
+/*-------------------------------------------------------------------------------------------*/
+.pcf_hyperlink_text {
+	text-decoration:underline;
+	cursor:pointer;	
+}
+.pcf_contact_form{
+	width: 520px;
+}
+h1.pcf_result_heading {
+	margin:0 0 10px !important;
+}
+body .pcf_form_button, .pcf_form_button {
+	float:right !important;
+	margin-right:2% !important;
+}
+.pcf_contact_field input, .pcf_contact_field textarea {
+	-moz-box-shadow: 0px 0px 0px #FFF !important; /* Firefox */
+	-webkit-box-shadow: 0px 0px 0px #FFF !important;
+	box-shadow: 0px 0px 0px #FFF !important; 
+	width:73% !important;
+	font-size:13px !important;
+	padding:5px;
+}
+.pcf_contact_field .your_message {
+	height:65px;	
+}
+.pcf_contact_field{
+	margin-bottom:10px;
+	clear:both;	
+}
+.pcf_required{
+	color:red;	
+}
+.pcf_contact_label{
+	width:22%;
+	float:left;
+	cursor:pointer;
+}
+.pcf_contact_send_copy {
+	cursor:pointer;	
+	float:left;
+}
+.pcf_contact_send_copy input {
+	width:auto !important;	
+	margin:0 !important;
+}
+.pcf_contact_loading {
+	float:right;
+	display:none;
+	margin-right:5px;
+}
+.pcf_button_container { 
+	display:inline-block;
+}
+
+@media only screen and (max-width: 568px) {
+	
+#fancybox-content {
+	border:5px solid #FFFFFF !important;
+	width:auto !important;
+}
+
+.pcf_contact_form {
+	width:auto !important;	
+}
+
+body .pcf_contact_label {
+	width:100% !important;
+	clear:both;
+}
+
+body .pcf_contact_field input, body .pcf_contact_field textarea {
+	width:90% !important;
+}
+body .pcf_contact_send_copy input {
+	width:auto !important;	
+}
+body .pcf_contact_send_copy {
+	width:100%;
+	margin-bottom:5px;
+}
+body .pcf_form_button, .pcf_form_button {
+	float:left !important;	
+}
+body .pcf_contact_loading {
+	float:left !important;	
+}
+
+}
