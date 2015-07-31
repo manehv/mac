@@ -1,0 +1,122 @@
+.select2-input,
+.select2-drop,
+.select2-search,
+.select2-container  {
+	min-width: 300px !important;
+	max-width: 400px !important;
+}
+
+/**
+ * Hack for WP 3.8 accordion header background color
+ */
+.control-section:hover .accordion-section-title, 
+.js .control-section .accordion-section-title:hover, 
+.js .control-section.open .accordion-section-title, 
+.js .control-section .accordion-section-title:focus {
+	background: #FFF !important;
+}
+
+.otw-bm-color-picker {
+	display: inline-table;
+}
+
+.js-color-picker-icon {
+	position: relative;
+	width: 27px;
+	height: 27px;
+	background: url(../img/colorpicker/select.png);
+	float: left;
+	cursor: pointer;
+}
+
+.js-color-picker-icon div{
+	position: absolute;
+	top: 4px;
+	left: 3px;
+	width: 21px;
+	height: 19px;
+	background: url(../img/colorpicker/select.png) center;
+
+}
+
+div.select2-search .select2-input {
+	min-width: 280px !important;
+}
+
+.live_preview {
+	width: 960px;
+	margin: 20px 0px 20px 0px;
+}
+
+.otw-admin-hidden {
+	display: none;
+}
+
+.left {
+	
+	clear: both;
+}
+
+.inline-error {
+	color: red;
+}
+
+.b-delete_btn {
+	width: 20px;
+	height: 20px;
+	display: block;
+	background: url(../img/delete_icon.png) no-repeat 0px 0px;
+	margin: 5px 0px 0px 5px;
+	position: absolute;
+}
+
+/**
+ * Overwrite the WP Admin color for .widget
+ * Background and borders, to replicate real preview
+ */
+.widget {
+	border: none !important;
+	background: none !important;
+}
+
+.active_elements,
+.inactive_elements {
+	width: 300px;
+	display: inline-table;
+	
+}
+
+	.b-meta-box,
+	.b-bl-box {
+		border: 1px solid #CCC;	
+		padding: 20px;
+		height: 150px;
+	}
+
+	.b-meta-items,
+	.b-bl-items {
+		width: 240px;
+		line-height: 20px;
+		border: 1px solid #FFF;
+		outline: 1px solid #CCC;
+		text-align: center;
+		background: linear-gradient(to top,#ececec,#f9f9f9);
+		cursor: move;
+	}
+
+.b-slider-preview {
+	display: inline
+}
+	.b-slider__item {
+		min-height: 120px;
+		float: left;
+		margin: 0px 5px 0px 0px;
+		cursor: move;
+	}
+.otw_bm_updated{
+	background-color: #FFFFFF;
+	border-left: 4px solid #7AD03A;
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
+	padding: 1px 12px;
+	margin: 10px 2px 10px 1px;
+}
