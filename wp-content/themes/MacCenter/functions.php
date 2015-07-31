@@ -1409,3 +1409,29 @@ function my_custom_checkout_field_update_order_meta( $order_id ) {
   function my_custom_shipping_fields_display_admin_order_meta($order) {
 echo '<p><strong>' . __('Shipping Cédula') . ':</strong><br> ' . get_post_meta($order->id, '_shipping_Cédula', true) . '</p>';
 }
+
+function wc_cart_totals_coupon( $coupon ) {
+	if ( is_string( $coupon ) ) {
+		$coupon = new WC_Coupon( $coupon );
+    }
+
+	$value  = array();
+
+	if ( $amount = WC()->cart->get_coupon_discount_amount( $coupon->code, WC()->cart->display_cart_ex_tax ) ) {
+		$discount_html = '-' . wc_price( $amount );
+	} else {
+		$discount_html = '';
+	}
+
+	$value[] = apply_filters( 'woocommerce_coupon_discount_amount_html', $discount_html, $coupon );
+
+//  	if ( $coupon->enable_free_shipping() ) {
+//  		$value[] = __( 'Free shipping coupon', 'woocommerce' );
+//     }
+
+    // get rid of empty array elements
+    $value = array_filter( $value );
+	$value = implode( ', ', $value ); //. ' <a href="' . esc_url( add_query_arg( 'remove_coupon', urlencode( $coupon->code ), defined( 'WOOCOMMERCE_CHECKOUT' ) ? WC()->cart->get_checkout_url() : WC()->cart->get_cart_url() ) ) . '" class="woocommerce-remove-coupon" data-coupon="' . esc_attr( $coupon->code ) . '">' . __( '[Remove]', 'woocommerce' ) . '</a>';
+
+	echo apply_filters( 'woocommerce_cart_totals_coupon', $value, $coupon );
+}
