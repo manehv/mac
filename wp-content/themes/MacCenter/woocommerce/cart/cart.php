@@ -140,14 +140,19 @@ echo '</a>';
 										<?php if ( WC()->cart->coupons_enabled() ) { ?>
 														<div class="coupon">
 																		<br/>		
-																		<label for="coupon_code" ><?php _e( 'Cupon de descuento', 'woocommerce' ); ?>:</label> 
+<!-- 																		<label for="coupon_code" ><?php _e( 'Cupon de descuento', 'woocommerce' ); ?>:</label>  -->
 																		
 																		<input type="text" name="coupon_code" class="input-text" id="coupon_code" value="" placeholder="<?php _e( 'Coupon code', 'woocommerce' ); ?>" /> 
-																		<input type="submit" class="button" name="apply_coupon" value="<?php _e( 'Apply Coupon', 'woocommerce' ); ?>" />
-																						
-																		<?php do_action( 'woocommerce_cart_coupon' ); ?>
-
+																		<input type="submit" class="button" name="apply_coupon" value="<?php _e( 'Apply Coupon', 'woocommerce' ); ?>" />			
 														</div>
+														<br/>
+														<?php add_action( 'woocommerce_cart_coupon', 'add_login_notice' );
+																		function add_login_notice() {
+																		if (! is_user_logged_in() ) {
+																			echo '<div>Debes <a href='. site_url('/login/').'>ingresar</a>   para aplicar el cupón</div>' ; }
+																		}
+																		?>
+														<?php do_action( 'woocommerce_cart_coupon' ); ?>				
 										<?php } ?>
                 
                 </td>
