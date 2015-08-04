@@ -1725,3 +1725,4 @@ margin: 0 25% ;
 	margin-left:5px;	
 }
 .loading{margin-top:-15px;}
+#billing_state_field , #shipping_state_field{display:none !important;}
