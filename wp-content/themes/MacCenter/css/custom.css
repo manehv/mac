@@ -7,6 +7,10 @@
 @import url('fonts/MyriadSetPro-Bold-fontfacekit/web-fonts/MyriadSetPro-Bold/stylesheet.css');
 @import url('fonts/MyriadSetPro-Medium-fontfacekit/stylesheet.css');
 
+#top span.amount{
+	color: blue !important;
+	font-size:10px !important;
+}
 
 #welcome h2{
 	color:#828282;
@@ -1725,3 +1729,4 @@ margin: 0 25% ;
 	margin-left:5px;	
 }
 .loading{margin-top:-15px;}
+#billing_state_field , #shipping_state_field{display:none !important;}
