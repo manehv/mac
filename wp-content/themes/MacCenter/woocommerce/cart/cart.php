@@ -149,7 +149,7 @@ echo '</a>';
 														<?php add_action( 'woocommerce_cart_coupon', 'add_login_notice' );
 																		function add_login_notice() {
 																		if (! is_user_logged_in() ) {
-																			echo '<div>Debes <a href='. site_url('/login/').'>ingresar</a>   para aplicar el cupón</div>' ; }
+																			echo '<div class="c-login">Debes <a href='. site_url('/login/').'>ingresar</a>   aquí para aplicar el cupón</div>' ; }
 																		}
 																		?>
 														<?php do_action( 'woocommerce_cart_coupon' ); ?>				

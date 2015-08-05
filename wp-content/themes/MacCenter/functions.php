@@ -1439,7 +1439,7 @@ function wc_cart_totals_coupon( $coupon ) {
 	$value  = array();
 
 	if ( $amount = WC()->cart->get_coupon_discount_amount( $coupon->code, WC()->cart->display_cart_ex_tax ) ) {
-		$discount_html = '-' . wc_price( $amount );
+		$discount_html = '<span class="dash">-</span>' . wc_price( $amount );
 	} else {
 		$discount_html = '';
 	}

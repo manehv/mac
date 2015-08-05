@@ -1730,3 +1730,10 @@ margin: 0 25% ;
 }
 .loading{margin-top:-15px;}
 #billing_state_field , #shipping_state_field{display:none !important;}
+.c-login a {color:#0270a3;
+	text-decoration:underline;
+}
+.cart-discount .dash {font-size:30px;
+	 margin-right: 3px;
+    vertical-align: top;
+}

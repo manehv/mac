@@ -32,7 +32,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 			</tr>
 		<?php endforeach; ?>
 
-		<?php if ( WC()->cart->needs_shipping() && WC()->cart->show_shipping() ) : ?>
+		<?php /*if ( WC()->cart->needs_shipping() && WC()->cart->show_shipping() ) : ?>
 
 			<?php do_action( 'woocommerce_cart_totals_before_shipping' ); ?>
 
@@ -47,7 +47,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 				<td><?php woocommerce_shipping_calculator(); ?></td>
 			</tr>
 
-		<?php endif; ?>
+		<?php endif; */?>
 
 		<?php foreach ( WC()->cart->get_fees() as $fee ) : ?>
 			<tr class="fee">
