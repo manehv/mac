@@ -1,0 +1,28 @@
+.wck-badge{
+	background: url(../images/wck-32x32.png) 20px center no-repeat #f1f1f1;
+	border:1px solid #ccc;
+	border-radius:3px;
+	-webkit-box-shadow: inset 1px 1px 0px 0px rgba(255, 255, 255, 1);
+	box-shadow: inset 1px 1px 0px 0px rgba(255, 255, 255, 1); 
+	padding:20px 20px 20px 70px;
+	float:left;
+	margin-bottom:40px;	
+	font-weight:bold;
+}
+.serial-notification{
+	padding:10px 20px;
+	border:1px solid #ccc;
+	border-radius:3px;
+}
+.serial-notification.yellow{
+	background:#FFFFE0;
+	border-color:#E6DB55;
+}
+.serial-notification.red{
+	background:#ffd6d6;
+	border-color:#cc0000;
+}
+.serial-notification.green{
+	background:#eeffe0;
+	border-color:#4dcc00;
+}

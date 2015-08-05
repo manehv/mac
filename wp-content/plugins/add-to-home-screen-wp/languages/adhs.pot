@@ -1,0 +1,189 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: ATHS WP Plugin\n"
+"POT-Creation-Date: 2013-03-21 01:30+0100\n"
+"PO-Revision-Date: 2013-03-21 01:31+0100\n"
+"Last-Translator: Tulipe Media <contact@tulipemedia.com>\n"
+"Language-Team: Tulipe Media <contact@tulipemedia.com>\n"
+"Language: French\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.5\n"
+"X-Poedit-KeywordsList: __;_e;_c\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=n>1;\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: C:\\Users\\Ziyad\\Dropbox\\Dev\\adhs\n"
+
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/index.php:71
+msgid "You do not have sufficient permissions to access this page."
+msgstr ""
+
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/options.php:45
+msgid "ATHS Options &raquo; Settings"
+msgstr ""
+
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/options.php:47
+msgid "Say hello to me!"
+msgstr ""
+
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/options.php:74
+msgid "Spread the word, tweet my plugin!"
+msgstr ""
+
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/options.php:82
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/options.php:87
+msgid "Save Settings"
+msgstr ""
+
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/options.php:94
+msgid "Show to returning visitors only"
+msgstr ""
+
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/options.php:96
+msgid ""
+"Set this to true and the message won't be shown the first time one user "
+"visits your blog. It can be useful to target only returning visitors and not "
+"irritate first time visitors."
+msgstr ""
+
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/options.php:101
+msgid "Custom message"
+msgstr ""
+
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/options.php:103
+msgid ""
+"Type the custom message that you want appearing in the balloon. You can also "
+"display default message in the language of your choice by typing the locale "
+"(e.g: en_us)."
+msgstr ""
+
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/options.php:108
+msgid "Animation in"
+msgstr ""
+
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/options.php:110
+msgid "The animation the balloon appears with."
+msgstr ""
+
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/options.php:119
+msgid "Animation out"
+msgstr ""
+
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/options.php:121
+msgid "The animation the balloon exits with."
+msgstr ""
+
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/options.php:130
+msgid "Start delay"
+msgstr ""
+
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/options.php:132
+msgid "Milliseconds to wait before showing the message. Default: 2000"
+msgstr ""
+
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/options.php:137
+msgid "Lifespan"
+msgstr ""
+
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/options.php:139
+msgid "Milliseconds to wait before hiding the message. Default: 20000"
+msgstr ""
+
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/options.php:144
+msgid "Bottom offset"
+msgstr ""
+
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/options.php:146
+msgid ""
+"Distance in pixels from the bottom (iPhone) or the top (iPad). Default: 14"
+msgstr ""
+
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/options.php:151
+msgid "Expire timeframe"
+msgstr ""
+
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/options.php:153
+msgid ""
+"Minutes before displaying the message again. Default: 0 (=always show). It "
+"can be useful to set a timeframe to prevent showing message at each and "
+"every page load."
+msgstr ""
+
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/options.php:158
+msgid "Touch icon"
+msgstr ""
+
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/options.php:160
+msgid ""
+"If checked, the script checks for link rel=\"apple-touch-icon\" in the page "
+"HEAD and displays the application icon next to the message. Do NOT check if "
+"you don't have one, otherwise \"null\" mention will be displayed in place of "
+"the missing icon."
+msgstr ""
+
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/options.php:165
+msgid "Touch icon URL"
+msgstr ""
+
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/options.php:167
+msgid ""
+"If mentionned, it adds a link rel=\"apple-touch-icon\" mention in the page "
+"HEAD (convenient for those who have no touch icon). <br />Recommended size: "
+"144*144."
+msgstr ""
+
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/options.php:172
+msgid "If your theme is non responsive, these options might interest you"
+msgstr ""
+
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/options.php:173
+msgid ""
+"In non-responsive themes, the floating balloon may be to small. These "
+"settings will allow you to increase dimensions and appearance."
+msgstr ""
+
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/options.php:175
+msgid "Zoom of the floating balloon (%)"
+msgstr ""
+
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/options.php:177
+msgid ""
+"Recommended to leave blank if your theme is responsive design. If not, it is "
+"recommended to increase the balloon dimensions by zooming. <i>Recommended "
+"value for non-responsive themes: at leat 300</i>"
+msgstr ""
+
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/options.php:182
+msgid "Font-size of the floating balloon (%)"
+msgstr ""
+
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/options.php:184
+msgid ""
+"Recommended to leave blank if your theme is responsive design. If not, it is "
+"recommended to increase it, especially if you have increased the floating "
+"balloon via the zoom field. <i>Recommended value for non-responsive themes: "
+"250</i>"
+msgstr ""
+
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/options.php:189
+msgid "Line-height (%)"
+msgstr ""
+
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/options.php:191
+msgid ""
+"Recommended to leave blank if your theme is responsive design. Decrease it "
+"if you have increased the zoom field. <i>Recommended value for non "
+"responsive sites: 50</i>"
+msgstr ""
+
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/options.php:197
+msgid "Disable Web App Capable"
+msgstr ""
+
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/options.php:199
+msgid ""
+"If checked, the balloon will appear even if your blog has been added to the "
+"home screen. Recommended to leave uncheck."
+msgstr ""

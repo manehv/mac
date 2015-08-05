@@ -1,0 +1,776 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: ATHS WP Plugin\n"
+"POT-Creation-Date: 2013-03-28 02:01+0100\n"
+"PO-Revision-Date: 2013-06-21 11:03+0100\n"
+"Last-Translator: Julian Weiland <julian-weiland@web.de>\n"
+"Language-Team: Julian Weiland <julian-weiland@web.de>\n"
+"Language: Deusch\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.5\n"
+"X-Poedit-KeywordsList: __;_e;_c\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=n>1;\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: C:\\Users\\Ziyad\\Dropbox\\Dev\\adhs\n"
+
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/index.php:76
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.1/index.php:71
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.2/index.php:71
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.3/index.php:71
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.4/index.php:72
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.5/index.php:74
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.6/index.php:76
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.7/index.php:76
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/trunk/index.php:76
+msgid "You do not have sufficient permissions to access this page."
+msgstr ""
+"Sie Verfügen nicht über die ausreichende Berechtigung, um auf diese Seite "
+"zuzugreifen."
+
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/options.php:45
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.1/options.php:45
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.2/options.php:45
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.3/options.php:45
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.4/options.php:45
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.5/options.php:45
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.6/options.php:45
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.7/options.php:45
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/trunk/options.php:45
+msgid "ATHS Options &raquo; Settings"
+msgstr "ATHS Optionen &raquo; Einstellungen"
+
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/options.php:47
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.1/options.php:47
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.2/options.php:47
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.3/options.php:47
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.4/options.php:47
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.5/options.php:47
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.6/options.php:47
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.7/options.php:47
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/trunk/options.php:47
+msgid "Say hello to me!"
+msgstr "Sag hallo zu mir!"
+
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/options.php:74
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.1/options.php:74
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.2/options.php:74
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.3/options.php:74
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.4/options.php:74
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.5/options.php:74
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.6/options.php:74
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.7/options.php:74
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/trunk/options.php:74
+msgid "Spread the word, tweet my plugin!"
+msgstr "Verbreite ATHS in der Welt, Zwitter über das Plugin"
+
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/options.php:82
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/options.php:87
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.1/options.php:82
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.1/options.php:87
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.2/options.php:82
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.2/options.php:87
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.3/options.php:82
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.3/options.php:87
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.4/options.php:82
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.4/options.php:87
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.5/options.php:82
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.5/options.php:87
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.6/options.php:82
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.6/options.php:87
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.7/options.php:82
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.7/options.php:87
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/trunk/options.php:82
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/trunk/options.php:87
+msgid "Save Settings"
+msgstr "Einstellungen Speichern"
+
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/options.php:94
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.1/options.php:94
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.2/options.php:94
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.3/options.php:94
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.4/options.php:94
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.5/options.php:94
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.6/options.php:94
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.7/options.php:94
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/trunk/options.php:94
+msgid "Show to returning visitors only"
+msgstr "Nur wiederkehrenden Besuchern zeigen"
+
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/options.php:96
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.4/options.php:96
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.5/options.php:96
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.6/options.php:96
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.7/options.php:96
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/trunk/options.php:96
+msgid ""
+"Set this to true and the message won't be shown the first time one user "
+"visits your blog. It can be useful to target only returning visitors and not "
+"irritate first time visitors. <i>I recommend to check this value</i>."
+msgstr ""
+"Wenn diese Option gewählt ist wird der Banner nicht beim ersten Besuch "
+"angezeigt. Das kann hilfreich sein um nur wiederkehrende Besuchern zu "
+"erreichen und um neue Besucher nicht zu irritieren. <i>Ich empfehle diese "
+"Option zu verwenden</i>"
+
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/options.php:101
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.1/options.php:101
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.2/options.php:101
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.3/options.php:101
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.4/options.php:101
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.5/options.php:101
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.6/options.php:101
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.7/options.php:101
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/trunk/options.php:101
+msgid "Custom message"
+msgstr "Benutzerdefinierte Nachricht."
+
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/options.php:103
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.1/options.php:103
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.2/options.php:103
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.3/options.php:103
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.4/options.php:103
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.5/options.php:103
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.6/options.php:103
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.7/options.php:103
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/trunk/options.php:103
+msgid ""
+"Type the custom message that you want appearing in the balloon. You can also "
+"display default message in the language of your choice by typing the locale "
+"(e.g: en_us)."
+msgstr ""
+"Die Nachricht, welche du im Banner anzeigen möchtest. Du kannst auch die "
+"Standard Nachricht in der Sprache deiner Wahl anzeigen lassen, schreibe "
+"hierfür eine den Ländercode in das Feld (z.B.:en_us)"
+
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/options.php:107
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.4/options.php:107
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.5/options.php:107
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.6/options.php:107
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.7/options.php:107
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/trunk/options.php:107
+msgid ""
+"<i>Use %device to show user's device on message, and %icon to display the "
+"add icon.</i>"
+msgstr ""
+"<i>Benutze %device um das Endgerät des Benutzers in der Nachricht anzuzeigen "
+"und %icon um das hinzufügen Icon anzuzeigen.</i>"
+
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/options.php:111
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.1/options.php:108
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.2/options.php:108
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.3/options.php:111
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.4/options.php:111
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.5/options.php:111
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.6/options.php:111
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.7/options.php:111
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/trunk/options.php:111
+msgid "Animation in"
+msgstr "Einblendung"
+
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/options.php:113
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.1/options.php:110
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.2/options.php:110
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.3/options.php:113
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.4/options.php:113
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.5/options.php:113
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.6/options.php:113
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.7/options.php:113
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/trunk/options.php:113
+msgid "The animation the balloon appears with."
+msgstr "Die Animation mit welcher der Banner scheint."
+
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/options.php:122
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.1/options.php:119
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.2/options.php:119
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.3/options.php:122
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.4/options.php:122
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.5/options.php:122
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.6/options.php:122
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.7/options.php:122
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/trunk/options.php:122
+msgid "Animation out"
+msgstr "Ausblendung"
+
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/options.php:124
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.1/options.php:121
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.2/options.php:121
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.3/options.php:124
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.4/options.php:124
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.5/options.php:124
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.6/options.php:124
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.7/options.php:124
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/trunk/options.php:124
+msgid "The animation the balloon exits with."
+msgstr "Die Animation mit welcher der Banner ausgeblendet wird."
+
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/options.php:133
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.1/options.php:130
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.2/options.php:130
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.3/options.php:133
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.4/options.php:133
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.5/options.php:133
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.6/options.php:133
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.7/options.php:133
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/trunk/options.php:133
+msgid "Start delay"
+msgstr "Anzeigeverzögerung"
+
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/options.php:135
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.1/options.php:132
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.2/options.php:132
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.3/options.php:135
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.4/options.php:135
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.5/options.php:135
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.6/options.php:135
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.7/options.php:135
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/trunk/options.php:135
+msgid "Milliseconds to wait before showing the message. Default: 2000"
+msgstr "Millisekunden bevor die Nachricht angezeigt wird. Standard: 2000"
+
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/options.php:140
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.1/options.php:137
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.2/options.php:137
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.3/options.php:140
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.4/options.php:140
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.5/options.php:140
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.6/options.php:140
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.7/options.php:140
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/trunk/options.php:140
+msgid "Lifespan"
+msgstr "Lebensdauer"
+
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/options.php:142
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.1/options.php:139
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.2/options.php:139
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.3/options.php:142
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.4/options.php:142
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.5/options.php:142
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.6/options.php:142
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.7/options.php:142
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/trunk/options.php:142
+msgid "Milliseconds to wait before hiding the message. Default: 20000"
+msgstr "Millisekunden bevor die Nachricht verschwindet. Standard: 20000"
+
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/options.php:147
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.1/options.php:144
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.2/options.php:144
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.3/options.php:147
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.4/options.php:147
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.5/options.php:147
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.6/options.php:147
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.7/options.php:147
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/trunk/options.php:147
+msgid "Bottom offset"
+msgstr "Abstand nach unten"
+
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/options.php:149
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.1/options.php:146
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.2/options.php:146
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.3/options.php:149
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.4/options.php:149
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.5/options.php:149
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.6/options.php:149
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.7/options.php:149
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/trunk/options.php:149
+msgid ""
+"Distance in pixels from the bottom (iPhone) or the top (iPad). Default: 14"
+msgstr ""
+"Abstand in Pixel nach unten (Iphone) bzw. nach oben (IPad). Standard: 14"
+
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/options.php:154
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.1/options.php:151
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.2/options.php:151
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.3/options.php:154
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.4/options.php:154
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.5/options.php:154
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.6/options.php:154
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.7/options.php:154
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/trunk/options.php:154
+msgid "Expire timeframe"
+msgstr "Wiederholung der Anzeige"
+
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/options.php:156
+msgid ""
+"Minutes before displaying the message again. Default: 0 (=always show). It's "
+"highly recommended to set a timeframe in order to prevent showing message at "
+"each and every page load for those who didn't add the Web App to their "
+"homescreen or those who added it but load the blog on Safari! <i>Recommended "
+"values: 43200 for one month or 525600 for one year.</i>"
+msgstr ""
+"Dauer bis die Nachricht wieder angezeigt wird in Minuten. Standard: 0 "
+"(=immer anzeigen). Es wird empfohlen hier einen Wert zu setzten um zu "
+"verhindern dass die Nachricht bei jedem laden jeder Seite geladen wird wenn "
+"Besucher die Webseite nicht hinzufügen wollen bzw. dies schon getan haben, "
+"die Seite jedoch trotzdem über Safari anschauen. <i>Beispielwerte: 43200 für "
+"einen Monat oder 525600 für ein Jahr.</i>"
+
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/options.php:161
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.1/options.php:158
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.2/options.php:158
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.3/options.php:161
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.4/options.php:161
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.5/options.php:161
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.6/options.php:161
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.7/options.php:161
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/trunk/options.php:161
+msgid "Touch icon"
+msgstr "Touch Icon für den Homescreen"
+
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/options.php:163
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.1/options.php:160
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.2/options.php:160
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.3/options.php:163
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.4/options.php:163
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.5/options.php:163
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.6/options.php:163
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.7/options.php:163
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/trunk/options.php:163
+msgid ""
+"If checked, the script checks for link rel=\"apple-touch-icon\" in the page "
+"HEAD and displays the application icon next to the message. Do NOT check if "
+"you don't have one, otherwise \"null\" mention will be displayed in place of "
+"the missing icon."
+msgstr ""
+"Wenn ausgewählt wird das Touch Icon im HEAD der Webseite definiert und neben "
+"der Nachricht angezeigt. <i>nur auswählen wenn du eines gesetzt hast.</i>"
+
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/options.php:168
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.1/options.php:165
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.2/options.php:165
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.3/options.php:168
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.4/options.php:168
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.5/options.php:168
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.6/options.php:168
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.7/options.php:168
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/trunk/options.php:168
+msgid "Touch icon URL"
+msgstr "URL zum Touch Icon"
+
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/options.php:170
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.1/options.php:167
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.2/options.php:167
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.3/options.php:170
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.4/options.php:170
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.5/options.php:170
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.6/options.php:170
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.7/options.php:170
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/trunk/options.php:170
+msgid ""
+"If mentionned, it adds a link rel=\"apple-touch-icon\" mention in the page "
+"HEAD (convenient for those who have no touch icon). <br />Recommended size: "
+"144*144."
+msgstr "Fügt Touch Icons in den Head ein."
+
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/options.php:175
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.5/options.php:175
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.6/options.php:175
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.7/options.php:175
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/trunk/options.php:175
+msgid "Touch startup URL"
+msgstr "Touch Startbild URL"
+
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/options.php:177
+msgid ""
+"You can specify a startup image URL that is displayed while your web "
+"application launches (only on Fullscreen mode). <i>The image must be 320 x "
+"460 pixels.</i>"
+msgstr ""
+"Du kannst ein Startbild festlegen welches angezeigt wird, während deine App "
+"startet."
+
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/options.php:182
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.4/options.php:207
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.5/options.php:221
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.6/options.php:228
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.7/options.php:182
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/trunk/options.php:182
+msgid "Title of your Web App"
+msgstr "Name deiner Web App"
+
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/options.php:184
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.4/options.php:209
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.5/options.php:223
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.6/options.php:230
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.7/options.php:184
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/trunk/options.php:184
+msgid ""
+"Type the name of your blog (max: 12 characters !). Default: it takes the "
+"default title of the page."
+msgstr "Standard: der Name deines Blogs <i>max. 12 Zeichen)</i>"
+
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/options.php:189
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.6/options.php:235
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.7/options.php:189
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/trunk/options.php:189
+msgid "On which page the balloon should appear?"
+msgstr "Auf welchen Seiten soll der Banner erscheinen?"
+
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/options.php:191
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.6/options.php:237
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.7/options.php:191
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/trunk/options.php:191
+msgid ""
+"Keep in mind that if someone adds your blog to home screen from a single "
+"article page for instance, the web app will load this page and not the "
+"homepage of the blog. That's why you could choose to open the floating "
+"balloon on homepage only and not on all pages of your blog."
+msgstr ""
+"Bedenke dass wenn jemand deinen Blog zum Homescreen hinzufügt während er auf "
+"einem Artikel (nicht der Startseite) ist, wird diese Seite geladen beim "
+"Starten der Web App, nicht die Startseite. Daher kannst du wählen ob der "
+"Banner nur auf der Startseite oder überall angezeigt werden soll."
+
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/options.php:194
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.6/options.php:240
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.7/options.php:194
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/trunk/options.php:194
+msgid "Home only"
+msgstr "Nur Startseite"
+
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/options.php:195
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.6/options.php:241
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.7/options.php:195
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/trunk/options.php:195
+msgid "All pages"
+msgstr "Alle Seiten"
+
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/options.php:199
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.1/options.php:172
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.2/options.php:172
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.3/options.php:175
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.4/options.php:175
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.5/options.php:182
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.6/options.php:182
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.7/options.php:199
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/trunk/options.php:199
+msgid "If your theme is non responsive, these options might interest you"
+msgstr ""
+"Wenn dein Theme nicht responive ist können diese Einstellungen interessant "
+"für dich sein"
+
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/options.php:200
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.1/options.php:173
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.2/options.php:173
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.3/options.php:176
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.4/options.php:176
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.5/options.php:183
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.6/options.php:183
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.7/options.php:200
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/trunk/options.php:200
+msgid ""
+"In non-responsive themes, the floating balloon may be to small. These "
+"settings will allow you to increase dimensions and appearance."
+msgstr ""
+"In nicht responsive Themse wird er Banner zu klein angezeigt. Diese "
+"Einstellungen erlauben dir den Banner zu vergrößern."
+
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/options.php:202
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.1/options.php:175
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.2/options.php:175
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.3/options.php:178
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.4/options.php:178
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.5/options.php:185
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.6/options.php:185
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.7/options.php:202
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/trunk/options.php:202
+msgid "Zoom of the floating balloon (%)"
+msgstr "Größe des Banners (%)"
+
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/options.php:204
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.1/options.php:177
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.2/options.php:177
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.3/options.php:180
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.4/options.php:180
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.5/options.php:187
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.6/options.php:187
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.7/options.php:204
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/trunk/options.php:204
+msgid ""
+"Recommended to leave blank if your theme is responsive design. If not, it is "
+"recommended to increase the balloon dimensions by zooming. <i>Recommended "
+"value for non-responsive themes: at leat 300</i>"
+msgstr ""
+"Frei lassen wenn dein Theme responsive is. Falls nicht dann wird empfohlen "
+"den Banner zu vergrößern. <i>Empfohlen für nicht responsive Themse: "
+"mindestens 300</i>"
+
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/options.php:209
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.1/options.php:182
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.2/options.php:182
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.3/options.php:185
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.4/options.php:185
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.5/options.php:192
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.6/options.php:192
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.7/options.php:209
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/trunk/options.php:209
+msgid "Font-size of the floating balloon (%)"
+msgstr "Schriftgröße des Banners (%)"
+
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/options.php:211
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.1/options.php:184
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.2/options.php:184
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.3/options.php:187
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.4/options.php:187
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.5/options.php:194
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.6/options.php:194
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.7/options.php:211
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/trunk/options.php:211
+msgid ""
+"Recommended to leave blank if your theme is responsive design. If not, it is "
+"recommended to increase it, especially if you have increased the floating "
+"balloon via the zoom field. <i>Recommended value for non-responsive themes: "
+"250</i>"
+msgstr ""
+"Frei lassen wenn dein Theme responsive is. Falls nicht dann wird empfohlen "
+"den Banner zu vergrößern, vor allem wenn du den Banner ebenfalls vergrößert "
+"hast. <i>Empfohlen für nicht responive Themse: 250</i>"
+
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/options.php:216
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.1/options.php:189
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.2/options.php:189
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.3/options.php:192
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.4/options.php:192
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.5/options.php:199
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.6/options.php:199
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.7/options.php:216
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/trunk/options.php:216
+msgid "Line-height (%)"
+msgstr "Zeilenhöhe"
+
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/options.php:218
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.1/options.php:191
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.2/options.php:191
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.3/options.php:194
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.4/options.php:194
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.5/options.php:201
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.6/options.php:201
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.7/options.php:218
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/trunk/options.php:218
+msgid ""
+"Recommended to leave blank if your theme is responsive design. Decrease it "
+"if you have increased the zoom field. <i>Recommended value for non "
+"responsive sites: 50</i>"
+msgstr ""
+"Frei lassen wenn dein Theme responsive is. Verkleinern wen du den Banner "
+"vergrößert hast. <i>Empfohlen für nicht responsive Themes: 50</i>"
+
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/options.php:223
+msgid "Navigation options"
+msgstr "Link Optionen"
+
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/options.php:224
+msgid ""
+"Basically, you have two ways to browse your web app: on Safari or in a "
+"separate window. Each browser has its pros and cons."
+msgstr ""
+"Es gibt zwei Möglichkeiten um deine Webapp anzuschauen: über Safari oder in "
+"einem separaten Fenster. Beide Möglichkeiten haben ihre Vor- und "
+
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/options.php:226
+msgid "Choose your browser"
+msgstr "Wähle deinen Browser"
+
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/options.php:228
+msgid ""
+"In Safari mode, your blog will open on Safari browser when you will tap on "
+"your icon, but the balloon will continue to appear (we cannot prevent it "
+"opening in this mode even if user has alreay added the blog to its "
+"homescreen). The solution is to set an important expire timeframe (e.g on "
+"year).<br /><br />In the fullscreen mode, the web app will not open in "
+"Safari mode but as a separate Web application with a custom nav bottom bar. "
+"The pro is that the balloon will never appear again in this mode. The con is "
+"that you will not have Safari native options."
+msgstr ""
+"Safari Modus, die Blog wird in Safari geöffnet wenn du auf das Icon tippst. "
+"Der Banner wir weiterhin angezeigt (wir können dies leider nicht verhindern, "
+"auch wenn der User den Blog zum Homescreen hinzugefügt hat). Die einzige "
+"Lösung: die Banner erst nach einer bestimmten Zeit wieder anzeigen (z.B. "
+"nach einem Jahr).<br /><br />Fullscreen. Die WEb App wir nicht in Safari "
+"öffnen, sonder in einer separaten Anwendung mit benutzerdefinierter "
+"Navigation. Hier wird der Banner nicht angezeigt, leider stehen dir die "
+"nativen Safari Funktionen nicht zur Verfügung."
+
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/options.php:236
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.5/options.php:214
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.6/options.php:214
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.7/options.php:232
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/trunk/options.php:232
+msgid "Force links to switch to Safari browser."
+msgstr "Beim Öffnen von Links in den Safari Browser wechseln."
+
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/options.php:238
+msgid ""
+"If checked, clicking on links from Fullscreen mode will switch from Web App "
+"to Safari browser."
+msgstr ""
+"Wenn ausgewählt werden Links aus dem Fullscreen Modus in Safari geöffnet."
+
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/options.php:243
+msgid "Disable bottom nav bar of the Fullscreen mode"
+msgstr "Deaktiviere die Safari Navigation im Fullscreen Modus."
+
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/options.php:245
+msgid ""
+"If checked, the bottom nav bar of the Fullscreen mode that provides a way "
+"for visitors to go back, forward or reload will be disabled. It could be "
+"useful if you need to load a \"real\" fullscreen view of your website, "
+"without any buttons."
+msgstr ""
+"Wenn ausgewählt wird die untere Safari Navigation, welche dem Benutzer die "
+"Möglichkeit gibt auf die vorherige Seite zu wechseln, deaktiviert. Nützlich "
+"wenn du einen wirklichen Fullscreen für deine Webseite möchtest ohne "
+"jegliche Buttons."
+
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.1/options.php:96
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.2/options.php:96
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.3/options.php:96
+msgid ""
+"Set this to true and the message won't be shown the first time one user "
+"visits your blog. It can be useful to target only returning visitors and not "
+"irritate first time visitors."
+msgstr ""
+"Wähle die Option, sodass der Banner nicht beim ersten Besuch angezeigt wird. "
+"Das kann hilfreich sein um nur wiederkehrende Besuchern zu erreichen und um "
+"neue Besucher nicht zu irritieren. <i>Ich empfehle diese Option zu "
+"verwenden</i>"
+
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.1/options.php:153
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.2/options.php:153
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.3/options.php:156
+msgid ""
+"Minutes before displaying the message again. Default: 0 (=always show). It "
+"can be useful to set a timeframe to prevent showing message at each and "
+"every page load."
+msgstr ""
+"Minuten bevor der Banner wieder angezeigt wird. Standard: 0 (=immer "
+"anzeigen) "
+
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.1/options.php:197
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.2/options.php:197
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.3/options.php:200
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.4/options.php:200
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.5/options.php:207
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.6/options.php:207
+msgid "Disable Web App Capable"
+msgstr "Deaktiviere Web App"
+
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.1/options.php:199
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.2/options.php:199
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.3/options.php:202
+msgid ""
+"If checked, the balloon will appear even if your blog has been added to the "
+"home screen. Recommended to leave uncheck."
+msgstr ""
+"Wenn ausgewählt, wird der Banner angezeigt, auch wenn dein blog zum "
+"Homescreen hinzugefügt wurde. (nicht empfohlen)"
+
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.3/options.php:107
+msgid ""
+"Use %device to show user's device on message, and %icon to display the add "
+"icon."
+msgstr ""
+"<i>Benutze %device um das Endgerät des Benutzers in der Nachricht anzuzeigen "
+"und %icon um das hinzufügen Icon anzuzeigen."
+
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.4/options.php:156
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.5/options.php:156
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.6/options.php:156
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.7/options.php:156
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/trunk/options.php:156
+msgid ""
+"Minutes before displaying the message again. Default: 0 (=always show). It's "
+"highly recommended to set a timeframe in order to prevent showing message at "
+"each and every page load for those who didn't add the Web App to their "
+"homescreen or those who added it but load the blog on Safari! <i>Example: "
+"43200 (for one month).</i>"
+msgstr ""
+"Dauer bis die Nachricht wieder angezeigt wird in Minuten. Standard: 0 "
+"(=immer anzeigen). Es wird empfohlen hier einen Wert zu setzten um zu "
+"verhindern dass die Nachricht bei jedem laden jeder Seite geladen wird wenn "
+"Besucher die Webseite nicht hinzufügen wollen bzw. dies schon getan haben, "
+"die Seite jedoch trotzdem über Safari anschauen. <i>Beispielwerte: 43200 für "
+"einen Monat oder 525600 für ein Jahr.</i>"
+
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.4/options.php:202
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.5/options.php:209
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.6/options.php:209
+msgid ""
+"If checked, the web app will open in Safari mode and not as a separate Web "
+"application. In addition, the balloon will continue to appear inside the Web "
+"App. <i>Recommended to leave uncheck</i>."
+msgstr ""
+"Wenn ausgewählt, dann wird die Web App in Safari geöffnet und nicht als "
+"separate Anwendung. Der Banner wird weiterhin erscheinen. <i>nicht "
+"ermpfohlen</i>"
+
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.5/index.php:340
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.6/index.php:355
+msgid "Back"
+msgstr "Zurück"
+
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.5/options.php:177
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.6/options.php:177
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.7/options.php:177
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/trunk/options.php:177
+msgid ""
+"You can specify a startup image URL that is displayed while your web "
+"application launches. <i>The image must be 320 x 460 pixels.</i>"
+msgstr ""
+"Du kannst ein Startbild auswählen (URL), welches erscheint wenn die App "
+"startet <i>Das Bild muss 320 x 470 Pixel groß sein.</i>"
+
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.5/options.php:216
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.6/options.php:216
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.7/options.php:234
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/trunk/options.php:234
+msgid ""
+"If checked, clicking on links will switch from Web App to Safari browser."
+msgstr ""
+"Wenn ausgewählt, dann werden Links vom Fullscreen Modus im Safari Browser "
+"geöffnet"
+
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.6/options.php:221
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.7/options.php:239
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/trunk/options.php:239
+msgid "Disable bottom nav bar of the Web App"
+msgstr "Deaktiviere die untere Navigation in der Web App."
+
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.6/options.php:223
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.7/options.php:241
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/trunk/options.php:241
+msgid ""
+"If checked, the bottom nav bar of the Web App that provides a way for "
+"visitors to go back to previous pages will be disabled. For information: in "
+"web app mode, your blog is displaying in a fullscreen view, without any "
+"safari navigation buttons, that's why I recommend you to keep the Web App "
+"navbar."
+msgstr ""
+"Wenn ausgewählt wird die untere Safari Navigation, welche dem Benutzer die "
+"Möglichkeit gibt auf die vorherige Seite zu wechseln, deaktiviert. Nützlich "
+"wenn du einen wirklichen Fullscreen für deine Webseite möchtest ohne "
+"jegliche Buttons."
+
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.7/options.php:223
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/trunk/options.php:223
+msgid "Separate Web App options (skip if you want to use Safari browser)"
+msgstr ""
+"Seperate Web App Optionen (überspringen wenn du den Safari Browser "
+"verwendest)"
+
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.7/options.php:225
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/trunk/options.php:225
+msgid "Enable Web App Capable"
+msgstr "Aktiviere Web App"
+
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/tags/0.7/options.php:227
+#: C:\Users\Ziyad\Dropbox\Dev\adhs/add-to-home-screen-wp/trunk/options.php:227
+msgid ""
+"If checked, the web app will not open in Safari mode but as a separate Web "
+"application with a custom nav bottom bar.<br /><i>Recommended to leave "
+"uncheck if you want to keep the Safari browser</i>."
+msgstr ""
+"Wenn ausgewählt wird die web app nicht in Safari geöffnet, sondern in einer "
+"separaten Anwendung mit einer benutzerdefiniert Navigation."
