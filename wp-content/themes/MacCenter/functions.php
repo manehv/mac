@@ -1476,3 +1476,38 @@ function wc_custom_shipping_labels( $label, $method ) {
 
     return $label;
 }
+
+//checkout country field
+add_filter( 'woocommerce_form_field_country', 'wc_custom_field_country', 10, 4 );
+function wc_custom_field_country( $field, $key, $args, $value ) {
+    $countries = $key == 'shipping_country' ? WC()->countries->get_shipping_countries() : WC()->countries->get_allowed_countries();
+    if ( sizeof( $countries ) == 1 ) {
+        $field = '<p class="form-row ' . esc_attr( implode( ' ', $args['class'] ) ) .'" id="' . esc_attr( $args['id'] ) . '_field">';
+        if ( $args['label'] ) {
+            $field .= '<label class="' . esc_attr( implode( ' ', $args['label_class'] ) ) .'">' . $args['label']  . '</label>';
+        }
+                    //$field .= '<strong>' . current( array_values( $countries ) ) . '</strong>';
+        $field .= '<input type="text" class="input-text ' . esc_attr( implode( ' ', $args['input_class'] ) ) .'" placeholder="' . esc_attr( $args['placeholder'] ) . '" '.$args['maxlength'].' value="' . current( array_values( $countries ) ) . '" ' . implode( ' ', $custom_attributes ) . ' readonly />';
+        $field .= '<input type="hidden" name="' . esc_attr( $key ) . '" id="' . esc_attr( $args['id'] ) . '" value="' . current( array_keys($countries ) ) . '" ' . implode( ' ', $custom_attributes ) . ' class="country_to_state" />';
+        if ( $args['description'] ) {
+            $field .= '<span class="description">' . esc_attr( $args['description'] ) . '</span>';
+        }
+        $field .= '</p>' . $after;
+    } else {
+        $field = '<p class="form-row ' . esc_attr( implode( ' ', $args['class'] ) ) .'" id="' . esc_attr( $args['id'] ) . '_field">'
+        . '<label for="' . esc_attr( $args['id'] ) . '" class="' . esc_attr( implode( ' ', $args['label_class'] ) ) .'">' . $args['label'] . $required  . '</label>'
+        . '<select name="' . esc_attr( $key ) . '" id="' . esc_attr( $args['id'] ) . '" class="country_to_state country_select ' . esc_attr( implode( ' ', $args['input_class'] ) ) .'" ' . implode( ' ', $custom_attributes ) . '>'
+        . '<option value="">'.__( 'Select a country&hellip;', 'woocommerce' ) .'</option>';
+        foreach ( $countries as $ckey => $cvalue ) {
+            $field .= '<option value="' . esc_attr( $ckey ) . '" '.selected( $value, $ckey, false ) .'>'.__( $cvalue, 'woocommerce' ) .'</option>';
+        }
+        $field .= '</select>';
+        $field .= '<noscript><input type="submit" name="woocommerce_checkout_update_totals" value="' . __( 'Update country', 'woocommerce' ) . '" /></noscript>';
+        if ( $args['description'] ) {
+            $field .= '<span class="description">' . esc_attr( $args['description'] ) . '</span>';
+        }
+        $field .= '</p>' . $after;
+    }
+
+    return $field;
+}
