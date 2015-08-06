@@ -17,6 +17,12 @@ if ( ! defined( 'ABSPATH' ) ) {
  */
 class WC_Gateway_Paypal extends WC_Payment_Gateway {
 
+	/** @var boolean Whether or not logging is enabled */
+	public static $log_enabled = false;
+
+	/** @var WC_Logger Logger instance */
+	public static $log = false;
+
 	/**
 	 * Constructor for the gateway.
 	 */
@@ -44,6 +50,8 @@ class WC_Gateway_Paypal extends WC_Payment_Gateway {
 		$this->receiver_email = $this->get_option( 'receiver_email', $this->email );
 		$this->identity_token = $this->get_option( 'identity_token' );
 
+		self::$log_enabled    = $this->debug;
+
 		add_action( 'woocommerce_update_options_payment_gateways_' . $this->id, array( $this, 'process_admin_options' ) );
 
 		if ( ! $this->is_valid_for_use() ) {
@@ -63,12 +71,12 @@ class WC_Gateway_Paypal extends WC_Payment_Gateway {
 	 * Logging method
 	 * @param  string $message
 	 */
-	public function log( $message ) {
-		if ( $this->debug ) {
-			if ( empty( $this->log ) ) {
-				$this->log = new WC_Logger();
+	public static function log( $message ) {
+		if ( self::$log_enabled ) {
+			if ( empty( self::$log ) ) {
+				self::$log = new WC_Logger();
 			}
-			$this->log->add( 'paypal', $message );
+			self::$log->add( 'paypal', $message );
 		}
 	}
 
@@ -95,18 +103,14 @@ class WC_Gateway_Paypal extends WC_Payment_Gateway {
 	 * @param  string $country
 	 * @return string
 	 */
-	private function get_icon_url( $country ) {
-		switch ( $country ) {
-			case 'MX' :
-			case 'ZA' :
-				$link = 'https://www.paypal.com/' . strtolower( $country ) . '/cgi-bin/webscr?cmd=xpt/Marketing/general/WIPaypal-outside';
-			break;
-			default :
-				$link = 'https://www.paypal.com/' . strtolower( $country ) . '/webapps/mpp/paypal-popup';
-			break;
+	protected function get_icon_url( $country ) {
+		$countries = array( 'DZ', 'AU', 'BH', 'BE', 'BQ', 'BW', 'CA', 'CN', 'CW', 'CZ', 'DK', 'FI', 'FR', 'DE', 'GR', 'HK', 'HU', 'IN', 'ID', 'IT', 'JO', 'KE', 'KW', 'LU', 'MY', 'MA', 'NL', 'NO', 'OM', 'PH', 'PL', 'PT', 'QA', 'IE', 'RU', 'BL', 'SX', 'MF', 'SA', 'SG', 'SK', 'KR', 'SS', 'ES', 'SE', 'TW', 'TH', 'TR', 'AE', 'GB', 'US', 'VN' );
+
+		if ( in_array( $country, $countries ) ) {
+			return 'https://www.paypal.com/' . strtolower( $country ) . '/webapps/mpp/paypal-popup';
 		}
 
-		return $link;
+		return 'https://www.paypal.com/' . strtolower( $country ) . '/cgi-bin/webscr?cmd=xpt/Marketing/general/WIPaypal-outside';
 	}
 
 	/**

@@ -59,7 +59,7 @@ class WC_Gateway_Paypal_Request {
 	 * @return array
 	 */
 	protected function get_paypal_args( $order ) {
-		$this->gateway->log( 'Generating payment form for order ' . $order->get_order_number() . '. Notify URL: ' . $this->notify_url );
+		WC_Gateway_Paypal::log( 'Generating payment form for order ' . $order->get_order_number() . '. Notify URL: ' . $this->notify_url );
 
 		return apply_filters( 'woocommerce_paypal_args', array_merge(
 			array(
@@ -76,7 +76,7 @@ class WC_Gateway_Paypal_Request {
 				'paymentaction' => $this->gateway->get_option( 'paymentaction' ),
 				'bn'            => 'WooThemes_Cart',
 				'invoice'       => $this->gateway->get_option( 'invoice_prefix' ) . $order->get_order_number(),
-				'custom'        => serialize( array( $order->id, $order->order_key ) ),
+				'custom'        => json_encode( array( 'order_id' => $order->id, 'order_key' => $order->order_key ) ),
 				'notify_url'    => $this->notify_url,
 				'first_name'    => $order->billing_first_name,
 				'last_name'     => $order->billing_last_name,
@@ -263,7 +263,7 @@ class WC_Gateway_Paypal_Request {
 		}
 
 		// Check for mismatched totals
-		if ( ( $calculated_total + $order->get_total_tax() + round( $order->get_total_shipping(), 2 ) - round( $order->get_total_discount(), 2 ) ) != $order->get_total() ) {
+		if ( wc_format_decimal( $calculated_total + $order->get_total_tax() + round( $order->get_total_shipping(), 2 ) - round( $order->get_total_discount(), 2 ), 2 ) != wc_format_decimal( $order->get_total(), 2 ) ) {
 			return false;
 		}
 

@@ -36,14 +36,13 @@ class WC_Gateway_Paypal_PDT_Handler extends WC_Gateway_Paypal_Response {
 				'tx'  => $transaction,
 				'at'  => $this->identity_token
 			),
-			'sslverify' 	=> false,
 			'timeout' 		=> 60,
 			'httpversion'   => '1.1',
 			'user-agent'	=> 'WooCommerce/' . WC_VERSION
 		);
 
 		// Post back to get a response
-		$response = wp_remote_post( $this->sandbox ? 'https://www.sandbox.paypal.com/cgi-bin/webscr' : 'https://www.paypal.com/cgi-bin/webscr', $pdt );
+		$response = wp_safe_remote_post( $this->sandbox ? 'https://www.sandbox.paypal.com/cgi-bin/webscr' : 'https://www.paypal.com/cgi-bin/webscr', $pdt );
 
 		if ( is_wp_error( $response ) || ! strpos( $response['body'], "SUCCESS" ) === 0 ) {
 			return false;
@@ -71,7 +70,7 @@ class WC_Gateway_Paypal_PDT_Handler extends WC_Gateway_Paypal_Response {
 
 		if ( $this->validate_transaction( $transaction ) && 'completed' === $status ) {
 			if ( $order->get_total() != $amount ) {
-				$this->log( 'Payment error: Amounts do not match (amt ' . $amount . ')' );
+				WC_Gateway_Paypal::log( 'Payment error: Amounts do not match (amt ' . $amount . ')' );
 				$this->payment_on_hold( $order, sprintf( __( 'Validation error: PayPal amounts do not match (amt %s).', 'woocommerce' ), $amount ) );
 			} else {
 				$this->payment_complete( $order, $transaction,  __( 'PDT payment completed', 'woocommerce' ) );

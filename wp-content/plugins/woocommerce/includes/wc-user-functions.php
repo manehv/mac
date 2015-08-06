@@ -250,7 +250,7 @@ function wc_customer_bought_product( $customer_email, $user_id, $product_id ) {
 				itemmeta.meta_key    IN ( '_variation_id', '_product_id' ) AND
 				postmeta.meta_key    IN ( '_billing_email', '_customer_user' ) AND
 				(
-					postmeta.meta_value  IN ( '" . implode( "','", array_unique( $emails ) ) . "' ) OR
+					postmeta.meta_value  IN ( '" . implode( "','", array_map( 'esc_sql', array_unique( $emails ) ) ) . "' ) OR
 					(
 						postmeta.meta_value = %s AND
 						postmeta.meta_value > 0
@@ -277,7 +277,7 @@ function wc_customer_has_capability( $allcaps, $caps, $args ) {
 				$user_id = $args[1];
 				$order   = wc_get_order( $args[2] );
 
-				if ( $user_id == $order->user_id ) {
+				if ( $order && $user_id == $order->user_id ) {
 					$allcaps['view_order'] = true;
 				}
 			break;
@@ -401,12 +401,14 @@ function wc_get_customer_available_downloads( $customer_id ) {
 				permissions.access_expires IS NULL
 				OR
 				permissions.access_expires >= %s
+				OR
+				permissions.access_expires = '0000-00-00 00:00:00'
 			)
 		ORDER BY permissions.order_id, permissions.product_id, permissions.permission_id;
 		", $customer_id, date( 'Y-m-d', current_time( 'timestamp' ) ) ) );
 
 	if ( $results ) {
-		
+
 		$looped_downloads = array();
 		foreach ( $results as $result ) {
 			if ( ! $order || $order->id != $result->order_id ) {
@@ -439,7 +441,7 @@ function wc_get_customer_available_downloads( $customer_id ) {
 			}
 
 			$download_file = $_product->get_file( $result->download_id );
-			
+
 			// Check if the file has been already added to the downloads list
 			if ( in_array( $download_file, $looped_downloads ) ) {
 				continue;
