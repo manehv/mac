@@ -152,27 +152,25 @@ echo '</a>';
 																			echo '<div class="c-login">Debes <a href='. site_url('/login/').'>ingresar</a>   aquí para aplicar el cupón</div>' ; }
 																		}
 																		?>
-														<?php do_action( 'woocommerce_cart_coupon' ); ?>				
+														<?php do_action( 'woocommerce_cart_coupon' ); ?>
 										<?php } ?>
-                
+
                 </td>
                 <td class="clsCartTotTD" colspan="2">
                         <div class="cart-collaterals">
 
                                 <?php do_action( 'woocommerce_cart_collaterals' ); ?>
 
-                                <?php woocommerce_cart_totals(); ?>
-
                                 <?php //woocommerce_shipping_calculator(); ?>
 
                         </div>
                 </td>
                 </tr>
-                
+
                 <tr class="clsActions">
                         <td colspan="6" class="actions">
 
-                               
+
 
                                 <input type="submit" class="checkout-button button alt wc-forward" name="proceed" value="<?php _e( 'Proceed to Checkout', 'woocommerce' ); ?>" /><input type="submit" class="button" name="update_cart" value="<?php _e( 'Update Cart', 'woocommerce' ); ?>" />
 
