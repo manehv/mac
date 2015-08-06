@@ -1480,6 +1480,14 @@ function wc_custom_shipping_labels( $label, $method ) {
 //checkout country field
 add_filter( 'woocommerce_form_field_country', 'wc_custom_field_country', 10, 4 );
 function wc_custom_field_country( $field, $key, $args, $value ) {
+    // Custom attribute handling
+    $custom_attributes = array();
+    if ( ! empty( $args['custom_attributes'] ) && is_array( $args['custom_attributes'] ) ) {
+        foreach ( $args['custom_attributes'] as $attribute => $attribute_value ) {
+            $custom_attributes[] = esc_attr( $attribute ) . '="' . esc_attr( $attribute_value ) . '"';
+        }
+    }
+
     $countries = $key == 'shipping_country' ? WC()->countries->get_shipping_countries() : WC()->countries->get_allowed_countries();
     if ( sizeof( $countries ) == 1 ) {
         $field = '<p class="form-row ' . esc_attr( implode( ' ', $args['class'] ) ) .'" id="' . esc_attr( $args['id'] ) . '_field">';
