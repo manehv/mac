@@ -5,9 +5,9 @@ Contributors: ultimatemember
 Donate link: 
 Tags: access control, author, authors, author profile, comments, community, communities, conditional fields, conditional logic, conditional menus, content protection, custom fields, file uploads, form builder, front-end login, front-end registration, gravatar, hide wp-admin, login, login page, logged-in users, mandrill, member, members, membership, member directory, online users, profile, profiles, profile builder, registration, restriction, restrict content, role creation, role menus, search filters, sign in, sign up, social network, star ratings, toolbar, user, users, user fields, user profile, user-profile, user profiles, user roles
 Requires at least: 4.1
-Tested up to: 4.2
+Tested up to: 4.2.2
 
-Stable Tag: 1.2.9
+Stable Tag: 1.3.13
 
 License: GNU Version 2 or Any Later Version
 
@@ -37,7 +37,7 @@ Ultimate Member is a powerful and flexible plugin that makes it a breeze for use
 * Developer friendly with dozens of actions and filters
 * Multi-site compatibility
 * Mandrill compatibility
-* Multi language support
+* WPML Support
 
 Read about all of the plugin's features at [Ultimate Member](https://ultimatemember.com)
 
@@ -45,6 +45,9 @@ Read about all of the plugin's features at [Ultimate Member](https://ultimatemem
 
 Ultimate Member has a range of extensions that allow you to extend the power of the plugin
 
+* [WooCommerce](https://ultimatemember.com/extensions/woocommerce/) - Allow you to integrate WooCommerce with Ultimate Member
+* [Private Messages](https://ultimatemember.com/extensions/private-messages/) - Add a private messaging system to your site & allow users to message each other
+* [Followers](https://ultimatemember.com/extensions/followers/) - Allow users to follow each other on your site and protect their profile information
 * [Real-time Notifications](https://ultimatemember.com/extensions/real-time-notifications/) - Add a notifications system to your site so users can receive real-time notifications
 * [Social Login](https://ultimatemember.com/extensions/social-login/) - Let users register & login to your site via Facebook, Twitter, G+, LinkedIn, Instagram and Vkontakte (VK.com)
 * [bbPress](https://ultimatemember.com/extensions/bbpress/) - With the bbPress extension you can beautifully integrate Ultimate Member with bbPress
@@ -73,14 +76,21 @@ Ultimate Member has been translated into the following languages:
 
 * English (US)
 * Spanish - Español
+* Spanish (Mexico) - Español (México)
 * French - Français
 * Italian - Italiano
 * German - Deutsch
 * Dutch - Nederlands
 * Finnish - Suomi
+* Romanian - Română
+* Danish - Dansk
+* Swedish - Svenska
 * Polish - Polski
+* Czech
 * Russian - Русский
 * Turkish - Türkçe
+* Farsi - فارسى
+* Hebrew
 * العربية
 
 == Installation ==
@@ -139,6 +149,138 @@ The plugin works with popular caching plugins by automatically excluding Ultimat
 16. Screenshot 16
 
 == Changelog ==
+
+= 1.3.13: July 22, 2015 =
+
+* Fixed: Woocommerce manual order dropdown conflict
+
+= 1.3.12: July 22, 2015 =
+
+* New: ability to delete user cache from plugin dashboard
+* New: function is_ultimatemember() checks if user is on UM page (developers)
+* New: option to disallow editing email in account page
+* New: added Spanish (Mexico) language support
+* Fixed: bug with profile viewing and user roles
+* Fixed: Woocommerce dropdown bugs/conflicts
+* Fixed: ipad/tablet css fixes for profile columns
+* Fixed: deleting users delete their content
+
+= 1.3.11: July 8, 2015 =
+
+* Fixed: Redux errors and popups in backend
+
+= 1.3.1: July 7, 2015 =
+
+* Fixed: major issue with showing HTML in profiles
+
+= 1.3.0: July 7, 2015 =
+
+* New: easily sync UM roles with WP roles with role settings
+* New: first steps towards WPML compatibility
+* New: option to show member results only If user has searched
+* New: add .um-err class to UM form if the form contains errors
+* New: updated redux framework to latest version
+* Fixed: feed issue with private / access locked posts
+
+= 1.2.997: June 21, 2015 =
+
+* New: added support for Farsi / Romanian language
+* Tweak: adapted core community roles to prevent conflicts
+* Fixed: bug with search results pagination
+* Fixed: issue with panic key usage and wp-admin screen
+* Fixed: bug with custom field validation action
+
+= 1.2.996: June 11, 2015 =
+
+* Fixed: php notice causing errors to appear in both frontend and backend
+
+= 1.2.995: June 11, 2015 =
+
+* New: added required support for WooCommerce extension
+* Tweak: added option to fix conflicts of user profile links using different server method to get current url
+* Fixed: security fix for redux framework added
+* Fixed: button appearance on tablets
+* Fixed: member search by display name
+
+= 1.2.994: June 6, 2015 =
+
+* Tweak: added a filter hook to change priority of enqueued styles/scripts
+* Fixed: UM forms and elements not appearing in IE
+* Fixed: Skype field output
+* Fixed: conflict with libraries using Mobile Detect
+* Fixed: issue with WP locale (using get_locale() now instead)
+
+= 1.2.993: May 29, 2015 =
+
+* Fixed: correction to last update
+* Fixed: Private messages extension bug
+
+= 1.2.99: May 29, 2015 =
+
+* New: added Czech language support
+* Fixed: WooCommerce dropdown issues and bugs in backend
+
+= 1.2.98: May 18, 2015 =
+
+* New: added Google map field
+* New: added Vimeo video field
+* New: added YouTube video field
+* New: added SoundCloud track field
+* New: added Hebrew language support
+* Tweak: do not show captcha response in submitted registration details
+* Fixed: profile photo upload issue on profile view mode
+* Fixed: user search in backend/frontend
+* Fixed: UM login check
+* Fixed: admin settings css issue on mobile
+* Fixed: cache variable undefined issue
+
+= 1.2.97: May 13, 2015 =
+
+* Fixed: issue with image upload fields
+* Fixed: date localization resolved
+* Fixed: issue with image upload during registration
+* Fixed: JS issues for PM extension
+
+= 1.2.96: May 12, 2015 =
+
+* New: hooks and compatibility with Private Messages extension
+* Fixed: bug with empty password on welcome e-mail
+* Fixed: bug with member search using default permalinks
+
+= 1.2.95: May 9, 2015 =
+
+* New: RESTful API methods update.user, get.stats, and delete.user
+* New: added Danish (Dansk) support
+* New: added Swedish (Svenska) support
+* Tweak: minor account and logout redirection tweaks
+* Fixed: issue with changing user role
+* Fixed: bug with login form validation
+* Fixed: issue with biography field and html
+
+= 1.2.94: May 6, 2015 =
+
+* Fixed: bug with activation e-mails
+* Fixed: bug stopping password reset
+* Fixed: bug with changing user role and status in backend
+
+= 1.2.93: May 5, 2015 =
+
+* New: user profiles are cached to speed up load time
+* New: emoji support added to bio / user descriptions
+* Fixed: issues with bio field HTML 
+* Fixed: WP-admin PHP warning
+* Fixed: bug with localization of en_US.po file
+
+= 1.2.92: May 2, 2015 =
+
+* New: Important: Introduces the Ultimate Member RESTful API
+* Tweak: improved um_user_ip() function
+* Fixed: issue with invalid html on profile photo and cover photo
+
+= 1.2.91: April 30, 2015 =
+
+* New: added custom field validation support via hooks um_custom_field_validation_{$hook}
+* Fixed: important bug with profile menu tabs / system
 
 = 1.2.9: April 29, 2015 =
 

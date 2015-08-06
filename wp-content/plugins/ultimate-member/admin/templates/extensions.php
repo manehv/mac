@@ -1,10 +1,24 @@
 <?php
 
+	$premium['woocommerce'] = array(
+		'url' => 'https://ultimatemember.com/extensions/woocommerce/',
+		'image' => 'https://ultimatemember.com/wp-content/uploads/2015/05/woocommerce-01-copy.png',
+		'name' => 'WooCommerce',
+		'desc' => 'Integrates the popular e-commerce plugin WooCommerce with Ultimate Member.',
+	);
+	
+	$premium['private-messages'] = array(
+		'url' => 'https://ultimatemember.com/extensions/private-messages/',
+		'image' => 'https://ultimatemember.com/wp-content/uploads/2015/05/privatemessages-01-copy.png',
+		'name' => 'Private Messages',
+		'desc' => 'Add a private messaging system to your site and allow users to privately message each other. Perfect for websites where users needly to interact one on one.',
+	);
+	
 	$premium['followers'] = array(
 		'url' => 'https://ultimatemember.com/extensions/followers/',
 		'image' => 'https://ultimatemember.com/wp-content/uploads/2015/04/followers-01-copy.png',
 		'name' => 'Followers',
-		'desc' => ' With the followers extension you can increase user interaction on your site by allowing users to follow each other.',
+		'desc' => 'With the followers extension you can increase user interaction on your site by allowing users to follow each other.',
 	);
 	
 	$premium['profile-completeness'] = array(
@@ -82,6 +96,11 @@
 <div id="um-extensions-wrap" class="wrap">
 		
 	<h2>Ultimate Member - Extensions</h2>
+	
+	<div class="wp-filter um-admin-notice um-filter">
+		<div class="alignleft"><strong>Core Extensions Bundle</strong> – Check out our extensions bundle which includes all extensions at a significant discount.</div>
+		<div class="alignright"><a href="https://ultimatemember.com/core-extensions-bundle/" class="button button-primary" target="_blank">View our Extensions Bundle</a></div>
+	</div>
 	
 	<div class="wp-filter">
 		<ul class="filter-links">

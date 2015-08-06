@@ -20,10 +20,8 @@
 		foreach( $ultimatemember->members->core_search_fields as $key ) {
 			if ( isset( $query[$key] ) ) {
 				$query_args['search']         = '*' . $query[$key] . '*';
-				$query_args['search_columns'] = array( 'user_login', 'user_email', 'display_name' );
 			}
 		}
-
 		return $query_args;
 	}
 	
@@ -78,7 +76,7 @@
 					$operator = 'LIKE';
 				}
 
-				if ( $value && $field != 'um_search' ) {
+				if ( $value && $field != 'um_search' && $field != 'page_id' ) {
 				
 					if ( !in_array( $field, $ultimatemember->members->core_search_fields ) ) {
 						

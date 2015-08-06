@@ -22,12 +22,18 @@
  *
  */
 function um_user_ip() {
-	if (!empty($_SERVER['HTTP_CLIENT_IP'])) {
-		return $_SERVER['HTTP_CLIENT_IP'];
-	} else if (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) { 
-		return $_SERVER['HTTP_X_FORWARDED_FOR'];
+	$ip = '127.0.0.1';
+
+	if ( ! empty( $_SERVER['HTTP_CLIENT_IP'] ) ) {
+		//check ip from share internet
+		$ip = $_SERVER['HTTP_CLIENT_IP'];
+	} elseif ( ! empty( $_SERVER['HTTP_X_FORWARDED_FOR'] ) ) {
+		//to check ip is pass from proxy
+		$ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
+	} elseif( ! empty( $_SERVER['REMOTE_ADDR'] ) ) {
+		$ip = $_SERVER['REMOTE_ADDR'];
 	}
-	return $_SERVER['REMOTE_ADDR'];
+	return apply_filters( 'um_user_ip', $ip );
 }
 
 	/***
@@ -125,7 +131,7 @@ function um_user_ip() {
 		if ( isset( $data ) && is_array( $data ) ) {
 			foreach( $data as $k => $v ) {
 				
-				if ( !strstr( $k, 'user_pass' ) ) {
+				if ( !strstr( $k, 'user_pass' ) && $k != 'g-recaptcha-response' && $k != 'request' ) {
 				
 					if ( is_array($v) ) {
 						$v = implode(',', $v );
@@ -267,23 +273,60 @@ function um_profile_id() {
 	}
 	
 	/***
+	***	@Get a translated core page URL
+	***/
+	function um_get_url_for_language( $post_id, $language )
+	{
+		$lang_post_id = icl_object_id( $post_id , 'page', true, $language );
+		 
+		$url = "";
+		if($lang_post_id != 0) {
+			$url = get_permalink( $lang_post_id );
+		}else {
+			// No page found, it's most likely the homepage
+			global $sitepress;
+			$url = $sitepress->language_url( $language );
+		}
+		 
+		return $url;
+	}
+	
+	/***
 	***	@Get core page url
 	***/
 	function um_get_core_page( $slug, $updated = false) {
 		global $ultimatemember;
+		$url = '';
 		
 		if ( isset( $ultimatemember->permalinks->core[ $slug ] ) ) {
-			
 			$url = get_permalink( $ultimatemember->permalinks->core[ $slug ] );
-			
 			if ( $updated )
-				$url =  add_query_arg( 'updated', esc_attr( $updated ), $url );
-				
-			return $url;
-			
+				$url =  add_query_arg( 'updated', esc_attr( $updated ), $url );	
 		}
 		
+		if ( defined('ICL_SITEPRESS_VERSION') && icl_get_current_language() != icl_get_default_language() && $slug == 'account' ) {
+			if ( get_post_meta( get_the_ID() , '_um_wpml_account', true ) == 1 ) {
+				$url = get_permalink( get_the_ID() );
+			}
+			if ( get_post_meta( get_the_ID() , '_um_wpml_user', true ) == 1 ) {
+				$url = um_get_url_for_language( $ultimatemember->permalinks->core[ $slug ], icl_get_current_language() );
+			}
+		}
+		
+		if ( $url )
+			return $url;
+		
 		return '';
+	}
+	
+	/***
+	***	@boolean check if we are on UM page
+	***/
+	function is_ultimatemember() {
+		global $post, $ultimatemember;
+		if ( isset($post->ID) && in_array( $post->ID, $ultimatemember->permalinks->core ) )
+			return true;
+		return false;
 	}
 	
 	/***
@@ -292,6 +335,8 @@ function um_profile_id() {
 	function um_is_core_page( $page ) {
 		global $post, $ultimatemember;
 		if ( isset($post->ID) && isset( $ultimatemember->permalinks->core[ $page ] ) && $post->ID == $ultimatemember->permalinks->core[ $page ] )
+			return true;
+		if ( isset($post->ID) && get_post_meta( $post->ID, '_um_wpml_' . $page, true ) == 1 )
 			return true;
 		return false;
 	}
@@ -490,6 +535,7 @@ function um_reset_user() {
 	***/
 	function um_edit_my_profile_cancel_uri() {
 		$url = remove_query_arg( 'um_action' );
+		$url = remove_query_arg( 'profiletab', $url );
 		return $url;
 	}
 	
@@ -510,8 +556,11 @@ function um_reset_user() {
 	***/
 	function um_can_view_field( $data ) {
 		global $ultimatemember;
+		
+		if ( !isset( $ultimatemember->fields->set_mode ) )
+			$ultimatemember->fields->set_mode = '';
 
-		if ( isset( $data['public'] ) ) {
+		if ( isset( $data['public'] ) && $ultimatemember->fields->set_mode != 'register' ) {
 		
 			if ( !is_user_logged_in() && $data['public'] != '1' ) return false;
 			
@@ -552,8 +601,8 @@ function um_reset_user() {
 		
 		if ( !um_user('can_access_private_profile') && $ultimatemember->user->is_private_profile( $user_id ) ) return false;
 
-		if ( um_user('can_view_roles') && $user_id != get_current_user_id() ) {
-			if ( !in_array( $ultimatemember->query->get_role_by_userid( $user_id ), um_user('can_view_roles') ) ) {
+		if ( um_user_can('can_view_roles') && $user_id != get_current_user_id() ) {
+			if ( !in_array( $ultimatemember->query->get_role_by_userid( $user_id ), um_user_can('can_view_roles') ) ) {
 				return false;
 			}
 		}
@@ -710,6 +759,7 @@ function um_reset_user() {
  */
 function um_get_option($option_id) {
 	global $ultimatemember;
+	if ( !isset( $ultimatemember->options ) ) return '';
 	$um_options = $ultimatemember->options;
 	if ( isset($um_options[$option_id]) && !empty( $um_options[$option_id] ) )	{
 		return $um_options[$option_id];
@@ -795,6 +845,33 @@ function um_fetch_user( $user_id ) {
 	}
 	
 	/***
+	***	@Get youtube video ID from url
+	***/
+	function um_youtube_id_from_url($url) {
+		$pattern = 
+			'%^# Match any youtube URL
+			(?:https?://)?  # Optional scheme. Either http or https
+			(?:www\.)?      # Optional www subdomain
+			(?:             # Group host alternatives
+			  youtu\.be/    # Either youtu.be,
+			| youtube\.com  # or youtube.com
+			  (?:           # Group path alternatives
+				/embed/     # Either /embed/
+			  | /v/         # or /v/
+			  | /watch\?v=  # or /watch\?v=
+			  )             # End path alternatives.
+			)               # End host alternatives.
+			([\w-]{10,12})  # Allow 10-12 for 11 char youtube id.
+			$%x'
+			;
+		$result = preg_match($pattern, $url, $matches);
+		if (false !== $result) {
+			return $matches[1];
+		}
+		return false;
+	}
+	
+	/***
 	***	@user uploads uri
 	***/
 	function um_user_uploads_uri() {
@@ -871,6 +948,10 @@ function um_fetch_user( $user_id ) {
 				
 				$uri = um_user_uploads_uri() . 'profile_photo.jpg?' . current_time( 'timestamp' );
 			
+			}
+			
+			if ( $attrs == 'original' ) {
+				$uri = um_user_uploads_uri() . 'profile_photo.jpg?' . current_time( 'timestamp' );
 			}
 			
 		}
@@ -1073,9 +1154,9 @@ function um_user( $data, $attrs = null ) {
 			} else {
 				$avatar_uri = um_get_default_avatar_uri();
 			}
-			
+
 			$avatar_uri = apply_filters('um_user_avatar_url_filter', $avatar_uri, um_user('ID') );
-				
+
 			if ( $avatar_uri )
 				return '<img src="' . $avatar_uri . '" class="gravatar avatar avatar-'.$attrs.' um-avatar" width="'.$attrs.'" height="'.$attrs.'" alt="" />';
 				

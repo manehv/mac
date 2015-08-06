@@ -35,7 +35,15 @@ class UM_User {
 		add_action('um_delete_user_hook', array(&$this, 'remove_cached_queue') );
 		add_action('um_new_user_registration_plain', array(&$this, 'remove_cached_queue') );
 		add_action('um_after_user_status_is_changed_hook', array(&$this, 'remove_cached_queue') );
-
+		
+		// When user cache should be cleared
+		add_action('um_after_user_updated', array(&$this, 'remove_cache') );
+		add_action('um_after_user_account_updated', array(&$this, 'remove_cache') );
+		add_action('personal_options_update', array(&$this, 'remove_cache') );
+		add_action('edit_user_profile_update', array(&$this, 'remove_cache') );
+		add_action('um_when_role_is_set', array(&$this, 'remove_cache') );
+		add_action('um_when_status_is_set', array(&$this, 'remove_cache') );
+		
 	}
 	
 	/***
@@ -61,6 +69,25 @@ class UM_User {
 		}
 
 		return $new;
+	}
+	
+	function get_cached_data( $user_id ) {
+		if ( is_numeric( $user_id ) && $user_id > 0 ) {
+			$find_user = get_option("um_cache_userdata_{$user_id}");
+			if ( $find_user ) {
+				$find_user = apply_filters('um_user_permissions_filter', $find_user, $user_id);
+				return $find_user;
+			}
+		}
+		return '';
+	}
+	
+	function setup_cache( $user_id, $profile ) {
+		update_option( "um_cache_userdata_{$user_id}", $profile );
+	}
+	
+	function remove_cache( $user_id ) {
+		delete_option( "um_cache_userdata_{$user_id}" );
 	}
 	
 	/**
@@ -93,6 +120,18 @@ class UM_User {
 		if ( isset( $this->profile ) ) {
 			unset( $this->profile );
 		}
+		
+		if ($user_id) {
+			$this->id = $user_id;
+		} elseif (is_user_logged_in() && $clean == false ){
+			$this->id = get_current_user_id();
+		} else {
+			$this->id = 0;
+		}
+		
+		if ( $this->get_cached_data( $this->id ) ) {
+			$this->profile = $this->get_cached_data( $this->id );
+		} else {
 		
 		if ($user_id) {
 		
@@ -173,7 +212,12 @@ class UM_User {
 				
 			// clean profile
 			$this->clean();
+			
+			// Setup cache
+			$this->setup_cache( $this->id, $this->profile );
 
+		}
+		
 		}
 		
 	}
@@ -296,6 +340,8 @@ class UM_User {
 	 *
 	 */
 	function set_role( $role ){
+		
+		do_action('um_when_role_is_set', um_user('ID') );
 	
 		do_action('um_before_user_role_is_changed');
 		
@@ -306,6 +352,8 @@ class UM_User {
 		
 		do_action('um_after_user_role_is_changed');
 		
+		do_action('um_after_user_role_is_updated', um_user('ID'), $role );
+		
 	}
 	
 	/***
@@ -313,6 +361,8 @@ class UM_User {
 	***/
 	function set_status( $status ){
 	
+		do_action( 'um_when_status_is_set', um_user('ID') );
+		
 		$this->profile['account_status'] = $status;
 		
 		$this->update_usermeta_info('account_status');
@@ -381,6 +431,9 @@ class UM_User {
 	 */
 	function approve(){
 		global $ultimatemember;
+		
+		$user_id = um_user('ID');
+		delete_option( "um_cache_userdata_{$user_id}" );
 		
 		if ( um_user('account_status') == 'awaiting_admin_review' ) {
 			$email_tpl = 'approved_email';
@@ -522,7 +575,7 @@ class UM_User {
 				require_once( ABSPATH . 'wp-admin/includes/user.php' );
 			}
 			
-			wp_delete_user( $this->id, 1 );
+			wp_delete_user( $this->id );
 			
 		}
 

@@ -19,20 +19,22 @@ class UM_API {
 		$this->available_languages = array(
 			'en_US' => 'English (US)',
 			'es_ES' => 'Español',
+			'es_MX' => 'Español (México)',
 			'fr_FR' => 'Français',
 			'it_IT' => 'Italiano',
 			'de_DE'	=> 'Deutsch',
 			'nl_NL' => 'Nederlands',
 			'fi_FI' => 'Suomi',
+			'ro_RO' => 'Română',
+			'da_DK' => 'Dansk',
+			'sv_SE' => 'Svenska',
 			'pl_PL' => 'Polski',
+			'cs_CZ' => 'Czech',
 			'ru_RU' => 'Русский',
 			'tr_TR' => 'Türkçe',
+			'fa_IR' => 'Farsi',
+			'he_IL' => 'Hebrew',
 			'ar' 	=> 'العربية'
-		);
-		
-		$this->addons['multi_language'] = array(
-				__( 'Multi Language Support','ultimatemember' ),
-				__('This add-on helps you offer multi language forms to your visitors based on the languages you want.','ultimatemember')
 		);
 		
 		$this->addons['bp_avatar_transfer'] = array(
@@ -61,6 +63,7 @@ class UM_API {
 
 		ob_start();
 		
+		require_once um_path . 'core/um-api.php';
 		require_once um_path . 'core/um-rewrite.php';
 		require_once um_path . 'core/um-setup.php';
 		require_once um_path . 'core/um-uninstall.php';
@@ -95,7 +98,9 @@ class UM_API {
 		require_once um_path . 'core/um-cache.php';
 		require_once um_path . 'core/um-tracking.php';
 		
-		require_once um_path . 'core/lib/mobiledetect/Mobile_Detect.php';
+		if ( !class_exists( 'Mobile_Detect' ) ) {
+			require_once um_path . 'core/lib/mobiledetect/Mobile_Detect.php';
+		}
 		
 		require_once um_path . 'core/um-actions-form.php';
 		require_once um_path . 'core/um-actions-access.php';
@@ -109,15 +114,12 @@ class UM_API {
 		require_once um_path . 'core/um-actions-password.php';
 		require_once um_path . 'core/um-actions-members.php';
 		require_once um_path . 'core/um-actions-global.php';
-		require_once um_path . 'core/um-actions-tracking.php';
 		require_once um_path . 'core/um-actions-user.php';
 		require_once um_path . 'core/um-actions-save-profile.php';
 		require_once um_path . 'core/um-actions-modal.php';
 		require_once um_path . 'core/um-actions-misc.php';
-		require_once um_path . 'core/um-actions-posts.php';
-		
+
 		require_once um_path . 'core/um-filters-login.php';
-		require_once um_path . 'core/um-filters-register.php';
 		require_once um_path . 'core/um-filters-fields.php';
 		require_once um_path . 'core/um-filters-files.php';
 		require_once um_path . 'core/um-filters-navmenu.php';
@@ -132,6 +134,7 @@ class UM_API {
 		require_once um_path . 'core/um-filters-commenting.php';
 		
 		/* initialize UM */
+		$this->api = new UM_REST_API();
 		$this->rewrite = new UM_Rewrite();
 		$this->setup = new UM_Setup();
 		$this->uninstall = new UM_Uninstall();
@@ -170,9 +173,9 @@ class UM_API {
 		$this->options = get_option('um_options');
 		
 		$domain = 'ultimatemember';
-		$locale = get_option('WPLANG');
+		$locale = ( get_locale() != '' ) ? get_locale() : 'en_US';
 		load_textdomain($domain, WP_LANG_DIR . '/plugins/' .$domain.'-'.$locale.'.mo');
-		
+
 	}
 	
 }

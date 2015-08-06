@@ -23,12 +23,64 @@
 	}
 	
 	/***
+	***	@outputs a soundcloud track
+	***/
+	add_filter('um_profile_field_filter_hook__soundcloud_track', 'um_profile_field_filter_hook__soundcloud_track', 99, 2);
+	function um_profile_field_filter_hook__soundcloud_track( $value, $data ) {
+		
+		if ( !is_numeric( $value ) ) {
+			return __('Invalid soundcloud track ID','ultimatemember');
+		}
+		
+		$value = '<div class="um-soundcloud">
+					<iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/' . $value . '&amp;color=ff6600&amp;auto_play=false&amp;show_artwork=true"></iframe>
+					</div>';
+					
+		return $value;
+	}
+	
+	/***
+	***	@outputs a youtube video
+	***/
+	add_filter('um_profile_field_filter_hook__youtube_video', 'um_profile_field_filter_hook__youtube_video', 99, 2);
+	function um_profile_field_filter_hook__youtube_video( $value, $data ) {
+		$value = ( strstr( $value, 'http') || strstr( $value, '://' ) ) ? um_youtube_id_from_url( $value ) : $value;
+		$value = '<div class="um-youtube">
+					<iframe width="600" height="450" src="https://www.youtube.com/embed/' . $value . '" frameborder="0" allowfullscreen></iframe>
+					</div>';
+		return $value;
+	}
+	
+	/***
+	***	@outputs a vimeo video
+	***/
+	add_filter('um_profile_field_filter_hook__vimeo_video', 'um_profile_field_filter_hook__vimeo_video', 99, 2);
+	function um_profile_field_filter_hook__vimeo_video( $value, $data ) {
+		$value = ( !is_numeric( $value ) ) ? (int) substr(parse_url($value, PHP_URL_PATH), 1) : $value;
+		$value = '<div class="um-vimeo">
+					<iframe src="https://player.vimeo.com/video/'. $value . '" width="600" height="450" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+					</div>';
+		return $value;
+	}
+	
+	/***
+	***	@outputs a google map
+	***/
+	add_filter('um_profile_field_filter_hook__googlemap', 'um_profile_field_filter_hook__googlemap', 99, 2);
+	function um_profile_field_filter_hook__googlemap( $value, $data ) {
+		$value = '<div class="um-googlemap">
+					<iframe width="600" height="450" frameborder="0" style="border:0" src="https://maps.google.it/maps?q=' . urlencode( $value ) . '&output=embed"></iframe>
+				</div>';
+		return $value;
+	}
+	
+	/***
 	***	@user's registration date
 	***/
 	add_filter('um_profile_field_filter_hook__user_registered', 'um_profile_field_filter_hook__user_registered', 99, 2);
 	function um_profile_field_filter_hook__user_registered( $value, $data ) {
 		$value = strtotime($value);
-		$value = sprintf(__('Joined %s','ultimatemember'), date('d M Y', $value) );
+		$value = sprintf(__('Joined %s','ultimatemember'), date_i18n('d M Y', $value) );
 		return $value;
 	}
 	
@@ -45,8 +97,8 @@
 		
 		$value = preg_replace('$(https?://[a-z0-9_./?=&#-]+)(?![^<>]*>)$i', ' <a href="$1" target="_blank">$1</a> ', $value." ");
 		$value = preg_replace('$(www\.[a-z0-9_./?=&#-]+)(?![^<>]*>)$i', '<a target="_blank" href="http://$1">$1</a> ', $value." ");
-
 		$value = wpautop($value);
+
 		return $value;
 	}
 	
@@ -128,7 +180,7 @@
 	***/
 	add_filter('um_profile_field_filter_hook__', 'um_profile_field_filter_hook__', 99, 2);
 	function um_profile_field_filter_hook__( $value, $data ) {
-		
+		global $ultimatemember;
 		if ( !$value ) return '';
 
 		if ( ( isset( $data['validate'] ) && $data['validate'] != '' && strstr( $data['validate'], 'url' ) ) || ( isset( $data['type'] ) && $data['type'] == 'url' ) ) {
@@ -146,14 +198,24 @@
 				if ( $data['validate'] == 'facebook_url' ) $value = 'https://facebook.com/' . $value;
 				if ( $data['validate'] == 'twitter_url' ) $value = 'https://twitter.com/' . $value;
 				if ( $data['validate'] == 'linkedin_url' ) $value = 'https://linkedin.com/' . $value;
-				if ( $data['validate'] == 'skype' ) $value = 'https://skype.com/' . $value;
+				if ( $data['validate'] == 'skype' ) $value = $value;
 				if ( $data['validate'] == 'googleplus_url' ) $value = 'https://plus.google.com/' . $value;
 				if ( $data['validate'] == 'instagram_url' ) $value = 'https://instagram.com/' . $value;	
 			}
-			if ( strpos($value, 'http://') !== 0 ) {
-				$value = 'http://' . $value;
+			
+			if ( isset( $data['validate'] ) && $data['validate'] == 'skype' ) {
+				
+				$value = $value;
+			
+			} else {
+				
+				if ( strpos($value, 'http://') !== 0 ) {
+					$value = 'http://' . $value;
+				}
+				$value = '<a href="'. $value .'" title="'.$alt.'" target="'.$data['url_target'].'" ' . $url_rel . '>'.$alt.'</a>';
+			
 			}
-			$value = '<a href="'. $value .'" title="'.$alt.'" target="'.$data['url_target'].'" ' . $url_rel . '>'.$alt.'</a>';
+			
 		}
 			
 		if ( !is_array( $value ) ) {
@@ -165,7 +227,7 @@
 		
 		$value = str_replace('https://https://','https://',$value);
 		$value = str_replace('http://https://','https://',$value);
-
+		$value = $ultimatemember->shortcodes->emotize( $value );
 		return $value;
 
 	}

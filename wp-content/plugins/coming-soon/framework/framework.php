@@ -176,7 +176,7 @@ class SEED_CSP4_ADMIN
             }
             echo '<a class="nav-tab seed_csp4-preview thickbox-preview" href="'.home_url().'?cs_preview=true&TB_iframe=true&width=640&height=632" title="'.__('&larr; Close Window','coming-soon').'">'.__('Live Preview','coming-soon').'</a>';
             if(defined('SEED_CSP_API_KEY') === false){
-                echo '<a class="nav-tab seed_csp4-support" style="color: #8a6d3b;background-color: #fcf8e3;" href="http://www.seedprod.com/features/?utm_source=coming-soon-plugin&utm_medium=banner&utm_campaign=coming-soon-link-in-plugin" target="_blank"><i class="fa fa-star"></i> '.__('Upgrade to Pro for more Professional Features','coming-soon').'</a>';
+                echo '<a class="nav-tab seed_csp4-support" style="background-color: #fcf8e3;" href="http://www.seedprod.com/features/?utm_source=coming-soon-plugin&utm_medium=banner&utm_campaign=coming-soon-link-in-plugin" target="_blank"><i class="fa fa-star"></i> '.__('Upgrade to Pro for more Professional Features','coming-soon').'</a>';
             }
             echo '</h2>';
 
@@ -291,9 +291,53 @@ class SEED_CSP4_ADMIN
 
                     <div id="postbox-container-1" class="postbox-container">
                         <div id="side-sortables" class="meta-box-sortables ui-sortable">
+
+                            <div class="postbox rss-postbox" style="background-color: #fcf8e3">
+									<div class="handlediv" title="Click to toggle"><br /></div>
+									<form action="https://www.getdrip.com/forms/2650489/submissions" method="post" target="_blank" data-drip-embedded-form="2650489">
+	  <h3 class="hndle" data-drip-attribute="headline"><span>How to launch a site that&#x27;s successful on Day One</span></h3>
+						<div class="inside">
+
+
+							<p data-drip-attribute="description">There&#x27;s nothing more disappointing than launching a new site and not get enough visitors to support it. Find out how to build an audience before you launch in this free 5-part course.</p>
+							<div>
+								<label for="fields[email]">Email Address</label><br />
+								<input class="regular-text" style="width:100%" type="email" name="fields[email]" value="<?php echo get_option( 'admin_email' ); ?>" />
+							</div>
+
+							<div style="margin-top:10px">
+								<label for="fields[first_name]">First Name</label><br />
+								<input class="regular-text" style="width:100%" type="text" name="fields[first_name]" value="" />
+							</div>
+
+						<div style="margin-top:10px">
+							<input type="submit" name="submit" value="Subscribe Now" style="background-color:red; border-color:firebrick;" data-drip-attribute="sign-up-button" class="button-primary" />
+						</div>
+
+
+										<!-- <div class="rss-widget">
+											<?php
+											wp_widget_rss_output(array(
+												'url' => 'http://seedprod.com/feed/',
+												'title' => 'SeedProd Blog',
+												'items' => 3,
+												'show_summary' => 0,
+												'show_author' => 0,
+												'show_date' => 1,
+												));
+												?>
+												<ul>
+													<li>&raquo; <a href="http://seedprod.com/subscribe/"><?php _e('Subscribe by Email', 'ultimate-coming-soon-page') ?></a></li>
+												</ul>
+											</div> -->
+										</div>
+									</form>
+
+
+									</div>
                             <!-- <a href="http://www.seedprod.com/plugins/wordpress-coming-soon-pro-plugin/?utm_source=plugin&utm_medium=banner&utm_campaign=coming-soon-pro-in-plugin-banner" target="_blank"><img src="http://static.seedprod.com/ads/coming-soon-pro-sidebar.png" /></a>
                             <br><br> -->
-                            <div class="postbox support-postbox" style="background-color: #fcf8e3">
+                            <div class="postbox support-postbox" style="background-color:#d9edf7">
                                 <div class="handlediv" title="Click to toggle"><br /></div>
                                 <h3 class="hndle"><span><?php _e('Plugin Support', 'coming-soon') ?></span></h3>
                                 <div class="inside">
@@ -310,7 +354,7 @@ class SEED_CSP4_ADMIN
                                 </div>
                             </div>
                             <?php if($this->plugin_type != 'pro'){ ?>
-                                <div class="postbox like-postbox" style="background-color:#dff0d8">
+                                <div class="postbox like-postbox" style="background-color:#d9edf7">
                                     <div class="handlediv" title="Click to toggle"><br /></div>
                                     <h3 class="hndle"><span><?php _e('Show Some Love', 'coming-soon') ?></span></h3>
                                     <div class="inside">
@@ -329,69 +373,31 @@ class SEED_CSP4_ADMIN
                                     </div>
                                 </div>
                                 <?php } ?>
+
+
                                 <div class="postbox rss-postbox" style="background-color:#d9edf7">
-                                    <div class="handlediv" title="Click to toggle"><br /></div>
-                                    <h3 class="hndle"><span><?php _e("How to launch a site that's successful on Day One", 'ultimate-coming-soon-page') ?></span></h3>
-                                    <div class="inside">
-                                        <form action="https://www.getdrip.com/forms/7838563/submissions" method="post" target="_blank" data-drip-embedded-form="1541">
+    											<div class="handlediv" title="Click to toggle"><br /></div>
+    											<h3 class="hndle"><span><?php _e('SeedProd Blog', 'ultimate-coming-soon-page') ?></span></h3>
+    											<div class="inside">
 
-                                            <p data-drip-attribute="description">There's nothing more disappointing than launching a new site and not get
-                                                enough visitors to support it. Find out how to build an audience before you
-                                                launch in this free 5-part course.</p>
-                                                <div>
-                                                    <label for="fields[first_name]">First Name</label><br />
-                                                    <input type="text" name="fields[first_name]" value="" />
-                                                </div>
-                                                <div>
-                                                    <label for="fields[email]">Email Address</label><br />
-                                                    <input type="text" name="fields[email]" value="" />
-                                                </div>
-                                                <br>
-                                                <div>
-                                                    <input type="submit" name="submit" value="Learn How" data-drip-attribute="sign-up-button" class="button-primary" />
-                                                </div>
-                                            </form>
-                                            <!-- <div class="rss-widget">
-                                            <?php
-                                            wp_widget_rss_output(array(
-                                            'url' => 'http://seedprod.com/feed/',
-                                            'title' => 'SeedProd Blog',
-                                            'items' => 3,
-                                            'show_summary' => 0,
-                                            'show_author' => 0,
-                                            'show_date' => 1,
-                                            ));
-                                            ?>
-                                            <ul>
-                                            <li>&raquo; <a href="http://seedprod.com/subscribe/"><?php _e('Subscribe by Email', 'ultimate-coming-soon-page') ?></a></li>
-                                        </ul>
-                                    </div> -->
-                                </div>
-                            </div>
-
-                            <div class="postbox rss-postbox" style="background-color:#f2dede">
-                                <div class="handlediv" title="Click to toggle"><br /></div>
-                                <h3 class="hndle"><span><?php _e('SeedProd Blog', 'ultimate-coming-soon-page') ?></span></h3>
-                                <div class="inside">
-
-                                    <div class="rss-widget">
-                                        <?php
-                                        wp_widget_rss_output(array(
-                                        'url' => 'http://seedprod.com/feed/',
-                                        'title' => 'SeedProd Blog',
-                                        'items' => 3,
-                                        'show_summary' => 0,
-                                        'show_author' => 0,
-                                        'show_date' => 1,
-                                        ));
-                                        ?>
-                                        <ul>
-                                            <br>
-                                            <li>&raquo; <a href="https://feedburner.google.com/fb/a/mailverify?uri=seedprod"><?php _e('Subscribe by Email', 'ultimate-coming-soon-page') ?></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
+    												<div class="rss-widget">
+    													<?php
+    													wp_widget_rss_output(array(
+    													'url' => 'http://feeds.feedburner.com/seedprod/',
+    													'title' => 'SeedProd Blog',
+    													'items' => 3,
+    													'show_summary' => 0,
+    													'show_author' => 0,
+    													'show_date' => 1,
+    												));
+    												?>
+    												<ul>
+    													<br>
+    												<li>&raquo; <a href="https://www.getdrip.com/forms/9414625/submissions/new"><?php _e('Subscribe by Email', 'ultimate-coming-soon-page') ?></a></li>
+    											</ul>
+    										</div>
+    									</div>
+    								</div>
 
                         </div>
                     </div>

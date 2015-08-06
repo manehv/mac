@@ -7,6 +7,9 @@
 	function um_profile_content_main( $args ) {
 		extract( $args );
 		
+		if ( !um_get_option('profile_tab_main') && !isset( $_REQUEST['um_action'] ) )
+			return;
+		
 		$can_view = apply_filters('um_profile_can_view_main', -1, um_profile_id() );
 		
 		if ( $can_view == -1 ) {
@@ -89,7 +92,7 @@
 		}
 		
 		if ( isset( $args['submitted']['description'] ) ) {
-			$to_update['description'] = $ultimatemember->validation->remove_html( $args['submitted']['description'] );
+			$to_update['description'] = $args['submitted']['description'];
 		}
 		
 		if ( isset( $args['submitted']['role'] ) && !empty( $args['submitted']['role'] ) ) {
@@ -108,8 +111,8 @@
 			$ultimatemember->user->update_files( $files );
 		}
 		
+		do_action('um_after_user_updated', um_user('ID') );
 		do_action('um_after_user_upload', um_user('ID') );
-		
 		do_action('um_user_after_updating_profile', $to_update );
 		
 		if ( !isset( $args['is_signup'] ) ) {
@@ -582,7 +585,7 @@
 		$tabs = $ultimatemember->profile->tabs_active();
 
 		$tabs = apply_filters('um_user_profile_tabs', $tabs );
-		
+
 		$ultimatemember->user->tabs = $tabs;
 		
 		// need enough tabs to continue
@@ -595,7 +598,16 @@
 			$ultimatemember->profile->active_tab = $active_tab;
 			$ultimatemember->profile->active_subnav = null;
 		}
-
+		
+		// Move default tab priority
+		$default_tab = um_get_option('profile_menu_default_tab');
+		$dtab = ( isset( $tabs[$default_tab] ) )? $tabs[$default_tab] : 'main';
+		if ( isset( $tabs[ $default_tab ] ) ) {
+			unset( $tabs[$default_tab] );
+			$dtabs[$default_tab] = $dtab;
+			$tabs = $dtabs + $tabs;
+		}
+		
 		?>
 		
 		<div class="um-profile-nav">
@@ -608,12 +620,17 @@
 				$nav_link = remove_query_arg( 'um_action', $nav_link );
 				$nav_link = remove_query_arg( 'subnav', $nav_link );
 				$nav_link =  add_query_arg('profiletab', $id, $nav_link );
+				
+				$nav_link = apply_filters("um_profile_menu_link_{$id}", $nav_link);
+				
 				?>
 			
 			<div class="um-profile-nav-item um-profile-nav-<?php echo $id; ?> <?php if ( !um_get_option('profile_menu_icons') ) { echo 'without-icon'; } ?> <?php if ( $id == $active_tab ) { echo 'active'; } ?>">
 				<a href="<?php echo $nav_link; ?>" title="<?php echo $tab['name']; ?>">
 
 					<i class="<?php echo $tab['icon']; ?>"></i>
+					
+					<?php if ( isset( $tab['notifier'] ) && $tab['notifier'] > 0 ) { ?><span class="um-tab-notifier uimob500-show uimob340-show uimob800-show"><?php echo $tab['notifier']; ?></span><?php } ?>
 					
 					<span class="uimob500-hide uimob340-hide uimob800-hide title"><?php echo $tab['name']; ?></span>
 					

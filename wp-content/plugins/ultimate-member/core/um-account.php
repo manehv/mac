@@ -72,7 +72,7 @@ class UM_Account {
 		global $ultimatemember;
 		
 		if ( um_is_core_page('account') && !is_user_logged_in() ) {
-			um_redirect_home();
+			exit( wp_redirect( add_query_arg('redirect_to', urlencode( um_get_core_page('account') ) , um_get_core_page('login') ) ) );
 		}
 		
 		if ( um_is_core_page('account') ) {
@@ -101,7 +101,7 @@ class UM_Account {
 		
 		} else {
 			
-			$url = esc_url( add_query_arg( 'um_tab', $id, um_get_core_page('account') ) );
+			$url = add_query_arg( 'um_tab', $id, um_get_core_page('account') );
 			
 		}
 		
@@ -182,6 +182,10 @@ class UM_Account {
 				
 				if ( !um_get_option('account_name') ) {
 					$args = 'user_login,user_email';
+				}
+				
+				if ( !um_get_option('account_email') && !um_user('can_edit_everyone') ) {
+					$args = str_replace(',user_email','', $args );
 				}
 				
 				$fields = $ultimatemember->builtin->get_specific_fields( $args );

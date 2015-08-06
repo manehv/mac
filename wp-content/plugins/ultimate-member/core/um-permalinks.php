@@ -32,7 +32,9 @@ class UM_Permalinks {
 	***/
 	function get_current_url( $no_query_params = false ) {
 		global $post;
-		 
+		
+		$server_name_method = ( um_get_option('current_url_method') ) ? um_get_option('current_url_method') : 'SERVER_NAME';
+
 		if ( is_front_page() ) :
 			$page_url = home_url();
 		else :
@@ -42,10 +44,10 @@ class UM_Permalinks {
 			$page_url .= "s";
 			$page_url .= "://";
 		 
-		if ( $_SERVER["SERVER_PORT"] != "80" )
-			$page_url .= $_SERVER["SERVER_NAME"].":".$_SERVER["SERVER_PORT"].$_SERVER["REQUEST_URI"];
+		if ( $_SERVER["SERVER_PORT"] != "80" && $_SERVER["SERVER_PORT"] != "443" )
+			$page_url .= $_SERVER[ $server_name_method ].":".$_SERVER["SERVER_PORT"].$_SERVER["REQUEST_URI"];
 		else
-			$page_url .= $_SERVER["SERVER_NAME"].$_SERVER["REQUEST_URI"];
+			$page_url .= $_SERVER[ $server_name_method ].$_SERVER["REQUEST_URI"];
 		endif;
 
 		if ( $no_query_params == true ) {
@@ -64,7 +66,10 @@ class UM_Permalinks {
 		if ( isset($_REQUEST['act']) && $_REQUEST['act'] == 'activate_via_email' && isset($_REQUEST['hash']) && strlen($_REQUEST['hash']) == 40 &&
 			isset($_REQUEST['user_id']) && is_numeric($_REQUEST['user_id']) ) { // valid token
 				
-				um_fetch_user( $_REQUEST['user_id'] );
+				$user_id = absint( $_REQUEST['user_id'] );
+				delete_option( "um_cache_userdata_{$user_id}" );
+				
+				um_fetch_user( $user_id );
 
 				if ( um_user('account_status') != 'awaiting_email_confirmation' ) wp_die('The activation link you used is invalid or has expired.');
 				
@@ -109,7 +114,7 @@ class UM_Permalinks {
 	***	@add a query param to url
 	***/
 	function add_query( $key, $value ) {
-		$this->current_url =  esc_url( add_query_arg( $key, $value, $this->current_url ) );
+		$this->current_url =  add_query_arg( $key, $value, $this->current_url );
 		return $this->current_url;
 	}
 	/***
@@ -126,8 +131,14 @@ class UM_Permalinks {
 	function profile_url() {
 		global $ultimatemember;
 
-		$profile_url = $this->core['user'];
-		$profile_url = get_permalink($profile_url);
+		$page_id = $this->core['user'];
+		$profile_url = get_permalink( $page_id );
+		
+		if ( defined('ICL_SITEPRESS_VERSION') && icl_get_current_language() != icl_get_default_language() ) {
+			if ( get_the_ID() > 0 && get_post_meta( get_the_ID(), '_um_wpml_user', true ) == 1 ) {
+				$profile_url = get_permalink( get_the_ID() );
+			}
+		}
 		
 		if ( um_get_option('permalink_base') == 'user_login' ) {
 			$user_in_url = um_user('user_login');

@@ -186,6 +186,16 @@ $this->sections[] = array(
         ),
 		
         array(
+                'id'       		=> 'account_email',
+                'type'     		=> 'switch',
+                'title'   		=> __( 'Allow users to change e-mail','ultimatemember' ),
+				'default' 		=> 1,
+				'desc' 	   		=> __('Whether to allow users changing their email in account page.','ultimatemember'),
+				'on'			=> __('On','ultimatemember'),
+				'off'			=> __('Off','ultimatemember'),
+        ),
+		
+        array(
                 'id'       		=> 'account_require_strongpass',
                 'type'     		=> 'switch',
                 'title'   		=> __( 'Require a strong password?','ultimatemember' ),
@@ -248,36 +258,6 @@ $this->sections[] = array(
 				'add_text'		=> __('Add New URL','ultimatemember'),
 				'required'		=> array( 'accessible', '=', 2 ),
 		),
-		
-        array(
-                'id'       		=> 'exclude_from_main_loop',
-                'type'     		=> 'switch',
-                'title'   		=> __( 'Exclude restricted pages from main loop','ultimatemember' ),
-				'default' 		=> 1,
-				'desc' 	   		=> __('Whether to exclude restricted pages from main loop','ultimatemember'),
-				'on'			=> __('Yes','ultimatemember'),
-				'off'			=> __('No','ultimatemember'),
-        ),
-		
-        array(
-                'id'       		=> 'exclude_from_search_loop',
-                'type'     		=> 'switch',
-                'title'   		=> __( 'Exclude restricted pages from search loop','ultimatemember' ),
-				'default' 		=> 1,
-				'desc' 	   		=> __('Whether to exclude restricted pages from search results','ultimatemember'),
-				'on'			=> __('Yes','ultimatemember'),
-				'off'			=> __('No','ultimatemember'),
-        ),
-		
-        array(
-                'id'       		=> 'exclude_from_archive_loop',
-                'type'     		=> 'switch',
-                'title'   		=> __( 'Exclude restricted pages from archive loop','ultimatemember' ),
-				'default' 		=> 1,
-				'desc' 	   		=> __('Whether to exclude restricted pages from archives','ultimatemember'),
-				'on'			=> __('Yes','ultimatemember'),
-				'off'			=> __('No','ultimatemember'),
-        ),
 		
         array(
                 'id'       		=> 'wpadmin_login',
@@ -847,7 +827,7 @@ $this->sections[] = array(
 		array(
 				'id'       		=> 'profile_photo_max_size',
                 'type'     		=> 'text',
-                'title'    		=> __( 'Profile Photo Maximum File Size','ultimatemember' ),
+                'title'    		=> __( 'Profile Photo Maximum File Size (bytes)','ultimatemember' ),
                 'desc' 	   		=> __( 'Sets a maximum size for the uploaded photo','ultimatemember' ),
 				'validate' 		=> 'numeric',
         ),
@@ -855,7 +835,7 @@ $this->sections[] = array(
 		array(
 				'id'       		=> 'cover_photo_max_size',
                 'type'     		=> 'text',
-                'title'    		=> __( 'Cover Photo Maximum File Size','ultimatemember' ),
+                'title'    		=> __( 'Cover Photo Maximum File Size (bytes)','ultimatemember' ),
                 'desc' 	   		=> __( 'Sets a maximum size for the uploaded cover','ultimatemember' ),
 				'validate' 		=> 'numeric',
         ),
@@ -863,7 +843,7 @@ $this->sections[] = array(
 		array(
 				'id'       		=> 'photo_thumb_sizes',
                 'type'     		=> 'multi_text',
-                'title'    		=> __( 'Profile Photo Thumbnail Sizes','ultimatemember' ),
+                'title'    		=> __( 'Profile Photo Thumbnail Sizes (px)','ultimatemember' ),
                 'desc' 	   		=> __( 'Here you can define which thumbnail sizes will be created for each profile photo upload.','ultimatemember' ),
                 'default'  		=> array( 40, 80, 190 ),
 				'validate' 		=> 'numeric',
@@ -873,7 +853,7 @@ $this->sections[] = array(
 		array(
 				'id'       		=> 'cover_thumb_sizes',
                 'type'     		=> 'multi_text',
-                'title'    		=> __( 'Cover Photo Thumbnail Sizes','ultimatemember' ),
+                'title'    		=> __( 'Cover Photo Thumbnail Sizes (px)','ultimatemember' ),
                 'desc' 	   		=> __( 'Here you can define which thumbnail sizes will be created for each cover photo upload.','ultimatemember' ),
                 'default'  		=> array( 300, 600 ),
 				'validate' 		=> 'numeric',
@@ -892,7 +872,7 @@ $this->sections[] = array(
 		array(
 				'id'       		=> 'image_max_width',
                 'type'     		=> 'text',
-                'title'    		=> __( 'Image Upload Maximum Width','ultimatemember' ),
+                'title'    		=> __( 'Image Upload Maximum Width (px)','ultimatemember' ),
                 'desc' 	   		=> __( 'Any image upload above this width will be resized to this limit automatically.','ultimatemember' ),
                 'default'  		=> 1000,
 				'validate' 		=> 'numeric',
@@ -901,7 +881,7 @@ $this->sections[] = array(
 		array(
 				'id'       		=> 'cover_min_width',
                 'type'     		=> 'text',
-                'title'    		=> __( 'Cover Photo Minimum Width','ultimatemember' ),
+                'title'    		=> __( 'Cover Photo Minimum Width (px)','ultimatemember' ),
                 'desc' 	   		=> __( 'This will be the minimum width for cover photo uploads','ultimatemember' ),
                 'default'  		=> 1000,
 				'validate' 		=> 'numeric',
@@ -1482,8 +1462,6 @@ $tab_options[] = array(
 );
 
 foreach( $tabs as $id => $tab ) {
-	
-	if ( isset( $tab['_builtin'] ) ) continue;
 
 	$tab_options[] = array(
 					'id'       		=> 'profile_tab_' . $id,
@@ -1504,7 +1482,7 @@ $tab_options[] = array(
                 'title'    		=> __( 'Profile menu default tab','ultimatemember' ),
                 'desc' 	   		=> __( 'This will be the default tab on user profile page','ultimatemember' ),
                 'default'  		=> 'main',
-				'options' 		=> $ultimatemember->profile->tabs_primary(),
+				'options' 		=> $ultimatemember->profile->tabs_enabled(),
 				'required'		=> array( 'profile_menu', '=', 1 ),
 );
 
@@ -1786,7 +1764,20 @@ $this->sections[] = array(
 				'title'         	=> __('Import & Export Settings','ultimatemember'),
 				'full_width'    	=> true,
 		),
-	
+
+		array(
+				'id'       		=> 'current_url_method',
+                'type'     		=> 'select',
+				'select2'		=> array( 'allowClear' => 0, 'minimumResultsForSearch' => -1 ),
+                'title'    		=> __( 'Current URL Method','ultimatemember' ),
+                'desc' 	   		=> __( 'Change this If you are having conflicts with profile links or redirections.','ultimatemember' ),
+                'default'  		=> 'SERVER_NAME',
+				'options' 		=> array(
+									'SERVER_NAME' 			=> __('Use SERVER_NAME','ultimatemember'),
+									'HTTP_HOST' 			=> __('Use HTTP_HOST','ultimatemember'),
+				),
+        ),
+		
         array(
                 'id'      		=> 'advanced_denied_roles',
                 'type'     		=> 'text',

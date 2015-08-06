@@ -55,24 +55,11 @@
 			}
 		}
 		
-		$check = wp_authenticate_username_password( null, $user_name, $args['user_password'] );
-		
-		if ( is_wp_error( $check ) ) {
-			$err = $check->get_error_code();
-			switch( $err ) {
-				
-				default:
-					break;
-
-				case 'incorrect_password':
-					if ( username_exists( $user_name ) ) {
-						$ultimatemember->form->add_error( 'user_password',  __('Password is incorrect. Please try again.','ultimatemember') );
-					}
-					break;
-					
-			}
-		} else {
+		$user = get_user_by( 'login', $user_name );
+		if ( $user && wp_check_password( $args['user_password'], $user->data->user_pass, $user->ID) ) {
 			$ultimatemember->login->auth_id = username_exists( $user_name );
+		} else {
+			$ultimatemember->form->add_error( 'user_password',  __('Password is incorrect. Please try again.','ultimatemember') );
 		}
 		
 	}
@@ -104,6 +91,10 @@
 				exit( wp_redirect(  add_query_arg( 'err', esc_attr( $status ), $ultimatemember->permalinks->get_current_url() ) ) );
 				break;
 				
+		}
+		
+		if ( isset( $args['form_id'] ) && $args['form_id'] == $ultimatemember->shortcodes->core_login_form() &&  $ultimatemember->form->errors && !isset( $_POST[ $ultimatemember->honeypot ] ) ) {
+			exit( wp_redirect( um_get_core_page('login') ) );
 		}
 		
 	}
@@ -159,7 +150,9 @@
 	function um_submit_form_login($args){
 		global $ultimatemember;
 		
-		if ( !isset($ultimatemember->form->errors) ) do_action( 'um_user_login', $args );
+		if ( !isset($ultimatemember->form->errors) ) {
+			do_action( 'um_user_login', $args );
+		}
 		
 		do_action('um_user_login_extra_hook', $args );
 		

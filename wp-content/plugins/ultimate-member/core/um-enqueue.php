@@ -6,7 +6,8 @@ class UM_Enqueue {
 		
 		add_action('wp_head',  array(&$this, 'wp_head'), 999); // high-priority
 	
-		add_action('wp_enqueue_scripts',  array(&$this, 'wp_enqueue_scripts'), 0);
+		$priority = apply_filters( 'um_core_enqueue_priority', 0 );
+		add_action('wp_enqueue_scripts',  array(&$this, 'wp_enqueue_scripts'), $priority );
 	
 	}
 	
@@ -108,7 +109,7 @@ class UM_Enqueue {
 		}
 		
 		// load a localized version for date/time
-		$locale = get_option('WPLANG');
+		$locale = get_locale();
 		if ( $locale && file_exists( um_path . 'assets/js/pickadate/translations/' . $locale . '.js' ) ) {
 			wp_register_script('um_datetime_locale', um_url . 'assets/js/pickadate/translations/' . $locale . '.js', '', ultimatemember_version, true );
 			wp_enqueue_script('um_datetime_locale');

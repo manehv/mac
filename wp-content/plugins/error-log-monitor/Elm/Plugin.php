@@ -50,15 +50,23 @@ class Elm_Plugin {
 			return;
 		}
 
+		$lock = new Elm_ExclusiveLock('elm-email-errors');
+		$lock->acquire();
+		//Note: Locking failures are intentionally ignored. Most of them are likely to be caused by file permissions,
+		//which are either intentional (making "/wp-content/uploads" non-writable) or not easily fixed by the user.
+		//It's better to occasionally send multiple email notifications than to never send any.
+
 		$log = Elm_PhpErrorLog::autodetect();
 		if ( is_wp_error($log) ) {
 			trigger_error('Error log not detected', E_USER_WARNING);
+			$lock->release();
 			return;
 		}
 
 		$lines = $log->readLastLines($this->settings->get('email_line_count'), true);
 		if ( is_wp_error($lines) ) {
 			trigger_error('Error log is not accessible', E_USER_WARNING);
+			$lock->release();
 			return;
 		}
 
@@ -104,6 +112,8 @@ class Elm_Plugin {
 				trigger_error('Failed to send an email, wp_mail() returned FALSE', E_USER_WARNING);
 			}
 		}
+
+		$lock->release();
 	}
 
 	public function stripWpPath($string) {

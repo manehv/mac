@@ -12,7 +12,7 @@ class Elm_PhpErrorLog {
 	 * The log filename is detected automatically.
 	 *
 	 * @static
-	 * @return Elm_PhpErrorLog|WP_Error An instance of this log reader, or WP_Error if error loggin is not configured properly.
+	 * @return Elm_PhpErrorLog|WP_Error An instance of this log reader, or WP_Error if error logging is not configured properly.
 	 */
 	public static function autodetect() {
 		$errorLoggingEnabled = ini_get('log_errors') && (ini_get('log_errors') != 'Off');

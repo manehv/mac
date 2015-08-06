@@ -1,12 +1,91 @@
 <?php
 
 	/***
+	***	@Allow mass syncing for roles
+	***/
+	add_action('um_admin_do_action__mass_role_sync', 'um_admin_do_action__mass_role_sync');
+	function um_admin_do_action__mass_role_sync( $action ){
+		global $ultimatemember;
+		if ( !is_admin() || !current_user_can( 'edit_user' ) ) die();
+		
+		if ( !isset($_REQUEST['post']) || !is_numeric( $_REQUEST['post'] ) ) die();
+
+		$post_id = (int) $_REQUEST['post'];
+		
+		$post = get_post( $post_id );
+		$slug = $post->post_name;
+		
+		if ( $slug != $_REQUEST['um_role'] )
+			die();
+		
+		if ( get_post_meta( $post_id, '_um_synced_role', true ) != $_REQUEST['wp_role'] )
+			die();
+		
+		if ( $slug == 'admin' ) {
+			$_REQUEST['wp_role'] = 'administrator';
+			update_post_meta( $post_id, '_um_synced_role', 'administrator' );
+		}
+		
+		$wp_role = ( $_REQUEST['wp_role'] ) ? $_REQUEST['wp_role'] : 'subscriber';
+		
+		$users = get_users( array( 'fields' => array( 'ID' ), 'meta_key' => 'role', 'meta_value' => $slug ) );
+		foreach( $users as $user_id ) {
+			$wp_user_object = new WP_User( $user_id );
+			$wp_user_object->set_role( $wp_role );
+		}
+		
+		exit( wp_redirect( admin_url( 'post.php?post=' . $post_id ) . '&action=edit&message=1' ) );
+	
+	}
+	
+	/***
+	***	@add option for WPML
+	***/
+	add_action('um_admin_before_access_settings', 'um_admin_wpml_post_options', 10, 1 );
+	function um_admin_wpml_post_options( $instance ) {
+	
+		if ( !defined('ICL_SITEPRESS_VERSION') ) return;
+		
+		?>
+		
+		<h4><?php _e('This is a translation of UM profile page?','ultimatemember'); ?></h4>
+		
+		<p>
+			<span><?php $instance->ui_on_off( '_um_wpml_user', 0 ); ?></span>
+		</p>
+		
+		<h4><?php _e('This is a translation of UM account page?','ultimatemember'); ?></h4>
+		
+		<p>
+			<span><?php $instance->ui_on_off( '_um_wpml_account', 0 ); ?></span>
+		</p>
+		
+		<?php
+	
+	}
+	
+	/***
 	***	@when role is saved
 	***/
 	function um_admin_delete_role_cache($post_id, $post){
+		global $wpdb, $ultimatemember;
 		if(get_post_type( $post_id ) == 'um_role'){
 			$slug = $post->post_name;
+			
+			$is_core = get_post_meta( $post_id, '_um_core', true );
+			if ( $is_core == 'member' || $is_core == 'admin' ) {
+				$slug = $is_core;
+				$where = array( 'ID' => $post_id );
+				$wpdb->update( $wpdb->posts, array( 'post_name' => $slug ), $where );
+			}
+			
 			delete_option("um_cached_role_{$slug}");
+
+			// need to remove cache of all users
+			$users = get_users( array( 'fields' => array( 'ID' ), 'meta_key' => 'role', 'meta_value' => $slug ) );
+			foreach( $users as $user ) {
+				$ultimatemember->user->remove_cache( $user->ID );
+			}
 		}
 	}
 	add_action('save_post', 'um_admin_delete_role_cache', 1111, 2);
@@ -71,6 +150,26 @@
 			
 		}
 		
+	}
+	
+	/***
+	***	@clear user cache
+	***/
+	add_action('um_admin_do_action__user_cache', 'um_admin_do_action__user_cache');
+	function um_admin_do_action__user_cache( $action ){
+		global $ultimatemember;
+		if ( !is_admin() || !current_user_can('manage_options') ) die();
+		
+		$all_options = wp_load_alloptions();
+		foreach( $all_options as $k => $v ) {
+			if ( strstr( $k, 'um_cache_userdata_' ) ) {
+				delete_option( $k );
+			}
+		}
+		
+		$url = remove_query_arg('um_adm_action', $ultimatemember->permalinks->get_current_url() );
+		$url = add_query_arg('update','cleared_cache',$url);
+		exit( wp_redirect($url) );
 	}
 	
 	/***
