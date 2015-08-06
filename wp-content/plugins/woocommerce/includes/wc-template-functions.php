@@ -70,6 +70,20 @@ function wc_template_redirect() {
 add_action( 'template_redirect', 'wc_template_redirect' );
 
 /**
+ * When loading sensitive checkout or account pages, send a HTTP header to limit rendering of pages to same origin iframes for security reasons.
+ *
+ * Can be disabled with: remove_action( 'template_redirect', 'wc_send_frame_options_header' );
+ *
+ * @since  2.3.10
+ */
+function wc_send_frame_options_header() {
+	if ( is_checkout() || is_account_page() ) {
+		send_frame_options_header();
+	}
+}
+add_action( 'template_redirect', 'wc_send_frame_options_header' );
+
+/**
  * When the_post is called, put product data into a global.
  *
  * @param mixed $post
@@ -578,11 +592,11 @@ if ( ! function_exists( 'woocommerce_get_product_thumbnail' ) ) {
 	 *
 	 * @subpackage	Loop
 	 * @param string $size (default: 'shop_catalog')
-	 * @param int $placeholder_width (default: 0)
-	 * @param int $placeholder_height (default: 0)
+	 * @param int $deprecated1 Deprecated since WooCommerce 2.0 (default: 0)
+	 * @param int $deprecated2 Deprecated since WooCommerce 2.0 (default: 0)
 	 * @return string
 	 */
-	function woocommerce_get_product_thumbnail( $size = 'shop_catalog', $placeholder_width = 0, $placeholder_height = 0  ) {
+	function woocommerce_get_product_thumbnail( $size = 'shop_catalog', $deprecated1 = 0, $deprecated2 = 0 ) {
 		global $post;
 
 		if ( has_post_thumbnail() ) {
@@ -1522,7 +1536,7 @@ if ( ! function_exists( 'woocommerce_order_again_button' ) ) {
 /** Forms ****************************************************************/
 
 if ( ! function_exists( 'woocommerce_form_field' ) ) {
- 
+
 	/**
 	 * Outputs a checkout/address form field.
 	 *
@@ -1605,9 +1619,7 @@ if ( ! function_exists( 'woocommerce_form_field' ) ) {
 						$field .= '<label class="' . esc_attr( implode( ' ', $args['label_class'] ) ) .'">' . $args['label']  . '</label>';
 					}
 
-					//$field .= '<strong>' . current( array_values( $countries ) ) . '</strong>';
-
-					$field .= '<input type="text" class="input-text ' . esc_attr( implode( ' ', $args['input_class'] ) ) .'" name="' . esc_attr( $key ) . '" id="' . esc_attr( $args['id'] ) . '" placeholder="' . esc_attr( $args['placeholder'] ) . '" '.$args['maxlength'].' value="' . current( array_values( $countries ) ) . '" ' . implode( ' ', $custom_attributes ) . ' readonly />';
+					$field .= '<strong>' . current( array_values( $countries ) ) . '</strong>';
 
 					$field .= '<input type="hidden" name="' . esc_attr( $key ) . '" id="' . esc_attr( $args['id'] ) . '" value="' . current( array_keys($countries ) ) . '" ' . implode( ' ', $custom_attributes ) . ' class="country_to_state" />';
 

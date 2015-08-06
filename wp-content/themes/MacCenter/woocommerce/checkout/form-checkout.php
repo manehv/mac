@@ -38,6 +38,18 @@ echo '</a>';
         <span>Recibo</span>
         <img src="<?php echo get_template_directory_uri(); ?>/images/cart-line2.svg" />
 </div>
+<?php
+/*add_action( 'woocommerce_checkout_before_customer_details', 'add_login_notice' );
+function add_login_notice() {
+if (! is_user_logged_in() ) {?>
+<div class="col-lg-offset-3 col-lg-6 col-xs-12 col-sm-6 clearfix" >
+<?php
+	wc_print_notice( __( 'please <a href='. site_url('/login/').'>ingresar</a> ', 'woocommerce' ), 'error' );?>
+
+	</div>
+<?php }
+}*/
+?>
 <form name="checkout" method="post" class="checkout woocommerce-checkout" action="<?php echo esc_url( $get_checkout_url ); ?>" enctype="multipart/form-data">
 
         <?php if ( sizeof( $checkout->checkout_fields ) > 0 ) : ?>

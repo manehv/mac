@@ -7,6 +7,16 @@
 @import url('fonts/MyriadSetPro-Bold-fontfacekit/web-fonts/MyriadSetPro-Bold/stylesheet.css');
 @import url('fonts/MyriadSetPro-Medium-fontfacekit/stylesheet.css');
 
+#top span.amount{
+	color: #428BCA !important;
+	font-size:10px !important;
+}
+
+#welcome h2{
+	color:#828282;
+	font-family: arial, sans-serif;
+	font-size:45px;
+}
 
 /*AJUSTE BTN LETF TIRADO A LA DERECHA*/
 .caption_left .slideshow_caption {
@@ -1597,6 +1607,10 @@ margin-right: 10px;
     width: 50%;
 		float:left;
 }
+.woocommerce-checkout-review-order-table th:nth-child(2),
+.woocommerce-checkout-review-order-table td:nth-child(2) {
+    text-align: right;
+}
 #payment .place-order .terms{
 	float:left;
 }
@@ -1719,3 +1733,11 @@ margin: 0 25% ;
 	margin-left:5px;	
 }
 .loading{margin-top:-15px;}
+#billing_state_field , #shipping_state_field{display:none !important;}
+.c-login a {color:#0270a3;
+	text-decoration:underline;
+}
+.cart-discount .dash {font-size:30px;
+	 margin-right: 3px;
+    vertical-align: top;
+}

@@ -125,8 +125,9 @@ jQuery(document).ready(function($)
 					  checked();
 				});
 
-   $('#billing_company').on('change',function(){
+   $('#billing_states').on('change',function(){
      state= $(this).val();
+		 $('#billing_state').val(state);
 		 $("#billing_city_field").after("<div class='loading col-lg-offset-8 col-sm-offset-8'><span>Cargando...</span></div>");
 		 $.ajax({
               url: "/wp-admin/admin-ajax.php",
@@ -146,8 +147,9 @@ jQuery(document).ready(function($)
 	})
 
 
-	  $('#shipping_company').on('change',function(){
+	  $('#shipping_states').on('change',function(){
      state= $(this).val();
+		 $('#shipping_state').val(state);
 		  $("#shipping_city_field").after("<div class='loading col-lg-offset-8 col-sm-offset-8'><span>Cargando...</span></div>");
 		 $('#shipping_city').empty();
 		 $.ajax({

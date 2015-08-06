@@ -190,11 +190,10 @@ class WC_Admin_Attributes {
 			$old_attribute_name_length = strlen( $old_attribute_name ) + 3;
 			$attribute_name_length     = strlen( $attribute['attribute_name'] ) + 3;
 
-			$wpdb->query( "
-				UPDATE {$wpdb->postmeta}
-				SET meta_value = REPLACE( meta_value, 's:{$old_attribute_name_length}:\"pa_{$old_attribute_name}\"', 's:{$attribute_name_length}:\"pa_{$attribute['attribute_name']}\"' )
-				WHERE meta_key = '_product_attributes'"
-			);
+			$wpdb->query( $wpdb->prepare( "UPDATE {$wpdb->postmeta} SET meta_value = REPLACE( meta_value, %s, %s ) WHERE meta_key = '_product_attributes'",
+				's:' . $old_attribute_name_length . ':"pa_' . $old_attribute_name . '"',
+				's:' . $attribute_name_length . ':"pa_' . $attribute['attribute_name'] . '"'
+			) );
 
 			// Update variations which use this taxonomy
 			$wpdb->update(
@@ -458,6 +457,7 @@ class WC_Admin_Attributes {
 									<select name="attribute_orderby" id="attribute_orderby">
 										<option value="menu_order"><?php _e( 'Custom ordering', 'woocommerce' ); ?></option>
 										<option value="name"><?php _e( 'Name', 'woocommerce' ); ?></option>
+										<option value="name_num"><?php _e( 'Name (numeric)', 'woocommerce' ); ?></option>
 										<option value="id"><?php _e( 'Term ID', 'woocommerce' ); ?></option>
 									</select>
 									<p class="description"><?php _e( 'Determines the sort order of the terms on the frontend shop product pages. If using custom ordering, you can drag and drop the terms in this attribute.', 'woocommerce' ); ?></p>

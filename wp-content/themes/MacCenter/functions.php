@@ -1127,8 +1127,8 @@ function custom_override_billing_fields( $fields ) {
   
   unset($fields['billing_address_2']);
   unset($fields['billing_email']);
-  unset($fields['billing_phone']);
-  unset($fields['billing_state']);
+  //unset($fields['billing_phone']);
+ // unset($fields['billing_state']);
   unset($fields['billing']);
  
 
@@ -1156,22 +1156,29 @@ function custom_override_billing_fields( $fields ) {
      );
 
          $fields['billing_country'] = array(
-        'type'     => 'country',
+         'type' => 'country',
         'label'     => __('Country', 'woocommerce'),
         'placeholder'   => (''),
                                 'required'  => true,
                                 'class'     => array('form-row-first', 'address-field', 'update_totals_on_change',' col-lg-4')
      ); 
     
-				$fields['billing_company'] = array(
+				$fields['billing_state'] = array(
                                'label'     => __('Departamento', 'woocommerce'),
                                 'placeholder'   => ('select state'),
                                 'required'  => true,
-																  'type' => 'select',
+                                'type' => 'select',
                                 'class'  => array('form-row-last', 'address-field','update_totals_on_change',' col-lg-4'),
                                 'options' => getstate(),
      );
-
+			$fields['billing_states'] = array(
+                               'label'     => __('Departamento', 'woocommerce'),
+                                'placeholder'   => ('select state'),
+                                'required'  => true,
+                                'type' => 'select',
+                                'class'  => array('form-row-last', 'address-field','update_totals_on_change',' col-lg-4'),
+                                'options' => getstate(),
+     );
 
       $fields['billing_city'] = array(
         'label'     => __('Ciudad/Localidad', 'woocommerce'),
@@ -1208,7 +1215,7 @@ function custom_override_billing_fields( $fields ) {
                                 'class'     => array('form-row-last', 'address-field',' col-lg-4')
      );
      
-      $fields['billing_mobile_phone'] = array(
+      $fields['billing_phone'] = array(
         'label'     => __('Celular', 'woocommerce'),
         'placeholder'   => (''),
                                 'required'  => true,
@@ -1228,8 +1235,8 @@ function custom_override_billing_fields( $fields ) {
 function custom_override_shipping_fields( $fields ) {
   unset($fields['shipping_address_2']);
   unset($fields['shipping_email']);
-  unset($fields['shipping_phone']);
-  unset($fields['shipping_state']);
+ // unset($fields['shipping_phone']);
+ // unset($fields['shipping_state']);
   unset($fields['shipping']);
 
    $fields['shipping_first_name'] = array(
@@ -1253,7 +1260,7 @@ function custom_override_shipping_fields( $fields ) {
      );
 
          $fields['shipping_country'] = array(
-                                'type'     => 'country',
+         'type' => 'country',
         'label'     => __('Country', 'woocommerce'),
         'placeholder'   => (''),
                                 'required'  => true,
@@ -1268,7 +1275,7 @@ function custom_override_shipping_fields( $fields ) {
 //                                  'options'   => getstate(),
 //      );
 
-    $fields['shipping_company'] = array(
+    $fields['shipping_state'] = array(
         'label'     => __('Departamento', 'woocommerce'),
         'placeholder'   => (''),
                                 'required'  => true,
@@ -1276,6 +1283,14 @@ function custom_override_shipping_fields( $fields ) {
                                  'class'  => array('form-row-last', 'address-field','update_totals_on_change',' col-lg-4'),
                                  'options' => getstate(),
      );   
+     $fields['shipping_states'] = array(
+        'label'     => __('Departamento', 'woocommerce'),
+        'placeholder'   => (''),
+                                'required'  => true,
+                                 'type' => 'select',
+                                 'class'  => array('form-row-last', 'address-field','update_totals_on_change',' col-lg-4'),
+                                 'options' => getstate(),
+     ); 
 
       $fields['shipping_city'] = array(
         'label'     => __('Ciudad/Localidad', 'woocommerce'),
@@ -1307,7 +1322,7 @@ function custom_override_shipping_fields( $fields ) {
                                 'class'     => array('form-row-first', 'address-field',' col-lg-4')
      );
 
-      $fields['shipping_mobile_phone'] = array(
+      $fields['shipping_phone'] = array(
         'label'     => __('Celular', 'woocommerce'),
         'placeholder'   => (''),
                                 'required'  => true,
@@ -1329,12 +1344,13 @@ function reorder_woocommerce_fields($fields) {
         $fields2['billing_last_name'] = $fields['billing_last_name'];
         $fields2['billing_Cédula'] = $fields['billing_Cédula'];
         $fields2['billing_country'] = $fields['billing_country'];
-        // $fields2['billing_state'] = $fields['billing_state'];
-        $fields2['billing_company'] = $fields['billing_company'];
+        $fields2['billing_states'] = $fields['billing_states'];
+       // $fields2['billing_company'] = $fields['billing_company'];
         $fields2['billing_city'] = $fields['billing_city'];
+         $fields2['billing_state'] = $fields['billing_state'];
         $fields2['billing_postcode'] = $fields['billing_postcode'];
         $fields2['billing_address_1'] = $fields['billing_address_1'];
-        $fields2['billing_mobile_phone'] = $fields['billing_mobile_phone'];
+        $fields2['billing_phone'] = $fields['billing_phone'];
         $fields2['billing_email'] = array(
             'label'     => __('E-mail *', 'woocommerce'),
             'placeholder'   => (''),
@@ -1369,12 +1385,13 @@ function order_fields($fields) {
         $fields2['shipping_last_name'] = $fields['shipping_last_name'];
         $fields2['shipping_Cédula'] = $fields['shipping_Cédula'];
         $fields2['shipping_country'] = $fields['shipping_country'];
-      //  $fields2['shipping_state'] = $fields['shipping_state'];
-        $fields2['shipping_company'] = $fields['shipping_company'];
+        $fields2['shipping_state'] = $fields['shipping_state'];
+        $fields2['shipping_states'] = $fields['shipping_states'];
+        //$fields2['shipping_company'] = $fields['shipping_company'];
         $fields2['shipping_city'] = $fields['shipping_city'];
         //$fields2['shipping_postcode'] = $fields['shipping_postcode'];
         $fields2['shipping_address_1'] = $fields['shipping_address_1'];
-        $fields2['shipping_mobile_phone'] = $fields['shipping_mobile_phone'];
+        $fields2['shipping_phone'] = $fields['shipping_phone'];
     return $fields2;
 
 }
@@ -1398,6 +1415,9 @@ function my_custom_checkout_field_update_order_meta( $order_id ) {
     if ( ! empty( $_POST['shipping_Cédula'] ) ) {
         update_post_meta( $order_id, 'shipping_Cédula', sanitize_text_field( $_POST['shipping_Cédula'] ) );
     }
+    if ( ! empty( $_POST['shipping_phone'] ) ) {
+        update_post_meta( $order_id, 'shipping_phone', sanitize_text_field( $_POST['shipping_phone'] ) );
+    }
 }
 
  add_action('woocommerce_admin_order_data_after_billing_address', 'my_custom_billing_fields_display_admin_order_meta', 10, 1);
@@ -1408,4 +1428,94 @@ function my_custom_checkout_field_update_order_meta( $order_id ) {
  add_action('woocommerce_admin_order_data_after_shipping_address', 'my_custom_shipping_fields_display_admin_order_meta', 10, 1);
   function my_custom_shipping_fields_display_admin_order_meta($order) {
 echo '<p><strong>' . __('Shipping Cédula') . ':</strong><br> ' . get_post_meta($order->id, '_shipping_Cédula', true) . '</p>';
+echo '<p><strong>' . __('Shipping Phone') . ':</strong><br> ' . get_post_meta($order->id, '_shipping_phone', true) . '</p>';
+}
+
+function wc_cart_totals_coupon( $coupon ) {
+	if ( is_string( $coupon ) ) {
+		$coupon = new WC_Coupon( $coupon );
+    }
+
+	$value  = array();
+
+	if ( $amount = WC()->cart->get_coupon_discount_amount( $coupon->code, WC()->cart->display_cart_ex_tax ) ) {
+		$discount_html = '<span class="dash">-</span>' . wc_price( $amount );
+	} else {
+		$discount_html = '';
+	}
+
+	$value[] = apply_filters( 'woocommerce_coupon_discount_amount_html', $discount_html, $coupon );
+
+//  	if ( $coupon->enable_free_shipping() ) {
+//  		$value[] = __( 'Free shipping coupon', 'woocommerce' );
+//     }
+
+    // get rid of empty array elements
+    $value = array_filter( $value );
+	$value = implode( ', ', $value ); //. ' <a href="' . esc_url( add_query_arg( 'remove_coupon', urlencode( $coupon->code ), defined( 'WOOCOMMERCE_CHECKOUT' ) ? WC()->cart->get_checkout_url() : WC()->cart->get_cart_url() ) ) . '" class="woocommerce-remove-coupon" data-coupon="' . esc_attr( $coupon->code ) . '">' . __( '[Remove]', 'woocommerce' ) . '</a>';
+
+	echo apply_filters( 'woocommerce_cart_totals_coupon', $value, $coupon );
+}
+
+//hides the shipping label on cart and checkout page
+add_filter( 'woocommerce_cart_shipping_method_full_label', 'wc_custom_shipping_labels', 10, 2 );
+function wc_custom_shipping_labels( $label, $method ) {
+    if ( $method->cost > 0 ) {
+        if ( WC()->cart->tax_display_cart == 'excl' ) {
+            $label = wc_price( $method->cost );
+            if ( $method->get_shipping_tax() > 0 && WC()->cart->prices_include_tax ) {
+                $label .= ' <small>' . WC()->countries->ex_tax_or_vat() . '</small>';
+            }
+        } else {
+            $label = wc_price( $method->cost + $method->get_shipping_tax() );
+            if ( $method->get_shipping_tax() > 0 && ! WC()->cart->prices_include_tax ) {
+                $label = ' <small>' . WC()->countries->inc_tax_or_vat() . '</small>';
+            }
+        }
+    }
+
+    return $label;
+}
+
+//checkout country field
+add_filter( 'woocommerce_form_field_country', 'wc_custom_field_country', 10, 4 );
+function wc_custom_field_country( $field, $key, $args, $value ) {
+    // Custom attribute handling
+    $custom_attributes = array();
+    if ( ! empty( $args['custom_attributes'] ) && is_array( $args['custom_attributes'] ) ) {
+        foreach ( $args['custom_attributes'] as $attribute => $attribute_value ) {
+            $custom_attributes[] = esc_attr( $attribute ) . '="' . esc_attr( $attribute_value ) . '"';
+        }
+    }
+
+    $countries = $key == 'shipping_country' ? WC()->countries->get_shipping_countries() : WC()->countries->get_allowed_countries();
+    if ( sizeof( $countries ) == 1 ) {
+        $field = '<p class="form-row ' . esc_attr( implode( ' ', $args['class'] ) ) .'" id="' . esc_attr( $args['id'] ) . '_field">';
+        if ( $args['label'] ) {
+            $field .= '<label class="' . esc_attr( implode( ' ', $args['label_class'] ) ) .'">' . $args['label']  . '</label>';
+        }
+                    //$field .= '<strong>' . current( array_values( $countries ) ) . '</strong>';
+        $field .= '<input type="text" class="input-text ' . esc_attr( implode( ' ', $args['input_class'] ) ) .'" placeholder="' . esc_attr( $args['placeholder'] ) . '" '.$args['maxlength'].' value="' . current( array_values( $countries ) ) . '" ' . implode( ' ', $custom_attributes ) . ' readonly />';
+        $field .= '<input type="hidden" name="' . esc_attr( $key ) . '" id="' . esc_attr( $args['id'] ) . '" value="' . current( array_keys($countries ) ) . '" ' . implode( ' ', $custom_attributes ) . ' class="country_to_state" />';
+        if ( $args['description'] ) {
+            $field .= '<span class="description">' . esc_attr( $args['description'] ) . '</span>';
+        }
+        $field .= '</p>' . $after;
+    } else {
+        $field = '<p class="form-row ' . esc_attr( implode( ' ', $args['class'] ) ) .'" id="' . esc_attr( $args['id'] ) . '_field">'
+        . '<label for="' . esc_attr( $args['id'] ) . '" class="' . esc_attr( implode( ' ', $args['label_class'] ) ) .'">' . $args['label'] . $required  . '</label>'
+        . '<select name="' . esc_attr( $key ) . '" id="' . esc_attr( $args['id'] ) . '" class="country_to_state country_select ' . esc_attr( implode( ' ', $args['input_class'] ) ) .'" ' . implode( ' ', $custom_attributes ) . '>'
+        . '<option value="">'.__( 'Select a country&hellip;', 'woocommerce' ) .'</option>';
+        foreach ( $countries as $ckey => $cvalue ) {
+            $field .= '<option value="' . esc_attr( $ckey ) . '" '.selected( $value, $ckey, false ) .'>'.__( $cvalue, 'woocommerce' ) .'</option>';
+        }
+        $field .= '</select>';
+        $field .= '<noscript><input type="submit" name="woocommerce_checkout_update_totals" value="' . __( 'Update country', 'woocommerce' ) . '" /></noscript>';
+        if ( $args['description'] ) {
+            $field .= '<span class="description">' . esc_attr( $args['description'] ) . '</span>';
+        }
+        $field .= '</p>' . $after;
+    }
+
+    return $field;
 }
