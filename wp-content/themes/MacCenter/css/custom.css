@@ -8,7 +8,7 @@
 @import url('fonts/MyriadSetPro-Medium-fontfacekit/stylesheet.css');
 
 #top span.amount{
-	color: blue !important;
+	color: #428BCA !important;
 	font-size:10px !important;
 }
 
@@ -1606,6 +1606,10 @@ margin-right: 10px;
 .woocommerce-checkout-review-order table.shop_table {
     width: 50%;
 		float:left;
+}
+.woocommerce-checkout-review-order-table th:nth-child(2),
+.woocommerce-checkout-review-order-table td:nth-child(2) {
+    text-align: right;
 }
 #payment .place-order .terms{
 	float:left;
