@@ -746,7 +746,7 @@ table div.quantity{width:150px; }
 .clsTopImg img{display:block; margin-top:5px; width: 400px; }
 .clsTopImg span{display: inline-block; margin-right:57px; width: 130px; color:#231F20; }
 .product-remove .remove{border:1px solid #428BCA; }
-#top .main_color .custom_table.shop_table .product-remove a.remove, #top .main_color .custom_table.shop_table .product-remove a.remove:hover{color:#ED1D24; background-color:#ED1D24; }
+#top .main_color .custom_table.shop_table .product-remove a.remove, #top .main_color .custom_table.shop_table .product-remove a.remove:hover{color:#ED1D24; background-color:#428BCA; }
 .custom_table.shop_table .product-name a, .custom_table.shop_table .product-price .amount, .custom_table.shop_table .product-subtotal .amount{color:#231F20; }
 .form-row-quarter{width:24%; float:left; }
 .form-row-half{width:49%; float:left; }
