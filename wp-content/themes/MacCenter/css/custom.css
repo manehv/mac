@@ -9,9 +9,11 @@
 
 #top span.amount{
 	color: #428BCA !important;
-	font-size:10px !important;
+	font-size:13px !important;
 }
-
+del span.amount{
+	font-size:24px;
+}
 #welcome h2{
 	color:#828282;
 	font-family: arial, sans-serif;
