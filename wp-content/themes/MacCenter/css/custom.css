@@ -7,6 +7,9 @@
 @import url('fonts/MyriadSetPro-Bold-fontfacekit/web-fonts/MyriadSetPro-Bold/stylesheet.css');
 @import url('fonts/MyriadSetPro-Medium-fontfacekit/stylesheet.css');
 
+#price.clsSubDIv del span.amount{
+	font-size:24px !important;
+}
 #top span.amount{
 	color: #428BCA !important;
 	font-size:13px;
