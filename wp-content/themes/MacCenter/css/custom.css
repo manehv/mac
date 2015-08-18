@@ -6,8 +6,12 @@
 @import url('fonts/open-sans-fontfacekit/web-fonts/opensans_regular/stylesheet.css');*/
 @import url('fonts/MyriadSetPro-Bold-fontfacekit/web-fonts/MyriadSetPro-Bold/stylesheet.css');
 @import url('fonts/MyriadSetPro-Medium-fontfacekit/stylesheet.css');
+
+/*PRECIO DE ANTES*/
+/*PRECIO DE ANTES*/
+
 #top .clsDetails del span.amount{
-	font-size:24px !important;
+	color:#666;
 }
 #top span.amount{
 	color: #428BCA !important;
