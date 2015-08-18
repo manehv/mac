@@ -11,7 +11,7 @@
 /*PRECIO DE ANTES*/
 
 #top .clsDetails del span.amount{
-	color:#666;
+	color:#666 !important;
 }
 #top span.amount{
 	color: #428BCA !important;
