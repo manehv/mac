@@ -7,8 +7,8 @@
 @import url('fonts/MyriadSetPro-Bold-fontfacekit/web-fonts/MyriadSetPro-Bold/stylesheet.css');
 @import url('fonts/MyriadSetPro-Medium-fontfacekit/stylesheet.css');
 
-/*PRECIO DE ANTES*/
-/*PRECIO DE ANTES*/
+/*PRECIO REGULAR*/
+/*PRECIO REGULAR*/
 
 #top .clsDetails del span.amount{
 	color:#666 !important;
@@ -16,7 +16,7 @@
 /*PRECIO DE AHORA*/
 /*PRECIO DE AHORA*/
 #top .clsDetails ins span.amount{
-	font-size:18px !important;
+	font-size:16px !important;
 }
 
 #top span.amount{
