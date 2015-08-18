@@ -13,6 +13,12 @@
 #top .clsDetails del span.amount{
 	color:#666 !important;
 }
+/*PRECIO DE AHORA*/
+/*PRECIO DE AHORA*/
+#top .clsDetails ins span.amount{
+	font-size:18px !important;
+}
+
 #top span.amount{
 	color: #428BCA !important;
 	font-size:13px;
