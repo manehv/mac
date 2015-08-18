@@ -6,6 +6,18 @@
 @import url('fonts/open-sans-fontfacekit/web-fonts/opensans_regular/stylesheet.css');*/
 @import url('fonts/MyriadSetPro-Bold-fontfacekit/web-fonts/MyriadSetPro-Bold/stylesheet.css');
 @import url('fonts/MyriadSetPro-Medium-fontfacekit/stylesheet.css');
+/*PRECIO REGULAR*/
+/*PRECIO REGULAR*/
+
+#top .clsDetails del span.amount{
+	color:#666 !important;
+	font-weight: 100;
+}
+/*PRECIO DE AHORA*/
+/*PRECIO DE AHORA*/
+#top .clsDetails ins span.amount{
+	font-size:16px !important;
+}
 
 div a.remove {
     margin-left: 20px;
