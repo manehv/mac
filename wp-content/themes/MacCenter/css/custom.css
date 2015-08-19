@@ -7,9 +7,16 @@
 @import url('fonts/MyriadSetPro-Bold-fontfacekit/web-fonts/MyriadSetPro-Bold/stylesheet.css');
 @import url('fonts/MyriadSetPro-Medium-fontfacekit/stylesheet.css');
 
+
+
+/*PRECIO REGULAR EN GRILLA*/
 #top del span.amount {
 	color: #666 !important;
 	font-weight: 100;
+}
+/*PRECIO AHORA EN GRILLA*/
+#top ins span.amount {
+	font-size: 16px !important;
 }
 /*PRECIO REGULAR*/
 /*PRECIO REGULAR*/
