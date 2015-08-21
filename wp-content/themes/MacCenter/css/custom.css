@@ -7,11 +7,7 @@
 @import url('fonts/MyriadSetPro-Bold-fontfacekit/web-fonts/MyriadSetPro-Bold/stylesheet.css');
 @import url('fonts/MyriadSetPro-Medium-fontfacekit/stylesheet.css');
 
-/*POSICIONAR LUPA POR ENCIMA DEL BANNER HOME*/
-.container_wrap {
-    clear: both;
-    position: inherit !important;
-}
+
 /*PRECIO REGULAR EN GRILLA*/
 #top del span.amount {
 	color: #666 !important;
