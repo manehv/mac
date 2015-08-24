@@ -17,13 +17,6 @@ global $woocommerce;
 </div>
 <?php
 do_action( 'woocommerce_before_cart' ); ?>
-<?php 
-// Hard coded
-$url = "/comprar/" ; 
-echo '<a href="'. $url .'" class="pull-right checkout-button button alt wc-forward continue-button">';
- _e( 'Continue Shopping', 'woocommerce' );
-echo '</a>';
-?>
 
 <div class="clsTopImg clearfix">
         <span>Resumen de orden</span>
@@ -35,6 +28,23 @@ echo '</a>';
 <form action="<?php echo esc_url( WC()->cart->get_cart_url() ); ?>" method="post">
 
 <?php do_action( 'woocommerce_before_cart_table' ); ?>
+    
+    <div class="modificacion1">
+        <?php 
+        // Hard coded
+        $url = "/comprar/" ; 
+        echo '<a href="'. $url .'" class="pull-right checkout-button button alt wc-forward continue-button">';
+        _e( 'Continue Shopping', 'woocommerce' );
+        echo '</a>';
+        ?>
+        <tr class="clsActions">
+            <td colspan="6" class="actions">
+                <input type="submit" class="checkout-button button alt wc-forward" name="proceed" value="<?php _e( 'Proceed to Checkout', 'woocommerce' ); ?>" /><input type="submit" class="button" name="update_cart" value="<?php _e( 'Update Cart', 'woocommerce' ); ?>" />
+                ?php do_action( 'woocommerce_cart_actions' ); ?>
+                <?php wp_nonce_field( 'woocommerce-cart' ); ?>
+            </td>
+        </tr>
+    </div>
 
 <table class="custom_table shop_table cart" cellspacing="0">
         <thead class="clsMainTable">
@@ -149,7 +159,7 @@ echo '</a>';
 														<?php add_action( 'woocommerce_cart_coupon', 'add_login_notice' );
 																		function add_login_notice() {
 																		if (! is_user_logged_in() ) {
-																			echo '<div class="c-login">Debes <a href='. site_url('/login/').'>ingresar</a>   aquí para aplicar el cupón</div>' ; }
+																			echo '<div id="registro" class="c-login" style="display:none;">Debes estar registrado para acceder al cupón <a href='. site_url('/login/').'>ingresar</a></div>' ; }
 																		}
 																		?>
 														<?php do_action( 'woocommerce_cart_coupon' ); ?>
@@ -172,7 +182,7 @@ echo '</a>';
 
 
 
-                                <input type="submit" class="checkout-button button alt wc-forward" name="proceed" value="<?php _e( 'Proceed to Checkout', 'woocommerce' ); ?>" /><input type="submit" class="button" name="update_cart" value="<?php _e( 'Update Cart', 'woocommerce' ); ?>" />
+                                <input type="submit" class="checkout-button button alt wc-forward" name="proceed" value="<?php _e( 'Proceed to Checkout', 'woocommerce' ); ?>" />
 
                                 <?php do_action( 'woocommerce_cart_actions' ); ?>
 
