@@ -206,7 +206,7 @@ style="padding: 0px; height: 201px; transition: none 0s ease 0s ; transform: tra
 .slideshow_caption {
     z-index: 100;
     /*CAMBIO*/
-    width: 56% !important;
+    width: 100% !important;
     top: 6% !important;
 }
     
